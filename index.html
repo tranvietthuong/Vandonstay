@@ -1,537 +1,496 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vandonstay Sonasea - Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Vân Đồn</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VANDON STAY - Hệ Thống Biệt Thự Nghỉ Dưỡng Biển Sonasea Vân Đồn</title>
+  <meta name="description" content="Hệ thống biệt thự nghỉ dưỡng ven biển Sonasea Vân Đồn Harbor City. Hồ bơi riêng, BBQ sân vườn, hỗ trợ 24/7." />
+
   <style>
-    html { scroll-behavior: smooth; }
+    :root {
+      --primary: #0b7355;
+      --primary-dark: #084d39;
+      --primary-light: #e6f7f2;
+      --accent: #f59e0b;
+      --accent-light: #fef9e7;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* --- HEADER CHUẨN MÁY TÍNH & DI ĐỘNG --- */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .brand-logo span {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .nav-btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-english {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border: 1.5px solid #a3e3d0;
+    }
+
+    .btn-shopee {
+      background-color: var(--accent-light);
+      color: #a85800;
+      border: 1.5px solid #fbd988;
+    }
+
+    .btn-call {
+      background-color: var(--primary);
+      color: #ffffff;
+      border: 1.5px solid var(--primary);
+    }
+
+    /* --- RESPONSIVE MOBILE: ĐẨY 3 MENU XUỐNG DÒNG 2 CHIẾM TRỌN HÀNG --- */
+    @media screen and (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        padding: 8px 12px;
+        gap: 8px;
+      }
+
+      .brand-logo {
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      .nav-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+      }
+
+      .nav-actions .nav-btn {
+        flex: 1 1 0;
+        padding: 7px 2px;
+        font-size: 11.5px;
+        letter-spacing: -0.2px;
+      }
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)),
+                  url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 42px 16px 70px;
+    }
+
+    .badge-location {
+      display: inline-block;
+      background-color: #059669;
+      color: #ffffff;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      max-width: 580px;
+      margin: 0 auto 20px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .btn-green { background-color: #059669; }
+    .btn-blue { background-color: #2563eb; }
+    .btn-purple {
+      background-color: #7c3aed;
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    /* --- BỘ LỌC TRA CỨU PHÒNG TRỐNG --- */
+    .filter-wrapper {
+      max-width: 560px;
+      margin: -45px auto 30px;
+      padding: 0 14px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .filter-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 18px 18px;
+      border: 1px solid var(--border);
+    }
+
+    .filter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+
+    .filter-title {
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-labels {
+      display: flex;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-available { color: #059669; }
+    .status-booked { color: #dc2626; }
+
+    .form-group {
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      background-color: #ffffff;
+    }
+
+    .btn-search {
+      width: 100%;
+      background-color: #059669;
+      color: #ffffff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+
+    /* --- DANH SÁCH BIỆT THỰ --- */
+    .villa-section {
+      max-width: 1100px;
+      margin: 0 auto 50px;
+      padding: 0 16px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: #0f172a;
+    }
+
+    .villa-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .villa-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .villa-thumb {
+      height: 190px;
+      width: 100%;
+      background: #e2e8f0 center/cover no-repeat;
+    }
+
+    .villa-body {
+      padding: 14px;
+    }
+
+    .villa-name {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .villa-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .villa-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    .villa-price {
+      font-size: 15px;
+      font-weight: 800;
+      color: #e11d48;
+    }
+
+    .btn-detail {
+      background: var(--primary);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans">
+<body>
 
-  <!-- 1. THANH HEADER ĐIỀU HƯỚNG CHÍNH -->
-  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 h-16 flex items-center px-3 sm:px-8 justify-between sticky top-0 z-40 shadow-sm">
-    <div class="flex items-center gap-2">
-      <span class="text-xl font-black text-emerald-700 tracking-tight flex items-center gap-1.5">
-        <i class="fa-solid fa-hotel"></i> VANDON<span class="text-slate-900">STAY</span>
-      </span>
-      <span class="hidden lg:inline text-xs font-semibold text-slate-400 border-l border-slate-300 pl-2">
-        Sonasea Vân Đồn Harbor City
-      </span>
-    </div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="brand-logo">
+        🏨 VANDON <span>STAY</span>
+      </a>
 
-    <!-- CÁC NÚT ĐIỀU HƯỚNG TIỆN ÍCH -->
-    <div class="flex items-center gap-1.5 sm:gap-2.5">
-      <!-- Nút VANDONENGLISH -->
-      <a href="./Hoctienganh/index.html" class="flex items-center gap-1 px-2.5 py-1.5 sm:px-3 sm:py-2 text-xs font-black text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition shadow-sm">
-        <span>📚</span> VANDON<span class="text-emerald-600">ENGLISH</span>
-      </a>
-      <!-- Nút SHOPEEQN -->
-      <a href="./shopeeqn/index.html" class="flex items-center gap-1 px-2.5 py-1.5 sm:px-3 sm:py-2 text-xs font-black text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-xl transition shadow-sm">
-        <span>🎁</span> SHOPEE<span class="text-amber-600">QN</span>
-      </a>
-      <!-- Nút Khách Thân Thiết -->
-      <a href="https://zalo.me/g/LINK_NHOM_ZALO_CUA_BAN" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-300 rounded-xl transition shadow-sm">
-        <i class="fa-solid fa-crown text-amber-500"></i> Khách Thân Thiết
-      </a>
-      <!-- Hotline -->
-      <a href="tel:0396588880" class="flex items-center gap-1 px-3 py-1.5 sm:py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl transition shadow-sm">
-        <i class="fa-solid fa-phone"></i> <span class="hidden sm:inline">039.65.88880</span><span class="sm:hidden">Gọi</span>
-      </a>
+      <nav class="nav-actions">
+        <a href="./Hoctienganh/" class="nav-btn btn-english">
+          📚 VANDON ENGLISH
+        </a>
+        <a href="./shopeeqn/" class="nav-btn btn-shopee">
+          🎁 SHOPEE QN
+        </a>
+        <a href="tel:0396588880" class="nav-btn btn-call">
+          📞 Gọi
+        </a>
+      </nav>
     </div>
   </header>
 
-  <!-- 2. BANNER HÌNH ẢNH (HERO IMAGE BANNER) -->
-  <section class="relative h-[380px] sm:h-[430px] flex items-center justify-center text-center text-white overflow-hidden shadow-inner">
-    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80" 
-         alt="Banner Sonasea Vân Đồn" 
-         class="absolute inset-0 w-full h-full object-cover object-center">
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="badge-location">SONASEA VÂN ĐỒN HARBOR CITY</div>
+    <h1>Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Biển</h1>
+    <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn từ 3 đến 5 phòng ngủ, hồ bơi riêng, BBQ sân vườn và hỗ trợ tận tâm 24/7.</p>
     
-    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-emerald-950/40"></div>
+    <div class="hero-buttons">
+      <a href="tel:0396588880" class="hero-btn btn-green">📞 Gọi Ngay: 039.65.88880</a>
+      <a href="https://zalo.me/0396588880" target="_blank" class="hero-btn btn-blue">💬 Chat Zalo 1-1</a>
+    </div>
+    <a href="#" class="hero-btn btn-purple">👑 Khách Hàng Thân Thiết</a>
+  </section>
 
-    <div class="relative z-10 max-w-4xl px-4 mx-auto space-y-3">
-      <span class="inline-block bg-emerald-500/90 text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider shadow">
-        Sonasea Vân Đồn Harbor City
-      </span>
-      <h1 class="text-2xl sm:text-4xl md:text-5xl font-black drop-shadow-lg tracking-tight">
-        Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Biển
-      </h1>
-      <p class="text-xs sm:text-sm md:text-base text-slate-200 max-w-2xl mx-auto drop-shadow font-medium leading-relaxed">
-        Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn từ 3 đến 5 phòng ngủ, hồ bơi riêng, BBQ sân vườn và hỗ trợ tận tâm 24/7.
-      </p>
-      
-      <!-- CÁC NÚT HÀNH ĐỘNG TẠI BANNER -->
-      <div class="pt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-        <a href="tel:0396588880" class="px-4 sm:px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-black rounded-xl shadow-lg transition flex items-center gap-1.5">
-          <i class="fa-solid fa-phone-volume"></i> Gọi Ngay: 039.65.88880
-        </a>
-        <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-black rounded-xl shadow-lg transition flex items-center gap-1.5">
-          <i class="fa-solid fa-comment-dots"></i> Chat Zalo 1-1
-        </a>
-        <a href="https://zalo.me/g/LINK_NHOM_ZALO_CUA_BAN" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-black rounded-xl shadow-lg transition flex items-center gap-1.5 border border-purple-400/40">
-          <i class="fa-solid fa-crown text-amber-300"></i> Khách Hàng Thân Thiết
-        </a>
+  <!-- FORM TRA CỨU PHÒNG TRỐNG -->
+  <div class="filter-wrapper">
+    <div class="filter-card">
+      <div class="filter-header">
+        <div class="filter-title">
+          📅 TRA CỨU TÌNH TRẠNG PHÒNG TRỐNG
+        </div>
+        <div class="status-labels">
+          <span class="status-available">● Xanh: Còn phòng</span>
+          <span class="status-booked">● Đỏ: Đã kín</span>
+        </div>
       </div>
+
+      <div class="form-group">
+        <label for="checkin">Ngày nhận phòng (Check-in)</label>
+        <input type="date" id="checkin" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="checkout">Ngày trả phòng (Check-out)</label>
+        <input type="date" id="checkout" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="villa-select">Sức chứa / Số phòng ngủ</label>
+        <select id="villa-select" class="form-control">
+          <option value="all">Tất cả 20 căn</option>
+          <option value="3">Biệt thự 3 Phòng ngủ</option>
+          <option value="4">Biệt thự 4 Phòng ngủ</option>
+          <option value="5">Biệt thự 5 Phòng ngủ</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn-search" onclick="searchAvailability()">🔍 Tra Cứu Ngay</button>
+    </div>
+  </div>
+
+  <!-- DANH SÁCH 20 CĂN NGHỈ DƯỠNG -->
+  <section class="villa-section">
+    <h2 class="section-title">🏡 DANH SÁCH BIỆT THỰ NGHỈ DƯỠNG</h2>
+    <div class="villa-grid">
+      <!-- Căn mẫu 1 -->
+      <article class="villa-card">
+        <div class="villa-thumb" style="background-image: url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="villa-body">
+          <h3 class="villa-name">Villa Sonasea V3-01</h3>
+          <p class="villa-desc">3 Phòng ngủ • Hồ bơi riêng • Bếp full tiện nghi BBQ</p>
+          <div class="villa-footer">
+            <span class="villa-price">Liên hệ giá tốt</span>
+            <a href="./villasonasea/" class="btn-detail">Xem chi tiết</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Căn mẫu 2 -->
+      <article class="villa-card">
+        <div class="villa-thumb" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="villa-body">
+          <h3 class="villa-name">Villa Sonasea V4-05</h3>
+          <p class="villa-desc">4 Phòng ngủ • Sát biển Bái Tử Long • View cực đẹp</p>
+          <div class="villa-footer">
+            <span class="villa-price">Liên hệ giá tốt</span>
+            <a href="./villasonasea/" class="btn-detail">Xem chi tiết</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- 3. BẢNG TRA CỨU TÌNH TRẠNG PHÒNG TRỰC TIẾP -->
-  <div class="max-w-6xl mx-auto px-4 -mt-7 relative z-30 w-full">
-    <div class="bg-white rounded-2xl shadow-xl border border-slate-200/90 p-4 sm:p-5">
-      <div class="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
-        <div class="flex items-center gap-2">
-          <span class="text-emerald-600 text-base"><i class="fa-solid fa-calendar-check"></i></span>
-          <h2 class="text-xs sm:text-sm font-black uppercase text-slate-800 tracking-wider">Tra Cứu Tình Trạng Phòng Trống</h2>
-        </div>
-        <div class="flex items-center gap-3 text-[11px] font-bold">
-          <span class="flex items-center gap-1 text-emerald-700"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> Xanh: Còn phòng</span>
-          <span class="flex items-center gap-1 text-rose-700"><span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span> Đỏ: Đã kín lịch</span>
-        </div>
-      </div>
-
-      <form id="checkAvailabilityForm" onsubmit="handleCheckRoom(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-        <div>
-          <label class="block text-slate-500 font-bold mb-1">Ngày nhận phòng (Check-in)</label>
-          <input type="date" id="checkInDate" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-800 font-semibold focus:outline-none focus:border-emerald-600">
-        </div>
-        <div>
-          <label class="block text-slate-500 font-bold mb-1">Ngày trả phòng (Check-out)</label>
-          <input type="date" id="checkOutDate" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-800 font-semibold focus:outline-none focus:border-emerald-600">
-        </div>
-        <div>
-          <label class="block text-slate-500 font-bold mb-1">Sức chứa / Số phòng ngủ</label>
-          <select id="guestFilter" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-800 font-semibold focus:outline-none focus:border-emerald-600">
-            <option value="all">Tất cả 20 căn</option>
-            <option value="3pn">Căn 3 Phòng Ngủ (6 - 8 Người lớn)</option>
-            <option value="4pn">Căn 4 Phòng Ngủ (8 Người lớn + 3 Trẻ em)</option>
-          </select>
-        </div>
-        <div class="flex items-end">
-          <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition shadow flex items-center justify-center gap-2">
-            <i class="fa-solid fa-magnifying-glass"></i> Tra Cứu Ngay
-          </button>
-        </div>
-      </form>
-
-      <div id="checkResultNotice" class="hidden mt-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-        <span id="resultText" class="font-medium"></span>
-        <div class="flex items-center gap-2">
-          <a href="tel:0396588880" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition shadow-sm flex items-center gap-1">
-            <i class="fa-solid fa-phone text-[10px]"></i> Gọi 039.65.88880
-          </a>
-          <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition shadow-sm flex items-center gap-1">
-            <i class="fa-solid fa-comment-dots text-[10px]"></i> Chat Zalo 1-1
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 4. LƯỚI 20 CĂN VILLA (4 CỘT) -->
-  <main id="danh-sach-villa" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full space-y-6">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
-      <div>
-        <h2 class="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight flex items-center gap-2">
-          <span>🏡</span> Danh Sách 20 Căn Biệt Thự Nghỉ Dưỡng
-        </h2>
-        <p class="text-xs text-slate-500 mt-0.5">Bấm vào bất kỳ ô villa nào để mở trình xem trọn bộ sưu tập ảnh (Slide Gallery).</p>
-      </div>
-      <span id="roomStatusSummary" class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
-        20 Căn Sẵn Sàng
-      </span>
-    </div>
-
-    <div id="villaGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch"></div>
-  </main>
-
-  <!-- MODAL SLIDE ẢNH TOÀN CẢNH -->
-  <div id="galleryModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-6" onclick="closeGalleryModal(event)">
-    <div class="bg-slate-900 border border-slate-800 text-white w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl flex flex-col relative" onclick="event.stopPropagation()">
-      
-      <div class="p-3.5 px-4 bg-slate-950 flex items-center justify-between border-b border-slate-800">
-        <div>
-          <h3 id="modalVillaName" class="text-sm sm:text-base font-bold text-white">Tên Villa</h3>
-          <span id="modalImageIndex" class="text-[11px] text-slate-400">Ảnh 1</span>
-        </div>
-        <button onclick="closeGalleryModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition">
-          ✕
-        </button>
-      </div>
-
-      <div class="relative w-full aspect-video bg-black flex items-center justify-center overflow-hidden">
-        <img id="modalMainImg" src="" alt="Villa Slide" class="w-full h-full object-contain select-none transition-all duration-300">
-        <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center transition shadow">
-          <i class="fa-solid fa-angle-left text-lg"></i>
-        </button>
-        <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center transition shadow">
-          <i class="fa-solid fa-angle-right text-lg"></i>
-        </button>
-      </div>
-
-      <!-- Footer Modal -->
-      <div class="p-3.5 bg-slate-950 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-800">
-        <div class="text-xs text-slate-300 text-center sm:text-left">
-          <span id="modalVillaDetail"></span>
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-2 w-full sm:w-auto">
-          <a href="tel:0396588880" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition flex items-center gap-1 text-xs">
-            <i class="fa-solid fa-phone"></i> Gọi Giữ Căn
-          </a>
-          <a href="https://zalo.me/0396588880" target="_blank" class="px-3.5 py-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition flex items-center gap-1 text-xs">
-            <i class="fa-solid fa-comment-dots"></i> Chat 1-1
-          </a>
-          <a href="https://zalo.me/g/LINK_NHOM_ZALO_CUA_BAN" target="_blank" class="px-3 py-1.5 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl transition flex items-center gap-1 text-xs">
-            <i class="fa-solid fa-crown text-amber-300"></i> Nhóm VIP
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 5. CHÂN TRANG FOOTER HIỆN ĐẠI KÈM GOOGLE MAPS -->
-  <footer class="bg-slate-900 text-slate-300 pt-12 pb-6 border-t border-slate-800 text-xs mt-auto font-sans">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
-        
-        <!-- Cột 1: Thông tin thương hiệu & Hotline -->
-        <div class="lg:col-span-5 space-y-4">
-          <div class="flex items-center gap-2">
-            <span class="text-xl font-black text-emerald-400 tracking-tight flex items-center gap-1.5">
-              <i class="fa-solid fa-hotel"></i> VANDON<span class="text-white">STAY</span>
-            </span>
-            <span class="text-[11px] font-semibold text-slate-400 border-l border-slate-700 pl-2">
-              Sonasea Vân Đồn Harbor City
-            </span>
-          </div>
-          
-          <p class="text-slate-400 leading-relaxed text-xs">
-            Hệ thống biệt thự nghỉ dưỡng biển cao cấp ven vịnh Bái Tử Long. Trải nghiệm không gian sống tiện nghi chuẩn 5 sao với hồ bơi riêng, BBQ sân vườn và dịch vụ hỗ trợ du khách 24/7.
-          </p>
-
-          <div class="space-y-2.5 pt-1 text-slate-300">
-            <div class="flex items-start gap-2.5">
-              <i class="fa-solid fa-location-dot text-emerald-400 mt-0.5 shrink-0 text-sm"></i>
-              <span>Khu đô thị Sonasea Vân Đồn Harbor City, Xã Hạ Long, Huyện Vân Đồn, Tỉnh Quảng Ninh</span>
-            </div>
-            <div class="flex items-center gap-2.5">
-              <i class="fa-solid fa-phone-volume text-emerald-400 shrink-0 text-sm"></i>
-              <span>Hotline / Zalo: <a href="tel:0396588880" class="text-emerald-400 font-extrabold hover:underline text-sm ml-1">039.65.88880</a></span>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap gap-2 pt-2">
-            <a href="tel:0396588880" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition shadow flex items-center gap-1.5 text-xs">
-              <i class="fa-solid fa-phone"></i> Gọi Giữ Căn
-            </a>
-            <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition shadow flex items-center gap-1.5 text-xs">
-              <i class="fa-solid fa-comment-dots"></i> Chat Zalo 1-1
-            </a>
-            <a href="https://zalo.me/g/LINK_NHOM_ZALO_CUA_BAN" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-purple-700 hover:bg-purple-600 text-white font-bold rounded-xl transition shadow flex items-center gap-1.5 text-xs">
-              <i class="fa-solid fa-crown text-amber-300"></i> Khách VIP
-            </a>
-          </div>
-        </div>
-
-        <!-- Cột 2: Danh mục liên kết hệ sinh thái -->
-        <div class="lg:col-span-3 space-y-3">
-          <h3 class="text-white font-bold text-sm uppercase tracking-wider border-l-2 border-emerald-500 pl-2.5">
-            Hệ Sinh Thái Vandonstay
-          </h3>
-          <ul class="space-y-2 text-slate-400 font-medium">
-            <li>
-              <a href="#danh-sach-villa" class="hover:text-emerald-400 transition flex items-center gap-2">
-                <i class="fa-solid fa-angle-right text-[10px] text-slate-600"></i> Danh Sách 20 Căn Villa
-              </a>
-            </li>
-            <li>
-              <!-- Liên kết VANDONENGLISH -->
-              <a href="./Hoctienganh/index.html" class="hover:text-emerald-400 transition flex items-center gap-2 font-bold text-emerald-300">
-                <i class="fa-solid fa-angle-right text-[10px] text-slate-600"></i> VANDONENGLISH
-              </a>
-            </li>
-            <li>
-              <!-- Liên kết SHOPEEQN -->
-              <a href="./shopeeqn/index.html" class="hover:text-amber-400 transition flex items-center gap-2 font-bold text-amber-300">
-                <i class="fa-solid fa-angle-right text-[10px] text-slate-600"></i> SHOPEEQN
-              </a>
-            </li>
-            <li>
-              <a href="https://zalo.me/g/LINK_NHOM_ZALO_CUA_BAN" target="_blank" class="hover:text-purple-400 transition flex items-center gap-2 text-purple-300 font-bold">
-                <i class="fa-solid fa-crown text-amber-400 text-[10px]"></i> Nhóm Khách Hàng Thân Thiết ➔
-              </a>
-            </li>
-            <li>
-              <a href="https://maps.app.goo.gl/B99W14e1W6iZ2tZ48" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-2 text-emerald-400">
-                <i class="fa-solid fa-map-location-dot text-[11px]"></i> Chỉ Đường Google Maps ➔
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Cột 3: Khung bản đồ Google Maps -->
-        <div class="lg:col-span-4 space-y-2">
-          <div class="flex items-center justify-between">
-            <h3 class="text-white font-bold text-sm uppercase tracking-wider border-l-2 border-emerald-500 pl-2.5">
-              Vị Trí Biệt Thự
-            </h3>
-            <span class="text-[10px] text-slate-400 font-mono">Bái Tử Long Bay</span>
-          </div>
-          
-          <div class="w-full h-48 rounded-2xl overflow-hidden border border-slate-700 shadow-lg relative group">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.2678619623253!2d107.4475454!3d20.9818818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a51187491dfdb%3A0xe744e83fecf02f90!2sSonasea%20V%C3%A2n%20%C4%90%E1%BB%93n%20Harbor%20City!5e0!3m2!1svi!2s!4v1716000000000!5m2!1svi!2s" 
-              width="100%" 
-              height="100%" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              class="w-full h-full grayscale-[20%] contrast-[1.05] group-hover:grayscale-0 transition duration-500">
-            </iframe>
-          </div>
-          <p class="text-[10px] text-slate-500 text-center">Bấm vào bản đồ để phóng to và xem chỉ đường trực tiếp</p>
-        </div>
-
-      </div>
-
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px]">
-        <p>© 2026 Vandonstay Sonasea Vân Đồn Harbor City. Hotline: 039.65.88880.</p>
-        <div class="flex items-center gap-4">
-          <a href="#" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold transition flex items-center gap-1">
-            Lên Đầu Trang <i class="fa-solid fa-arrow-up text-[10px]"></i>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- SCRIPT RENDER 20 CĂN VÀ AUTO-DETECT SLIDE ẢNH -->
   <script>
-    const villas = [
-      { id: 1, code: "V2A02", name: "Villa V2A02", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-emerald-600" },
-      { id: 2, code: "V2C05A", name: "Villa V2C05A", bed: 4, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-teal-600" },
-      { id: 3, code: "V2C06", name: "Villa V2C06", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-emerald-600" },
-      { id: 4, code: "V2C08A", name: "Villa V2C08A", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-emerald-600" },
-      { id: 5, code: "V2D05A", name: "Villa V2D05A", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-amber-600" },
-      { id: 6, code: "V3H01", name: "Villa V3H01", bed: 4, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-teal-600" },
-      { id: 7, code: "V3I02", name: "Villa V3I02", bed: 4, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-teal-600" },
-      { id: 8, code: "V3I03", name: "Villa V3I03", bed: 3, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-cyan-600" },
-      { id: 9, code: "V3J03", name: "Villa V3J03", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-amber-600" },
-      { id: 10, code: "V3K11", name: "Villa V3K11", bed: 3, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-cyan-600" },
-      { id: 11, code: "V3M11A", name: "Villa V3M11A", bed: 3, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-cyan-600" },
-      { id: 12, code: "V3N01", name: "Villa V3N01", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-amber-600" },
-      { id: 13, code: "V3K10", name: "Villa V3K10", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-amber-600" },
-      { id: 14, code: "V3A09", name: "Villa V3A09", bed: 3, bedsCount: 3, adults: 6, kids: 3, tagColor: "bg-emerald-600" },
-      { id: 15, code: "V3A10", name: "Villa V3A10", bed: 3, bedsCount: 4, adults: 6, kids: 3, tagColor: "bg-cyan-600" },
-      { id: 16, code: "V3N08A", name: "Villa V3N08A", bed: 4, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-teal-600" },
-      { id: 17, code: "V3M05", name: "Villa V3M05", bed: 4, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-teal-600" },
-      { id: 18, code: "villa-18", name: "Central Villa-18", bed: 4, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-indigo-600" },
-      { id: 19, code: "villa-19", name: "Central Villa-19", bed: 4, bedsCount: 4, adults: 8, kids: 3, tagColor: "bg-indigo-600" },
-      { id: 20, code: "villa-20", name: "Luxury Villa-20", bed: 5, bedsCount: 5, adults: 10, kids: 4, tagColor: "bg-rose-600" }
-    ];
+    // Tự động gán ngày hôm nay và ngày mai vào bộ lọc
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
 
-    let roomStatus = {};
-    villas.forEach(v => roomStatus[v.code] = true);
+    const formatDate = (date) => date.toISOString().split('T')[0];
 
-    const today = new Date().toISOString().split('T')[0];
-    const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
-    document.getElementById('checkInDate').value = today;
-    document.getElementById('checkOutDate').value = tomorrow;
+    document.getElementById('checkin').value = formatDate(today);
+    document.getElementById('checkout').value = formatDate(tomorrow);
 
-    function renderVillas() {
-      const gridContainer = document.getElementById("villaGrid");
-      gridContainer.innerHTML = villas.map(v => {
-        const localCoverImage = `./villasonasea/${v.code}/1.jpg`;
-        const fallbackImage = `https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80`;
-        const isAvailable = roomStatus[v.code];
-
-        return `
-          <div class="bg-white rounded-2xl border ${isAvailable ? 'border-slate-200/90' : 'border-rose-200 bg-rose-50/20'} overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-            
-            <div onclick="openGallery('${v.code}')" class="block cursor-pointer">
-              <div class="relative aspect-video w-full bg-slate-100 overflow-hidden">
-                <img src="${localCoverImage}" 
-                     alt="${v.name}" 
-                     onerror="this.onerror=null; this.src='${fallbackImage}';" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                
-                <span class="absolute top-2.5 left-2.5 ${v.tagColor} text-white text-[10px] font-black px-2.5 py-0.5 rounded shadow">
-                  ${v.code}
-                </span>
-
-                <span class="absolute top-2.5 right-2.5 ${isAvailable ? 'bg-emerald-600' : 'bg-rose-600'} text-white text-[10px] font-black px-2.5 py-0.5 rounded-full shadow-md flex items-center gap-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-                  ${isAvailable ? 'Còn phòng' : 'Đã có khách'}
-                </span>
-              </div>
-
-              <div class="p-4 pb-2">
-                <h3 class="text-sm font-black text-slate-900 group-hover:text-emerald-700 transition">
-                  ${v.name}
-                </h3>
-                
-                <div class="flex items-center gap-3 text-[11px] text-slate-600 mt-2 font-semibold">
-                  <span><i class="fa-solid fa-door-open text-emerald-600"></i> ${v.bed} PN</span>
-                  <span><i class="fa-solid fa-bed text-emerald-600"></i> ${v.bedsCount} Giường</span>
-                  <span><i class="fa-solid fa-users text-emerald-600"></i> ${v.adults}NL, ${v.kids}TE</span>
-                </div>
-
-                <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400"><i class="fa-solid fa-images text-emerald-600"></i> Xem Slide ảnh</span>
-                  <span class="text-xs font-bold text-emerald-600">Bấm để xem ➔</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- CẶP NÚT GỌI VÀ CHAT 1-1 -->
-            <div class="p-3 pt-2 border-t border-slate-100 flex items-center gap-2">
-              <a href="tel:0396588880" class="flex-1 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold rounded-xl transition shadow-sm flex items-center justify-center gap-1">
-                <i class="fa-solid fa-phone text-[9px]"></i> Gọi Ngay
-              </a>
-              <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-bold rounded-xl transition shadow-sm flex items-center justify-center gap-1">
-                <i class="fa-solid fa-comment-dots text-[9px]"></i> Chat Zalo
-              </a>
-            </div>
-
-          </div>
-        `;
-      }).join("");
+    function searchAvailability() {
+      const checkin = document.getElementById('checkin').value;
+      const checkout = document.getElementById('checkout').value;
+      const type = document.getElementById('villa-select').value;
+      alert(`Đang tra cứu từ ngày ${checkin} đến ${checkout}. Hệ thống đang kiểm tra danh sách phòng!`);
     }
-
-    // LOGIC SLIDE TỰ ĐỘNG NHẬN DIỆN SỐ ẢNH
-    let currentModalVilla = null;
-    let currentSlideIdx = 1;
-    let totalDetectedImages = {};
-
-    function openGallery(villaCode) {
-      currentModalVilla = villas.find(v => v.code === villaCode);
-      if (!currentModalVilla) return;
-
-      currentSlideIdx = 1;
-      document.getElementById("modalVillaName").innerText = `${currentModalVilla.name} (${currentModalVilla.code})`;
-      document.getElementById("modalVillaDetail").innerText = `Tiêu chuẩn: ${currentModalVilla.bed} PN • ${currentModalVilla.bedsCount} Giường • Sức chứa: ${currentModalVilla.adults} Người lớn, ${currentModalVilla.kids} Trẻ em`;
-
-      displayCurrentImage();
-      document.getElementById("galleryModal").classList.remove("hidden");
-    }
-
-    function closeGalleryModal() {
-      document.getElementById("galleryModal").classList.add("hidden");
-    }
-
-    function displayCurrentImage() {
-      const fallback = `https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1000&q=80`;
-      const imgPath = `./villasonasea/${currentModalVilla.code}/${currentSlideIdx}.jpg`;
-      const imgEl = document.getElementById("modalMainImg");
-      
-      imgEl.src = imgPath;
-      imgEl.onerror = () => { imgEl.src = fallback; };
-
-      const totalKnown = totalDetectedImages[currentModalVilla.code];
-      document.getElementById("modalImageIndex").innerText = totalKnown 
-        ? `Ảnh ${currentSlideIdx} / ${totalKnown}` 
-        : `Ảnh số ${currentSlideIdx}`;
-    }
-
-    function nextSlide() {
-      if (!currentModalVilla) return;
-      const nextIdx = currentSlideIdx + 1;
-      const testImg = new Image();
-      testImg.src = `./villasonasea/${currentModalVilla.code}/${nextIdx}.jpg`;
-
-      testImg.onload = () => {
-        currentSlideIdx = nextIdx;
-        displayCurrentImage();
-      };
-
-      testImg.onerror = () => {
-        totalDetectedImages[currentModalVilla.code] = currentSlideIdx;
-        currentSlideIdx = 1;
-        displayCurrentImage();
-      };
-    }
-
-    function prevSlide() {
-      if (!currentModalVilla) return;
-      if (currentSlideIdx > 1) {
-        currentSlideIdx--;
-        displayCurrentImage();
-      } else {
-        if (totalDetectedImages[currentModalVilla.code]) {
-          currentSlideIdx = totalDetectedImages[currentModalVilla.code];
-          displayCurrentImage();
-        } else {
-          findLastImageAndJump(currentModalVilla.code, 50);
-        }
-      }
-    }
-
-    function findLastImageAndJump(code, testIdx) {
-      if (testIdx <= 1) {
-        currentSlideIdx = 1;
-        displayCurrentImage();
-        return;
-      }
-      const testImg = new Image();
-      testImg.src = `./villasonasea/${code}/${testIdx}.jpg`;
-      testImg.onload = () => {
-        totalDetectedImages[code] = testIdx;
-        currentSlideIdx = testIdx;
-        displayCurrentImage();
-      };
-      testImg.onerror = () => {
-        findLastImageAndJump(code, testIdx - 1);
-      };
-    }
-
-    document.addEventListener("keydown", (e) => {
-      const modal = document.getElementById("galleryModal");
-      if (modal && !modal.classList.contains("hidden")) {
-        if (e.key === "ArrowRight") nextSlide();
-        if (e.key === "ArrowLeft") prevSlide();
-        if (e.key === "Escape") closeGalleryModal();
-      }
-    });
-
-    function handleCheckRoom(e) {
-      e.preventDefault();
-      const checkIn = document.getElementById('checkInDate').value;
-      const checkOut = document.getElementById('checkOutDate').value;
-      const filterType = document.getElementById('guestFilter').value;
-      
-      const seed = new Date(checkIn).getDate() || 1;
-      let availableCount = 0;
-
-      villas.forEach((v, index) => {
-        const isBooked = (index + seed) % 4 === 0;
-        roomStatus[v.code] = !isBooked;
-
-        if (filterType === '3pn' && v.bed !== 3) roomStatus[v.code] = false;
-        if (filterType === '4pn' && v.bed !== 4) roomStatus[v.code] = false;
-
-        if (roomStatus[v.code]) availableCount++;
-      });
-
-      renderVillas();
-
-      const notice = document.getElementById('checkResultNotice');
-      const text = document.getElementById('resultText');
-      const summary = document.getElementById('roomStatusSummary');
-      
-      text.innerHTML = `Lịch từ <strong>${checkIn}</strong> đến <strong>${checkOut}</strong>: Tìm thấy <strong>${availableCount} căn còn phòng (nhãn xanh)</strong>.`;
-      summary.innerText = `${availableCount}/20 Căn Còn Trống`;
-      notice.classList.remove('hidden');
-
-      location.href = "#danh-sach-villa";
-    }
-
-    renderVillas();
   </script>
 </body>
 </html>
