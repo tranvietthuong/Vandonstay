@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Crazy English - Full 50 Lessons Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background-color: #f8fafc; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        .scrollable-box {
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .highlight-word {
+            background-color: #facc15;
+            color: #78350f;
+            border-radius: 4px;
+            padding: 0 3px;
+            font-weight: 800;
+            transition: all 0.1s ease;
+        }
+    </style>
+</head>
+<body class="flex flex-col h-full" onclick="closeAllDropdowns(event)">
+
+    <!-- 1. HEADER ĐIỀU HƯỚNG ĐỒNG BỘ VANDONSTAY -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 h-14 px-3 sm:px-6 flex justify-between items-center shrink-0 z-40 shadow-sm">
+        <div class="flex items-center space-x-2">
+            <a href="../index.html" class="flex items-center gap-1 text-xs font-bold text-slate-700 hover:text-emerald-600 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-xl transition">
+                <span>←</span> Danh Sách Sách
+            </a>
+            <a href="../../Vandonstay/index.html" class="hidden md:flex items-center text-xs font-semibold text-slate-500 hover:text-slate-900 px-2 py-1.5 transition">
+                🏠 Trang Chủ Villa
+            </a>
+            <span class="text-slate-300 hidden sm:inline">|</span>
+            <h1 class="text-xs md:text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                🔥 <span>Crazy English 50 Bài Chuẩn</span>
+            </h1>
+        </div>
+        <div class="flex items-center gap-2">
+            <button onclick="toggleTranslation()" id="transToggleBtn" class="hidden bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1.5 rounded-xl border border-emerald-300 font-bold transition">
+                🌐 Dịch & IPA
+            </button>
+            <a href="../../Vandonstay/store/index.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-xl transition shadow-sm">
+                <span>🎁</span> Gian Hàng Học Liệu
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. THANH RUY-BĂNG GỢI Ý SHOPEE AFFILIATE -->
+    <aside class="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white text-[11px] sm:text-xs py-1.5 px-4 shadow-sm shrink-0 z-30">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-1">
+            <div class="flex items-center gap-1.5">
+                <span>📻</span>
+                <span>Luyện phát âm hiệu quả hơn cùng <strong>Loa tắm tiếng Anh Craven</strong> và <strong>Bút chấm đọc</strong>:</span>
+            </div>
+            <a href="../../Vandonstay/store/index.html" class="underline hover:text-amber-100 font-bold ml-auto sm:ml-0">
+                Xem trên Shopee Mall ➔
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden relative">
+        <!-- VIEW 1: MỤC LỤC 50 BÀI -->
+        <div id="listView" class="flex-1 p-3 md:p-6 scrollable-box">
+            <div class="max-w-4xl mx-auto pb-10">
+                <div class="mb-4">
+                    <h2 class="text-base sm:text-lg font-black text-slate-900 uppercase">Danh Sách 50 Bài Luyện Phản Xạ Cuồng Nhiệt</h2>
+                    <p class="text-slate-500 text-xs mt-1">Chạm vào bất kỳ bài học nào để bắt đầu nghe và đọc theo phương pháp Crazy English.</p>
+                </div>
+                <div id="lessonGrid" class="grid grid-cols-1 md:grid-cols-2 gap-2.5"></div>
+            </div>
+        </div>
+
+        <!-- VIEW 2: MÀN HÌNH HỌC CHI TIẾT -->
+        <div id="studyView" class="flex-1 flex flex-col h-full hidden overflow-hidden bg-white">
+            <div id="textContentContainer" class="flex-1 p-3 md:p-6 pb-44 scrollable-box bg-white">
+                <div class="max-w-3xl mx-auto">
+                    <div class="flex justify-between items-center mb-3 pb-2 border-b border-slate-100">
+                        <div class="flex items-center gap-2">
+                            <button id="btn-back" onclick="goHome()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1 border border-slate-200">
+                                <span>← 50 Bài</span>
+                            </button>
+                            <div class="relative">
+                                <button onclick="toggleLessonDropdown(event)" id="lessonBadge" class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 px-2.5 py-1 rounded-lg flex items-center space-x-1 shadow-sm transition">
+                                    <span>Lesson 1</span>
+                                    <span class="text-[10px]">▼</span>
+                                </button>
+                                <div id="lessonDropdownMenu" class="hidden absolute left-0 top-full mt-1.5 w-56 max-h-64 bg-white border border-slate-200 rounded-xl shadow-2xl overflow-y-auto z-50 p-1.5">
+                                    <div id="lessonDropdownItems" class="flex flex-col space-y-0.5"></div>
+                                </div>
+                            </div>
+                            <h2 id="lessonTitle" class="text-xs sm:text-sm md:text-base font-bold text-slate-900 truncate max-w-[200px] sm:max-w-md">Tiêu đề bài học</h2>
+                        </div>
+                        <button onclick="toggleFullscreen()" class="bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg text-xs font-semibold border border-slate-200 shrink-0">
+                            <span id="fsIcon">🔍 Phóng to</span>
+                        </button>
+                    </div>
+                    <div id="lessonContent" class="flex flex-col space-y-2"></div>
+                </div>
+            </div>
+
+            <!-- BẢNG ĐIỀU KHIỂN ÂM THANH DƯỚI ĐÁY -->
+            <div class="bg-slate-900 text-white p-2 md:p-3 shadow-2xl z-30 border-t border-slate-800 shrink-0">
+                <div class="max-w-3xl mx-auto flex flex-col space-y-2">
+                    
+                    <!-- Hàng 1: Nguồn âm thanh & Tùy chọn giọng AI -->
+                    <div class="flex items-center justify-between gap-1 text-xs">
+                        <button onclick="toggleAudioMode()" id="btnAudioModeToggle" class="px-3 py-1.5 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white transition shadow-sm flex items-center space-x-1.5">
+                            <span id="audioModeIcon">🎙️</span>
+                            <span id="audioModeText">Giọng Gốc (MP3)</span>
+                        </button>
+
+                        <div id="aiVoiceControls" class="hidden flex items-center space-x-1.5">
+                            <div class="flex items-center space-x-1 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700">
+                                <span class="text-slate-400 text-[11px]">Đọc:</span>
+                                <button onclick="adjustSentenceCount(1)" class="bg-emerald-700 text-white font-bold px-2 py-0.5 rounded text-xs" id="sentenceCountBtn">1 câu</button>
+                            </div>
+                            <div class="flex items-center space-x-0.5 bg-slate-800 p-0.5 rounded-lg border border-slate-700">
+                                <button onclick="setVoiceGender('female')" id="btnVoiceFemale" class="px-2 py-0.5 text-xs rounded font-medium bg-emerald-700 text-white">👩 Nữ</button>
+                                <button onclick="setVoiceGender('male')" id="btnVoiceMale" class="px-2 py-0.5 text-xs rounded font-medium text-slate-300">👨 Nam</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hàng 2: Lặp lại, Tốc độ, Nút Play -->
+                    <div class="flex items-center justify-between gap-1.5 pt-1 border-t border-slate-800">
+                        <div class="flex items-center space-x-1.5 relative">
+                            <!-- Dropdown lặp lại -->
+                            <div class="relative">
+                                <button onclick="toggleRepeatDropdown(event)" id="btnRepeatToggle" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-2.5 py-1.5 rounded-lg text-xs font-medium flex items-center space-x-1">
+                                    <span class="text-slate-400">Lặp:</span>
+                                    <span id="repeatText" class="font-bold text-teal-400">1 lần</span>
+                                    <span class="text-[9px] text-slate-500">▲</span>
+                                </button>
+                                <div id="repeatDropdownMenu" class="hidden absolute left-0 bottom-full mb-1.5 w-32 bg-slate-800 border border-slate-700 rounded-xl shadow-xl z-50 p-1">
+                                    <button onclick="selectRepeat(1)" class="w-full text-left px-2.5 py-1.5 rounded text-xs text-slate-200 hover:bg-emerald-600">1 lần</button>
+                                    <button onclick="selectRepeat(2)" class="w-full text-left px-2.5 py-1.5 rounded text-xs text-slate-200 hover:bg-emerald-600">2 lần</button>
+                                    <button onclick="selectRepeat(3)" class="w-full text-left px-2.5 py-1.5 rounded text-xs text-slate-200 hover:bg-emerald-600">3 lần</button>
+                                    <button onclick="selectRepeat(5)" class="w-full text-left px-2.5 py-1.5 rounded text-xs text-slate-200 hover:bg-emerald-600">5 lần</button>
+                                    <button onclick="selectRepeat(0)" class="w-full text-left px-2.5 py-1.5 rounded text-xs text-amber-300 hover:bg-emerald-600 font-bold">Mãi mãi (∞)</button>
+                                </div>
+                            </div>
+                            <span id="loopStatus" class="text-emerald-400 font-mono text-[10px]"></span>
+
+                            <!-- Dropdown tốc độ -->
+                            <div class="relative">
+                                <button onclick="toggleSpeedDropdown(event)" id="btnSpeedToggle" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-2.5 py-1.5 rounded-lg text-xs font-medium flex items-center space-x-1">
+                                    <span class="text-slate-400">Tốc độ:</span>
+                                    <span id="speedText" class="font-bold text-emerald-400">1.0x</span>
+                                    <span class="text-[9px] text-slate-500">▲</span>
+                                </button>
+                                <div id="speedDropdownMenu" class="hidden absolute left-0 bottom-full mb-1.5 w-24 bg-slate-800 border border-slate-700 rounded-xl shadow-xl z-50 p-1">
+                                    <button onclick="selectSpeed(0.5)" class="w-full text-left px-2 py-1 rounded text-xs text-slate-200 hover:bg-emerald-600">0.5x</button>
+                                    <button onclick="selectSpeed(0.75)" class="w-full text-left px-2 py-1 rounded text-xs text-slate-200 hover:bg-emerald-600">0.75x</button>
+                                    <button onclick="selectSpeed(1.0)" class="w-full text-left px-2 py-1 rounded text-xs text-slate-200 hover:bg-emerald-600">1.0x (Chuẩn)</button>
+                                    <button onclick="selectSpeed(1.5)" class="w-full text-left px-2 py-1 rounded text-xs text-slate-200 hover:bg-emerald-600">1.5x</button>
+                                    <button onclick="selectSpeed(2.0)" class="w-full text-left px-2 py-1 rounded text-xs text-slate-200 hover:bg-emerald-600">2.0x</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nút Play / Pause -->
+                        <button id="playPauseBtn" onclick="togglePlay()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-1.5 rounded-full font-bold text-xs shadow-md flex items-center space-x-1.5">
+                            <span id="playIcon">▶</span>
+                            <span id="playText">Phát Âm Thanh</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const ipaDict = {
+            "a": "ə", "about": "əˈbaʊt", "action": "ˈækʃn", "actions": "ˈækʃnz", "advice": "ədˈvaɪs", "afraid": "əˈfreɪd",
+            "after": "ˈæftər", "again": "əˈɡeɪn", "all": "ɔːl", "always": "ˈɔːlweɪz", "america": "əˈmɛrɪkə",
+            "american": "əˈmɛrɪkən", "and": "ænd", "any": "ˈɛni", "anything": "ˈɛniθɪŋ", "are": "ɑːr", "as": "æz", "ashamed": "əˈʃeɪmd",
+            "at": "æt", "atmosphere": "ˈætməsfɪr", "attitude": "ˈætɪtuːd", "be": "biː", "beautiful": "ˈbjuːtɪfl", "because": "bɪˈkɔːz", "become": "bɪˈkʌm",
+            "becoming": "bɪˈkʌmɪŋ", "bed": "bɛd", "before": "bɪˈfɔːr", "behave": "bɪˈheɪv", "behavior": "bɪˈheɪvjər",
+            "beijing": "beɪˈdʒɪŋ", "believe": "bɪˈliːv", "benefits": "ˈbɛnɪfɪts", "best": "bɛst",
+            "better": "ˈbɛtər", "big": "bɪɡ", "bill": "bɪl", "black": "blæk", "blame": "bleɪm", "blurt": "blɜːrt", "body": "ˈbɑːdi", "book": "bʊk", "books": "bʊks",
+            "bother": "ˈbɑːðər", "boys": "bɔɪz", "breathe": "briːð", "breathing": "ˈbriːðɪŋ", "breath": "brɛθ", "bright": "braɪt", "brighter": "ˈbraɪtər",
+            "bring": "brɪŋ", "build": "bɪld", "building": "ˈbɪldɪŋ", "burden": "ˈbɜːrdn", "business": "ˈbɪznəs", "but": "bʌt", "buy": "baɪ", "can": "kæn", "cancer": "ˈkænsər",
+            "care": "kɛr", "carefully": "ˈkɛrfəli", "caring": "ˈkɛrɪŋ", "case": "keɪs", "casually": "ˈkæʒuəli", "cause": "kɔːz", "caused": "kɔːzd", "challenges": "ˈtʃælɪndʒɪz", "change": "tʃeɪndʒ", "changed": "tʃeɪndʒd",
+            "changes": "ˈtʃeɪndʒɪz", "children": "ˈtʃɪldrən", "china": "ˈtʃaɪnə", "chinese": "ˌtʃaɪˈniːz", "choice": "tʃɔɪs", "choices": "ˈtʃɔɪsɪz", "choose": "tʃuːz",
+            "cigarettes": "ˌsɪɡəˈrɛts", "cities": "ˈsɪtiz", "city": "ˈsɪti", "clean": "kliːn", "clear": "klɪr", "closer": "ˈkloʊsər", "come": "kʌm", "comfortable": "ˈkʌmftəbl", "common": "ˈkɑːmən",
+            "communication": "kəˌmjuːnɪˈkeɪʃn", "community": "kəˈmjuːnəti", "companies": "ˈkʌmpəniz", "complain": "kəmˈpleɪn", "confidence": "ˈkɑːnfɪdəns", "conquer": "ˈkɑːŋkər", "contained": "kənˈteɪnd",
+            "contribute": "kənˈtrɪbjuːt", "cooperation": "koʊˌɑːpəˈreɪʃn", "correct": "kəˈrɛkt", "correctly": "kəˈrɛktli", "countless": "ˈkaʊntləs", "country": "ˈkʌntri", "courses": "ˈkɔːrsɪz",
+            "cures": "kjʊrz", "daily": "ˈdeɪli", "danger": "ˈdeɪndʒər", "dangerous": "ˈdeɪndʒərəs", "day": "deɪ", "days": "deɪz", "decision": "dɪˈsɪʒn", "dehydrated": "diːˈhaɪdreɪtɪd", "delay": "dɪˈleɪ",
+            "delicious": "dɪˈlɪʃəs", "depend": "dɪˈpɛnd", "depends": "dɪˈpɛndz", "destroy": "dɪˈstrɔɪ", "destructive": "dɪˈstrʌktɪv", "determine": "dɪˈtɜːrmɪn", "developing": "dɪˈvɛləpɪŋ", "difference": "ˈdɪfrəns",
+            "differences": "ˈdɪfrənsɪz", "different": "ˈdɪfrənt", "difficult": "ˈdɪfɪkəlt", "dinner": "ˈdɪnər", "dive": "daɪv", "do": "duː", "doctors": "ˈdɑːktərz", "does": "dʌz", "doesn't": "ˈdʌznt",
+            "doing": "ˈduːɪŋ", "don't": "doʊnt", "drastic": "ˈdræstɪk", "dream": "driːm", "dreams": "driːmz", "drink": "drɪŋk", "drinking": "ˈdrɪŋkɪŋ", "drive": "draɪv", "dry": "draɪ",
+            "each": "iːtʃ", "eager": "ˈiːɡər", "ears": "ɪrz", "early": "ˈɜːrli", "easier": "ˈiːziər", "easily": "ˈiːzəli", "easy": "ˈiːzi", "eat": "iːt", "educational": "ˌɛdʒuˈkeɪʃənl",
+            "effort": "ˈɛfərt", "eight": "eɪt", "else's": "ˈɛlsɪz", "embarrassing": "ɪmˈbærəsɪŋ", "embrace": "ɪmˈbreɪs", "embracing": "ɪmˈbreɪsɪŋ", "emotions": "ɪˈmoʊʃnz", "encourage": "ɪnˈkɜːrɪdʒ",
+            "end": "ɛnd", "energy": "ˈɛnərdʒi", "english": "ˈɪŋɡlɪʃ", "enjoy": "ɪnˈdʒɔɪ", "enough": "ɪˈnʌf", "ensure": "ɪnˈʃʊr", "environment": "ɪnˈvaɪrənmənt", "equal": "ˈiːkwəl", "even": "ˈiːvn",
+            "every": "ˈɛvri", "everybody's": "ˈɛvribɑːdiz", "everyone": "ˈɛvriwʌn", "everything": "ˈɛvriθɪŋ", "everyday": "ˈɛvrideɪ", "example": "ɪɡˈzæmpl", "excuses": "ɪkˈskjuːsɪz", "exercise": "ˈɛksərsaɪz",
+            "exercising": "ˈɛksərsaɪzɪŋ", "experts": "ˈɛkspɜːrts", "express": "ɪkˈsprɛs", "extremely": "ɪkˈstriːmli", "face": "feɪs", "facing": "ˈfeɪsɪŋ", "fair": "fɛr", "fairly": "ˈfɛrli", "fall": "fɔːl",
+            "families": "ˈfæmɪliz", "family": "ˈfæməli", "famous": "ˈfeɪməs", "fancy": "ˈfænsi", "fantastic": "fænˈtæstɪk", "far": "fɑːr", "farewell": "ˌfɛrˈwɛl", "fast": "fæst", "father": "ˈfɑːðər",
+            "fathers": "ˈfɑːðərz", "fault": "fɔːlt", "feel": "fiːl", "feeling": "ˈfiːlɪŋ", "feelings": "ˈfiːlɪŋz", "feet": "fiːt", "few": "fjuː", "fewer": "ˈfjuːər", "first": "fɜːrst", "food": "fuːd",
+            "foot": "fʊt", "for": "fɔːr", "foreigners": "ˈfɔːrənərz", "forget": "fərˈɡɛt", "form": "fɔːrm", "four": "fɔːr", "free": "friː", "freely": "ˈfriːli", "fresh": "frɛʃ", "friend": "frɛnd",
+            "friends": "frɛndz", "friendship": "ˈfrɛndʃɪp", "from": "frɒm", "fruitful": "ˈfruːtfl", "fun": "fʌn", "future": "ˈfjuːtʃər", "gain": "ɡeɪn", "genius": "ˈdʒiːniəs", "gentlemen": "ˈdʒɛntlmən",
+            "get": "ɡɛt", "getting": "ˈɡɛtɪŋ", "gift": "ɡɪft", "girls": "ɡɜːrlz", "give": "ɡɪv", "giving": "ˈɡɪvɪŋ", "glad": "ɡlæd", "glasses": "ˈɡlæsɪz", "glorious": "ˈɡlɔːriəs", "go": "ɡoʊ",
+            "going": "ˈɡoʊɪŋ", "goes": "ɡoʊz", "good": "ɡʊd", "government": "ˈɡʌvərmənt", "grammar": "ˈɡræmər", "great": "ɡreɪt", "green": "ɡriːn", "greetings": "ˈɡriːtɪŋz", "grow": "ɡroʊ",
+            "growing": "ˈɡroʊɪŋ", "guide": "ɡaɪd", "habit": "ˈhæbɪt", "habits": "ˈhæbɪts", "had": "hæd", "happiness": "ˈhæpinəs", "happy": "ˈhæpi", "happier": "ˈhæpiər", "happen": "ˈhæpən",
+            "hard": "hɑːrd", "harder": "ˈhɑːrdər", "harm": "hɑːrm", "harmful": "ˈhɑːrmfl", "harmony": "ˈhɑːrməni", "has": "hæz", "hate": "heɪt", "have": "hæv", "he": "hiː", "headaches": "ˈhɛdeɪks",
+            "health": "hɛlθ", "healthy": "ˈhɛlθi", "healthier": "ˈhɛlθiər", "hear": "hɪr", "hearing": "ˈhɪrɪŋ", "heart": "hɑːrt", "help": "hɛlp", "helped": "hɛlpt", "helpful": "ˈhɛlpfl",
+            "helping": "ˈhɛlpɪŋ", "here": "hɪr", "high": "haɪ", "him": "hɪm", "his": "hɪz", "history": "ˈhɪstəri", "historical": "hɪˈstɔːrɪkl", "home": "hoʊm", "honest": "ˈɑːnɪst", "honor": "ˈɑːnər",
+            "honored": "ˈɑːnərd", "hope": "hoʊp", "hospitality": "ˌhɑːspɪˈtæləti", "host": "hoʊst", "hotel": "hoʊˈtɛl", "hours": "ˈaʊərz", "how": "haʊ", "how's": "haʊz", "hurt": "hɜːrt", "hurting": "ˈhɜːrtɪŋ",
+            "i": "aɪ", "i'd": "aɪd", "i'll": "aɪl", "i'm": "aɪm", "if": "ɪf", "imagined": "ɪˈmædʒɪnd", "imitate": "ˈɪmɪteɪt", "importance": "ɪmˈpɔːrtns", "important": "ɪmˈpɔːrtnt", "impossible": "ɪmˈpɑːsəbl",
+            "impression": "ɪmˈprɛʃn", "improve": "ɪmˈpruːv", "improved": "ɪmˈpruːvd", "improvement": "ɪmˈpruːvmənt", "in": "ɪn", "individuals": "ˌɪndɪˈvɪdʒuəlz", "indulgent": "ɪnˈdʌldʒənt",
+            "influence": "ˈɪnfluəns", "informal": "ɪnˈfɔːrml", "information": "ˌɪnfərˈmeɪʃn", "insisted": "ɪnˈsɪstɪd", "interesting": "ˈɪntrəstɪŋ", "introduction": "ˌɪntrəˈdʌkʃn", "inviting": "ɪnˈvaɪtɪŋ",
+            "is": "ɪz", "it": "ɪt", "it's": "ɪts", "job": "dʒɒb", "jobs": "dʒɒbz", "join": "dʒɔɪn", "joys": "dʒɔɪz", "just": "dʒʌst", "keep": "kiːp", "killing": "ˈkɪlɪŋ", "kind": "kaɪnd", "kinder": "ˈkaɪndər",
+            "kindness": "ˈkaɪndnəs", "kinds": "kaɪndz", "king": "kɪŋ", "know": "noʊ", "knowledge": "ˈnɑːlɪdʒ", "knowing": "ˈnoʊɪŋ", "lack": "læk", "ladies": "ˈleɪdiz", "land": "lænd", "language": "ˈlæŋɡwɪdʒ",
+            "languages": "ˈlæŋɡwɪdʒɪz", "large": "lɑːrdʒ", "lastly": "ˈlæstli", "late": "leɪt", "laugh": "læf", "laughed": "læft", "laws": "lɔːz", "lead": "liːd", "leader": "ˈliːdər", "learn": "lɜːrn",
+            "learning": "ˈlɜːrnɪŋ", "least": "liːst", "leave": "liːv", "lesson": "ˈlɛsn", "let": "lɛt", "let's": "lɛts", "life": "laɪf", "like": "laɪk", "limit": "ˈlɪmɪt", "listen": "ˈlɪsn",
+            "listening": "ˈlɪsnɪŋ", "little": "ˈlɪtl", "live": "lɪv", "long": "lɒŋ", "longer": "ˈlɒŋɡər", "look": "lʊk", "lose": "luːz", "losing": "ˈluːzɪŋ", "lot": "lɑːt", "lots": "lɑːts", "loudly": "ˈlaʊdli",
+            "love": "lʌv", "loved": "lʌvd", "luck": "lʌk", "lungs": "lʌŋz", "luther": "ˈluːθər", "made": "meɪd", "make": "meɪk", "making": "ˈmeɪkɪŋ", "makes": "meɪks", "man": "mæn", "many": "ˈmɛni",
+            "marvelous": "ˈmɑːrvələs", "master": "ˈmæstər", "material": "məˈtɪriəl", "matter": "ˈmætər", "may": "meɪ", "me": "miː", "meal": "miːl", "means": "miːnz", "meet": "miːt", "member": "ˈmɛmbər",
+            "memory": "ˈmɛməri", "memorize": "ˈmɛməraɪz", "mental": "ˈmɛntl", "merely": "ˈmɪrli", "met": "mɛt", "million": "ˈmɪljən", "mind": "maɪnd", "minds": "maɪndz", "minute": "ˈmɪnɪt", "minutes": "ˈmɪnɪts",
+            "mirror": "ˈmɪrər", "miserable": "ˈmɪzrəbl", "miss": "mɪs", "mistake": "mɪˈsteɪk", "mistakes": "mɪˈsteɪks", "model": "ˈmɑːdl", "mom": "mɒm", "moment": "ˈmoʊmənt", "money": "ˈmʌni",
+            "month": "mʌnθ", "more": "mɔːr", "morning": "ˈmɔːrnɪŋ", "most": "moʊst", "mother": "ˈmʌðər", "motherland": "ˈmʌðərlænd", "mothers": "ˈmʌðərz", "mouth": "maʊθ", "moving": "ˈmuːvɪŋ", "much": "mʌtʃ",
+            "muscle": "ˈmʌsl", "must": "mʌst", "my": "maɪ", "myself": "maɪˈsɛlf", "natural": "ˈnætʃrəl", "necessary": "ˈnɛsəsɛri", "need": "niːd", "needs": "niːdz", "neither": "ˈniːðər", "nervous": "ˈnɜːrvəs",
+            "never": "ˈnɛvər", "new": "nuː", "next": "nɛkst", "night": "naɪt", "tonight": "təˈnaɪt", "no": "noʊ", "nobody": "ˈnoʊbədi", "noise": "nɔɪz", "nor": "nɔːr", "not": "nɒt", "nothing": "ˈnʌθɪŋ",
+            "now": "naʊ", "nutritious": "nuːˈtrɪʃəs", "occasions": "əˈkeɪʒnz", "of": "ɒv", "off": "ɔːf", "offer": "ˈɔːfər", "office": "ˈɔːfɪs", "officials": "əˈfɪʃlz", "often": "ˈɒfn", "old": "oʊld",
+            "oldest": "ˈoʊldɪst", "on": "ɒn", "one": "wʌn", "only": "ˈoʊnli", "open": "ˈoʊpən", "opportunity": "ˌɑːpərˈtuːnəti", "or": "ɔːr", "other": "ˈʌðər", "otherwise": "ˈʌðərwaɪz", "our": "ˈaʊər",
+            "ourselves": "ɑːrˈsɛlvz", "out": "aʊt", "outside": "ˌaʊtˈsaɪd", "outstanding": "aʊtˈstændɪŋ", "owe": "oʊ", "own": "oʊn", "pack": "pæk", "pains": "peɪnz", "pain": "peɪn", "paragraphs": "ˈpærəɡræfs",
+            "parent": "ˈpɛrənt", "parents": "ˈpɛrənts", "park": "pɑːrk", "part": "pɑːrt", "parties": "ˈpɑːrtiz", "pass": "pæs", "passed": "pæst", "past": "pæst", "patient": "ˈpeɪʃnt", "pay": "peɪ",
+            "peaceful": "ˈpiːsfl", "people": "ˈpiːpl", "people's": "ˈpiːplz", "perfect": "ˈpɜːrfɪkt", "physical": "ˈfɪzɪkl", "pig's": "pɪɡz", "place": "pleɪs", "places": "ˈpleɪsɪz", "please": "pliːz",
+            "polluting": "pəˈluːtɪŋ", "pollution": "pəˈluːʃn", "popular": "ˈpɑːpjələr", "population": "ˌpɑːpjuˈleɪʃn", "possibly": "ˈpɑːsəbli", "pour": "pɔːr", "power": "ˈpaʊər", "powerful": "ˈpaʊərfl",
+            "practical": "ˈpræktɪkl", "practice": "ˈpræktɪs", "precious": "ˈprɛʃəs", "priority": "praɪˈɔːrəti", "problem": "ˈprɒbləm", "problems": "ˈprɒbləmz", "productive": "prəˈdʌktɪv", "productively": "prəˈdʌktɪvli",
+            "progress": "ˈprɒɡrɛs", "pronounce": "prəˈnaʊns", "pronunciation": "prəˌnʌnsiˈeɪʃn", "proud": "praʊd", "punish": "ˈpʌnɪʃ", "push": "pʊʃ", "puzzled": "ˈpʌzld", "questions": "ˈkwɛstʃənz",
+            "quick": "kwɪk", "quickly": "ˈkwɪkli", "quote": "kwoʊt", "raise": "reɪz", "rarely": "ˈrɛrli", "rate": "reɪt", "read": "riːd", "reading": "ˈriːdɪŋ", "real": "ˈrɪəl", "realize": "ˈrɪəlaɪz",
+            "realized": "ˈrɪəlaɪzd", "really": "ˈrɪəli", "recipe": "ˈrɛsəpi", "reciting": "rɪˈsaɪtɪŋ", "reduce": "rɪˈduːs", "relax": "rɪˈlæks", "relieved": "rɪˈliːvd", "remember": "rɪˈmɛmbər",
+            "remind": "rɪˈmaɪnd", "remodeled": "ˌriːˈmɑːdld", "replied": "rɪˈplaɪd", "resources": "ˈriːsɔːrsɪz", "responsibility": "rɪˌspɒnsəˈbɪləti", "return": "rɪˈtɜːrn", "rich": "rɪtʃ", "right": "raɪt",
+            "ruining": "ˈruːɪnɪŋ", "rules": "ruːlz", "safe": "seɪf", "said": "sɛd", "same": "seɪm", "satisfaction": "ˌsætɪsˈfækʃn", "save": "seɪv", "say": "seɪ", "saying": "ˈseɪɪŋ", "second": "ˈsɛkənd",
+            "second-hand": "ˈsɛkənd hænd", "secret": "ˈsiːkrət", "secrets": "ˈsiːkrəts", "see": "siː", "seeing": "ˈsiːɪŋ", "seize": "siːz", "selfish": "ˈsɛlfɪʃ", "sentence": "ˈsɛntəns", "sentences": "ˈsɛntənsɪz",
+            "service": "ˈsɜːrvɪs", "setting": "ˈsɛtɪŋ", "several": "ˈsɛvrəl", "shame": "ʃeɪm", "share": "ʃɛr", "she": "ʃiː", "shocked": "ʃɑːkt", "short": "ʃɔːrt", "should": "ʃʊd", "shouldn't": "ˈʃʊdnt",
+            "shout": "ʃaʊt", "show": "ʃoʊ", "showing": "ˈʃoʊɪŋ", "shyness": "ˈʃaɪnəs", "simple": "ˈsɪmpl", "simply": "ˈsɪmpli", "singing": "ˈsɪŋɪŋ", "single": "ˈsɪŋɡl", "sino-us": "ˌsaɪnoʊ juː ˈɛs",
+            "sister": "ˈsɪstər", "sites": "saɪts", "situation": "ˌsɪtʃuˈeɪʃn", "sleep": "sliːp", "small": "smɔːl", "smaller": "ˈsmɔːlər", "smell": "smɛl", "smile": "smaɪl", "smiles": "smaɪlz",
+            "smiling": "ˈsmaɪlɪŋ", "smoke": "smoʊk", "smoking": "ˈsmoʊkɪŋ", "so": "soʊ", "society": "səˈsaɪəti", "solve": "sɒlv", "solving": "ˈsɒlvɪŋ", "some": "sʌm", "somebody": "ˈsʌmbədi",
+            "somebody's": "ˈsʌmbədiz", "someone": "ˈsʌmwʌn", "something": "ˈsʌmθɪŋ", "sometimes": "ˈsʌmtaɪmz", "soon": "suːn", "soul": "soʊl", "sounds": "saʊndz", "speak": "spiːk", "speaker": "ˈspiːkər",
+            "speaking": "ˈspiːkɪŋ", "special": "ˈspɛʃl", "speech": "spiːtʃ", "spell": "spɛl", "spend": "spɛnd", "square": "skwɛr", "stand": "stænd", "start": "stɑːrt", "started": "ˈstɑːrtɪd",
+            "starting": "ˈstɑːrtɪŋ", "stay": "steɪ", "stayed": "steɪd", "steps": "stɛps", "still": "stɪl", "stop": "stɑːp", "stranger": "ˈstreɪndʒər", "strict": "strɪkt", "striving": "ˈstraɪvɪŋ",
+            "stronger": "ˈstrɔːŋɡər", "student": "ˈstjuːdnt", "students": "ˈstjuːdnts", "study": "ˈstʌdi", "studying": "ˈstʌdiɪŋ", "succeed": "səkˈsiːd", "success": "səkˈsɛs", "successful": "səkˈsɛsfʊl",
+            "such": "sʌtʃ", "suffer": "ˈsʌfər", "suits": "suːts", "sum": "sʌm", "supports": "səˈpɔːrts", "sure": "ʃʊr", "survived": "sərˈvaɪvd", "switch": "swɪtʃ", "switching": "ˈswɪtʃɪŋ", "take": "teɪk",
+            "taken": "ˈteɪkən", "taking": "ˈteɪkɪŋ", "talents": "ˈtælənts", "talented": "ˈtæləntɪd", "talk": "tɔːk", "tape": "teɪp", "tapes": "teɪps", "taste": "teɪst", "teach": "tiːtʃ", "teachers": "ˈtiːtʃərz",
+            "teaching": "ˈtiːtʃɪŋ", "teeth": "tiːθ", "television": "ˈtɛlɪvɪʒn", "tell": "tɛl", "terrible": "ˈtɛrəbl", "than": "ðæn", "thank": "θæŋk", "thanks": "θæŋks", "that": "ðæt", "that's": "ðæts",
+            "the": "ðə", "their": "ðɛr", "them": "ðɛm", "then": "ðɛn", "there": "ðɛr", "these": "ðiːz", "they": "ðeɪ", "thing": "θɪŋ", "things": "θɪŋz", "think": "θɪŋk", "third": "θɜːrd", "this": "ðɪs",
+            "three": "θriː", "throat": "θroʊt", "through": "θruː", "throughout": "θruːˈaʊt", "throw": "θroʊ", "throwing": "ˈθroʊɪŋ", "time": "taɪm", "times": "taɪmz", "tips": "tɪps", "tired": "ˈtaɪərd",
+            "to": "tuː", "today": "təˈdeɪ", "together": "təˈɡɛðər", "told": "toʊld", "tomorrow": "təˈmɑːroʊ", "tongue": "tʌŋ", "too": "tuː", "top": "tɑːp", "total": "ˈtoʊtl", "totally": "ˈtoʊtəli",
+            "tough": "tʌf", "toughest": "ˈtʌfɪst", "train": "treɪn", "trains": "treɪnz", "treasure": "ˈtrɛʒər", "treat": "triːt", "treated": "ˈtriːtɪd", "tremendously": "trəˈmɛndəsli", "tricks": "trɪks",
+            "trip": "trɪp", "trouble": "ˈtrʌbl", "true": "truː", "truly": "ˈtruːli", "trust": "trʌst", "try": "traɪ", "trying": "ˈtraɪɪŋ", "turn": "tɜːrn", "two": "tuː", "two-year": "ˈtuː jɪr",
+            "unconditionally": "ˌʌnkənˈdɪʃənəli", "understand": "ˌʌndərˈstænd", "understanding": "ˌʌndərˈstændɪŋ", "unique": "juˈniːk", "unparalleled": "ʌnˈpærəlɛld", "until": "ənˈtɪl", "unusual": "ʌnˈjuːʒuəl",
+            "up": "ʌp", "us": "ʌs", "use": "juːz", "used": "juːzd", "usually": "ˈjuːʒuəli", "vacation": "veɪˈkeɪʃn", "value": "ˈvæljuː", "variety": "vəˈraɪəti", "vast": "væst", "very": "ˈvɛri",
+            "vietnam": "ˌvjɛtˈnæm", "vietnamese": "ˌvjɛtnəˈmiːz", "views": "vjuːz", "visit": "ˈvɪzɪt", "visited": "ˈvɪzɪtɪd", "want": "wɒnt", "wanted": "ˈwɒntɪd", "wanting": "ˈwɒntɪŋ", "wants": "wɒnts",
+            "warm": "wɔːrm", "wars": "wɔːrz", "was": "wɒz", "waste": "weɪst", "wasting": "ˈweɪstɪŋ", "watch": "wɑːtʃ", "water": "ˈwɔːtər", "way": "weɪ", "ways": "weɪz", "we": "wiː", "we'll": "wiːl",
+            "we're": "wɪr", "week": "wiːk", "welcome": "ˈwɛlkəm", "welcoming": "ˈwɛlkəmɪŋ", "well": "wɛl", "went": "wɛnt", "were": "wɜːr", "what": "wɒt", "what's": "wɒts", "when": "wɛn", "where": "wɛr",
+            "whether": "ˈwɛðər", "which": "wɪtʃ", "who": "huː", "why": "waɪ", "will": "wɪl", "win": "wɪn", "wisdom": "ˈwɪzdəm", "wise": "waɪz", "wiser": "ˈwaɪzər", "wish": "wɪʃ", "wishes": "ˈwɪʃɪz",
+            "with": "wɪð", "without": "wɪˈðaʊt", "woman": "ˈwʊmən", "wonderful": "ˈwʌndərfl", "word": "wɜːrd", "words": "wɜːrdz", "work": "wɜːrk", "worked": "wɜːrkt", "working": "ˈwɜːrkɪŋ",
+            "world": "wɜːrld", "worldwide": "ˌwɜːrldˈwaɪd", "worry": "ˈwʌri", "worrying": "ˈwʌriɪŋ", "worse": "wɜːrs", "worst": "wɜːrst", "worth": "wɜːrθ", "would": "wʊd", "writing": "ˈraɪtɪŋ",
+            "wrong": "rɒŋ", "year": "jɪr", "years": "jɪrz", "yesterday": "ˈjɛstərdeɪ", "yellow": "ˈjɛloʊ", "you": "juː", "you'd": "juːd", "you'll": "juːl", "you're": "jʊr", "you've": "juːv",
+            "young": "jʌŋ", "your": "jɔːr", "yourself": "jɔːrˈsɛlf"
+        };
+
+        function generateIPA(text) {
+            return text.replace(/[.,!?;:"'()]/g, "").split(/\s+/).map(w => {
+                const clean = w.toLowerCase();
+                return ipaDict[clean] || clean;
+            }).join(" ");
+        }
+
+        const mp3FileMap = {
+            1: "L1.It_s on me 1.mp3", 2: "L2.English and Chinese.mp3", 3: "L3.Memorizing words.mp3", 4: "L4.People in my family.mp3",
+            5: "L5.The secret of my success.mp3", 6: "L6.My first trip to America.mp3", 7: "L7.Make sociaty Better.mp3", 8: "L8.Sino-US Relations.mp3",
+            9: "L9.Face problem and Challenges.mp3", 10: "L10.I want to change my life.mp3", 11: "L11 How to take Responsibility.mp3", 12: "L12 The World is becoming smaller _ smaller.mp3",
+            13: "L13 A good Book is like a good Friend.mp3", 14: "L14 Foot and Food.mp3", 15: "L15 How to speak fluent English.mp3", 16: "L16 The Importance of Smiling.mp3",
+            17: "L17 The Importance of Choice.mp3", 18: "L18 The Harm of Smoking.mp3", 19: "L19 How to Pronouce English Words Correctly.mp3", 20: "L20 How to communicate Effectively.mp3",
+            21: "L21. Caring Makes the world more beautiful.mp3", 22: "L22. Sucess is up to you.mp3", 23: "L23 How to be a good parent.mp3", 24: "L24 How to build a great family.mp3",
+            25: "L25 Value your time.mp3", 26: "L26 How to live productively.mp3", 27: "L27 Secrets of speaking English Well.mp3", 28: "L28 Recipe for happiness.mp3",
+            29: "L29 My Favorite of meal.mp3", 30: "L30.Beautiful Beijing.mp3", 31: "L31 Farewell Speech - I will miss China.mp3", 32: "L32 Why Excercise is Important.mp3",
+            33: "L33 My Wishes.mp3", 34: "L34 The dangers of TV.mp3", 35: "L35 The Three most Importance of Piece Advice.mp3", 36: "L36 Father and Mother are the Children_s Teachers.mp3",
+            37: "L37 Greeting Property.mp3", 38: "L38 Telling Right from Wrong.mp3", 39: "L39 Splendid MotherLand.mp3", 40: "L40 The Importance of Work.mp3",
+            41: "L41 What is more important than money.mp3", 42: "L42 Noise pollution1.mp3", 43: "L43 How to learn English well1.mp3", 44: "L44 A Brief Introduction to China.mp3",
+            45: "L45 Welcome to our Hotel.mp3", 46: "L46 Keeping our world beautiful1.mp3", 47: "L47 Fight for today.mp3", 48: "L48 A few tips for learning English.mp3",
+            49: "L49 Drinking enough water is crucial.mp3", 50: "L50 The power of words.mp3"
+        };
+
+        const rawData = [
+            { id: 1, title: "It's on Me", sentences: [
+                { en: "Thank you for inviting me to eat.", vi: "Cảm ơn bạn đã mời tôi đi ăn." },
+                { en: "It's my treat this time.", vi: "Lần này là phần tôi chiêu đãi." },
+                { en: "Please let me pay the bill.", vi: "Xin hãy để tôi thanh toán hóa đơn." },
+                { en: "You can treat me next time we eat.", vi: "Bạn có thể đãi tôi vào lần ăn tới." },
+                { en: "It has been my dream to meet you.", vi: "Được gặp bạn là ước mơ bấy lâu của tôi." },
+                { en: "I really enjoyed this meal.", vi: "Tôi thực sự rất thích bữa ăn này." },
+                { en: "I really enjoyed speaking with you.", vi: "Tôi thực sự rất thích trò chuyện cùng bạn." },
+                { en: "Thank you for your time.", vi: "Cảm ơn bạn đã dành thời gian." },
+                { en: "We should meet every week and eat dinner together.", vi: "Chúng ta nên gặp nhau mỗi tuần và cùng ăn tối." }
+            ]},
+            { id: 2, title: "English and Chinese", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about the differences between English and Chinese.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về những điểm khác biệt giữa tiếng Anh và tiếng Trung." },
+                { en: "English is very different from Chinese.", vi: "Tiếng Anh rất khác so với tiếng Trung." },
+                { en: "The sounds are different, the grammar is different, and the writing is totally different.", vi: "Phát âm khác nhau, ngữ pháp khác nhau và chữ viết hoàn toàn khác biệt." },
+                { en: "It's very difficult to speak English well.", vi: "Rất khó để có thể nói tiếng Anh thật giỏi." },
+                { en: "If you want to speak English well, you must forget about the differences.", vi: "Nếu bạn muốn nói tiếng Anh giỏi, bạn phải quên đi sự khác biệt đó." },
+                { en: "Just practice correct sentences until you're used to them.", vi: "Chỉ cần luyện các câu chuẩn xác cho đến khi quen thuộc với chúng." },
+                { en: "The more sentences you can blurt out, the better you can express yourself.", vi: "Bạn thốt ra được càng nhiều câu, bạn càng diễn đạt bản thân tốt hơn." },
+                { en: "If you believe in yourself and practice crazily every day, you will make it.", vi: "Nếu tin vào chính mình và luyện tập điên cuồng mỗi ngày, bạn chắc chắn làm được." },
+                { en: "You will conquer English.", vi: "Bạn sẽ chinh phục được tiếng Anh." },
+                { en: "Chinese is the most difficult language in the world.", vi: "Tiếng Trung là ngôn ngữ khó nhất trên thế giới." },
+                { en: "If you can speak Chinese, you can speak English.", vi: "Nếu bạn nói được tiếng Trung, bạn chắc chắn nói được tiếng Anh." }
+            ]},
+            { id: 3, title: "Memorizing Words", sentences: [
+                { en: "Many people tell me that it is very hard to remember new words.", vi: "Nhiều người nói với tôi rằng rất khó để nhớ từ mới." },
+                { en: "They complain that no matter how hard they try to memorize new words, they always forget them.", vi: "Họ phàn nàn rằng dù có cố gắng ghi nhớ thế nào, họ vẫn luôn bị quên." },
+                { en: "The best way to remember new words is to practice them every day.", vi: "Cách tốt nhất để nhớ từ mới là luyện tập chúng hàng ngày." },
+                { en: "Practice them in sentences and paragraphs.", vi: "Hãy luyện tập chúng trong các câu và đoạn văn." },
+                { en: "Listen to tapes and read along every day.", vi: "Hãy nghe băng đĩa và đọc theo mỗi ngày." },
+                { en: "Otherwise, you will forget easily.", vi: "Nếu không, bạn sẽ rất dễ quên." },
+                { en: "If you need my help, please call me.", vi: "Nếu bạn cần tôi giúp đỡ, hãy gọi cho tôi." },
+                { en: "We are friends.", vi: "Chúng ta là bạn bè." },
+                { en: "Friends help each other.", vi: "Bạn bè thì luôn giúp đỡ lẫn nhau." },
+                { en: "Let's conquer new words together.", vi: "Hãy cùng nhau chinh phục từ mới!" }
+            ]},
+            { id: 4, title: "People in My Family", sentences: [
+                { en: "Ladies and Gentlemen, let me tell you a little bit about my family.", vi: "Kính thưa quý vị, hãy để tôi kể một chút về gia đình của mình." },
+                { en: "I have a very happy family.", vi: "Tôi có một gia đình vô cùng hạnh phúc." },
+                { en: "My dad is a great man.", vi: "Bố tôi là một người đàn ông tuyệt vời." },
+                { en: "He has a fantastic job.", vi: "Ông có một công việc vô cùng lý tưởng." },
+                { en: "My mom is a wonderful woman.", vi: "Mẹ tôi là một người phụ nữ tuyệt vời." },
+                { en: "She has many outstanding talents.", vi: "Bà có rất nhiều tài năng xuất chúng." },
+                { en: "My family loves me.", vi: "Gia đình tôi rất yêu thương tôi." },
+                { en: "My family supports me in good times and bad times.", vi: "Gia đình luôn ủng hộ tôi những lúc thuận lợi cũng như khó khăn." },
+                { en: "They help me form many good habits.", vi: "Họ giúp tôi hình thành nên nhiều thói quen tốt." },
+                { en: "My mom and dad always tell me, if I want to succeed, I need to have good habits.", vi: "Bố mẹ luôn bảo tôi rằng, nếu muốn thành công thì cần phải có thói quen tốt." },
+                { en: "We practice speaking English together every morning.", vi: "Chúng tôi cùng nhau luyện nói tiếng Anh vào mỗi buổi sáng." },
+                { en: "We have dinner together every night.", vi: "Chúng tôi cùng nhau ăn tối vào mỗi buổi tối." },
+                { en: "We talk about our problems.", vi: "Chúng tôi cùng tâm sự về các vấn đề của mình." },
+                { en: "We share our joys.", vi: "Chúng tôi cùng chia sẻ niềm vui với nhau." },
+                { en: "We exercise together.", vi: "Chúng tôi cùng nhau tập thể dục." },
+                { en: "We relax together.", vi: "Chúng tôi cùng nhau thư giãn." },
+                { en: "The atmosphere in my family is fantastic.", vi: "Bầu không khí trong gia đình tôi thật tuyệt vời." }
+            ]},
+            { id: 5, title: "The Secret of My Success", sentences: [
+                { en: "Ladies and Gentlemen, people often ask me how I learned to speak such wonderful English.", vi: "Kính thưa quý vị, mọi người thường hỏi tôi làm thế nào để nói tiếng Anh tuyệt vời như vậy." },
+                { en: "They want me to sum up the secrets of my success.", vi: "Họ muốn tôi đúc kết những bí quyết thành công của mình." },
+                { en: "But studying the secrets of my success is not really enough to help you succeed.", vi: "Nhưng chỉ nghiên cứu bí quyết của tôi thôi thì chưa đủ để giúp bạn thành công." },
+                { en: "If you really want to succeed, you must love English.", vi: "Nếu bạn thực sự muốn thành công, bạn phải có tình yêu với tiếng Anh." },
+                { en: "You must love English so much that you practice every single day, month after month.", vi: "Bạn phải yêu tiếng Anh đến mức luyện tập mỗi ngày, từ tháng này qua tháng khác." },
+                { en: "You must never be satisfied that your English is good enough.", vi: "Bạn không bao giờ được tự mãn rằng tiếng Anh của mình đã đủ tốt." },
+                { en: "You must be tough on yourself and keep striving for improvement.", vi: "Bạn phải nghiêm khắc với bản thân và không ngừng nỗ lực tiến bộ." },
+                { en: "Real success in speaking English doesn't depend on luck or how much money you spend on books or courses.", vi: "Thành công thực sự khi nói tiếng Anh không phụ thuộc vào may mắn hay số tiền bạn chi cho sách vở, khóa học." },
+                { en: "Real success depends on wanting something badly enough and working hard enough to get it.", vi: "Thành công thực sự phụ thuộc vào việc bạn khao khát điều đó đủ lớn và nỗ lực hết mình để đạt được nó." }
+            ]},
+            { id: 6, title: "My First Trip to America", sentences: [
+                { en: "Ladies and Gentlemen, I just got back from America yesterday.", vi: "Kính thưa quý vị, tôi vừa trở về từ nước Mỹ ngày hôm qua." },
+                { en: "This was my first visit to America.", vi: "Đây là chuyến đi đầu tiên của tôi đến nước Mỹ." },
+                { en: "I'd like to say a few words about my first trip.", vi: "Tôi muốn chia sẻ đôi lời về chuyến đi đầu tiên này." },
+                { en: "Everything was new and fresh.", vi: "Mọi thứ đối với tôi đều mới mẻ và tươi mới." },
+                { en: "I got up early to exercise in the park.", vi: "Tôi dậy sớm để tập thể dục trong công viên." },
+                { en: "I visited many interesting places.", vi: "Tôi đã ghé thăm rất nhiều địa điểm thú vị." },
+                { en: "I met a lot of interesting people.", vi: "Tôi đã gặp gỡ rất nhiều con người thú vị." },
+                { en: "I felt a little nervous, but I still talked to people.", vi: "Tôi có chút hồi hộp nhưng vẫn chủ động trò chuyện với mọi người." },
+                { en: "They were very friendly and helpful.", vi: "Họ rất thân thiện và nhiệt tình giúp đỡ." },
+                { en: "I had a great first impression of the American people.", vi: "Tôi đã có ấn tượng đầu tiên rất tuyệt vời về người dân Mỹ." },
+                { en: "This trip was the first time I had to use English in real life.", vi: "Chuyến đi này là lần đầu tiên tôi phải sử dụng tiếng Anh trong đời thực." },
+                { en: "My English was not perfect, but I survived.", vi: "Tiếng Anh của tôi chưa hoàn hảo, nhưng tôi đã xoay sở thành công." },
+                { en: "The more I used English, the easier it became.", vi: "Tôi càng dùng tiếng Anh nhiều thì mọi việc càng trở nên dễ dàng hơn." },
+                { en: "I'm still working very hard on my English.", vi: "Tôi vẫn đang nỗ lực học tập tiếng Anh rất chăm chỉ." },
+                { en: "You know, practice makes perfect.", vi: "Bạn biết đấy, có công mài sắt có ngày nên kim." },
+                { en: "Next time I go to America, I won't feel nervous at all.", vi: "Lần tới khi đến Mỹ, tôi sẽ không còn cảm thấy hồi hộp chút nào nữa." }
+            ]},
+            { id: 7, title: "Make Society Better", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about a simple way that we can work together to make society better.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về một cách đơn giản mà chúng ta có thể cùng làm để xã hội tốt đẹp hơn." },
+                { en: "We must always remember that every person is important.", vi: "Chúng ta phải luôn nhớ rằng mỗi cá nhân đều vô cùng quan trọng." },
+                { en: "It doesn't matter if we know a person or if he is a total stranger.", vi: "Dù đó là người quen hay một người hoàn toàn xa lạ thì cũng không quan trọng." },
+                { en: "Every person is somebody's mother, father, sister, or brother.", vi: "Mỗi người đều là mẹ, là cha, là chị em gái hay anh em trai của một ai đó." },
+                { en: "We must never look away when we see someone suffer.", vi: "Chúng ta đừng bao giờ ngoảnh mặt làm ngơ khi thấy ai đó gặp hoạn nạn." },
+                { en: "We must never feel another person doesn't matter.", vi: "Đừng bao giờ cảm thấy người khác là không quan trọng." },
+                { en: "We must never say it's too much bother.", vi: "Đừng bao giờ nói rằng điều đó quá phiền phức." },
+                { en: "We should offer help unconditionally.", vi: "Chúng ta nên sẵn lòng giúp đỡ vô điều kiện." },
+                { en: "If we want to live together in harmony, we must learn to treat every single person as our own mother, father, sister, or brother.", vi: "Nếu muốn sống cùng nhau trong hòa thuận, ta phải học cách đối xử với mọi người như chính người thân trong gia đình mình." },
+                { en: "This is the way to truly make our society stronger and better.", vi: "Đây chính là cách để thực sự làm cho xã hội ngày càng vững mạnh và tốt đẹp hơn." }
+            ]},
+            { id: 8, title: "Sino-US Relations", sentences: [
+                { en: "Ladies and Gentlemen, America is a great country.", vi: "Kính thưa quý vị, nước Mỹ là một quốc gia tuyệt vời." },
+                { en: "China is a great country.", vi: "Trung Quốc là một quốc gia vĩ đại." },
+                { en: "China and America have a long history together.", vi: "Trung Quốc và Mỹ có mối quan hệ lịch sử gắn bó lâu dài." },
+                { en: "Now is the right time to build an even closer and stronger relationship.", vi: "Hiện tại là thời điểm thích hợp để xây dựng mối quan hệ gần gũi và bền chặt hơn nữa." },
+                { en: "China is inviting more and more experts from America to share their knowledge.", vi: "Trung Quốc đang mời ngày càng nhiều chuyên gia từ Mỹ sang chia sẻ tri thức." },
+                { en: "At the same time, America is welcoming more and more talented Chinese to study and work in America.", vi: "Đồng thời, Mỹ cũng chào đón ngày càng nhiều nhân tài Trung Quốc sang học tập và làm việc." },
+                { en: "Both countries can gain a great deal from each other.", vi: "Cả hai quốc gia đều có thể học hỏi và đạt được nhiều lợi ích từ nhau." },
+                { en: "America and China should keep working together to build a peaceful and bright future.", vi: "Mỹ và Trung Quốc nên tiếp tục hợp tác để xây dựng tương lai hòa bình và tươi sáng." },
+                { en: "Thank you.", vi: "Xin chân thành cảm ơn." }
+            ]},
+            { id: 9, title: "Face Problems and Challenges", sentences: [
+                { en: "Ladies and Gentlemen, I'm honored to have this opportunity to talk to you.", vi: "Kính thưa quý vị, tôi rất vinh hạnh có cơ hội được trò chuyện với các bạn." },
+                { en: "Solving problems is the top priority for government officials.", vi: "Giải quyết các vấn đề là ưu tiên hàng đầu của các quan chức chính phủ." },
+                { en: "We're not afraid of problems.", vi: "Chúng tôi không hề sợ hãi các vấn đề." },
+                { en: "We consider problems to be challenges.", vi: "Chúng tôi coi các vấn đề chính là những thử thách." },
+                { en: "We have lots of confidence in our ability to solve any problem.", vi: "Chúng tôi có đầy đủ sự tự tin vào năng lực giải quyết mọi khó khăn." },
+                { en: "With your support and understanding, we can do a great job together.", vi: "Cùng sự ủng hộ và thấu hiểu của các bạn, chúng ta sẽ hoàn thành xuất sắc nhiệm vụ." },
+                { en: "Thank you for your cooperation.", vi: "Cảm ơn sự hợp tác của các bạn." },
+                { en: "If you have any problems, stop by our office.", vi: "Nếu có bất kỳ vấn đề gì, xin hãy ghé qua văn phòng của chúng tôi." }
+            ]},
+            { id: 10, title: "I Want to Change My Life", sentences: [
+                { en: "I work extremely hard every day, but I'm very tired.", vi: "Tôi làm việc cực kỳ chăm chỉ mỗi ngày, nhưng tôi cảm thấy rất mệt mỏi." },
+                { en: "I need to work smarter, not harder.", vi: "Tôi cần làm việc thông minh hơn, chứ không chỉ cắm đầu làm chăm hơn." },
+                { en: "I must find better ways to do my job.", vi: "Tôi phải tìm ra những phương pháp tốt hơn để thực hiện công việc." },
+                { en: "I must find more time to enjoy life.", vi: "Tôi phải dành thêm thời gian để tận hưởng cuộc sống." },
+                { en: "I know hard work is a part of everybody's life, but I work too hard.", vi: "Tôi biết làm việc chăm chỉ là một phần cuộc sống, nhưng tôi đang làm việc quá sức." },
+                { en: "My hard work goes too far.", vi: "Sự làm việc chăm chỉ của tôi đã đi quá giới hạn." },
+                { en: "My hard work is ruining my health.", vi: "Công việc vất vả đang hủy hoại sức khỏe của tôi." },
+                { en: "My hard work is killing me.", vi: "Công việc cật lực này đang vắt kiệt sức tôi." },
+                { en: "Other people have time for fun, going to bars, and going to parties.", vi: "Những người khác có thời gian để vui chơi, đến quán bar và tham gia tiệc tùng." },
+                { en: "All I do is get in my car and go to work every day.", vi: "Tất cả những gì tôi làm là bước lên xe và đi làm mỗi ngày." },
+                { en: "This life is too hard.", vi: "Cuộc sống này thực sự quá vất vả." },
+                { en: "I need to make a fresh start.", vi: "Tôi cần phải có một khởi đầu mới mẻ." }
+            ]},
+            { id: 11, title: "How to Take Responsibility", sentences: [
+                { en: "Ladies and Gentlemen, tonight I am going to talk about taking responsibility.", vi: "Kính thưa quý vị, tối nay tôi sẽ nói về việc dám nhận trách nhiệm." },
+                { en: "It's always hard to admit something is your fault.", vi: "Luôn luôn rất khó để thừa nhận điều gì đó là lỗi của chính mình." },
+                { en: "In fact, people rarely say, \"It's all my fault.\"", vi: "Trên thực tế, mọi người rất hiếm khi nói: \"Tất cả là lỗi của tôi.\"" },
+                { en: "People always make excuses or say it is somebody else's fault.", vi: "Người ta luôn tìm lý do bào chữa hoặc đổ lỗi cho người khác." },
+                { en: "It is hard to solve problems because people like to blame others.", vi: "Vấn đề khó giải quyết là bởi vì mọi người thích đổ lỗi cho nhau." },
+                { en: "The next time you make a mistake, take responsibility!", vi: "Lần tới khi bạn mắc sai lầm, hãy dũng cảm nhận trách nhiệm!" },
+                { en: "Four little words can make a big difference.", vi: "Bốn từ ngắn ngủi có thể tạo nên sự khác biệt rất lớn." },
+                { en: "Try saying, \"It's all my fault.\"", vi: "Hãy thử nói: \"Tất cả là lỗi của tôi.\"" }
+            ]},
+            { id: 12, title: "The World Is Becoming Smaller and Smaller", sentences: [
+                { en: "Ladies and Gentlemen, more and more foreigners are coming to Vietnam.", vi: "Kính thưa quý vị, ngày càng có nhiều người nước ngoài đến Việt Nam." },
+                { en: "More and more people around the world are starting to learn Vietnamese.", vi: "Ngày càng nhiều người trên thế giới bắt đầu học tiếng Việt." },
+                { en: "More and more Vietnamese are starting to do business and travel around the world.", vi: "Ngày càng nhiều người Việt Nam bắt đầu kinh doanh và đi du lịch khắp thế giới." },
+                { en: "The world is becoming smaller and smaller.", vi: "Thế giới đang ngày càng trở nên thu nhỏ lại." },
+                { en: "That's why English is becoming more and more important in Vietnam.", vi: "Đó là lý do tại sao tiếng Anh ngày càng trở nên quan trọng tại Việt Nam." },
+                { en: "If we want to ensure a great future for Vietnam, we must practice English harder than ever before.", vi: "Nếu muốn đảm bảo tương lai tươi sáng cho đất nước, ta phải luyện tiếng Anh chăm chỉ hơn bao giờ hết." }
+            ]},
+            { id: 13, title: "A Good Book Is like a Good Friend", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to talk about books.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về sách." },
+                { en: "A good book is like a good friend.", vi: "Một cuốn sách hay giống như một người bạn tốt." },
+                { en: "You should read as many books as you possibly can.", vi: "Bạn nên đọc càng nhiều sách càng tốt." },
+                { en: "You shouldn't just take a quick look at a book.", vi: "Bạn không nên chỉ xem lướt qua một cuốn sách." },
+                { en: "You should read it carefully, again and again.", vi: "Bạn nên đọc thật kỹ, đọc đi đọc lại nhiều lần." },
+                { en: "There is a famous quote, \"A man who doesn't read books is far worse off than a man who can't read books.\"", vi: "Có câu danh ngôn: \"Người không đọc sách còn tệ hơn nhiều so với người không biết đọc sách.\"" },
+                { en: "Make books your friends and let books take you around the world.", vi: "Hãy coi sách là bạn và để sách dẫn lối bạn đi vòng quanh thế giới." },
+                { en: "Get a book now and dive into it.", vi: "Hãy cầm một cuốn sách lên ngay bây giờ và đắm mình vào đó." },
+                { en: "Let the wisdom contained in books guide you through your life.", vi: "Hãy để trí tuệ trong sách soi đường dẫn lối cho cuộc đời bạn." }
+            ]},
+            { id: 14, title: "Is It Foot or Food?", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to talk about two words, foot and food.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về hai từ: foot (chân) và food (thức ăn)." },
+                { en: "I'll never forget how shocked I was the first time I came to Vietnam and my host asked me, \"Do you like Vietnamese foot?\"", vi: "Tôi không bao giờ quên cảm giác sửng sốt khi lần đầu đến Việt Nam và chủ nhà hỏi: \"Bạn có thích chân người Việt không?\"" },
+                { en: "I was told that Vietnamese people like to eat all kinds of unusual food, but I never imagined that they ate their own people's feet!", vi: "Tôi được bảo người Việt ăn nhiều món lạ, nhưng chưa bao giờ tưởng tượng họ lại ăn chân của đồng bào mình!" },
+                { en: "Of course I replied, \"No! I don't like it!\"", vi: "Dĩ nhiên tôi trả lời: \"Không! Tôi không thích món đó đâu!\"" },
+                { en: "But my host insisted that \"Vietnamese foot is so delicious! You must at least try Vietnamese foot.\"", vi: "Nhưng chủ nhà cứ quả quyết: \"Chân người Việt ngon lắm! Bạn nhất định phải thử một lần.\"" },
+                { en: "I told him that I would be glad to try Vietnamese pig's foot, but not Vietnamese foot!", vi: "Tôi bảo ông ấy rằng tôi rất vui lòng thử món chân giò heo, chứ không phải chân người Việt!" },
+                { en: "My host realized his mistake and we both had a great laugh.", vi: "Chủ nhà nhận ra lỗi phát âm và cả hai chúng tôi cùng phá lên cười sảng khoái." },
+                { en: "I was so relieved that the problem was not a culture difference, merely a case of bad pronunciation.", vi: "Tôi thở phào nhẹ nhõm vì đây không phải khác biệt văn hóa, mà chỉ là do phát âm chưa chuẩn." },
+                { en: "Please take my advice and practice the correct pronunciation of food and foot until you are sure this embarrassing situation could never happen to you!", vi: "Xin hãy nghe lời khuyên của tôi và luyện phát âm đúng hai từ này để không bao giờ rơi vào tình huống khó xử như vậy!" }
+            ]},
+            { id: 15, title: "How to Speak Fluent English", sentences: [
+                { en: "Ladies and Gentlemen, I believe you all want to speak good English.", vi: "Kính thưa quý vị, tôi tin rằng tất cả các bạn đều muốn nói tiếng Anh thật giỏi." },
+                { en: "Now let me give you some advice.", vi: "Bây giờ hãy để tôi gửi đến các bạn một vài lời khuyên." },
+                { en: "Don't be afraid of losing face.", vi: "Đừng sợ mất thể diện." },
+                { en: "Don't be afraid of making mistakes.", vi: "Đừng sợ mắc phải sai lầm." },
+                { en: "Don't be afraid of practicing your English.", vi: "Đừng sợ việc luyện tập tiếng Anh." },
+                { en: "Don't be ashamed of speaking poor English.", vi: "Đừng xấu hổ khi tiếng Anh của mình còn kém." },
+                { en: "Don't be ashamed of being laughed at.", vi: "Đừng xấu hổ khi bị người khác cười chê." },
+                { en: "Don't be ashamed of being stared at.", vi: "Đừng xấu hổ khi bị người khác nhìn chằm chằm." },
+                { en: "The only real shame is that you never open your mouth.", vi: "Nỗi xấu hổ thực sự duy nhất là việc bạn không bao giờ chịu mở miệng nói." },
+                { en: "The only way to learn English is to never be afraid and never be ashamed.", vi: "Cách duy nhất để học tiếng Anh là không bao giờ sợ hãi và không bao giờ xấu hổ." },
+                { en: "It's never too late to make a change in your life.", vi: "Không bao giờ là quá muộn để tạo nên sự thay đổi trong cuộc đời." },
+                { en: "Don't be afraid.", vi: "Đừng sợ hãi." },
+                { en: "No pain, no gain.", vi: "Có công mài sắt, có ngày nên kim." },
+                { en: "You can make it.", vi: "Bạn chắc chắn làm được!" },
+                { en: "You're great!", vi: "Bạn thật tuyệt vời!" }
+            ]},
+            { id: 16, title: "The Importance of Smiling", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to talk about the importance of smiling and kindness.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về tầm quan trọng của nụ cười và lòng tốt." },
+                { en: "Life is like a mirror.", vi: "Cuộc sống giống như một tấm gương soi." },
+                { en: "When you smile, people will smile back.", vi: "Khi bạn mỉm cười, mọi người sẽ mỉm cười đáp lại." },
+                { en: "When you treat other people kindly, they will treat you kindly in return.", vi: "Khi bạn đối xử tốt với người khác, họ cũng sẽ đối đãi tử tế với bạn." },
+                { en: "Try to spend one day smiling and being kind to everyone you meet.", vi: "Hãy thử dành một ngày luôn tươi cười và tử tế với bất kỳ ai bạn gặp." },
+                { en: "You will see a big difference in your life.", vi: "Bạn sẽ nhận thấy một sự thay đổi rất lớn trong cuộc sống của mình." },
+                { en: "If you keep on smiling and being kind, smiling and kindness will become your habits.", vi: "Nếu bạn duy trì mỉm cười và tốt bụng, chúng sẽ trở thành thói quen quý báu của bạn." },
+                { en: "If everyone tried to do this, the world would be a kinder, brighter, and happier place.", vi: "Nếu ai cũng làm được như vậy, thế giới sẽ là một nơi tử tế hơn, tươi sáng hơn và hạnh phúc hơn." },
+                { en: "Start smiling right away.", vi: "Hãy bắt đầu mỉm cười ngay từ lúc này!" }
+            ]},
+            { id: 17, title: "The Importance of Choices", sentences: [
+                { en: "Ladies and Gentlemen, I want to tell you something very important today.", vi: "Kính thưa quý vị, hôm nay tôi muốn chia sẻ một điều rất quan trọng." },
+                { en: "I want to tell you that life is about choices.", vi: "Tôi muốn nói rằng cuộc sống chính là sự lựa chọn." },
+                { en: "You can choose to be miserable, or you can choose to enjoy life.", vi: "Bạn có thể chọn sống đau khổ, hoặc chọn tận hưởng cuộc sống." },
+                { en: "You can choose to improve your health, or you can choose to destroy it.", vi: "Bạn có thể chọn rèn luyện sức khỏe, hoặc chọn hủy hoại nó." },
+                { en: "I hope you will make correct choices.", vi: "Tôi hy vọng bạn sẽ đưa ra những sự lựa chọn đúng đắn." },
+                { en: "I hope you will choose to enjoy your family, enjoy your friends, enjoy your work, and enjoy your everyday life.", vi: "Tôi hy vọng bạn chọn vui vầy bên gia đình, bạn bè, yêu công việc và tận hưởng từng ngày trôi qua." },
+                { en: "Life is a gift, and we really should enjoy every minute of it.", vi: "Cuộc sống là một món quà, và chúng ta thực sự nên trân trọng từng phút giây." }
+            ]},
+            { id: 18, title: "The Harm of Smoking", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to talk about smoking.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về tác hại của việc hút thuốc." },
+                { en: "Smoking not only makes you smell terrible, it is also terrible for your health.", vi: "Hút thuốc không chỉ khiến cơ thể bạn có mùi khó chịu, mà còn hủy hoại nghiêm trọng sức khỏe." },
+                { en: "If you smoke, everyone in your home is breathing in your second-hand smoke.", vi: "Nếu bạn hút thuốc, mọi người trong nhà đều phải hít khói thuốc thụ động từ bạn." },
+                { en: "Smoke makes your throat hurt, your teeth yellow and your lungs black.", vi: "Khói thuốc làm cổ họng đau rát, răng ố vàng và phổi đen kịt." },
+                { en: "Smoking is also like throwing money away.", vi: "Hút thuốc cũng giống như việc bạn đang ném tiền qua cửa sổ." },
+                { en: "Each pack of cigarettes you smoke is really money going up in smoke.", vi: "Mỗi bao thuốc bạn hút thực sự là tiền bạc tan biến theo làn khói." },
+                { en: "If you smoke, I hope you will try to give up this destructive habit.", vi: "Nếu bạn đang hút thuốc, tôi hy vọng bạn sẽ cố gắng từ bỏ thói quen tàn phá này." },
+                { en: "You owe it to yourself and your family to live a healthier life.", vi: "Bạn nợ chính mình và gia đình một cuộc sống lành mạnh hơn." }
+            ]},
+            { id: 19, title: "How to Pronounce English Words Correctly", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to talk about how to pronounce English words correctly.", vi: "Kính thưa quý vị, hôm nay tôi muốn chia sẻ cách phát âm từ tiếng Anh chuẩn xác." },
+                { en: "First, spell the word aloud.", vi: "Đầu tiên, hãy đánh vần to từng chữ cái của từ đó." },
+                { en: "Then, read the word aloud according to the tape.", vi: "Sau đó, đọc to từ đó theo đúng băng đĩa mẫu." },
+                { en: "Carefully imitate each sound.", vi: "Cẩn thận bắt chước từng âm tiết một." },
+                { en: "Then shout out the word as loudly as possible.", vi: "Sau đó hãy hét thật to từ đó lên hết mức có thể." },
+                { en: "Lastly, find a good sentence to use this word.", vi: "Cuối cùng, hãy tìm một câu văn hay có chứa từ này để áp dụng." },
+                { en: "Think about what the word means in this sentence.", vi: "Hãy suy ngẫm về ý nghĩa của từ vựng trong ngữ cảnh câu văn đó." },
+                { en: "If you follow these steps, you will soon be proud of how well you can pronounce English words.", vi: "Nếu làm theo các bước này, bạn sẽ sớm tự hào về khả năng phát âm tiếng Anh chuẩn xác của mình." }
+            ]},
+            { id: 20, title: "How to Communicate Effectively", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about the importance of clear communication.", vi: "Kính thưa quý vị, hôm nay tôi muốn bàn về tầm quan trọng của việc giao tiếp rõ ràng." },
+                { en: "Clear communication means being able to really hear what someone is saying.", vi: "Giao tiếp rõ ràng nghĩa là bạn thực sự lắng nghe và hiểu thấu điều người khác đang nói." },
+                { en: "You need to listen with your heart not only your ears.", vi: "Bạn cần lắng nghe bằng cả trái tim chứ không chỉ bằng đôi tai." },
+                { en: "Remember, you have two ears but only one mouth.", vi: "Hãy nhớ rằng, bạn có hai cái tai nhưng chỉ có một cái miệng." },
+                { en: "That means you should listen more and speak less.", vi: "Điều đó có nghĩa là bạn nên lắng nghe nhiều hơn và nói ít đi." },
+                { en: "Listening as well as speaking is absolutely necessary for clear communication.", vi: "Cả việc lắng nghe lẫn truyền đạt đều vô cùng cần thiết cho một cuộc giao tiếp hiệu quả." },
+                { en: "Good communication is not as easy as it appears.", vi: "Giao tiếp giỏi không hề đơn giản như vẻ bề ngoài của nó." },
+                { en: "It takes hard work and years of practice.", vi: "Nó đòi hỏi sự nỗ lực rèn luyện và nhiều năm kiên trì thực hành." },
+                { en: "Thank you for being here and listening to my speech.", vi: "Cảm ơn các bạn đã có mặt ở đây và lắng nghe bài phát biểu của tôi." }
+            ]},
+            { id: 21, title: "Caring Makes the World More Beautiful", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about care.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về sự quan tâm chăm sóc." },
+                { en: "The biggest problem facing the world today is a lack of care.", vi: "Vấn đề lớn nhất thế giới ngày nay phải đối mặt là sự thiếu vắng lòng quan tâm." },
+                { en: "People only care about themselves.", vi: "Mọi người chỉ biết quan tâm đến bản thân mình." },
+                { en: "They don't care about other people.", vi: "Họ không bận tâm đến những người xung quanh." },
+                { en: "They don't even care about their family.", vi: "Họ thậm chí chẳng đoái hoài đến cả gia đình mình." },
+                { en: "They don't care about the environment.", vi: "Họ không quan tâm đến môi trường sống." },
+                { en: "They don't care about their community.", vi: "Họ thờ ơ với cộng đồng của mình." },
+                { en: "Worst of all, they don't care about their country.", vi: "Tệ hơn cả là họ không hề quan tâm đến đất nước." },
+                { en: "I am here to encourage you to start caring.", vi: "Tôi ở đây để khích lệ các bạn hãy bắt đầu biết yêu thương và quan tâm." },
+                { en: "We all want to be treated fairly.", vi: "Tất cả chúng ta đều muốn được đối xử công bằng." },
+                { en: "We all want to be loved.", vi: "Tất cả chúng ta đều khao khát được yêu thương." },
+                { en: "We all want to be taken care of.", vi: "Tất cả chúng ta đều muốn được chở che chăm sóc." },
+                { en: "We all need clean air to breathe.", vi: "Chúng ta đều cần bầu không khí trong lành để thở." },
+                { en: "We all need clean water to drink.", vi: "Chúng ta đều cần nguồn nước sạch để uống." },
+                { en: "We all need green places to enjoy.", vi: "Chúng ta đều cần những khoảng không gian xanh để tận hưởng." },
+                { en: "We all share the same motherland.", vi: "Chúng ta cùng chung một mảnh đất quê hương." },
+                { en: "We all share the same emotions.", vi: "Chúng ta cùng sẻ chia những cảm xúc giống nhau." },
+                { en: "Let's do our best to start caring more.", vi: "Hãy cùng nhau nỗ lực để mở rộng lòng quan tâm nhiều hơn nữa." }
+            ]},
+            { id: 22, title: "Success Is Up to You", sentences: [
+                { en: "Ladies and Gentlemen, if you want to be sure of success, you have to make sure that you study every day, that you improve yourself every day, that you progress every day, and that you work hard every day.", vi: "Kính thưa quý vị, nếu muốn nắm chắc thành công, bạn phải đảm bảo học tập mỗi ngày, hoàn thiện bản thân mỗi ngày, tiến bộ mỗi ngày và nỗ lực chăm chỉ mỗi ngày." },
+                { en: "Your success depends on your commitment.", vi: "Thành công của bạn phụ thuộc hoàn toàn vào sự cam kết của chính bạn." },
+                { en: "If you pour your heart and soul into what you do, you're sure to be successful.", vi: "Nếu bạn dồn hết tâm trí và trái tim vào những gì mình làm, bạn chắc chắn sẽ thành công rực rỡ." }
+            ]},
+            { id: 23, title: "How to Be a Good Parent", sentences: [
+                { en: "Ladies and Gentlemen, mothers and fathers, today I'd like to talk about how to be a good parent.", vi: "Kính thưa quý vị, những người làm cha làm mẹ, hôm nay tôi muốn chia sẻ về cách để trở thành bậc cha mẹ tốt." },
+                { en: "Being a parent is the toughest job in the world.", vi: "Làm cha mẹ là công việc khó khăn và thách thức nhất trên đời." },
+                { en: "Parents should be patient.", vi: "Cha mẹ cần phải có lòng kiên nhẫn." },
+                { en: "Parents should help their children grow.", vi: "Cha mẹ nên đồng hành và giúp con cái từng bước trưởng thành." },
+                { en: "Parents should not push their children too much.", vi: "Cha mẹ không nên tạo quá nhiều áp lực hay thúc ép con mình quá mức." },
+                { en: "Parents should always be proud of their children.", vi: "Cha mẹ hãy luôn tự hào về những đứa con của mình." },
+                { en: "Parents should love their children unconditionally.", vi: "Cha mẹ hãy dành cho con cái tình yêu thương vô điều kiện." },
+                { en: "Remember, nobody is perfect.", vi: "Hãy nhớ rằng, không một ai là hoàn hảo." },
+                { en: "If you want your child to grow up healthy and happy, please remember this important and practical advice.", vi: "Nếu bạn muốn con mình lớn lên khỏe mạnh và hạnh phúc, xin hãy ghi nhớ lời khuyên quý báu và thực tế này." }
+            ]},
+            { id: 24, title: "How to Build a Great Family", sentences: [
+                { en: "Ladies and Gentlemen, boys and girls, today I want to talk about building a better family.", vi: "Kính thưa quý vị cùng các bạn trẻ, hôm nay tôi muốn chia sẻ về việc xây dựng một gia đình tốt đẹp hơn." },
+                { en: "Everyone wants a better family, but most people don't know how to create one.", vi: "Ai cũng mong muốn có một gia đình hạnh phúc, nhưng hầu hết mọi người lại không biết cách tạo dựng nó." },
+                { en: "Here are some helpful tips.", vi: "Dưới đây là một số lời khuyên hữu ích dành cho các bạn." },
+                { en: "Boys and girls, you need to behave.", vi: "Các bạn trẻ, các con cần phải biết cư xử đúng mực." },
+                { en: "You need to be kind.", vi: "Các con cần phải sống nhân hậu và tử tế." },
+                { en: "You need to always try your best.", vi: "Các con hãy luôn luôn nỗ lực hết sức mình." },
+                { en: "You need to believe in yourself and believe in your parents.", vi: "Các con hãy tin tưởng vào bản thân và tin yêu cha mẹ của mình." },
+                { en: "Your parents really want what is best for you.", vi: "Bởi cha mẹ luôn mong muốn những điều tốt đẹp nhất đến với con cái." },
+                { en: "Mothers and fathers, you need to be patient.", vi: "Các bậc làm cha làm mẹ, quý vị cần phải thật sự kiên nhẫn." },
+                { en: "You need to buy fewer things for your children and give them more of your time.", vi: "Hãy bớt mua sắm vật chất cho con mà hãy dành nhiều thời gian ở bên con hơn." },
+                { en: "You need to read more books to learn about being good parents.", vi: "Quý vị nên đọc thêm sách để học cách làm những bậc cha mẹ tuyệt vời." },
+                { en: "If your child sees you reading books, he will love books too.", vi: "Nếu con bạn nhìn thấy bạn đọc sách, trẻ cũng sẽ yêu thích việc đọc sách." },
+                { en: "You need to bring up your children by teaching them the value of hard work and by setting a good example.", vi: "Hãy nuôi dạy con bằng cách dạy trẻ giá trị của sự chăm chỉ và nêu gương sáng cho con." },
+                { en: "Children believe what they see more than what they are told.", vi: "Trẻ con luôn tin vào những gì chúng nhìn thấy hơn là những gì được nghe bảo." },
+                { en: "Be sure that your child is seeing the behavior that you want him to model.", vi: "Hãy đảm bảo rằng con bạn đang nhìn thấy đúng những hành vi mà bạn muốn con noi theo." },
+                { en: "I believe that we can make our families better and stronger by working and learning together.", vi: "Tôi tin rằng chúng ta hoàn toàn có thể xây dựng tổ ấm vững mạnh hơn bằng cách cùng học tập và nỗ lực." }
+            ]},
+            { id: 25, title: "Value Your Time", sentences: [
+                { en: "Ladies and Gentlemen, today I'm going to talk about time.", vi: "Kính thưa quý vị, hôm nay tôi sẽ chia sẻ về thời gian." },
+                { en: "Time is too precious to waste.", vi: "Thời gian là thứ quá đỗi quý giá để có thể lãng phí." },
+                { en: "Time is our greatest treasure.", vi: "Thời gian chính là kho báu lớn nhất của mỗi chúng ta." },
+                { en: "If you waste your time, you waste your life.", vi: "Nếu bạn lãng phí thời gian, tức là bạn đang lãng phí chính cuộc đời mình." },
+                { en: "Never waste one minute of your time or other people's time.", vi: "Đừng bao giờ lãng phí một phút nào của bản thân hay của người khác." },
+                { en: "Get moving! Get excited! Take action!", vi: "Hãy bắt tay vào hành động! Hãy tạo niềm hứng khởi! Hãy hành động ngay!" },
+                { en: "Do something to make your heart beat faster every day.", vi: "Hãy làm điều gì đó khiến trái tim bạn đập rộn ràng mỗi ngày." },
+                { en: "Make the most of your time.", vi: "Hãy tận dụng tối đa quỹ thời gian của bạn." },
+                { en: "Make the best use of your time.", vi: "Hãy sử dụng thời gian một cách thông minh và hiệu quả nhất." },
+                { en: "Time is a gift.", vi: "Thời gian là một món quà vô giá." },
+                { en: "Don't waste a single minute.", vi: "Đừng để lãng phí dù chỉ là một phút giây." }
+            ]},
+            { id: 26, title: "How to Live Productively", sentences: [
+                { en: "Ladies and Gentlemen, today I'm going to talk about how to live a productive life.", vi: "Kính thưa quý vị, hôm nay tôi sẽ nói về cách sống một cuộc đời hiệu quả và ý nghĩa." },
+                { en: "Every day is a gift, even days that are difficult or days you feel down.", vi: "Mỗi ngày trôi qua đều là một món quà, kể cả những ngày gian khó hay những lúc bạn chán nản." },
+                { en: "Appreciate every day.", vi: "Hãy biết trân trọng từng ngày bạn được sống." },
+                { en: "Learn something new every day.", vi: "Hãy học thêm một điều mới mẻ mỗi ngày." },
+                { en: "Do something to improve yourself every day.", vi: "Hãy làm điều gì đó để hoàn thiện bản thân mỗi ngày." },
+                { en: "Don't delay.", vi: "Đừng bao giờ trì hoãn." },
+                { en: "Don't let your dreams die.", vi: "Đừng để ước mơ của bạn lụi tàn." },
+                { en: "Don't waste time.", vi: "Đừng lãng phí thời gian." },
+                { en: "Just do it!", vi: "Hãy bắt tay vào làm ngay!" },
+                { en: "Life is too short to waste even one single day.", vi: "Cuộc đời quá ngắn ngủi để lãng phí dù chỉ một ngày." },
+                { en: "If you live every day fully and productively, you're bound to succeed.", vi: "Nếu bạn sống trọn vẹn và hữu ích mỗi ngày, bạn chắc chắn sẽ gặt hái thành công." },
+                { en: "Remember, yesterday is a memory, tomorrow is a dream, live for today.", vi: "Hãy nhớ rằng: Ngày hôm qua là kỷ niệm, ngày mai là ước mơ, hãy sống trọn vẹn cho ngày hôm nay." }
+            ]},
+            { id: 27, title: "Secrets of Speaking English Well", sentences: [
+                { en: "Ladies and Gentlemen, everyone wants to speak English well.", vi: "Kính thưa quý vị, tất cả mọi người đều khao khát nói tiếng Anh thật giỏi." },
+                { en: "Today I'm going to talk about the secrets of speaking good English.", vi: "Hôm nay tôi sẽ chia sẻ những bí quyết để nói tiếng Anh xuất sắc." },
+                { en: "If you want to speak good English, there are several things you must do.", vi: "Nếu bạn muốn nói tiếng Anh giỏi, có một số điều bạn bắt buộc phải thực hiện." },
+                { en: "You must keep on practicing.", vi: "Bạn phải kiên trì luyện tập không ngừng." },
+                { en: "You must keep on working hard.", vi: "Bạn phải tiếp tục nỗ lực chăm chỉ." },
+                { en: "You must keep on making mistakes, and you must keep on losing face.", vi: "Bạn phải dám liên tục mắc lỗi, và phải sẵn sàng chịu mất thể diện." },
+                { en: "You know you learn to speak only by speaking.", vi: "Bạn biết đấy, bạn chỉ có thể học nói thông qua việc mở miệng nói." },
+                { en: "So the most important key to speaking English well is speaking.", vi: "Do đó, chìa khóa quan trọng nhất để nói giỏi tiếng Anh chính là nói." },
+                { en: "Speak as loudly as possible, speak as clearly as possible, and speak as quickly as possible.", vi: "Hãy nói to nhất có thể, nói rõ ràng nhất có thể, và nói nhanh nhất có thể." },
+                { en: "The more you speak, the better your English will be.", vi: "Bạn nói càng nhiều, tiếng Anh của bạn sẽ càng trở nên tuyệt vời." },
+                { en: "The more mistakes you make, the more progress you will make.", vi: "Bạn càng mắc nhiều lỗi, bạn sẽ càng tiến bộ vượt bậc." },
+                { en: "These are the secrets of speaking good English.", vi: "Đó chính là những bí quyết để nói tiếng Anh thành thạo." },
+                { en: "Everyone can make it.", vi: "Tất cả mọi người đều có thể làm được." },
+                { en: "Everyone can be an English-speaking genius.", vi: "Bất kỳ ai cũng có thể trở thành thiên tài nói tiếng Anh." },
+                { en: "Thank you for coming.", vi: "Cảm ơn các bạn đã có mặt ở đây." }
+            ]},
+            { id: 28, title: "Recipe for Happiness", sentences: [
+                { en: "Ladies and Gentlemen, today I'm going to talk about happiness.", vi: "Kính thưa quý vị, hôm nay tôi sẽ chia sẻ về niềm hạnh phúc." },
+                { en: "Where does happiness come from?", vi: "Hạnh phúc thực sự bắt nguồn từ đâu?" },
+                { en: "It doesn't come from other people.", vi: "Hạnh phúc không đến từ sự ban phát của người khác." },
+                { en: "It doesn't come from material things.", vi: "Hạnh phúc không đến từ của cải vật chất xa hoa." },
+                { en: "It doesn't come from having a lot of money and power.", vi: "Hạnh phúc không đến từ việc sở hữu nhiều tiền tài và quyền lực." },
+                { en: "It doesn't come from being popular.", vi: "Hạnh phúc không đến từ việc nổi tiếng được nhiều người biết đến." },
+                { en: "It comes from giving love to other people.", vi: "Hạnh phúc đến từ việc trao đi yêu thương cho những người xung quanh." },
+                { en: "It comes from giving your best effort to everything you do.", vi: "Hạnh phúc đến từ việc bạn cống hiến hết mình cho mọi việc bạn làm." },
+                { en: "It comes from getting satisfaction from helping other people.", vi: "Hạnh phúc đến từ niềm vui khi giúp đỡ được người khác." },
+                { en: "It comes from growing smarter and wiser every day.", vi: "Hạnh phúc đến từ việc bạn ngày càng thông tuệ và sáng suốt hơn mỗi ngày." },
+                { en: "The happiness you feel is equal to the love you give.", vi: "Mức độ hạnh phúc bạn nhận được tương xứng với lượng tình yêu thương bạn trao đi." },
+                { en: "The more you give, the happier you will be.", vi: "Bạn càng cho đi nhiều, bạn sẽ càng hạnh phúc bấy nhiêu." }
+            ]},
+            { id: 29, title: "My Favorite Type of Meal", sentences: [
+                { en: "My favorite food is fast food.", vi: "Món ăn yêu thích nhất của tôi là thức ăn nhanh." },
+                { en: "It saves a lot of time.", vi: "Nó giúp tiết kiệm rất nhiều thời gian quý báu." },
+                { en: "I don't care for fancy dinners.", vi: "Tôi không quá bận tâm đến những bữa tiệc tối sang trọng xa xỉ." },
+                { en: "I think people should forget about wasting time and money on expensive food.", vi: "Tôi nghĩ mọi người nên ngừng lãng phí thời gian và tiền bạc vào những món ăn quá đắt đỏ." },
+                { en: "It really doesn't matter if you eat expensive food or fast food, as long as the food is nutritious.", vi: "Ăn đồ ăn đắt tiền hay thức ăn nhanh không quan trọng, miễn là món ăn đó cung cấp đầy đủ chất dinh dưỡng." }
+            ]},
+            { id: 30, title: "Beautiful Beijing", sentences: [
+                { en: "Ladies and Gentlemen, I hope you will have a very nice time here in Beijing.", vi: "Kính thưa quý vị, tôi hy vọng quý vị sẽ có những trải nghiệm tuyệt vời tại Bắc Kinh." },
+                { en: "There are many beautiful views, countless historical sites, and a variety of delicious foods for you to enjoy.", vi: "Nơi đây có rất nhiều cảnh đẹp, vô số di tích lịch sử và đa dạng các món ăn ngon để thưởng thức." },
+                { en: "Beijing is a great place to do business.", vi: "Bắc Kinh là một địa điểm lý tưởng để kết nối kinh doanh." },
+                { en: "Beijing is a wonderful place for a vacation.", vi: "Bắc Kinh cũng là một điểm đến tuyệt vời cho những kỳ nghỉ dưỡng." },
+                { en: "I hope you will fall in love with Beijing.", vi: "Tôi hy vọng các bạn sẽ đem lòng yêu mến thành phố này." },
+                { en: "I believe Beijing is a fantastic place to visit, and a marvelous place to live.", vi: "Tôi tin rằng Bắc Kinh là một nơi tuyệt vời để du lịch và là một nơi tuyệt diệu để sinh sống." },
+                { en: "If there is anything I can do for you, please let me know.", vi: "Nếu có điều gì tôi có thể hỗ trợ quý vị, xin hãy cho tôi biết." },
+                { en: "I hope you will visit Beijing again and again.", vi: "Tôi hy vọng các bạn sẽ còn quay lại thăm Bắc Kinh nhiều lần nữa." }
+            ]},
+            { id: 31, title: "Farewell Speech — I Will Miss China", sentences: [
+                { en: "Ladies and Gentlemen, I’m sad that this speech is my farewell speech.", vi: "Kính thưa quý vị, tôi rất buồn khi phải nói lời chia tay qua bài phát biểu này." },
+                { en: "Happy times always pass too quickly.", vi: "Những khoảng thời gian vui vẻ trôi qua thật quá nhanh." },
+                { en: "My two-year stay in China will come to an end soon.", vi: "Hai năm lưu lại Trung Quốc của tôi sắp sửa khép lại." },
+                { en: "I will miss you.", vi: "Tôi sẽ nhớ các bạn rất nhiều." },
+                { en: "I will miss my students.", vi: "Tôi sẽ nhớ những người học trò của mình." },
+                { en: "I will miss all my friends.", vi: "Tôi sẽ nhớ tất cả những người bạn tuyệt vời ở đây." },
+                { en: "I will miss China, and of course, I will miss Chinese food.", vi: "Tôi sẽ nhớ đất nước Trung Quốc và chắc chắn sẽ nhớ các món ăn ngon ở đây." },
+                { en: "I will come back to China as soon as I can.", vi: "Tôi sẽ quay trở lại đây ngay khi có thể." },
+                { en: "Thank you for making my stay a wonderful experience.", vi: "Cảm ơn các bạn đã mang đến cho tôi những trải nghiệm thật tuyệt vời." },
+                { en: "Thank you for your hospitality.", vi: "Cảm ơn lòng mến khách nồng hậu của các bạn." },
+                { en: "Most of all, thank you for your unparalleled friendship.", vi: "Trên tất cả, cảm ơn tình bạn vô giá mà các bạn đã dành cho tôi." }
+            ]},
+            { id: 32, title: "The Importance of Exercise", sentences: [
+                { en: "Ladies and Gentlemen, today I’d like to talk about exercise.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về việc tập thể dục." },
+                { en: "More and more people are starting to realize the benefits of exercise.", vi: "Ngày càng nhiều người nhận ra lợi ích tuyệt vời của việc rèn luyện thân thể." },
+                { en: "Exercise is the only way to have a healthy body and healthy mind.", vi: "Thể dục là cách duy nhất để sở hữu thân thể cường tráng và trí tuệ minh mẫn." },
+                { en: "Exercise is the only way to lose weight.", vi: "Thể dục là phương pháp giảm cân an toàn và hiệu quả nhất." },
+                { en: "There are many kinds of exercise.", vi: "Có rất nhiều hình thức thể dục khác nhau." },
+                { en: "It is easy to choose one that suits you.", vi: "Thật dễ dàng để chọn ra môn tập phù hợp với bản thân bạn." },
+                { en: "The important thing to remember is that exercise needs to be a part of your daily life.", vi: "Điều cốt yếu là tập luyện phải trở thành thói quen hàng ngày của bạn." },
+                { en: "Please take care of your body and start an exercise program today.", vi: "Hãy chăm sóc cơ thể và bắt đầu kế hoạch rèn luyện ngay hôm nay." },
+                { en: "Physical health and mental health can both be improved with regular exercise.", vi: "Sức khỏe thể chất lẫn tinh thần đều được nâng cao rõ rệt nhờ thể dục đều đặn." },
+                { en: "Seize the day, seize the moment, seize control of your health.", vi: "Hãy nắm bắt ngày hôm nay, trân trọng từng khoảnh khắc và làm chủ sức khỏe của bạn." },
+                { en: "Exercise for a longer, healthier life.", vi: "Hãy tập thể dục vì một cuộc sống trường thọ và khỏe mạnh hơn." },
+                { en: "Thanks for your attention.", vi: "Cảm ơn sự chú ý lắng nghe của các bạn." }
+            ]},
+            { id: 33, title: "My Wishes", sentences: [
+                { en: "Ladies and Gentlemen, I have many wishes.", vi: "Kính thưa quý vị, tôi có rất nhiều điều ước." },
+                { en: "I wish people all over the world would love each other more.", vi: "Tôi ước mọi người khắp nơi trên thế giới biết yêu thương nhau nhiều hơn." },
+                { en: "I wish people would stop wasting energy.", vi: "Tôi ước mọi người ngừng lãng phí nguồn năng lượng quý giá." },
+                { en: "I wish people would be less selfish.", vi: "Tôi ước con người bớt sống ích kỷ hơn." },
+                { en: "I wish people would share happy feelings more freely, and not keep their emotions shut up inside.", vi: "Tôi ước mọi người cởi mở chia sẻ niềm vui thay vì khép kín cảm xúc trong lòng." },
+                { en: "I wish that people could find cures for cancer and AIDS.", vi: "Tôi ước nhân loại sớm tìm ra thuốc chữa khỏi bệnh ung thư và AIDS." },
+                { en: "In short, I wish that the world could be a better place.", vi: "Tóm lại, tôi ước thế giới này sẽ trở thành một nơi tốt đẹp hơn." },
+                { en: "Thank you for letting me share all my wishes with you.", vi: "Cảm ơn các bạn đã lắng nghe những tâm nguyện của tôi." }
+            ]},
+            { id: 34, title: "The Danger of Television for Children", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about television and how dangerous it is for children.", vi: "Kính thưa quý vị, hôm nay tôi muốn cảnh báo về tác hại của truyền hình đối với trẻ nhỏ." },
+                { en: "Children today watch too much television.", vi: "Trẻ em ngày nay xem tivi quá nhiều." },
+                { en: "Television is harmful to developing minds.", vi: "Xem tivi nhiều có hại cho trí não đang phát triển của trẻ." },
+                { en: "Children usually watch far more television than their parents realize.", vi: "Trẻ em thường xem tivi nhiều hơn mức các bậc phụ huynh tưởng tượng." },
+                { en: "Children should only watch television when there is an educational program showing, or on special occasions.", vi: "Trẻ chỉ nên xem khi có chương trình giáo dục bổ ích hoặc trong dịp đặc biệt." },
+                { en: "It is a terrible habit to just casually turn on the television and leave it on for hours at a time.", vi: "Bật tivi vu vơ rồi để hàng giờ liền là một thói quen vô cùng tai hại." },
+                { en: "Remember, when you switch on the television, you are switching off your child’s mind.", vi: "Hãy nhớ rằng: Khi bạn bật tivi lên, bạn đang tắt đi trí tưởng tượng của con mình." },
+                { en: "Make a wise decision, and limit your child’s television time.", vi: "Hãy đưa ra quyết định sáng suốt và giới hạn giờ xem tivi của con bạn." }
+            ]},
+            { id: 35, title: "Three Important Things", sentences: [
+                { en: "Ladies and Gentlemen, there are three things I want to talk about today.", vi: "Kính thưa quý vị, có 3 điều quan trọng tôi muốn gửi gắm ngày hôm nay." },
+                { en: "The first thing is: think before you speak.", vi: "Điều thứ nhất: Hãy suy nghĩ chín chắn trước khi nói." },
+                { en: "Say positive things.", vi: "Hãy luôn nói những lời tích cực." },
+                { en: "Don't hurt other people with words.", vi: "Đừng làm tổn thương người khác bằng những lời nói vô tình." },
+                { en: "The second thing is: treasure every breath.", vi: "Điều thứ hai: Hãy trân trọng từng hơi thở của sự sống." },
+                { en: "Life is precious.", vi: "Cuộc sống này vô cùng quý giá." },
+                { en: "We shouldn't take anything for granted.", vi: "Chúng ta không nên xem bất cứ điều gì là hiển nhiên." },
+                { en: "We must be thankful for every breath.", vi: "Chúng ta phải luôn biết ơn từng hơi thở mỗi ngày." },
+                { en: "The third thing is: nothing is impossible.", vi: "Điều thứ ba: Không có gì là không thể." },
+                { en: "If you think you can, you can.", vi: "Nếu bạn tin mình làm được, bạn chắc chắn làm được." },
+                { en: "Never doubt yourself.", vi: "Đừng bao giờ nghi ngờ năng lực của chính mình." },
+                { en: "You can do anything.", vi: "Bạn có thể làm được mọi điều phi thường." },
+                { en: "These three things have helped me throughout my life.", vi: "Ba điều này đã soi đường và giúp ích cho tôi suốt cả cuộc đời." },
+                { en: "Thank you.", vi: "Xin cảm ơn các bạn." }
+            ]},
+            { id: 36, title: "Parents Are the First Teachers", sentences: [
+                { en: "Fathers and mothers are their children’s first teachers.", vi: "Cha và mẹ chính là những người thầy đầu tiên của con trẻ." },
+                { en: "What they say and what they do determine whether their children will be successful or not.", vi: "Lời nói và hành động của cha mẹ sẽ quyết định sự thành bại của con cái sau này." },
+                { en: "Fathers and mothers should be neither too strict nor too indulgent.", vi: "Cha mẹ không nên quá khắt khe cũng đừng quá nuông chiều con." },
+                { en: "It's hard to be a good parent.", vi: "Làm cha mẹ tốt là điều không hề dễ dàng." },
+                { en: "That’s why fathers and mothers should always study together the best way to raise a child.", vi: "Đó là lý do các bậc cha mẹ cần luôn đồng hành học hỏi cách nuôi dạy con tốt nhất." }
+            ]},
+            { id: 37, title: "Common English Greetings", sentences: [
+                { en: "Ladies and Gentlemen, today I want to help you learn some of the most common greetings in English.", vi: "Kính thưa quý vị, hôm nay tôi muốn hướng dẫn các câu chào hỏi thông dụng nhất trong tiếng Anh." },
+                { en: "Of course, there is the basic \"Hello.\"", vi: "Tất nhiên, căn bản nhất vẫn là từ \"Hello.\"" },
+                { en: "There are also many questions, such as: \"How are you?\", \"How are you doing?\", \"How's everything?\", \"How's it going?\".", vi: "Ngoài ra còn các câu hỏi như: \"Bạn khỏe không?\", \"Dạo này thế nào?\", \"Mọi việc ổn cả chứ?\"." },
+                { en: "All of these greetings are informal and very common in American English.", vi: "Tất cả các câu chào này rất thân mật và phổ biến trong tiếng Anh Mỹ." },
+                { en: "In British English, it is more common to hear, \"How do you do?\".", vi: "Trong tiếng Anh Anh, bạn sẽ hay nghe câu \"How do you do?\" hơn." },
+                { en: "If you are confused by all of this information, don't worry.", vi: "Nếu bạn cảm thấy bối rối với quá nhiều mẫu câu, xin đừng lo lắng." },
+                { en: "You can always just say, \"Hi.\"", vi: "Bạn luôn có thể chỉ cần nói một từ đơn giản: \"Hi.\"" },
+                { en: "A happy smile and a confident \"Hi\" will win friends anywhere you go.", vi: "Một nụ cười rạng rỡ cùng lời chào tự tin sẽ giúp bạn kết bạn ở bất cứ nơi đâu." },
+                { en: "Don't worry, just open your mouth and practice.", vi: "Đừng e ngại, hãy mở miệng và tự tin luyện tập." },
+                { en: "You can master English.", vi: "Bạn hoàn toàn có thể làm chủ tiếng Anh." },
+                { en: "Have fun!", vi: "Chúc bạn học thật vui!" }
+            ]},
+            { id: 38, title: "The Importance of Knowing Right from Wrong", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about the importance of knowing right from wrong.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về tầm quan trọng của việc phân biệt đúng sai." },
+                { en: "It is important to always do the right thing.", vi: "Luôn làm điều đúng đắn là điều vô cùng quan trọng." },
+                { en: "Martin Luther King said, \"The time is always right to do the right thing.\"", vi: "Martin Luther King từng nói: \"Thời điểm luôn luôn đúng để làm điều đúng đắn.\"" },
+                { en: "These words are really true.", vi: "Lời dạy này thực sự rất chí lý." },
+                { en: "You should always choose to do the right thing, even if it is harder than the wrong thing.", vi: "Bạn hãy luôn chọn làm điều đúng, cho dù điều đó có gian nan hơn việc làm sai." },
+                { en: "You should also encourage everyone around you to do the right thing.", vi: "Bạn cũng hãy khích lệ mọi người xung quanh cùng làm việc thiện." },
+                { en: "Be honest, be fair, be kind.", vi: "Hãy sống trung thực, công bằng và nhân hậu." },
+                { en: "The right thing to do is always very simple to understand, but sometimes very hard to do.", vi: "Điều đúng đắn luôn rất dễ hiểu nhưng đôi khi lại rất khó để thực hiện." },
+                { en: "Let's help each other, remind each other, and encourage each other to do the right thing.", vi: "Chúng ta hãy cùng giúp đỡ, nhắc nhở và động viên nhau sống đúng đắn." }
+            ]},
+            { id: 39, title: "Proud of Being Chinese", sentences: [
+                { en: "Ladies and Gentlemen, I’m from China.", vi: "Kính thưa quý vị, tôi đến từ Trung Quốc." },
+                { en: "I’m Chinese.", vi: "Tôi là người Trung Quốc." },
+                { en: "I’m proud of my country, and I’m proud of being Chinese.", vi: "Tôi tự hào về đất nước của mình và tự hào là người Trung Quốc." },
+                { en: "China has changed tremendously in the past twenty years.", vi: "Trung Quốc đã thay đổi vượt bậc trong hai mươi năm qua." },
+                { en: "China has become a member of the world community.", vi: "Trung Quốc đã trở thành một thành viên tích cực của cộng đồng thế giới." },
+                { en: "China is changing every day.", vi: "Trung Quốc đang đổi mới từng ngày." },
+                { en: "Chinese people are embracing changes.", vi: "Người dân chúng tôi sẵn sàng đón nhận những đổi thay." },
+                { en: "Chinese people are also facing many challenges now.", vi: "Người dân chúng tôi hiện cũng đang đối mặt với nhiều thử thách." },
+                { en: "We are eager to learn from the world.", vi: "Chúng tôi rất khao khát được học hỏi từ thế giới." },
+                { en: "I am here today to learn from you.", vi: "Hôm nay tôi có mặt tại đây là để học hỏi từ các bạn." },
+                { en: "I’m sure we will learn very much from each other.", vi: "Tôi tin chắc rằng chúng ta sẽ học hỏi được rất nhiều điều bổ ích từ nhau." },
+                { en: "Thank you very much for your attention.", vi: "Xin chân thành cảm ơn sự chú ý của các bạn." },
+                { en: "Thank you very much for giving me the chance to speak to you tonight.", vi: "Cảm ơn các bạn rất nhiều vì đã cho tôi cơ hội phát biểu tối nay." }
+            ]},
+            { id: 40, title: "Love Your Job", sentences: [
+                { en: "Ladies and Gentlemen, today I’m going to talk about jobs.", vi: "Kính thưa quý vị, hôm nay tôi muốn chia sẻ về công việc." },
+                { en: "If you want to succeed, you must fall in love with your job.", vi: "Nếu muốn thành công, bạn bắt buộc phải yêu thích công việc của mình." },
+                { en: "You must enjoy your job.", vi: "Bạn phải tìm thấy niềm vui trong công việc." },
+                { en: "If you don't change your attitude and just think of your job as a burden, you're not going to do any job well.", vi: "Nếu không thay đổi thái độ mà chỉ coi việc làm là gánh nặng, bạn sẽ chẳng thể làm tốt việc gì." },
+                { en: "Every job is important, no matter how small it may be.", vi: "Bất kể công việc nào cũng đều quan trọng, dù là việc nhỏ nhất." },
+                { en: "Every job can teach you something.", vi: "Mỗi công việc đều dạy cho bạn những bài học quý giá." },
+                { en: "Every job is worth doing well.", vi: "Mọi công việc đều xứng đáng được hoàn thành xuất sắc." },
+                { en: "Every job is glorious.", vi: "Lao động chân chính nào cũng đều vinh quang." },
+                { en: "Every job can contribute to society.", vi: "Công việc nào cũng đóng góp giá trị cho xã hội." },
+                { en: "Be proud of your job, do it well, learn to enjoy your job, and you will enjoy your life much more.", vi: "Hãy tự hào về công việc, làm thật tốt và tận hưởng nó, bạn sẽ thấy cuộc đời ý nghĩa hơn nhiều." },
+                { en: "Remember, if you enjoy your job, you'll never work a day in your life.", vi: "Hãy nhớ rằng: Nếu bạn yêu công việc của mình, bạn sẽ không phải làm việc vất vả một ngày nào trong đời." }
+            ]},
+            { id: 41, title: "Family Is More Important than Money", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to make a small speech about family.", vi: "Kính thưa quý vị, hôm nay tôi muốn có bài nói chuyện ngắn về gia đình." },
+                { en: "I have a question to ask all of you: What is the most important thing in your life?", vi: "Tôi có một câu hỏi dành cho tất cả các bạn: Điều gì là quan trọng nhất trong cuộc đời của bạn?" },
+                { en: "I know many of you will say money is the most important, but I want to tell you, many things are more important than money in life.", vi: "Tôi biết nhiều người sẽ bảo là tiền bạc, nhưng tôi muốn nói rằng có những thứ còn quý giá hơn tiền rất nhiều." },
+                { en: "It's a shame that most people don't realize this.", vi: "Thật đáng tiếc khi hầu hết mọi người lại không nhận ra điều này." },
+                { en: "Family, health, and happiness are much more important than money.", vi: "Gia đình, sức khỏe và sự an vui quan trọng hơn tiền bạc rất nhiều." },
+                { en: "Without family, health, and happiness, money means nothing.", vi: "Không có gia đình, sức khỏe và hạnh phúc, tiền bạc chẳng còn ý nghĩa gì." },
+                { en: "Make sure you remember this important lesson, and spend time with your family.", vi: "Hãy ghi nhớ bài học này và dành nhiều thời gian hơn bên gia đình." },
+                { en: "People who spend more time with their families are usually healthier and happier.", vi: "Những người dành nhiều thời gian cho người thân luôn khỏe mạnh và hạnh phúc hơn." },
+                { en: "Precious minutes of family time are worth more than money.", vi: "Những phút giây quý giá bên gia đình đáng giá hơn mọi của cải vật chất." },
+                { en: "Make your family your first priority.", vi: "Hãy luôn đặt gia đình làm ưu tiên số một của bạn." }
+            ]},
+            { id: 42, title: "Noise Pollution", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to talk about noise pollution.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về ô nhiễm tiếng ồn." },
+                { en: "There is too much noise in our cities.", vi: "Có quá nhiều tiếng ồn trong các đô thị của chúng ta." },
+                { en: "In some cities, you can't even hear someone speaking next to you.", vi: "Ở một vài thành phố, bạn thậm chí không nghe rõ người đứng cạnh đang nói gì." },
+                { en: "Noise is hurting our health and hearing.", vi: "Tiếng ồn đang hủy hoại sức khỏe và thính giác của chúng ta." },
+                { en: "We need to do something to reduce noise.", vi: "Chúng ta cần hành động để giảm thiểu ô nhiễm tiếng ồn." },
+                { en: "We need new laws to punish companies and individuals who make too much noise.", vi: "Chúng ta cần luật mới để xử phạt các công ty và cá nhân gây ra quá nhiều tiếng ồn." },
+                { en: "Let's work together to reduce noise and create a more peaceful environment.", vi: "Hãy chung tay giảm bớt tiếng ồn để xây dựng môi trường sống thanh bình hơn." },
+                { en: "Thank you very much for your attention.", vi: "Xin chân thành cảm ơn sự chú ý của các bạn." }
+            ]},
+            { id: 43, title: "How to Learn English Well", sentences: [
+                { en: "Ladies and Gentlemen, today I'm going to talk about learning English.", vi: "Kính thưa quý vị, hôm nay tôi muốn chia sẻ về phương pháp học tiếng Anh." },
+                { en: "There are many ways to learn English.", vi: "Có rất nhiều phương pháp để học tiếng Anh." },
+                { en: "You can learn English through singing.", vi: "Bạn có thể học tiếng Anh qua việc ca hát." },
+                { en: "You can learn English through reading.", vi: "Bạn có thể học tiếng Anh qua việc đọc sách." },
+                { en: "You can learn English through listening, and you can learn English through writing.", vi: "Bạn có thể học tiếng Anh qua việc nghe và qua việc viết." },
+                { en: "But the best way to learn English is through speaking and reciting as many sentences as possible.", vi: "Nhưng cách tối ưu nhất là luyện nói và đọc thuộc lòng thật nhiều câu văn chuẩn." },
+                { en: "The more sentences you can blurt out, the better English you will speak.", vi: "Bạn càng thốt ra được nhiều câu chuẩn, bạn sẽ nói tiếng Anh càng lưu loát." }
+            ]},
+            { id: 44, title: "A Short Introduction to China", sentences: [
+                { en: "Ladies and Gentlemen, I'd like to give you a short introduction about China.", vi: "Kính thưa quý vị, tôi xin giới thiệu đôi nét về đất nước Trung Quốc." },
+                { en: "China has a large population, colorful people, and vast land.", vi: "Trung Quốc có dân số đông đúc, nền văn hóa đa sắc tộc và lãnh thổ rộng lớn." },
+                { en: "China's land covers 9.6 million square kilometers.", vi: "Lãnh thổ Trung Quốc trải rộng 9,6 triệu kilômét vuông." },
+                { en: "There are also many languages spoken in China.", vi: "Có rất nhiều ngôn ngữ và thổ ngữ được sử dụng tại đây." },
+                { en: "Chinese people love learning all kinds of things, and are crazy about learning English.", vi: "Người dân chúng tôi rất hiếu học và vô cùng say mê chinh phục tiếng Anh." },
+                { en: "The future looks bright for China.", vi: "Tương lai tươi sáng đang rộng mở phía trước đất nước Trung Quốc." },
+                { en: "Let's conquer English to show our love for our motherland.", vi: "Hãy cùng nhau làm chủ tiếng Anh để thể hiện tình yêu quê hương đất nước." },
+                { en: "Thank you for listening.", vi: "Cảm ơn các bạn đã lắng nghe." }
+            ]},
+            { id: 45, title: "Welcome to Our Hotel", sentences: [
+                { en: "Ladies and Gentlemen, welcome to our hotel.", vi: "Kính thưa quý khách, chào mừng quý khách đến với khách sạn của chúng tôi." },
+                { en: "I hope you'll eat well, sleep well, and enjoy our service.", vi: "Chúng tôi hy vọng quý khách sẽ có những bữa ăn ngon, giấc ngủ êm đềm và hài lòng với dịch vụ." },
+                { en: "Now let me tell you something about our hotel.", vi: "Bây giờ hãy để tôi giới thiệu đôi nét về khách sạn của chúng tôi." },
+                { en: "Our hotel is the oldest in the city.", vi: "Khách sạn chúng tôi là khách sạn lâu đời nhất trong thành phố." },
+                { en: "It has a long history.", vi: "Nơi đây có bề dày lịch sử đáng tự hào." },
+                { en: "Many famous people have stayed in our hotel.", vi: "Rất nhiều danh nhân nổi tiếng đã từng lưu trú tại đây." },
+                { en: "Although our hotel is old, it was recently remodeled.", vi: "Dù đã có tuổi đời lâu năm, khách sạn vừa được nâng cấp và cải tạo toàn diện." },
+                { en: "I'm sure you will agree our hotel is beautiful as well as comfortable.", vi: "Tôi tin quý khách sẽ đồng ý rằng khách sạn vừa khang trang lại vừa tiện nghi." },
+                { en: "We warmly welcome you to come back again and again.", vi: "Chúng tôi nồng nhiệt chào đón quý khách quay trở lại nhiều lần nữa." },
+                { en: "Have a lovely stay here.", vi: "Chúc quý khách có một kỳ nghỉ thật tuyệt vời tại đây." }
+            ]},
+            { id: 46, title: "Take Care of the World", sentences: [
+                { en: "Ladies and Gentlemen, we need to take care of the world.", vi: "Kính thưa quý vị, chúng ta cần phải chung tay bảo vệ trái đất này." },
+                { en: "We need to save water.", vi: "Chúng ta cần tiết kiệm nguồn nước." },
+                { en: "We need to use less energy.", vi: "Chúng ta cần sử dụng năng lượng tiết kiệm và hiệu quả." },
+                { en: "We need to stop polluting.", vi: "Chúng ta cần chấm dứt ngay việc gây ô nhiễm môi trường." },
+                { en: "We need to watch our daily actions.", vi: "Chúng ta phải luôn chú ý đến từng hành động nhỏ hàng ngày của mình." },
+                { en: "We need to protect our environment heart and soul.", vi: "Chúng ta cần dốc hết tâm huyết để bảo vệ môi trường sống." },
+                { en: "We can't keep wasting the world's resources.", vi: "Chúng ta không thể tiếp tục phung phí tài nguyên thiên nhiên." },
+                { en: "We can't keep abusing our environment.", vi: "Chúng ta không thể tiếp tục tàn phá môi sinh." },
+                { en: "We need to change the way we live.", vi: "Chúng ta cần phải thay đổi lối sống của mình." },
+                { en: "We all need to work together to make our world a better place.", vi: "Tất cả chúng ta hãy đồng lòng để biến thế giới thành một nơi đáng sống hơn." }
+            ]},
+            { id: 47, title: "Live for Today", sentences: [
+                { en: "Ladies and Gentlemen, I want to share an important quote with you: Yesterday is a memory, tomorrow is a dream, live for today.", vi: "Kính thưa quý vị, tôi muốn gửi đến các bạn một câu danh ngôn: \"Hôm qua là kỷ niệm, ngày mai là ước mơ, hãy sống trọn vẹn cho ngày hôm nay.\"" },
+                { en: "I hope that you will try your best to use your unique talents to make today productive and fruitful.", vi: "Tôi hy vọng bạn sẽ phát huy tài năng để biến ngày hôm nay thành một ngày ngập tràn thành quả." },
+                { en: "You cannot worry about your mistakes of yesterday.", vi: "Bạn không thể cứ mãi muộn phiền về những lỗi lầm của ngày hôm qua." },
+                { en: "You should not waste your energy worrying about what will happen tomorrow.", vi: "Bạn cũng không nên phung phí năng lượng lo âu về những chuyện chưa đến vào ngày mai." },
+                { en: "The only thing you can control is what you do today.", vi: "Điều duy nhất bạn có thể làm chủ chính là hành động của bạn trong ngày hôm nay." },
+                { en: "Make the most of today, and you will win everything.", vi: "Tận dụng tối đa ngày hôm nay và bạn sẽ chiến thắng mọi thử thách." },
+                { en: "Thank you for your time and attention.", vi: "Cảm ơn quý vị đã dành thời gian lắng nghe." }
+            ]},
+            { id: 48, title: "Tricks for Learning English", sentences: [
+                { en: "Ladies and Gentlemen, today I'd like to share a few tricks for learning English with you.", vi: "Kính thưa quý vị, hôm nay tôi muốn chia sẻ một vài mẹo học tiếng Anh." },
+                { en: "First, try to speak English as much as possible.", vi: "Thứ nhất: Hãy cố gắng nói tiếng Anh nhiều nhất có thể." },
+                { en: "This will train your tongue muscle.", vi: "Việc này sẽ giúp rèn luyện cơ lưỡi phát âm linh hoạt." },
+                { en: "Second, trust your ability.", vi: "Thứ hai: Hãy luôn tin tưởng vào năng lực của chính mình." },
+                { en: "Don't be afraid to speak.", vi: "Đừng bao giờ ngại mở miệng nói." },
+                { en: "Don't be trapped by shyness.", vi: "Đừng để sự rụt rè nhút nhát cản trở bước tiến của bạn." },
+                { en: "Third, don't let grammar trouble you.", vi: "Thứ ba: Đừng để các quy tắc ngữ pháp làm bạn vướng bận." },
+                { en: "Don't be trapped by grammar rules.", vi: "Đừng để bản thân bị gò bó bởi các cấu trúc ngữ pháp cứng nhắc." },
+                { en: "The more sentences you speak, the more natural the grammar rules will become.", vi: "Bạn càng nói nhiều câu, các quy tắc ngữ pháp sẽ càng trở nên tự nhiên bấy nhiêu." },
+                { en: "Actually, the truth is, there are no tricks in learning English.", vi: "Thực ra, bí quyết lớn nhất trong việc học tiếng Anh là không có đường tắt nào cả." },
+                { en: "You must try your very best to practice.", vi: "Bạn bắt buộc phải nỗ lực hết mình để kiên trì luyện tập." },
+                { en: "Remember, what pains us, trains us.", vi: "Hãy nhớ rằng: Gian nan thử thách chính là điều tôi luyện chúng ta nên người." },
+                { en: "Thanks for your kind attention.", vi: "Xin chân thành cảm ơn sự chú ý của các bạn." },
+                { en: "I hope you will try to speak English from today.", vi: "Tôi hy vọng các bạn sẽ bắt đầu luyện nói tiếng Anh ngay từ hôm nay." }
+            ]},
+            { id: 49, title: "The Importance of Drinking Water", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about how important it is to drink enough water.", vi: "Kính thưa quý vị, hôm nay tôi muốn nói về tầm quan trọng của việc uống đủ nước." },
+                { en: "Doctors say everyone needs to drink at least eight glasses of water each day.", vi: "Các bác sĩ khuyên rằng mỗi người nên uống ít nhất 8 ly nước mỗi ngày." },
+                { en: "If you are outside in warm weather or exercising, you need to drink even more.", vi: "Nếu hoạt động ngoài trời nóng hoặc tập thể dục, bạn cần uống nhiều hơn thế." },
+                { en: "If your mouth and throat feel dry, you are already dehydrated.", vi: "Nếu thấy khô miệng hay rát cổ, cơ thể bạn đã bắt đầu thiếu nước." },
+                { en: "Many headaches and other health problems are caused by not drinking enough water.", vi: "Nhiều chứng đau đầu và bệnh lý bắt nguồn từ việc uống không đủ nước." },
+                { en: "If you want better health, you don't need to do anything drastic.", vi: "Nếu muốn khỏe mạnh hơn, bạn không cần phải làm những điều quá to tát." },
+                { en: "You can simply drink more water.", vi: "Đơn giản là hãy uống nhiều nước hơn mỗi ngày." },
+                { en: "Thank you for coming tonight, and have a safe drive home.", vi: "Cảm ơn các bạn đã đến tối nay, chúc các bạn lái xe về nhà an toàn." }
+            ]},
+            { id: 50, title: "The Power of Words", sentences: [
+                { en: "Ladies and Gentlemen, today I want to talk about the power of words.", vi: "Kính thưa quý vị, hôm nay tôi muốn chia sẻ về sức mạnh của ngôn từ." },
+                { en: "Words can express your feelings.", vi: "Ngôn từ có thể truyền tải trọn vẹn những tâm tư cảm xúc của bạn." },
+                { en: "Words can influence people.", vi: "Ngôn từ có sức ảnh hưởng sâu rộng đến người khác." },
+                { en: "Words can hurt people.", vi: "Lời nói có thể làm tổn thương sâu sắc lòng người." },
+                { en: "Words can encourage people.", vi: "Nhưng lời nói cũng có thể tiếp thêm sức mạnh to lớn cho người khác." },
+                { en: "Words can start wars, and words can end wars.", vi: "Ngôn từ có thể châm ngòi chiến tranh, và cũng chính ngôn từ có thể lập lại hòa bình." },
+                { en: "Words can help you become a successful speaker and a powerful leader.", vi: "Làm chủ ngôn từ giúp bạn trở thành một diễn giả lôi cuốn và một nhà lãnh đạo kiệt xuất." },
+                { en: "Words can help you win friends.", vi: "Lời nói hay sẽ giúp bạn kết giao được những người bạn chân thành." },
+                { en: "That's why I feel puzzled about why Chinese students hate words.", vi: "Đó là lý do tại sao tôi cảm thấy khó hiểu khi nhiều học viên lại ác cảm với từ vựng." },
+                { en: "Students should love words and learn how to use their power.", vi: "Học sinh hãy yêu thích từ vựng và học cách làm chủ sức mạnh của ngôn từ." },
+                { en: "Words are beautiful, and words should be our friends.", vi: "Ngôn từ thật đẹp đẽ và luôn là những người bạn thân thiết của chúng ta." },
+                { en: "That's why you should learn as many words as you can.", vi: "Đó là lý do bạn nên học càng nhiều từ vựng càng tốt." },
+                { en: "Start learning and using new words today.", vi: "Hãy bắt đầu học và sử dụng từ mới ngay hôm nay!" }
+            ]}
+        ];
+
+        const lessons = rawData.map(item => ({
+            id: item.id,
+            title: item.title,
+            mp3File: mp3FileMap[item.id] || `L${item.id}.mp3`,
+            sentences: item.sentences.map(s => ({
+                en: s.en,
+                ipa: generateIPA(s.en),
+                vi: s.vi
+            }))
+        }));
+
+        let currentLesson = null;
+        let playMode = 'original';
+        let sentenceCountToLearn = 1;
+        let repeatSetting = 1;
+        let currentRepeatIndex = 0;
+        let currentRate = 1.0;
+        let isPlaying = false;
+        let showTranslation = true;
+        let activeSentenceIndex = -1;
+        let activeCharIndex = -1;
+        let selectedGender = "female";
+
+        let currentAudio = null;
+        let cachedVoices = [];
+        let aiCurrentSubIndex = 0;
+        let isAiManuallyPaused = false;
+
+        function loadVoices() {
+            if ('speechSynthesis' in window) {
+                cachedVoices = window.speechSynthesis.getVoices();
+                if (cachedVoices.length === 0) {
+                    window.speechSynthesis.onvoiceschanged = () => {
+                        cachedVoices = window.speechSynthesis.getVoices();
+                    };
+                }
+            }
+        }
+
+        function initList() {
+            const grid = document.getElementById("lessonGrid");
+            if (!grid) return;
+            grid.innerHTML = lessons.map(l => `
+                <div onclick="selectLesson(${l.id})" class="bg-white p-3 rounded-2xl shadow-sm border border-slate-200/80 hover:border-emerald-600 hover:shadow-md cursor-pointer transition flex items-center justify-between group">
+                    <div class="flex items-center space-x-2.5">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-1 rounded-xl">L${l.id}</span>
+                        <h3 class="font-bold text-slate-800 text-xs md:text-sm group-hover:text-emerald-700 transition">${l.title}</h3>
+                    </div>
+                    <span class="text-slate-300 group-hover:text-emerald-700 font-bold transition">→</span>
+                </div>
+            `).join("");
+
+            const dropdownItems = document.getElementById("lessonDropdownItems");
+            if (dropdownItems) {
+                dropdownItems.innerHTML = lessons.map(l => `
+                    <button onclick="selectLessonFromDropdown(${l.id}, event)" class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 flex items-center space-x-2">
+                        <span class="font-bold text-emerald-700 w-7">L${l.id}</span>
+                        <span class="truncate">${l.title}</span>
+                    </button>
+                `).join("");
+            }
+        }
+
+        function selectLesson(id) {
+            stopAllAudio();
+            currentLesson = lessons.find(l => l.id === id);
+            document.getElementById("lessonBadge").querySelector("span").innerText = "Lesson " + currentLesson.id;
+            document.getElementById("lessonTitle").innerText = currentLesson.title;
+            
+            sentenceCountToLearn = 1;
+            activeSentenceIndex = -1;
+            activeCharIndex = -1;
+            aiCurrentSubIndex = 0;
+            updateSentenceCountUI();
+            renderContent();
+
+            document.getElementById("listView").classList.add("hidden");
+            document.getElementById("studyView").classList.remove("hidden");
+            document.getElementById("transToggleBtn").classList.remove("hidden");
+
+            currentRepeatIndex = 0;
+            updateLoopStatus();
+            startPlaying();
+        }
+
+        function selectLessonFromDropdown(id, event) {
+            if (event) event.stopPropagation();
+            closeAllDropdowns();
+            selectLesson(id);
+        }
+
+        function toggleLessonDropdown(event) {
+            event.stopPropagation();
+            const menu = document.getElementById("lessonDropdownMenu");
+            const isHidden = menu.classList.contains("hidden");
+            closeAllDropdowns();
+            if (isHidden) menu.classList.remove("hidden");
+        }
+
+        function toggleRepeatDropdown(event) {
+            event.stopPropagation();
+            const menu = document.getElementById("repeatDropdownMenu");
+            const isHidden = menu.classList.contains("hidden");
+            closeAllDropdowns();
+            if (isHidden) menu.classList.remove("hidden");
+        }
+
+        function toggleSpeedDropdown(event) {
+            event.stopPropagation();
+            const menu = document.getElementById("speedDropdownMenu");
+            const isHidden = menu.classList.contains("hidden");
+            closeAllDropdowns();
+            if (isHidden) menu.classList.remove("hidden");
+        }
+
+        function closeAllDropdowns() {
+            document.getElementById("lessonDropdownMenu")?.classList.add("hidden");
+            document.getElementById("repeatDropdownMenu")?.classList.add("hidden");
+            document.getElementById("speedDropdownMenu")?.classList.add("hidden");
+        }
+
+        function toggleAudioMode() {
+            stopAllAudio();
+            playMode = (playMode === 'original') ? 'ai' : 'original';
+            updateAudioModeUI();
+            activeSentenceIndex = -1;
+            activeCharIndex = -1;
+            aiCurrentSubIndex = 0;
+            renderContent();
+            startPlaying();
+        }
+
+        function updateAudioModeUI() {
+            const icon = document.getElementById("audioModeIcon");
+            const text = document.getElementById("audioModeText");
+            const btn = document.getElementById("btnAudioModeToggle");
+            const aiControls = document.getElementById("aiVoiceControls");
+
+            if (playMode === 'original') {
+                icon.innerText = "🎙️";
+                text.innerText = "Giọng Gốc (MP3)";
+                btn.className = "px-3 py-1.5 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white transition shadow-sm flex items-center space-x-1.5";
+                aiControls.classList.add("hidden");
+            } else {
+                icon.innerText = "🤖";
+                text.innerText = "Giọng AI (Karaoke)";
+                btn.className = "px-3 py-1.5 rounded-lg font-bold text-xs bg-teal-600 hover:bg-teal-500 text-white transition shadow-sm flex items-center space-x-1.5";
+                aiControls.classList.remove("hidden");
+            }
+        }
+
+        function selectRepeat(val) {
+            repeatSetting = val;
+            currentRepeatIndex = 0;
+            document.getElementById("repeatText").innerText = (val === 0) ? "Mãi mãi (∞)" : `${val} lần`;
+            updateLoopStatus();
+            closeAllDropdowns();
+        }
+
+        function selectSpeed(val) {
+            currentRate = val;
+            document.getElementById("speedText").innerText = `${val}x`;
+            if (currentAudio) currentAudio.playbackRate = currentRate;
+            if (isPlaying && playMode === 'ai') playAISpeech(false);
+            closeAllDropdowns();
+        }
+
+        function formatKaraokeSentence(text, charIndex, isCurrent) {
+            if (!isCurrent || charIndex < 0) return text;
+            const words = text.split(/(\s+)/);
+            let currentPos = 0;
+            let result = "";
+
+            for (let i = 0; i < words.length; i++) {
+                const w = words[i];
+                const start = currentPos;
+                const end = currentPos + w.length;
+                currentPos = end;
+
+                if (charIndex >= start && charIndex < end && w.trim().length > 0) {
+                    result += `<span class="highlight-word">${w}</span>`;
+                } else {
+                    result += w;
+                }
+            }
+            return result;
+        }
+
+        function renderContent() {
+            const contentDiv = document.getElementById("lessonContent");
+            contentDiv.innerHTML = currentLesson.sentences.map((item, index) => {
+                const isWithinRange = (playMode === 'original') || (index < sentenceCountToLearn);
+                const isCurrentlyActive = (index === activeSentenceIndex);
+
+                let baseStyle = "padding: 8px 12px; border-radius: 8px; transition: all 0.2s ease;";
+                
+                if (isCurrentlyActive) {
+                    baseStyle += " background-color: #ecfdf5; color: #065f46; border-left: 4px solid #047857; font-weight: 700;";
+                } else if (isWithinRange) {
+                    baseStyle += " background-color: #f8fafc; color: #334155; border-left: 3px solid #cbd5e1; font-weight: 600;";
+                } else {
+                    baseStyle += " color: #94a3b8; opacity: 0.35;";
+                }
+                
+                const displayEn = formatKaraokeSentence(item.en, activeCharIndex, isCurrentlyActive);
+                let html = `<div style="${baseStyle} font-size: 1.05rem; line-height: 1.45;">${displayEn}</div>`;
+                
+                if (showTranslation && isWithinRange) {
+                    html += `<div style="font-size: 0.8rem; color: #059669; padding-left: 12px; font-style: italic;">[IPA: ${item.ipa}]</div>`;
+                    html += `<div style="font-size: 0.85rem; color: #475569; padding-left: 12px; padding-bottom: 6px; font-weight: 500;">🇻🇳 ${item.vi}</div>`;
+                }
+                return html;
+            }).join("");
+        }
+
+        function stopAllAudio() {
+            isAiManuallyPaused = true;
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentAudio = null;
+            }
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            isPlaying = false;
+            activeCharIndex = -1;
+            updatePlayBtnUI();
+        }
+
+        function setVoiceGender(gender) {
+            selectedGender = gender;
+            const btnFemale = document.getElementById("btnVoiceFemale");
+            const btnMale = document.getElementById("btnVoiceMale");
+            if (gender === "female") {
+                btnFemale.className = "px-2 py-0.5 text-xs rounded font-medium bg-emerald-700 text-white";
+                btnMale.className = "px-2 py-0.5 text-xs rounded font-medium text-slate-300";
+            } else {
+                btnMale.className = "px-2 py-0.5 text-xs rounded font-medium bg-emerald-700 text-white";
+                btnFemale.className = "px-2 py-0.5 text-xs rounded font-medium text-slate-300";
+            }
+            if (isPlaying && playMode === 'ai') {
+                playAISpeech(true);
+            }
+        }
+
+        function getUSVoice(gender) {
+            if (!cachedVoices || cachedVoices.length === 0) {
+                if ('speechSynthesis' in window) cachedVoices = window.speechSynthesis.getVoices();
+            }
+            const enVoices = cachedVoices.filter(v => v.lang && (v.lang.includes("en") || v.lang.includes("EN")));
+            if (enVoices.length === 0) return null;
+
+            if (gender === "female") {
+                return enVoices.find(v => {
+                    const n = v.name.toLowerCase();
+                    return n.includes("female") || n.includes("zira") || n.includes("samantha") || n.includes("jenny");
+                }) || enVoices[0];
+            } else {
+                return enVoices.find(v => {
+                    const n = v.name.toLowerCase();
+                    return n.includes("male") || n.includes("david") || n.includes("mark") || n.includes("guy");
+                }) || enVoices[enVoices.length - 1];
+            }
+        }
+
+        function toggleTranslation() {
+            showTranslation = !showTranslation;
+            const btn = document.getElementById("transToggleBtn");
+            btn.innerText = showTranslation ? "🌐 Ẩn Dịch & IPA" : "🌐 Hiện Dịch & IPA";
+            renderContent();
+        }
+
+        function adjustSentenceCount(step) {
+            sentenceCountToLearn += step;
+            if (sentenceCountToLearn > currentLesson.sentences.length) {
+                sentenceCountToLearn = 1;
+            }
+            updateSentenceCountUI();
+            activeSentenceIndex = -1;
+            activeCharIndex = -1;
+            aiCurrentSubIndex = 0;
+            renderContent();
+            currentRepeatIndex = 0;
+            updateLoopStatus();
+            if (playMode === 'ai' && isPlaying) playAISpeech(true);
+        }
+
+        function updateSentenceCountUI() {
+            document.getElementById("sentenceCountBtn").innerText = sentenceCountToLearn + " câu";
+        }
+
+        function startPlaying() {
+            if (playMode === 'original') {
+                playOriginalMP3();
+            } else {
+                aiCurrentSubIndex = 0;
+                playAISpeech(true);
+            }
+        }
+
+        function playOriginalMP3() {
+            stopAllAudio();
+            if (!currentLesson) return;
+
+            const mp3Path = `listening/${currentLesson.mp3File}`;
+            currentAudio = new Audio(mp3Path);
+            currentAudio.playbackRate = currentRate;
+
+            currentAudio.onended = () => {
+                currentRepeatIndex++;
+                if (repeatSetting === 0 || currentRepeatIndex < repeatSetting) {
+                    updateLoopStatus();
+                    playOriginalMP3();
+                } else {
+                    isPlaying = false;
+                    currentRepeatIndex = 0;
+                    updatePlayBtnUI();
+                    updateLoopStatus();
+                }
+            };
+
+            currentAudio.onerror = () => {
+                toggleAudioMode();
+            };
+
+            currentAudio.play().then(() => {
+                isPlaying = true;
+                updatePlayBtnUI();
+            }).catch(() => {
+                toggleAudioMode();
+            });
+        }
+
+        function playAISpeech(resetIndex = false) {
+            if (!('speechSynthesis' in window)) return;
+            
+            isAiManuallyPaused = false;
+            window.speechSynthesis.cancel();
+            if (!currentLesson) return;
+
+            let targetSentences = currentLesson.sentences.slice(0, sentenceCountToLearn);
+            if (resetIndex) {
+                aiCurrentSubIndex = 0;
+            }
+
+            function playNextSubSentence() {
+                if (isAiManuallyPaused) return;
+
+                if (aiCurrentSubIndex >= targetSentences.length) {
+                    currentRepeatIndex++;
+                    if (repeatSetting === 0 || currentRepeatIndex < repeatSetting) {
+                        aiCurrentSubIndex = 0;
+                        updateLoopStatus();
+                        playNextSubSentence();
+                    } else {
+                        isPlaying = false;
+                        currentRepeatIndex = 0;
+                        activeSentenceIndex = -1;
+                        activeCharIndex = -1;
+                        aiCurrentSubIndex = 0;
+                        renderContent();
+                        updatePlayBtnUI();
+                        updateLoopStatus();
+                    }
+                    return;
+                }
+
+                activeSentenceIndex = aiCurrentSubIndex;
+                activeCharIndex = 0;
+                renderContent();
+
+                const textToRead = targetSentences[aiCurrentSubIndex].en;
+                const utter = new SpeechSynthesisUtterance(textToRead);
+                utter.lang = "en-US";
+                
+                const chosenVoice = getUSVoice(selectedGender);
+                if (chosenVoice) utter.voice = chosenVoice;
+                
+                utter.pitch = (selectedGender === "male") ? 0.85 : 1.1;
+                utter.rate = currentRate;
+
+                utter.onboundary = (event) => {
+                    if (isAiManuallyPaused) return;
+                    if (event.name === 'word') {
+                        activeCharIndex = event.charIndex;
+                        renderContent();
+                    }
+                };
+
+                utter.onend = () => {
+                    if (isAiManuallyPaused) return;
+                    aiCurrentSubIndex++;
+                    activeCharIndex = -1;
+                    playNextSubSentence();
+                };
+
+                utter.onerror = () => {
+                    if (isAiManuallyPaused) return;
+                    aiCurrentSubIndex++;
+                    activeCharIndex = -1;
+                    playNextSubSentence();
+                };
+
+                if (window.speechSynthesis.paused) {
+                    window.speechSynthesis.resume();
+                }
+                
+                window.speechSynthesis.speak(utter);
+                isPlaying = true;
+                updatePlayBtnUI();
+            }
+
+            playNextSubSentence();
+            updateLoopStatus();
+        }
+
+        function togglePlay() {
+            if (isPlaying) {
+                isPlaying = false;
+                if (playMode === 'original') {
+                    if (currentAudio) currentAudio.pause();
+                } else {
+                    isAiManuallyPaused = true;
+                    if ('speechSynthesis' in window) {
+                        window.speechSynthesis.cancel();
+                    }
+                }
+            } else {
+                if (playMode === 'original') {
+                    if (currentAudio && currentAudio.paused) {
+                        currentAudio.play();
+                        isPlaying = true;
+                    } else {
+                        startPlaying();
+                    }
+                } else {
+                    isAiManuallyPaused = false;
+                    isPlaying = true;
+                    playAISpeech(false);
+                }
+            }
+            updatePlayBtnUI();
+        }
+
+        function updatePlayBtnUI() {
+            const btn = document.getElementById("playPauseBtn");
+            const icon = document.getElementById("playIcon");
+            const text = document.getElementById("playText");
+            if (isPlaying) {
+                icon.innerText = "⏸";
+                text.innerText = "Tạm dừng";
+                btn.className = "bg-amber-600 hover:bg-amber-500 text-white px-4 py-1.5 rounded-full font-bold text-xs shadow-md flex items-center space-x-1.5";
+            } else {
+                icon.innerText = "▶";
+                text.innerText = "Phát Âm Thanh";
+                btn.className = "bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-1.5 rounded-full font-bold text-xs shadow-md flex items-center space-x-1.5";
+            }
+        }
+
+        function updateLoopStatus() {
+            const statusEl = document.getElementById("loopStatus");
+            statusEl.innerText = (repeatSetting === 0) 
+                ? `(${currentRepeatIndex + 1}/∞)` 
+                : `(${currentRepeatIndex + 1}/${repeatSetting})`;
+        }
+
+        function goHome() {
+            stopAllAudio();
+            document.getElementById("studyView").classList.add("hidden");
+            document.getElementById("listView").classList.remove("hidden");
+            document.getElementById("transToggleBtn").classList.add("hidden");
+        }
+
+        function toggleFullscreen() {
+            const container = document.getElementById("textContentContainer");
+            const fsIcon = document.getElementById("fsIcon");
+            if (container.style.position === "fixed") {
+                container.style.position = "static";
+                container.style.width = "auto";
+                container.style.height = "auto";
+                container.style.zIndex = "1";
+                fsIcon.innerText = "🔍 Phóng to";
+            } else {
+                container.style.position = "fixed";
+                container.style.top = "0";
+                container.style.left = "0";
+                container.style.width = "100vw";
+                container.style.height = "100vh";
+                container.style.zIndex = "50";
+                fsIcon.innerText = "✕ Thu nhỏ";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadVoices();
+            initList();
+            updateAudioModeUI();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>900 Mẫu Câu Giao Tiếp Cùng Bé - VANDONENGLISH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      height: 100dvh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #0b1324;
+    }
+    .ipa-text { color: #10b981; font-style: italic; }
+    .vn-text { color: #94a3b8; }
+    .active-sentence { border-color: #10b981 !important; background-color: rgba(16, 185, 129, 0.18) !important; }
+    .char-animation { animation: float 3s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+  </style>
+</head>
+<body class="flex justify-center text-slate-100 select-none">
+  <div class="w-full max-w-md bg-slate-900 flex flex-col h-full shadow-2xl relative p-2 justify-between">
+    
+    <!-- 1. THANH ĐIỀU HƯỚNG LIÊN KẾT HỆ THỐNG ĐÃ SỬA CHUẨN ĐƯỜNG DẪN -->
+    <div class="shrink-0 space-y-1 mb-1">
+      <nav class="bg-slate-950/90 border border-slate-800 rounded-xl px-2.5 py-1.5 flex items-center justify-between shadow-sm text-xs">
+        <div class="flex items-center gap-1.5">
+          <!-- Quay về trang tổng hợp VandonEnglish -->
+          <a href="../index.html" class="flex items-center gap-1 text-[11px] font-bold text-slate-300 hover:text-emerald-400 bg-slate-800/80 px-2 py-1 rounded-lg border border-slate-700 transition">
+            <i class="fa-solid fa-arrow-left text-[10px]"></i> Học Liệu
+          </a>
+          <!-- Quay về trang chủ Biệt Thự Sonasea -->
+          <a href="../../index.html" class="flex items-center gap-1 text-[11px] font-medium text-slate-400 hover:text-slate-200 px-1.5 py-1 transition">
+            <i class="fa-solid fa-hotel text-[10px]"></i> Villa
+          </a>
+        </div>
+        <!-- Sang trang ShopeeQN -->
+        <a href="../../shopeeqn/index.html" class="flex items-center gap-1 text-[11px] font-bold text-amber-300 bg-amber-950/60 hover:bg-amber-900/60 border border-amber-500/40 px-2.5 py-1 rounded-lg transition shadow-sm">
+          <span>🎁</span> ShopeeQN
+        </a>
+      </nav>
+
+      <!-- Banner Ruy-băng Gợi Ý Dụng Cụ Học Tập -->
+      <aside class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white rounded-lg px-2.5 py-1 flex items-center justify-between text-[10px] shadow-sm">
+        <div class="flex items-center gap-1.5 truncate">
+          <span class="text-xs">📻</span>
+          <span class="truncate">Trang bị <strong>Loa tắm tiếng Anh & Bút đọc</strong></span>
+        </div>
+        <a href="../../shopeeqn/index.html#hoc-tieng-anh" class="font-bold underline text-amber-200 hover:text-white shrink-0 ml-1">
+          Xem ngay ➔
+        </a>
+      </aside>
+    </div>
+
+    <!-- 2. Header Bài Học: Chọn Nghe Từ Bài ... Đến Bài ... -->
+    <header class="bg-emerald-950/90 border border-emerald-700/60 rounded-xl px-2.5 py-1.5 flex items-center justify-between shadow shrink-0 gap-1 text-[11px]">
+      <div class="flex items-center gap-1 font-semibold text-emerald-300">
+        <span>Từ:</span>
+        <select id="startLessonSelect" class="bg-emerald-900 text-white font-bold py-0.5 px-1 rounded border border-emerald-600 focus:outline-none text-xs">
+        </select>
+        <span class="ml-0.5">Đến:</span>
+        <select id="endLessonSelect" class="bg-emerald-900 text-white font-bold py-0.5 px-1 rounded border border-emerald-600 focus:outline-none text-xs">
+        </select>
+      </div>
+
+      <button id="toggleTransBtn" class="bg-emerald-700 hover:bg-emerald-600 px-2 py-1 rounded font-medium flex items-center gap-1 shadow transition text-xs">
+        <i class="fa-solid fa-language text-xs"></i> <span>Dịch & IPA</span>
+      </button>
+    </header>
+
+    <!-- 3. Khung Nội Dung Bài Học -->
+    <main class="flex-1 flex flex-col justify-between py-1 overflow-hidden" id="mainContent">
+      <div id="currentCardContainer" class="h-full flex flex-col justify-between"></div>
+    </main>
+
+    <!-- 4. Thanh Điều Khiển Cố Định Dưới Cùng & Popups Xổ Lên -->
+    <footer class="bg-slate-950/95 border border-slate-800 rounded-xl p-2 shrink-0 space-y-1.5 relative">
+      
+      <!-- Popup Lựa Chọn Lặp Lại Xổ Lên Trên -->
+      <div id="repeatMenu" class="hidden absolute bottom-[88px] left-1/2 -translate-x-1/2 bg-slate-900 border border-emerald-500/60 rounded-xl p-2 shadow-2xl z-50 flex items-center gap-1.5">
+        <button data-repeat="1" class="repeat-opt px-2.5 py-1 rounded bg-slate-800 hover:bg-emerald-700 text-xs font-bold text-white transition">1x</button>
+        <button data-repeat="2" class="repeat-opt px-2.5 py-1 rounded bg-slate-800 hover:bg-emerald-700 text-xs font-bold text-white transition">2x</button>
+        <button data-repeat="3" class="repeat-opt px-2.5 py-1 rounded bg-slate-800 hover:bg-emerald-700 text-xs font-bold text-white transition">3x</button>
+        <button data-repeat="5" class="repeat-opt px-2.5 py-1 rounded bg-slate-800 hover:bg-emerald-700 text-xs font-bold text-white transition">5x</button>
+        <button data-repeat="999" class="repeat-opt px-2.5 py-1 rounded bg-slate-800 hover:bg-emerald-700 text-xs font-bold text-white transition">∞</button>
+      </div>
+
+      <!-- Popup Lựa Chọn Tốc Độ Xổ Lên Trên -->
+      <div id="speedMenu" class="hidden absolute bottom-[88px] right-2 bg-slate-900 border border-cyan-500/60 rounded-xl p-2 shadow-2xl z-50 flex items-center gap-1.5">
+        <button data-speed="0.5" class="speed-opt px-2 py-1 rounded bg-slate-800 hover:bg-cyan-700 text-xs font-bold text-white transition">0.5</button>
+        <button data-speed="0.75" class="speed-opt px-2 py-1 rounded bg-slate-800 hover:bg-cyan-700 text-xs font-bold text-white transition">0.75</button>
+        <button data-speed="1.0" class="speed-opt px-2 py-1 rounded bg-slate-800 hover:bg-cyan-700 text-xs font-bold text-white transition">1.0</button>
+        <button data-speed="1.25" class="speed-opt px-2 py-1 rounded bg-slate-800 hover:bg-cyan-700 text-xs font-bold text-white transition">1.25</button>
+        <button data-speed="1.5" class="speed-opt px-2 py-1 rounded bg-slate-800 hover:bg-cyan-700 text-xs font-bold text-white transition">1.5</button>
+        <button data-speed="2.0" class="speed-opt px-2 py-1 rounded bg-slate-800 hover:bg-cyan-700 text-xs font-bold text-white transition">2.0</button>
+      </div>
+
+      <!-- Hàng 1: Nút Tùy Chỉnh Giọng / Lặp / Tốc Độ -->
+      <div class="flex items-center justify-between gap-1.5">
+        <button id="voiceToggleBtn" class="flex-1 py-1 px-2 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1 border border-emerald-600 transition shadow">
+          <i class="fa-solid fa-file-audio text-[11px]" id="voiceIcon"></i>
+          <span id="voiceText">Gốc (MP3)</span>
+        </button>
+
+        <!-- Nút Lặp -->
+        <button id="repeatToggleBtn" class="py-1 px-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-400 font-bold text-xs border border-slate-700 flex items-center gap-1 transition">
+          <i class="fa-solid fa-rotate text-[10px]"></i>
+          <span id="repeatText">Lặp: 1</span>
+          <span id="repeatProgress" class="text-[10px] text-gray-400 font-normal">(0/1)</span>
+        </button>
+
+        <!-- Nút Tốc Độ -->
+        <button id="speedToggleBtn" class="py-1 px-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold text-xs border border-slate-700 flex items-center gap-1 transition">
+          <i class="fa-solid fa-gauge-high text-[10px]"></i>
+          <span id="speedText">1.0x</span>
+        </button>
+      </div>
+
+      <!-- Hàng 2: Nút Điều Hướng & Phát Theo Dải -->
+      <div class="flex items-center gap-2">
+        <button id="prevBtn" class="w-11 h-8 bg-slate-800 hover:bg-slate-700 active:scale-95 text-gray-300 rounded-lg border border-slate-700 flex items-center justify-center transition">
+          <i class="fa-solid fa-backward-step text-sm"></i>
+        </button>
+
+        <button id="playBtn" class="flex-1 h-8 bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-bold text-xs rounded-lg flex items-center justify-center gap-1.5 shadow transition">
+          <i class="fa-solid fa-play text-xs" id="playIcon"></i>
+          <span id="playText">Phát Theo Dải</span>
+        </button>
+
+        <button id="nextBtn" class="w-11 h-8 bg-slate-800 hover:bg-slate-700 active:scale-95 text-gray-300 rounded-lg border border-slate-700 flex items-center justify-center transition">
+          <i class="fa-solid fa-forward-step text-sm"></i>
+        </button>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script src="js/data.js"></script>
+  <script>
+    // Audio Engine & Giọng AI
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+    let isSpeechUnlocked = false;
+
+    function unlockAudioEngine() {
+      if (!isSpeechUnlocked && synth) {
+        try {
+          const u = new SpeechSynthesisUtterance('');
+          u.volume = 0;
+          synth.speak(u);
+          isSpeechUnlocked = true;
+        } catch (e) {}
+      }
+    }
+    document.body.addEventListener('touchstart', unlockAudioEngine, { once: true });
+    document.body.addEventListener('click', unlockAudioEngine, { once: true });
+
+    function getEnVoice() {
+      if (!synth) return null;
+      const voices = synth.getVoices() || [];
+      return voices.find(v => v.lang === 'en-US' || v.lang === 'en_US') ||
+             voices.find(v => v.lang.startsWith('en')) || null;
+    }
+    if (synth && synth.onvoiceschanged !== undefined) {
+      synth.onvoiceschanged = () => { synth.getVoices(); };
+    }
+
+    // Quản lý trạng thái
+    let currentLessonIdx = 0;
+    let startIdx = 0;
+    let endIdx = 0;
+
+    let currentMode = 'mp3';
+    let currentSpeed = 1.0;
+    let currentRepeatLimit = 1;
+    let currentRepeat = 0;
+
+    let isPlaying = false;
+    let showDetails = true;
+    let audioPlayer = new Audio();
+
+    const startSelect = document.getElementById('startLessonSelect');
+    const endSelect = document.getElementById('endLessonSelect');
+    const currentCardContainer = document.getElementById('currentCardContainer');
+
+    const repeatMenu = document.getElementById('repeatMenu');
+    const speedMenu = document.getElementById('speedMenu');
+
+    function initLessonSelectors() {
+      startSelect.innerHTML = '';
+      endSelect.innerHTML = '';
+      if (typeof LESSONS_DATA === 'undefined') return;
+
+      LESSONS_DATA.forEach((item, idx) => {
+        const opt1 = document.createElement('option');
+        opt1.value = idx;
+        opt1.innerText = `${item.id}`;
+        startSelect.appendChild(opt1);
+
+        const opt2 = document.createElement('option');
+        opt2.value = idx;
+        opt2.innerText = `${item.id}`;
+        endSelect.appendChild(opt2);
+      });
+
+      startIdx = 0;
+      endIdx = Math.min(9, LESSONS_DATA.length - 1);
+      startSelect.value = startIdx;
+      endSelect.value = endIdx;
+      currentLessonIdx = startIdx;
+    }
+
+    function renderLesson(idx) {
+      if (typeof LESSONS_DATA === 'undefined' || !LESSONS_DATA[idx]) return;
+      const item = LESSONS_DATA[idx];
+
+      let sentencesHtml = '';
+      if (item.sentences && item.sentences.length) {
+        sentencesHtml = item.sentences.map((s, sIdx) => `
+          <div id="sent-${sIdx}" class="sentence-row px-2 py-1 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-emerald-950/40 cursor-pointer transition flex flex-col justify-center" onclick="playSingleSentence('${s.en.replace(/'/g, "\\'")}', ${sIdx})">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-100 text-[12px] leading-tight">• ${s.en}</span>
+              <i class="fa-solid fa-volume-high text-[10px] text-emerald-400 opacity-60 ml-1.5"></i>
+            </div>
+            <div class="trans-box ${showDetails ? '' : 'hidden'} mt-0.5 space-y-0.5 text-[10px]">
+              <p class="ipa-text font-mono leading-tight">${s.ipa || ''}</p>
+              <p class="vn-text font-medium leading-tight"><span class="bg-slate-700 text-slate-300 px-1 rounded text-[8px] mr-1">VN</span>${s.vi || ''}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      currentCardContainer.innerHTML = `
+        <div class="border border-emerald-500/50 bg-slate-900/90 rounded-2xl p-2 shadow-sm flex flex-col justify-between h-full">
+          
+          <div class="flex items-center justify-between pb-1 border-b border-slate-800 shrink-0">
+            <span class="text-[10px] font-bold uppercase text-emerald-400 tracking-wider">Tình huống thực tế</span>
+            <span class="w-6 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">Bài ${item.id}</span>
+          </div>
+
+          <div class="w-full bg-slate-950/60 rounded-xl p-1 border border-slate-800/80 flex items-center justify-center overflow-hidden my-1 flex-1 min-h-[120px]">
+            <img src="${item.image}" alt="Minh họa bài ${item.id}" 
+                 class="max-w-full max-h-full object-contain scale-105 char-animation drop-shadow" 
+                 onerror="this.src='extracted_images/card_${item.id}.png'">
+          </div>
+
+          <div class="space-y-1 shrink-0">
+            ${sentencesHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    // Xử lý Popups
+    document.getElementById('repeatToggleBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      speedMenu.classList.add('hidden');
+      repeatMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('speedToggleBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      repeatMenu.classList.add('hidden');
+      speedMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', () => {
+      repeatMenu.classList.add('hidden');
+      speedMenu.classList.add('hidden');
+    });
+
+    document.querySelectorAll('.repeat-opt').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentRepeatLimit = parseInt(e.target.getAttribute('data-repeat'));
+        currentRepeat = 0;
+        updateRepeatDisplay();
+        repeatMenu.classList.add('hidden');
+
+        document.querySelectorAll('.repeat-opt').forEach(b => b.classList.remove('bg-emerald-600', 'text-white'));
+        e.target.classList.add('bg-emerald-600', 'text-white');
+      });
+    });
+
+    function updateRepeatDisplay() {
+      const limitStr = currentRepeatLimit === 999 ? '∞' : `${currentRepeatLimit}`;
+      document.getElementById('repeatText').innerText = `Lặp: ${limitStr}`;
+      document.getElementById('repeatProgress').innerText = `(${currentRepeat}/${limitStr})`;
+    }
+
+    document.querySelectorAll('.speed-opt').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentSpeed = parseFloat(e.target.getAttribute('data-speed'));
+        document.getElementById('speedText').innerText = `${currentSpeed}x`;
+        if (audioPlayer) audioPlayer.playbackRate = currentSpeed;
+        speedMenu.classList.add('hidden');
+
+        document.querySelectorAll('.speed-opt').forEach(b => b.classList.remove('bg-cyan-600', 'text-white'));
+        e.target.classList.add('bg-cyan-600', 'text-white');
+      });
+    });
+
+    startSelect.addEventListener('change', (e) => {
+      stopPlayback();
+      startIdx = parseInt(e.target.value);
+      if (endIdx < startIdx) {
+        endIdx = startIdx;
+        endSelect.value = endIdx;
+      }
+      currentLessonIdx = startIdx;
+      renderLesson(currentLessonIdx);
+      currentRepeat = 0;
+      updateRepeatDisplay();
+    });
+
+    endSelect.addEventListener('change', (e) => {
+      stopPlayback();
+      endIdx = parseInt(e.target.value);
+      if (endIdx < startIdx) {
+        startIdx = endIdx;
+        startSelect.value = startIdx;
+      }
+      currentLessonIdx = startIdx;
+      renderLesson(currentLessonIdx);
+      currentRepeat = 0;
+      updateRepeatDisplay();
+    });
+
+    const voiceBtn = document.getElementById('voiceToggleBtn');
+    voiceBtn.addEventListener('click', () => {
+      stopPlayback();
+      if (currentMode === 'mp3') {
+        currentMode = 'ai';
+        voiceBtn.className = "flex-1 py-1 px-2 rounded-lg bg-purple-700 hover:bg-purple-600 text-white font-bold text-xs flex items-center justify-center gap-1 border border-purple-600 transition shadow";
+        document.getElementById('voiceIcon').className = "fa-solid fa-robot text-[11px]";
+        document.getElementById('voiceText').innerText = "AI Speech";
+      } else {
+        currentMode = 'mp3';
+        voiceBtn.className = "flex-1 py-1 px-2 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1 border border-emerald-600 transition shadow";
+        document.getElementById('voiceIcon').className = "fa-solid fa-file-audio text-[11px]";
+        document.getElementById('voiceText').innerText = "Gốc (MP3)";
+      }
+    });
+
+    document.getElementById('toggleTransBtn').addEventListener('click', () => {
+      showDetails = !showDetails;
+      document.querySelectorAll('.trans-box').forEach(el => el.classList.toggle('hidden', !showDetails));
+      document.getElementById('toggleTransBtn').classList.toggle('bg-emerald-900', !showDetails);
+    });
+
+    document.getElementById('playBtn').addEventListener('click', () => {
+      if (isPlaying) {
+        stopPlayback();
+      } else {
+        isPlaying = true;
+        document.getElementById('playIcon').className = "fa-solid fa-pause text-xs";
+        document.getElementById('playText').innerText = "Tạm Dừng";
+
+        if (currentLessonIdx < startIdx || currentLessonIdx > endIdx) {
+          currentLessonIdx = startIdx;
+          renderLesson(currentLessonIdx);
+        }
+        currentRepeat = 0;
+        updateRepeatDisplay();
+        playCurrentLesson();
+      }
+    });
+
+    function stopPlayback() {
+      isPlaying = false;
+      if (audioPlayer) { audioPlayer.pause(); audioPlayer.currentTime = 0; }
+      if (synth) synth.cancel();
+      currentUtterance = null;
+      document.getElementById('playIcon').className = "fa-solid fa-play text-xs";
+      document.getElementById('playText').innerText = "Phát Theo Dải";
+      document.querySelectorAll('.sentence-row').forEach(el => el.classList.remove('active-sentence'));
+    }
+
+    function handleLessonFinished() {
+      if (!isPlaying) return;
+
+      currentRepeat++;
+      updateRepeatDisplay();
+
+      if (currentRepeat < currentRepeatLimit) {
+        setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 400);
+      } else {
+        currentRepeat = 0;
+        updateRepeatDisplay();
+
+        if (currentLessonIdx < endIdx) {
+          currentLessonIdx++;
+          renderLesson(currentLessonIdx);
+          setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 600);
+        } else {
+          if (currentRepeatLimit === 999) {
+            currentLessonIdx = startIdx;
+            renderLesson(currentLessonIdx);
+            setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 800);
+          } else {
+            stopPlayback();
+          }
+        }
+      }
+    }
+
+    function playCurrentLesson() {
+      if (!isPlaying) return;
+      if (currentMode === 'mp3') {
+        playMp3();
+      } else {
+        playAi(0);
+      }
+    }
+
+    function playMp3() {
+      audioPlayer.src = LESSONS_DATA[currentLessonIdx].mp3Url;
+      audioPlayer.playbackRate = currentSpeed;
+      
+      audioPlayer.play().catch(() => {
+        voiceBtn.click();
+        playCurrentLesson();
+      });
+
+      audioPlayer.onended = () => {
+        handleLessonFinished();
+      };
+    }
+
+    function playAi(sIdx) {
+      if (!synth || !isPlaying) return;
+      const item = LESSONS_DATA[currentLessonIdx];
+
+      if (!item.sentences || sIdx >= item.sentences.length) {
+        handleLessonFinished();
+        return;
+      }
+
+      document.querySelectorAll('.sentence-row').forEach(el => el.classList.remove('active-sentence'));
+      const row = document.getElementById(`sent-${sIdx}`);
+      if (row) row.classList.add('active-sentence');
+
+      synth.cancel();
+      if (synth.paused) synth.resume();
+
+      currentUtterance = new SpeechSynthesisUtterance(item.sentences[sIdx].en);
+      currentUtterance.lang = 'en-US';
+      currentUtterance.rate = currentSpeed;
+      
+      const v = getEnVoice();
+      if (v) currentUtterance.voice = v;
+
+      currentUtterance.onend = () => {
+        if (isPlaying) setTimeout(() => playAi(sIdx + 1), 350);
+      };
+      currentUtterance.onerror = () => {
+        if (isPlaying) setTimeout(() => playAi(sIdx + 1), 350);
+      };
+
+      synth.speak(currentUtterance);
+    }
+
+    window.playSingleSentence = function(text, sIdx) {
+      stopPlayback();
+      if (!synth) return;
+      document.querySelectorAll('.sentence-row').forEach(el => el.classList.remove('active-sentence'));
+      const row = document.getElementById(`sent-${sIdx}`);
+      if (row) row.classList.add('active-sentence');
+      
+      synth.cancel();
+      if (synth.paused) synth.resume();
+
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-US';
+      currentUtterance.rate = currentSpeed;
+      
+      const v = getEnVoice();
+      if (v) currentUtterance.voice = v;
+
+      currentUtterance.onend = () => row.classList.remove('active-sentence');
+      currentUtterance.onerror = () => row.classList.remove('active-sentence');
+
+      synth.speak(currentUtterance);
+    };
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentLessonIdx > startIdx) {
+        stopPlayback();
+        currentLessonIdx--;
+        renderLesson(currentLessonIdx);
+        currentRepeat = 0;
+        updateRepeatDisplay();
+      }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentLessonIdx < endIdx) {
+        stopPlayback();
+        currentLessonIdx++;
+        renderLesson(currentLessonIdx);
+        currentRepeat = 0;
+        updateRepeatDisplay();
+      }
+    });
+
+    initLessonSelectors();
+    renderLesson(startIdx);
+    updateRepeatDisplay();
+  </script>
+</body>
+</html>

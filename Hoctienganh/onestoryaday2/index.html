@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>One Story A Day 2 - Vandonstay Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Thanh điều hướng tích hợp chuẩn bên trong app container */
+    .vandon-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px;
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      flex-shrink: 0;
+      z-index: 40;
+    }
+    .vandon-nav-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .vandon-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-study {
+      background: #1e293b;
+      color: #38bdf8;
+      border: 1px solid #334155;
+    }
+    .btn-study:hover {
+      background: #334155;
+      color: #7dd3fc;
+    }
+    .btn-villa {
+      background: transparent;
+      color: #94a3b8;
+    }
+    .btn-villa:hover {
+      color: #f1f5f9;
+    }
+    .btn-shopee {
+      background: rgba(217, 119, 6, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .btn-shopee:hover {
+      background: rgba(217, 119, 6, 0.3);
+      color: #fef08a;
+    }
+    /* Thanh ruy-băng ưu đãi học liệu */
+    .vandon-promo-ribbon {
+      background: linear-gradient(90deg, #b45309, #c2410c);
+      color: #ffffff;
+      padding: 4px 10px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: system-ui, -apple-system, sans-serif;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+    .vandon-promo-ribbon a {
+      color: #fef08a;
+      font-weight: 700;
+      text-decoration: underline;
+      white-space: nowrap;
+      margin-left: 6px;
+    }
+    @media (max-width: 480px) {
+      .btn-villa-text { display: none; }
+      .promo-text-sub { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+
+    <!-- 1. HEADER HỆ THỐNG VANDONSTAY (NẰM GỌN TRONG APP CONTAINER) -->
+    <div class="vandon-header-bar">
+      <div class="vandon-nav-group">
+        <a href="../index.html" class="vandon-link-btn btn-study" title="Về danh sách các bài học tiếng Anh">
+          <span>←</span> Học Tập
+        </a>
+        <a href="../../index.html" class="vandon-link-btn btn-villa" title="Về trang chủ đặt phòng Villa">
+          <span>🏠</span> <span class="btn-villa-text">Villa</span>
+        </a>
+      </div>
+      <div class="vandon-nav-group">
+        <a href="../../shopeeqn/index.html" class="vandon-link-btn btn-shopee" title="Gian hàng ShopeeQN">
+          <span>🎁</span> ShopeeQN
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. RUY-BĂNG GỢI Ý MUA HÀNG TIẾN TRÌNH -->
+    <aside class="vandon-promo-ribbon">
+      <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        <span>📻</span> <strong>Loa tắm Craven & Bút đọc</strong> <span class="promo-text-sub">giúp bé nghe truyện thụ động</span>
+      </div>
+      <a href="../../shopeeqn/index.html#hoc-tieng-anh">Xem ưu đãi ➔</a>
+    </aside>
+
+    <!-- 3. HEADER BÀI HỌC CỦA ONE STORY A DAY 2 -->
+    <header class="navbar">
+      <div class="brand-badge">
+        <span>STORY</span>
+        <span>A DAY 2</span>
+      </div>
+
+      <div class="nav-selectors">
+        <select id="selectMonth">
+          <option value="01 January">Tháng 1</option>
+          <option value="02 February">Tháng 2</option>
+          <option value="03 March">Tháng 3</option>
+          <option value="04 April">Tháng 4</option>
+          <option value="05 May">Tháng 5</option>
+          <option value="06 June">Tháng 6</option>
+          <option value="07 July">Tháng 7</option>
+          <option value="08 August">Tháng 8</option>
+          <option value="09 September">Tháng 9</option>
+          <option value="10 October">Tháng 10</option>
+          <option value="11 November">Tháng 11</option>
+          <option value="12 December">Tháng 12</option>
+        </select>
+        <select id="selectDay"></select>
+      </div>
+
+      <div class="nav-actions">
+        <button id="btnOpenIndex" class="btn-head" title="Mục lục">📋 Mục lục</button>
+        <button id="btnToggleTrans" class="btn-head" title="Bật/Tắt Dịch & IPA">🔤 Dịch & IPA</button>
+      </div>
+    </header>
+
+    <!-- Khu vực hiển thị chính -->
+    <main class="story-stage">
+      <div class="view-image">
+        <img id="imgDisplay" src="" alt="Story illustration">
+      </div>
+      <div class="view-text">
+        <div id="storyTitle" class="story-heading"></div>
+        <div id="textContent"></div>
+      </div>
+    </main>
+
+    <!-- Thanh công cụ Luyện tập AI -->
+    <div id="aiToolBar" class="ai-toolbar hidden">
+      <span class="lbl-practice">Luyện tập:</span>
+      <button id="btnPracticeCount" class="btn-practice">
+        Đọc <span id="lblCount" class="highlight-num">1 câu</span>
+      </button>
+      <span class="hint-click">(Bấm để tăng số câu)</span>
+    </div>
+
+    <!-- Player Bar điều khiển -->
+    <footer class="player-bar">
+      <button id="btnToggleMode" class="btn-ctrl btn-mode mp3" title="Chuyển chế độ đọc">
+        <span class="icon">🎵</span>
+        <span class="txt">MP3</span>
+      </button>
+
+      <button id="btnPrev" class="btn-ctrl btn-icon-step" title="Bài trước">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" fill="currentColor"/></svg>
+      </button>
+
+      <button id="btnPlay" class="btn-ctrl btn-main-play" title="Phát / Dừng">
+        <svg id="iconPlay" viewBox="0 0 24 24" width="20" height="20"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+        <svg id="iconPause" class="hidden" viewBox="0 0 24 24" width="20" height="20"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor"/></svg>
+      </button>
+
+      <button id="btnNext" class="btn-ctrl btn-icon-step" title="Bài kế tiếp">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" fill="currentColor"/></svg>
+      </button>
+
+      <div class="dropup-box">
+        <button id="btnRepeat" class="btn-ctrl btn-badge" title="Lặp lại">
+          <span class="badge-lbl">Lặp</span>
+          <span id="lblRepeat" class="badge-val">1</span>
+        </button>
+        <div id="menuRepeat" class="dropup-menu hidden">
+          <div class="dropup-item active" data-val="1">Lặp 1 lần</div>
+          <div class="dropup-item" data-val="2">Lặp 2 lần</div>
+          <div class="dropup-item" data-val="3">Lặp 3 lần</div>
+          <div class="dropup-item" data-val="5">Lặp 5 lần</div>
+          <div class="dropup-item" data-val="999">Lặp vô tận (∞)</div>
+        </div>
+      </div>
+
+      <div class="dropup-box">
+        <button id="btnSpeed" class="btn-ctrl btn-badge" title="Tốc độ đọc">
+          <span class="badge-lbl">Tốc</span>
+          <span id="lblSpeed" class="badge-val">1.0x</span>
+        </button>
+        <div id="menuSpeed" class="dropup-menu hidden">
+          <div class="dropup-item" data-val="0.75">0.75x (Chậm)</div>
+          <div class="dropup-item active" data-val="1.0">1.0x (Chuẩn)</div>
+          <div class="dropup-item" data-val="1.25">1.25x (Nhanh)</div>
+        </div>
+      </div>
+    </footer>
+
+    <audio id="audioElement" preload="auto"></audio>
+
+    <!-- Modal Mục Lục Toàn Cảnh -->
+    <div id="indexModal" class="modal-backdrop hidden">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 id="modalTitle">Mục Lục 12 Tháng</h3>
+          <button id="btnCloseIndex" class="btn-close">&times;</button>
+        </div>
+        <div id="indexListContainer" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nạp dữ liệu các tháng -->
+  <script src="data_01.js"></script>
+  <script src="data_02.js"></script>
+  <script src="data_03.js"></script>
+  <script src="data_04.js"></script>
+  <script src="data_05.js"></script>
+  <script src="data_06.js"></script>
+  <script src="data_07.js"></script>
+  <script src="data_08.js"></script>
+  <script src="data_09.js"></script>
+  <script src="data_10.js"></script>
+  <script src="data_11.js"></script>
+  <script src="data_12.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
