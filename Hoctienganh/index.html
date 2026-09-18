@@ -17,7 +17,7 @@
   <!-- 1. THANH HEADER ĐIỀU HƯỚNG CHÍNH -->
   <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 h-16 flex items-center px-4 sm:px-8 justify-between sticky top-0 z-40 shadow-sm">
     <div class="flex items-center gap-2">
-      <a href="./index.html" class="text-xl font-black text-emerald-700 tracking-tight flex items-center gap-1.5">
+      <a href="index.html" class="text-xl font-black text-emerald-700 tracking-tight flex items-center gap-1.5">
         <i class="fa-solid fa-graduation-cap"></i> VANDON<span class="text-slate-900">ENGLISH</span>
       </a>
       <span class="hidden md:inline text-xs font-semibold text-slate-400 border-l border-slate-300 pl-2">
@@ -39,16 +39,14 @@
     </div>
   </header>
 
-  <!-- 2. BANNER THIẾT KẾ MỚI CHO VANDONENGLISH -->
+  <!-- 2. BANNER GIỚI THIỆU -->
   <section class="relative bg-gradient-to-br from-emerald-900 via-teal-950 to-slate-950 text-white overflow-hidden py-12 sm:py-16 border-b border-emerald-800/40">
-    <!-- Họa tiết trang trí nền -->
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#34d399_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <div class="absolute -right-16 -bottom-16 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <!-- Nội dung giới thiệu bên trái (7 cột) -->
         <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold tracking-wide uppercase">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -63,7 +61,6 @@
             Hệ thống webapp học tiếng Anh tương tác đa giác quan dành cho phụ huynh và các bé. Tích hợp audio chuẩn giọng bản ngữ, phương pháp Crazy English cuồng nhiệt và chuỗi truyện One Story A Day sinh động mỗi ngày.
           </p>
 
-          <!-- 3 Thẻ điểm nhấn chính -->
           <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-center">
             <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
               <i class="fa-solid fa-volume-high text-emerald-400 text-base mb-1"></i>
@@ -83,7 +80,6 @@
           </div>
         </div>
 
-        <!-- Ảnh minh họa & liên kết chuyển đổi bên phải (5 cột) -->
         <div class="lg:col-span-5 flex flex-col items-center">
           <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border-2 border-emerald-500/30 group">
             <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" 
@@ -100,7 +96,7 @@
     </div>
   </section>
 
-  <!-- 3. THANH THÔNG BÁO TIỆN ÍCH SHOPEE DỤNG CỤ HỌC TẬP -->
+  <!-- 3. BANNER SHOPEE -->
   <div class="max-w-6xl mx-auto px-4 -mt-5 relative z-20 w-full">
     <div class="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl shadow-xl p-3.5 sm:p-4 text-white flex flex-col sm:flex-row items-center justify-between gap-3">
       <div class="flex items-center gap-3 text-center sm:text-left">
@@ -116,14 +112,14 @@
     </div>
   </div>
 
-  <!-- 4. DANH SÁCH 4 WEBAPP GIÁO TRÌNH HIỆN CÓ -->
+  <!-- 4. DANH SÁCH 4 GIÁO TRÌNH (TỐI ƯU ĐIỀU HƯỚNG BẢO ĐẢM 100%) -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full space-y-6">
     <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
       <div>
         <h2 class="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight flex items-center gap-2">
           <span>📖</span> Danh Sách Giáo Trình Tương Tác
         </h2>
-        <p class="text-xs text-slate-500 mt-0.5">Bấm vào từng ô để mở trực tiếp ứng dụng luyện tập tương ứng.</p>
+        <p class="text-xs text-slate-500 mt-0.5">Bấm vào bất kỳ đâu trên ô để mở ứng dụng tương ứng.</p>
       </div>
       <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
         4 Webapp Sẵn Sàng
@@ -132,9 +128,9 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
       
-      <!-- Căn 1: 900 Câu Cho Mẹ & Bé -->
-      <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-        <a href="./900cau/index.html" class="block cursor-pointer">
+      <!-- Ô 1: 900 CÂU CHO MẸ & BÉ -->
+      <a href="900cau/index.html" onclick="window.location.href='900cau/index.html'" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <div>
           <div class="relative aspect-video w-full bg-slate-100 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" 
                  alt="900 Câu Giao Tiếp" 
@@ -155,17 +151,17 @@
               <span class="bg-slate-100 px-2 py-0.5 rounded">Audio MP3</span>
             </div>
           </div>
-        </a>
-        <div class="p-3 pt-0">
-          <a href="./900cau/index.html" class="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
-            Mở bài học 900 câu ➔
-          </a>
         </div>
-      </div>
+        <div class="p-3 pt-0">
+          <div class="w-full py-2 bg-emerald-600 group-hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
+            Mở bài học 900 câu ➔
+          </div>
+        </div>
+      </a>
 
-      <!-- Căn 2: 50 Bài Văn Crazy English -->
-      <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-        <a href="./50lessonCrazy/index.html" class="block cursor-pointer">
+      <!-- Ô 2: 50 BÀI VĂN CRAZY ENGLISH -->
+      <a href="50lessonCrazy/index.html" onclick="window.location.href='50lessonCrazy/index.html'" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <div>
           <div class="relative aspect-video w-full bg-slate-100 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" 
                  alt="Crazy English" 
@@ -186,17 +182,17 @@
               <span class="bg-slate-100 px-2 py-0.5 rounded">Listening</span>
             </div>
           </div>
-        </a>
-        <div class="p-3 pt-0">
-          <a href="./50lessonCrazy/index.html" class="w-full py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
-            Mở bài học Crazy ➔
-          </a>
         </div>
-      </div>
+        <div class="p-3 pt-0">
+          <div class="w-full py-2 bg-rose-600 group-hover:bg-rose-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
+            Mở bài học Crazy ➔
+          </div>
+        </div>
+      </a>
 
-      <!-- Căn 3: One Story A Day Tập 1 -->
-      <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-        <a href="./onestoryaday1/index.html" class="block cursor-pointer">
+      <!-- Ô 3: ONE STORY A DAY TẬP 1 -->
+      <a href="onestoryaday1/index.html" onclick="window.location.href='onestoryaday1/index.html'" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <div>
           <div class="relative aspect-video w-full bg-slate-100 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" 
                  alt="One Story A Day 1" 
@@ -217,17 +213,17 @@
               <span class="bg-slate-100 px-2 py-0.5 rounded">12 Tháng</span>
             </div>
           </div>
-        </a>
-        <div class="p-3 pt-0">
-          <a href="./onestoryaday1/index.html" class="w-full py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
-            Mở bài học Tập 1 ➔
-          </a>
         </div>
-      </div>
+        <div class="p-3 pt-0">
+          <div class="w-full py-2 bg-amber-600 group-hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
+            Mở bài học Tập 1 ➔
+          </div>
+        </div>
+      </a>
 
-      <!-- Căn 4: One Story A Day Tập 2 -->
-      <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-        <a href="./onestoryaday2/index.html" class="block cursor-pointer">
+      <!-- Ô 4: ONE STORY A DAY TẬP 2 -->
+      <a href="onestoryaday2/index.html" onclick="window.location.href='onestoryaday2/index.html'" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <div>
           <div class="relative aspect-video w-full bg-slate-100 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80" 
                  alt="One Story A Day 2" 
@@ -248,18 +244,18 @@
               <span class="bg-slate-100 px-2 py-0.5 rounded">Audio HD</span>
             </div>
           </div>
-        </a>
-        <div class="p-3 pt-0">
-          <a href="./onestoryaday2/index.html" class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
-            Mở bài học Tập 2 ➔
-          </a>
         </div>
-      </div>
+        <div class="p-3 pt-0">
+          <div class="w-full py-2 bg-blue-600 group-hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1">
+            Mở bài học Tập 2 ➔
+          </div>
+        </div>
+      </a>
 
     </div>
   </main>
 
-  <!-- 5. CHÂN TRANG ĐỒNG BỘ -->
+  <!-- 5. FOOTER -->
   <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-xs mt-auto font-sans text-center">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© 2026 VandonEnglish - Nền tảng học tiếng Anh tương tác trực tuyến.</p>

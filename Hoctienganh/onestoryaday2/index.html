@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>One Story A Day 2 - Vandonstay Academy</title>
+  <title>One Story A Day (Tập 2) - Vandonstay Academy</title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* Thanh điều hướng tích hợp chuẩn bên trong app container */
@@ -38,18 +38,20 @@
     .btn-study {
       background: #1e293b;
       color: #38bdf8;
-      border: 1px solid #334155;
+      border: 1px solid #0284c7;
     }
     .btn-study:hover {
-      background: #334155;
-      color: #7dd3fc;
+      background: #0369a1;
+      color: #bae6fd;
     }
     .btn-villa {
-      background: transparent;
+      background: #1e293b;
       color: #94a3b8;
+      border: 1px solid #334155;
     }
     .btn-villa:hover {
       color: #f1f5f9;
+      background: #334155;
     }
     .btn-shopee {
       background: rgba(217, 119, 6, 0.15);
@@ -81,7 +83,6 @@
       margin-left: 6px;
     }
     @media (max-width: 480px) {
-      .btn-villa-text { display: none; }
       .promo-text-sub { display: none; }
     }
   </style>
@@ -89,19 +90,19 @@
 <body>
   <div class="main-wrapper">
 
-    <!-- 1. HEADER HỆ THỐNG VANDONSTAY (NẰM GỌN TRONG APP CONTAINER) -->
+    <!-- 1. HEADER HỆ THỐNG VANDONSTAY (3 NÚT LIÊN KẾT) -->
     <div class="vandon-header-bar">
       <div class="vandon-nav-group">
-        <a href="../index.html" class="vandon-link-btn btn-study" title="Về danh sách các bài học tiếng Anh">
-          <span>←</span> Học Tập
+        <a href="../index.html" class="vandon-link-btn btn-study" title="Về danh sách giáo trình tiếng Anh">
+          <span>📚</span> Vandon English
         </a>
-        <a href="../../index.html" class="vandon-link-btn btn-villa" title="Về trang chủ đặt phòng Villa">
-          <span>🏠</span> <span class="btn-villa-text">Villa</span>
+        <a href="../../index.html" class="vandon-link-btn btn-villa" title="Về trang đặt phòng Villa Sonasea">
+          <span>🏨</span> <span class="btn-villa-text">Villa Sonasea</span>
         </a>
       </div>
       <div class="vandon-nav-group">
-        <a href="../../shopeeqn/index.html" class="vandon-link-btn btn-shopee" title="Gian hàng ShopeeQN">
-          <span>🎁</span> ShopeeQN
+        <a href="../../shopeeqn/index.html" class="vandon-link-btn btn-shopee" title="Gian hàng thiết bị Shopee QN">
+          <span>🎁</span> Shopee QN
         </a>
       </div>
     </div>
@@ -109,12 +110,12 @@
     <!-- 2. RUY-BĂNG GỢI Ý MUA HÀNG TIẾN TRÌNH -->
     <aside class="vandon-promo-ribbon">
       <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-        <span>📻</span> <strong>Loa tắm Craven & Bút đọc</strong> <span class="promo-text-sub">giúp bé nghe truyện thụ động</span>
+        <span>📻</span> <strong>Loa tắm Craven & Bút đọc</strong> <span class="promo-text-sub">giúp bé nghe thụ động</span>
       </div>
       <a href="../../shopeeqn/index.html#hoc-tieng-anh">Xem ưu đãi ➔</a>
     </aside>
 
-    <!-- 3. HEADER BÀI HỌC CỦA ONE STORY A DAY 2 -->
+    <!-- 3. HEADER BÀI HỌC CỦA ONE STORY A DAY -->
     <header class="navbar">
       <div class="brand-badge">
         <span>STORY</span>
@@ -173,16 +174,16 @@
       </button>
 
       <button id="btnPrev" class="btn-ctrl btn-icon-step" title="Bài trước">
-        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" fill="currentColor"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
       </button>
 
       <button id="btnPlay" class="btn-ctrl btn-main-play" title="Phát / Dừng">
-        <svg id="iconPlay" viewBox="0 0 24 24" width="20" height="20"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-        <svg id="iconPause" class="hidden" viewBox="0 0 24 24" width="20" height="20"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor"/></svg>
+        <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="iconPause" class="hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
       </button>
 
       <button id="btnNext" class="btn-ctrl btn-icon-step" title="Bài kế tiếp">
-        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" fill="currentColor"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
       </button>
 
       <div class="dropup-box">
@@ -205,7 +206,7 @@
           <span id="lblSpeed" class="badge-val">1.0x</span>
         </button>
         <div id="menuSpeed" class="dropup-menu hidden">
-          <div class="dropup-item" data-val="0.75">0.75x (Chậm)</div>
+          <div class="dropup-item data-val="0.75">0.75x (Chậm)</div>
           <div class="dropup-item active" data-val="1.0">1.0x (Chuẩn)</div>
           <div class="dropup-item" data-val="1.25">1.25x (Nhanh)</div>
         </div>
@@ -218,7 +219,7 @@
     <div id="indexModal" class="modal-backdrop hidden">
       <div class="modal-box">
         <div class="modal-header">
-          <h3 id="modalTitle">Mục Lục 12 Tháng</h3>
+          <h3 id="modalTitle">Mục Lục 12 Tháng - Tập 2</h3>
           <button id="btnCloseIndex" class="btn-close">&times;</button>
         </div>
         <div id="indexListContainer" class="modal-body"></div>
@@ -226,7 +227,7 @@
     </div>
   </div>
 
-  <!-- Nạp dữ liệu các tháng -->
+  <!-- Dữ liệu bài học Tập 2 -->
   <script src="data_01.js"></script>
   <script src="data_02.js"></script>
   <script src="data_03.js"></script>

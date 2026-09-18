@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>VANDON STAY - Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Sonasea Vân Đồn</title>
-  <meta name="description" content="Hệ thống 20 biệt thự nghỉ dưỡng Sonasea Vân Đồn ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ sân vườn." />
+  <meta name="description" content="Hệ thống 20 biệt thự nghỉ dưỡng Sonasea Vân Đồn Harbor City ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ." />
 
   <style>
     :root {
@@ -13,24 +13,16 @@
       --primary-light: #ecfdf5;
       --accent: #f59e0b;
       --accent-light: #fffbeb;
+      --danger: #dc2626;
+      --danger-light: #fef2f2;
       --text: #0f172a;
       --muted: #64748b;
       --border: #e2e8f0;
       --radius: 10px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    }
-
-    body {
-      background-color: #f8fafc;
-      color: var(--text);
-      line-height: 1.5;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    body { background-color: #f8fafc; color: var(--text); line-height: 1.5; }
 
     /* ================= 1. HEADER ================= */
     .header-bar {
@@ -39,9 +31,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     }
-
     .header-content {
       max-width: 1300px;
       margin: 0 auto;
@@ -51,7 +42,6 @@
       align-items: center;
       gap: 12px;
     }
-
     .brand-box {
       display: inline-flex;
       align-items: center;
@@ -62,15 +52,8 @@
       font-weight: 800;
       white-space: nowrap;
     }
-
     .brand-box span { color: var(--text); }
-
-    .menu-box {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
+    .menu-box { display: flex; align-items: center; gap: 8px; }
     .nav-btn {
       display: inline-flex;
       align-items: center;
@@ -83,24 +66,19 @@
       text-decoration: none;
       white-space: nowrap;
     }
-
     .btn-english { background-color: var(--primary-light); color: var(--primary-dark); border: 1.5px solid #a7f3d0; }
     .btn-shopee { background-color: var(--accent-light); color: #b45309; border: 1.5px solid #fde68a; }
     .btn-call { background-color: var(--primary); color: #fff; border: 1.5px solid var(--primary); }
 
     @media screen and (max-width: 768px) {
-      .header-content {
-        flex-direction: column !important;
-        padding: 8px 10px !important;
-        gap: 6px !important;
-      }
+      .header-content { flex-direction: column !important; padding: 8px 10px !important; gap: 6px !important; }
       .brand-box { width: 100% !important; justify-content: center !important; font-size: 17px !important; }
       .menu-box { width: 100% !important; justify-content: space-between !important; gap: 4px !important; }
       .menu-box .nav-btn { flex: 1 1 0 !important; padding: 6px 2px !important; font-size: 11px !important; letter-spacing: -0.3px !important; }
       .menu-box .btn-call { flex: 0 0 54px !important; }
     }
 
-    /* ================= 2. HERO & 3 NÚT LIÊN HỆ TRÊN 1 HÀNG ================= */
+    /* ================= 2. HERO BANNER ================= */
     .hero {
       position: relative;
       background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.78)),
@@ -109,7 +87,6 @@
       text-align: center;
       padding: 36px 16px 60px;
     }
-
     .badge-loc {
       display: inline-block;
       background-color: var(--primary);
@@ -120,20 +97,8 @@
       letter-spacing: 0.5px;
       margin-bottom: 10px;
     }
-
-    .hero h1 {
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-
-    .hero p {
-      max-width: 620px;
-      margin: 0 auto 18px;
-      font-size: 13px;
-      color: #cbd5e1;
-    }
-
+    .hero h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+    .hero p { max-width: 620px; margin: 0 auto 18px; font-size: 13px; color: #cbd5e1; }
     .hero-actions-row {
       display: flex;
       justify-content: center;
@@ -142,7 +107,6 @@
       max-width: 600px;
       margin: 0 auto;
     }
-
     .action-btn {
       flex: 1 1 0;
       display: inline-flex;
@@ -157,7 +121,6 @@
       color: #ffffff;
       white-space: nowrap;
     }
-
     .act-call { background-color: var(--primary); }
     .act-zalo { background-color: #0284c7; }
     .act-vip { background-color: #7c3aed; }
@@ -167,19 +130,18 @@
       .action-btn { font-size: 11.5px; padding: 8px 4px; }
     }
 
-    /* ================= 3. KHUNG TRA CỨU 1 HÀNG DUY NHẤT ================= */
+    /* ================= 3. KHUNG TRA CỨU PHÒNG ================= */
     .filter-wrap {
-      max-width: 740px;
-      margin: -28px auto 35px;
+      max-width: 760px;
+      margin: -28px auto 30px;
       padding: 0 12px;
       position: relative;
       z-index: 10;
     }
-
     .filter-inline-compact {
       background: #ffffff;
       border-radius: 999px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
       padding: 6px 10px 6px 18px;
       border: 1px solid var(--border);
       display: flex !important;
@@ -187,22 +149,19 @@
       align-items: center !important;
       gap: 12px;
     }
-
     .filter-col {
       flex: 1 1 0;
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
-
     .filter-col label {
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.3px;
     }
-
     .filter-col input {
       width: 100%;
       border: none;
@@ -213,7 +172,6 @@
       background: transparent;
       padding: 2px 0;
     }
-
     .btn-check-compact {
       background-color: var(--primary);
       color: #ffffff;
@@ -225,11 +183,6 @@
       cursor: pointer;
       white-space: nowrap;
       flex-shrink: 0;
-      transition: background-color 0.15s ease;
-    }
-
-    .btn-check-compact:active {
-      background-color: var(--primary-dark);
     }
 
     @media screen and (max-width: 500px) {
@@ -240,54 +193,86 @@
       .btn-check-compact { padding: 8px 12px; font-size: 11.5px; }
     }
 
-    /* ================= 4. LƯỚI 20 VILLA (4 CỘT TRÊN MÁY TÍNH) ================= */
+    /* Thanh thông báo kết quả kiểm tra */
+    .status-summary {
+      max-width: 1300px;
+      margin: 0 auto 16px;
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .status-summary strong { color: var(--text); }
+    .status-badges { display: flex; gap: 10px; font-size: 12px; }
+    .badge-green { color: var(--primary); }
+    .badge-red { color: var(--danger); }
+
+    /* ================= 4. LƯỚI 20 VILLA (4 CỘT) ================= */
     .villa-container {
       max-width: 1300px;
       margin: 0 auto 50px;
       padding: 0 16px;
     }
-
     .section-title {
       text-align: center;
       font-size: 20px;
       font-weight: 800;
-      margin-bottom: 22px;
+      margin-bottom: 16px;
     }
-
     .villa-grid-4 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
-
-    @media screen and (max-width: 1024px) {
-      .villa-grid-4 { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media screen and (max-width: 600px) {
-      .villa-grid-4 { grid-template-columns: 1fr; }
-    }
+    @media screen and (max-width: 1024px) { .villa-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 600px) { .villa-grid-4 { grid-template-columns: 1fr; } }
 
     .villa-item {
       background: #ffffff;
       border-radius: var(--radius);
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: all 0.2s ease;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
     }
+    .villa-item:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 
-    .villa-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /* Trạng thái hết phòng (Đỏ) */
+    .villa-item.is-booked {
+      border-color: #fca5a5;
+      background-color: #fffafb;
     }
+    .villa-item.is-booked .item-thumb { filter: grayscale(20%); }
 
     .item-thumb {
-      height: 160px;
+      height: 165px;
       background: #e2e8f0 center/cover no-repeat;
       position: relative;
     }
+
+    /* Tag trạng thái trên ảnh */
+    .tag-status {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .status-available-tag { background-color: var(--primary); }
+    .status-booked-tag { background-color: var(--danger); }
 
     .thumb-hint {
       position: absolute;
@@ -301,25 +286,9 @@
       font-weight: 600;
     }
 
-    .item-body {
-      padding: 12px;
-    }
-
-    .item-name {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: var(--text);
-    }
-
-    .item-desc {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 8px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+    .item-body { padding: 12px; flex: 1; display: flex; flex-direction: column; }
+    .item-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .item-desc { font-size: 12px; color: var(--muted); margin-bottom: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
     .item-foot {
       display: flex;
@@ -327,21 +296,21 @@
       align-items: center;
       border-top: 1px solid var(--border);
       padding-top: 8px;
+      margin-top: auto;
     }
+    .item-price { font-size: 13px; font-weight: 800; color: #e11d48; }
 
-    .item-price {
-      font-size: 13px;
-      font-weight: 800;
-      color: #e11d48;
-    }
-
-    .btn-view-album {
+    .btn-action-status {
       font-size: 11.5px;
       font-weight: 700;
-      color: var(--primary);
+      padding: 5px 10px;
+      border-radius: 6px;
+      text-decoration: none;
     }
+    .btn-book-now { background-color: var(--primary-light); color: var(--primary); }
+    .btn-booked-out { background-color: var(--danger-light); color: var(--danger); cursor: not-allowed; }
 
-    /* ================= 5. POPUP ALBUM VÀ VUỐT DI ĐỘNG ================= */
+    /* ================= 5. MODAL ALBUM ================= */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -353,7 +322,6 @@
       padding: 14px;
       touch-action: none;
     }
-
     .modal-box {
       background: #0f172a;
       border-radius: var(--radius);
@@ -363,7 +331,6 @@
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
       position: relative;
     }
-
     .modal-head {
       display: flex;
       justify-content: space-between;
@@ -372,18 +339,8 @@
       color: #fff;
       border-bottom: 1px solid #334155;
     }
-
     .modal-title { font-size: 15px; font-weight: 700; }
-    .close-btn {
-      background: transparent;
-      border: none;
-      color: #94a3b8;
-      font-size: 28px;
-      line-height: 1;
-      cursor: pointer;
-    }
-    .close-btn:hover { color: #fff; }
-
+    .close-btn { background: transparent; border: none; color: #94a3b8; font-size: 28px; line-height: 1; cursor: pointer; }
     .modal-view {
       position: relative;
       background: #020617;
@@ -394,19 +351,8 @@
       user-select: none;
       overflow: hidden;
     }
-
-    @media screen and (max-width: 600px) {
-      .modal-view { height: 280px; }
-    }
-
-    .modal-view img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      pointer-events: none;
-      transition: opacity 0.15s ease;
-    }
-
+    @media screen and (max-width: 600px) { .modal-view { height: 280px; } }
+    .modal-view img { max-width: 100%; max-height: 100%; object-fit: contain; pointer-events: none; transition: opacity 0.15s ease; }
     .nav-arrow {
       position: absolute;
       top: 50%;
@@ -424,10 +370,8 @@
       justify-content: center;
       z-index: 10;
     }
-    .nav-arrow:hover { background: rgba(5, 150, 105, 0.9); }
     .arrow-prev { left: 12px; }
     .arrow-next { right: 12px; }
-
     .modal-caption {
       padding: 10px 16px;
       color: #cbd5e1;
@@ -437,22 +381,16 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    .modal-swipe-hint {
-      color: #94a3b8;
-      font-size: 11px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- 1. HEADER (ĐÃ GẮN FILE INDEX.HTML ĐÍCH) -->
+  <!-- 1. HEADER -->
   <header class="header-bar">
     <div class="header-content">
       <a href="./" class="brand-box">
         🏨 VANDON <span>STAY</span>
       </a>
-
       <nav class="menu-box">
         <a href="./Hoctienganh/index.html" class="nav-btn btn-english">📚 VANDON ENGLISH</a>
         <a href="./shopeeqn/index.html" class="nav-btn btn-shopee">🎁 SHOPEE QN</a>
@@ -461,7 +399,7 @@
     </div>
   </header>
 
-  <!-- 2. HERO BANNER & 3 NÚT LIÊN HỆ TRÊN 1 HÀNG -->
+  <!-- 2. HERO BANNER -->
   <section class="hero">
     <div class="badge-loc">SONASEA VÂN ĐỒN HARBOR CITY</div>
     <h1>Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Biển</h1>
@@ -474,32 +412,41 @@
     </div>
   </section>
 
-  <!-- 3. KHUNG TRA CỨU 1 HÀNG DUY NHẤT: NHẬN PHÒNG - TRẢ PHÒNG - KIỂM TRA -->
+  <!-- 3. KHUNG TRA CỨU 1 HÀNG -->
   <div class="filter-wrap">
-    <form class="filter-inline-compact" onsubmit="event.preventDefault(); alert('Đang kiểm tra tình trạng phòng...');">
+    <form class="filter-inline-compact" onsubmit="handleSearch(event)">
       <div class="filter-col">
         <label for="checkin">Nhận phòng</label>
-        <input type="date" id="checkin" />
+        <input type="date" id="checkin" required />
       </div>
 
       <div class="filter-col">
         <label for="checkout">Trả phòng</label>
-        <input type="date" id="checkout" />
+        <input type="date" id="checkout" required />
       </div>
 
       <button type="submit" class="btn-check-compact">🔍 Kiểm tra</button>
     </form>
   </div>
 
-  <!-- 4. LƯỚI 20 VILLA (4 CỘT TRÊN MÁY TÍNH) -->
+  <!-- 4. LƯỚI 20 VILLA -->
   <section class="villa-container">
     <h2 class="section-title">🏡 DANH SÁCH 20 CĂN BIỆT THỰ NGHỈ DƯỠNG</h2>
+    
+    <div class="status-summary">
+      <div id="searchMessage">Đang hiển thị: <strong>Hiện trạng phòng hôm nay</strong></div>
+      <div class="status-badges">
+        <span class="badge-green">● Xanh: Còn phòng</span>
+        <span class="badge-red">● Đỏ: Đã kín lịch</span>
+      </div>
+    </div>
+
     <div class="villa-grid-4" id="villaGrid"></div>
   </section>
 
-  <!-- 5. POPUP ALBUM ẢNH (HỖ TRỢ VUỐT CẢM ỨNG DI ĐỘNG) -->
+  <!-- 5. POPUP ALBUM -->
   <div id="imageModal" class="modal-overlay" onclick="closeOnOutside(event)">
-    <div class="modal-box" id="modalBox">
+    <div class="modal-box">
       <div class="modal-head">
         <div class="modal-title" id="modalTitle">Tên Villa</div>
         <button class="close-btn" onclick="closeAlbum()">&times;</button>
@@ -513,7 +460,7 @@
 
       <div class="modal-caption">
         <span id="modalCounter">Đang tải ảnh...</span>
-        <span class="modal-swipe-hint">👈 Vuốt ngang để chuyển ảnh 👉</span>
+        <span style="color:#94a3b8; font-size:11px;">👈 Vuốt ngang để đổi ảnh 👉</span>
       </div>
     </div>
   </div>
@@ -524,66 +471,120 @@
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
     const toYMD = (d) => d.toISOString().split('T')[0];
-    document.getElementById('checkin').value = toYMD(today);
-    document.getElementById('checkout').value = toYMD(tomorrow);
 
-    // ================= DANH SÁCH 20 TÊN THƯ MỤC CHUẨN TRONG villasonasea =================
+    const inInput = document.getElementById('checkin');
+    const outInput = document.getElementById('checkout');
+    inInput.value = toYMD(today);
+    outInput.value = toYMD(tomorrow);
+    inInput.min = toYMD(today);
+
+    // ================= DANH SÁCH 20 VILLA KÈM LỊCH BẬN =================
+    // bookedDates: mảng các ngày đã có khách (định dạng YYYY-MM-DD). Bạn cập nhật ngày bận tại đây.
     const villas = [
-      { folder: "V2A02", name: "Villa Sonasea V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ full đồ" },
-      { folder: "V2C05A", name: "Villa Sonasea V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn thoáng" },
-      { folder: "V2C06", name: "Villa Sonasea V2C06", desc: "3 PN • Không gian yên tĩnh thư giãn" },
-      { folder: "V2C08A", name: "Villa Sonasea V2C08A", desc: "3 PN • Thiết kế trang nhã ấm cúng" },
-      { folder: "V2D05A", name: "Villa Sonasea V2D05A", desc: "3 PN • Nội thất gỗ cao cấp" },
-      { folder: "V3A09", name: "Villa Sonasea V3A09", desc: "3 PN • Căn góc thoáng đãng" },
-      { folder: "V3A10", name: "Villa Sonasea V3A10", desc: "3 PN • Bể bơi tràn bờ hiện đại" },
-      { folder: "V3H01", name: "Villa Sonasea V3H01", desc: "3 PN • Gần trục đường chính & tiện ích" },
-      { folder: "V3I02", name: "Villa Sonasea V3I02", desc: "3 PN • Sân nướng BBQ riêng biệt" },
-      { folder: "V3I03", name: "Villa Sonasea V3I03", desc: "3 PN • Ban công ngắm cảnh biển" },
-      { folder: "V3J03", name: "Villa Sonasea V3J03", desc: "3 PN • Phong cách Địa Trung Hải" },
-      { folder: "V3K10", name: "Villa Sonasea V3K10", desc: "3 PN • View công viên cây xanh" },
-      { folder: "V3K11", name: "Villa Sonasea V3K11", desc: "4 PN • Không gian sinh hoạt rộng lớn" },
-      { folder: "V3M05", name: "Villa Sonasea V3M05", desc: "4 PN • Bể bơi panorama vô cực" },
-      { folder: "V3M11A", name: "Villa Sonasea V3M11A", desc: "4 PN • View trực diện vịnh Bái Tử Long" },
-      { folder: "V3N01", name: "Villa Sonasea V3N01", desc: "4 PN • Phòng ốc rộng rãi sang trọng" },
-      { folder: "V3N08A", name: "Villa Sonasea V3N08A", desc: "4 PN • Căn góc 2 mặt tiền đắc địa" },
-      { folder: "villa-18", name: "Villa Sonasea No.18 VIP", desc: "5 PN • Đơn lập VIP ven bãi cát" },
-      { folder: "villa-19", name: "Villa Sonasea No.19 VIP", desc: "5 PN • Bể bơi lớn chuẩn gia đình" },
-      { folder: "villa-20", name: "Villa Sonasea No.20 VIP", desc: "5 PN • Nội thất 5 sao đẳng cấp" }
+      { folder: "V2A02", name: "Villa Sonasea V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ full đồ", bookedDates: [toYMD(today)] },
+      { folder: "V2C05A", name: "Villa Sonasea V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn thoáng", bookedDates: [] },
+      { folder: "V2C06", name: "Villa Sonasea V2C06", desc: "3 PN • Không gian yên tĩnh thư giãn", bookedDates: [] },
+      { folder: "V2C08A", name: "Villa Sonasea V2C08A", desc: "3 PN • Thiết kế trang nhã ấm cúng", bookedDates: [toYMD(today)] },
+      { folder: "V2D05A", name: "Villa Sonasea V2D05A", desc: "3 PN • Nội thất gỗ cao cấp", bookedDates: [] },
+      { folder: "V3A09", name: "Villa Sonasea V3A09", desc: "3 PN • Căn góc thoáng đãng", bookedDates: [] },
+      { folder: "V3A10", name: "Villa Sonasea V3A10", desc: "3 PN • Bể bơi tràn bờ hiện đại", bookedDates: [] },
+      { folder: "V3H01", name: "Villa Sonasea V3H01", desc: "3 PN • Gần trục đường chính & tiện ích", bookedDates: [toYMD(today)] },
+      { folder: "V3I02", name: "Villa Sonasea V3I02", desc: "3 PN • Sân nướng BBQ riêng biệt", bookedDates: [] },
+      { folder: "V3I03", name: "Villa Sonasea V3I03", desc: "3 PN • Ban công ngắm cảnh biển", bookedDates: [] },
+      { folder: "V3J03", name: "Villa Sonasea V3J03", desc: "3 PN • Phong cách Địa Trung Hải", bookedDates: [] },
+      { folder: "V3K10", name: "Villa Sonasea V3K10", desc: "3 PN • View công viên cây xanh", bookedDates: [] },
+      { folder: "V3K11", name: "Villa Sonasea V3K11", desc: "4 PN • Không gian sinh hoạt rộng lớn", bookedDates: [] },
+      { folder: "V3M05", name: "Villa Sonasea V3M05", desc: "4 PN • Bể bơi panorama vô cực", bookedDates: [toYMD(today)] },
+      { folder: "V3M11A", name: "Villa Sonasea V3M11A", desc: "4 PN • View trực diện vịnh Bái Tử Long", bookedDates: [] },
+      { folder: "V3N01", name: "Villa Sonasea V3N01", desc: "4 PN • Phòng ốc rộng rãi sang trọng", bookedDates: [] },
+      { folder: "V3N08A", name: "Villa Sonasea V3N08A", desc: "4 PN • Căn góc 2 mặt tiền đắc địa", bookedDates: [] },
+      { folder: "villa-18", name: "Villa Sonasea No.18 VIP", desc: "5 PN • Đơn lập VIP ven bãi cát", bookedDates: [] },
+      { folder: "villa-19", name: "Villa Sonasea No.19 VIP", desc: "5 PN • Bể bơi lớn chuẩn gia đình", bookedDates: [] },
+      { folder: "villa-20", name: "Villa Sonasea No.20 VIP", desc: "5 PN • Nội thất 5 sao đẳng cấp", bookedDates: [] }
     ];
 
-    // Render 20 căn villa ra lưới
-    const grid = document.getElementById('villaGrid');
-    villas.forEach((villa) => {
-      const card = document.createElement('div');
-      card.className = 'villa-item';
-      card.onclick = () => loadAndOpenVillaAlbum(villa);
+    // ================= KIỂM TRA TÌNH TRẠNG VILLA THEO KHOẢNG NGÀY =================
+    function isVillaBooked(villa, startDateStr, endDateStr) {
+      if (!villa.bookedDates || villa.bookedDates.length === 0) return false;
+      const start = new Date(startDateStr);
+      const end = new Date(endDateStr);
 
-      const coverUrl = `villasonasea/${villa.folder}/1.jpg`;
+      for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
+        const checkStr = toYMD(d);
+        if (villa.bookedDates.includes(checkStr)) return true;
+      }
+      return false;
+    }
 
-      card.innerHTML = `
-        <div class="item-thumb" style="background-image: url('${coverUrl}'), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');">
-          <span class="thumb-hint">📷 Xem Album</span>
-        </div>
-        <div class="item-body">
-          <h3 class="item-name">${villa.name}</h3>
-          <p class="item-desc">${villa.desc}</p>
-          <div class="item-foot">
-            <span class="item-price">Liên hệ giá tốt</span>
-            <span class="btn-view-album">Xem phòng ➔</span>
+    // ================= RENDER DANH SÁCH VILLA =================
+    function renderVillas(startDateStr, endDateStr, isFiltered = false) {
+      const grid = document.getElementById('villaGrid');
+      grid.innerHTML = '';
+      let availableCount = 0;
+
+      villas.forEach((villa) => {
+        const booked = isVillaBooked(villa, startDateStr, endDateStr);
+        if (!booked) availableCount++;
+
+        const card = document.createElement('div');
+        card.className = `villa-item ${booked ? 'is-booked' : ''}`;
+        
+        const coverUrl = `villasonasea/${villa.folder}/1.jpg`;
+        const statusLabel = booked ? 'Đã kín lịch' : 'Còn phòng';
+        const statusClass = booked ? 'status-booked-tag' : 'status-available-tag';
+        const statusIcon = booked ? '⛔' : '✔';
+        const zaloUrl = `https://zalo.me/0396588880?text=${encodeURIComponent('Chào bạn, tôi muốn đặt căn ' + villa.name + ' từ ngày ' + startDateStr + ' đến ' + endDateStr)}`;
+
+        card.innerHTML = `
+          <div class="item-thumb" style="background-image: url('${coverUrl}'), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');" onclick="loadAndOpenVillaAlbum('${villa.name}', '${villa.folder}', ${booked})">
+            <span class="tag-status ${statusClass}">${statusIcon} ${statusLabel}</span>
+            <span class="thumb-hint">📷 Xem Album</span>
           </div>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
+          <div class="item-body">
+            <h3 class="item-name" onclick="loadAndOpenVillaAlbum('${villa.name}', '${villa.folder}', ${booked})">${villa.name}</h3>
+            <p class="item-desc">${villa.desc}</p>
+            <div class="item-foot">
+              <span class="item-price">Liên hệ giá tốt</span>
+              ${booked 
+                ? `<span class="btn-action-status btn-booked-out">⛔ Đã kín</span>`
+                : `<a href="${zaloUrl}" target="_blank" class="btn-action-status btn-book-now" onclick="event.stopPropagation()">Đặt Căn Này ➔</a>`
+              }
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
 
-    // ================= TỰ ĐỘNG NẠP TẤT CẢ ẢNH TRONG THƯ MỤC CĂN =================
+      const messageBox = document.getElementById('searchMessage');
+      if (isFiltered) {
+        messageBox.innerHTML = `Kết quả từ <strong>${startDateStr}</strong> đến <strong>${endDateStr}</strong>: Còn <strong>${availableCount}/20</strong> căn khả dụng.`;
+      } else {
+        messageBox.innerHTML = `Đang hiển thị: <strong>Hiện trạng phòng hôm nay</strong> (${availableCount}/20 căn còn trống).`;
+      }
+    }
+
+    function handleSearch(e) {
+      e.preventDefault();
+      const checkinVal = inInput.value;
+      const checkoutVal = outInput.value;
+      if (new Date(checkoutVal) <= new Date(checkinVal)) {
+        alert('Ngày trả phòng phải sau ngày nhận phòng!');
+        return;
+      }
+      renderVillas(checkinVal, checkoutVal, true);
+    }
+
+    // Hiển thị ban đầu: Hiện trạng hôm nay
+    renderVillas(toYMD(today), toYMD(tomorrow), false);
+
+    // ================= ALBUM ẢNH & VUỐT CẢM ỨNG =================
     let currentAlbum = [];
     let currentIndex = 0;
     const modalImg = document.getElementById('currentModalImg');
 
-    function loadAndOpenVillaAlbum(villa) {
-      document.getElementById('modalTitle').innerText = villa.name;
-      document.getElementById('modalCounter').innerText = 'Đang kiểm tra album...';
+    function loadAndOpenVillaAlbum(name, folder, isBooked) {
+      document.getElementById('modalTitle').innerText = `${name} ${isBooked ? '(Đã kín ngày bạn chọn)' : ''}`;
+      document.getElementById('modalCounter').innerText = 'Đang tải album...';
       document.getElementById('imageModal').style.display = 'flex';
 
       currentAlbum = [];
@@ -591,29 +592,23 @@
 
       const checkImage = (imgIdx) => {
         const testImg = new Image();
-        const path = `villasonasea/${villa.folder}/${imgIdx}.jpg`;
+        const path = `villasonasea/${folder}/${imgIdx}.jpg`;
         testImg.src = path;
-
         testImg.onload = () => {
           currentAlbum.push(path);
-          if (currentAlbum.length === 1) {
-            updateModalImage();
-          } else {
-            document.getElementById('modalCounter').innerText = `Ảnh ${currentIndex + 1} / ${currentAlbum.length}`;
-          }
+          if (currentAlbum.length === 1) updateModalImage();
+          else document.getElementById('modalCounter').innerText = `Ảnh ${currentIndex + 1} / ${currentAlbum.length}`;
           if (imgIdx < 50) checkImage(imgIdx + 1);
         };
-
         testImg.onerror = () => {
           if (currentAlbum.length === 0) {
-            currentAlbum.push(`villasonasea/${villa.folder}/1.jpg`);
+            currentAlbum.push(`villasonasea/${folder}/1.jpg`);
             updateModalImage();
           } else {
             document.getElementById('modalCounter').innerText = `Ảnh ${currentIndex + 1} / ${currentAlbum.length}`;
           }
         };
       };
-
       checkImage(1);
     }
 
@@ -646,38 +641,23 @@
       if (e.target.id === 'imageModal') closeAlbum();
     }
 
-    // ================= VUỐT CẢM ỨNG DI ĐỘNG (TOUCH SWIPE) =================
+    // Vuốt màn hình cảm ứng di động
     const touchZone = document.getElementById('modalTouchArea');
-    let startTouchX = 0;
-    let endTouchX = 0;
-    let startTouchY = 0;
-    let endTouchY = 0;
-
+    let startTouchX = 0, endTouchX = 0, startTouchY = 0, endTouchY = 0;
     touchZone.addEventListener('touchstart', (e) => {
       startTouchX = e.touches[0].clientX;
       startTouchY = e.touches[0].clientY;
     }, { passive: true });
-
     touchZone.addEventListener('touchend', (e) => {
       endTouchX = e.changedTouches[0].clientX;
       endTouchY = e.changedTouches[0].clientY;
-      handleGesture();
-    }, { passive: true });
-
-    function handleGesture() {
       const diffX = startTouchX - endTouchX;
       const diffY = startTouchY - endTouchY;
-
       if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35) {
-        if (diffX > 0) {
-          nextImg(); // Vuốt sang trái -> Xem ảnh kế tiếp
-        } else {
-          prevImg(); // Vuốt sang phải -> Xem ảnh trước đó
-        }
+        if (diffX > 0) nextImg(); else prevImg();
       }
-    }
+    }, { passive: true });
 
-    // Phím bấm điều hướng máy tính
     document.addEventListener('keydown', (e) => {
       const modal = document.getElementById('imageModal');
       if (modal.style.display === 'flex') {

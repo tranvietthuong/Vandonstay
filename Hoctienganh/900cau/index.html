@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <title>900 Mẫu Câu Giao Tiếp Cùng Bé - VANDONENGLISH</title>
+  <title>900 Mẫu Câu Giao Tiếp Cùng Bé - VandonStay</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -24,44 +24,42 @@
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-4px); }
     }
+
+    [data-netlify-deploy-id], 
+    iframe[src*="netlify"], 
+    div[class*="netlify"], 
+    #netlify-drawer, 
+    .netlify-badge, 
+    [class*="NetlifyBadge"], 
+    [id*="netlify"], 
+    div[style*="z-index: 2147483647"] {
+      display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      width: 0 !important;
+    }
   </style>
 </head>
 <body class="flex justify-center text-slate-100 select-none">
   <div class="w-full max-w-md bg-slate-900 flex flex-col h-full shadow-2xl relative p-2 justify-between">
     
-    <!-- 1. THANH ĐIỀU HƯỚNG LIÊN KẾT HỆ THỐNG ĐÃ SỬA CHUẨN ĐƯỜNG DẪN -->
-    <div class="shrink-0 space-y-1 mb-1">
-      <nav class="bg-slate-950/90 border border-slate-800 rounded-xl px-2.5 py-1.5 flex items-center justify-between shadow-sm text-xs">
-        <div class="flex items-center gap-1.5">
-          <!-- Quay về trang tổng hợp VandonEnglish -->
-          <a href="../index.html" class="flex items-center gap-1 text-[11px] font-bold text-slate-300 hover:text-emerald-400 bg-slate-800/80 px-2 py-1 rounded-lg border border-slate-700 transition">
-            <i class="fa-solid fa-arrow-left text-[10px]"></i> Học Liệu
-          </a>
-          <!-- Quay về trang chủ Biệt Thự Sonasea -->
-          <a href="../../index.html" class="flex items-center gap-1 text-[11px] font-medium text-slate-400 hover:text-slate-200 px-1.5 py-1 transition">
-            <i class="fa-solid fa-hotel text-[10px]"></i> Villa
-          </a>
-        </div>
-        <!-- Sang trang ShopeeQN -->
-        <a href="../../shopeeqn/index.html" class="flex items-center gap-1 text-[11px] font-bold text-amber-300 bg-amber-950/60 hover:bg-amber-900/60 border border-amber-500/40 px-2.5 py-1 rounded-lg transition shadow-sm">
-          <span>🎁</span> ShopeeQN
-        </a>
-      </nav>
-
-      <!-- Banner Ruy-băng Gợi Ý Dụng Cụ Học Tập -->
-      <aside class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white rounded-lg px-2.5 py-1 flex items-center justify-between text-[10px] shadow-sm">
-        <div class="flex items-center gap-1.5 truncate">
-          <span class="text-xs">📻</span>
-          <span class="truncate">Trang bị <strong>Loa tắm tiếng Anh & Bút đọc</strong></span>
-        </div>
-        <a href="../../shopeeqn/index.html#hoc-tieng-anh" class="font-bold underline text-amber-200 hover:text-white shrink-0 ml-1">
-          Xem ngay ➔
-        </a>
-      </aside>
+    <!-- THANH ĐIỀU HƯỚNG NHANH HỆ SINH THÁI (3 NÚT LIÊN KẾT) -->
+    <div class="flex items-center justify-between gap-1 pb-1.5 shrink-0 border-b border-slate-800">
+      <a href="../index.html" class="flex-1 py-1 px-1.5 bg-slate-800/90 hover:bg-slate-700 text-emerald-400 rounded-lg text-[10.5px] font-bold border border-slate-700 flex items-center justify-center gap-1 transition shadow-sm">
+        <i class="fa-solid fa-graduation-cap text-xs"></i> <span>Vandon English</span>
+      </a>
+      <a href="../../index.html" class="flex-1 py-1 px-1.5 bg-slate-800/90 hover:bg-slate-700 text-teal-300 rounded-lg text-[10.5px] font-bold border border-slate-700 flex items-center justify-center gap-1 transition shadow-sm">
+        <i class="fa-solid fa-hotel text-xs"></i> <span>Villa Sonasea</span>
+      </a>
+      <a href="../../shopeeqn/index.html" class="flex-1 py-1 px-1.5 bg-slate-800/90 hover:bg-slate-700 text-amber-300 rounded-lg text-[10.5px] font-bold border border-slate-700 flex items-center justify-center gap-1 transition shadow-sm">
+        <span>🎁</span> <span>Shopee QN</span>
+      </a>
     </div>
 
-    <!-- 2. Header Bài Học: Chọn Nghe Từ Bài ... Đến Bài ... -->
-    <header class="bg-emerald-950/90 border border-emerald-700/60 rounded-xl px-2.5 py-1.5 flex items-center justify-between shadow shrink-0 gap-1 text-[11px]">
+    <!-- Header Bài Học: Chọn Nghe Từ Bài ... Đến Bài ... -->
+    <header class="bg-emerald-950/90 border border-emerald-700/60 rounded-xl px-2.5 py-1.5 flex items-center justify-between shadow shrink-0 gap-1 text-[11px] mt-1.5">
       <div class="flex items-center gap-1 font-semibold text-emerald-300">
         <span>Từ:</span>
         <select id="startLessonSelect" class="bg-emerald-900 text-white font-bold py-0.5 px-1 rounded border border-emerald-600 focus:outline-none text-xs">
@@ -76,12 +74,12 @@
       </button>
     </header>
 
-    <!-- 3. Khung Nội Dung Bài Học -->
-    <main class="flex-1 flex flex-col justify-between py-1 overflow-hidden" id="mainContent">
+    <!-- Khung Nội Dung Bài Học -->
+    <main class="flex-1 flex flex-col justify-between py-1.5 overflow-hidden" id="mainContent">
       <div id="currentCardContainer" class="h-full flex flex-col justify-between"></div>
     </main>
 
-    <!-- 4. Thanh Điều Khiển Cố Định Dưới Cùng & Popups Xổ Lên -->
+    <!-- Thanh Điều Khiển Cố Định Dưới Cùng & Popups Xổ Lên -->
     <footer class="bg-slate-950/95 border border-slate-800 rounded-xl p-2 shrink-0 space-y-1.5 relative">
       
       <!-- Popup Lựa Chọn Lặp Lại Xổ Lên Trên -->
@@ -146,7 +144,14 @@
 
   <script src="js/data.js"></script>
   <script>
-    // Audio Engine & Giọng AI
+    // 1. Tự động xóa badge Netlify
+    const purgeNetlify = () => {
+      document.querySelectorAll('iframe[src*="netlify"], [class*="netlify"], [class*="NetlifyBadge"], #netlify-drawer, div[data-netlify-deploy-id]').forEach(el => el.remove());
+    };
+    purgeNetlify();
+    new MutationObserver(purgeNetlify).observe(document.documentElement, { childList: true, subtree: true });
+
+    // 2. Cấu hình Audio Engine & Giọng AI
     let synth = window.speechSynthesis;
     let currentUtterance = null;
     let isSpeechUnlocked = false;
@@ -174,7 +179,7 @@
       synth.onvoiceschanged = () => { synth.getVoices(); };
     }
 
-    // Quản lý trạng thái
+    // 3. Quản lý trạng thái bài học
     let currentLessonIdx = 0;
     let startIdx = 0;
     let endIdx = 0;
@@ -226,14 +231,14 @@
       let sentencesHtml = '';
       if (item.sentences && item.sentences.length) {
         sentencesHtml = item.sentences.map((s, sIdx) => `
-          <div id="sent-${sIdx}" class="sentence-row px-2 py-1 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-emerald-950/40 cursor-pointer transition flex flex-col justify-center" onclick="playSingleSentence('${s.en.replace(/'/g, "\\'")}', ${sIdx})">
+          <div id="sent-${sIdx}" class="sentence-row px-2.5 py-1.5 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-emerald-950/40 cursor-pointer transition flex flex-col justify-center" onclick="playSingleSentence('${s.en.replace(/'/g, "\\'")}', ${sIdx})">
             <div class="flex items-center justify-between">
-              <span class="font-bold text-slate-100 text-[12px] leading-tight">• ${s.en}</span>
+              <span class="font-bold text-slate-100 text-[13px] leading-tight">• ${s.en}</span>
               <i class="fa-solid fa-volume-high text-[10px] text-emerald-400 opacity-60 ml-1.5"></i>
             </div>
-            <div class="trans-box ${showDetails ? '' : 'hidden'} mt-0.5 space-y-0.5 text-[10px]">
+            <div class="trans-box ${showDetails ? '' : 'hidden'} mt-0.5 space-y-0.5 text-[11px]">
               <p class="ipa-text font-mono leading-tight">${s.ipa || ''}</p>
-              <p class="vn-text font-medium leading-tight"><span class="bg-slate-700 text-slate-300 px-1 rounded text-[8px] mr-1">VN</span>${s.vi || ''}</p>
+              <p class="vn-text font-medium leading-tight"><span class="bg-slate-700 text-slate-300 px-1 rounded text-[9px] mr-1">VN</span>${s.vi || ''}</p>
             </div>
           </div>
         `).join('');
@@ -247,7 +252,7 @@
             <span class="w-6 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">Bài ${item.id}</span>
           </div>
 
-          <div class="w-full bg-slate-950/60 rounded-xl p-1 border border-slate-800/80 flex items-center justify-center overflow-hidden my-1 flex-1 min-h-[120px]">
+          <div class="w-full bg-slate-950/60 rounded-xl p-1 border border-slate-800/80 flex items-center justify-center overflow-hidden my-1 flex-1 min-h-[140px]">
             <img src="${item.image}" alt="Minh họa bài ${item.id}" 
                  class="max-w-full max-h-full object-contain scale-105 char-animation drop-shadow" 
                  onerror="this.src='extracted_images/card_${item.id}.png'">
@@ -260,7 +265,7 @@
       `;
     }
 
-    // Xử lý Popups
+    // 4. Quản lý Popup Menu Xổ Lên
     document.getElementById('repeatToggleBtn').addEventListener('click', (e) => {
       e.stopPropagation();
       speedMenu.classList.add('hidden');
@@ -278,6 +283,7 @@
       speedMenu.classList.add('hidden');
     });
 
+    // Chọn số lần lặp từ popup
     document.querySelectorAll('.repeat-opt').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -297,6 +303,7 @@
       document.getElementById('repeatProgress').innerText = `(${currentRepeat}/${limitStr})`;
     }
 
+    // Chọn tốc độ từ popup
     document.querySelectorAll('.speed-opt').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -310,6 +317,7 @@
       });
     });
 
+    // Chọn dải bài
     startSelect.addEventListener('change', (e) => {
       stopPlayback();
       startIdx = parseInt(e.target.value);
@@ -336,6 +344,7 @@
       updateRepeatDisplay();
     });
 
+    // Chuyển đổi MP3 <-> Giọng AI
     const voiceBtn = document.getElementById('voiceToggleBtn');
     voiceBtn.addEventListener('click', () => {
       stopPlayback();
@@ -352,12 +361,14 @@
       }
     });
 
+    // Bật / tắt Dịch & IPA
     document.getElementById('toggleTransBtn').addEventListener('click', () => {
       showDetails = !showDetails;
       document.querySelectorAll('.trans-box').forEach(el => el.classList.toggle('hidden', !showDetails));
       document.getElementById('toggleTransBtn').classList.toggle('bg-emerald-900', !showDetails);
     });
 
+    // Phát / Tạm dừng
     document.getElementById('playBtn').addEventListener('click', () => {
       if (isPlaying) {
         stopPlayback();
