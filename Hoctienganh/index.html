@@ -3,52 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>VÂN ĐỒN HỌC LIỆU - Hệ Thống Học Liệu Tương Tác Trực Tuyến</title>
+  <title>VÂN ĐỔN HỌC LIỆU - Hệ Thống Học Liệu Tương Tác Trực Tuyến</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     html { scroll-behavior: smooth; }
-    
-    /* Hiệu ứng chữ chạy ngang mượt mà (Marquee) */
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-    .animate-marquee {
-      display: inline-block;
-      white-space: nowrap;
-      animation: marquee 26s linear infinite;
-    }
-    .animate-marquee:hover {
-      animation-play-state: paused;
-    }
   </style>
 </head>
-<body class="bg-gradient-to-b from-slate-50 via-teal-50/20 to-slate-100 text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none">
+<body class="bg-[#F4F7F5] text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none">
 
   <!-- 1. THANH HEADER ĐIỀU HƯỚNG CHÍNH -->
-  <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-sm">
-    <div class="max-w-7xl mx-auto px-3 sm:px-8 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+  <header class="bg-white/95 backdrop-blur-md border-b border-emerald-100 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-2 sm:px-8 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
       
-      <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
-        <a href="index.html" class="text-lg sm:text-xl font-black text-teal-700 tracking-tight flex items-center gap-1.5">
-          <i class="fa-solid fa-graduation-cap text-teal-600 text-xl"></i> VÂN ĐỒN <span class="text-slate-900">HỌC LIỆU</span>
+      <div class="flex items-center justify-center sm:justify-start">
+        <a href="index.html" class="text-base sm:text-xl font-black text-emerald-800 tracking-tight flex items-center gap-1.5">
+          <i class="fa-solid fa-graduation-cap text-emerald-600 text-lg sm:text-xl"></i> VÂN ĐỔN <span class="text-slate-700">HỌC LIỆU</span>
         </a>
-        <span class="text-[10.5px] sm:text-xs font-semibold text-slate-500 tracking-wide mt-0.5">
+        <span class="hidden lg:inline text-xs font-semibold text-emerald-700 border-l border-emerald-200 ml-2 pl-2">
           Hệ Thống Học Liệu Tương Tác Trực Tuyến
         </span>
       </div>
 
-      <nav class="flex items-center gap-2 w-full sm:w-auto justify-between">
-        <a href="../shopeeqn/index.html" class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-bold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-xl transition shadow-xs whitespace-nowrap">
-          <span>🎁</span> <span>Shopee QN</span>
-        </a>
-        <a href="../index.html" class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-bold text-teal-800 bg-teal-50 hover:bg-teal-100 border border-teal-300 rounded-xl transition shadow-xs whitespace-nowrap">
-          <i class="fa-solid fa-hotel text-teal-600"></i> <span>Villa Sonasea</span>
-        </a>
-        <a href="tel:0396588880" class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-bold text-white bg-teal-600 hover:bg-teal-700 rounded-xl transition shadow-sm whitespace-nowrap" title="Liên hệ tư vấn">
+      <nav class="flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto justify-between">
+        <button onclick="goToShopee()" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-xl transition shadow-sm whitespace-nowrap cursor-pointer">
+          <span>🛍️</span> <span>Shopee QN</span>
+        </button>
+        <button onclick="goToVilla()" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-emerald-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition shadow-sm whitespace-nowrap cursor-pointer">
+          <i class="fa-solid fa-hotel text-emerald-600"></i> <span>Villa Sonasea</span>
+        </button>
+        <a href="tel:0396588880" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded-xl transition shadow-sm whitespace-nowrap" title="Liên hệ hỗ trợ">
           📞 039.65.88880
         </a>
       </nav>
@@ -56,105 +42,92 @@
     </div>
   </header>
 
-  <!-- 2. BANNER SHOPEE QN VỚI CÂU CHỮ CHẠY MỚI -->
-  <div class="max-w-4xl mx-auto px-3 mt-3 sm:mt-5 relative z-20 w-full">
-    <a href="../shopeeqn/index.html" class="block w-full group bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:brightness-105 rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-5 text-white border-2 border-amber-200 transition-all active:scale-[0.99] cursor-pointer no-underline relative overflow-hidden">
-      
-      <div class="relative z-10 flex flex-col items-center text-center gap-3">
-        
-        <!-- Logo Shopee QN -->
-        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-2xl bg-white/95 border border-amber-200 shadow-md pointer-events-none">
-          <div class="w-6 h-5 bg-[#ee4d2d] rounded-lg flex items-center justify-center relative shadow-xs">
-            <div class="absolute -top-1.5 w-3 h-2 border-2 border-[#ee4d2d] rounded-t-full bg-transparent"></div>
-            <span class="text-white font-black text-xs leading-none">S</span>
-          </div>
-          <span class="text-slate-900 font-black text-base sm:text-lg tracking-wider">
-            Shopee <span class="text-[#ee4d2d]">QN</span>
-          </span>
-        </div>
-
-        <!-- Dải chữ chạy ngang với nội dung mới đã thay thế -->
-        <div class="w-full bg-black/20 py-2 sm:py-2.5 rounded-xl overflow-hidden border border-amber-300/40 shadow-inner pointer-events-none backdrop-blur-xs">
-          <div class="animate-marquee text-xs sm:text-sm font-bold text-amber-50 tracking-wide">
-            🌟 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên shopee hãy ghé thăm và ủng hộ gian hàng shopeeqn bằng cách bấm vào shopeeqn nhé! &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; 🏖️ Mua sắm tiện ích du lịch, đồ gia dụng & đặc sản Vân Đồn chính hãng!
-          </div>
-        </div>
-
+  <!-- 2. BANNER DÒNG CHỮ CHẠY LIÊN KẾT SHOPEE QN -->
+  <section class="relative bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-800 text-white py-2.5 px-2 border-b-4 border-emerald-400 shadow-md overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div onclick="goToShopee()" class="block group cursor-pointer" title="Bấm để ghé thăm Shopee QN">
+        <marquee behavior="scroll" direction="left" scrollamount="5" class="text-xs sm:text-sm text-emerald-100 font-medium group-hover:text-amber-200 transition">
+          📚 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên Shopee hãy ghé qua gian hàng liên kết của chúng tôi tại Shopee QN &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 🛍️ Click vào đây để khám phá ngay!
+        </marquee>
       </div>
+    </div>
+  </section>
 
-    </a>
-  </div>
-
-  <!-- 3. NỘI DUNG CHÍNH (LƯỚI 3 CỘT SÁNG SỦA, HÀI HÒA) -->
-  <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
-
-    <!-- PHẦN 1: TỰ HÀO VIỆT NAM (LƯỚI 3 CỘT) -->
-    <div class="space-y-3">
-      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h3 class="text-xs sm:text-sm font-extrabold text-amber-700 uppercase tracking-wide flex items-center gap-1.5">
-          <span>🇻🇳</span> Tự Hào Việt Nam
-        </h3>
-        <span class="text-[10px] font-bold text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-0.5 rounded-full">
+  <!-- 3. NỘI DUNG CHÍNH: CÁC KHU VỰC HỌC LIỆU (TOÀN BỘ CHIA LƯỚI 3 CỘT ĐỀU ĐẶN) -->
+  <main class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-5 flex-1 w-full space-y-6">
+    
+    <!-- PHẦN 1: TỰ HÀO VIỆT NAM (Lưới 3 cột) -->
+    <div class="space-y-2.5">
+      <div class="flex items-center justify-between border-b border-emerald-200 pb-1.5">
+        <h2 class="text-xs sm:text-sm font-black text-emerald-900 uppercase tracking-wide flex items-center gap-1.5">
+          <span>🇻🇳</span> VN TỰ HÀO VIỆT NAM
+        </h2>
+        <span class="text-[9px] sm:text-[10px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full">
           Văn Hóa & Lịch Sử
         </span>
       </div>
 
-      <!-- Lưới chuẩn 3 cột (grid-cols-3) -->
       <div class="grid grid-cols-3 gap-2 sm:gap-4 items-stretch">
         
-        <!-- Ô 1: Truyện cổ tích VN -->
-        <a href="truyencotichvn/index.html" class="bg-white hover:bg-slate-50 rounded-xl border border-slate-200 hover:border-amber-400 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer no-underline text-inherit">
+        <!-- Truyện Cổ Tích VN -->
+        <a href="truyencotichvn/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=500&q=80" alt="Cổ tích" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-              <span class="absolute top-1 left-1 bg-amber-600 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">Cổ Tích</span>
+              <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=600&q=80" alt="Truyện Cổ Tích VN" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <span class="absolute top-1 left-1 sm:top-2 sm:left-2 bg-amber-600 text-white text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded shadow-sm">Cổ Tích</span>
             </div>
-            <div class="p-2 sm:p-3">
-              <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 group-hover:text-amber-600 transition leading-snug">Truyện Cổ Tích VN</h4>
-              <p class="text-[9px] sm:text-[10px] text-slate-500 mt-0.5 line-clamp-2">Kho truyện dân gian truyền cảm.</p>
+            <div class="p-2 sm:p-4">
+              <h3 class="font-extrabold text-[11px] sm:text-sm text-slate-900 group-hover:text-emerald-800 transition leading-tight line-clamp-1 sm:line-clamp-none">Truyện Cổ Tích VN</h3>
+              <p class="hidden sm:block text-xs text-slate-500 mt-1 line-clamp-2 leading-tight">Kho truyện dân gian truyền cảm.</p>
             </div>
           </div>
-          <div class="p-2 sm:p-3 pt-0 mt-auto">
-            <div class="w-full py-1 bg-amber-500 hover:bg-amber-600 text-white text-[10px] font-bold rounded-lg transition shadow-xs text-center">
-              Nghe ➔
+          <div class="p-2 sm:p-4 pt-0 mt-auto">
+            <div class="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-end">
+              <span class="px-2 sm:px-3 py-1 sm:py-1.5 bg-amber-600 group-hover:bg-amber-700 text-white text-[9px] sm:text-xs font-bold rounded-md sm:rounded-lg transition shadow-sm">
+                Nghe ➔
+              </span>
             </div>
           </div>
         </a>
 
-        <!-- Ô 2: Danh nhân VN -->
-        <a href="danhnhanvn/index.html" class="bg-white hover:bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-400 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer no-underline text-inherit">
+        <!-- Danh Nhân VN -->
+        <a href="danhnhanvn/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=500&q=80" alt="Danh nhân" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-              <span class="absolute top-1 left-1 bg-emerald-600 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">Danh Nhân</span>
+              <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80" alt="Danh Nhân VN" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <span class="absolute top-1 left-1 sm:top-2 sm:left-2 bg-emerald-700 text-white text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded shadow-sm">Danh Nhân</span>
             </div>
-            <div class="p-2 sm:p-3">
-              <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 group-hover:text-emerald-600 transition leading-snug">Danh Nhân VN</h4>
-              <p class="text-[9px] sm:text-[10px] text-slate-500 mt-0.5 line-clamp-2">Tấm gương và cuộc đời các danh nhân.</p>
+            <div class="p-2 sm:p-4">
+              <h3 class="font-extrabold text-[11px] sm:text-sm text-slate-900 group-hover:text-emerald-800 transition leading-tight line-clamp-1 sm:line-clamp-none">Danh Nhân VN</h3>
+              <p class="hidden sm:block text-xs text-slate-500 mt-1 line-clamp-2 leading-tight">Tấm gương và cuộc đời các danh nhân.</p>
             </div>
           </div>
-          <div class="p-2 sm:p-3 pt-0 mt-auto">
-            <div class="w-full py-1 bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold rounded-lg transition shadow-xs text-center">
-              Khám Phá ➔
+          <div class="p-2 sm:p-4 pt-0 mt-auto">
+            <div class="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-end">
+              <span class="px-2 sm:px-3 py-1 sm:py-1.5 bg-emerald-700 group-hover:bg-emerald-800 text-white text-[9px] sm:text-xs font-bold rounded-md sm:rounded-lg transition shadow-sm">
+                Khám Phá ➔
+              </span>
             </div>
           </div>
         </a>
 
-        <!-- Ô 3: Lịch sử VN -->
-        <a href="lichsuvn/index.html" class="bg-white hover:bg-slate-50 rounded-xl border border-slate-200 hover:border-rose-400 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer no-underline text-inherit">
+        <!-- Lịch Sử VN -->
+        <a href="lichsuvn/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=500&q=80" alt="Lịch sử" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-              <span class="absolute top-1 left-1 bg-rose-600 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">Lịch Sử</span>
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Lịch Sử VN" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <span class="absolute top-1 left-1 sm:top-2 sm:left-2 bg-rose-700 text-white text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded shadow-sm">Lịch Sử</span>
             </div>
-            <div class="p-2 sm:p-3">
-              <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 group-hover:text-rose-600 transition leading-snug">Lịch Sử VN</h4>
-              <p class="text-[9px] sm:text-[10px] text-slate-500 mt-0.5 line-clamp-2">Các mốc son hào hùng dân tộc.</p>
+            <div class="p-2 sm:p-4">
+              <h3 class="font-extrabold text-[11px] sm:text-sm text-slate-900 group-hover:text-emerald-800 transition leading-tight line-clamp-1 sm:line-clamp-none">Lịch Sử VN</h3>
+              <p class="hidden sm:block text-xs text-slate-500 mt-1 line-clamp-2 leading-tight">Các mốc son hào hùng dân tộc.</p>
             </div>
           </div>
-          <div class="p-2 sm:p-3 pt-0 mt-auto">
-            <div class="w-full py-1 bg-rose-600 hover:bg-rose-700 text-white text-[10px] font-bold rounded-lg transition shadow-xs text-center">
-              Tìm Hiểu ➔
+          <div class="p-2 sm:p-4 pt-0 mt-auto">
+            <div class="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-end">
+              <span class="px-2 sm:px-3 py-1 sm:py-1.5 bg-rose-700 group-hover:bg-rose-800 text-white text-[9px] sm:text-xs font-bold rounded-md sm:rounded-lg transition shadow-sm">
+                Tìm Hiểu ➔
+              </span>
             </div>
           </div>
         </a>
@@ -162,92 +135,104 @@
       </div>
     </div>
 
-    <!-- PHẦN 2: GIÁO TRÌNH TIẾNG ANH (LƯỚI 3 CỘT) -->
-    <div class="space-y-3 pt-2">
-      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h3 class="text-xs sm:text-sm font-extrabold text-teal-700 uppercase tracking-wide flex items-center gap-1.5">
-          <span>📚</span> Giáo Trình Tiếng Anh
-        </h3>
-        <span class="text-[10px] font-bold text-teal-800 bg-teal-100 border border-teal-300 px-2.5 py-0.5 rounded-full">
-          4 Bộ Học Liệu
+    <!-- PHẦN 2: HỌC LIỆU TIẾNG ANH CHUYÊN SÂU (ĐÃ CHIA LƯỚI 3 CỘT ĐỀU ĐẶN) -->
+    <div class="space-y-2.5 pt-1">
+      <div class="flex items-center justify-between border-b border-emerald-200 pb-1.5">
+        <h2 class="text-xs sm:text-sm font-black text-emerald-900 uppercase tracking-wide flex items-center gap-1.5">
+          <span>📚</span> HỌC LIỆU TIẾNG ANH CHUYÊN SÂU
+        </h2>
+        <span class="text-[9px] sm:text-[10px] font-bold text-teal-800 bg-teal-100 border border-teal-300 px-2 py-0.5 rounded-full">
+          Bộ Sưu Tập Học Liệu
         </span>
       </div>
 
-      <!-- Lưới chuẩn 3 cột (grid-cols-3) -->
+      <!-- LƯỚI 3 CỘT (grid-cols-3) -->
       <div class="grid grid-cols-3 gap-2 sm:gap-4 items-stretch">
         
-        <!-- 1. 900 Câu Cho Mẹ & Bé -->
-        <a href="900cau/index.html" class="bg-white hover:bg-slate-50 rounded-xl border border-slate-200 hover:border-teal-400 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer no-underline text-inherit">
+        <!-- 50 Lesson Crazy -->
+        <a href="50lessonCrazy/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=500&q=80" alt="900 câu" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-              <span class="absolute top-1 left-1 bg-teal-600 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">Gia Đình</span>
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="50 Lesson Crazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <span class="absolute top-1 left-1 sm:top-2 sm:left-2 bg-emerald-600 text-white text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded shadow-sm">Crazy English</span>
             </div>
-            <div class="p-2 sm:p-3">
-              <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 group-hover:text-teal-600 transition leading-snug">900 Câu Cho Mẹ & Bé</h4>
-              <p class="text-[9px] sm:text-[10px] text-slate-500 mt-0.5 line-clamp-2">Mẫu câu sinh hoạt thường ngày.</p>
+            <div class="p-2 sm:p-4">
+              <h3 class="font-extrabold text-[11px] sm:text-sm text-slate-900 group-hover:text-emerald-800 transition leading-tight line-clamp-1 sm:line-clamp-none">50 Lesson Crazy</h3>
+              <p class="hidden sm:block text-xs text-slate-500 mt-1 line-clamp-2 leading-tight">Luyện phát âm theo phương pháp Crazy English.</p>
             </div>
           </div>
-          <div class="p-2 sm:p-3 pt-0 mt-auto">
-            <div class="w-full py-1 bg-teal-600 hover:bg-teal-700 text-white text-[10px] font-bold rounded-lg transition shadow-xs text-center">
-              Vào học ➔
+          <div class="p-2 sm:p-4 pt-0 mt-auto">
+            <div class="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="hidden sm:inline text-[10px] font-bold text-emerald-700">Cơ bản</span>
+              <span class="w-full sm:w-auto text-center px-1 sm:px-3 py-1 sm:py-1.5 bg-emerald-700 group-hover:bg-emerald-800 text-white text-[9px] sm:text-xs font-bold rounded-md sm:rounded-lg transition shadow-sm">
+                Học ➔
+              </span>
             </div>
           </div>
         </a>
 
-        <!-- 2. Crazy English -->
-        <a href="50lessonCrazy/index.html" class="bg-white hover:bg-slate-50 rounded-xl border border-slate-200 hover:border-rose-400 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer no-underline text-inherit">
+        <!-- 900 Câu Giao Tiếp -->
+        <a href="900cau/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80" alt="Crazy English" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-              <span class="absolute top-1 left-1 bg-rose-600 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">Phản Xạ</span>
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="900 Câu" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <span class="absolute top-1 left-1 sm:top-2 sm:left-2 bg-teal-600 text-white text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded shadow-sm">900 Câu</span>
             </div>
-            <div class="p-2 sm:p-3">
-              <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 group-hover:text-rose-600 transition leading-snug">50 Bài Crazy English</h4>
-              <p class="text-[9px] sm:text-[10px] text-slate-500 mt-0.5 line-clamp-2">Mở rộng khẩu hình miệng.</p>
+            <div class="p-2 sm:p-4">
+              <h3 class="font-extrabold text-[11px] sm:text-sm text-slate-900 group-hover:text-emerald-800 transition leading-tight line-clamp-1 sm:line-clamp-none">900 Câu Giao Tiếp</h3>
+              <p class="hidden sm:block text-xs text-slate-500 mt-1 line-clamp-2 leading-tight">Hệ thống mẫu câu thông dụng hàng ngày.</p>
             </div>
           </div>
-          <div class="p-2 sm:p-3 pt-0 mt-auto">
-            <div class="w-full py-1 bg-rose-600 hover:bg-rose-700 text-white text-[10px] font-bold rounded-lg transition shadow-xs text-center">
-              Vào học ➔
+          <div class="p-2 sm:p-4 pt-0 mt-auto">
+            <div class="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="hidden sm:inline text-[10px] font-bold text-teal-700">Phản xạ</span>
+              <span class="w-full sm:w-auto text-center px-1 sm:px-3 py-1 sm:py-1.5 bg-teal-700 group-hover:bg-teal-800 text-white text-[9px] sm:text-xs font-bold rounded-md sm:rounded-lg transition shadow-sm">
+                Học ➔
+              </span>
             </div>
           </div>
         </a>
 
-        <!-- 3. One Story A Day 1 -->
-        <a href="onestoryaday1/index.html" class="bg-white hover:bg-slate-50 rounded-xl border border-slate-200 hover:border-amber-400 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer no-underline text-inherit">
+        <!-- One Story a Day 1 -->
+        <a href="onestoryaday1/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=80" alt="Story 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-              <span class="absolute top-1 left-1 bg-amber-600 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">Tập 1</span>
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="One Story a Day 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <span class="absolute top-1 left-1 sm:top-2 sm:left-2 bg-cyan-700 text-white text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded shadow-sm">Story 1</span>
             </div>
-            <div class="p-2 sm:p-3">
-              <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 group-hover:text-amber-600 transition leading-snug">Story A Day (Tập 1)</h4>
-              <p class="text-[9px] sm:text-[10px] text-slate-500 mt-0.5 line-clamp-2">365 câu chuyện ngắn nền tảng.</p>
+            <div class="p-2 sm:p-4">
+              <h3 class="font-extrabold text-[11px] sm:text-sm text-slate-900 group-hover:text-emerald-800 transition leading-tight line-clamp-1 sm:line-clamp-none">One Story a Day 1</h3>
+              <p class="hidden sm:block text-xs text-slate-500 mt-1 line-clamp-2 leading-tight">Truyện đọc tiếng Anh ngắn hấp dẫn.</p>
             </div>
           </div>
-          <div class="p-2 sm:p-3 pt-0 mt-auto">
-            <div class="w-full py-1 bg-amber-500 hover:bg-amber-600 text-white text-[10px] font-bold rounded-lg transition shadow-xs text-center">
-              Vào học ➔
+          <div class="p-2 sm:p-4 pt-0 mt-auto">
+            <div class="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="hidden sm:inline text-[10px] font-bold text-cyan-700">Tập 1</span>
+              <span class="w-full sm:w-auto text-center px-1 sm:px-3 py-1 sm:py-1.5 bg-cyan-700 group-hover:bg-cyan-800 text-white text-[9px] sm:text-xs font-bold rounded-md sm:rounded-lg transition shadow-sm">
+                Học ➔
+              </span>
             </div>
           </div>
         </a>
 
-        <!-- 4. One Story A Day 2 -->
-        <a href="onestoryaday2/index.html" class="bg-white hover:bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer no-underline text-inherit">
+        <!-- One Story a Day 2 -->
+        <a href="onestoryaday2/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=500&q=80" alt="Story 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-              <span class="absolute top-1 left-1 bg-blue-600 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">Tập 2</span>
+              <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" alt="One Story a Day 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <span class="absolute top-1 left-1 sm:top-2 sm:left-2 bg-indigo-700 text-white text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded shadow-sm">Story 2</span>
             </div>
-            <div class="p-2 sm:p-3">
-              <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 group-hover:text-blue-600 transition leading-snug">Story A Day (Tập 2)</h4>
-              <p class="text-[9px] sm:text-[10px] text-slate-500 mt-0.5 line-clamp-2">Cấp độ nâng cao phong phú.</p>
+            <div class="p-2 sm:p-4">
+              <h3 class="font-extrabold text-[11px] sm:text-sm text-slate-900 group-hover:text-emerald-800 transition leading-tight line-clamp-1 sm:line-clamp-none">One Story a Day 2</h3>
+              <p class="hidden sm:block text-xs text-slate-500 mt-1 line-clamp-2 leading-tight">Tuyển tập truyện đọc mở rộng nâng cao.</p>
             </div>
           </div>
-          <div class="p-2 sm:p-3 pt-0 mt-auto">
-            <div class="w-full py-1 bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-bold rounded-lg transition shadow-xs text-center">
-              Vào học ➔
+          <div class="p-2 sm:p-4 pt-0 mt-auto">
+            <div class="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="hidden sm:inline text-[10px] font-bold text-indigo-700">Tập 2</span>
+              <span class="w-full sm:w-auto text-center px-1 sm:px-3 py-1 sm:py-1.5 bg-indigo-700 group-hover:bg-indigo-800 text-white text-[9px] sm:text-xs font-bold rounded-md sm:rounded-lg transition shadow-sm">
+                Học ➔
+              </span>
             </div>
           </div>
         </a>
@@ -258,16 +243,27 @@
   </main>
 
   <!-- 4. CHÂN TRANG ĐỒNG BỘ -->
-  <footer class="bg-white text-slate-600 py-4 border-t border-slate-200 text-[11px] mt-auto text-center shadow-inner">
-    <div class="max-w-7xl mx-auto px-3 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <p>© 2026 Vân Đồn Học Liệu - Hệ thống học liệu tương tác trực tuyến.</p>
-      <div class="flex items-center gap-3 text-slate-600 font-semibold">
-        <a href="../index.html" class="hover:text-teal-600 transition">Villa Sonasea</a>
-        <a href="../shopeeqn/index.html" class="hover:text-amber-600 transition">Shopee QN</a>
-        <span>Hotline: <strong class="text-teal-600">039.65.88880</strong></span>
+  <footer class="bg-white text-slate-600 py-3 border-t border-emerald-100 text-[10px] sm:text-[11px] mt-auto text-center shadow-inner">
+    <div class="max-w-7xl mx-auto px-2 flex flex-col sm:flex-row items-center justify-between gap-1.5">
+      <p>© 2026 Vân Đồn Học Liệu - Không gian học tập trực tuyến tương tác.</p>
+      <div class="flex items-center gap-2.5 text-slate-700">
+        <span onclick="goToShopee()" class="hover:text-emerald-700 transition cursor-pointer">Shopee QN</span>
+        <span onclick="goToVilla()" class="hover:text-emerald-700 transition cursor-pointer">Villa Sonasea</span>
+        <span>Hotline: <strong class="text-emerald-700">039.65.88880</strong></span>
       </div>
     </div>
   </footer>
+
+  <!-- SCRIPT ĐIỀU HƯỚNG -->
+  <script>
+    function goToShopee() {
+      window.location.href = '../shopeeqn/index.html';
+    }
+
+    function goToVilla() {
+      window.location.href = '../index.html';
+    }
+  </script>
 
 </body>
 </html>
