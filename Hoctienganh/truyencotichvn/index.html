@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Kho Truyện & Học Liệu - Vân Đồn Học Liệu</title>
+  <style>
+    /* Ép layout đồng nhất dạng khung di động chuẩn trên cả Mobile và PC */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #030712;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .main-wrapper {
+      width: 100%;
+      max-width: 440px; /* Khung điện thoại chuẩn */
+      height: 100%;
+      background-color: #0b1324;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+      color: #f8fafc;
+    }
+
+    /* 1. Header hệ sinh thái 3 nút */
+    .vandon-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      padding: 6px 10px;
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      font-size: 11px;
+      flex-shrink: 0;
+      z-index: 40;
+    }
+    .vandon-link-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 4px 6px;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      font-size: 10.5px;
+    }
+    .btn-study { background: #1e293b; color: #34d399; border: 1px solid #059669; }
+    .btn-villa { background: #1e293b; color: #94a3b8; border: 1px solid #334155; }
+    .btn-shopee { background: rgba(217, 119, 6, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+    /* Ruy-băng học liệu Shopee */
+    .vandon-promo-ribbon {
+      background: linear-gradient(90deg, #b45309, #c2410c);
+      color: #ffffff;
+      padding: 4px 10px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .vandon-promo-ribbon a {
+      color: #fef08a;
+      font-weight: 700;
+      text-decoration: underline;
+      margin-left: 6px;
+      white-space: nowrap;
+    }
+
+    /* 2. KHUNG ĐIỀU HƯỚNG 2 TẦNG CHUẨN MẪU */
+    .lesson-control-header {
+      background: #064e3b;
+      border-bottom: 1px solid #047857;
+      padding: 6px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 30;
+    }
+
+    /* Tầng 1: Tiêu đề chuyên mục / Chọn danh mục nhanh */
+    .series-dropdown-wrap {
+      position: relative;
+      width: 100%;
+    }
+    .btn-series-select {
+      width: 100%;
+      background: #022c22;
+      color: #34d399;
+      border: 1px solid #10b981;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    /* Tầng 2: 2 nút điều khiển (Mục lục & Chọn truyện nhanh) */
+    .action-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      align-items: center;
+    }
+    .action-row-2 select,
+    .action-row-2 button {
+      height: 30px;
+      padding: 0 6px;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 6px;
+      outline: none;
+      border: 1px solid #10b981;
+      background: #022c22;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .action-row-2 select {
+      text-align-last: center;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2334d399'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 4px center;
+      background-size: 14px;
+      padding-right: 16px;
+    }
+
+    /* 3. KHU VỰC HIỂN THỊ CHÍNH (ẢNH GIỮA + VĂN BẢN) */
+    .story-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 10px;
+      gap: 10px;
+    }
+    .view-image {
+      width: 100%;
+      background: #020617;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+      aspect-ratio: 16/9;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .view-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .view-text {
+      background: #0f172a;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+      padding: 12px;
+      flex: 1;
+    }
+    .story-heading {
+      font-size: 14px;
+      font-weight: 800;
+      color: #34d399;
+      margin-bottom: 8px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 6px;
+    }
+    .story-body-text {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    /* 4. PLAYER BAR CHUẨN MẪU */
+    .player-bar {
+      background: #0f172a;
+      border-top: 1px solid #1e293b;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .btn-ctrl {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #e2e8f0;
+      border-radius: 8px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .btn-main-play {
+      background: #10b981;
+      border: none;
+      color: #022c22;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+    .btn-main-play svg { width: 22px; height: 22px; fill: currentColor; }
+    .btn-icon-step { width: 36px; }
+    .btn-icon-step svg { width: 18px; height: 18px; fill: currentColor; }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+
+    <!-- 1. HEADER 3 NÚT LIÊN HỆ -->
+    <div class="vandon-header-bar">
+      <a href="../index.html" class="vandon-link-btn btn-study">
+        <span>📚</span> Vân Đồn Học Liệu
+      </a>
+      <a href="../../index.html" class="vandon-link-btn btn-villa">
+        <span>🏨</span> Villa Sonasea
+      </a>
+      <a href="../../shopeeqn/index.html" class="vandon-link-btn btn-shopee">
+        <span>🎁</span> Shopee QN
+      </a>
+    </div>
+
+    <!-- 2. RUY-BĂNG HỌC LIỆU -->
+    <aside class="vandon-promo-ribbon">
+      <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        <span>📻</span> <strong>Loa tắm Craven & Bút đọc</strong>
+      </div>
+      <a href="../../shopeeqn/index.html">Ưu đãi ➔</a>
+    </aside>
+
+    <!-- 3. HEADER BÀI HỌC 2 TẦNG CHUẨN MẪU -->
+    <div class="lesson-control-header">
+      
+      <!-- Tầng 1: Tên chuyên mục -->
+      <div class="series-dropdown-wrap">
+        <button type="button" class="btn-series-select">
+          <span id="headerCategoryTitle">📖 Kho Truyện Đọc Giọng Đọc AI</span>
+        </button>
+      </div>
+
+      <!-- Tầng 2: 2 nút điều khiển (Mục lục & Chọn bài nhanh) -->
+      <div class="action-row-2">
+        <button id="btnOpenIndex" type="button">
+          📋 Danh Sách Truyện
+        </button>
+        <select id="selectStory">
+          <option value="">-- Chọn Truyện --</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Khu vực hiển thị nội dung -->
+    <main class="story-stage">
+      <div class="view-image">
+        <img id="imgDisplay" src="" alt="Minh họa truyện">
+      </div>
+      <div class="view-text">
+        <div id="storyTitle" class="story-heading">Đang tải nội dung...</div>
+        <div id="storyText" class="story-body-text">Vui lòng chọn truyện từ danh sách phía trên hoặc bấm nút phát âm thanh.</div>
+      </div>
+    </main>
+
+    <!-- Player Bar điều khiển chuẩn -->
+    <footer class="player-bar">
+      <button id="btnPrev" class="btn-ctrl btn-icon-step" title="Truyện trước">
+        <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+      </button>
+
+      <button id="btnPlay" class="btn-ctrl btn-main-play" title="Phát / Dừng">
+        <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="iconPause" class="hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      </button>
+
+      <button id="btnNext" class="btn-ctrl btn-icon-step" title="Truyện kế tiếp">
+        <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+      </button>
+    </footer>
+
+    <audio id="audioElement" preload="auto"></audio>
+  </div>
+
+  <!-- DỮ LIỆU TRUYỆN DỄ DÀNG CẬP NHẬT LIÊN TỤC -->
+  <script>
+    // BẠN CÓ THỂ THÊM NH TẬP TRUYỆN MỚI VÀO ĐÂY CỰC KỲ THUẬN TIỆN
+    const storyList = [
+      {
+        id: 1,
+        title: "Sọ Dừa",
+        image: "image/sot-dua.gif",
+        audio: "audio/sot-dua.mp3",
+        text: "Ngày xửa ngày xưa, có hai vợ chồng nghèo đi ở cho nhà phú ông. Đã ngoài năm mươi tuổi mà vẫn chưa có con. Một hôm trời hạn hán, người vợ vào rừng hái củi cho chủ, khát nước quá bèn uống nước ở cái sọ dừa đựng đầy nước mưa..."
+      },
+      {
+        id: 2,
+        title: "Tấm Cám",
+        image: "image/tam-cam.gif",
+        audio: "audio/tam-cam.mp3",
+        text: "Ngày xửa ngày xưa, có hai chị em cùng cha khác mẹ tên là Tấm và Cám. Tấm là người hiền lành, chăm chỉ, còn Cám thì lười biếng và hay chơi bời. Sau khi người cha qua đời, mẹ kế đối xử với Tấm vô cùng cay nghiệt..."
+      }
+    ];
+
+    let currentIndex = 0;
+    const audioElement = document.getElementById('audioElement');
+    const imgDisplay = document.getElementById('imgDisplay');
+    const storyTitle = document.getElementById('storyTitle');
+    const storyText = document.getElementById('storyText');
+    const selectStory = document.getElementById('selectStory');
+    const btnPlay = document.getElementById('btnPlay');
+    const iconPlay = document.getElementById('iconPlay');
+    const iconPause = document.getElementById('iconPause');
+
+    // Khởi tạo danh sách dropdown
+    function initStories() {
+      selectStory.innerHTML = '<option value="">-- Chọn Truyện (' + storyList.length + ') --</option>';
+      storyList.forEach((story, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `${idx + 1}. ${story.title}`;
+        selectStory.appendChild(opt);
+      });
+      loadStory(0);
+    }
+
+    // Tải truyện lên giao diện
+    function loadStory(index) {
+      if (index < 0 || index >= storyList.length) return;
+      currentIndex = index;
+      const s = storyList[currentIndex];
+      
+      imgDisplay.src = s.image;
+      storyTitle.textContent = s.title;
+      storyText.textContent = s.text;
+      audioElement.src = s.audio;
+      selectStory.value = currentIndex;
+      
+      audioElement.pause();
+      iconPlay.classList.remove('hidden');
+      iconPause.classList.add('hidden');
+    }
+
+    // Sự kiện tương tác
+    selectStory.addEventListener('change', (e) => {
+      if (e.target.value !== "") {
+        loadStory(parseInt(e.target.value));
+        audioElement.play();
+        iconPlay.classList.add('hidden');
+        iconPause.classList.remove('hidden');
+      }
+    });
+
+    btnPlay.addEventListener('click', () => {
+      if (audioElement.paused) {
+        audioElement.play();
+        iconPlay.classList.add('hidden');
+        iconPause.classList.remove('hidden');
+      } else {
+        audioElement.pause();
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+      }
+    });
+
+    document.getElementById('btnPrev').addEventListener('click', () => {
+      let newIdx = currentIndex - 1;
+      if (newIdx < 0) newIdx = storyList.length - 1;
+      loadStory(newIdx);
+      audioElement.play();
+      iconPlay.classList.add('hidden');
+      iconPause.classList.remove('hidden');
+    });
+
+    document.getElementById('btnNext').addEventListener('click', () => {
+      let newIdx = currentIndex + 1;
+      if (newIdx >= storyList.length) newIdx = 0;
+      loadStory(newIdx);
+      audioElement.play();
+      iconPlay.classList.add('hidden');
+      iconPause.classList.remove('hidden');
+    });
+
+    audioElement.addEventListener('ended', () => {
+      iconPlay.classList.remove('hidden');
+      iconPause.classList.add('hidden');
+    });
+
+    // Chạy khởi tạo
+    window.onload = initStories;
+  </script>
+</body>
+</html>
