@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>VANDON STAY - Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Sonasea Vân Đồn</title>
-  <meta name="description" content="Hệ thống biệt thự nghỉ dưỡng Sonasea Vân Đồn Harbor City ven vịnh Bái Tử Long. Đầy đủ tiện ích hồ bơi, BBQ sân vườn." />
+  <meta name="description" content="Hệ thống 20 biệt thự nghỉ dưỡng Sonasea Vân Đồn ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ sân vườn." />
 
   <style>
     :root {
@@ -13,11 +13,10 @@
       --primary-light: #ecfdf5;
       --accent: #f59e0b;
       --accent-light: #fffbeb;
-      --text-dark: #0f172a;
-      --text-muted: #64748b;
-      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #64748b;
       --border: #e2e8f0;
-      --radius: 12px;
+      --radius: 10px;
     }
 
     * {
@@ -28,25 +27,25 @@
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text-dark);
+      background-color: #f8fafc;
+      color: var(--text);
       line-height: 1.5;
     }
 
-    /* ================= HEADER BỐ CỤC ĐỘC LẬP ================= */
+    /* ================= 1. HEADER ================= */
     .header-bar {
       background: #ffffff;
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 9999;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      padding: 10px 16px;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
     }
 
     .header-content {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: 0 auto;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -64,9 +63,7 @@
       white-space: nowrap;
     }
 
-    .brand-box span {
-      color: var(--text-dark);
-    }
+    .brand-box span { color: var(--text); }
 
     .menu-box {
       display: flex;
@@ -79,412 +76,616 @@
       align-items: center;
       justify-content: center;
       gap: 5px;
-      padding: 7px 12px;
+      padding: 6px 14px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
       text-decoration: none;
       white-space: nowrap;
     }
 
-    .btn-english {
-      background-color: #ecfdf5;
-      color: #047857;
-      border: 1.5px solid #a7f3d0;
-    }
+    .btn-english { background-color: var(--primary-light); color: var(--primary-dark); border: 1.5px solid #a7f3d0; }
+    .btn-shopee { background-color: var(--accent-light); color: #b45309; border: 1.5px solid #fde68a; }
+    .btn-call { background-color: var(--primary); color: #fff; border: 1.5px solid var(--primary); }
 
-    .btn-shopee {
-      background-color: #fffbeb;
-      color: #b45309;
-      border: 1.5px solid #fde68a;
-    }
-
-    .btn-call {
-      background-color: var(--primary);
-      color: #ffffff;
-      border: 1.5px solid var(--primary);
-    }
-
-    /* Ép buộc chia 2 hàng tuyệt đối trên màn hình điện thoại */
     @media screen and (max-width: 768px) {
       .header-content {
-        display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
-        gap: 8px !important;
-        width: 100% !important;
-      }
-
-      /* Hàng 1: Logo nằm chính giữa */
-      .brand-box {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        font-size: 18px !important;
-      }
-
-      /* Hàng 2: Chiếm trọn 100% chiều ngang */
-      .menu-box {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: space-between !important;
+        padding: 8px 10px !important;
         gap: 6px !important;
       }
-
-      /* Ba nút tự chia đều bề ngang 1/3, không che lấp chữ */
-      .menu-box .nav-btn {
-        flex: 1 1 0 !important;
-        padding: 7px 3px !important;
-        font-size: 11px !important;
-        letter-spacing: -0.2px !important;
-      }
+      .brand-box { width: 100% !important; justify-content: center !important; font-size: 17px !important; }
+      .menu-box { width: 100% !important; justify-content: space-between !important; gap: 4px !important; }
+      .menu-box .nav-btn { flex: 1 1 0 !important; padding: 6px 2px !important; font-size: 11px !important; letter-spacing: -0.3px !important; }
+      .menu-box .btn-call { flex: 0 0 54px !important; }
     }
 
-    /* ================= BANNER & HERO ================= */
+    /* ================= 2. HERO & 3 NÚT LIÊN HỆ TRÊN 1 HÀNG ================= */
     .hero {
       position: relative;
-      background: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.78)),
+      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.78)),
                   url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: #ffffff;
       text-align: center;
-      padding: 40px 16px 70px;
+      padding: 36px 16px 60px;
     }
 
-    .badge {
+    .badge-loc {
       display: inline-block;
       background-color: var(--primary);
-      color: #ffffff;
-      padding: 5px 14px;
+      padding: 4px 12px;
       border-radius: 999px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 12px;
-      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
     }
 
     .hero h1 {
       font-size: 24px;
       font-weight: 800;
-      margin-bottom: 10px;
-      line-height: 1.3;
+      margin-bottom: 8px;
     }
 
     .hero p {
-      max-width: 580px;
-      margin: 0 auto 20px;
+      max-width: 620px;
+      margin: 0 auto 18px;
       font-size: 13px;
       color: #cbd5e1;
     }
 
-    .hero-actions {
+    .hero-actions-row {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-
-    .hero-btn {
-      display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      color: #ffffff;
-    }
-
-    .hero-call { background-color: var(--primary); }
-    .hero-zalo { background-color: #0284c7; }
-    .hero-vip {
-      background-color: #7c3aed;
-      width: 100%;
-      max-width: 290px;
-      justify-content: center;
+      gap: 10px;
+      max-width: 600px;
       margin: 0 auto;
     }
 
-    /* ================= BỘ LỌC TRA CỨU ================= */
-    .filter-area {
-      max-width: 540px;
-      margin: -45px auto 35px;
-      padding: 0 14px;
+    .action-btn {
+      flex: 1 1 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .act-call { background-color: var(--primary); }
+    .act-zalo { background-color: #0284c7; }
+    .act-vip { background-color: #7c3aed; }
+
+    @media screen and (max-width: 500px) {
+      .hero-actions-row { gap: 6px; }
+      .action-btn { font-size: 11.5px; padding: 8px 4px; }
+    }
+
+    /* ================= 3. KHUNG TRA CỨU 1 HÀNG DUY NHẤT ================= */
+    .filter-wrap {
+      max-width: 740px;
+      margin: -28px auto 35px;
+      padding: 0 12px;
       position: relative;
       z-index: 10;
     }
 
-    .filter-card {
+    .filter-inline-compact {
       background: #ffffff;
-      border-radius: var(--radius);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      padding: 18px;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 6px 10px 6px 18px;
       border: 1px solid var(--border);
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 12px;
     }
 
-    .filter-header {
+    .filter-col {
+      flex: 1 1 0;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 12px;
-      margin-bottom: 14px;
-      font-size: 13px;
+      flex-direction: column;
+      gap: 2px;
     }
 
-    .filter-title {
-      font-weight: 800;
-      color: var(--text-dark);
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .filter-col label {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
 
-    .legend {
-      display: flex;
-      gap: 10px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .leg-green { color: var(--primary); }
-    .leg-red { color: #dc2626; }
-
-    .form-group {
-      margin-bottom: 12px;
-      text-align: left;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    .form-input {
+    .filter-col input {
       width: 100%;
-      padding: 9px 12px;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      font-size: 14px;
+      border: none;
       outline: none;
-      background: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      background: transparent;
+      padding: 2px 0;
     }
 
-    .btn-submit {
-      width: 100%;
+    .btn-check-compact {
       background-color: var(--primary);
       color: #ffffff;
       border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 15px;
+      border-radius: 999px;
+      padding: 9px 20px;
+      font-size: 13px;
       font-weight: 700;
       cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 0.15s ease;
     }
 
-    /* ================= DANH SÁCH VILLA ================= */
-    .content-section {
-      max-width: 1100px;
+    .btn-check-compact:active {
+      background-color: var(--primary-dark);
+    }
+
+    @media screen and (max-width: 500px) {
+      .filter-wrap { padding: 0 8px; }
+      .filter-inline-compact { padding: 5px 6px 5px 12px; gap: 6px; }
+      .filter-col label { font-size: 9px; }
+      .filter-col input { font-size: 11px; }
+      .btn-check-compact { padding: 8px 12px; font-size: 11.5px; }
+    }
+
+    /* ================= 4. LƯỚI 20 VILLA (4 CỘT TRÊN MÁY TÍNH) ================= */
+    .villa-container {
+      max-width: 1300px;
       margin: 0 auto 50px;
       padding: 0 16px;
     }
 
-    .title-center {
+    .section-title {
       text-align: center;
       font-size: 20px;
       font-weight: 800;
-      margin-bottom: 24px;
-      color: var(--text-dark);
+      margin-bottom: 22px;
     }
 
-    .villa-grid {
+    .villa-grid-4 {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
 
-    .villa-card {
+    @media screen and (max-width: 1024px) {
+      .villa-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media screen and (max-width: 600px) {
+      .villa-grid-4 { grid-template-columns: 1fr; }
+    }
+
+    .villa-item {
       background: #ffffff;
       border-radius: var(--radius);
-      overflow: hidden;
       border: 1px solid var(--border);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
     }
 
-    .villa-img {
-      height: 180px;
-      background-color: #e2e8f0;
-      background-position: center;
-      background-size: cover;
+    .villa-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .villa-info {
-      padding: 14px;
+    .item-thumb {
+      height: 160px;
+      background: #e2e8f0 center/cover no-repeat;
+      position: relative;
     }
 
-    .villa-name {
-      font-size: 16px;
+    .thumb-hint {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(15, 23, 42, 0.78);
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .item-body {
+      padding: 12px;
+    }
+
+    .item-name {
+      font-size: 15px;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      color: var(--text);
     }
 
-    .villa-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
+    .item-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .villa-meta {
+    .item-foot {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-top: 1px solid var(--border);
-      padding-top: 10px;
+      padding-top: 8px;
     }
 
-    .price-text {
-      font-size: 14px;
+    .item-price {
+      font-size: 13px;
       font-weight: 800;
       color: #e11d48;
     }
 
-    .btn-view {
-      background-color: var(--primary);
-      color: #ffffff;
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 6px;
+    .btn-view-album {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* ================= 5. POPUP ALBUM VÀ VUỐT DI ĐỘNG ================= */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 99999;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 14px;
+      touch-action: none;
+    }
+
+    .modal-box {
+      background: #0f172a;
+      border-radius: var(--radius);
+      max-width: 900px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      color: #fff;
+      border-bottom: 1px solid #334155;
+    }
+
+    .modal-title { font-size: 15px; font-weight: 700; }
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .close-btn:hover { color: #fff; }
+
+    .modal-view {
+      position: relative;
+      background: #020617;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      .modal-view { height: 280px; }
+    }
+
+    .modal-view img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+      transition: opacity 0.15s ease;
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(15, 23, 42, 0.65);
+      color: #fff;
+      border: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    .nav-arrow:hover { background: rgba(5, 150, 105, 0.9); }
+    .arrow-prev { left: 12px; }
+    .arrow-next { right: 12px; }
+
+    .modal-caption {
+      padding: 10px 16px;
+      color: #cbd5e1;
       font-size: 12px;
-      font-weight: 600;
+      background: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-swipe-hint {
+      color: #94a3b8;
+      font-size: 11px;
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- 1. HEADER (ĐÃ GẮN FILE INDEX.HTML ĐÍCH) -->
   <header class="header-bar">
     <div class="header-content">
-      <!-- Dòng 1 trên Mobile: Thương hiệu -->
       <a href="./" class="brand-box">
         🏨 VANDON <span>STAY</span>
       </a>
 
-      <!-- Dòng 2 trên Mobile: Chiếm trọn 1 hàng -->
       <nav class="menu-box">
-        <a href="./Hoctienganh/" class="nav-btn btn-english">
-          📚 VANDON ENGLISH
-        </a>
-        <a href="./shopeeqn/" class="nav-btn btn-shopee">
-          🎁 SHOPEE QN
-        </a>
-        <a href="tel:0396588880" class="nav-btn btn-call">
-          📞 Gọi
-        </a>
+        <a href="./Hoctienganh/index.html" class="nav-btn btn-english">📚 VANDON ENGLISH</a>
+        <a href="./shopeeqn/index.html" class="nav-btn btn-shopee">🎁 SHOPEE QN</a>
+        <a href="tel:0396588880" class="nav-btn btn-call">📞 Gọi</a>
       </nav>
     </div>
   </header>
 
-  <!-- BANNER -->
+  <!-- 2. HERO BANNER & 3 NÚT LIÊN HỆ TRÊN 1 HÀNG -->
   <section class="hero">
-    <div class="badge">SONASEA VÂN ĐỒN HARBOR CITY</div>
+    <div class="badge-loc">SONASEA VÂN ĐỒN HARBOR CITY</div>
     <h1>Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Biển</h1>
-    <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn từ 3 đến 5 phòng ngủ, hồ bơi riêng, BBQ sân vườn và hỗ trợ tận tâm 24/7.</p>
+    <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
     
-    <div class="hero-actions">
-      <a href="tel:0396588880" class="hero-btn hero-call">📞 Gọi Ngay: 039.65.88880</a>
-      <a href="https://zalo.me/0396588880" target="_blank" class="hero-btn hero-zalo">💬 Chat Zalo 1-1</a>
+    <div class="hero-actions-row">
+      <a href="tel:0396588880" class="action-btn act-call">📞 Đặt Phòng: 039.65.88880</a>
+      <a href="https://zalo.me/0396588880" target="_blank" class="action-btn act-zalo">💬 Chat Zalo 1-1</a>
+      <a href="#" class="action-btn act-vip">👑 Khách VIP</a>
     </div>
-    <a href="#" class="hero-btn hero-vip">👑 Khách Hàng Thân Thiết</a>
   </section>
 
-  <!-- BỘ LỌC TRA CỨU -->
-  <div class="filter-area">
-    <div class="filter-card">
-      <div class="filter-header">
-        <div class="filter-title">
-          📅 TRA CỨU TÌNH TRẠNG PHÒNG TRỐNG
-        </div>
-        <div class="legend">
-          <span class="leg-green">● Còn phòng</span>
-          <span class="leg-red">● Đã kín</span>
-        </div>
+  <!-- 3. KHUNG TRA CỨU 1 HÀNG DUY NHẤT: NHẬN PHÒNG - TRẢ PHÒNG - KIỂM TRA -->
+  <div class="filter-wrap">
+    <form class="filter-inline-compact" onsubmit="event.preventDefault(); alert('Đang kiểm tra tình trạng phòng...');">
+      <div class="filter-col">
+        <label for="checkin">Nhận phòng</label>
+        <input type="date" id="checkin" />
       </div>
 
-      <div class="form-group">
-        <label for="checkin">Ngày nhận phòng (Check-in)</label>
-        <input type="date" id="checkin" class="form-input" />
+      <div class="filter-col">
+        <label for="checkout">Trả phòng</label>
+        <input type="date" id="checkout" />
       </div>
 
-      <div class="form-group">
-        <label for="checkout">Ngày trả phòng (Check-out)</label>
-        <input type="date" id="checkout" class="form-input" />
+      <button type="submit" class="btn-check-compact">🔍 Kiểm tra</button>
+    </form>
+  </div>
+
+  <!-- 4. LƯỚI 20 VILLA (4 CỘT TRÊN MÁY TÍNH) -->
+  <section class="villa-container">
+    <h2 class="section-title">🏡 DANH SÁCH 20 CĂN BIỆT THỰ NGHỈ DƯỠNG</h2>
+    <div class="villa-grid-4" id="villaGrid"></div>
+  </section>
+
+  <!-- 5. POPUP ALBUM ẢNH (HỖ TRỢ VUỐT CẢM ỨNG DI ĐỘNG) -->
+  <div id="imageModal" class="modal-overlay" onclick="closeOnOutside(event)">
+    <div class="modal-box" id="modalBox">
+      <div class="modal-head">
+        <div class="modal-title" id="modalTitle">Tên Villa</div>
+        <button class="close-btn" onclick="closeAlbum()">&times;</button>
       </div>
 
-      <div class="form-group">
-        <label for="room-select">Sức chứa / Số phòng ngủ</label>
-        <select id="room-select" class="form-input">
-          <option value="all">Tất cả 20 căn</option>
-          <option value="3">Biệt thự 3 Phòng ngủ</option>
-          <option value="4">Biệt thự 4 Phòng ngủ</option>
-          <option value="5">Biệt thự 5 Phòng ngủ</option>
-        </select>
+      <div class="modal-view" id="modalTouchArea">
+        <button class="nav-arrow arrow-prev" onclick="prevImg()">❮</button>
+        <img id="currentModalImg" src="" alt="Hình ảnh biệt thự" />
+        <button class="nav-arrow arrow-next" onclick="nextImg()">❯</button>
       </div>
 
-      <button type="button" class="btn-submit" onclick="searchRoom()">🔍 Tra Cứu Ngay</button>
+      <div class="modal-caption">
+        <span id="modalCounter">Đang tải ảnh...</span>
+        <span class="modal-swipe-hint">👈 Vuốt ngang để chuyển ảnh 👉</span>
+      </div>
     </div>
   </div>
 
-  <!-- DANH SÁCH BIỆT THỰ -->
-  <section class="content-section">
-    <h2 class="title-center">🏡 DANH SÁCH BIỆT THỰ NGHỈ DƯỠNG</h2>
-    <div class="villa-grid">
-      <!-- Căn V3-01 -->
-      <article class="villa-card">
-        <div class="villa-img" style="background-image: url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');"></div>
-        <div class="villa-info">
-          <h3 class="villa-name">Villa Sonasea V3-01</h3>
-          <p class="villa-desc">3 Phòng ngủ • Hồ bơi riêng • Bếp BBQ sân vườn đầy đủ</p>
-          <div class="villa-meta">
-            <span class="price-text">Liên hệ giá tốt</span>
-            <a href="./villasonasea/" class="btn-view">Xem chi tiết</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Căn V4-05 -->
-      <article class="villa-card">
-        <div class="villa-thumb villa-img" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');"></div>
-        <div class="villa-info">
-          <h3 class="villa-name">Villa Sonasea V4-05</h3>
-          <p class="villa-desc">4 Phòng ngủ • Sát biển Bái Tử Long • Bể bơi panorama</p>
-          <div class="villa-meta">
-            <span class="price-text">Liên hệ giá tốt</span>
-            <a href="./villasonasea/" class="btn-view">Xem chi tiết</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
   <script>
-    const now = new Date();
-    const nextDay = new Date(now);
-    nextDay.setDate(nextDay.getDate() + 1);
-
+    // Điền ngày mặc định
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
     const toYMD = (d) => d.toISOString().split('T')[0];
+    document.getElementById('checkin').value = toYMD(today);
+    document.getElementById('checkout').value = toYMD(tomorrow);
 
-    document.getElementById('checkin').value = toYMD(now);
-    document.getElementById('checkout').value = toYMD(nextDay);
+    // ================= DANH SÁCH 20 TÊN THƯ MỤC CHUẨN TRONG villasonasea =================
+    const villas = [
+      { folder: "V2A02", name: "Villa Sonasea V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ full đồ" },
+      { folder: "V2C05A", name: "Villa Sonasea V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn thoáng" },
+      { folder: "V2C06", name: "Villa Sonasea V2C06", desc: "3 PN • Không gian yên tĩnh thư giãn" },
+      { folder: "V2C08A", name: "Villa Sonasea V2C08A", desc: "3 PN • Thiết kế trang nhã ấm cúng" },
+      { folder: "V2D05A", name: "Villa Sonasea V2D05A", desc: "3 PN • Nội thất gỗ cao cấp" },
+      { folder: "V3A09", name: "Villa Sonasea V3A09", desc: "3 PN • Căn góc thoáng đãng" },
+      { folder: "V3A10", name: "Villa Sonasea V3A10", desc: "3 PN • Bể bơi tràn bờ hiện đại" },
+      { folder: "V3H01", name: "Villa Sonasea V3H01", desc: "3 PN • Gần trục đường chính & tiện ích" },
+      { folder: "V3I02", name: "Villa Sonasea V3I02", desc: "3 PN • Sân nướng BBQ riêng biệt" },
+      { folder: "V3I03", name: "Villa Sonasea V3I03", desc: "3 PN • Ban công ngắm cảnh biển" },
+      { folder: "V3J03", name: "Villa Sonasea V3J03", desc: "3 PN • Phong cách Địa Trung Hải" },
+      { folder: "V3K10", name: "Villa Sonasea V3K10", desc: "3 PN • View công viên cây xanh" },
+      { folder: "V3K11", name: "Villa Sonasea V3K11", desc: "4 PN • Không gian sinh hoạt rộng lớn" },
+      { folder: "V3M05", name: "Villa Sonasea V3M05", desc: "4 PN • Bể bơi panorama vô cực" },
+      { folder: "V3M11A", name: "Villa Sonasea V3M11A", desc: "4 PN • View trực diện vịnh Bái Tử Long" },
+      { folder: "V3N01", name: "Villa Sonasea V3N01", desc: "4 PN • Phòng ốc rộng rãi sang trọng" },
+      { folder: "V3N08A", name: "Villa Sonasea V3N08A", desc: "4 PN • Căn góc 2 mặt tiền đắc địa" },
+      { folder: "villa-18", name: "Villa Sonasea No.18 VIP", desc: "5 PN • Đơn lập VIP ven bãi cát" },
+      { folder: "villa-19", name: "Villa Sonasea No.19 VIP", desc: "5 PN • Bể bơi lớn chuẩn gia đình" },
+      { folder: "villa-20", name: "Villa Sonasea No.20 VIP", desc: "5 PN • Nội thất 5 sao đẳng cấp" }
+    ];
 
-    function searchRoom() {
-      const inDate = document.getElementById('checkin').value;
-      const outDate = document.getElementById('checkout').value;
-      alert(`Đang tra cứu từ ngày ${inDate} đến ${outDate}. Hệ thống đang cập nhật danh sách khả dụng!`);
+    // Render 20 căn villa ra lưới
+    const grid = document.getElementById('villaGrid');
+    villas.forEach((villa) => {
+      const card = document.createElement('div');
+      card.className = 'villa-item';
+      card.onclick = () => loadAndOpenVillaAlbum(villa);
+
+      const coverUrl = `villasonasea/${villa.folder}/1.jpg`;
+
+      card.innerHTML = `
+        <div class="item-thumb" style="background-image: url('${coverUrl}'), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');">
+          <span class="thumb-hint">📷 Xem Album</span>
+        </div>
+        <div class="item-body">
+          <h3 class="item-name">${villa.name}</h3>
+          <p class="item-desc">${villa.desc}</p>
+          <div class="item-foot">
+            <span class="item-price">Liên hệ giá tốt</span>
+            <span class="btn-view-album">Xem phòng ➔</span>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    // ================= TỰ ĐỘNG NẠP TẤT CẢ ẢNH TRONG THƯ MỤC CĂN =================
+    let currentAlbum = [];
+    let currentIndex = 0;
+    const modalImg = document.getElementById('currentModalImg');
+
+    function loadAndOpenVillaAlbum(villa) {
+      document.getElementById('modalTitle').innerText = villa.name;
+      document.getElementById('modalCounter').innerText = 'Đang kiểm tra album...';
+      document.getElementById('imageModal').style.display = 'flex';
+
+      currentAlbum = [];
+      currentIndex = 0;
+
+      const checkImage = (imgIdx) => {
+        const testImg = new Image();
+        const path = `villasonasea/${villa.folder}/${imgIdx}.jpg`;
+        testImg.src = path;
+
+        testImg.onload = () => {
+          currentAlbum.push(path);
+          if (currentAlbum.length === 1) {
+            updateModalImage();
+          } else {
+            document.getElementById('modalCounter').innerText = `Ảnh ${currentIndex + 1} / ${currentAlbum.length}`;
+          }
+          if (imgIdx < 50) checkImage(imgIdx + 1);
+        };
+
+        testImg.onerror = () => {
+          if (currentAlbum.length === 0) {
+            currentAlbum.push(`villasonasea/${villa.folder}/1.jpg`);
+            updateModalImage();
+          } else {
+            document.getElementById('modalCounter').innerText = `Ảnh ${currentIndex + 1} / ${currentAlbum.length}`;
+          }
+        };
+      };
+
+      checkImage(1);
     }
+
+    function updateModalImage() {
+      if (currentAlbum.length === 0) return;
+      modalImg.style.opacity = '0.3';
+      modalImg.src = currentAlbum[currentIndex];
+      setTimeout(() => { modalImg.style.opacity = '1'; }, 100);
+      document.getElementById('modalCounter').innerText = `Ảnh ${currentIndex + 1} / ${currentAlbum.length}`;
+    }
+
+    function nextImg() {
+      if (currentAlbum.length <= 1) return;
+      currentIndex = (currentIndex + 1) % currentAlbum.length;
+      updateModalImage();
+    }
+
+    function prevImg() {
+      if (currentAlbum.length <= 1) return;
+      currentIndex = (currentIndex - 1 + currentAlbum.length) % currentAlbum.length;
+      updateModalImage();
+    }
+
+    function closeAlbum() {
+      document.getElementById('imageModal').style.display = 'none';
+      currentAlbum = [];
+    }
+
+    function closeOnOutside(e) {
+      if (e.target.id === 'imageModal') closeAlbum();
+    }
+
+    // ================= VUỐT CẢM ỨNG DI ĐỘNG (TOUCH SWIPE) =================
+    const touchZone = document.getElementById('modalTouchArea');
+    let startTouchX = 0;
+    let endTouchX = 0;
+    let startTouchY = 0;
+    let endTouchY = 0;
+
+    touchZone.addEventListener('touchstart', (e) => {
+      startTouchX = e.touches[0].clientX;
+      startTouchY = e.touches[0].clientY;
+    }, { passive: true });
+
+    touchZone.addEventListener('touchend', (e) => {
+      endTouchX = e.changedTouches[0].clientX;
+      endTouchY = e.changedTouches[0].clientY;
+      handleGesture();
+    }, { passive: true });
+
+    function handleGesture() {
+      const diffX = startTouchX - endTouchX;
+      const diffY = startTouchY - endTouchY;
+
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35) {
+        if (diffX > 0) {
+          nextImg(); // Vuốt sang trái -> Xem ảnh kế tiếp
+        } else {
+          prevImg(); // Vuốt sang phải -> Xem ảnh trước đó
+        }
+      }
+    }
+
+    // Phím bấm điều hướng máy tính
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('imageModal');
+      if (modal.style.display === 'flex') {
+        if (e.key === 'Escape') closeAlbum();
+        if (e.key === 'ArrowRight') nextImg();
+        if (e.key === 'ArrowLeft') prevImg();
+      }
+    });
   </script>
 </body>
 </html>
