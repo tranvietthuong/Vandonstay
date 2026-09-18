@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>VANDON STAY - Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Sonasea Vân Đồn</title>
   <meta name="description" content="Hệ thống 20 biệt thự nghỉ dưỡng Sonasea Vân Đồn Harbor City ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ." />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
@@ -104,7 +108,7 @@
       }
     }
 
-    /* ================= 2. HERO BANNER XỨNG TẦM ĐẲNG CẤP 5 SAO ================= */
+    /* ================= 2. HERO BANNER ================= */
     .hero {
       position: relative;
       background: linear-gradient(135deg, rgba(2, 6, 23, 0.82) 0%, rgba(15, 23, 42, 0.72) 50%, rgba(5, 150, 105, 0.45) 100%),
@@ -184,7 +188,7 @@
     /* ================= 3. KHUNG TRA CỨU PHÒNG ================= */
     .filter-wrap {
       max-width: 780px;
-      margin: -32px auto 28px;
+      margin: -32px auto 35px;
       padding: 0 16px;
       position: relative;
       z-index: 10;
@@ -239,11 +243,61 @@
     .btn-check-compact:hover { background-color: var(--primary-dark); }
 
     @media screen and (max-width: 640px) {
-      .filter-wrap { margin: -24px auto 16px; padding: 0 8px; }
+      .filter-wrap { margin: -24px auto 20px; padding: 0 8px; }
       .filter-inline-compact { padding: 6px 8px 6px 14px; gap: 8px; }
       .filter-col label { font-size: 8.5px; }
       .filter-col input { font-size: 11px; }
       .btn-check-compact { padding: 7px 14px; font-size: 11.5px; }
+    }
+
+    /* ================= 4. DẢI CHỮ CHẠY HÀI HÒA (ĐẶT GỌN GÀNG TRÊN TIÊU ĐỀ VILLA) ================= */
+    .marquee-banner-wrap {
+      max-width: 1440px;
+      margin: 0 auto 20px;
+      padding: 0 20px;
+    }
+    .marquee-box {
+      display: block;
+      background: linear-gradient(135deg, #065f46, #047857, #059669);
+      border-radius: 10px;
+      padding: 8px 16px;
+      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.2);
+      border: 1px solid #a7f3d0;
+      overflow: hidden;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      z-index: 20;
+      transition: all 0.2s ease;
+    }
+    .marquee-box:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.35);
+    }
+    @keyframes marqueeText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marqueeText 26s linear infinite;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .marquee-box:hover .marquee-content {
+      animation-play-state: paused;
+    }
+    .marquee-content span {
+      color: #fef08a;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 640px) {
+      .marquee-banner-wrap { padding: 0 8px; margin-bottom: 14px; }
+      .marquee-box { padding: 7px 10px; border-radius: 8px; }
+      .marquee-content { font-size: 10.5px; }
     }
 
     /* Thanh trạng thái phòng */
@@ -263,7 +317,7 @@
     .badge-green { color: var(--primary); }
     .badge-red { color: var(--danger); }
 
-    /* ================= 4. LƯỚI VILLA (5 CỘT DESKTOP - 2 CỘT MOBILE) ================= */
+    /* ================= 5. LƯỚI VILLA ================= */
     .villa-container {
       max-width: 1440px;
       margin: 0 auto 50px;
@@ -455,7 +509,7 @@
       .btn-action-status { font-size: 9.5px; padding: 3px 6px; }
     }
 
-    /* ================= 5. POPUP ALBUM ================= */
+    /* ================= 6. POPUP ALBUM ================= */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -557,7 +611,7 @@
       z-index: 20;
     }
 
-    /* ================= 6. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS ================= */
+    /* ================= 7. CHÂN TRANG ================= */
     .footer-section {
       background-color: #0b1324;
       color: #94a3b8;
@@ -642,7 +696,7 @@
       </a>
       <nav class="menu-box">
         <a href="./Hoctienganh/index.html" class="nav-btn btn-english" title="Hệ thống học tiếng Anh">
-          📚 Vandon Eng
+          📚 Vandon Stu
         </a>
         <a href="./shopeeqn/index.html" class="nav-btn btn-shopee" title="Gian hàng Shopee Quảng Ninh">
           🎁 Shopee QN
@@ -654,10 +708,10 @@
     </div>
   </header>
 
-  <!-- 2. HERO BANNER XỨNG TẦM ĐẲNG CẤP 5 SAO -->
+  <!-- 2. HERO BANNER VILLA SONASEA VÂN ĐỒN -->
   <section class="hero">
     <div class="badge-loc">SONASEA VÂN ĐỒN HARBOR CITY</div>
-    <h1>Hệ Thống 20 Biệt Thự Nghỉ Dưỡng Biển</h1>
+    <h1>Villa Sonasea Vân Đồn</h1>
     <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
     
     <div class="hero-actions-row">
@@ -684,7 +738,16 @@
     </form>
   </div>
 
-  <!-- 4. LƯỚI 20 VILLA (5 CỘT DESKTOP - 2 CỘT MOBILE) -->
+  <!-- 4. DẢI CHỮ CHẠY HÀI HÒA (ĐẶT GỌN GÀNG TRÊN TIÊU ĐỀ VILLA, ĐỒNG BỘ MÀU XANH NGỌC SANG TRỌNG) -->
+  <div class="marquee-banner-wrap">
+    <a href="./shopeeqn/index.html" class="marquee-box" title="Bấm để ghé thăm Shopee QN">
+      <div class="marquee-content">
+        ✨ Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên shopee hãy ghé thăm và ủng hộ gian hàng shopeeqn bằng cách bấm vào <span>shopeeqn nhé!</span> &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; 🎁 Mua sắm tiện ích du lịch, đồ gia dụng & đặc sản chính hãng!
+      </div>
+    </a>
+  </div>
+
+  <!-- 5. LƯỚI 20 VILLA -->
   <section class="villa-container">
     <h2 class="section-title">🏡 DANH SÁCH 20 CĂN BIỆT THỰ NGHỈ DƯỠNG</h2>
     
@@ -699,7 +762,7 @@
     <div class="villa-grid-4" id="villaGrid"></div>
   </section>
 
-  <!-- 5. POPUP ALBUM -->
+  <!-- 6. POPUP ALBUM -->
   <div id="imageModal" class="modal-overlay">
     <div class="modal-top-bar">
       <div class="modal-title" id="modalTitle">Tên Biệt Thự</div>
@@ -720,11 +783,10 @@
     </div>
   </div>
 
-  <!-- 6. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS VÂN ĐỒN SONASEA -->
+  <!-- 7. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS -->
   <footer class="footer-section">
     <div class="footer-container">
       
-      <!-- Cột 1: Thông tin liên hệ & Thương hiệu -->
       <div class="footer-col">
         <h3>🏨 VANDON STAY - SONASEA</h3>
         <p>Hệ thống chuỗi 20 căn biệt thự nghỉ dưỡng riêng tư cao cấp ven vịnh Bái Tử Long, thuộc đại quần thể Sonasea Vân Đồn Harbor City.</p>
@@ -733,18 +795,16 @@
         <p><strong>⏰ Giờ phục vụ:</strong> Hỗ trợ tư vấn đặt phòng 24/7</p>
       </div>
 
-      <!-- Cột 2: Tiện ích hệ sinh thái Vandonstay -->
       <div class="footer-col">
         <h3>🔗 TIỆN ÍCH HỆ SINH THÁI</h3>
         <ul class="footer-links">
-          <li><a href="./Hoctienganh/index.html">📚 <strong>Vandon English</strong>: Học liệu tiếng Anh tương tác cho bé</a></li>
+          <li><a href="./Hoctienganh/index.html">📚 <strong>Vandon Stu</strong>: Học liệu tiếng Anh tương tác cho bé</a></li>
           <li><a href="./shopeeqn/index.html">🎁 <strong>Shopee QN</strong>: Tiện ích du lịch biển, loa tắm tiếng Anh & đặc sản</a></li>
           <li><a href="https://zalo.me/0396588880" target="_blank">💬 <strong>Tư Vấn Zalo</strong>: Nhận báo giá & lịch trống villa theo đoàn</a></li>
           <li><a href="tel:0396588880">👑 <strong>Chính Sách Khách VIP</strong>: Ưu đãi đoàn gia đình dài ngày</a></li>
         </ul>
       </div>
 
-      <!-- Cột 3: Bản đồ Google Maps Vân Đồn Sonasea Harbor City -->
       <div class="footer-col">
         <h3>🗺️ VỊ TRÍ SONASEA VÂN ĐỒN</h3>
         <div class="map-box">
@@ -760,7 +820,6 @@
 
     </div>
 
-    <!-- Dòng bản quyền cuối trang -->
     <div class="footer-bottom">
       <div>© 2026 VandonStay. Hệ thống quản lý & cho thuê biệt thự nghỉ dưỡng Sonasea Vân Đồn.</div>
       <div>Phát triển và vận hành bởi đội ngũ Kỹ thuật Vandonstay</div>
@@ -779,7 +838,7 @@
     outInput.value = toYMD(tomorrow);
     inInput.min = toYMD(today);
 
-    // ================= DANH SÁCH 20 VILLA KÈM LỊCH BẬN (BỎ CHỮ SONASEA) =================
+    // ================= DANH SÁCH 20 VILLA =================
     const villas = [
       { folder: "V2A02", name: "Villa V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ", bookedDates: [toYMD(today)] },
       { folder: "V2C05A", name: "Villa V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn", bookedDates: [] },
