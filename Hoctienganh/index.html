@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>VANDONENGLISH - Hệ Thống Giáo Trình Tiếng Anh Tương Tác</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     html { scroll-behavior: smooth; }
@@ -14,11 +12,10 @@
 </head>
 <body class="bg-slate-900 text-slate-100 antialiased min-h-screen flex flex-col font-sans select-none">
 
-  <!-- 1. THANH HEADER 2 TẦNG TRÊN DI ĐỘNG (NÚT TO RÕ CHỮ) -->
+  <!-- 1. THANH HEADER 2 TẦNG TIỆN ÍCH TRÊN DI ĐỘNG -->
   <header class="bg-slate-950/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40 shadow-md">
     <div class="max-w-7xl mx-auto px-3 sm:px-8 py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
       
-      <!-- Tầng 1: Logo căn giữa trên Mobile -->
       <div class="flex items-center justify-center sm:justify-start">
         <a href="index.html" class="text-lg sm:text-xl font-black text-emerald-400 tracking-tight flex items-center gap-1.5">
           <i class="fa-solid fa-graduation-cap text-emerald-400 text-xl"></i> VANDON<span class="text-white">ENGLISH</span>
@@ -28,7 +25,6 @@
         </span>
       </div>
 
-      <!-- Tầng 2: 3 Nút to rõ cả chữ, dàn đều 1 hàng ngang -->
       <nav class="flex items-center gap-2 w-full sm:w-auto justify-between">
         <a href="../shopeeqn/index.html" class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-bold text-amber-300 bg-amber-950/60 hover:bg-amber-900/80 border border-amber-500/50 rounded-xl transition shadow-sm whitespace-nowrap">
           <span>🎁</span> <span>Shopee QN</span>
@@ -45,29 +41,60 @@
   </header>
 
   <!-- 2. BANNER GIỚI THIỆU GỌN GÀNG -->
-  <section class="relative bg-gradient-to-br from-emerald-950 via-teal-950 to-slate-950 text-white overflow-hidden py-4 sm:py-8 border-b border-slate-800 text-center">
+  <section class="relative bg-gradient-to-br from-emerald-950 via-teal-950 to-slate-950 text-white overflow-hidden py-3 sm:py-5 border-b border-slate-800 text-center">
     <div class="max-w-4xl mx-auto px-3 relative z-10">
-      <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-[10px] font-bold uppercase tracking-wider mb-1.5">
+      <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-[10px] font-bold uppercase tracking-wider mb-1">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
         Học Liệu Tương Tác Vandonstay
       </div>
 
-      <h1 class="text-xl sm:text-2xl font-black text-white leading-tight mb-1">
+      <h1 class="text-lg sm:text-2xl font-black text-white leading-tight mb-1">
         VANDON<span class="text-emerald-400">ENGLISH</span>
       </h1>
 
       <p class="text-[11px] sm:text-xs text-slate-300 max-w-lg mx-auto leading-relaxed">
-        Hệ thống webapp học tiếng Anh phản xạ đa giác quan: Audio chuẩn bản ngữ, Crazy English cuồng nhiệt và chuỗi truyện One Story A Day.
+        Hệ thống webapp học tiếng Anh phản xạ đa giác quan: Audio bản ngữ, Crazy English và One Story A Day.
       </p>
     </div>
   </section>
 
-  <!-- 3. DANH SÁCH GIÁO TRÌNH (2 CỘT DI ĐỘNG, 4 CỘT PC) -->
-  <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 flex-1 w-full space-y-4">
+  <!-- 3. BANNER SHOPEE QN TINH GỌN (CAO BẰNG 1/3 - BẤM VÀO ĐÂU CŨNG VÀO SHOPEE QN) -->
+  <div class="max-w-5xl mx-auto px-3 -mt-2 relative z-20 w-full">
+    <a href="../shopeeqn/index.html" class="block group bg-gradient-to-r from-[#ea580c] via-[#c2410c] to-[#9a3412] hover:brightness-105 rounded-xl sm:rounded-2xl shadow-xl px-3.5 py-2.5 sm:px-5 sm:py-3 border border-amber-400/50 transition-all active:scale-[0.99] cursor-pointer text-inherit no-underline">
+      
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2">
+        <!-- Cột trái: Tên cửa hàng & Mô tả cô đọng -->
+        <div class="text-center sm:text-left flex-1 min-w-0">
+          <div class="flex items-center justify-center sm:justify-start gap-2 mb-0.5">
+            <span class="px-2 py-0.2 rounded-full bg-black/25 text-amber-200 text-[9px] font-extrabold uppercase tracking-wider">
+              Shopee Affiliate
+            </span>
+            <h2 class="text-xs sm:text-sm font-black text-white tracking-tight">
+              Cửa Hàng Tiện Ích Du Khách & Gia Đình
+            </h2>
+          </div>
+          <p class="text-[10.5px] sm:text-[11px] text-amber-100 font-medium truncate">
+            🏖️ Phụ kiện đi biển &nbsp;•&nbsp; 📻 Dụng cụ học tiếng Anh &nbsp;•&nbsp; 🦑 Đặc sản khô Vân Đồn
+          </p>
+        </div>
+
+        <!-- Cột phải: Nút Kêu gọi vào Shopee Mall -->
+        <div class="shrink-0 flex items-center">
+          <span class="px-3 py-1.5 bg-amber-100 group-hover:bg-white text-orange-800 text-[11px] sm:text-xs font-black rounded-lg shadow transition flex items-center gap-1.5">
+            <span>Vào Shopee QN</span> ➔
+          </span>
+        </div>
+      </div>
+
+    </a>
+  </div>
+
+  <!-- 4. DANH SÁCH GIÁO TRÌNH (2 CỘT DI ĐỘNG, 4 CỘT PC) -->
+  <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 flex-1 w-full space-y-3.5">
     <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-      <h2 class="text-xs sm:text-sm font-black text-slate-200 uppercase tracking-wide flex items-center gap-1.5">
+      <h3 class="text-xs sm:text-sm font-black text-slate-200 uppercase tracking-wide flex items-center gap-1.5">
         <span>📖</span> Danh Sách Giáo Trình Tương Tác
-      </h2>
+      </h3>
       <span class="text-[10px] font-bold text-emerald-400 bg-emerald-950 border border-emerald-700/60 px-2 py-0.5 rounded-full">
         4 Webapp Sẵn Sàng
       </span>
@@ -84,13 +111,13 @@
                  alt="900 Câu Giao Tiếp" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
             <span class="absolute top-1.5 left-1.5 bg-emerald-700/90 text-white text-[9px] sm:text-[10px] font-black px-1.5 py-0.5 rounded shadow backdrop-blur-sm">
-              Giao Tiếp Gia Đình
+              Mẫu Câu Gia Đình
             </span>
           </div>
           <div class="p-2 sm:p-3.5">
-            <h3 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-emerald-400 transition leading-snug">
+            <h4 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-emerald-400 transition leading-snug">
               900 Câu Cho Mẹ & Bé
-            </h3>
+            </h4>
             <p class="text-[10px] sm:text-[11px] text-slate-400 mt-1 line-clamp-2 leading-tight">
               Mẫu câu sinh hoạt thường ngày, phát âm bản xứ kèm ảnh WebP và audio phản xạ.
             </p>
@@ -115,9 +142,9 @@
             </span>
           </div>
           <div class="p-2 sm:p-3.5">
-            <h3 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-rose-400 transition leading-snug">
+            <h4 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-rose-400 transition leading-snug">
               50 Bài Crazy English
-            </h3>
+            </h4>
             <p class="text-[10px] sm:text-[11px] text-slate-400 mt-1 line-clamp-2 leading-tight">
               Phương pháp cuồng nhiệt mở rộng khẩu hình miệng, làm chủ ngữ điệu tự nhiên.
             </p>
@@ -142,9 +169,9 @@
             </span>
           </div>
           <div class="p-2 sm:p-3.5">
-            <h3 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-amber-400 transition leading-snug">
+            <h4 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-amber-400 transition leading-snug">
               Story A Day (Tập 1)
-            </h3>
+            </h4>
             <p class="text-[10px] sm:text-[11px] text-slate-400 mt-1 line-clamp-2 leading-tight">
               365 câu chuyện ngắn nền tảng, giọng đọc truyền cảm giúp bé làm quen từ vựng.
             </p>
@@ -169,9 +196,9 @@
             </span>
           </div>
           <div class="p-2 sm:p-3.5">
-            <h3 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-blue-400 transition leading-snug">
+            <h4 class="text-xs sm:text-sm font-black text-slate-100 group-hover:text-blue-400 transition leading-snug">
               Story A Day (Tập 2)
-            </h3>
+            </h4>
             <p class="text-[10px] sm:text-[11px] text-slate-400 mt-1 line-clamp-2 leading-tight">
               Cấp độ nâng cao với vốn từ phong phú, câu chuyện mở rộng rèn luyện phản xạ.
             </p>
@@ -185,33 +212,6 @@
       </a>
 
     </div>
-
-    <!-- 4. VÙNG MÀU VÀNG/CAM SHOPEEQN KÍCH HOẠT TƯƠNG TÁC HỌC VIÊN -->
-    <div class="mt-8 pt-4">
-      <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 rounded-2xl shadow-xl p-5 sm:p-6 text-white border border-amber-400/40 text-center relative overflow-hidden">
-        <div class="inline-block px-3 py-1 rounded-full bg-black/20 text-amber-200 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2">
-          SHOPEE AFFILIATE PARTNER
-        </div>
-
-        <h3 class="text-lg sm:text-2xl font-black tracking-tight mb-2">
-          Cửa Hàng Tiện Ích Du Khách & Gia Đình
-        </h3>
-
-        <p class="text-xs sm:text-sm text-amber-100 max-w-2xl mx-auto mb-4 leading-relaxed">
-          Tuyển chọn phụ kiện đi biển Sonasea, loa tắm tiếng Anh Craven, bút chấm đọc chuẩn cho bé và hải sản đặc sản khô Vân Đồn chính hãng trên Shopee.
-        </p>
-
-        <div class="flex flex-wrap items-center justify-center gap-2.5">
-          <a href="../shopeeqn/index.html#hoc-tieng-anh" class="px-4 py-2.5 bg-white hover:bg-amber-50 text-orange-700 font-black rounded-xl text-xs shadow-md transition flex items-center gap-1.5">
-            <span>📻</span> Mua Loa Craven & Bút Đọc
-          </a>
-          <a href="../shopeeqn/index.html" class="px-4 py-2.5 bg-amber-950/50 hover:bg-amber-950/70 border border-amber-300/40 text-white font-bold rounded-xl text-xs transition flex items-center gap-1.5">
-            <span>🛒</span> Xem Toàn Bộ Gian Hàng ➔
-          </a>
-        </div>
-      </div>
-    </div>
-
   </main>
 
   <!-- 5. CHÂN TRANG ĐỒNG BỘ -->
