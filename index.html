@@ -24,67 +24,82 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
     body { background-color: #f8fafc; color: var(--text); line-height: 1.5; }
 
-    /* ================= 1. HEADER ================= */
+    /* ================= 1. HEADER TỐI ƯU 2 TẦNG TRÊN DI ĐỘNG ================= */
     .header-bar {
       background: #ffffff;
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
     .header-content {
       max-width: 1440px;
       margin: 0 auto;
-      padding: 12px 24px;
+      padding: 10px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
     }
     .brand-box {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       text-decoration: none;
       color: var(--primary);
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 900;
       white-space: nowrap;
       letter-spacing: -0.4px;
-      flex-shrink: 0;
     }
     .brand-box span { color: var(--text); }
     .menu-box { 
       display: flex; 
       align-items: center; 
-      gap: 10px; 
-      flex-shrink: 0;
+      gap: 8px; 
     }
     .nav-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 8px 16px;
+      gap: 4px;
+      padding: 7px 14px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
       text-decoration: none;
       white-space: nowrap;
       transition: all 0.2s ease;
-      flex-shrink: 0;
     }
     .nav-btn:hover { transform: translateY(-1px); }
     .btn-english { background-color: var(--primary-light); color: var(--primary-dark); border: 1.5px solid #a7f3d0; }
     .btn-shopee { background-color: var(--accent-light); color: #b45309; border: 1.5px solid #fde68a; }
     .btn-contact { background-color: var(--primary); color: #fff; border: 1.5px solid var(--primary); }
 
-    @media screen and (max-width: 640px) {
-      .header-content { padding: 8px 10px !important; gap: 6px !important; }
-      .brand-box { font-size: 15px !important; gap: 4px !important; }
-      .menu-box { gap: 5px !important; }
-      .menu-box .nav-btn { padding: 6px 9px !important; font-size: 11.5px !important; gap: 4px !important; }
+    /* Xếp 2 tầng trên di động để không bao giờ bị lệch hay tràn chữ */
+    @media screen and (max-width: 768px) {
+      .header-content { 
+        flex-direction: column !important; 
+        padding: 8px 10px !important; 
+        gap: 8px !important; 
+      }
+      .brand-box { 
+        font-size: 17px !important; 
+        justify-content: center !important; 
+        width: 100% !important; 
+      }
+      .menu-box { 
+        width: 100% !important; 
+        justify-content: space-between !important; 
+        gap: 6px !important; 
+      }
+      .menu-box .nav-btn { 
+        flex: 1 1 0 !important; 
+        padding: 6px 4px !important; 
+        font-size: 11px !important; 
+        letter-spacing: -0.2px !important; 
+      }
     }
 
     /* ================= 2. HERO BANNER XỨNG TẦM ĐẲNG CẤP 5 SAO ================= */
@@ -246,7 +261,7 @@
     .badge-green { color: var(--primary); }
     .badge-red { color: var(--danger); }
 
-    /* ================= 4. LƯỚI VILLA ================= */
+    /* ================= 4. LƯỚI VILLA (2 CỘT MOBILE) ================= */
     .villa-container {
       max-width: 1440px;
       margin: 0 auto 50px;
@@ -454,21 +469,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 20px;
+      padding: 12px 18px;
       background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 100%);
       color: #fff;
       z-index: 20;
     }
-    .modal-title { font-size: 15px; font-weight: 800; }
+    .modal-title { font-size: 14px; font-weight: 800; }
     
     .btn-close-album {
       background: rgba(255, 255, 255, 0.18);
       border: 1px solid rgba(255, 255, 255, 0.35);
       color: #fff;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
       border-radius: 999px;
-      padding: 6px 16px;
+      padding: 5px 14px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -506,11 +521,11 @@
       background: rgba(15, 23, 42, 0.75);
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.25);
-      width: 50px;
-      height: 50px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       cursor: pointer;
-      font-size: 22px;
+      font-size: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -522,17 +537,17 @@
       border-color: var(--primary);
       transform: translateY(-50%) scale(1.08);
     }
-    .arrow-prev { left: 24px; }
-    .arrow-next { right: 24px; }
+    .arrow-prev { left: 20px; }
+    .arrow-next { right: 20px; }
 
     @media screen and (max-width: 640px) {
       .nav-arrow { display: none; }
     }
 
     .modal-bottom-bar {
-      padding: 14px 20px;
+      padding: 12px 18px;
       color: #cbd5e1;
-      font-size: 12px;
+      font-size: 11.5px;
       background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
       display: flex;
       justify-content: space-between;
@@ -617,7 +632,7 @@
 </head>
 <body>
 
-  <!-- 1. HEADER -->
+  <!-- 1. HEADER (XẾP 2 TẦNG TRÊN MOBILE, KHÔNG LỆCH NÚT) -->
   <header class="header-bar">
     <div class="header-content">
       <a href="./" class="brand-box">
@@ -625,7 +640,7 @@
       </a>
       <nav class="menu-box">
         <a href="./Hoctienganh/index.html" class="nav-btn btn-english" title="Hệ thống học tiếng Anh">
-          📚 Vandon Eng<span class="hidden sm:inline">lish</span>
+          📚 Vandon Eng
         </a>
         <a href="./shopeeqn/index.html" class="nav-btn btn-shopee" title="Gian hàng Shopee Quảng Ninh">
           🎁 Shopee QN
@@ -712,7 +727,7 @@
         <h3>🏨 VANDON STAY - SONASEA</h3>
         <p>Hệ thống chuỗi 20 căn biệt thự nghỉ dưỡng riêng tư cao cấp ven vịnh Bái Tử Long, thuộc đại quần thể Sonasea Vân Đồn Harbor City.</p>
         <p><strong>📍 Địa chỉ:</strong> Khu đô thị Sonasea Vân Đồn Harbor City, Xã Hạ Long, Huyện Vân Đồn, Tỉnh Quảng Ninh.</p>
-        <p><strong>📞 Hotline / Zalo:</strong> <a href="tel:039678139" style="color:#34d399; font-weight:bold; text-decoration:none;">0867.078.139</a></p>
+        <p><strong>📞 Hotline / Zalo:</strong> <a href="tel:0867078139" style="color:#34d399; font-weight:bold; text-decoration:none;">0867.078.139</a></p>
         <p><strong>⏰ Giờ phục vụ:</strong> Hỗ trợ tư vấn đặt phòng 24/7</p>
       </div>
 
