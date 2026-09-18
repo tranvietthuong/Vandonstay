@@ -3,66 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>One Story A Day (Tập 2) - Vandonstay Academy</title>
+  <title>One Story A Day 2 - Vandonstay Academy</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Thanh điều hướng tích hợp chuẩn bên trong app container */
+    /* Ép layout đồng nhất dạng khung di động chuẩn trên cả Mobile và PC */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #030712;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .main-wrapper {
+      width: 100%;
+      max-width: 440px; /* Khung điện thoại chuẩn */
+      height: 100%;
+      background-color: #0b1324;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 1. Header hệ sinh thái 3 nút */
     .vandon-header-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 5px;
       padding: 6px 10px;
       background: #0f172a;
       border-bottom: 1px solid #1e293b;
-      font-family: system-ui, -apple-system, sans-serif;
       font-size: 11px;
       flex-shrink: 0;
       z-index: 40;
     }
-    .vandon-nav-group {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
     .vandon-link-btn {
+      flex: 1;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 3px;
-      padding: 4px 8px;
+      padding: 4px 6px;
       border-radius: 6px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
-      transition: all 0.2s ease;
       white-space: nowrap;
+      font-size: 10.5px;
     }
-    .btn-study {
-      background: #1e293b;
-      color: #38bdf8;
-      border: 1px solid #0284c7;
-    }
-    .btn-study:hover {
-      background: #0369a1;
-      color: #bae6fd;
-    }
-    .btn-villa {
-      background: #1e293b;
-      color: #94a3b8;
-      border: 1px solid #334155;
-    }
-    .btn-villa:hover {
-      color: #f1f5f9;
-      background: #334155;
-    }
-    .btn-shopee {
-      background: rgba(217, 119, 6, 0.15);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-    }
-    .btn-shopee:hover {
-      background: rgba(217, 119, 6, 0.3);
-      color: #fef08a;
-    }
-    /* Thanh ruy-băng ưu đãi học liệu */
+    .btn-study { background: #1e293b; color: #38bdf8; border: 1px solid #0284c7; }
+    .btn-villa { background: #1e293b; color: #94a3b8; border: 1px solid #334155; }
+    .btn-shopee { background: rgba(217, 119, 6, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+    /* Ruy-băng học liệu Shopee */
     .vandon-promo-ribbon {
       background: linear-gradient(90deg, #b45309, #c2410c);
       color: #ffffff;
@@ -71,58 +71,175 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: system-ui, -apple-system, sans-serif;
       flex-shrink: 0;
-      line-height: 1.3;
     }
     .vandon-promo-ribbon a {
       color: #fef08a;
       font-weight: 700;
       text-decoration: underline;
-      white-space: nowrap;
       margin-left: 6px;
+      white-space: nowrap;
     }
-    @media (max-width: 480px) {
-      .promo-text-sub { display: none; }
+
+    /* 2. KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG CHUẨN */
+    .lesson-control-header {
+      background: #0369a1;
+      border-bottom: 1px solid #0284c7;
+      padding: 6px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 30;
+    }
+
+    /* Dòng 1: Nút thương hiệu One Story A Day 2 có menu xổ */
+    .series-dropdown-wrap {
+      position: relative;
+      width: 100%;
+    }
+    .btn-series-select {
+      width: 100%;
+      background: #082f49;
+      color: #38bdf8;
+      border: 1px solid #0284c7;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .series-menu {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      right: 0;
+      background: #075985;
+      border: 1.5px solid #38bdf8;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+    }
+    .series-item {
+      padding: 8px 12px;
+      color: #f0f9ff;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #0369a1;
+    }
+    .series-item:hover { background: #0284c7; }
+    .series-item.active { background: #082f49; color: #38bdf8; }
+    .series-item.disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* Dòng 2: Đúng 4 nút vừa 1 hàng ngang */
+    .action-row-4 {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 1fr 0.95fr;
+      gap: 5px;
+      align-items: center;
+    }
+    .action-row-4 select,
+    .action-row-4 button {
+      height: 30px;
+      padding: 0 4px;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 6px;
+      outline: none;
+      border: 1px solid #38bdf8;
+      background: #082f49;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .action-row-4 select {
+      text-align-last: center;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2338bdf8'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 2px center;
+      background-size: 14px;
+      padding-right: 14px;
+    }
+    .action-row-4 button.btn-active-trans {
+      background: #38bdf8;
+      color: #082f49;
     }
   </style>
 </head>
-<body>
+<body onclick="closeSeriesMenu(event)">
   <div class="main-wrapper">
 
-    <!-- 1. HEADER HỆ THỐNG VANDONSTAY (3 NÚT LIÊN KẾT) -->
+    <!-- 1. HEADER 3 NÚT LIÊN HỆ -->
     <div class="vandon-header-bar">
-      <div class="vandon-nav-group">
-        <a href="../index.html" class="vandon-link-btn btn-study" title="Về danh sách giáo trình tiếng Anh">
-          <span>📚</span> Vandon English
-        </a>
-        <a href="../../index.html" class="vandon-link-btn btn-villa" title="Về trang đặt phòng Villa Sonasea">
-          <span>🏨</span> <span class="btn-villa-text">Villa Sonasea</span>
-        </a>
-      </div>
-      <div class="vandon-nav-group">
-        <a href="../../shopeeqn/index.html" class="vandon-link-btn btn-shopee" title="Gian hàng thiết bị Shopee QN">
-          <span>🎁</span> Shopee QN
-        </a>
-      </div>
+      <a href="../index.html" class="vandon-link-btn btn-study">
+        <span>📚</span> Vandon English
+      </a>
+      <a href="../../index.html" class="vandon-link-btn btn-villa">
+        <span>🏨</span> Villa Sonasea
+      </a>
+      <a href="../../shopeeqn/index.html" class="vandon-link-btn btn-shopee">
+        <span>🎁</span> Shopee QN
+      </a>
     </div>
 
-    <!-- 2. RUY-BĂNG GỢI Ý MUA HÀNG TIẾN TRÌNH -->
+    <!-- 2. RUY-BĂNG HỌC LIỆU -->
     <aside class="vandon-promo-ribbon">
       <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-        <span>📻</span> <strong>Loa tắm Craven & Bút đọc</strong> <span class="promo-text-sub">giúp bé nghe thụ động</span>
+        <span>📻</span> <strong>Loa tắm Craven & Bút đọc</strong>
       </div>
-      <a href="../../shopeeqn/index.html#hoc-tieng-anh">Xem ưu đãi ➔</a>
+      <a href="../../shopeeqn/index.html#hoc-tieng-anh">Ưu đãi ➔</a>
     </aside>
 
-    <!-- 3. HEADER BÀI HỌC CỦA ONE STORY A DAY -->
-    <header class="navbar">
-      <div class="brand-badge">
-        <span>STORY</span>
-        <span>A DAY 2</span>
+    <!-- 3. HEADER BÀI HỌC 2 TẦNG -->
+    <div class="lesson-control-header">
+      
+      <!-- Tầng 1: Tên giáo trình kèm Dropdown chọn Tập 1 - 2 - 3 -->
+      <div class="series-dropdown-wrap">
+        <button type="button" class="btn-series-select" onclick="toggleSeriesMenu(event)">
+          <span>📖 One Story A Day (Tập 2)</span>
+          <span style="font-size: 10px;">▼</span>
+        </button>
+        <div id="seriesMenu" class="series-menu" style="display: none;">
+          <a href="../onestoryaday1/index.html" class="series-item">
+            <span>Tập 1 (365 truyện nền tảng)</span>
+            <span>➔ Vào học</span>
+          </a>
+          <a href="./index.html" class="series-item active">
+            <span>Tập 2 (365 truyện nâng cao)</span>
+            <span>✔ Đang học</span>
+          </a>
+          <div class="series-item disabled">
+            <span>Tập 3 (Trọn bộ sắp ra mắt)</span>
+            <span style="font-size: 10px;">Sắp có</span>
+          </div>
+        </div>
       </div>
 
-      <div class="nav-selectors">
+      <!-- Tầng 2: 4 nút vừa vặn 1 hàng ngang trên di động (Mục lục, Tháng, Bài, Dịch) -->
+      <div class="action-row-4">
+        <!-- Nút 1: Mục lục đưa ra đầu -->
+        <button id="btnOpenIndex" type="button" title="Mục lục toàn bài">
+          📋 Mục lục
+        </button>
+
+        <!-- Nút 2: Tháng -->
         <select id="selectMonth">
           <option value="01 January">Tháng 1</option>
           <option value="02 February">Tháng 2</option>
@@ -137,14 +254,16 @@
           <option value="11 November">Tháng 11</option>
           <option value="12 December">Tháng 12</option>
         </select>
-        <select id="selectDay"></select>
-      </div>
 
-      <div class="nav-actions">
-        <button id="btnOpenIndex" class="btn-head" title="Mục lục">📋 Mục lục</button>
-        <button id="btnToggleTrans" class="btn-head" title="Bật/Tắt Dịch & IPA">🔤 Dịch & IPA</button>
+        <!-- Nút 3: Bài -->
+        <select id="selectDay"></select>
+
+        <!-- Nút 4: Dịch (gọn gàng 1 chữ Dịch) -->
+        <button id="btnToggleTrans" type="button" title="Bật/Tắt Dịch & IPA">
+          🔤 Dịch
+        </button>
       </div>
-    </header>
+    </div>
 
     <!-- Khu vực hiển thị chính -->
     <main class="story-stage">
@@ -227,7 +346,22 @@
     </div>
   </div>
 
-  <!-- Dữ liệu bài học Tập 2 -->
+  <script>
+    // Logic xổ menu chọn Tập 1 - 2 - 3
+    function toggleSeriesMenu(e) {
+      e.stopPropagation();
+      const menu = document.getElementById('seriesMenu');
+      menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+    }
+    function closeSeriesMenu(e) {
+      const menu = document.getElementById('seriesMenu');
+      if (menu && !e.target.closest('.series-dropdown-wrap')) {
+        menu.style.display = 'none';
+      }
+    }
+  </script>
+
+  <!-- Dữ liệu bài học 12 tháng của Tập 2 -->
   <script src="data_01.js"></script>
   <script src="data_02.js"></script>
   <script src="data_03.js"></script>
