@@ -33,15 +33,35 @@
             background-color: rgba(16, 185, 129, 0.15) !important;
             border-left: 4px solid #10b981 !important;
         }
+
+        /* Thanh chữ chạy (Marquee Ribbon) Shopee QN chuẩn giáo trình 900 câu */
+        .vandon-promo-ribbon {
+            background: linear-gradient(90deg, #047857, #059669, #047857);
+            border-bottom: 2px solid #34d399;
+            padding: 4px 6px;
+            font-size: 11px;
+            flex-shrink: 0;
+            overflow: hidden;
+            z-index: 30;
+        }
+        .vandon-promo-ribbon a {
+            color: #fef08a;
+            font-weight: 600;
+            text-decoration: none;
+            display: block;
+        }
+        .vandon-promo-ribbon a:hover {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body class="flex flex-col h-full select-none" onclick="closeAllDropdowns(event)">
 
-    <!-- 1. THANH HEADER ĐIỀU HƯỚNG 3 NÚT LIÊN HỆ -->
+    <!-- 1. THANH HEADER ĐIỀU HƯỚNG 3 NÚT LIÊN HỆ HỆ SINH THÁI -->
     <header class="bg-slate-900/95 border-b border-slate-800 h-13 px-3 py-2 flex justify-between items-center shrink-0 z-40 shadow">
         <div class="flex items-center gap-1.5 w-full max-w-md mx-auto justify-between">
             <a href="../index.html" class="flex-1 py-1.5 px-2 bg-slate-800 hover:bg-slate-700 text-emerald-400 rounded-lg text-xs font-bold border border-slate-700 flex items-center justify-center gap-1 transition shadow-sm">
-                <i class="fa-solid fa-graduation-cap"></i> <span>Vandon English</span>
+                <i class="fa-solid fa-graduation-cap"></i> <span>Vandon Stu</span>
             </a>
             <a href="../../index.html" class="flex-1 py-1.5 px-2 bg-slate-800 hover:bg-slate-700 text-teal-300 rounded-lg text-xs font-bold border border-slate-700 flex items-center justify-center gap-1 transition shadow-sm">
                 <i class="fa-solid fa-hotel text-emerald-400"></i> <span>Villa Sonasea</span>
@@ -52,13 +72,12 @@
         </div>
     </header>
 
-    <!-- 2. THANH RUY-BĂNG SHOPEE HỌC LIỆU -->
-    <aside class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white text-[11px] py-1 px-3 shadow shrink-0 z-30 flex items-center justify-between">
-        <div class="truncate">
-            <span>📻</span> <strong>Loa tắm tiếng Anh Craven & Bút đọc</strong>
-        </div>
-        <a href="../../shopeeqn/index.html#hoc-tieng-anh" class="underline font-bold text-amber-100 hover:text-white shrink-0 ml-2">
-            Xem ưu đãi ➔
+    <!-- 2. THANH RUY-BĂNG DÒNG CHỮ CHẠY LIÊN KẾT SHOPEE QN -->
+    <aside class="vandon-promo-ribbon">
+        <a href="../../shopeeqn/index.html" title="Bấm để ghé thăm Shopee QN">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                📚 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên Shopee hãy ghé qua gian hàng liên kết của chúng tôi tại Shopee QN &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 📻 Loa tắm Craven & Bút đọc - 🛍️ Click vào đây để khám phá ngay!
+            </marquee>
         </a>
     </aside>
 
@@ -205,7 +224,7 @@
             "each": "iːtʃ", "eager": "ˈiːɡər", "ears": "ɪrz", "early": "ˈɜːrli", "easier": "ˈiːziər", "easily": "ˈiːzəli", "easy": "ˈiːzi", "eat": "iːt", "educational": "ˌɛdʒuˈkeɪʃənl",
             "effort": "ˈɛfərt", "eight": "eɪt", "else's": "ˈɛlsɪz", "embarrassing": "ɪmˈbærəsɪŋ", "embrace": "ɪmˈbreɪs", "embracing": "ɪmˈbreɪsɪŋ", "emotions": "ɪˈmoʊʃnz", "encourage": "ɪnˈkɜːrɪdʒ",
             "end": "ɛnd", "energy": "ˈɛnərdʒi", "english": "ˈɪŋɡlɪʃ", "enjoy": "ɪnˈdʒɔɪ", "enough": "ɪˈnʌf", "ensure": "ɪnˈʃʊr", "environment": "ɪnˈvaɪrənmənt", "equal": "ˈiːkwəl", "even": "ˈiːvn",
-            "every": "ˈɛvri", "everybody's": "ˈɛvribɑːdiz", "everyone": "ˈɛvriwʌn", "everything": "ˈɛvriθɪŋ", "everyday": "ˈɛvrideɪ", "example": "ɪɡˈzæmpl", "excuses": "ɪkˈskjuːsɪz", "exercise": "ˈɛksərsaɪz",
+            "every": "ˈɛvri", "everybody's": "ˈɛvribɑːdiz", "everyone": "ˈɛvriwʌn", "everything": "ˈɛvriθɪŋ", "everyday": "ˈvriːdeɪ", "example": "ɪɡˈzæmpl", "excuses": "ɪkˈskjuːsɪz", "exercise": "ˈɛksərsaɪz",
             "exercising": "ˈɛksərsaɪzɪŋ", "experts": "ˈɛkspɜːrts", "express": "ɪkˈsprɛs", "extremely": "ɪkˈstriːmli", "face": "feɪs", "facing": "ˈfeɪsɪŋ", "fair": "fɛr", "fairly": "ˈfɛrli", "fall": "fɔːl",
             "families": "ˈfæmɪliz", "family": "ˈfæməli", "famous": "ˈfeɪməs", "fancy": "ˈfænsi", "fantastic": "fænˈtæstɪk", "far": "fɑːr", "farewell": "ˌfɛrˈwɛl", "fast": "fæst", "father": "ˈfɑːðər",
             "fathers": "ˈfɑːðərz", "fault": "fɔːlt", "feel": "fiːl", "feeling": "ˈfiːlɪŋ", "feelings": "ˈfiːlɪŋz", "feet": "fiːt", "few": "fjuː", "fewer": "ˈfjuːər", "first": "fɜːrst", "food": "fuːd",

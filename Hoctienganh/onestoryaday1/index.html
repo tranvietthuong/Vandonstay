@@ -62,23 +62,23 @@
     .btn-villa { background: #1e293b; color: #94a3b8; border: 1px solid #334155; }
     .btn-shopee { background: rgba(217, 119, 6, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
 
-    /* Ruy-băng học liệu Shopee */
+    /* Thanh chữ chạy (Marquee Ribbon) Shopee QN */
     .vandon-promo-ribbon {
-      background: linear-gradient(90deg, #b45309, #c2410c);
-      color: #ffffff;
-      padding: 4px 10px;
-      font-size: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background: linear-gradient(90deg, #047857, #059669, #047857);
+      border-bottom: 2px solid #34d399;
+      padding: 4px 6px;
+      font-size: 11px;
       flex-shrink: 0;
+      overflow: hidden;
     }
     .vandon-promo-ribbon a {
       color: #fef08a;
-      font-weight: 700;
-      text-decoration: underline;
-      margin-left: 6px;
-      white-space: nowrap;
+      font-weight: 600;
+      text-decoration: none;
+      display: block;
+    }
+    .vandon-promo-ribbon a:hover {
+      color: #ffffff;
     }
 
     /* 2. KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG CHUẨN */
@@ -199,12 +199,13 @@
       </a>
     </div>
 
-    <!-- 2. RUY-BĂNG HỌC LIỆU -->
+    <!-- 2. THANH RUY-BĂNG CHỮ CHẠY LIÊN KẾT SHOPEE QN -->
     <aside class="vandon-promo-ribbon">
-      <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-        <span>📻</span> <strong>Loa tắm Craven & Bút đọc</strong>
-      </div>
-      <a href="../../shopeeqn/index.html#hoc-tieng-anh">Ưu đãi ➔</a>
+      <a href="../../shopeeqn/index.html" title="Bấm để ghé thăm Shopee QN">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+          📚 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên Shopee hãy ghé qua gian hàng liên kết của chúng tôi tại Shopee QN &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 📻 Loa tắm Craven & Bút đọc - 🛍️ Click vào đây để khám phá ngay!
+        </marquee>
+      </a>
     </aside>
 
     <!-- 3. HEADER BÀI HỌC 2 TẦNG -->
@@ -325,7 +326,7 @@
           <span id="lblSpeed" class="badge-val">1.0x</span>
         </button>
         <div id="menuSpeed" class="dropup-menu hidden">
-          <div class="dropup-item data-val="0.75">0.75x (Chậm)</div>
+          <div class="dropup-item" data-val="0.75">0.75x (Chậm)</div>
           <div class="dropup-item active" data-val="1.0">1.0x (Chuẩn)</div>
           <div class="dropup-item" data-val="1.25">1.25x (Nhanh)</div>
         </div>
