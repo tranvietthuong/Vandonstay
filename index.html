@@ -24,7 +24,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
     body { background-color: #f8fafc; color: var(--text); line-height: 1.5; }
 
-    /* ================= 1. HEADER TỐI ƯU 2 TẦNG TRÊN DI ĐỘNG ================= */
+    /* ================= 1. HEADER ================= */
     .header-bar {
       background: #ffffff;
       border-bottom: 1px solid var(--border);
@@ -52,12 +52,14 @@
       font-weight: 900;
       white-space: nowrap;
       letter-spacing: -0.4px;
+      flex-shrink: 0;
     }
     .brand-box span { color: var(--text); }
     .menu-box { 
       display: flex; 
       align-items: center; 
       gap: 8px; 
+      flex-shrink: 0;
     }
     .nav-btn {
       display: inline-flex;
@@ -71,13 +73,13 @@
       text-decoration: none;
       white-space: nowrap;
       transition: all 0.2s ease;
+      flex-shrink: 0;
     }
     .nav-btn:hover { transform: translateY(-1px); }
     .btn-english { background-color: var(--primary-light); color: var(--primary-dark); border: 1.5px solid #a7f3d0; }
     .btn-shopee { background-color: var(--accent-light); color: #b45309; border: 1.5px solid #fde68a; }
     .btn-contact { background-color: var(--primary); color: #fff; border: 1.5px solid var(--primary); }
 
-    /* Xếp 2 tầng trên di động để không bao giờ bị lệch hay tràn chữ */
     @media screen and (max-width: 768px) {
       .header-content { 
         flex-direction: column !important; 
@@ -261,7 +263,7 @@
     .badge-green { color: var(--primary); }
     .badge-red { color: var(--danger); }
 
-    /* ================= 4. LƯỚI VILLA (2 CỘT MOBILE) ================= */
+    /* ================= 4. LƯỚI VILLA (5 CỘT DESKTOP - 2 CỘT MOBILE) ================= */
     .villa-container {
       max-width: 1440px;
       margin: 0 auto 50px;
@@ -632,7 +634,7 @@
 </head>
 <body>
 
-  <!-- 1. HEADER (XẾP 2 TẦNG TRÊN MOBILE, KHÔNG LỆCH NÚT) -->
+  <!-- 1. HEADER -->
   <header class="header-bar">
     <div class="header-content">
       <a href="./" class="brand-box">
@@ -645,8 +647,8 @@
         <a href="./shopeeqn/index.html" class="nav-btn btn-shopee" title="Gian hàng Shopee Quảng Ninh">
           🎁 Shopee QN
         </a>
-        <a href="tel:0396588880" class="nav-btn btn-contact" title="Liên hệ tư vấn">
-          📞 Liên Hệ
+        <a href="tel:0396588880" class="nav-btn btn-contact" title="Gọi điện liên hệ">
+          📞 039.65.88880
         </a>
       </nav>
     </div>
@@ -659,9 +661,9 @@
     <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
     
     <div class="hero-actions-row">
-      <a href="tel:0396588880" class="action-btn act-call">📞 Liên Hệ: 039.65.88880</a>
+      <a href="tel:0396588880" class="action-btn act-call">📞 039.65.88880</a>
       <a href="https://zalo.me/0396588880" target="_blank" class="action-btn act-zalo">💬 Chat Zalo 1-1</a>
-      <a href="#" class="action-btn act-vip">👑 Khách VIP</a>
+      <a href="#" class="action-btn act-vip">👑 Group VIP</a>
     </div>
   </section>
 
@@ -713,7 +715,7 @@
     </div>
 
     <div class="modal-bottom-bar">
-      <span id="modalCounter">Đang tải ảnh...</span>
+      <span id="modalCounter">Đang tải album...</span>
       <span style="color:#94a3b8;">👈 Vuốt ngang • Phóng to 2 ngón 👉</span>
     </div>
   </div>
@@ -727,7 +729,7 @@
         <h3>🏨 VANDON STAY - SONASEA</h3>
         <p>Hệ thống chuỗi 20 căn biệt thự nghỉ dưỡng riêng tư cao cấp ven vịnh Bái Tử Long, thuộc đại quần thể Sonasea Vân Đồn Harbor City.</p>
         <p><strong>📍 Địa chỉ:</strong> Khu đô thị Sonasea Vân Đồn Harbor City, Xã Hạ Long, Huyện Vân Đồn, Tỉnh Quảng Ninh.</p>
-        <p><strong>📞 Hotline / Zalo:</strong> <a href="tel:0867078139" style="color:#34d399; font-weight:bold; text-decoration:none;">0867.078.139</a></p>
+        <p><strong>📞 Hotline / Zalo:</strong> <a href="tel:0396588880" style="color:#34d399; font-weight:bold; text-decoration:none;">039.65.88880</a></p>
         <p><strong>⏰ Giờ phục vụ:</strong> Hỗ trợ tư vấn đặt phòng 24/7</p>
       </div>
 
@@ -777,28 +779,28 @@
     outInput.value = toYMD(tomorrow);
     inInput.min = toYMD(today);
 
-    // ================= DANH SÁCH 20 VILLA KÈM LỊCH BẬN =================
+    // ================= DANH SÁCH 20 VILLA KÈM LỊCH BẬN (BỎ CHỮ SONASEA) =================
     const villas = [
-      { folder: "V2A02", name: "Villa Sonasea V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ", bookedDates: [toYMD(today)] },
-      { folder: "V2C05A", name: "Villa Sonasea V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn", bookedDates: [] },
-      { folder: "V2C06", name: "Villa Sonasea V2C06", desc: "3 PN • Không gian yên tĩnh", bookedDates: [] },
-      { folder: "V2C08A", name: "Villa Sonasea V2C08A", desc: "3 PN • Thiết kế trang nhã", bookedDates: [toYMD(today)] },
-      { folder: "V2D05A", name: "Villa Sonasea V2D05A", desc: "3 PN • Nội thất gỗ cao cấp", bookedDates: [] },
-      { folder: "V3A09", name: "Villa Sonasea V3A09", desc: "3 PN • Căn góc thoáng đãng", bookedDates: [] },
-      { folder: "V3A10", name: "Villa Sonasea V3A10", desc: "3 PN • Bể bơi tràn bờ", bookedDates: [] },
-      { folder: "V3H01", name: "Villa Sonasea V3H01", desc: "3 PN • Gần trục đường chính", bookedDates: [toYMD(today)] },
-      { folder: "V3I02", name: "Villa Sonasea V3I02", desc: "3 PN • Sân nướng BBQ riêng", bookedDates: [] },
-      { folder: "V3I03", name: "Villa Sonasea V3I03", desc: "3 PN • Ban công view biển", bookedDates: [] },
-      { folder: "V3J03", name: "Villa Sonasea V3J03", desc: "3 PN • Phong cách Địa Trung Hải", bookedDates: [] },
-      { folder: "V3K10", name: "Villa Sonasea V3K10", desc: "3 PN • View công viên cây xanh", bookedDates: [] },
-      { folder: "V3K11", name: "Villa Sonasea V3K11", desc: "4 PN • Không gian rộng lớn", bookedDates: [] },
-      { folder: "V3M05", name: "Villa Sonasea V3M05", desc: "4 PN • Bể bơi panorama", bookedDates: [toYMD(today)] },
-      { folder: "V3M11A", name: "Villa Sonasea V3M11A", desc: "4 PN • Trực diện vịnh Bái Tử Long", bookedDates: [] },
-      { folder: "V3N01", name: "Villa Sonasea V3N01", desc: "4 PN • Sang trọng đẳng cấp", bookedDates: [] },
-      { folder: "V3N08A", name: "Villa Sonasea V3N08A", desc: "4 PN • Căn góc 2 mặt tiền", bookedDates: [] },
-      { folder: "villa-18", name: "Villa Sonasea No.18 VIP", desc: "5 PN • Đơn lập VIP ven bãi cát", bookedDates: [] },
-      { folder: "villa-19", name: "Villa Sonasea No.19 VIP", desc: "5 PN • Bể bơi lớn gia đình", bookedDates: [] },
-      { folder: "villa-20", name: "Villa Sonasea No.20 VIP", desc: "5 PN • Nội thất 5 sao cao cấp", bookedDates: [] }
+      { folder: "V2A02", name: "Villa V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ", bookedDates: [toYMD(today)] },
+      { folder: "V2C05A", name: "Villa V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn", bookedDates: [] },
+      { folder: "V2C06", name: "Villa V2C06", desc: "3 PN • Không gian yên tĩnh", bookedDates: [] },
+      { folder: "V2C08A", name: "Villa V2C08A", desc: "3 PN • Thiết kế trang nhã", bookedDates: [toYMD(today)] },
+      { folder: "V2D05A", name: "Villa V2D05A", desc: "3 PN • Nội thất gỗ cao cấp", bookedDates: [] },
+      { folder: "V3A09", name: "Villa V3A09", desc: "3 PN • Căn góc thoáng đãng", bookedDates: [] },
+      { folder: "V3A10", name: "Villa V3A10", desc: "3 PN • Bể bơi tràn bờ", bookedDates: [] },
+      { folder: "V3H01", name: "Villa V3H01", desc: "3 PN • Gần trục đường chính", bookedDates: [toYMD(today)] },
+      { folder: "V3I02", name: "Villa V3I02", desc: "3 PN • Sân nướng BBQ riêng", bookedDates: [] },
+      { folder: "V3I03", name: "Villa V3I03", desc: "3 PN • Ban công view biển", bookedDates: [] },
+      { folder: "V3J03", name: "Villa V3J03", desc: "3 PN • Phong cách Địa Trung Hải", bookedDates: [] },
+      { folder: "V3K10", name: "Villa V3K10", desc: "3 PN • View công viên cây xanh", bookedDates: [] },
+      { folder: "V3K11", name: "Villa V3K11", desc: "4 PN • Không gian rộng lớn", bookedDates: [] },
+      { folder: "V3M05", name: "Villa V3M05", desc: "4 PN • Bể bơi panorama", bookedDates: [toYMD(today)] },
+      { folder: "V3M11A", name: "Villa V3M11A", desc: "4 PN • Trực diện vịnh Bái Tử Long", bookedDates: [] },
+      { folder: "V3N01", name: "Villa V3N01", desc: "4 PN • Sang trọng đẳng cấp", bookedDates: [] },
+      { folder: "V3N08A", name: "Villa V3N08A", desc: "4 PN • Căn góc 2 mặt tiền", bookedDates: [] },
+      { folder: "villa-18", name: "Villa No.18 VIP", desc: "5 PN • Đơn lập VIP ven bãi cát", bookedDates: [] },
+      { folder: "villa-19", name: "Villa No.19 VIP", desc: "5 PN • Bể bơi lớn gia đình", bookedDates: [] },
+      { folder: "villa-20", name: "Villa No.20 VIP", desc: "5 PN • Nội thất 5 sao cao cấp", bookedDates: [] }
     ];
 
     function isVillaBooked(villa, startDateStr, endDateStr) {
