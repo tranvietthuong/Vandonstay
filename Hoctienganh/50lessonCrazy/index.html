@@ -34,15 +34,24 @@
             border-left: 4px solid #10b981 !important;
         }
 
-        /* Thanh chữ chạy (Marquee Ribbon) Shopee QN chuẩn giáo trình 900 câu */
+        /* Thanh chữ chạy (Marquee Ribbon) thu gọn vừa khung di động chuẩn */
+        .vandon-promo-ribbon-wrap {
+            width: 100%;
+            max-width: 28rem; /* Tương đương max-w-md chuẩn khung di động */
+            margin: 4px auto 0 auto;
+            padding: 0 8px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            z-index: 30;
+        }
         .vandon-promo-ribbon {
             background: linear-gradient(90deg, #047857, #059669, #047857);
-            border-bottom: 2px solid #34d399;
+            border: 1px solid #34d399;
+            border-radius: 8px;
             padding: 4px 6px;
             font-size: 11px;
-            flex-shrink: 0;
             overflow: hidden;
-            z-index: 30;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .vandon-promo-ribbon a {
             color: #fef08a;
@@ -72,16 +81,18 @@
         </div>
     </header>
 
-    <!-- 2. THANH RUY-BĂNG DÒNG CHỮ CHẠY LIÊN KẾT SHOPEE QN -->
-    <aside class="vandon-promo-ribbon">
-        <a href="../../shopeeqn/index.html" title="Bấm để ghé thăm Shopee QN">
-            <marquee behavior="scroll" direction="left" scrollamount="5">
-                📚 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên Shopee hãy ghé qua gian hàng liên kết của chúng tôi tại Shopee QN &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 📻 Loa tắm Craven & Bút đọc - 🛍️ Click vào đây để khám phá ngay!
-            </marquee>
-        </a>
-    </aside>
+    <!-- 2. THANH RUY-BĂNG DÒNG CHỮ CHẠY VỪA KHUNG DI ĐỘNG -->
+    <div class="vandon-promo-ribbon-wrap">
+        <aside class="vandon-promo-ribbon">
+            <a href="../../shopeeqn/index.html" title="Bấm để ghé thăm Shopee QN">
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                    📚 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên Shopee hãy ghé qua gian hàng liên kết của chúng tôi tại Shopee QN &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 📻 Loa tắm Craven & Bút đọc - 🛍️ Click vào đây để khám phá ngay!
+                </marquee>
+            </a>
+        </aside>
+    </div>
 
-    <main class="flex-1 flex flex-col overflow-hidden relative max-w-md w-full mx-auto bg-slate-950">
+    <main class="flex-1 flex flex-col overflow-hidden relative max-w-md w-full mx-auto bg-slate-950 mt-1">
         
         <!-- VIEW 1: MỤC LỤC 50 BÀI -->
         <div id="listView" class="flex-1 p-3 scrollable-box">
@@ -229,7 +240,7 @@
             "families": "ˈfæmɪliz", "family": "ˈfæməli", "famous": "ˈfeɪməs", "fancy": "ˈfænsi", "fantastic": "fænˈtæstɪk", "far": "fɑːr", "farewell": "ˌfɛrˈwɛl", "fast": "fæst", "father": "ˈfɑːðər",
             "fathers": "ˈfɑːðərz", "fault": "fɔːlt", "feel": "fiːl", "feeling": "ˈfiːlɪŋ", "feelings": "ˈfiːlɪŋz", "feet": "fiːt", "few": "fjuː", "fewer": "ˈfjuːər", "first": "fɜːrst", "food": "fuːd",
             "foot": "fʊt", "for": "fɔːr", "foreigners": "ˈfɔːrənərz", "forget": "fərˈɡɛt", "form": "fɔːrm", "four": "fɔːr", "free": "friː", "freely": "ˈfriːli", "fresh": "frɛʃ", "friend": "frɛnd",
-            "friends": "frɛndz", "friendship": "ˈfrɛndʃɪp", "from": "frɒm", "fruitful": "ˈfruːtfl", "fun": "fʌn", "future": "ˈfjuːtʃər", "gain": "ɡeɪn", "genius": "ˈdʒiːniəs", "gentlemen": "ˈdʒɛntlmən",
+            "friends": "frɛndz", "friendship": "ˈfɛndʃɪp", "from": "frɒm", "fruitful": "ˈfruːtfl", "fun": "fʌn", "future": "ˈfjuːtʃər", "gain": "ɡeɪn", "genius": "ˈdʒiːniəs", "gentlemen": "ˈdʒɛntlmən",
             "get": "ɡɛt", "getting": "ˈɡɛtɪŋ", "gift": "ɡɪft", "girls": "ɡɜːrlz", "give": "ɡɪv", "giving": "ˈɡɪvɪŋ", "glad": "ɡlæd", "glasses": "ˈɡlæsɪz", "glorious": "ˈɡlɔːriəs", "go": "ɡoʊ",
             "going": "ˈɡoʊɪŋ", "goes": "ɡoʊz", "good": "ɡʊd", "government": "ˈɡʌvərmənt", "grammar": "ˈɡræmər", "great": "ɡreɪt", "green": "ɡriːn", "greetings": "ˈɡriːtɪŋz", "grow": "ɡroʊ",
             "growing": "ˈɡroʊɪŋ", "guide": "ɡaɪd", "habit": "ˈhæbɪt", "habits": "ˈhæbɪts", "had": "hæd", "happiness": "ˈhæpinəs", "happy": "ˈhæpi", "happier": "ˈhæpiər", "happen": "ˈhæpən",
@@ -262,7 +273,7 @@
             "progress": "ˈprɒɡrɛs", "pronounce": "prəˈnaʊns", "pronunciation": "prəˌnʌnsiˈeɪʃn", "proud": "praʊd", "punish": "ˈpʌnɪʃ", "push": "pʊʃ", "puzzled": "ˈpʌzld", "questions": "ˈkwɛstʃənz",
             "quick": "kwɪk", "quickly": "ˈkwɪkli", "quote": "kwoʊt", "raise": "reɪz", "rarely": "ˈrɛrli", "rate": "reɪt", "read": "riːd", "reading": "ˈriːdɪŋ", "real": "ˈrɪəl", "realize": "ˈrɪəlaɪz",
             "realized": "ˈrɪəlaɪzd", "really": "ˈrɪəli", "recipe": "ˈrɛsəpi", "reciting": "rɪˈsaɪtɪŋ", "reduce": "rɪˈduːs", "relax": "rɪˈlæks", "relieved": "rɪˈliːvd", "remember": "rɪˈmɛmbər",
-            "remind": "rɪˈmaɪnd", "remodeled": "ˌriːˈmɑːdld", "replied": "rɪˈplaɪd", "resources": "ˈriːsɔːrsɪz", "responsibility": "rɪˌspɒnsəˈbɪləti", "return": "rɪˈtɜːrn", "rich": "rɪtʃ", "right": "raɪt",
+            "remind": "rɪˈmaɪnd", "remodeled": "ˌriːˈmɑːdld", "replied": "rɪˈplaɪd", "resources": "ˈriːsɔːrsɪz", "responsibility": "rɪˌspɒnsəˈbɪləti", "return": "rɪˈtɜːrn", "rich": "tʃ", "right": "raɪt",
             "ruining": "ˈruːɪnɪŋ", "rules": "ruːlz", "safe": "seɪf", "said": "sɛd", "same": "seɪm", "satisfaction": "ˌsætɪsˈfækʃn", "save": "seɪv", "say": "seɪ", "saying": "ˈseɪɪŋ", "second": "ˈsɛkənd",
             "second-hand": "ˈsɛkənd hænd", "secret": "ˈsiːkrət", "secrets": "ˈsiːkrəts", "see": "siː", "seeing": "ˈsiːɪŋ", "seize": "siːz", "selfish": "ˈsɛlfɪʃ", "sentence": "ˈsɛntəns", "sentences": "ˈsɛntənsɪz",
             "service": "ˈsɜːrvɪs", "setting": "ˈsɛtɪŋ", "several": "ˈsɛvrəl", "shame": "ʃeɪm", "share": "ʃɛr", "she": "ʃiː", "shocked": "ʃɑːkt", "short": "ʃɔːrt", "should": "ʃʊd", "shouldn't": "ˈʃʊdnt",
@@ -286,7 +297,7 @@
             "vietnam": "ˌvjɛtˈnæm", "vietnamese": "ˌvjɛtnəˈmiːz", "views": "vjuːz", "visit": "ˈvɪzɪt", "visited": "ˈvɪzɪtɪd", "want": "wɒnt", "wanted": "ˈwɒntɪd", "wanting": "ˈwɒntɪŋ", "wants": "wɒnts",
             "warm": "wɔːrm", "wars": "wɔːrz", "was": "wɒz", "waste": "weɪst", "wasting": "ˈweɪstɪŋ", "watch": "wɑːtʃ", "water": "ˈwɔːtər", "way": "weɪ", "ways": "weɪz", "we": "wiː", "we'll": "wiːl",
             "we're": "wɪr", "week": "wiːk", "welcome": "ˈwɛlkəm", "welcoming": "ˈwɛlkəmɪŋ", "well": "wɛl", "went": "wɛnt", "were": "wɜːr", "what": "wɒt", "what's": "wɒts", "when": "wɛn", "where": "wɛr",
-            "whether": "ˈwɛðər", "which": "wɪtʃ", "who": "huː", "why": "waɪ", "will": "wɪl", "win": "wɪn", "wisdom": "ˈwɪzdəm", "wise": "waɪz", "wiser": "ˈwaɪzər", "wish": "wɪʃ", "wishes": "ˈwɪʃɪz",
+            "whether": "ˈwɛðər", "which": "wɪtʃ", "who": "huː", "why": "waɪ", "will": "wɪl", "win": "wɪn", "wisdom": "ˈwɪzdəm", "wise": "waɪz", "wiser": "ˈwaisər", "wish": "wɪʃ", "wishes": "ˈwɪʃɪz",
             "with": "wɪð", "without": "wɪˈðaʊt", "woman": "ˈwʊmən", "wonderful": "ˈwʌndərfl", "word": "wɜːrd", "words": "wɜːrdz", "work": "wɜːrk", "worked": "wɜːrkt", "working": "ˈwɜːrkɪŋ",
             "world": "wɜːrld", "worldwide": "ˌwɜːrldˈwaɪd", "worry": "ˈwʌri", "worrying": "ˈwʌriɪŋ", "worse": "wɜːrs", "worst": "wɜːrst", "worth": "wɜːrθ", "would": "wʊd", "writing": "ˈraɪtɪŋ",
             "wrong": "rɒŋ", "year": "jɪr", "years": "jɪrz", "yesterday": "ˈjɛstərdeɪ", "yellow": "ˈjɛloʊ", "you": "juː", "you'd": "juːd", "you'll": "juːl", "you're": "jʊr", "you've": "juːv",
@@ -716,7 +727,7 @@
                 { en: "Ladies and Gentlemen, I have many wishes.", vi: "Kính thưa quý vị, tôi có rất nhiều điều ước." },
                 { en: "I wish people all over the world would love each other more.", vi: "Tôi ước mọi người khắp nơi trên thế giới biết yêu thương nhau nhiều hơn." },
                 { en: "I wish people would stop wasting energy.", vi: "Tôi ước mọi người ngừng lãng phí nguồn năng lượng quý giá." },
-                { en: "I wish people would be less selfish.", vi: "Tôi ước con người bớt sống ích kỷ hơn." },
+                { en: "I wish people would be less selfish.", vi: "I ước con người bớt sống ích kỷ hơn." },
                 { en: "I wish people would share happy feelings more freely, and not keep their emotions shut up inside.", vi: "Tôi ước mọi người cởi mở chia sẻ niềm vui thay vì khép kín cảm xúc trong lòng." },
                 { en: "I wish that people could find cures for cancer and AIDS.", vi: "Tôi ước nhân loại sớm tìm ra thuốc chữa khỏi bệnh ung thư và AIDS." },
                 { en: "In short, I wish that the world could be a better place.", vi: "Tóm lại, tôi ước thế giới này sẽ trở thành một nơi tốt đẹp hơn." },

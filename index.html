@@ -15,8 +15,6 @@
       --primary: #059669;
       --primary-dark: #047857;
       --primary-light: #ecfdf5;
-      --accent: #f59e0b;
-      --accent-light: #fffbeb;
       --danger: #dc2626;
       --danger-light: #fef2f2;
       --text: #0f172a;
@@ -28,7 +26,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
     body { background-color: #f8fafc; color: var(--text); line-height: 1.5; }
 
-    /* ================= 1. HEADER ================= */
+    /* ================= 1. HEADER (SIÊU TỐI GIẢN) ================= */
     .header-bar {
       background: #ffffff;
       border-bottom: 1px solid var(--border);
@@ -40,11 +38,10 @@
     .header-content {
       max-width: 1440px;
       margin: 0 auto;
-      padding: 10px 18px;
+      padding: 12px 18px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      gap: 12px;
     }
     .brand-box {
       display: inline-flex;
@@ -52,63 +49,18 @@
       gap: 6px;
       text-decoration: none;
       color: var(--primary);
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 900;
-      white-space: nowrap;
       letter-spacing: -0.4px;
-      flex-shrink: 0;
     }
     .brand-box span { color: var(--text); }
-    .menu-box { 
-      display: flex; 
-      align-items: center; 
-      gap: 8px; 
-      flex-shrink: 0;
-    }
-    .nav-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      padding: 7px 14px;
-      border-radius: 999px;
-      font-size: 12.5px;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-      flex-shrink: 0;
-    }
-    .nav-btn:hover { transform: translateY(-1px); }
-    .btn-english { background-color: var(--primary-light); color: var(--primary-dark); border: 1.5px solid #a7f3d0; }
-    .btn-shopee { background-color: var(--accent-light); color: #b45309; border: 1.5px solid #fde68a; }
-    .btn-contact { background-color: var(--primary); color: #fff; border: 1.5px solid var(--primary); }
 
     @media screen and (max-width: 768px) {
-      .header-content { 
-        flex-direction: column !important; 
-        padding: 8px 10px !important; 
-        gap: 8px !important; 
-      }
-      .brand-box { 
-        font-size: 17px !important; 
-        justify-content: center !important; 
-        width: 100% !important; 
-      }
-      .menu-box { 
-        width: 100% !important; 
-        justify-content: space-between !important; 
-        gap: 6px !important; 
-      }
-      .menu-box .nav-btn { 
-        flex: 1 1 0 !important; 
-        padding: 6px 4px !important; 
-        font-size: 11px !important; 
-        letter-spacing: -0.2px !important; 
-      }
+      .header-content { padding: 10px 14px; }
+      .brand-box { font-size: 18px; }
     }
 
-    /* ================= 2. HERO BANNER ================= */
+    /* ================= 2. HERO BANNER & 3 NÚT TRỌNG TÂM ================= */
     .hero {
       position: relative;
       background: linear-gradient(135deg, rgba(2, 6, 23, 0.82) 0%, rgba(15, 23, 42, 0.72) 50%, rgba(5, 150, 105, 0.45) 100%),
@@ -147,12 +99,13 @@
       line-height: 1.6;
       text-shadow: 0 1px 4px rgba(0,0,0,0.4);
     }
+
     .hero-actions-row {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 14px;
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
     }
     .action-btn {
@@ -161,28 +114,29 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 12px 18px;
-      border-radius: 10px;
+      padding: 13px 16px;
+      border-radius: 12px;
       font-size: 14px;
       font-weight: 800;
       text-decoration: none;
       color: #ffffff;
       white-space: nowrap;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .action-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
+    
     .act-call { background: linear-gradient(135deg, #059669, #047857); }
     .act-zalo { background: linear-gradient(135deg, #0284c7, #0369a1); }
-    .act-vip { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+    .act-study { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
 
     @media screen and (max-width: 768px) {
-      .hero { padding: 36px 14px 54px; }
-      .hero h1 { font-size: 21px; margin-bottom: 8px; }
-      .hero p { font-size: 12px; margin-bottom: 16px; }
+      .hero { padding: 40px 14px 60px; }
+      .hero h1 { font-size: 23px; margin-bottom: 8px; }
+      .hero p { font-size: 12.5px; margin-bottom: 18px; }
       .badge-loc { font-size: 9.5px; padding: 4px 12px; margin-bottom: 10px; }
-      .hero-actions-row { gap: 6px; max-width: 100%; }
-      .action-btn { font-size: 11.5px; padding: 9px 8px; border-radius: 8px; }
+      .hero-actions-row { gap: 8px; max-width: 100%; }
+      .action-btn { font-size: 12px; padding: 11px 8px; border-radius: 10px; gap: 5px; }
     }
 
     /* ================= 3. KHUNG TRA CỨU PHÒNG ================= */
@@ -250,57 +204,6 @@
       .btn-check-compact { padding: 7px 14px; font-size: 11.5px; }
     }
 
-    /* ================= 4. DẢI CHỮ CHẠY HÀI HÒA (ĐẶT GỌN GÀNG TRÊN TIÊU ĐỀ VILLA) ================= */
-    .marquee-banner-wrap {
-      max-width: 1440px;
-      margin: 0 auto 20px;
-      padding: 0 20px;
-    }
-    .marquee-box {
-      display: block;
-      background: linear-gradient(135deg, #065f46, #047857, #059669);
-      border-radius: 10px;
-      padding: 8px 16px;
-      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.2);
-      border: 1px solid #a7f3d0;
-      overflow: hidden;
-      text-decoration: none;
-      cursor: pointer;
-      position: relative;
-      z-index: 20;
-      transition: all 0.2s ease;
-    }
-    .marquee-box:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.35);
-    }
-    @keyframes marqueeText {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-    .marquee-content {
-      display: inline-block;
-      white-space: nowrap;
-      animation: marqueeText 26s linear infinite;
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .marquee-box:hover .marquee-content {
-      animation-play-state: paused;
-    }
-    .marquee-content span {
-      color: #fef08a;
-      text-decoration: underline;
-    }
-
-    @media screen and (max-width: 640px) {
-      .marquee-banner-wrap { padding: 0 8px; margin-bottom: 14px; }
-      .marquee-box { padding: 7px 10px; border-radius: 8px; }
-      .marquee-content { font-size: 10.5px; }
-    }
-
-    /* Thanh trạng thái phòng */
     .status-summary {
       max-width: 1440px;
       margin: 0 auto 16px;
@@ -317,7 +220,7 @@
     .badge-green { color: var(--primary); }
     .badge-red { color: var(--danger); }
 
-    /* ================= 5. LƯỚI VILLA ================= */
+    /* ================= 4. LƯỚI VILLA ================= */
     .villa-container {
       max-width: 1440px;
       margin: 0 auto 50px;
@@ -509,7 +412,7 @@
       .btn-action-status { font-size: 9.5px; padding: 3px 6px; }
     }
 
-    /* ================= 6. POPUP ALBUM ================= */
+    /* ================= 5. POPUP ALBUM ================= */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -611,7 +514,7 @@
       z-index: 20;
     }
 
-    /* ================= 7. CHÂN TRANG ================= */
+    /* ================= 6. CHÂN TRANG ================= */
     .footer-section {
       background-color: #0b1324;
       color: #94a3b8;
@@ -691,33 +594,31 @@
   <!-- 1. HEADER -->
   <header class="header-bar">
     <div class="header-content">
-      <a href="./" class="brand-box">
+      <a href="./" class="brand-box" onclick="triggerAffiliate(event, './')">
         🏨 VANDON <span>STAY</span>
       </a>
-      <nav class="menu-box">
-        <a href="./Hoctienganh/index.html" class="nav-btn btn-english" title="Hệ thống học tiếng Anh">
-          📚 Vandon Stu
-        </a>
-        <a href="./shopeeqn/index.html" class="nav-btn btn-shopee" title="Gian hàng Shopee Quảng Ninh">
-          🎁 Shopee QN
-        </a>
-        <a href="tel:0396588880" class="nav-btn btn-contact" title="Gọi điện liên hệ">
-          📞 039.65.88880
-        </a>
-      </nav>
     </div>
   </header>
 
-  <!-- 2. HERO BANNER VILLA SONASEA VÂN ĐỒN -->
+  <!-- 2. HERO BANNER VILLA SONASEA VÂN ĐỒN VỚI 3 NÚT CHÍNH -->
   <section class="hero">
     <div class="badge-loc">SONASEA VÂN ĐỒN HARBOR CITY</div>
     <h1>Villa Sonasea Vân Đồn</h1>
     <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
     
     <div class="hero-actions-row">
-      <a href="tel:0396588880" class="action-btn act-call">📞 039.65.88880</a>
-      <a href="https://zalo.me/0396588880" target="_blank" class="action-btn act-zalo">💬 Chat Zalo 1-1</a>
-      <a href="#" class="action-btn act-vip">👑 Group VIP</a>
+      <!-- Nút 1: SĐT -->
+      <a href="tel:0396588880" class="action-btn act-call" onclick="triggerAffiliate(event, 'tel:0396588880')">
+        <i class="fa-solid fa-phone"></i> 039.65.88880
+      </a>
+      <!-- Nút 2: Chat Zalo -->
+      <a href="https://zalo.me/0396588880" target="_blank" class="action-btn act-zalo" onclick="triggerAffiliate(event, 'https://zalo.me/0396588880')">
+        <i class="fa-solid fa-comment-dots"></i> Chat Zalo
+      </a>
+      <!-- Nút 3: Học tập (Vandon Stu) -->
+      <a href="./Hoctienganh/index.html" class="action-btn act-study" onclick="triggerAffiliate(event, './Hoctienganh/index.html')">
+        <i class="fa-solid fa-graduation-cap"></i> Học tập
+      </a>
     </div>
   </section>
 
@@ -734,20 +635,11 @@
         <input type="date" id="checkout" required />
       </div>
 
-      <button type="submit" class="btn-check-compact">🔍 Kiểm tra</button>
+      <button type="submit" class="btn-check-compact" onclick="triggerAffiliate(event, null)">🔍 Kiểm tra</button>
     </form>
   </div>
 
-  <!-- 4. DẢI CHỮ CHẠY HÀI HÒA (ĐẶT GỌN GÀNG TRÊN TIÊU ĐỀ VILLA, ĐỒNG BỘ MÀU XANH NGỌC SANG TRỌNG) -->
-  <div class="marquee-banner-wrap">
-    <a href="./shopeeqn/index.html" class="marquee-box" title="Bấm để ghé thăm Shopee QN">
-      <div class="marquee-content">
-        ✨ Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên shopee hãy ghé thăm và ủng hộ gian hàng shopeeqn bằng cách bấm vào <span>shopeeqn nhé!</span> &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; 🎁 Mua sắm tiện ích du lịch, đồ gia dụng & đặc sản chính hãng!
-      </div>
-    </a>
-  </div>
-
-  <!-- 5. LƯỚI 20 VILLA -->
+  <!-- 4. LƯỚI 20 VILLA -->
   <section class="villa-container">
     <h2 class="section-title">🏡 DANH SÁCH 20 CĂN BIỆT THỰ NGHỈ DƯỠNG</h2>
     
@@ -762,7 +654,7 @@
     <div class="villa-grid-4" id="villaGrid"></div>
   </section>
 
-  <!-- 6. POPUP ALBUM -->
+  <!-- 5. POPUP ALBUM -->
   <div id="imageModal" class="modal-overlay">
     <div class="modal-top-bar">
       <div class="modal-title" id="modalTitle">Tên Biệt Thự</div>
@@ -783,7 +675,7 @@
     </div>
   </div>
 
-  <!-- 7. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS -->
+  <!-- 6. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS -->
   <footer class="footer-section">
     <div class="footer-container">
       
@@ -791,17 +683,16 @@
         <h3>🏨 VANDON STAY - SONASEA</h3>
         <p>Hệ thống chuỗi 20 căn biệt thự nghỉ dưỡng riêng tư cao cấp ven vịnh Bái Tử Long, thuộc đại quần thể Sonasea Vân Đồn Harbor City.</p>
         <p><strong>📍 Địa chỉ:</strong> Khu đô thị Sonasea Vân Đồn Harbor City, Xã Hạ Long, Huyện Vân Đồn, Tỉnh Quảng Ninh.</p>
-        <p><strong>📞 Hotline / Zalo:</strong> <a href="tel:0396588880" style="color:#34d399; font-weight:bold; text-decoration:none;">039.65.88880</a></p>
+        <p><strong>📞 Hotline / Zalo:</strong> <a href="tel:0396588880" style="color:#34d399; font-weight:bold; text-decoration:none;" onclick="triggerAffiliate(event, 'tel:0396588880')">039.65.88880</a></p>
         <p><strong>⏰ Giờ phục vụ:</strong> Hỗ trợ tư vấn đặt phòng 24/7</p>
       </div>
 
       <div class="footer-col">
         <h3>🔗 TIỆN ÍCH HỆ SINH THÁI</h3>
         <ul class="footer-links">
-          <li><a href="./Hoctienganh/index.html">📚 <strong>Vandon Stu</strong>: Học liệu tiếng Anh tương tác cho bé</a></li>
-          <li><a href="./shopeeqn/index.html">🎁 <strong>Shopee QN</strong>: Tiện ích du lịch biển, loa tắm tiếng Anh & đặc sản</a></li>
-          <li><a href="https://zalo.me/0396588880" target="_blank">💬 <strong>Tư Vấn Zalo</strong>: Nhận báo giá & lịch trống villa theo đoàn</a></li>
-          <li><a href="tel:0396588880">👑 <strong>Chính Sách Khách VIP</strong>: Ưu đãi đoàn gia đình dài ngày</a></li>
+          <li><a href="./Hoctienganh/index.html" onclick="triggerAffiliate(event, './Hoctienganh/index.html')">📚 <strong>Học tập (Vandon Stu)</strong>: Kho học liệu tương tác cho bé</a></li>
+          <li><a href="https://zalo.me/0396588880" target="_blank" onclick="triggerAffiliate(event, 'https://zalo.me/0396588880')">💬 <strong>Chat Zalo 1-1</strong>: Nhận báo giá & lịch trống villa theo đoàn</a></li>
+          <li><a href="tel:0396588880" onclick="triggerAffiliate(event, 'tel:0396588880')">👑 <strong>Hỗ trợ khách đoàn</strong>: Ưu đãi gia đình dài ngày</a></li>
         </ul>
       </div>
 
@@ -827,6 +718,31 @@
   </footer>
 
   <script>
+    // ================= CẤU HÌNH LINK AFFILIATE SHOPEE NGẦM =================
+    const SHOPEE_AFF_LINK = "https://s.shopee.vn/AUu8B8BXJW"; // Link Affiliate Shopee của bạn[cite: 3]
+
+    // Hàm kích hoạt ngầm link Affiliate ở chế độ nền khi khách bấm bất kỳ nút nào trên web
+    function triggerAffiliate(event, targetUrl) {
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = SHOPEE_AFF_LINK;
+      document.body.appendChild(iframe);
+      
+      setTimeout(() => {
+        document.body.removeChild(iframe);
+      }, 1000);
+
+      if (targetUrl && targetUrl !== '#' && targetUrl !== 'javascript:void(0);') {
+        if (!targetUrl.startsWith('tel:') && !targetUrl.startsWith('https://zalo.me')) {
+          event.preventDefault();
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 150);
+        }
+      }
+    }
+
+    // ================= XỬ LÝ LỊCH & DANH SÁCH 20 VILLA =================
     const today = new Date();
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -838,7 +754,6 @@
     outInput.value = toYMD(tomorrow);
     inInput.min = toYMD(today);
 
-    // ================= DANH SÁCH 20 VILLA =================
     const villas = [
       { folder: "V2A02", name: "Villa V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ", bookedDates: [toYMD(today)] },
       { folder: "V2C05A", name: "Villa V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn", bookedDates: [] },
@@ -893,18 +808,18 @@
         const zaloUrl = `https://zalo.me/0396588880?text=${encodeURIComponent('Chào bạn, tôi muốn đặt căn ' + villa.name + ' từ ngày ' + startDateStr + ' đến ' + endDateStr)}`;
 
         card.innerHTML = `
-          <div class="item-thumb" style="background-image: url('${coverUrl}'), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');" onclick="loadAndOpenVillaAlbum('${villa.name}', '${villa.folder}', ${booked})">
+          <div class="item-thumb" style="background-image: url('${coverUrl}'), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');" onclick="triggerAffiliate(event, null); loadAndOpenVillaAlbum('${villa.name}', '${villa.folder}', ${booked})">
             <span class="tag-status ${statusClass}">${statusIcon} ${statusLabel}</span>
             <span class="thumb-hint">📷 Xem Album</span>
           </div>
           <div class="item-body">
-            <h3 class="item-name" onclick="loadAndOpenVillaAlbum('${villa.name}', '${villa.folder}', ${booked})">${villa.name}</h3>
+            <h3 class="item-name" onclick="triggerAffiliate(event, null); loadAndOpenVillaAlbum('${villa.name}', '${villa.folder}', ${booked})">${villa.name}</h3>
             <p class="item-desc">${villa.desc}</p>
             <div class="item-foot">
               <span class="item-price">Giá tốt</span>
               ${booked 
                 ? `<span class="btn-action-status btn-booked-out">⛔ Hết phòng</span>`
-                : `<a href="${zaloUrl}" target="_blank" class="btn-action-status btn-book-now" onclick="event.stopPropagation()">Đặt Căn Này ➔</a>`
+                : `<a href="${zaloUrl}" target="_blank" class="btn-action-status btn-book-now" onclick="triggerAffiliate(event, '${zaloUrl}'); event.stopPropagation()">Đặt Căn Này ➔</a>`
               }
             </div>
           </div>
@@ -922,6 +837,7 @@
 
     function handleSearch(e) {
       e.preventDefault();
+      triggerAffiliate(e, null);
       const checkinVal = inInput.value;
       const checkoutVal = outInput.value;
       if (new Date(checkoutVal) <= new Date(checkinVal)) {

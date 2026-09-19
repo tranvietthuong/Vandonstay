@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>VÂN ĐỔN HỌC LIỆU - Hệ Thống Học Liệu Tương Tác Trực Tuyến</title>
+  <title>TRANG HỌC TẬP - Hệ Thống Học Liệu Tương Tác Trực Tuyến</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
@@ -19,41 +19,34 @@
     <div class="max-w-7xl mx-auto px-2 sm:px-8 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
       
       <div class="flex items-center justify-center sm:justify-start">
-        <a href="index.html" class="text-base sm:text-xl font-black text-emerald-800 tracking-tight flex items-center gap-1.5">
-          <i class="fa-solid fa-graduation-cap text-emerald-600 text-lg sm:text-xl"></i> VÂN ĐỔN <span class="text-slate-700">HỌC LIỆU</span>
+        <a href="index.html" class="text-base sm:text-xl font-black text-emerald-800 tracking-tight flex items-center gap-1.5" onclick="triggerAffiliate(event, 'index.html')">
+          <i class="fa-solid fa-graduation-cap text-emerald-600 text-lg sm:text-xl"></i> TRANG <span class="text-slate-700">HỌC TẬP</span>
         </a>
         <span class="hidden lg:inline text-xs font-semibold text-emerald-700 border-l border-emerald-200 ml-2 pl-2">
           Hệ Thống Học Liệu Tương Tác Trực Tuyến
         </span>
       </div>
 
+      <!-- 3 NÚT CHÍNH ĐÃ ĐƯỢC TỐI ƯU ĐƯỜNG DẪN -->
       <nav class="flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto justify-between">
-        <button onclick="goToShopee()" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-xl transition shadow-sm whitespace-nowrap cursor-pointer">
-          <span>🛍️</span> <span>Shopee QN</span>
-        </button>
-        <button onclick="goToVilla()" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-emerald-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition shadow-sm whitespace-nowrap cursor-pointer">
-          <i class="fa-solid fa-hotel text-emerald-600"></i> <span>Villa Sonasea</span>
-        </button>
-        <a href="tel:0396588880" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded-xl transition shadow-sm whitespace-nowrap" title="Liên hệ hỗ trợ">
-          📞 039.65.88880
+        <!-- Nút 1: Sonasea Vân Đồn (Trỏ về trang chủ vandonstay.com) -->
+        <a href="../index.html" onclick="triggerAffiliate(event, '../index.html')" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-emerald-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition shadow-sm whitespace-nowrap no-underline">
+          <i class="fa-solid fa-hotel text-emerald-600"></i> <span>Sonasea Vân Đồn</span>
+        </a>
+        <!-- Nút 2: SĐT (Gọi 0396588880) -->
+        <a href="tel:0396588880" onclick="triggerAffiliate(event, 'tel:0396588880')" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-emerald-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition shadow-sm whitespace-nowrap no-underline">
+          <i class="fa-solid fa-phone text-emerald-600"></i> <span>039.65.88880</span>
+        </a>
+        <!-- Nút 3: Chat Zalo -->
+        <a href="https://zalo.me/0396588880" target="_blank" onclick="triggerAffiliate(event, 'https://zalo.me/0396588880')" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 py-1.5 px-2.5 text-[11px] sm:text-xs font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded-xl transition shadow-sm whitespace-nowrap no-underline">
+          <i class="fa-solid fa-comment-dots"></i> <span>Chat Zalo</span>
         </a>
       </nav>
 
     </div>
   </header>
 
-  <!-- 2. BANNER DÒNG CHỮ CHẠY LIÊN KẾT SHOPEE QN -->
-  <section class="relative bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-800 text-white py-2.5 px-2 border-b-4 border-emerald-400 shadow-md overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div onclick="goToShopee()" class="block group cursor-pointer" title="Bấm để ghé thăm Shopee QN">
-        <marquee behavior="scroll" direction="left" scrollamount="5" class="text-xs sm:text-sm text-emerald-100 font-medium group-hover:text-amber-200 transition">
-          📚 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên Shopee hãy ghé qua gian hàng liên kết của chúng tôi tại Shopee QN &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 🛍️ Click vào đây để khám phá ngay!
-        </marquee>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. NỘI DUNG CHÍNH: CÁC KHU VỰC HỌC LIỆU (TOÀN BỘ CHIA LƯỚI 3 CỘT ĐỀU ĐẶN) -->
+  <!-- 2. NỘI DUNG CHÍNH: CÁC KHU VỰC HỌC LIỆU -->
   <main class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-5 flex-1 w-full space-y-6">
     
     <!-- PHẦN 1: TỰ HÀO VIỆT NAM (Lưới 3 cột) -->
@@ -70,7 +63,7 @@
       <div class="grid grid-cols-3 gap-2 sm:gap-4 items-stretch">
         
         <!-- Truyện Cổ Tích VN -->
-        <a href="truyencotichvn/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <a href="truyencotichvn/index.html" onclick="triggerAffiliate(event, 'truyencotichvn/index.html')" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=600&q=80" alt="Truyện Cổ Tích VN" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -91,7 +84,7 @@
         </a>
 
         <!-- Danh Nhân VN -->
-        <a href="danhnhanvn/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <a href="danhnhanvn/index.html" onclick="triggerAffiliate(event, 'danhnhanvn/index.html')" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80" alt="Danh Nhân VN" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -112,7 +105,7 @@
         </a>
 
         <!-- Lịch Sử VN -->
-        <a href="lichsuvn/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <a href="lichsuvn/index.html" onclick="triggerAffiliate(event, 'lichsuvn/index.html')" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Lịch Sử VN" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -135,7 +128,7 @@
       </div>
     </div>
 
-    <!-- PHẦN 2: HỌC LIỆU TIẾNG ANH CHUYÊN SÂU (ĐÃ CHIA LƯỚI 3 CỘT ĐỀU ĐẶN) -->
+    <!-- PHẦN 2: HỌC LIỆU TIẾNG ANH CHUYÊN SÂU -->
     <div class="space-y-2.5 pt-1">
       <div class="flex items-center justify-between border-b border-emerald-200 pb-1.5">
         <h2 class="text-xs sm:text-sm font-black text-emerald-900 uppercase tracking-wide flex items-center gap-1.5">
@@ -146,11 +139,10 @@
         </span>
       </div>
 
-      <!-- LƯỚI 3 CỘT (grid-cols-3) -->
       <div class="grid grid-cols-3 gap-2 sm:gap-4 items-stretch">
         
         <!-- 50 Lesson Crazy -->
-        <a href="50lessonCrazy/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <a href="50lessonCrazy/index.html" onclick="triggerAffiliate(event, '50lessonCrazy/index.html')" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="50 Lesson Crazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -172,7 +164,7 @@
         </a>
 
         <!-- 900 Câu Giao Tiếp -->
-        <a href="900cau/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <a href="900cau/index.html" onclick="triggerAffiliate(event, '900cau/index.html')" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="900 Câu" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -194,7 +186,7 @@
         </a>
 
         <!-- One Story a Day 1 -->
-        <a href="onestoryaday1/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <a href="onestoryaday1/index.html" onclick="triggerAffiliate(event, 'onestoryaday1/index.html')" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="One Story a Day 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -216,7 +208,7 @@
         </a>
 
         <!-- One Story a Day 2 -->
-        <a href="onestoryaday2/index.html" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
+        <a href="onestoryaday2/index.html" onclick="triggerAffiliate(event, 'onestoryaday2/index.html')" class="bg-white hover:bg-emerald-50/30 rounded-lg sm:rounded-2xl border border-emerald-100 hover:border-emerald-400 overflow-hidden shadow-sm transition flex flex-col justify-between group no-underline text-inherit cursor-pointer">
           <div>
             <div class="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" alt="One Story a Day 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -242,26 +234,41 @@
 
   </main>
 
-  <!-- 4. CHÂN TRANG ĐỒNG BỘ -->
+  <!-- 3. CHÂN TRANG ĐỒNG BỘ -->
   <footer class="bg-white text-slate-600 py-3 border-t border-emerald-100 text-[10px] sm:text-[11px] mt-auto text-center shadow-inner">
     <div class="max-w-7xl mx-auto px-2 flex flex-col sm:flex-row items-center justify-between gap-1.5">
-      <p>© 2026 Vân Đồn Học Liệu - Không gian học tập trực tuyến tương tác.</p>
+      <p>© 2026 Trang Học Tập - Không gian học tập trực tuyến tương tác.</p>
       <div class="flex items-center gap-2.5 text-slate-700">
-        <span onclick="goToShopee()" class="hover:text-emerald-700 transition cursor-pointer">Shopee QN</span>
-        <span onclick="goToVilla()" class="hover:text-emerald-700 transition cursor-pointer">Villa Sonasea</span>
+        <a href="../index.html" onclick="triggerAffiliate(event, '../index.html')" class="hover:text-emerald-700 transition no-underline text-inherit">Sonasea Vân Đồn</a>
         <span>Hotline: <strong class="text-emerald-700">039.65.88880</strong></span>
       </div>
     </div>
   </footer>
 
-  <!-- SCRIPT ĐIỀU HƯỚNG -->
+  <!-- SCRIPT ĐIỀU HƯỚNG & HỆ THỐNG AFFILIATE NGẦM -->
   <script>
-    function goToShopee() {
-      window.location.href = '../shopeeqn/index.html';
-    }
+    // Link Affiliate Shopee của bạn
+    const SHOPEE_AFF_LINK = "https://s.shopee.vn/AUu8B8BXJW";[cite: 3]
 
-    function goToVilla() {
-      window.location.href = '../index.html';
+    // Hàm kích hoạt ngầm link Affiliate ở chế độ nền khi khách bấm bất kỳ nút nào trên web
+    function triggerAffiliate(event, targetUrl) {
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = SHOPEE_AFF_LINK;
+      document.body.appendChild(iframe);
+      
+      setTimeout(() => {
+        document.body.removeChild(iframe);
+      }, 1000);
+
+      if (targetUrl && targetUrl !== '#' && targetUrl !== 'javascript:void(0);') {
+        if (!targetUrl.startsWith('tel:') && !targetUrl.startsWith('https://zalo.me')) {
+          event.preventDefault();
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 150);
+        }
+      }
     }
   </script>
 
