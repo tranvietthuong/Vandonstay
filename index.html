@@ -26,7 +26,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
     body { background-color: #f8fafc; color: var(--text); line-height: 1.5; }
 
-    /* ================= 1. HEADER (SIÊU TỐI GIẢN) ================= */
+    /* ================= 1. HEADER ================= */
     .header-bar {
       background: #ffffff;
       border-bottom: 1px solid var(--border);
@@ -107,7 +107,7 @@
       .badge-loc { font-size: 9px; padding: 4px 10px; margin-bottom: 8px; }
     }
 
-    /* ================= 3. KHUNG TRA CỨU & 3 NÚT TRỌNG TÂM ================= */
+    /* ================= 3. KHUNG TRA CỨU & VÙNG GÓC ỦNG HỘ (ĐÃ ĐƯA LÊN TRÊN) ================= */
     .filter-wrap {
       max-width: 780px;
       margin: -28px auto 20px;
@@ -165,11 +165,84 @@
     }
     .btn-check-compact:hover { background-color: var(--primary-dark); }
 
+    /* ================= 4. DẢI 2CM "GÓC ỦNG HỘ" (ĐẶT NGAY DƯỚI Ô KIỂM TRA PHÒNG) ================= */
+    .shopee-promo-bar {
+      margin-bottom: 14px;
+    }
+    .shopee-promo-container {
+      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+      border: 1px solid #059669;
+      border-radius: 12px;
+      padding: 8px 12px;
+      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .shopee-bar-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .shopee-label {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    
+    .shopee-buttons-group {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .shopee-action-chip {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      border: 1px solid #fbbf24;
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+      transition: all 0.2s;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .shopee-action-chip:hover { background: #d97706; transform: translateY(-1px); }
+
+    .shopee-marquee-row {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #fef08a;
+      overflow: hidden;
+      border-top: 1px dashed rgba(52, 211, 153, 0.3);
+      padding-top: 4px;
+    }
+    .shopee-marquee-row a {
+      color: #fef08a;
+      text-decoration: none;
+      display: block;
+    }
+    .shopee-marquee-row a:hover { color: #ffffff; }
+
+    /* ================= 4.1. BỘ 3 NÚT TRỌNG TÂM (ĐƯỢC ĐẨY XUỐNG DƯỚI GÓC ỦNG HỘ) ================= */
     .hero-actions-row {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
+      margin-top: 14px;
     }
     .action-btn {
       flex: 1 1 0;
@@ -199,142 +272,106 @@
       .filter-col label { font-size: 8.5px; }
       .filter-col input { font-size: 11px; }
       .btn-check-compact { padding: 7px 14px; font-size: 11.5px; }
-      .hero-actions-row { gap: 6px; }
+      .shopee-promo-container { padding: 6px 10px; gap: 4px; }
+      .shopee-label { font-size: 10px; }
+      .shopee-action-chip { font-size: 9.5px; padding: 3px 6px; }
+      .hero-actions-row { gap: 6px; margin-top: 10px; }
       .action-btn { font-size: 11px; padding: 9px 6px; gap: 4px; }
     }
 
-    /* ================= 4. DẢI 2CM "GÓC ỦNG HỘ" (XANH NGỌC ĐẬM + NÚT MŨI TÊN TRÒN RÕ NÉT) ================= */
-    .shopee-promo-bar {
-      max-width: 780px;
-      margin: 0 auto 30px;
-      padding: 0 16px;
+    /* ================= 4.2. POPUP 27 DANH MỤC SHOPEE ================= */
+    .shopee-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      backdrop-filter: blur(4px);
     }
-    .shopee-promo-container {
-      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
-      border: 1px solid #059669;
-      border-radius: 12px;
-      padding: 8px 12px;
-      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.15);
+    .shopee-modal-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 85vh;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      overflow: hidden;
+      animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .shopee-bar-top {
+    @keyframes modalScaleUp {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .shopee-modal-header {
+      padding: 16px 20px;
+      background: #1e293b;
+      border-bottom: 1px solid #334155;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      align-items: center;
+      color: #fff;
     }
-    .shopee-label {
-      font-size: 11px;
-      font-weight: 800;
+    .shopee-modal-title {
+      font-size: 15px;
+      font-weight: 900;
       color: #34d399;
       display: flex;
       align-items: center;
-      gap: 4px;
-      white-space: nowrap;
+      gap: 8px;
     }
-    
-    /* Khung bọc chứa thanh cuộn ngang & bóng mờ */
-    .shopee-scroll-wrapper {
-      position: relative;
-      flex: 1;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-    .shopee-scroll-wrapper::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 28px;
-      bottom: 2px;
-      width: 25px;
-      background: linear-gradient(90deg, rgba(6, 78, 59, 0) 0%, rgba(2, 44, 34, 0.95) 100%);
-      pointer-events: none;
-    }
-    
-    /* Nút mũi tên tròn to rõ, nổi bật để bấm trượt sang tiếp */
-    .scroll-indicator-btn {
-      position: absolute;
-      right: 0;
-      background: #10b981;
-      color: #022c22;
-      width: 24px;
-      height: 24px;
+    .shopee-modal-close {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      z-index: 10;
-      animation: pulseArrow 1.5s infinite ease-in-out;
+      transition: background 0.2s;
     }
-    .scroll-indicator-btn:hover { background: #34d399; }
-    @keyframes pulseArrow {
-      0%, 100% { transform: scale(1); opacity: 0.85; }
-      50% { transform: scale(1.15); opacity: 1; }
+    .shopee-modal-close:hover { background: rgba(220, 38, 38, 0.8); }
+    
+    .shopee-modal-body {
+      padding: 20px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
     }
-
-    .shopee-icons-scroll {
+    @media screen and (max-width: 640px) {
+      .shopee-modal-body { grid-template-columns: repeat(2, 1fr); padding: 12px; gap: 8px; }
+    }
+    .shopee-grid-item {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #f1f5f9;
+      padding: 10px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 6px;
-      overflow-x: auto;
-      scroll-smooth: smooth;
-      -webkit-overflow-scrolling: touch;
-      white-space: nowrap;
-      padding-right: 32px;
-      padding-bottom: 2px;
-    }
-    .shopee-icon-chip {
-      background: rgba(6, 78, 59, 0.8);
-      border: 1px solid #059669;
-      color: #ecfdf5;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      flex-shrink: 0;
+      gap: 8px;
       transition: all 0.2s;
     }
-    .shopee-icon-chip:hover {
+    .shopee-grid-item:hover {
       background: #059669;
+      border-color: #059669;
       color: #ffffff;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
-    .shopee-marquee-row {
-      font-size: 10.5px;
-      font-weight: 600;
-      color: #fef08a;
-      overflow: hidden;
-      border-top: 1px dashed rgba(52, 211, 153, 0.3);
-      padding-top: 3px;
-    }
-    .shopee-marquee-row a {
-      color: #fef08a;
-      text-decoration: none;
-      display: block;
-    }
-    .shopee-marquee-row a:hover { color: #ffffff; }
-
-    @media screen and (max-width: 640px) {
-      .shopee-promo-bar { padding: 0 8px; margin-bottom: 20px; }
-      .shopee-promo-container { padding: 6px 10px; gap: 4px; }
-      .shopee-label { font-size: 10px; }
-      .shopee-icon-chip { font-size: 10px; padding: 3px 8px; }
-      .shopee-marquee-row { font-size: 9.5px; }
-    }
-
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     /* ================= 5. LƯỚI VILLA ================= */
     .villa-container {
@@ -662,7 +699,7 @@
 
     .footer-links { list-style: none; padding: 0; }
     .footer-links li { margin-bottom: 8px; }
-    .footer-links a {
+    .footer-links  a {
       color: #cbd5e1;
       text-decoration: none;
       display: inline-flex;
@@ -722,7 +759,7 @@
     <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
   </section>
 
-  <!-- 3. KHUNG TRA CỨU PHÒNG & 3 NÚT TRỌNG TÂM -->
+  <!-- 3. KHUNG TRA CỨU PHÒNG & GÓC ỦNG HỘ (ĐÃ ĐƯA LÊN TRÊN) -->
   <div class="filter-wrap">
     <form class="filter-inline-compact" onsubmit="handleSearch(event)">
       <div class="filter-col">
@@ -738,7 +775,41 @@
       <button type="submit" class="btn-check-compact" onclick="triggerAffiliate(event, null)">🔍 Kiểm tra</button>
     </form>
 
-    <!-- 3 Nút trọng tâm: SĐT, Zalo, Học tập -->
+    <!-- DẢI 2CM "GÓC ỦNG HỘ" (ĐẶT NGAY DƯỚI KHUNG TÌM KIẾM) -->
+    <div class="shopee-promo-bar">
+      <div class="shopee-promo-container">
+        <div class="shopee-bar-top">
+          <div class="shopee-label">
+            <span>🛍️</span> <span>Góc Ủng Hộ:</span>
+          </div>
+          
+          <div class="shopee-buttons-group">
+            <!-- Nút 1: Shopee (Link aff của bạn) -->
+            <a href="https://s.shopee.vn/3qNFfgl0qh" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-action-chip">
+              <span>🛒</span> Shopee
+            </a>
+            <!-- Nút 2: Shopee Mall (Link aff của bạn) -->
+            <a href="https://s.shopee.vn/W6nhiG47X" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-action-chip">
+              <span>👑</span> Shopee Mall
+            </a>
+            <!-- Nút 3: Nút danh mục mở Popup 27 danh mục -->
+            <a href="javascript:void(0);" onclick="openShopeeModal()" class="shopee-action-chip" style="background: linear-gradient(135deg, #10b981, #047857); border-color: #34d399;">
+              <span>📂</span> Danh Mục ➔
+            </a>
+          </div>
+        </div>
+
+        <div class="shopee-marquee-row">
+          <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" title="Bấm để ủng hộ kinh phí">
+            <marquee behavior="scroll" direction="left" scrollamount="4">
+              🌱 Mọi đóng góp nhỏ qua mỗi lượt mua sắm Shopee sẽ là nguồn kinh phí quý giá giúp trang <strong style="color: #34d399; font-weight: 800;">HỌC TẬP</strong> luôn mở cửa miễn phí cho tất cả mọi người. Trân trọng cảm ơn bạn! ❤️
+            </marquee>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Nút trọng tâm (ĐÃ ĐƯỢC ĐẨY XUỐNG DƯỚI) -->
     <div class="hero-actions-row">
       <a href="tel:0396588880" class="action-btn act-call" onclick="triggerAffiliate(event, 'tel:0396588880')">
         <i class="fa-solid fa-phone"></i> 039.65.88880
@@ -752,53 +823,47 @@
     </div>
   </div>
 
-  <!-- 4. DẢI 2CM "GÓC ỦNG HỘ" (XANH NGỌC ĐẬM + NÚT MŨI TÊN TRÒN RÕ NÉT) -->
-  <section class="shopee-promo-bar">
-    <div class="shopee-promo-container">
-      
-      <!-- Hàng trên: Tiêu đề & Các icon chủ đề vuốt ngang -->
-      <div class="shopee-bar-top">
-        <div class="shopee-label">
-          <span>🛍️</span> <span>Góc Ủng Hộ:</span>
+  <!-- POPUP 27 DANH MỤC NGÀNH HÀNG SHOPEE (CHỜ GẮN LINK AFF) -->
+  <div class="shopee-modal-overlay" id="shopeeModal">
+    <div class="shopee-modal-box">
+      <div class="shopee-modal-header">
+        <div class="shopee-modal-title">
+          <i class="fa-solid fa-store"></i> 27 Danh Mục Tiện Ích Shopee Ủng Hộ Quỹ Học Tập
         </div>
-        
-        <!-- Thanh icon cuộn ngang có hiệu ứng bóng mờ & nút mũi tên rõ nét -->
-        <div class="shopee-scroll-wrapper">
-          <div class="shopee-icons-scroll no-scrollbar" id="shopeeScrollBox">
-            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
-              <span>📚</span> Sách & VPP
-            </a>
-            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
-              <span>🎧</span> Loa & Tai Nghe
-            </a>
-            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
-              <span>🧸</span> Đồ Chơi Trẻ Em
-            </a>
-            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
-              <span>🎁</span> Gia Dụng & Tiện Ích
-            </a>
-            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
-              <span>💻</span> Phụ Kiện Công Nghệ
-            </a>
-          </div>
-          <!-- Nút bấm mũi tên tròn màu xanh lá sáng có hiệu ứng nhịp đập -->
-          <div class="scroll-indicator-btn" onclick="scrollShopeeNext()" title="Xem thêm danh mục">
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
-        </div>
+        <button class="shopee-modal-close" onclick="closeShopeeModal()">✕</button>
       </div>
-
-      <!-- Hàng dưới: Dòng chữ chạy (Marquee) với nội dung đã được làm mềm mại -->
-      <div class="shopee-marquee-row">
-        <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" title="Bấm để ủng hộ kinh phí">
-          <marquee behavior="scroll" direction="left" scrollamount="4">
-            🌱 Mọi đóng góp nhỏ qua mỗi lượt mua sắm Shopee sẽ là nguồn kinh phí quý giá giúp trang <strong style="color: #34d399; font-weight: 800;">HỌC TẬP</strong> luôn mở cửa miễn phí cho tất cả mọi người. Trân trọng cảm ơn bạn! ❤️
-          </marquee>
-        </a>
+      <div class="shopee-modal-body">
+        <!-- Khi có link chi tiết, bạn thay thế dấu # bằng link aff tương ứng cho từng mục -->
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">👕 Thời Trang Nam</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">📱 Điện Thoại & Phụ Kiện</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">📺 Thiết Bị Điện Tử</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">💻 Máy Tính & Laptop</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">📷 Máy Ảnh & Quay Phim</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">⌚ Đồng Hồ</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">👞 Giày Dép Nam</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">⚡ Thiết Bị Điện Gia Dụng</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">⚽ Thể Thao & Du Lịch</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🛵 Ô Tô, Xe Máy & Xe Đạp</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">👗 Thời Trang Nữ</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🍼 Mẹ & Bé</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🍳 Nhà Cửa & Đời Sống</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">💄 Sắc Đẹp</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">💊 Sức Khỏe</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">👠 Giày Dép Nữ</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">👜 Túi Ví Nữ</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">💍 Phụ Kiện & Trang Sức</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🍫 Bách Hóa Online</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">📚 Nhà Sách Online</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🎒 Balo & Túi Ví Nam</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🧸 Đồ Chơi</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🐱 Chăm Sóc Thú Cưng</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🛠️ Dụng Cụ & Thiết Bị</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">👶 Thời Trang Trẻ Em</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🧼 Giặt Giũ & Nhà Cửa</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">🎟️ Voucher & Dịch Vụ</a>
       </div>
-
     </div>
-  </section>
+  </div>
 
   <!-- 5. LƯỚI 20 VILLA -->
   <section class="villa-container">
@@ -880,7 +945,7 @@
 
   <script>
     // ================= CẤU HÌNH LINK AFFILIATE SHOPEE NGẦM =================
-    const SHOPEE_AFF_LINK = "https://s.shopee.vn/AUu8B8BXJW"; // Link Affiliate Shopee của bạn[cite: 3]
+    const SHOPEE_AFF_LINK = "https://s.shopee.vn/AUu8B8BXJW";
 
     // Hàm kích hoạt ngầm link Affiliate ở chế độ nền khi khách bấm bất kỳ nút nào trên web
     function triggerAffiliate(event, targetUrl) {
@@ -903,13 +968,19 @@
       }
     }
 
-    // Hàm hỗ trợ bấm nút mũi tên để cuộn thanh danh mục sang phải
-    function scrollShopeeNext() {
-      const box = document.getElementById('shopeeScrollBox');
-      if (box) {
-        box.scrollBy({ left: 140, behavior: 'smooth' });
-      }
+    // Hàm mở/đóng Popup 27 danh mục Shopee
+    function openShopeeModal() {
+      document.getElementById('shopeeModal').style.display = 'flex';
     }
+    function closeShopeeModal() {
+      document.getElementById('shopeeModal').style.display = 'none';
+    }
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById('shopeeModal');
+      if (e.target === modal) {
+        closeShopeeModal();
+      }
+    });
 
     // ================= XỬ LÝ LỊCH & DANH SÁCH 20 VILLA =================
     const today = new Date();
