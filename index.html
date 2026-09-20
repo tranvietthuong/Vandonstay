@@ -107,10 +107,10 @@
       .badge-loc { font-size: 9px; padding: 4px 10px; margin-bottom: 8px; }
     }
 
-    /* ================= 3. KHUNG TRA CỨU & VÙNG GÓC ỦNG HỘ (ĐÃ ĐƯA LÊN TRÊN) ================= */
+    /* ================= 3. KHUNG TRA CỨU PHÒNG (ĐÃ LÀM NỔI BẬT RÕ RỆT) ================= */
     .filter-wrap {
       max-width: 780px;
-      margin: -28px auto 20px;
+      margin: -34px auto 20px;
       padding: 0 16px;
       position: relative;
       z-index: 10;
@@ -118,9 +118,10 @@
     .filter-inline-compact {
       background: #ffffff;
       border-radius: 999px;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-      padding: 9px 12px 9px 22px;
-      border: 1px solid var(--border);
+      /* Đổ bóng sâu và sắc nét hơn, kèm viền xanh nổi bật để không bị chìm */
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22), 0 0 0 2px rgba(5, 150, 105, 0.25);
+      padding: 10px 14px 10px 24px;
+      border: 2px solid var(--primary);
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -134,18 +135,18 @@
       gap: 2px;
     }
     .filter-col label {
-      font-size: 10px;
-      font-weight: 800;
-      color: var(--muted);
+      font-size: 10.5px;
+      font-weight: 900;
+      color: var(--primary-dark);
       text-transform: uppercase;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.5px;
     }
     .filter-col input {
       width: 100%;
       border: none;
       outline: none;
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 13.5px;
+      font-weight: 800;
       color: var(--text);
       background: transparent;
       cursor: pointer;
@@ -155,17 +156,18 @@
       color: #ffffff;
       border: none;
       border-radius: 999px;
-      padding: 10px 24px;
-      font-size: 13.5px;
-      font-weight: 800;
+      padding: 11px 26px;
+      font-size: 14px;
+      font-weight: 900;
       cursor: pointer;
       white-space: nowrap;
       flex-shrink: 0;
-      transition: background 0.2s;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+      transition: all 0.2s;
     }
-    .btn-check-compact:hover { background-color: var(--primary-dark); }
+    .btn-check-compact:hover { background-color: var(--primary-dark); transform: scale(1.02); }
 
-    /* ================= 4. DẢI 2CM "GÓC ỦNG HỘ" (ĐẶT NGAY DƯỚI Ô KIỂM TRA PHÒNG) ================= */
+    /* ================= 4. DẢI 2CM "GÓC ỦNG HỘ" ================= */
     .shopee-promo-bar {
       margin-bottom: 14px;
     }
@@ -236,23 +238,21 @@
     }
     .shopee-marquee-row a:hover { color: #ffffff; }
 
-    /* ================= 4.1. BỘ 3 NÚT TRỌNG TÂM (ĐƯỢC ĐẨY XUỐNG DƯỚI GÓC ỦNG HỘ) ================= */
+    /* ================= 4.1. BỐ TRÍ 4 NÚT HÀNH ĐỘNG TRÊN 1 HÀNG ================= */
     .hero-actions-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Ép luôn nằm trên 1 hàng ở mọi thiết bị */
+      gap: 6px;
       margin-top: 14px;
     }
     .action-btn {
-      flex: 1 1 0;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 11px 14px;
+      gap: 4px;
+      padding: 10px 4px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 11px; /* Tối ưu kích thước chữ để vừa vặn 4 nút trên mobile */
       font-weight: 800;
       text-decoration: none;
       color: #ffffff;
@@ -264,19 +264,20 @@
     
     .act-call { background: linear-gradient(135deg, #059669, #047857); }
     .act-zalo { background: linear-gradient(135deg, #0284c7, #0369a1); }
+    .act-fb   { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
     .act-study { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
 
     @media screen and (max-width: 640px) {
-      .filter-wrap { margin: -22px auto 16px; padding: 0 8px; }
-      .filter-inline-compact { padding: 6px 8px 6px 14px; gap: 8px; margin-bottom: 10px; }
+      .filter-wrap { margin: -24px auto 16px; padding: 0 8px; }
+      .filter-inline-compact { padding: 6px 8px 6px 14px; gap: 6px; margin-bottom: 10px; }
       .filter-col label { font-size: 8.5px; }
       .filter-col input { font-size: 11px; }
-      .btn-check-compact { padding: 7px 14px; font-size: 11.5px; }
+      .btn-check-compact { padding: 8px 16px; font-size: 12px; }
       .shopee-promo-container { padding: 6px 10px; gap: 4px; }
       .shopee-label { font-size: 10px; }
       .shopee-action-chip { font-size: 9.5px; padding: 3px 6px; }
-      .hero-actions-row { gap: 6px; margin-top: 10px; }
-      .action-btn { font-size: 11px; padding: 9px 6px; gap: 4px; }
+      .hero-actions-row { gap: 4px; margin-top: 10px; }
+      .action-btn { font-size: 9.5px; padding: 8px 2px; gap: 3px; }
     }
 
     /* ================= 4.2. POPUP 27 DANH MỤC SHOPEE ================= */
@@ -699,7 +700,7 @@
 
     .footer-links { list-style: none; padding: 0; }
     .footer-links li { margin-bottom: 8px; }
-    .footer-links  a {
+    .footer-links a {
       color: #cbd5e1;
       text-decoration: none;
       display: inline-flex;
@@ -759,7 +760,7 @@
     <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
   </section>
 
-  <!-- 3. KHUNG TRA CỨU PHÒNG & GÓC ỦNG HỘ (ĐÃ ĐƯA LÊN TRÊN) -->
+  <!-- 3. KHUNG TRA CỨU PHÒNG & GÓC ỦNG HỘ (ĐÃ ĐƯA LÊN TRÊN VÀ LÀM NỔI BẬT) -->
   <div class="filter-wrap">
     <form class="filter-inline-compact" onsubmit="handleSearch(event)">
       <div class="filter-col">
@@ -775,7 +776,7 @@
       <button type="submit" class="btn-check-compact" onclick="triggerAffiliate(event, null)">🔍 Kiểm tra</button>
     </form>
 
-    <!-- DẢI 2CM "GÓC ỦNG HỘ" (ĐẶT NGAY DƯỚI KHUNG TÌM KIẾM) -->
+    <!-- DẢI 2CM "GÓC ỦNG HỘ" -->
     <div class="shopee-promo-bar">
       <div class="shopee-promo-container">
         <div class="shopee-bar-top">
@@ -784,15 +785,12 @@
           </div>
           
           <div class="shopee-buttons-group">
-            <!-- Nút 1: Shopee (Link aff của bạn) -->
             <a href="https://s.shopee.vn/3qNFfgl0qh" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-action-chip">
               <span>🛒</span> Shopee
             </a>
-            <!-- Nút 2: Shopee Mall (Link aff của bạn) -->
             <a href="https://s.shopee.vn/W6nhiG47X" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-action-chip">
               <span>👑</span> Shopee Mall
             </a>
-            <!-- Nút 3: Nút danh mục mở Popup 27 danh mục -->
             <a href="javascript:void(0);" onclick="openShopeeModal()" class="shopee-action-chip" style="background: linear-gradient(135deg, #10b981, #047857); border-color: #34d399;">
               <span>📂</span> Danh Mục ➔
             </a>
@@ -809,13 +807,16 @@
       </div>
     </div>
 
-    <!-- 3 Nút trọng tâm (ĐÃ ĐƯỢC ĐẨY XUỐNG DƯỚI) -->
+    <!-- BỘ 4 NÚT HÀNH ĐỘNG TRỌNG TÂM NẰM TRÊN 1 HÀNG, ĐÃ BỎ CHỮ CHAT -->
     <div class="hero-actions-row">
       <a href="tel:0396588880" class="action-btn act-call" onclick="triggerAffiliate(event, 'tel:0396588880')">
         <i class="fa-solid fa-phone"></i> 039.65.88880
       </a>
       <a href="https://zalo.me/0396588880" target="_blank" class="action-btn act-zalo" onclick="triggerAffiliate(event, 'https://zalo.me/0396588880')">
-        <i class="fa-solid fa-comment-dots"></i> Chat Zalo
+        <i class="fa-solid fa-comment-dots"></i> Zalo
+      </a>
+      <a href="https://m.me/yourfanpage" target="_blank" class="action-btn act-fb" onclick="triggerAffiliate(event, 'https://m.me/yourfanpage')">
+        <i class="fa-brands fa-facebook-messenger"></i> Facebook
       </a>
       <a href="./Hoctienganh/index.html" class="action-btn act-study" onclick="triggerAffiliate(event, './Hoctienganh/index.html')">
         <i class="fa-solid fa-graduation-cap"></i> Học tập
@@ -823,7 +824,7 @@
     </div>
   </div>
 
-  <!-- POPUP 27 DANH MỤC NGÀNH HÀNG SHOPEE (CHỜ GẮN LINK AFF) -->
+  <!-- POPUP 27 DANH MỤC NGÀNH HÀNG SHOPEE -->
   <div class="shopee-modal-overlay" id="shopeeModal">
     <div class="shopee-modal-box">
       <div class="shopee-modal-header">
@@ -833,7 +834,6 @@
         <button class="shopee-modal-close" onclick="closeShopeeModal()">✕</button>
       </div>
       <div class="shopee-modal-body">
-        <!-- Khi có link chi tiết, bạn thay thế dấu # bằng link aff tương ứng cho từng mục -->
         <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">👕 Thời Trang Nam</a>
         <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">📱 Điện Thoại & Phụ Kiện</a>
         <a href="#" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-grid-item">📺 Thiết Bị Điện Tử</a>
@@ -959,7 +959,7 @@
       }, 1000);
 
       if (targetUrl && targetUrl !== '#' && targetUrl !== 'javascript:void(0);') {
-        if (!targetUrl.startsWith('tel:') && !targetUrl.startsWith('https://zalo.me')) {
+        if (!targetUrl.startsWith('tel:') && !targetUrl.startsWith('https://zalo.me') && !targetUrl.startsWith('https://m.me')) {
           event.preventDefault();
           setTimeout(() => {
             window.location.href = targetUrl;
