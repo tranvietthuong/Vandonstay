@@ -60,14 +60,14 @@
       .brand-box { font-size: 18px; }
     }
 
-    /* ================= 2. HERO BANNER & 3 NÚT TRỌNG TÂM ================= */
+    /* ================= 2. HERO BANNER ================= */
     .hero {
       position: relative;
       background: linear-gradient(135deg, rgba(2, 6, 23, 0.82) 0%, rgba(15, 23, 42, 0.72) 50%, rgba(5, 150, 105, 0.45) 100%),
                   url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
       color: #ffffff;
       text-align: center;
-      padding: 70px 20px 90px;
+      padding: 60px 20px 75px;
       border-bottom: 4px solid var(--primary);
       box-shadow: inset 0 -20px 40px rgba(0,0,0,0.4);
     }
@@ -79,70 +79,38 @@
       font-size: 11.5px;
       font-weight: 900;
       letter-spacing: 1px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-transform: uppercase;
       box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
     }
     .hero h1 { 
-      font-size: 38px; 
+      font-size: 36px; 
       font-weight: 900; 
-      margin-bottom: 12px; 
+      margin-bottom: 10px; 
       letter-spacing: -0.8px; 
       text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
     .hero p { 
       max-width: 760px; 
-      margin: 0 auto 24px; 
-      font-size: 15px; 
+      margin: 0 auto; 
+      font-size: 14.5px; 
       color: #e2e8f0; 
       font-weight: 400;
       line-height: 1.6;
       text-shadow: 0 1px 4px rgba(0,0,0,0.4);
     }
 
-    .hero-actions-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .action-btn {
-      flex: 1 1 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 16px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 800;
-      text-decoration: none;
-      color: #ffffff;
-      white-space: nowrap;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .action-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
-    
-    .act-call { background: linear-gradient(135deg, #059669, #047857); }
-    .act-zalo { background: linear-gradient(135deg, #0284c7, #0369a1); }
-    .act-study { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
-
     @media screen and (max-width: 768px) {
-      .hero { padding: 40px 14px 60px; }
-      .hero h1 { font-size: 23px; margin-bottom: 8px; }
-      .hero p { font-size: 12.5px; margin-bottom: 18px; }
-      .badge-loc { font-size: 9.5px; padding: 4px 12px; margin-bottom: 10px; }
-      .hero-actions-row { gap: 8px; max-width: 100%; }
-      .action-btn { font-size: 12px; padding: 11px 8px; border-radius: 10px; gap: 5px; }
+      .hero { padding: 35px 14px 50px; }
+      .hero h1 { font-size: 22px; margin-bottom: 6px; }
+      .hero p { font-size: 12px; }
+      .badge-loc { font-size: 9px; padding: 4px 10px; margin-bottom: 8px; }
     }
 
-    /* ================= 3. KHUNG TRA CỨU PHÒNG ================= */
+    /* ================= 3. KHUNG TRA CỨU & 3 NÚT TRỌNG TÂM ================= */
     .filter-wrap {
       max-width: 780px;
-      margin: -32px auto 35px;
+      margin: -28px auto 20px;
       padding: 0 16px;
       position: relative;
       z-index: 10;
@@ -157,6 +125,7 @@
       flex-direction: row;
       align-items: center;
       gap: 16px;
+      margin-bottom: 14px;
     }
     .filter-col {
       flex: 1 1 0;
@@ -196,31 +165,178 @@
     }
     .btn-check-compact:hover { background-color: var(--primary-dark); }
 
+    .hero-actions-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .action-btn {
+      flex: 1 1 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 11px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      color: #ffffff;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .action-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+    
+    .act-call { background: linear-gradient(135deg, #059669, #047857); }
+    .act-zalo { background: linear-gradient(135deg, #0284c7, #0369a1); }
+    .act-study { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+
     @media screen and (max-width: 640px) {
-      .filter-wrap { margin: -24px auto 20px; padding: 0 8px; }
-      .filter-inline-compact { padding: 6px 8px 6px 14px; gap: 8px; }
+      .filter-wrap { margin: -22px auto 16px; padding: 0 8px; }
+      .filter-inline-compact { padding: 6px 8px 6px 14px; gap: 8px; margin-bottom: 10px; }
       .filter-col label { font-size: 8.5px; }
       .filter-col input { font-size: 11px; }
       .btn-check-compact { padding: 7px 14px; font-size: 11.5px; }
+      .hero-actions-row { gap: 6px; }
+      .action-btn { font-size: 11px; padding: 9px 6px; gap: 4px; }
     }
 
-    .status-summary {
-      max-width: 1440px;
-      margin: 0 auto 16px;
-      padding: 0 20px;
+    /* ================= 4. DẢI 2CM "GÓC ỦNG HỘ" (XANH NGỌC ĐẬM + NÚT MŨI TÊN TRÒN RÕ NÉT) ================= */
+    .shopee-promo-bar {
+      max-width: 780px;
+      margin: 0 auto 30px;
+      padding: 0 16px;
+    }
+    .shopee-promo-container {
+      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+      border: 1px solid #059669;
+      border-radius: 12px;
+      padding: 8px 12px;
+      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.15);
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--muted);
+      flex-direction: column;
+      gap: 5px;
     }
-    .status-summary strong { color: var(--text); font-weight: 800; }
-    .status-badges { display: flex; gap: 12px; font-size: 12px; font-weight: 700; }
-    .badge-green { color: var(--primary); }
-    .badge-red { color: var(--danger); }
+    .shopee-bar-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .shopee-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    
+    /* Khung bọc chứa thanh cuộn ngang & bóng mờ */
+    .shopee-scroll-wrapper {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .shopee-scroll-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 28px;
+      bottom: 2px;
+      width: 25px;
+      background: linear-gradient(90deg, rgba(6, 78, 59, 0) 0%, rgba(2, 44, 34, 0.95) 100%);
+      pointer-events: none;
+    }
+    
+    /* Nút mũi tên tròn to rõ, nổi bật để bấm trượt sang tiếp */
+    .scroll-indicator-btn {
+      position: absolute;
+      right: 0;
+      background: #10b981;
+      color: #022c22;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 10;
+      animation: pulseArrow 1.5s infinite ease-in-out;
+    }
+    .scroll-indicator-btn:hover { background: #34d399; }
+    @keyframes pulseArrow {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
 
-    /* ================= 4. LƯỚI VILLA ================= */
+    .shopee-icons-scroll {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      scroll-smooth: smooth;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+      padding-right: 32px;
+      padding-bottom: 2px;
+    }
+    .shopee-icon-chip {
+      background: rgba(6, 78, 59, 0.8);
+      border: 1px solid #059669;
+      color: #ecfdf5;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .shopee-icon-chip:hover {
+      background: #059669;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .shopee-marquee-row {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #fef08a;
+      overflow: hidden;
+      border-top: 1px dashed rgba(52, 211, 153, 0.3);
+      padding-top: 3px;
+    }
+    .shopee-marquee-row a {
+      color: #fef08a;
+      text-decoration: none;
+      display: block;
+    }
+    .shopee-marquee-row a:hover { color: #ffffff; }
+
+    @media screen and (max-width: 640px) {
+      .shopee-promo-bar { padding: 0 8px; margin-bottom: 20px; }
+      .shopee-promo-container { padding: 6px 10px; gap: 4px; }
+      .shopee-label { font-size: 10px; }
+      .shopee-icon-chip { font-size: 10px; padding: 3px 8px; }
+      .shopee-marquee-row { font-size: 9.5px; }
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* ================= 5. LƯỚI VILLA ================= */
     .villa-container {
       max-width: 1440px;
       margin: 0 auto 50px;
@@ -249,7 +365,6 @@
       .villa-grid-4 { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .villa-container { padding: 0 6px; margin-bottom: 25px; }
       .section-title { font-size: 14.5px; margin-bottom: 10px; }
-      .status-summary { font-size: 11px; padding: 0 8px; margin-bottom: 10px; }
     }
 
     .villa-item {
@@ -412,7 +527,7 @@
       .btn-action-status { font-size: 9.5px; padding: 3px 6px; }
     }
 
-    /* ================= 5. POPUP ALBUM ================= */
+    /* ================= 6. POPUP ALBUM ================= */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -514,7 +629,7 @@
       z-index: 20;
     }
 
-    /* ================= 6. CHÂN TRANG ================= */
+    /* ================= 7. CHÂN TRANG ================= */
     .footer-section {
       background-color: #0b1324;
       color: #94a3b8;
@@ -600,29 +715,14 @@
     </div>
   </header>
 
-  <!-- 2. HERO BANNER VILLA SONASEA VÂN ĐỒN VỚI 3 NÚT CHÍNH -->
+  <!-- 2. HERO BANNER VILLA SONASEA VÂN ĐỒN -->
   <section class="hero">
     <div class="badge-loc">SONASEA VÂN ĐỒN HARBOR CITY</div>
     <h1>Villa Sonasea Vân Đồn</h1>
     <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
-    
-    <div class="hero-actions-row">
-      <!-- Nút 1: SĐT -->
-      <a href="tel:0396588880" class="action-btn act-call" onclick="triggerAffiliate(event, 'tel:0396588880')">
-        <i class="fa-solid fa-phone"></i> 039.65.88880
-      </a>
-      <!-- Nút 2: Chat Zalo -->
-      <a href="https://zalo.me/0396588880" target="_blank" class="action-btn act-zalo" onclick="triggerAffiliate(event, 'https://zalo.me/0396588880')">
-        <i class="fa-solid fa-comment-dots"></i> Chat Zalo
-      </a>
-      <!-- Nút 3: Học tập (Vandon Stu) -->
-      <a href="./Hoctienganh/index.html" class="action-btn act-study" onclick="triggerAffiliate(event, './Hoctienganh/index.html')">
-        <i class="fa-solid fa-graduation-cap"></i> Học tập
-      </a>
-    </div>
   </section>
 
-  <!-- 3. KHUNG TRA CỨU PHÒNG -->
+  <!-- 3. KHUNG TRA CỨU PHÒNG & 3 NÚT TRỌNG TÂM -->
   <div class="filter-wrap">
     <form class="filter-inline-compact" onsubmit="handleSearch(event)">
       <div class="filter-col">
@@ -637,9 +737,70 @@
 
       <button type="submit" class="btn-check-compact" onclick="triggerAffiliate(event, null)">🔍 Kiểm tra</button>
     </form>
+
+    <!-- 3 Nút trọng tâm: SĐT, Zalo, Học tập -->
+    <div class="hero-actions-row">
+      <a href="tel:0396588880" class="action-btn act-call" onclick="triggerAffiliate(event, 'tel:0396588880')">
+        <i class="fa-solid fa-phone"></i> 039.65.88880
+      </a>
+      <a href="https://zalo.me/0396588880" target="_blank" class="action-btn act-zalo" onclick="triggerAffiliate(event, 'https://zalo.me/0396588880')">
+        <i class="fa-solid fa-comment-dots"></i> Chat Zalo
+      </a>
+      <a href="./Hoctienganh/index.html" class="action-btn act-study" onclick="triggerAffiliate(event, './Hoctienganh/index.html')">
+        <i class="fa-solid fa-graduation-cap"></i> Học tập
+      </a>
+    </div>
   </div>
 
-  <!-- 4. LƯỚI 20 VILLA -->
+  <!-- 4. DẢI 2CM "GÓC ỦNG HỘ" (XANH NGỌC ĐẬM + NÚT MŨI TÊN TRÒN RÕ NÉT) -->
+  <section class="shopee-promo-bar">
+    <div class="shopee-promo-container">
+      
+      <!-- Hàng trên: Tiêu đề & Các icon chủ đề vuốt ngang -->
+      <div class="shopee-bar-top">
+        <div class="shopee-label">
+          <span>🛍️</span> <span>Góc Ủng Hộ:</span>
+        </div>
+        
+        <!-- Thanh icon cuộn ngang có hiệu ứng bóng mờ & nút mũi tên rõ nét -->
+        <div class="shopee-scroll-wrapper">
+          <div class="shopee-icons-scroll no-scrollbar" id="shopeeScrollBox">
+            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
+              <span>📚</span> Sách & VPP
+            </a>
+            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
+              <span>🎧</span> Loa & Tai Nghe
+            </a>
+            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
+              <span>🧸</span> Đồ Chơi Trẻ Em
+            </a>
+            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
+              <span>🎁</span> Gia Dụng & Tiện Ích
+            </a>
+            <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" class="shopee-icon-chip">
+              <span>💻</span> Phụ Kiện Công Nghệ
+            </a>
+          </div>
+          <!-- Nút bấm mũi tên tròn màu xanh lá sáng có hiệu ứng nhịp đập -->
+          <div class="scroll-indicator-btn" onclick="scrollShopeeNext()" title="Xem thêm danh mục">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hàng dưới: Dòng chữ chạy (Marquee) với nội dung đã được làm mềm mại -->
+      <div class="shopee-marquee-row">
+        <a href="https://s.shopee.vn/AUu8B8BXJW" target="_blank" rel="noopener noreferrer" onclick="triggerAffiliate(event, this.href)" title="Bấm để ủng hộ kinh phí">
+          <marquee behavior="scroll" direction="left" scrollamount="4">
+            🌱 Mọi đóng góp nhỏ qua mỗi lượt mua sắm Shopee sẽ là nguồn kinh phí quý giá giúp trang <strong style="color: #34d399; font-weight: 800;">HỌC TẬP</strong> luôn mở cửa miễn phí cho tất cả mọi người. Trân trọng cảm ơn bạn! ❤️
+          </marquee>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. LƯỚI 20 VILLA -->
   <section class="villa-container">
     <h2 class="section-title">🏡 DANH SÁCH 20 CĂN BIỆT THỰ NGHỈ DƯỠNG</h2>
     
@@ -654,7 +815,7 @@
     <div class="villa-grid-4" id="villaGrid"></div>
   </section>
 
-  <!-- 5. POPUP ALBUM -->
+  <!-- 6. POPUP ALBUM -->
   <div id="imageModal" class="modal-overlay">
     <div class="modal-top-bar">
       <div class="modal-title" id="modalTitle">Tên Biệt Thự</div>
@@ -675,7 +836,7 @@
     </div>
   </div>
 
-  <!-- 6. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS -->
+  <!-- 7. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS -->
   <footer class="footer-section">
     <div class="footer-container">
       
@@ -739,6 +900,14 @@
             window.location.href = targetUrl;
           }, 150);
         }
+      }
+    }
+
+    // Hàm hỗ trợ bấm nút mũi tên để cuộn thanh danh mục sang phải
+    function scrollShopeeNext() {
+      const box = document.getElementById('shopeeScrollBox');
+      if (box) {
+        box.scrollBy({ left: 140, behavior: 'smooth' });
       }
     }
 
