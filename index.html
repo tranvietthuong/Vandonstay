@@ -107,7 +107,7 @@
       .badge-loc { font-size: 9px; padding: 4px 10px; margin-bottom: 8px; }
     }
 
-    /* ================= 3. KHUNG TRA CỨU PHÒNG (NỔI BẬT) ================= */
+    /* ================= 3. KHUNG TRA CỨU PHÒNG ================= */
     .filter-wrap {
       max-width: 780px;
       margin: -34px auto 20px;
@@ -166,7 +166,7 @@
     }
     .btn-check-compact:hover { background-color: var(--primary-dark); transform: scale(1.02); }
 
-    /* ================= 4. DẢI 2CM "GÓC ỦNG HỘ" ================= */
+    /* ================= 4. DẢI GÓC ỦNG HỘ ================= */
     .shopee-promo-bar {
       margin-bottom: 14px;
     }
@@ -242,7 +242,7 @@
     }
     .shopee-marquee-row a:hover { color: #ffffff; }
 
-    /* ================= 4.1. BỐ TRÍ 4 NÚT HÀNH ĐỘNG TRÊN 1 HÀNG ================= */
+    /* ================= 4.1. BỐ TRÍ 4 NÚT HÀNH ĐỘNG ================= */
     .hero-actions-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -674,7 +674,7 @@
       z-index: 20;
     }
 
-    /* ================= 7. CHÂN TRANG ================= */
+    /* ================= 7. CHÂN TRANG & NÚT GỌI NỔI ================= */
     .footer-section {
       background-color: #0b1324;
       color: #94a3b8;
@@ -747,6 +747,77 @@
     @media screen and (max-width: 640px) {
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+
+    /* NÚT GỌI NỔI 2 CHỨC NĂNG (ZALO & SĐT) */
+    .floating-call-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 99999;
+    }
+    .floating-call-btn {
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: #ffffff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.45);
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: pulseCall 2s infinite;
+    }
+    .floating-call-btn:hover {
+      transform: scale(1.1);
+    }
+    .call-options-popup {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background: #ffffff;
+      border: 1px solid #d1fae5;
+      border-radius: 14px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+      width: 200px;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      animation: fadeInUp 0.2s ease-out;
+    }
+    .call-options-popup.show {
+      display: flex;
+    }
+    .call-option-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 800;
+      transition: background 0.2s;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .call-option-item:last-child { border-bottom: none; }
+    .call-option-zalo { color: #0284c7; }
+    .call-option-zalo:hover { background: #f0f9ff; }
+    .call-option-phone { color: #059669; }
+    .call-option-phone:hover { background: #ecfdf5; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseCall {
+      0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.5); }
+      70% { box-shadow: 0 0 0 14px rgba(5, 150, 105, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+    }
   </style>
 </head>
 <body>
@@ -767,7 +838,7 @@
     <p>Không gian nghỉ dưỡng riêng tư ven vịnh Bái Tử Long. Tiêu chuẩn 3-5 PN, bể bơi riêng, BBQ & hỗ trợ 24/7.</p>
   </section>
 
-  <!-- 3. KHUNG TRA CỨU PHÒNG & GÓC ỦNG HỘ (NỔI BẬT) -->
+  <!-- 3. KHUNG TRA CỨU PHÒNG & GÓC ỦNG HỘ -->
   <div class="filter-wrap">
     <form class="filter-inline-compact" onsubmit="handleSearch(event)">
       <div class="filter-col">
@@ -783,7 +854,7 @@
       <button type="submit" class="btn-check-compact">🔍 Kiểm tra</button>
     </form>
 
-    <!-- DẢI 2CM "GÓC ỦNG HỘ" (GẮN ĐÚNG LINK AFFILIATE SHOPEE VÀ MALL) -->
+    <!-- DẢI 2CM "GÓC ỦNG HỘ" -->
     <div class="shopee-promo-bar">
       <div class="shopee-promo-container">
         <div class="shopee-bar-top">
@@ -822,8 +893,8 @@
       <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="action-btn act-zalo">
         <i class="fa-solid fa-comment-dots"></i> Zalo
       </a>
-      <a href="https://m.me/yourfanpage" target="_blank" rel="noopener noreferrer" class="action-btn act-fb">
-        <i class="fa-brands fa-facebook-messenger"></i> Facebook
+      <a href="https://facebook.com/yourfanpage" target="_blank" rel="noopener noreferrer" class="action-btn act-fb">
+        <i class="fa-brands fa-facebook"></i> Fanpage
       </a>
       <a href="./Hoctienganh/index.html" class="action-btn act-study">
         <i class="fa-solid fa-graduation-cap"></i> Học tập
@@ -831,7 +902,7 @@
     </div>
   </div>
 
-  <!-- POPUP 27 DANH MỤC SHOPEE (GẮN CHUẨN XÁC 27 LINK AFFILIATE THEO BẢNG) -->
+  <!-- POPUP 27 DANH MỤC SHOPEE -->
   <div class="shopee-modal-overlay" id="shopeeModal">
     <div class="shopee-modal-box">
       <div class="shopee-modal-header">
@@ -908,6 +979,21 @@
     </div>
   </div>
 
+  <!-- NÚT GỌI ĐIỆN NỔI GÓC DƯỚI BÊN PHẢI (2 CHỨC NĂNG ZALO & SĐT) -->
+  <div class="floating-call-container" onclick="event.stopPropagation()">
+    <div class="call-options-popup" id="callPopup">
+      <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="call-option-item call-option-zalo">
+        <i class="fa-solid fa-comment-dots text-base"></i> Gọi Zalo Miễn Phí
+      </a>
+      <a href="tel:0396588880" class="call-option-item call-option-phone">
+        <i class="fa-solid fa-phone-volume text-base"></i> Gọi Điện Trực Tiếp
+      </a>
+    </div>
+    <button class="floating-call-btn" onclick="toggleCallPopup(event)" title="Liên hệ tư vấn">
+      <i class="fa-solid fa-headset"></i>
+    </button>
+  </div>
+
   <!-- 7. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS -->
   <footer class="footer-section">
     <div class="footer-container">
@@ -925,7 +1011,9 @@
         <ul class="footer-links">
           <li><a href="./Hoctienganh/index.html">📚 <strong>Học tập</strong> : Kho học liệu tương tác cho bé</a></li>
           <li><a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer">💬 <strong>Chat Zalo 1-1</strong> : Nhận báo giá & lịch trống villa theo đoàn</a></li>
-          <li><a href="https://m.me/yourfanpage" target="_blank" rel="noopener noreferrer">👥 <strong>Chat Facebook</strong> : Kết nối trực tiếp qua Fanpage</a></li>
+          <li><a href="https://facebook.com/yourfanpage" target="_blank" rel="noopener noreferrer">👥 <strong>Fanpage Villa Sonasea</strong> : Kết nối trực tiếp qua Fanpage</a></li>
+          <!-- ĐÃ BỔ SUNG ĐẦY ĐỦ LINK GROUP VILLA SONASEA VÂN ĐỒN -->
+          <li><a href="https://facebook.com/groups/yourgroupvilla" target="_blank" rel="noopener noreferrer">🏖️ <strong>Group Villa Sonasea</strong> : Review & chia sẻ kinh nghiệm nghỉ dưỡng</a></li>
           <li><a href="tel:0396588880">👑 <strong>Hỗ trợ khách đoàn</strong> : Ưu đãi gia đình dài ngày</a></li>
         </ul>
       </div>
@@ -934,7 +1022,7 @@
         <h3>🗺️ VỊ TRÍ SONASEA VÂN ĐỒN</h3>
         <div class="map-box">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14902.664426584288!2d107.41164625!3d21.0371407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a59530467406b%3A0xc6226cbcf339efea!2sSonasea%20V%C3%A2n%20%C4%90%E1%BB%93n%20Harbor%20City!5e0!3m2!1svi!2s!4v1710000000000!5m2!1svi!2s" 
+            src="https://maps.google.com/maps?q=Sonasea%20V%C3%A2n%20%C4%90%E1%BB%93n%20Harbor%20City&t=&z=14&ie=UTF8&iwloc=&output=embed" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
@@ -952,6 +1040,21 @@
   </footer>
 
   <script>
+    // Hàm mở/đóng Popup gọi nổi
+    function toggleCallPopup(event) {
+      event.stopPropagation();
+      const popup = document.getElementById('callPopup');
+      popup.classList.toggle('show');
+    }
+
+    // Tự động đóng popup khi bấm ra chỗ khác
+    window.addEventListener('click', function(e) {
+      const popup = document.getElementById('callPopup');
+      if (popup && popup.classList.contains('show')) {
+        popup.classList.remove('show');
+      }
+    });
+
     // Hàm mở/đóng Popup 27 danh mục Shopee
     function openShopeeModal() {
       document.getElementById('shopeeModal').style.display = 'flex';

@@ -39,7 +39,7 @@
     .btn-villa  { background: linear-gradient(135deg, #059669, #047857); }
     .btn-contact{ background: linear-gradient(135deg, #0284c7, #0369a1); }
     .btn-zalo   { background: linear-gradient(135deg, #0284c7, #0369a1); }
-    .btn-fb     { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+    .btn-group  { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
 
     @media screen and (max-width: 640px) {
       .study-action-btn { font-size: 9px; padding: 7px 1px; gap: 2px; }
@@ -200,27 +200,20 @@
     }
   </style>
 </head>
-<body class="bg-[#F4F7F5] text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none">
+<body class="bg-[#F4F7F5] text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none pb-12">
 
-  <!-- 1. THANH HEADER ĐIỀU HƯỚNG CHÍNH -->
+  <!-- 1. THANH HEADER TIÊU ĐỀ CHÍNH -->
   <header class="bg-white/95 backdrop-blur-md border-b border-emerald-100 sticky top-0 z-40 shadow-sm">
-    <div class="max-w-7xl mx-auto px-2 sm:px-8 py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-      
-      <div class="flex items-center justify-center sm:justify-start">
-        <a href="index.html" class="text-base sm:text-xl font-black text-emerald-800 tracking-tight flex items-center gap-1.5">
-          <i class="fa-solid fa-graduation-cap text-emerald-600 text-lg sm:text-xl"></i> TRANG <span class="text-slate-700">HỌC TẬP</span>
-        </a>
-        <span class="hidden lg:inline text-xs font-semibold text-emerald-700 border-l border-emerald-200 ml-2 pl-2">
-          Hệ Thống Học Liệu Tương Tác Trực Tuyến
-        </span>
-      </div>
-
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-center">
+      <a href="index.html" class="text-base sm:text-xl font-black text-emerald-800 tracking-tight flex items-center gap-2">
+        <i class="fa-solid fa-graduation-cap text-emerald-600 text-xl"></i> TRANG <span class="text-slate-700">HỌC TẬP</span>
+      </a>
     </div>
   </header>
 
   <!-- 2. BỐ CỤC: 4 NÚT TRÊN, DẢI GÓC ỦNG HỘ BÊN DƯỚI -->
   <div class="pt-2">
-    <!-- 4 NÚT HÀNH ĐỘNG (VILLA SONASEA, LIÊN HỆ, ZALO, FACEBOOK) -->
+    <!-- 4 NÚT HÀNH ĐỘNG (ĐÃ THAY NÚT FACEBOOK THÀNH NÚT GROUP HỌC) -->
     <div class="study-actions-row">
       <a href="../index.html" class="study-action-btn btn-villa">
         <i class="fa-solid fa-hotel"></i> Villa Sonasea
@@ -231,12 +224,12 @@
       <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="study-action-btn btn-zalo">
         <i class="fa-solid fa-comment-dots"></i> Zalo
       </a>
-      <a href="https://m.me/yourfanpage" target="_blank" rel="noopener noreferrer" class="study-action-btn btn-fb">
-        <i class="fa-brands fa-facebook-messenger"></i> Facebook
+      <a href="https://facebook.com/groups/yourgrouphoctap" target="_blank" rel="noopener noreferrer" class="study-action-btn btn-group" title="Tham gia Group Học Tập">
+        <i class="fa-solid fa-users"></i> Group Học
       </a>
     </div>
 
-    <!-- DẢI 2CM GÓC ỦNG HỘ NẰM BÊN DƯỚI 4 NÚT -->
+    <!-- DẢI GÓC ỦNG HỘ -->
     <div class="shopee-promo-bar">
       <div class="shopee-promo-container">
         <div class="shopee-bar-top">
@@ -244,15 +237,12 @@
             <span>🛍️</span> <span>Góc Ủng Hộ:</span>
           </div>
           <div class="shopee-buttons-group">
-            <!-- Nút Shopee (Trang gốc) -->
             <a href="https://s.shopee.vn/3qNFfgl0qh" target="_blank" rel="noopener noreferrer" class="shopee-action-chip">
               <span>🛒</span> Shopee
             </a>
-            <!-- Nút Shopee Mall -->
             <a href="https://s.shopee.vn/W6nhiG47X" target="_blank" rel="noopener noreferrer" class="shopee-action-chip">
               <span>👑</span> Mall
             </a>
-            <!-- Nút Danh Mục mở Popup -->
             <a href="javascript:void(0);" onclick="openShopeeModal()" class="shopee-action-chip" style="background: linear-gradient(135deg, #10b981, #047857); border-color: #34d399;">
               <span>📂</span> Danh Mục ➔
             </a>
@@ -269,7 +259,7 @@
     </div>
   </div>
 
-  <!-- POPUP 27 DANH MỤC SHOPEE (GẮN ĐẦY ĐỦ 27 LINK AFFILIATE CHUẨN XÁC) -->
+  <!-- POPUP 27 DANH MỤC SHOPEE -->
   <div class="shopee-modal-overlay" id="shopeeModal">
     <div class="shopee-modal-box">
       <div class="shopee-modal-header">
@@ -498,18 +488,7 @@
 
   </main>
 
-  <!-- 3. CHÂN TRANG ĐỒNG BỘ -->
-  <footer class="bg-white text-slate-600 py-3 border-t border-emerald-100 text-[10px] sm:text-[11px] mt-auto text-center shadow-inner">
-    <div class="max-w-7xl mx-auto px-2 flex flex-col sm:flex-row items-center justify-between gap-1.5">
-      <p>© 2026 Trang Học Tập - Không gian học tập trực tuyến tương tác.</p>
-      <div class="flex items-center gap-2.5 text-slate-700">
-        <a href="../index.html" class="hover:text-emerald-700 transition no-underline text-inherit">Sonasea Vân Đồn</a>
-        <span>Hotline: <strong class="text-emerald-700">039.65.88880</strong></span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPT ĐIỀU HƯỚNG & HỆ THỐNG AFFILIATE NGẦM -->
+  <!-- SCRIPT ĐIỀU HƯỚNG & HỘP THOẠI -->
   <script>
     // Hàm mở/đóng Popup 27 danh mục Shopee
     function openShopeeModal() {
