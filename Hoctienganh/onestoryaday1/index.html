@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>One Story A Day 1 - Vandonstay Academy</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Ép layout đồng nhất dạng khung di động chuẩn trên cả Mobile và PC */
+    /* Giao diện sáng tươi hợp phong thủy Mệnh Mộc (Nền #F4F7F5, khung trắng, điểm nhấn xanh ngọc #059669) */
     body {
       margin: 0;
       padding: 0;
-      background-color: #030712;
+      background-color: #F4F7F5;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,73 +19,230 @@
       height: 100dvh;
       overflow: hidden;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1e293b;
     }
 
     .main-wrapper {
       width: 100%;
       max-width: 440px; /* Khung điện thoại chuẩn */
       height: 100%;
-      background-color: #0b1324;
+      background-color: #ffffff;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
       position: relative;
       overflow: hidden;
     }
 
-    /* 1. Header hệ sinh thái 3 nút */
-    .vandon-header-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 5px;
-      padding: 6px 10px;
-      background: #0f172a;
-      border-bottom: 1px solid #1e293b;
-      font-size: 11px;
+    /* ================= BANNER & 3 NÚT ĐIỀU HƯỚNG ================= */
+    .study-header-banner {
+      background: #ffffff;
+      border-bottom: 1.5px solid #d1fae5;
+      padding: 8px 14px;
+      text-align: center;
       flex-shrink: 0;
-      z-index: 40;
     }
-    .vandon-link-btn {
-      flex: 1;
+    .study-header-banner a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 15px;
+      font-weight: 900;
+      color: #065f46;
+      text-decoration: none;
+    }
+
+    .study-actions-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      width: 100%;
+      padding: 6px 8px 4px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      background: #ffffff;
+    }
+    .study-action-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 3px;
-      padding: 4px 6px;
-      border-radius: 6px;
-      font-weight: 700;
+      padding: 7px 2px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
       text-decoration: none;
+      color: #ffffff;
       white-space: nowrap;
-      font-size: 10.5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
     }
-    .btn-study { background: #1e293b; color: #34d399; border: 1px solid #059669; }
-    .btn-villa { background: #1e293b; color: #94a3b8; border: 1px solid #334155; }
-    .btn-shopee { background: rgba(217, 119, 6, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .study-action-btn:hover { transform: translateY(-1px); }
+    .btn-villa  { background: linear-gradient(135deg, #059669, #047857); }
+    .btn-study  { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+    .btn-group  { background: linear-gradient(135deg, #0284c7, #0369a1); }
 
-    /* Thanh chữ chạy (Marquee Ribbon) Shopee QN */
-    .vandon-promo-ribbon {
-      background: linear-gradient(90deg, #047857, #059669, #047857);
-      border-bottom: 2px solid #34d399;
-      padding: 4px 6px;
-      font-size: 11px;
+    /* ================= DẢI GÓC ỦNG HỘ & POPUP ================= */
+    .shopee-promo-bar {
+      width: 100%;
+      padding: 0 8px 6px;
+      box-sizing: border-box;
       flex-shrink: 0;
-      overflow: hidden;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
     }
-    .vandon-promo-ribbon a {
-      color: #fef08a;
+    .shopee-promo-container {
+      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+      border: 1px solid #059669;
+      border-radius: 9px;
+      padding: 4px 8px;
+      box-shadow: 0 3px 10px rgba(5, 150, 105, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .shopee-bar-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3px;
+    }
+    .shopee-label {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .shopee-buttons-group {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      flex-shrink: 0;
+    }
+    .shopee-action-chip {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      border: 1px solid #fbbf24;
+      color: #ffffff;
+      font-size: 8.5px;
+      font-weight: 800;
+      padding: 1.5px 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 1px;
+      box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+      transition: all 0.2s;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .shopee-action-chip:hover { background: #d97706; transform: translateY(-1px); }
+    .shopee-marquee-row {
+      font-size: 9px;
       font-weight: 600;
+      color: #fef08a;
+      overflow: hidden;
+      border-top: 1px dashed rgba(52, 211, 153, 0.3);
+      padding-top: 2px;
+    }
+    .shopee-marquee-row a {
+      color: #fef08a;
       text-decoration: none;
       display: block;
     }
-    .vandon-promo-ribbon a:hover {
-      color: #ffffff;
+
+    /* Popup 27 danh mục cao cấp */
+    .shopee-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      z-index: 999999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      backdrop-filter: blur(6px);
+    }
+    .shopee-modal-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      max-width: 750px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+    .shopee-modal-header {
+      padding: 14px 18px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .shopee-modal-title {
+      font-size: 14px;
+      font-weight: 900;
+      color: #059669;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .shopee-modal-close {
+      background: #e2e8f0;
+      border: none;
+      color: #334155;
+      font-size: 13px;
+      font-weight: 800;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .shopee-modal-close:hover { background: #dc2626; color: #ffffff; }
+    .shopee-modal-body {
+      padding: 16px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      background: #ffffff;
+    }
+    .shopee-grid-item {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      color: #1e293b;
+      padding: 10px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .shopee-grid-item:hover {
+      background: #ecfdf5;
+      border-color: #059669;
+      color: #047857;
+      transform: translateY(-2px);
     }
 
-    /* 2. KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG CHUẨN */
+    /* ================= KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG (SÁNG TƯƠI) ================= */
     .lesson-control-header {
-      background: #064e3b;
-      border-bottom: 1px solid #047857;
+      background: #ecfdf5;
+      border-bottom: 1px solid #a7f3d0;
       padding: 6px 8px;
       display: flex;
       flex-direction: column;
@@ -101,9 +259,9 @@
     }
     .btn-series-select {
       width: 100%;
-      background: #022c22;
-      color: #34d399;
-      border: 1px solid #10b981;
+      background: #ffffff;
+      color: #065f46;
+      border: 1.5px solid #059669;
       padding: 5px 12px;
       border-radius: 8px;
       font-size: 12.5px;
@@ -112,40 +270,41 @@
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     .series-menu {
       position: absolute;
       top: calc(100% + 4px);
       left: 0;
       right: 0;
-      background: #064e3b;
-      border: 1.5px solid #10b981;
+      background: #ffffff;
+      border: 1.5px solid #059669;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       display: flex;
       flex-direction: column;
       z-index: 100;
     }
     .series-item {
       padding: 8px 12px;
-      color: #ecfdf5;
+      color: #1e293b;
       font-size: 12px;
       font-weight: 700;
       text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid #047857;
+      border-bottom: 1px solid #e2e8f0;
     }
-    .series-item:hover { background: #047857; }
-    .series-item.active { background: #022c22; color: #34d399; }
+    .series-item:hover { background: #ecfdf5; color: #047857; }
+    .series-item.active { background: #d1fae5; color: #065f46; }
     .series-item.disabled { opacity: 0.5; cursor: not-allowed; }
 
     /* Dòng 2: Đúng 4 nút vừa 1 hàng ngang */
     .action-row-4 {
       display: grid;
-      grid-template-columns: 1.15fr 1fr 1fr 0.95fr;
+      grid-template-columns: 1.1fr 1fr 1fr 0.9fr;
       gap: 5px;
       align-items: center;
     }
@@ -158,8 +317,8 @@
       border-radius: 6px;
       outline: none;
       border: 1px solid #10b981;
-      background: #022c22;
-      color: #ffffff;
+      background: #ffffff;
+      color: #065f46;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -167,48 +326,117 @@
       white-space: nowrap;
       text-align: center;
       box-sizing: border-box;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     }
     .action-row-4 select {
       text-align-last: center;
       appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2334d399'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23059669'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
       background-repeat: no-repeat;
       background-position: right 2px center;
       background-size: 14px;
       padding-right: 14px;
     }
     .action-row-4 button.btn-active-trans {
-      background: #10b981;
-      color: #022c22;
+      background: #059669;
+      color: #ffffff;
     }
   </style>
 </head>
 <body onclick="closeSeriesMenu(event)">
   <div class="main-wrapper">
 
-    <!-- 1. HEADER 3 NÚT LIÊN HỆ -->
-    <div class="vandon-header-bar">
-      <a href="../index.html" class="vandon-link-btn btn-study">
-        <span>📚</span> Vandon English
-      </a>
-      <a href="../../index.html" class="vandon-link-btn btn-villa">
-        <span>🏨</span> Villa Sonasea
-      </a>
-      <a href="../../shopeeqn/index.html" class="vandon-link-btn btn-shopee">
-        <span>🎁</span> Shopee QN
+    <!-- 1. BANNER TRANG HỌC TẬP -->
+    <div class="study-header-banner">
+      <a href="../index.html">
+        <i class="fa-solid fa-graduation-cap text-emerald-600"></i> TRANG HỌC TẬP
       </a>
     </div>
 
-    <!-- 2. THANH RUY-BĂNG CHỮ CHẠY LIÊN KẾT SHOPEE QN -->
-    <aside class="vandon-promo-ribbon">
-      <a href="../../shopeeqn/index.html" title="Bấm để ghé thăm Shopee QN">
-        <marquee behavior="scroll" direction="left" scrollamount="5">
-          📚 Để duy trì học liệu hoàn toàn miễn phí, rất mong quý khách mỗi khi mua hàng trên Shopee hãy ghé qua gian hàng liên kết của chúng tôi tại Shopee QN &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 📻 Loa tắm Craven & Bút đọc - 🛍️ Click vào đây để khám phá ngay!
-        </marquee>
+    <!-- 2. BỐ CỤC 3 NÚT ĐIỀU HƯỚNG: VILLA SONASEA, TRANG HỌC TẬP, GROUP HỌC TẬP -->
+    <div class="study-actions-row">
+      <a href="../../index.html" class="study-action-btn btn-villa">
+        <i class="fa-solid fa-hotel"></i> <span>Villa Sonasea</span>
       </a>
-    </aside>
+      <a href="../index.html" class="study-action-btn btn-study">
+        <i class="fa-solid fa-graduation-cap"></i> <span>Trang Học Tập</span>
+      </a>
+      <a href="https://facebook.com/groups/yourgrouphoctap" target="_blank" rel="noopener noreferrer" class="study-action-btn btn-group" title="Tham gia Group Học Tập">
+        <i class="fa-solid fa-users"></i> <span>Group Học Tập</span>
+      </a>
+    </div>
 
-    <!-- 3. HEADER BÀI HỌC 2 TẦNG -->
+    <!-- 3. DẢI GÓC ỦNG HỘ -->
+    <div class="shopee-promo-bar">
+      <div class="shopee-promo-container">
+        <div class="shopee-bar-top">
+          <div class="shopee-label">
+            <span>🛍️</span> <span>Góc Ủng Hộ:</span>
+          </div>
+          <div class="shopee-buttons-group">
+            <a href="https://s.shopee.vn/3qNFfgl0qh" target="_blank" rel="noopener noreferrer" class="shopee-action-chip">
+              <span>🛒</span> Shopee
+            </a>
+            <a href="https://s.shopee.vn/W6nhiG47X" target="_blank" rel="noopener noreferrer" class="shopee-action-chip">
+              <span>👑</span> Mall
+            </a>
+            <a href="javascript:void(0);" onclick="openShopeeModal()" class="shopee-action-chip" style="background: linear-gradient(135deg, #10b981, #047857); border-color: #34d399;">
+              <span>📂</span> Danh Mục ➔
+            </a>
+          </div>
+        </div>
+        <div class="shopee-marquee-row">
+          <a href="https://s.shopee.vn/3qNFfgl0qh" target="_blank" rel="noopener noreferrer" title="Bấm để ủng hộ kinh phí">
+            <marquee behavior="scroll" direction="left" scrollamount="4">
+              🌱 Mọi đóng góp nhỏ qua mỗi lượt mua sắm Shopee sẽ là nguồn kinh phí quý giá giúp trang <strong style="color: #34d399; font-weight: 800;">HỌC TẬP</strong> luôn mở cửa miễn phí cho tất cả mọi người. Trân trọng cảm ơn bạn! ❤️
+            </marquee>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- POPUP 27 DANH MỤC SHOPEE -->
+    <div class="shopee-modal-overlay" id="shopeeModal">
+      <div class="shopee-modal-box">
+        <div class="shopee-modal-header">
+          <div class="shopee-modal-title">
+            <i class="fa-solid fa-store"></i> 27 Danh Mục Tiện Ích Shopee Ủng Hộ Quỹ Học Tập
+          </div>
+          <button class="shopee-modal-close" onclick="closeShopeeModal()">✕</button>
+        </div>
+        <div class="shopee-modal-body">
+          <a href="https://s.shopee.vn/2LYS3IwS7j" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👕 Thời Trang Nam</a>
+          <a href="https://s.shopee.vn/9fL2nN1w88" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📱 Điện Thoại & Phụ Kiện</a>
+          <a href="https://s.shopee.vn/4fwMqCtQBZ" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📺 Thiết Bị Điện Tử</a>
+          <a href="https://s.shopee.vn/LnNgHDqy1" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💻 Máy Tính & Laptop</a>
+          <a href="https://s.shopee.vn/20vbfNflGC" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📷 Máy Ảnh & Quay Phim</a>
+          <a href="https://s.shopee.vn/9zxtC6N8dB" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">⌚ Đồng Hồ</a>
+          <a href="https://s.shopee.vn/8fSVbfSuUJ" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👞 Giày Dép Nam</a>
+          <a href="https://s.shopee.vn/3LQzFvcBDI" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">⚡ Thiết Bị Điện Gia Dụng</a>
+          <a href="https://s.shopee.vn/2VrsGN6He2" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">⚽ Thể Thao & Du Lịch</a>
+          <a href="https://s.shopee.vn/9zxtCDpnQu" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🛵 Ô Tô, Xe Máy & Xe Đạp</a>
+          <a href="https://s.shopee.vn/1qcBTFp5Ay" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👗 Thời Trang Nữ</a>
+          <a href="https://s.shopee.vn/4VcweeETuBA" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🍼 Mẹ & Bé</a>
+          <a href="https://s.shopee.vn/9KiCP8XAVy" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🍳 Nhà Cửa & Đời Sống</a>
+          <a href="https://s.shopee.vn/70KHcrjlwk" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💄 Sắc Đẹp</a>
+          <a href="https://s.shopee.vn/4Vcwelax2W" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💊 Sức Khỏe</a>
+          <a href="https://s.shopee.vn/40gg3Ocrd2" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👠 Giày Dép Nữ</a>
+          <a href="https://s.shopee.vn/4qFn2wqbw8" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👜 Túi Ví Nữ</a>
+          <a href="https://s.shopee.vn/1LfusXKVoB" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💍 Phụ Kiện & Trang Sức</a>
+          <a href="https://s.shopee.vn/8AWF16zFVq" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🍫 Bách Hóa Online</a>
+          <a href="https://s.shopee.vn/AAHJOoCxGt" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📚 Nhà Sách Online</a>
+          <a href="https://s.shopee.vn/6q0rQhkcYb" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🎒 Balo & Túi Ví Nam</a>
+          <a href="https://s.shopee.vn/3VkPSbAvl3" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🧸 Đồ Chơi</a>
+          <a href="https://s.shopee.vn/6q0rQnVY1h" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🐱 Chăm Sóc Thú Cưng</a>
+          <a href="https://s.shopee.vn/7ptOceeXle" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🛠️ Dụng Cụ & Thiết Bị</a>
+          <a href="https://s.shopee.vn/4qFn3DACBn" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👶 Thời Trang Trẻ Em</a>
+          <a href="https://s.shopee.vn/5AsDrqZPPB" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🧼 Giặt Giũ & Nhà Cửa</a>
+          <a href="https://s.shopee.vn/50ZDFYhgNc" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🎟️ Voucher & Dịch Vụ</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG (ONE STORY A DAY) -->
     <div class="lesson-control-header">
       
       <!-- Tầng 1: Tên giáo trình kèm Dropdown chọn Tập 1 - 2 - 3 -->
@@ -235,12 +463,10 @@
 
       <!-- Tầng 2: 4 nút vừa vặn 1 hàng ngang trên di động (Mục lục, Tháng, Bài, Dịch) -->
       <div class="action-row-4">
-        <!-- Nút 1: Mục lục đưa ra đầu -->
         <button id="btnOpenIndex" type="button" title="Mục lục toàn bài">
           📋 Mục lục
         </button>
 
-        <!-- Nút 2: Tháng -->
         <select id="selectMonth">
           <option value="01 January">Tháng 1</option>
           <option value="02 February">Tháng 2</option>
@@ -256,10 +482,8 @@
           <option value="12 December">Tháng 12</option>
         </select>
 
-        <!-- Nút 3: Bài -->
         <select id="selectDay"></select>
 
-        <!-- Nút 4: Dịch (gọn gàng 1 chữ Dịch) -->
         <button id="btnToggleTrans" type="button" title="Bật/Tắt Dịch & IPA">
           🔤 Dịch
         </button>
@@ -348,6 +572,20 @@
   </div>
 
   <script>
+    // Hàm mở/đóng Popup 27 danh mục Shopee
+    function openShopeeModal() {
+      document.getElementById('shopeeModal').style.display = 'flex';
+    }
+    function closeShopeeModal() {
+      document.getElementById('shopeeModal').style.display = 'none';
+    }
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById('shopeeModal');
+      if (e.target === modal) {
+        closeShopeeModal();
+      }
+    });
+
     // Logic xổ menu chọn Tập 1 - 2 - 3
     function toggleSeriesMenu(e) {
       e.stopPropagation();
