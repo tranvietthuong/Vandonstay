@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Giao diện sáng tươi hợp phong thủy Mệnh Mộc (Nền #F4F7F5, khung trắng, điểm nhấn xanh ngọc #059669) */
+    /* Giao diện sáng tươi hợp phong thủy Mệnh Mộc */
     body {
       margin: 0;
       padding: 0;
@@ -239,7 +239,7 @@
       transform: translateY(-2px);
     }
 
-    /* ================= KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG (SÁNG TƯƠI) ================= */
+    /* ================= KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG (TỐI ƯU TƯƠNG PHẢN NÚT BẤM) ================= */
     .lesson-control-header {
       background: #ecfdf5;
       border-bottom: 1px solid #a7f3d0;
@@ -301,7 +301,7 @@
     .series-item.active { background: #d1fae5; color: #065f46; }
     .series-item.disabled { opacity: 0.5; cursor: not-allowed; }
 
-    /* Dòng 2: Đúng 4 nút vừa 1 hàng ngang */
+    /* Dòng 2: Đúng 4 nút vừa 1 hàng ngang - Thiết kế độ tương phản cao, nổi bật rõ ràng */
     .action-row-4 {
       display: grid;
       grid-template-columns: 1.1fr 1fr 1fr 0.9fr;
@@ -310,13 +310,13 @@
     }
     .action-row-4 select,
     .action-row-4 button {
-      height: 30px;
-      padding: 0 4px;
-      font-size: 11px;
-      font-weight: 700;
-      border-radius: 6px;
+      height: 32px;
+      padding: 0 6px;
+      font-size: 11.5px;
+      font-weight: 800;
+      border-radius: 7px;
       outline: none;
-      border: 1px solid #10b981;
+      border: 1.5px solid #059669;
       background: #ffffff;
       color: #065f46;
       cursor: pointer;
@@ -326,20 +326,28 @@
       white-space: nowrap;
       text-align: center;
       box-sizing: border-box;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(5, 150, 105, 0.12);
+      transition: all 0.2s ease;
+    }
+    .action-row-4 select:hover,
+    .action-row-4 button:hover {
+      background: #ecfdf5;
+      border-color: #047857;
     }
     .action-row-4 select {
       text-align-last: center;
       appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23059669'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23065f46'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
       background-repeat: no-repeat;
-      background-position: right 2px center;
+      background-position: right 4px center;
       background-size: 14px;
-      padding-right: 14px;
+      padding-right: 16px;
     }
+    /* Nút Dịch khi bật sẽ đổi sang nền xanh ngọc đậm cực kỳ bắt mắt */
     .action-row-4 button.btn-active-trans {
-      background: #059669;
-      color: #ffffff;
+      background: #059669 !important;
+      color: #ffffff !important;
+      border-color: #047857 !important;
     }
   </style>
 </head>
@@ -436,7 +444,7 @@
       </div>
     </div>
 
-    <!-- 4. KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG (ONE STORY A DAY) -->
+    <!-- 4. KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG (ONE STORY A DAY - ĐÃ TĂNG ĐỘ TƯƠNG PHẢN NÚT BẤM) -->
     <div class="lesson-control-header">
       
       <!-- Tầng 1: Tên giáo trình kèm Dropdown chọn Tập 1 - 2 - 3 -->
@@ -461,7 +469,7 @@
         </div>
       </div>
 
-      <!-- Tầng 2: 4 nút vừa vặn 1 hàng ngang trên di động (Mục lục, Tháng, Bài, Dịch) -->
+      <!-- Tầng 2: 4 nút điều hướng rõ nét, không bị hòa tan nền -->
       <div class="action-row-4">
         <button id="btnOpenIndex" type="button" title="Mục lục toàn bài">
           📋 Mục lục

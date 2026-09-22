@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Crazy English - 50 Bài Văn Luyện Phản Xạ - VandonStay</title>
+    <title>50 Lesson Crazy - Luyện Phản Xạ - VandonStay</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -13,7 +13,7 @@
             margin: 0; 
             padding: 0; 
             overflow: hidden; 
-            background-color: #F4F7F5;
+            background-color: #F4F7F5; /* Tone màu sáng tươi hợp Mệnh Mộc */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
             color: #1e293b;
         }
@@ -256,14 +256,14 @@
 
     <div class="app-container">
         
-        <!-- 1. BANNER TRANG HỌC TẬP CHUẨN MẪU -->
+        <!-- 1. BANNER TRANG HỌC TẬP -->
         <div class="study-header-banner">
             <a href="../index.html">
                 <i class="fa-solid fa-graduation-cap text-emerald-600"></i> TRANG HỌC TẬP
             </a>
         </div>
 
-        <!-- 2. BỐ CỤC 3 NÚT ĐIỀU HƯỚNG: VILLA SONASEA, TRANG HỌC TẬP, GROUP HỌC TẬP -->
+        <!-- 2. BỐ CỤC 3 NÚT ĐIỀU HƯỚNG -->
         <div class="study-actions-row">
             <a href="../../index.html" class="study-action-btn btn-villa">
                 <i class="fa-solid fa-hotel"></i> <span>Villa Sonasea</span>
@@ -276,7 +276,7 @@
             </a>
         </div>
 
-        <!-- 3. DẢI GÓC ỦNG HỘ (ĐẦY ĐỦ SHOPEE, MALL, DANH MỤC) -->
+        <!-- 3. DẢI GÓC ỦNG HỘ -->
         <div class="shopee-promo-bar">
             <div class="shopee-promo-container">
                 <div class="shopee-bar-top">
@@ -353,7 +353,7 @@
                 <div class="pb-10">
                     <div class="mb-3 flex justify-between items-center border-b border-emerald-200 pb-2">
                         <div>
-                            <h2 class="text-sm font-black text-emerald-800 uppercase tracking-wide">50 Bài Văn Crazy English</h2>
+                            <h2 class="text-sm font-black text-emerald-800 uppercase tracking-wide">50 Lesson Crazy</h2>
                             <p class="text-slate-500 text-[11px]">Chạm vào bài học để bắt đầu luyện tập</p>
                         </div>
                         <span class="text-[10px] bg-emerald-100 text-emerald-800 border border-emerald-300 px-2 py-0.5 rounded-full font-bold">50 Bài Chuẩn</span>
@@ -365,42 +365,42 @@
             <!-- VIEW 2: MÀN HÌNH HỌC CHI TIẾT -->
             <div id="studyView" class="flex-1 flex flex-col h-full hidden overflow-hidden bg-white">
                 
-                <!-- Thanh tiêu đề bài học con -->
-                <div class="flex justify-between items-center px-3 py-2 border-b border-emerald-100 bg-emerald-50/50 shrink-0">
-                    <div class="flex items-center gap-2">
-                        <button onclick="goHome()" class="bg-white hover:bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg text-xs font-bold border border-slate-200 flex items-center gap-1 transition shadow-sm">
+                <!-- Thanh tiêu đề bài học con (ĐÃ THÊM CHỮ "50 Lesson Crazy" VÀ TỐI ƯU CÂN ĐỐI TRÊN DI ĐỘNG) -->
+                <div class="flex items-center justify-between px-2.5 py-2 border-b border-emerald-100 bg-emerald-50/50 shrink-0 gap-1.5">
+                    <div class="flex items-center gap-1.5 min-w-0">
+                        <button onclick="goHome()" class="bg-white hover:bg-slate-100 text-slate-700 px-2 py-1 rounded-lg text-xs font-bold border border-slate-200 flex items-center gap-1 transition shadow-sm shrink-0">
                             <span>← Mục Lục</span>
                         </button>
                         
-                        <div class="relative">
-                            <button onclick="toggleLessonDropdown(event)" id="lessonBadge" class="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 hover:bg-emerald-200 px-2.5 py-1 rounded-lg flex items-center gap-1 transition">
-                                <span>Bài 1</span>
-                                <span class="text-[9px]">▼</span>
+                        <div class="relative min-w-0">
+                            <button onclick="toggleLessonDropdown(event)" id="lessonBadge" class="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 hover:bg-emerald-200 px-2 py-1 rounded-lg flex items-center gap-1 transition truncate">
+                                <span class="truncate">Bài 1 - 50 Lesson Crazy</span>
+                                <span class="text-[9px] shrink-0">▼</span>
                             </button>
-                            <div id="lessonDropdownMenu" class="hidden absolute left-0 top-full mt-1.5 w-52 max-h-64 bg-white border border-slate-200 rounded-xl shadow-2xl overflow-y-auto z-50 p-1">
+                            <div id="lessonDropdownMenu" class="hidden absolute left-0 top-full mt-1.5 w-60 max-h-64 bg-white border border-slate-200 rounded-xl shadow-2xl overflow-y-auto z-50 p-1">
                                 <div id="lessonDropdownItems" class="flex flex-col space-y-0.5"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-1.5">
-                        <button onclick="toggleTranslation()" id="transToggleBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg transition shadow-sm">
+                    <div class="shrink-0">
+                        <button onclick="toggleTranslation()" id="transToggleBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold px-2 py-1 rounded-lg transition shadow-sm">
                             🌐 Dịch & IPA
                         </button>
                     </div>
                 </div>
 
-                <!-- Vùng hiển thị nội dung bài học cuộn êm -->
+                <!-- Vùng hiển thị nội dung bài học -->
                 <div id="textContentContainer" class="flex-1 p-3 pb-6 scrollable-box bg-slate-50">
                     <h2 id="lessonTitle" class="text-sm font-black text-emerald-900 mb-2 pb-1 border-b border-emerald-200">Tiêu đề bài học</h2>
                     <div id="lessonContent" class="flex flex-col space-y-2"></div>
                 </div>
 
-                <!-- BẢNG ĐIỀU KHIỂN ÂM THANH DƯỚI ĐÁY: 6 NÚT CHIA ĐỀU BẰNG NHAU 100% CHIỀU NGANG -->
-                <div class="bg-white border-t border-slate-200 p-2 shrink-0 space-y-2 relative shadow-lg">
+                <!-- BẢNG ĐIỀU KHIỂN ÂM THANH DƯỚI ĐÁY: GOM VỀ ĐÚNG 1 HÀNG NGANG (6 NÚT ICON TỐI ƯU) -->
+                <div class="bg-white border-t border-slate-200 p-2 shrink-0 relative shadow-lg">
                     
                     <!-- Dropdown Lặp Xổ Lên -->
-                    <div id="repeatDropdownMenu" class="hidden absolute bottom-[88px] left-1/2 -translate-x-1/2 w-32 bg-white border border-slate-200 rounded-xl shadow-2xl z-50 p-1 text-xs">
+                    <div id="repeatDropdownMenu" class="hidden absolute bottom-[58px] left-[55%] -translate-x-1/2 w-28 bg-white border border-slate-200 rounded-xl shadow-2xl z-50 p-1 text-xs">
                         <button onclick="selectRepeat(1)" class="w-full text-left px-2 py-1.5 rounded text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">1 lần</button>
                         <button onclick="selectRepeat(2)" class="w-full text-left px-2 py-1.5 rounded text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">2 lần</button>
                         <button onclick="selectRepeat(3)" class="w-full text-left px-2 py-1.5 rounded text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">3 lần</button>
@@ -409,7 +409,7 @@
                     </div>
 
                     <!-- Dropdown Tốc độ Xổ Lên -->
-                    <div id="speedDropdownMenu" class="hidden absolute bottom-[88px] right-2 w-28 bg-white border border-slate-200 rounded-xl shadow-2xl z-50 p-1 text-xs">
+                    <div id="speedDropdownMenu" class="hidden absolute bottom-[58px] right-2 w-24 bg-white border border-slate-200 rounded-xl shadow-2xl z-50 p-1 text-xs">
                         <button onclick="selectSpeed(0.5)" class="w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">0.5x</button>
                         <button onclick="selectSpeed(0.75)" class="w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">0.75x</button>
                         <button onclick="selectSpeed(1.0)" class="w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">1.0x Chuẩn</button>
@@ -417,45 +417,48 @@
                         <button onclick="selectSpeed(1.5)" class="w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">1.5x</button>
                     </div>
 
-                    <!-- HÀNG 1: 3 NÚT CHIA ĐỀU BẰNG NHAU (grid-cols-3) -->
-                    <div class="grid grid-cols-3 gap-2">
-                        <button onclick="toggleAudioMode()" id="btnAudioModeToggle" class="w-full h-8 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm truncate">
-                            <span id="audioModeIcon">🎙️</span>
-                            <span id="audioModeText">Gốc (MP3)</span>
+                    <!-- ĐÚNG 6 NÚT GOM TRÊN 1 HÀNG NGANG (CHIA ĐỀU BẰNG NHAU) -->
+                    <div class="grid grid-cols-6 gap-1.5 items-center">
+                        <!-- 1. Nút MP3 / AI -->
+                        <button onclick="toggleAudioMode()" id="btnAudioModeToggle" class="h-9 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1" title="Chuyển đổi âm thanh">
+                            <span id="audioModeIcon">🎵</span>
+                            <span id="audioModeText" class="text-[11px]">MP3</span>
                         </button>
 
-                        <button onclick="toggleRepeatDropdown(event)" id="btnRepeatToggle" class="w-full h-8 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-bold text-slate-700 flex items-center justify-center gap-1 transition shadow-sm truncate">
-                            <span id="repeatText">Lặp: 1</span>
-                            <span id="loopStatus" class="text-[10px] text-slate-500 font-normal">(0/1)</span>
-                        </button>
-
-                        <button onclick="toggleSpeedDropdown(event)" id="btnSpeedToggle" class="w-full h-8 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-bold text-slate-700 flex items-center justify-center gap-1 transition shadow-sm truncate">
-                            <span id="speedText">1.0x</span>
-                        </button>
-                    </div>
-
-                    <!-- HÀNG 2: 3 NÚT ĐIỀU HƯỚNG & PHÁT CHIA ĐỀU BẰNG NHAU (grid-cols-3) -->
-                    <div class="grid grid-cols-3 gap-2">
-                        <button onclick="prevLesson()" class="w-full h-8 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg border border-slate-200 flex items-center justify-center transition shadow-sm" title="Bài trước">
+                        <!-- 2. Nút Tua về (Prev) -->
+                        <button onclick="prevLesson()" class="h-9 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg border border-slate-200 flex items-center justify-center transition shadow-sm" title="Bài trước">
                             <i class="fa-solid fa-backward-step text-sm"></i>
                         </button>
 
-                        <button id="playPauseBtn" onclick="togglePlay()" class="w-full h-8 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold text-xs rounded-lg flex items-center justify-center gap-1.5 shadow transition">
-                            <span id="playIcon">▶</span>
-                            <span id="playText">Phát Toàn Bài</span>
+                        <!-- 3. Nút Play / Stop (ĐÃ VÁ LỖI HIỂN THỊ ICON PLAY / PAUSE) -->
+                        <button id="playPauseBtn" onclick="togglePlay()" class="h-9 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold rounded-lg flex items-center justify-center shadow transition px-1" title="Phát / Dừng">
+                            <i id="playIcon" class="fa-solid fa-play text-sm"></i>
                         </button>
 
-                        <button onclick="nextLesson()" class="w-full h-8 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg border border-slate-200 flex items-center justify-center transition shadow-sm" title="Bài tiếp theo">
+                        <!-- 4. Nút Tua đi (Next) -->
+                        <button onclick="nextLesson()" class="h-9 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg border border-slate-200 flex items-center justify-center transition shadow-sm" title="Bài tiếp theo">
                             <i class="fa-solid fa-forward-step text-sm"></i>
+                        </button>
+
+                        <!-- 5. Nút Lặp -->
+                        <button onclick="toggleRepeatDropdown(event)" id="btnRepeatToggle" class="h-9 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg text-[11px] font-bold text-slate-700 flex flex-col items-center justify-center transition shadow-sm px-0.5" title="Cài đặt lặp">
+                            <span class="text-[9px] text-slate-500 leading-none">Lặp</span>
+                            <span id="repeatText" class="leading-tight">1</span>
+                        </button>
+
+                        <!-- 6. Nút Tốc độ -->
+                        <button onclick="toggleSpeedDropdown(event)" id="btnSpeedToggle" class="h-9 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg text-[11px] font-bold text-slate-700 flex flex-col items-center justify-center transition shadow-sm px-0.5" title="Cài đặt tốc độ">
+                            <span class="text-[9px] text-slate-500 leading-none">Tốc</span>
+                            <span id="speedText" class="leading-tight">1.0x</span>
                         </button>
                     </div>
 
-                    <!-- Bộ điều khiển phụ cho AI khi được kích hoạt -->
-                    <div id="aiVoiceControls" class="hidden flex items-center justify-between gap-1 pt-1 border-t border-slate-100 text-xs">
-                        <button onclick="adjustSentenceCount(1)" class="bg-slate-100 text-emerald-800 border border-slate-200 font-bold px-2 py-1 rounded-lg text-xs" id="sentenceCountBtn">Đọc: 1 câu</button>
-                        <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
-                            <button onclick="setVoiceGender('female')" id="btnVoiceFemale" class="px-2.5 py-0.5 text-xs rounded font-bold bg-emerald-600 text-white">Nữ</button>
-                            <button onclick="setVoiceGender('male')" id="btnVoiceMale" class="px-2.5 py-0.5 text-xs rounded font-bold text-slate-500">Nam</button>
+                    <!-- Bộ điều khiển phụ cho AI khi được kích hoạt (ĐÃ VÁ LỖI AI SPEECH) -->
+                    <div id="aiVoiceControls" class="hidden flex items-center justify-between gap-1 pt-1 mt-1 border-t border-slate-100 text-xs">
+                        <button onclick="adjustSentenceCount(1)" class="bg-slate-100 text-emerald-800 border border-slate-200 font-bold px-2 py-0.5 rounded text-[11px]" id="sentenceCountBtn">Đọc: 1 câu</button>
+                        <div class="flex items-center bg-slate-100 p-0.5 rounded border border-slate-200">
+                            <button onclick="setVoiceGender('female')" id="btnVoiceFemale" class="px-2.5 py-0.5 text-[10px] rounded font-bold bg-emerald-600 text-white">Nữ</button>
+                            <button onclick="setVoiceGender('male')" id="btnVoiceMale" class="px-2.5 py-0.5 text-[10px] rounded font-bold text-slate-500">Nam</button>
                         </div>
                     </div>
 
@@ -470,7 +473,7 @@
             "after": "ˈæftər", "again": "əˈɡeɪn", "all": "ɔːl", "always": "ˈɔːlweɪz", "america": "əˈmɛrɪkə",
             "american": "əˈmɛrɪkən", "and": "ænd", "any": "ˈɛni", "anything": "ˈɛniθɪŋ", "are": "ɑːr", "as": "æz", "ashamed": "əˈʃeɪmd",
             "at": "æt", "atmosphere": "ˈætməsfɪr", "attitude": "ˈætɪtuːd", "be": "biː", "beautiful": "ˈbjuːtɪfl", "because": "bɪˈkɔːz", "become": "bɪˈkʌm",
-            "becoming": "bɪˈkʌmɪŋ", "bed": "bɛd", "before": "bɪˈfɔːr", "behave": "bɪˈheɪv", "behavior": "bɪˈheɪvjər",
+            "becoming": "bɪˈkʌmɪŋ", "bed": "bɛd", "before": "bɪˈfɔːr", "behave": "bɪˈheɪv", "behavior": "bɪˈbeɪvjər",
             "beijing": "beɪˈdʒɪŋ", "believe": "bɪˈliːv", "benefits": "ˈbɛnɪfɪts", "best": "bɛst",
             "better": "ˈbɛtər", "big": "bɪɡ", "bill": "bɪl", "black": "blæk", "blame": "bleɪm", "blurt": "blɜːrt", "body": "ˈbɑːdi", "book": "bʊk", "books": "bʊks",
             "bother": "ˈbɑːðər", "boys": "bɔɪz", "breathe": "briːð", "breathing": "ˈbriːðɪŋ", "breath": "brɛθ", "bright": "braɪt", "brighter": "ˈbraɪtər",
@@ -493,7 +496,7 @@
             "fathers": "ˈfɑːðərz", "fault": "fɔːlt", "feel": "fiːl", "feeling": "ˈfiːlɪŋ", "feelings": "ˈfiːlɪŋz", "feet": "fiːt", "few": "fjuː", "fewer": "ˈfjuːər", "first": "fɜːrst", "food": "fuːd",
             "foot": "fʊt", "for": "fɔːr", "foreigners": "ˈfɔːrənərz", "forget": "fərˈɡɛt", "form": "fɔːrm", "four": "fɔːr", "free": "friː", "freely": "ˈfriːli", "fresh": "frɛʃ", "friend": "frɛnd",
             "friends": "frɛndz", "friendship": "ˈfɛndʃɪp", "from": "frɒm", "fruitful": "ˈfruːtfl", "fun": "fʌn", "future": "ˈfjuːtʃər", "gain": "ɡeɪn", "genius": "ˈdʒiːniəs", "gentlemen": "ˈdʒɛntlmən",
-            "get": "ɡɛt", "getting": "ˈɡɛtɪŋ", "gift": "ɡɪft", "girls": "ɡɜːrlz", "give": "ɡɪv", "giving": "ˈɡɪvɪŋ", "glad": "ɡlæd", "glasses": "ˈɡlæsɪz", "glorious": "ˈɡlɔːriəs", "go": "ɡoʊ",
+            "get": "ɡɛt", "getting": "ˈɡɛtɪŋ", "gift": "ɡɪft", "girls": "gɜːrlz", "give": "ɡɪv", "giving": "ˈɡɪvɪŋ", "glad": "ɡlæd", "glasses": "ˈɡlæsɪz", "glorious": "ˈɡlɔːriəs", "go": "ɡoʊ",
             "going": "ˈɡoʊɪŋ", "goes": "ɡoʊz", "good": "ɡʊd", "government": "ˈɡʌvərmənt", "grammar": "ˈɡræmər", "great": "ɡreɪt", "green": "griːn", "greetings": "ˈgriːtɪŋz", "grow": "ɡroʊ",
             "growing": "ˈɡroʊɪŋ", "guide": "ɡaɪd", "habit": "ˈhæbɪt", "habits": "ˈhæbɪts", "had": "hæd", "happiness": "ˈhæpinəs", "happy": "ˈhæpi", "happier": "ˈhæpiər", "happen": "ˈhæpən",
             "hard": "hɑːrd", "harder": "ˈhɑːrdər", "harm": "hɑːrm", "harmful": "ˈhɑːrmfl", "harmony": "ˈhɑːrməni", "has": "hæz", "hate": "heɪt", "have": "hæv", "he": "hiː", "headaches": "ˈhɛdeɪks",
@@ -542,16 +545,16 @@
             "the": "ðə", "their": "ðɛr", "them": "ðɛm", "then": "ðɛn", "there": "ðɛr", "these": "ðiːz", "they": "ðeɪ", "thing": "θɪŋ", "things": "θɪŋz", "think": "θɪŋk", "third": "θɜːrd", "this": "ðɪs",
             "three": "θriː", "throat": "θroʊt", "through": "θruː", "throughout": "θruːˈaʊt", "throw": "θroʊ", "throwing": "ˈθroʊɪŋ", "time": "taɪm", "times": "taɪmz", "tips": "tɪps", "tired": "ˈtaɪərd",
             "to": "tuː", "today": "təˈdeɪ", "together": "təˈɡɛðər", "told": "toʊld", "tomorrow": "təˈmɑːroʊ", "tongue": "tʌŋ", "too": "tuː", "top": "tɑːp", "total": "ˈtoʊtl", "totally": "ˈtoʊtəli",
-            "tough": "tʌf", "toughest": "ˈtʌfɪst", "train": "treɪn", "trains": "treɪnz", "treasure": "ˈtrɛʒər", "treat": "triːt", "treated": "ˈtriːtɪd", "tremendously": "trəˈmɛndəsli", "tricks": "trɪks",
+            "tough": "tʌf", "toughest": "ˈtʌfɪst", "train": "treɪn", "trains": "treɪnz", "treasure": "ˈtrɛʒər", "treat": "triːt", "treated": "ˈtrɛɪtɪd", "tremendously": "trəˈmɛndəsli", "tricks": "trɪks",
             "trip": "trɪp", "trouble": "ˈtrʌbl", "true": "truː", "truly": "ˈtruːli", "trust": "trʌst", "try": "traɪ", "trying": "ˈtraɪɪŋ", "turn": "tɜːrn", "two": "tuː", "two-year": "ˈtuː jɪr",
-            "unconditionally": "ˌʌnkənˈdɪʃənəli", "understand": "ˌʌndərˈstænd", "understanding": "ˌʌndərˈstændɪŋ", "unique": "juˈniːk", "unparalleled": "ʌnˈpærəlɛld", "until": "ənˈtɪl", "unusual": "ʌnˈjuːʒuəl",
+            "unconditionally": "ˌʌnkənˈdɪʃənəli", "understand": "ˌʌndərˈstænd", "understanding": "ˌʌndərˈstændɪŋ", "unique": "juːˈniːk", "unparalleled": "ʌnˈpærəlɛld", "until": "ənˈtɪl", "unusual": "ʌnˈjuːʒuəl",
             "up": "ʌp", "us": "ʌs", "use": "juːz", "used": "juːzd", "usually": "ˈjuːʒuəli", "vacation": "veɪˈkeɪʃn", "value": "ˈvæljuː", "variety": "vəˈraɪəti", "vast": "væst", "very": "ˈvɛri",
             "vietnam": "ˌvjɛtˈnæm", "vietnamese": "ˌvjɛtnəˈmiːz", "views": "vjuːz", "visit": "ˈvɪzɪt", "visited": "ˈvɪzɪtɪd", "want": "wɒnt", "wanted": "ˈwɒntɪd", "wanting": "ˈwɒntɪŋ", "wants": "wɒnts",
             "warm": "wɔːrm", "wars": "wɔːrz", "was": "wɒz", "waste": "weɪst", "wasting": "ˈweɪstɪŋ", "watch": "wɑːtʃ", "water": "ˈwɔːtər", "way": "weɪ", "ways": "weɪz", "we": "wiː", "we'll": "wiːl",
             "we're": "wɪr", "week": "wiːk", "welcome": "ˈwɛlkəm", "welcoming": "ˈwɛlkəmɪŋ", "well": "wɛl", "went": "wɛnt", "were": "wɜːr", "what": "wɒt", "what's": "wɒts", "when": "wɛn", "where": "wɛr",
             "whether": "ˈwɛðər", "which": "wɪtʃ", "who": "huː", "why": "waɪ", "will": "wɪl", "win": "wɪn", "wisdom": "ˈwɪzdəm", "wise": "waɪz", "wiser": "ˈwaisər", "wish": "wɪʃ", "wishes": "ˈwɪʃɪz",
             "with": "wɪð", "without": "wɪˈðaʊt", "woman": "ˈwʊmən", "wonderful": "ˈwʌndərfl", "word": "wɜːrd", "words": "wɜːrdz", "work": "wɜːrk", "worked": "wɜːrkt", "working": "ˈwɜːrkɪŋ",
-            "world": "wɜːrld", "worldwide": "ˌwɜːrldˈwaɪd", "worry": "ˈwʌri", "worrying": "ˈwʌriɪŋ", "worse": "wɜːrs", "worst": "wɜːrst", "worth": "wɜːrθ", "would": "wʊd", "writing": "ˈraɪtɪŋ",
+            "world": "wɜːrld", "worldwide": "ˌwɜːrldˈwaɪd", "worry": "ˈwʌri", "worrying": "ˈwʌriɪŋ", "worse": "worse", "worst": "wɜːrst", "worth": "wɜːrθ", "would": "wʊd", "writing": "ˈraɪtɪŋ",
             "wrong": "rɒŋ", "year": "jɪr", "years": "jɪrz", "yesterday": "ˈjɛstərdeɪ", "yellow": "ˈjɛloʊ", "you": "juː", "you'd": "juːd", "you'll": "juːl", "you're": "jʊr", "you've": "juːv",
             "young": "jʌŋ", "your": "jɔːr", "yourself": "jɔːrˈsɛlf"
         };
@@ -1199,13 +1202,13 @@
         }));
 
         let currentLesson = null;
-        let playMode = 'original'; // Mặc định là giọng MP3 gốc
+        let playMode = 'original';
         let sentenceCountToLearn = 1;
         let repeatSetting = 1;
         let currentRepeatIndex = 0;
         let currentRate = 1.0;
         let isPlaying = false;
-        let showTranslation = false; // Mặc định ẩn phiên âm IPA & dịch nghĩa
+        let showTranslation = false;
         let activeSentenceIndex = -1;
         let activeCharIndex = -1;
         let selectedGender = "female";
@@ -1253,7 +1256,7 @@
         function selectLesson(id) {
             stopAllAudio();
             currentLesson = lessons.find(l => l.id === id);
-            document.getElementById("lessonBadge").querySelector("span").innerText = "Bài " + currentLesson.id;
+            document.getElementById("lessonBadge").querySelector("span").innerText = "Bài " + currentLesson.id + " - 50 Lesson Crazy";
             document.getElementById("lessonTitle").innerText = `Bài ${currentLesson.id}: ${currentLesson.title}`;
             
             sentenceCountToLearn = 1;
@@ -1321,7 +1324,6 @@
             document.getElementById("speedDropdownMenu")?.classList.add("hidden");
         }
 
-        // Hàm mở/đóng Popup 27 danh mục Shopee
         function openShopeeModal() {
             document.getElementById('shopeeModal').style.display = 'flex';
         }
@@ -1347,20 +1349,17 @@
         }
 
         function updateAudioModeUI() {
-            const icon = document.getElementById("audioModeIcon");
             const text = document.getElementById("audioModeText");
             const btn = document.getElementById("btnAudioModeToggle");
             const aiControls = document.getElementById("aiVoiceControls");
 
             if (playMode === 'original') {
-                icon.innerText = "🎙️";
-                text.innerText = "Gốc (MP3)";
-                btn.className = "w-full h-8 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm truncate";
+                text.innerText = "MP3";
+                btn.className = "h-9 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1";
                 aiControls.classList.add("hidden");
             } else {
-                icon.innerText = "🤖";
-                text.innerText = "AI Speech";
-                btn.className = "w-full h-8 rounded-lg font-bold text-xs bg-teal-600 hover:bg-teal-700 text-white transition flex items-center justify-center gap-1 shadow-sm truncate";
+                text.innerText = "AI";
+                btn.className = "h-9 rounded-lg font-bold text-xs bg-teal-600 hover:bg-teal-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1";
                 aiControls.classList.remove("hidden");
             }
         }
@@ -1368,7 +1367,7 @@
         function selectRepeat(val) {
             repeatSetting = val;
             currentRepeatIndex = 0;
-            document.getElementById("repeatText").innerText = (val === 0) ? "Lặp: ∞" : `Lặp: ${val}`;
+            document.getElementById("repeatText").innerText = (val === 0) ? "∞" : `${val}`;
             updateLoopStatus();
             closeAllDropdowns();
         }
@@ -1425,7 +1424,6 @@
                         </div>
                 `;
                 
-                // Mặc định ẩn phiên âm IPA & dịch nghĩa khi showTranslation = false
                 html += `
                     <div class="trans-box ${showTranslation ? '' : 'hidden'} mt-1 space-y-0.5 text-[11px]">
                         <div class="text-emerald-700 font-mono italic">[IPA: ${item.ipa}]</div>
@@ -1492,11 +1490,11 @@
             const btnFemale = document.getElementById("btnVoiceFemale");
             const btnMale = document.getElementById("btnVoiceMale");
             if (gender === "female") {
-                btnFemale.className = "px-2.5 py-0.5 text-xs rounded font-bold bg-emerald-600 text-white";
-                btnMale.className = "px-2.5 py-0.5 text-xs rounded font-bold text-slate-500";
+                btnFemale.className = "px-2.5 py-0.5 text-[10px] rounded font-bold bg-emerald-600 text-white";
+                btnMale.className = "px-2.5 py-0.5 text-[10px] rounded font-bold text-slate-500";
             } else {
-                btnMale.className = "px-2.5 py-0.5 text-xs rounded font-bold bg-emerald-600 text-white";
-                btnFemale.className = "px-2.5 py-0.5 text-xs rounded font-bold text-slate-500";
+                btnMale.className = "px-2.5 py-0.5 text-[10px] rounded font-bold bg-emerald-600 text-white";
+                btnFemale.className = "px-2.5 py-0.5 text-[10px] rounded font-bold text-slate-500";
             }
             if (isPlaying && playMode === 'ai') playAISpeech(true);
         }
@@ -1521,7 +1519,6 @@
             }
         }
 
-        // Bật/tắt xem IPA & Dịch nghĩa
         function toggleTranslation() {
             showTranslation = !showTranslation;
             const btn = document.getElementById("transToggleBtn");
@@ -1545,7 +1542,8 @@
         }
 
         function updateSentenceCountUI() {
-            document.getElementById("sentenceCountBtn").innerText = "Đọc: " + sentenceCountToLearn + " câu";
+            const btn = document.getElementById("sentenceCountBtn");
+            if (btn) btn.innerText = "Đọc: " + sentenceCountToLearn + " câu";
         }
 
         function startPlaying() {
@@ -1666,49 +1664,37 @@
 
         function togglePlay() {
             if (isPlaying) {
-                isPlaying = false;
-                if (playMode === 'original') {
-                    if (currentAudio) currentAudio.pause();
-                } else {
-                    isAiManuallyPaused = true;
-                    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-                }
+                stopAllAudio();
             } else {
-                if (playMode === 'original') {
-                    if (currentAudio && currentAudio.paused) {
-                        currentAudio.play();
-                        isPlaying = true;
-                    } else {
-                        startPlaying();
-                    }
-                } else {
-                    isAiManuallyPaused = false;
-                    isPlaying = true;
-                    playAISpeech(false);
+                isPlaying = true;
+                updatePlayBtnUI();
+                if (currentLessonIdx < startIdx || currentLessonIdx > endIdx) {
+                    currentLessonIdx = startIdx;
                 }
+                currentRepeatIndex = 0;
+                updateLoopStatus();
+                startPlaying();
             }
-            updatePlayBtnUI();
         }
 
         function updatePlayBtnUI() {
             const btn = document.getElementById("playPauseBtn");
             const icon = document.getElementById("playIcon");
-            const text = document.getElementById("playText");
             if (isPlaying) {
-                icon.innerText = "⏸";
-                text.innerText = "Tạm Dừng";
-                btn.className = "w-full h-8 bg-amber-500 hover:bg-amber-400 active:scale-95 text-slate-950 font-bold text-xs rounded-lg flex items-center justify-center gap-1.5 shadow transition truncate";
+                icon.className = "fa-solid fa-pause text-sm";
+                btn.className = "h-9 bg-amber-500 hover:bg-amber-400 active:scale-95 text-slate-950 font-bold rounded-lg flex items-center justify-center shadow transition px-1";
             } else {
-                icon.innerText = "▶";
-                text.innerText = "Phát Toàn Bài";
-                btn.className = "w-full h-8 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold text-xs rounded-lg flex items-center justify-center gap-1.5 shadow transition truncate";
+                icon.className = "fa-solid fa-play text-sm";
+                btn.className = "h-9 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold rounded-lg flex items-center justify-center shadow transition px-1";
             }
         }
 
         function updateLoopStatus() {
             const statusEl = document.getElementById("loopStatus");
-            const maxRepeat = (repeatSetting === 0) ? "∞" : repeatSetting;
-            statusEl.innerText = `(${currentRepeatIndex}/${maxRepeat})`;
+            if (statusEl) {
+                const maxRepeat = (repeatSetting === 0) ? "∞" : repeatSetting;
+                statusEl.innerText = `(${currentRepeatIndex}/${maxRepeat})`;
+            }
         }
 
         function goHome() {
