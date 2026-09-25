@@ -5,436 +5,473 @@ if (typeof STORIES_DATA === 'undefined') {
 STORIES_DATA["12 December"] = [
   {
     "day": 1,
-    "title": "Story Day 1",
+    "title": "A Test",
     "image": "12 December/images/day_01.webp",
     "audio": "12 December/audio/Track01.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 1 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 1."
-      }
+      { "start": 4.8, "en": "I failed a test. I felt terrible. It hurt me both inside and out. I was embarrassed. Just think about it. A smart girl did not pass the test!", "ipa": "/aɪ feɪld ə tɛst. aɪ fɛlt ˈtɛrəbl. ɪt hɜːrt miː boʊθ ɪnˈsaɪd ænd aʊt. aɪ wɒz ɪmˈbærəst. dʒʌst θɪŋk əˈbaʊt ɪt. ə smɑːrt ɡɜːrl dɪd nɒt pɑːs ðə tɛst!/", "vi": "Tôi đã trượt một bài kiểm tra. Tôi cảm thấy thật tồi tệ. Nó làm tôi tổn thương cả bên trong lẫn bên ngoài. Tôi cảm thấy vô cùng xấu hổ. Thử nghĩ mà xem, một cô bé thông minh lại không vượt qua được bài kiểm tra!" },
+      { "start": 16.0, "en": "I cried. I could not sleep. 'I was supposed to be at the top! How will I face my friends at school?' I thought. I would never be happy again. Never!", "ipa": "/aɪ kraɪd. aɪ kʊd nɒt sliːp. aɪ wɒz səˈpoʊzd tuː biː æt ðə tɒp! haʊ wɪl aɪ feɪs maɪ frɛndz æt skuːl?, aɪ θɔːt. aɪ wʊd ˈnɛvər biː ˈhæpi əˈɡɛn. ˈnɛvər!/", "vi": "Tôi đã khóc. Tôi không thể ngủ được. 'Lẽ ra mình phải đứng ở top đầu chứ! Làm sao mình dám đối mặt với bạn bè ở trường đây?' tôi thầm nghĩ. Tôi sẽ không bao giờ hạnh phúc lại được nữa. Không bao giờ!" },
+      { "start": 32.0, "en": "My mom found out about my problem. She said, 'So, you failed a test. But do you know about another test that is even more important?'", "ipa": "/maɪ mɒm faʊnd aʊt əˈbaʊt maɪ ˈprɒbləm. ʃiː sɛd, soʊ, juː feɪld ə tɛst. bʌt duː juː noʊ əˈbaʊt əˈnʌðər tɛst ðæt ɪz ˈiːvn mɔːr ɪmˈpɔːrtənt?/", "vi": "Mẹ tôi phát hiện ra vấn đề của tôi. Mẹ nói: 'Vậy là con đã trượt bài kiểm tra. Nhưng con có biết về một bài kiểm tra khác còn quan trọng hơn không?'" },
+      { "start": 44.0, "en": "'What is it?' I looked at my mother, puzzled. 'It is whether or not you can learn from your mistake,' my mom continued.", "ipa": "/wɒt ɪz ɪt?, aɪ lʊkt æt maɪ ˈmʌðər, ˈpʌzəld. ɪt ɪz ˈwɛðər ɔːr nɒt juː kond [correction: juː kæn] lɜːrn frɒm jɔːr mɪsˈteɪk, maɪ mɒm kənˈtɪnyuːd/", "vi": "'Nó là gì ạ?' Tôi nhìn mẹ đầy khó hiểu. 'Đó là việc con có thể học hỏi từ sai lầm của mình hay không,' mẹ nói tiếp." },
+      { "start": 58.0, "en": "'Learning from your mistakes will make you strong. To me, that is more important than what you scored on a test.'", "ipa": "/ˈlɜːrnɪŋ frɒm jɔːr mɪsˈteɪks wɪl meɪk juː strɔːŋ. tuː miː, ðæt ɪz mɔːr ɪmˈpɔːrtənt ðæn wɒt juː skɔːrd ɒn ə tɛst/", "vi": "'Học từ những sai lầm sẽ làm con trở nên mạnh mẽ. Đối với mẹ, điều đó quan trọng hơn điểm số con đạt được trong bài kiểm tra.'" },
+      { "start": 69.0, "en": "What my mom said really made me think. After a few days of struggling, I finally understood what my mom had said. She was right. I should not pity myself because of this one bad test. I will walk away from this a better person.", "ipa": "/wɒt maɪ mɒm sɛd ˈriəli meɪd miː θɪŋk. ˈɑːftər ə fjuː deɪz əv ˈstrʌɡlɪŋ, aɪ ˈfaɪnəli ˌʌndərˈstʊd wɒt maɪ mɒm hæd sɛd. ʃiː wɒz raɪt. aɪ ʃʊd nɒt ˈpɪti maɪˈsɛlf bɪˈkɒz əv ðɪs wʌn bæd tɛst. aɪ wɪl wɔːk əˈweɪ frɒm ðɪs ə ˈbɛtər ˈpɜːrsn/", "vi": "Những lời mẹ nói thực sự khiến tôi phải suy ngẫm. Sau vài ngày dằn vặt, cuối cùng tôi cũng hiểu được ý mẹ. Mẹ đã đúng. Tôi không nên tự thương hại bản thân chỉ vì một bài kiểm tra kém này. Tôi sẽ đứng dậy từ đây để trở thành một con người tốt hơn." }
     ]
   },
   {
     "day": 2,
-    "title": "Story Day 2",
+    "title": "Earthquakes",
     "image": "12 December/images/day_02.webp",
     "audio": "12 December/audio/Track02.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 2 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 2."
-      }
+      { "start": 4.8, "en": "Last week, a terrible earthquake happened in Haiti. It made Alice and her friends think hard about it.", "ipa": "/læst wiːk, ə ˈtɛrəbl ˈɜːrθˌkweɪk ˈhæpənd ɪn heɪti. ɪt meɪd ˈælɪs ænd hɜːr frɛndz θɪŋk hɑːrd əˈbaʊt ɪt/", "vi": "Tuần trước, một trận động đất kinh hoàng đã xảy ra ở Haiti. Nó khiến Alice và các bạn của cô phải suy nghĩ rất nhiều." },
+      { "start": 13.0, "en": "They asked their science teacher, Mr. Guilton, a simple question, 'What makes the earth shake?'", "ipa": "/ðeɪ ɑːskt ðɛər ˈsaɪəns ˈtiːtʃər, ˈmɪstər gɪltən [correction: ˈɡɪltən], ə ˈsɪmpl ˈkwɛstʃən, wɒt meɪks ði ɜːrθ ʃeɪk?/", "vi": "Họ đã hỏi giáo viên khoa học của mình, thầy Guilton, một câu hỏi đơn giản: 'Điều gì làm trái đất rung chuyển?'" },
+      { "start": 21.0, "en": "Mr. Guilton explained it as simply as he could. He said, 'Inside of the earth, there are BIG pieces of rock that are slowly moving all of the time. When two big pieces hit each other, they make the earth shake.'", "ipa": "/ˈmɪstər ˈɡɪltən ɪkˈspleɪnd ɪt æz ˈsɪmpli æz hiː kʊd. hiː sɛd, ˈɪnsaɪd əv ði ɜːrθ, ðɛər ɑːr bɪɡ ˈpiːsɪz əv rɒk ðæt ɑːr ˈsloʊli ˈmuːvɪŋ ɔːl əv ðə taɪm. wɛn tuː bɪɡ ˈpiːsɪz hɪt iːtʃ ˈʌðər, ðeɪ meɪk ði ɜːrθ ʃeɪk/", "vi": "Thầy Guilton giải thích một cách đơn giản nhất có thể. Thầy nói: 'Bên trong trái đất có những khối đá LỚN liên tục chuyển động chậm chạp. Khi hai khối đá lớn va vào nhau, chúng làm trái đất rung chuyển.'" },
+      { "start": 39.0, "en": "Then, he told the class that many people all over the world live in fear of earthquakes.", "ipa": "/ðɛn, hiː toʊld ðə klɑːs ðæt ˈmɛni ˈpiːpl ɔːl ˈoʊvər ðə wɜːrld lɪv ɪn fɪər əv ˈɜːrθˌkweɪks/", "vi": "Sau đó, thầy nói với cả lớp rằng rất nhiều người trên khắp thế giới đang sống trong nỗi sợ hãi động đất." },
+      { "start": 47.0, "en": "Long ago, people believed earthquakes were caused by many different things.", "ipa": "/lɒŋ əˈɡoʊ, ˈpiːpl bɪˈliːvd ˈɜːrθˌkweɪks wɜːr kɔːzd baɪ ˈmɛni ˈdɪfrənt θɪŋz/", "vi": "Từ xa xưa, người ta tin rằng động đất do nhiều nguyên nhân khác nhau gây ra." },
+      { "start": 54.0, "en": "In India, people believed that the earth was held up by four elephants. The elephants stood on a turtle. The turtle stood on a snake. If one of these animals moved, the earth would shake.", "ipa": "/ɪn ˈɪndiə, ˈpiːpl bɪˈliːvd ðæt ði ɜːrθ wɒz hɛld ʌp baɪ fɔːr ˈɛlɪfənts. ði ˈɛlɪfənts stʊd ɒn ə ˈtɜːrtl. ðə ˈtɜːrtl stʊd ɒn ə sneɪk. ɪf wʌn əv ðiːz ˈænɪmlz muːvd, ði ɜːrθ wʊd ʃeɪk/", "vi": "Ở Ấn Độ, người ta tin rằng trái đất được nâng đỡ bởi bốn con voi. Những con voi đứng trên một con rùa. Con rùa đứng trên một con rắn. Nếu một trong những con vật này di chuyển, trái đất sẽ rung chuyển." },
+      { "start": 71.0, "en": "In Africa, people believed the earth was held up by a giant. When the giant stopped to give his wife a hug, the earth would shake, causing an earthquake.", "ipa": "/ɪn ˈæfrɪkə, ˈpiːpl bɪˈliːvd ði ɜːrθ wɒz hɛld ʌp baɪ ə ˈdʒaɪənt. wɛn ðə ˈdʒaɪənt stɒpt tuː ɡɪv hɪz waɪf ə hʌɡ, ði ɜːrθ wʊd ʃeɪk, ˈkɔːzɪŋ ən ˈɜːrθˌkweɪk/", "vi": "Ở châu Phi, người ta tin rằng trái đất được nâng đỡ bởi một người khổng lồ. Khi người khổng lồ dừng lại để ôm vợ mình, trái đất sẽ rung lên, gây ra động đất." },
+      { "start": 87.0, "en": "Today, we know the true cause of earthquakes. But that doesn't make them any less scary or dangerous.", "ipa": "/təˈdeɪ, wiː noʊ ðə truː kɔːz əv ˈɜːrθˌkweɪks. bʌt ðæt ˈdʒʌst [correction: ˈdʌznt] make ðɛm ˈɛni lɛs ˈskɛri ɔːr ˈdeɪndʒərəs/", "vi": "Ngày nay, chúng ta đã biết nguyên nhân thực sự của động đất. Nhưng điều đó không làm chúng bớt đáng sợ hay bớt nguy hiểm đi chút nào." }
     ]
   },
   {
     "day": 3,
-    "title": "Story Day 3",
+    "title": "Broken Ankle",
     "image": "12 December/images/day_03.webp",
     "audio": "12 December/audio/Track03.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 3 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 3."
-      }
+      { "start": 4.8, "en": "Dr. Miller broke his ankle. 'I don't understand how I broke it,' he told his friends. 'I was walking in the woods when I stepped into a hole. But, I don't think I twisted it enough to break it.'", "ipa": "/ˈdɒktər ˈmɪlər broʊk hɪz ˈæŋkl. aɪ doʊnt ˌʌndərˈstænd haʊ aɪ broʊk ɪt, hiː toʊld hɪz frɛndz. aɪ wɒz ˈwɔːkɪŋ ɪn ðə wʊdz wɛn aɪ stɛpt ˈɪntuː ə hoʊl. bʌt, aɪ doʊnt θɪŋk aɪ ˈtwɪstɪd ɪt ɪˈnʌf tuː breɪk ɪt/", "vi": "Bác sĩ Miller bị gãy mắt cá chân. 'Tôi không hiểu mình bị gãy kiểu gì nữa,' ông nói với bạn bè. 'Tôi đang đi dạo trong rừng thì bước thụt vào một cái hố. Nhưng tôi nghĩ mình không vặn chân mạnh đến mức gãy xương được.'" },
+      { "start": 23.0, "en": "'Now you get to see what it's like to be a patient,' his wife told him.", "ipa": "/naʊ juː ɡɛt tuː siː wɒt ɪts laɪk tuː biː ə ˈpeɪʃnt, hɪz waɪf toʊld hɪm/", "vi": "'Bây giờ thì anh được nếm trải cảm giác làm bệnh nhân là thế nào rồi nhé,' vợ ông trêu." },
+      { "start": 29.0, "en": "Finally, Dr. Miller's ankle got better and he could walk normally again.", "ipa": "/ˈfaɪnəli, ˈdɒktər ˈmɪlərz ˈæŋkl ɡɒt ˈbɛtər ænd hiː kʊd wɔːk ˈnɔːrməli əˈɡɛn/", "vi": "Cuối cùng, mắt cá chân của bác sĩ Miller cũng lành lại và ông có thể đi lại bình thường." },
+      { "start": 36.0, "en": "One day, he said, 'I'm going for a walk in the woods to see if I can figure out how I broke my ankle in that hole.'", "ipa": "/wʌn deɪ, hiː sɛd, aɪm ˈɡoʊɪŋ fɔːr ə wɔːk ɪn ðə wʊdz tuː siː ɪf aɪ kæn ˈfɪɡər aʊt haʊ aɪ broʊk maɪ ˈæŋkl ɪn ðæt hoʊl/", "vi": "Một hôm, ông nói: 'Tôi sẽ vào rừng đi dạo xem có tìm ra lý do tại sao hôm trước mình lại bị gãy chân ở cái hố đó không.'" },
+      { "start": 47.0, "en": "Dr. Miller found the hole. He looked at it from every angle, but he still couldn't figure out how he had broken his ankle.", "ipa": "/ˈdɒktər ˈmɪlər faʊnd ðə hoʊl. hiː lʊkt ɪt [correction: ɒn ɪt] frɒm ˈɛvri ˈæŋɡl, bʌt hiː stɪl ˈkʊdnt ˈfɪɡər aʊt haʊ hiː hæd ˈbroʊkən hɪz ˈæŋkl/", "vi": "Bác sĩ Miller tìm thấy cái hố. Ông quan sát nó từ mọi góc độ, nhưng vẫn không tài nào hiểu nổi vì sao lúc trước chân mình lại bị gãy ở đây." },
+      { "start": 59.0, "en": "He stuck his foot down the hole. Just then, he slipped and broke his ankle all over again!", "ipa": "/hiː stʌk hɪz fʊt daʊn ðə hoʊl. dʒʌst ðɛn, hiː slɪpt ænd broʊk hɪz ˈæŋkl ɔːl ˈoʊvər əˈɡɛn!/", "vi": "Ông bèn thò chân xuống cái hố. Ngay lúc đó, ông trượt chân ngã và... gãy luôn cả mắt cá chân một lần nữa!" }
     ]
   },
   {
     "day": 4,
-    "title": "Story Day 4",
+    "title": "Shovelling Snow",
     "image": "12 December/images/day_04.webp",
     "audio": "12 December/audio/Track04.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 4 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 4."
-      }
+      { "start": 4.8, "en": "Sam always wants to help his parents. One day, after a snowstorm, he began to shovel the snow from the balcony while his parents were grocery shopping. He wanted to surprise them.", "ipa": "/sæm ˈɔːlweɪz wɒnts tuː hɛlp hɪz ˈpɛərənts. wʌn deɪ, ˈɑːftər ə ˈsnoʊˌstɔːrm, hiː bɪˈɡæn tuː ˈʃʌvəl ðə snoʊ frɒm ðə ˈbælkəni waɪl hɪz ˈpɛərənts wɜːr ˈɡroʊsəri ˈʃɑːpɪŋ. hiː ˈwɒntɪd tuː sərˈpraɪz ðɛm/", "vi": "Sam luôn muốn giúp đỡ bố mẹ. Một hôm, sau trận bão tuyết, cậu bắt đầu xúc tuyết ở ban công trong lúc bố mẹ đi mua đồ tạp hóa. Cậu muốn tạo bất ngờ cho họ." },
+      { "start": 18.0, "en": "He wore his heavy winter jacket, snow boots, gloves and, of course, his warm hat.", "ipa": "/hiː wɔːr hɪz ˈhɛvi ˈwɪntər ˈdʒækɪt, snoʊ buːts, ɡlʌvz ænd, əv kɔːrs, hɪz wɔːrm hæt/", "vi": "Cậu mặc chiếc áo khoác mùa đông dày cộp, đi ủng chống tuyết, đeo găng tay và tất nhiên là đội cả chiếc mũ ấm áp nữa." },
+      { "start": 26.0, "en": "Before long, he got hot. Sweat started running down his face. He became slower with each move. The snow became heavier. He was getting really tired.", "ipa": "/bɪˈfɔːr lɒŋ, hiː ɡɒt hɒt. swɛt ˈstɑːrtɪd ˈrʌnɪŋ daʊn hɪz feɪs. hiː bɪˈkeɪm ˈsloʊər wɪð iːtʃ muːv. ðə snoʊ bɪˈkeɪm ˈhɛviər. hiː wɒz ˈɡɛtɪŋ ˈriəli ˈtaɪərd/", "vi": "Chẳng mấy chốc, cậu bắt đầu thấy nóng. Mồ hôi túa ra ròng ròng trên mặt. Mỗi động tác của cậu chậm dần đi. Lớp tuyết mỗi lúc một nặng hơn. Cậu thực sự cảm thấy mệt lử." },
+      { "start": 42.0, "en": "'What a job!' he groaned. 'How can someone do this all winter?'", "ipa": "/wɒt ə dʒɒb!, hiː ɡroʊnd. haʊ kæn ˈsʌmwʌn duː ðɪs ɔːl ˈwɪntər?/", "vi": "'Công việc gì thế này!' cậu rên rỉ. 'Làm sao mà có người chịu làm việc này suốt cả mùa đông cơ chứ?'" },
+      { "start": 49.0, "en": "Just then, his parents came home. Dad saw his son and laughed. 'Oh dear, how sweet! But you are wearing too much. Shovelling snow is like doing exercise. You should dress properly.'", "ipa": "/dʒʌst ðɛn, hɪz ˈpɛərənts keɪm hoʊm. dæd sɔː hɪz sʌn ænd lɑːft. oʊ dɪər, haʊ swiːt! bʌt juː ɑːr ˈwɛərɪŋ tuː mʌtʃ. ˈʃʌvəlɪŋ snoʊ ɪz laɪk ˈduːɪŋ ˈɛksərˌsaɪz. juː ʃʊd drɛs ˈprɑːpərli/", "vi": "Đúng lúc đó, bố mẹ về đến nhà. Bố nhìn thấy con trai thì phì cười. 'Ôi trời, đáng yêu quá cơ! Nhưng con mặc nhiều đồ quá đấy. Xúc tuyết chẳng khác nào tập thể dục cả. Con phải ăn mặc gọn gàng phù hợp chứ.'" },
+      { "start": 65.0, "en": "Dad took the shovel and helped Sam finish the work in ten minutes. 'Next time,' Sam thought, 'I will know how to dress when I shovel the snow.'", "ipa": "/dæd tʊk ðə ˈʃʌvl ænd hɛlpt sæm ˈfɪnɪʃ ðə wɜːrk ɪn tɛn ˈmɪnɪts. nɛkst taɪm, sæm θɔːt, aɪ wɪl noʊ haʊ tuː drɛs wɛn aɪ ˈʃʌvəl ðə snoʊ/", "vi": "Bố cầm lấy cái xẻng và giúp Sam hoàn thành công việc chỉ trong mười phút. 'Lần sau,' Sam thầm nghĩ, 'mình sẽ biết cách ăn mặc thế nào cho đúng khi đi xúc tuyết.'" }
     ]
   },
   {
     "day": 5,
-    "title": "Story Day 5",
+    "title": "The Christmas Pig",
     "image": "12 December/images/day_05.webp",
     "audio": "12 December/audio/Track05.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 5 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 5."
-      }
+      { "start": 4.8, "en": "We live on a farm. We have lots of animals. My favourite animal is Walter. He is a pig.", "ipa": "/wiː lɪv ɒn ə fɑːrm. wiː hæv lɒts əv ˈænɪmlz. maɪ ˈfeɪvərɪt ˈænɪml ɪz ˈwɔːltər. hiː ɪz ə pɪɡ/", "vi": "Chúng tôi sống ở một nông trại và nuôi rất nhiều động vật. Động vật tôi yêu thích nhất là Walter - một chú heo." },
+      { "start": 13.0, "en": "This Christmas, Dad built a manger for my school's Christmas play. A manger is a big box that holds food for cows. Jesus slept in a manger when he was just born.", "ipa": "/ðɪs ˈkrɪsməs, dæd bɪlt ə ˈmændʒər fɔːr maɪ skuːlz ˈkrɪsməs pleɪ. ə ˈmændʒər ɪz ə bɪɡ bɒks ðæt hoʊldz fuːd fɔːr kaʊz. ˈdʒiːzəs slɛpt ɪn ə ˈmændʒər wɛn hiː wɒz dʒʌst bɔːrn/", "vi": "Giáng sinh năm nay, bố đóng một chiếc máng cỏ phục vụ cho vở kịch Giáng sinh ở trường tôi. Máng cỏ là một chiếc hộp lớn đựng thức ăn cho bò. Chúa Jesus từng nằm ngủ trong máng cỏ khi Người mới sinh ra." },
+      { "start": 28.0, "en": "One day, my friends came over to practise singing Christmas songs. Afterwards, we decided to go for a sleigh ride. We went out to the barn to get the sleigh.", "ipa": "/wʌn deɪ, maɪ frɛndz keɪm ˈoʊvər tuː ˈpræktɪs ˈsɪŋɪŋ ˈkrɪsməs sɔːŋz. ˈæftərwərdz, wiː dɪˈsaɪdɪd tuː ɡoʊ fɔːr ə sleɪ raɪd. wiː wɛnt aʊt tuː ðə bɑːrn tuː ɡɛt ðə sleɪ/", "vi": "Một hôm, các bạn đến nhà tôi tập hát các bài thánh ca Giáng sinh. Sau đó, chúng tôi quyết định đi xe trượt tuyết, bèn ra chuồng ngựa để lấy chiếc xe trượt." },
+      { "start": 42.0, "en": "Dad opened the big barn door. He turned on the lights. There, nestled in the manger full of hay, was a very sleepy Walter.", "ipa": "/dæd ˈoʊpənd ðə bɪɡ bɑːrn dɔːr. hiː tɜːrnd ɒn ðə laɪts. ðɛər, ˈnɛsəld ɪn ðə ˈmændʒər fʊl əv heɪ, wɒz ə ˈvɛri ˈsliːpi ˈwɔːltər/", "vi": "Bố mở cánh cửa chuồng lớn và bật đèn lên. Ở đó, nằm cuộn mình trong máng cỏ đầy rơm rạ, chính là chú heo Walter đang ngái ngủ." },
+      { "start": 54.0, "en": "He raised his head. He could barely open his eyes. We all laughed so hard that we nearly fell over. Walter went right back to sleep. It made us laugh even harder.", "ipa": "/hiː reɪzd hɪz hɛd. hiː kʊd ˈbɛrli ˈoʊpən hɪz aɪz. wiː ɔːl lɑːft soʊ hɑːrd ðæt wiː ˈnɪərli fɛl ˈoʊvər. ˈwɔːltər wɛnt raɪt bæk tuː sliːp. ɪt meɪd ʌs lɑːf ˈiːvn ˈhɑːrdər/", "vi": "Nó ngẩng đầu lên, hầu như không mở nổi mắt. Tất cả chúng tôi cười ngất ngây suýt ngã quỵ. Walter lập tức ngủ tiếp, khiến chúng tôi càng cười lớn hơn nữa." },
+      { "start": 69.0, "en": "Since then, he has been known as Walter, the Christmas Pig.", "ipa": "/sɪns ðɛn, hiː hæz biːn noʊn æz ˈwɔːltər, ðə ˈkrɪsməs pɪɡ/", "vi": "Kể từ đó, chú được biết đến với biệt danh Walter - Chú heo Giáng sinh." }
     ]
   },
   {
     "day": 6,
-    "title": "Story Day 6",
+    "title": "Is Bat a Bird? (I)",
     "image": "12 December/images/day_06.webp",
     "audio": "12 December/audio/Track06.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 6 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 6."
-      }
+      { "start": 4.8, "en": "Long ago, the birds and the land animals had a big war. The animals were winning, for they had legs and were very strong.", "ipa": "/lɒŋ əˈɡoʊ, ðə bɜːdz ænd ðə lænd ˈænɪmlz hæd ə bɪɡ wɔːr. ði ˈænɪmlz wɜːr ˈwɪnɪŋ, fɔːr ðeɪ hæd lɛɡz ænd wɜːr ˈvɛri strɔːŋ/", "vi": "Ngày xửa ngày xưa, loài chim và các loài thú trên cạn đã xảy ra một cuộc chiến lớn. Bọn thú đang thắng thế vì chúng có chân và rất khỏe mạnh." },
+      { "start": 16.0, "en": "That's when Bat went into a cave and hid. He wanted to see which side was going to win. After many hours, the land animals finally won the fight.", "ipa": "/ðæts wɛn bæt wɛnt ˈɪntuː ə keɪv ænd hɪd. hiː ˈwɒntɪd tuː siː wɪtʃ saɪd wɒz ˈɡoʊɪŋ tuː wɪn. ˈɑːftər ˈmɛni ˈaʊərz, ðə lænd ˈænɪmlz ˈfaɪnəli wʌn ðə faɪt/", "vi": "Đó là lúc Dơi chuồn vào một hang động và trốn biệt. Nó muốn xem phe nào sẽ giành phần thắng. Sau nhiều giờ đồng hồ, cuối cùng các loài thú trên cạn cũng thắng trận." },
+      { "start": 29.0, "en": "When he was sure which side had won, Bat flew out of his cave and followed the animals.", "ipa": "/wɛn hiː wɒz ʃʊr wɪtʃ saɪd hæd wʌn, bæt fluː aʊt əv hɪz keɪv ænd ˈfɒloʊd ði ˈænɪmlz/", "vi": "Khi chắc chắn phe nào đã thắng, Dơi bay ra khỏi hang và đi theo bầy thú." },
+      { "start": 37.0, "en": "Bear looked at him and said, 'Here is a bird. Let's kill it!'", "ipa": "/bɛər lʊkt æt hɪm ænd sɛd, hɪər ɪz ə bɜːd. lɛts kɪl ɪt!/", "vi": "Gấu nhìn thấy liền hô lên: 'Kia có một con chim kìa. Giết nó đi!'" },
+      { "start": 44.0, "en": "But Bat cried, 'I am not a bird, even though I can fly like a bird. Look in my mouth. I have teeth. Birds do not. So, as you can see, I am one of you.'", "ipa": "/bʌt bæt kraɪd, aɪ æm nɒt ə bɜːd, ˈiːvn ðoʊ aɪ kæn flaɪ laɪk ə bɜːd. lʊk ɪn maɪ maʊθ. aɪ hæv tiːθ. bɜːdz duː nɒt. soʊ, æz juː kæn siː, aɪ æm wʌn əv juː/", "vi": "Nhưng Dơi vội kêu lên: 'Tôi không phải là chim, dù tôi có thể bay như chim. Hãy nhìn vào miệng tôi xem, tôi có răng mà chim thì không có. Thế nên, như các bạn thấy đấy, tôi là đồng loại với các bạn.'" },
+      { "start": 59.0, "en": "The animals talked it over and finally agreed. They allowed Bat to join them.", "ipa": "/ði ˈænɪmlz tɔːkt ɪt ˈoʊvər ænd ˈfaɪnəli əˈɡriːd. ðeɪ əˈlaʊd bæt tuː dʒɔɪn ðɛm/", "vi": "Bầy thú bàn tán rồi cuối cùng cũng đồng ý, cho phép Dơi gia nhập hội của chúng." }
     ]
   },
   {
     "day": 7,
-    "title": "Story Day 7",
+    "title": "Is Bat a Bird? (II)",
     "image": "12 December/images/day_07.webp",
     "audio": "12 December/audio/Track07.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 7 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 7."
-      }
+      { "start": 4.8, "en": "All was well until one day, the birds returned to fight again.", "ipa": "/ɔːl wɒz wɛl ʌnˈtɪl wʌn deɪ, ðə bɜːdz rɪˈtɜːrnd tuː faɪt əˈɡɛn/", "vi": "Mọi chuyện cứ thế êm xuôi cho đến một hôm, loài chim quay lại tái chiến." },
+      { "start": 10.0, "en": "This time, the birds flew hard and attacked from the sky. Once again, Bat hid in a cave. This time, the birds won the fight.", "ipa": "/ðɪs taɪm, ðə bɜːdz fluː hɑːrd ænd əˈtækt frɒm ðə skaɪ. wʌns əˈɡɛn, bæt hɪd ɪn ə keɪv. ðɪs taɪm, ðə bɜːdz wʌn ðə faɪt/", "vi": "Lần này, đàn chim dốc sức tấn công từ bầu trời. Một lần nữa, Dơi lại trốn tịt vào hang. Và lần này, phe chim đã giành chiến thắng." },
+      { "start": 23.0, "en": "Bat joined the birds in victory. One old bird said, 'You are not one of us.' But Bat cried, 'I am a bird. I have wings.'", "ipa": "/bæt dʒɔɪnd ðə bɜːdz ɪn ˈvɪktəri. wʌn oʊld bɜːd sɛd, juː ɑːr nɒt wʌn əv ʌs. bʌt bæt kraɪd, aɪ æm ə bɜːd. aɪ hæv wɪŋz/", "vi": "Dơi vội vàng nhập hội ăn mừng chiến thắng cùng loài chim. Một con chim già lên tiếng: 'Ngươi không phải đồng loại của chúng ta.' Nhưng Dơi cãi: 'Tôi là chim chứ bộ, tôi có cánh cơ mà.'" },
+      { "start": 35.0, "en": "Finally, the birds accepted him. The animals and birds continued to fight for many years. Each time, Bat hid and waited to see which side won.", "ipa": "/ˈfaɪnəli, ðə bɜːdz əkˈsɛptɪd hɪm. ði ˈænɪmlz ænd bɜːdz kənˈtɪnyuːd tuː faɪt fɔːr ˈmɛni jɪərz. iːtʃ taɪm, bæt hɪd ænd ˈweɪtɪd tuː siː wɪtʃ saɪd wʌn/", "vi": "Cuối cùng, đàn chim cũng chấp nhận nó. Cuộc chiến giữa muông thú và loài chim cứ tiếp diễn ròng rã suốt nhiều năm. Mỗi lần như thế, Dơi đều trốn kỹ ngóng xem phe nào thắng." },
+      { "start": 51.0, "en": "Finally, everyone was tired of fighting. Their wise leaders decided to make peace. But they wondered what to do with Bat.", "ipa": "/ˈfaɪnəli, ˈɛvriˌwʌn wɒz ˈtaɪərd əv ˈfaɪtɪŋ. ðɛər waɪz ˈliːdərz dɪˈsaɪdɪd tuː meɪk piːs. bʌt ðeɪ ˈwʌndərd wɒt tuː duː wɪð bæt/", "vi": "Cuối cùng, ai nấy đều mệt mỏi vì chiến tranh, các thủ lĩnh khôn ngoan quyết định ký hòa ước. Nhưng họ băn khoăn không biết nên xử lý Dơi thế nào." },
+      { "start": 62.0, "en": "The leaders said, 'You have wings, but you are not a bird. You have teeth, but you are not an animal. Because of your tricks, you will fly only at night when the birds are asleep and the animals are hunting.'", "ipa": "/ðə ˈliːdərz sɛd, juː hæv wɪŋz, bʌt juː ɑːr nɒt ə bɜːd. juː hæv tiːθ, bʌt juː ɑːr nɒt ðə ˈænɪml [correction: ən ˈænɪml]. bɪˈkɒz əv jɔːr trɪks, juː wɪl flaɪ ˈoʊnli æt naɪt wɛn ðə bɜːdz ɑːr əˈsliːp ænd ði ˈænɪmlz ɑːr ˈhʌntɪŋ/", "vi": "Các vị thủ lĩnh phán quyết: 'Ngươi có cánh nhưng không phải chim, ngươi có răng nhưng không phải thú. Vì thói lươn lẹo của ngươi, từ nay ngươi chỉ được bay vào ban đêm khi loài chim đã ngủ và muông thú đang đi săn.'" },
+      { "start": 80.0, "en": "And so it was. Bat was destined to live a lonely life.", "ipa": "/ænd soʊ ɪt wɒz. bæt wɒz ˈdɛstɪnd tuː lɪv ə ˈloʊnli laɪf/", "vi": "Và sự thật là thế. Dơi từ đó phải chịu số phận sống một cuộc đời cô độc." }
     ]
   },
   {
     "day": 8,
-    "title": "Story Day 8",
+    "title": "Knitting",
     "image": "12 December/images/day_08.webp",
     "audio": "12 December/audio/Track08.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 8 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 8."
-      }
+      { "start": 4.8, "en": "Kelly finished making her snowman. She went inside Grandma's warm house. Grandma sat in a chair, knitting a sweater.", "ipa": "/ˈkɛli ˈfɪnɪʃt ˈmeɪkɪŋ hɜːr ˈsnoʊˌmæn. ʃiː wɛnt ˈɪnsaɪd ˈɡrændmɑːz wɔːrm haʊs. ˈɡrændmɑː sæt ɪn ə tʃɛər, ˈnɪtɪŋ ə ˈswɛtər/", "vi": "Kelly nặn xong người tuyết liền bước vào ngôi nhà ấm áp của bà. Bà đang ngồi trên ghế đan một chiếc áo len." },
+      { "start": 14.0, "en": "Kelly watched her grandma's knitting needles move fast. 'Click, click,' said the needles.", "ipa": "/ˈkɛli wɒtʃt hɜːr ˈɡrændmɑːz ˈnɪtɪŋ ˈniːdlz muːv fɑːst. klɪk, klɪk, sɛd ðə ˈniːdlz/", "vi": "Kelly đứng xem đôi kim đan của bà di chuyển thoăn thoắt. 'Lách cách, lách cách,' tiếng kim đan phát ra." },
+      { "start": 21.0, "en": "'Would you like to try?' asked Grandma. 'Okay,' said Kelly.", "ipa": "/wʊd juː laɪk tuː traɪ?, ɑːskt ˈɡrændmɑː. oʊˈkeɪ, sɛd ˈkɛli/", "vi": "'Cháu có muốn thử không?' bà hỏi. 'Dạ có ạ,' Kelly đáp." },
+      { "start": 27.0, "en": "Grandma handed Kelly a set of knitting needles. She guided Kelly's fingers through the stitches. Soon, Kelly was knitting by herself.", "ipa": "/ˈɡrændmɑː ˈhændɪd ˈkɛli ə sɛt əv ˈnɪtɪŋ ˈniːdlz. ʃiː ˈɡaɪdɪd ˈkɛliːz ˈfɪŋɡərz θruː ðə ˈstɪtʃɪz. suːn, ˈkɛli wɒz ˈnɪtɪŋ baɪ hɜːrˈsɛlf/", "vi": "Bà đưa cho Kelly một bộ kim đan, ân cần hướng dẫn từng đường kim mũi chỉ. Chẳng mấy chốc, Kelly đã tự mình đan được." },
+      { "start": 38.0, "en": "'What are you making?' asked Grandma. 'A blanket for my bed,' said Kelly.", "ipa": "/wɒt ɑːr juː ˈmeɪkɪŋ?, ɑːskt ˈɡrændmɑː. ə ˈblæŋkɪt fɔːr maɪ bɛd, sɛd ˈkɛli/", "vi": "'Cháu đang đan gì thế?' bà hỏi. 'Cháu đan chăn đắp giường ạ,' Kelly nói." },
+      { "start": 46.0, "en": "She worked, and worked, and worked on her blanket. But it was way too small for a bed.", "ipa": "/ʃiː wɜːrkt, ænd wɜːrkt, ænd wɜːrkt ɒn hɜːr ˈblæŋkɪt. bʌt ɪt wɒz weɪ tuː smɔːl fɔːr ə bɛd/", "vi": "Cô bé cặm cụi đan miệt mài chiếc chăn của mình. Nhưng nó lại quá nhỏ so với một chiếc giường." },
+      { "start": 54.0, "en": "'Click, click,' said Grandma's needles. 'I changed my mind,' said Kelly. 'I'm making a blanket for my doll.'", "ipa": "/klɪk, klɪk, sɛd ˈɡrændmɑːz ˈniːdlz. aɪ tʃeɪndʒd maɪ maɪnd, sɛd ˈkɛli. aɪm ˈmeɪkɪŋ ə ˈblæŋkɪt fɔːr maɪ dɒl/", "vi": "'Lách cách, lách cách,' tiếng kim đan của bà vang lên. 'Cháu đổi ý rồi,' Kelly nói. 'Cháu đang đan chăn cho búp bê cơ.'" },
+      { "start": 64.0, "en": "Kelly worked, and worked, and worked. But still, her blanket was too narrow to be a doll blanket.", "ipa": "/ˈkɛli wɜːrkt, ænd wɜːrkt, ænd wɜːrkt. bʌt stɪl, hɜːr ˈblæŋkɪt wɒz tuː ˈnæroʊ tuː biː ə dɒl ˈblæŋkɪt/", "vi": "Kelly lại miệt mài đan tiếp. Nhưng tấm vải đan vẫn quá hẹp để làm chăn cho búp bê." },
+      { "start": 72.0, "en": "'Click, click,' said Grandma's needles. Kelly finished the row she was knitting. 'I changed my mind!' exclaimed Kelly as she pulled on her snow boots. 'I made a scarf for my snowman!'", "ipa": "/klɪk, klɪk, sɛd ˈɡrændmɑːz ˈniːdlz. ˈkɛli ˈfɪnɪʃt ðə roʊ uː [correction: roʊ] ʃiː wɒz ˈnɪtɪŋ. aɪ tʃeɪndʒd maɪ maɪnd!, ɪkˈskleɪmd ˈkɛli æz ʃiː pʊld ɒn hɜːr snoʊ buːts. aɪ meɪd ə skɑːrf fɔːr maɪ ˈsnoʊˌmæn!/", "vi": "'Lách cách, lách cách,' kim của bà vẫn kêu. Kelly đan nốt hàng cuối. 'Cháu lại đổi ý rồi!' cô bé thốt lên rồi xỏ vội đôi ủng tuyết. 'Cháu đan khăn quàng cổ cho người tuyết của cháu cơ!'" }
     ]
   },
   {
     "day": 9,
-    "title": "Story Day 9",
+    "title": "Cows and Pigs",
     "image": "12 December/images/day_09.webp",
     "audio": "12 December/audio/Track09.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 9 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 9."
-      }
+      { "start": 4.8, "en": "Steven's family was having a fight with their neighbour, Mr. Philips.", "ipa": "/ˈstiːvənz ˈfæməli wɒz ˈhævɪŋ ə faɪt wɪð ðɛər ˈneɪbər, ˈmɪstər ˈfɪlɪps/", "vi": "Gia đình Steven đang có tranh chấp kiện tụng với hàng xóm là ông Philips." },
+      { "start": 11.0, "en": "Steven looked at his mother. 'Why do you have to go to court?' he asked.", "ipa": "/ˈstiːvən lʊkt æt hɪz ˈmʌðər. waɪ duː juː hæv tuː ɡoʊ tuː kɔːrt?, hiː ɑːskt/", "vi": "Steven nhìn mẹ và hỏi: 'Tại sao mẹ phải ra tòa thế ạ?'" },
+      { "start": 17.0, "en": "'Because Mr. Philips is angry that our cows ate his corn,' she told him.", "ipa": "/bɪˈkɒz ˈmɪstər ˈfɪlɪps ɪz ˈæŋɡri ðæt ˈaʊər kaʊz eɪt hɪz kɔːrn, ʃiː toʊld hɪm/", "vi": "'Vì ông Philips tức giận chuyện đàn bò nhà mình ăn mất bắp ngô của ông ấy,' mẹ giải thích." },
+      { "start": 25.0, "en": "'But his pigs got into our garden too,' said Steven. 'So, aren't we even?'", "ipa": "/bʌt hɪz pɪɡz ɡɒt ˈɪntuː ˈaʊər ˈɡɑːrdn tuː, sɛd ˈstiːvən. soʊ, ɑːrnt wiː ˈiːvən?/", "vi": "'Nhưng lợn nhà ông ấy cũng sục vào vườn nhà mình mà,' Steven cãi. 'Thế hóa ra hòa nhau còn gì ạ?'" },
+      { "start": 35.0, "en": "Steven's mom smiled. She agreed with her son. 'We'll have to see what the judge says about that,' she told him.", "ipa": "/ˈstiːvənz mɒm smaɪld. ʃiː əˈɡriːd wɪð hɪr sʌn. wiːl hæv tuː siː wɒt ðə dʒʌdʒ sɛz əˈbaʊt ðæt, ʃiː toʊld hɪm/", "vi": "Mẹ Steven mỉm cười đồng tình với con trai. 'Để xem vị quan tòa phán quyết thế nào đã con nhé,' mẹ bảo." },
+      { "start": 46.0, "en": "Finally, the court date came. Mr. Philips said, 'Your Honour, that woman's cows ate my corn. She should pay for it.'", "ipa": "/ˈfaɪnəli, ðə kɔːrt deɪ keɪm. ˈmɪstər ˈfɪlɪps sɛd, jʊər ˈɑːnər, ðæt ˈwʊmənz kaʊz eɪt maɪ kɔːrn. ʃiː ʃʊd peɪ fɔːr ɪt/", "vi": "Cuối cùng ngày hầu tòa cũng đến. Ông Philips đon đả cáo buộc: 'Thưa Quan tòa, bò của người phụ nữ kia đã ăn sạch ngô của tôi, cô ta phải bồi thường.'" },
+      { "start": 58.0, "en": "Soon, it was time for Steven's mom to speak. 'Yes, my cows ate your corn. But your pigs ate my wheat,' she said.", "ipa": "/suːn, ɪt wɒz taɪm fɔːr ˈstiːvənz mɒm tuː spiːk. jɛs, maɪ kaʊz eɪt jɔːr kɔːrn. bʌt jɔːr pɪɡz eɪt maɪ wiːt, ʃiː sɛd/", "vi": "Đến lượt mẹ Steven phát biểu. 'Vâng, bò của tôi đã ăn ngô của ông. Nhưng lợn của ông cũng ăn lúa mì của tôi đấy thôi,' mẹ đáp." },
+      { "start": 71.0, "en": "'I would say that makes you both even,' said the judge.", "ipa": "/aɪ wʊd seɪ ðæt meɪks juː boʊθ ˈiːvən, sɛd ðə dʒʌdʒ/", "vi": "'Tôi tuyên bố hai bên hòa nhau,' vị quan tòa phán quyết." },
+      { "start": 78.0, "en": "Steven, who was sitting in the back of the courtroom, smiled. 'The judge agrees with me,' he thought. 'Maybe one day when I grow up, I'll be a judge.'", "ipa": "/ˈstiːvən, huː wɒz ˈsɪtɪŋ ɪn ðə bæk əv ðə ˈkɔːrtˌruːm, smaɪld. ðə dʒʌdʒ əˈɡriːz wɪð miː, hiː θɔːt. ˈmeɪbi wʌn deɪ wɛn aɪ ɡroʊ ʌp, aɪl biː ə dʒʌdʒ/", "vi": "Steven ngồi ở hàng ghế cuối mỉm cười đắc ý. 'Quan tòa suy nghĩ giống hệt mình,' cậu thầm nghĩ. 'Biết đâu sau này lớn lên mình sẽ làm quan tòa nhỉ.'" }
     ]
   },
   {
     "day": 10,
-    "title": "Story Day 10",
+    "title": "Waiting for Hares",
     "image": "12 December/images/day_10.webp",
     "audio": "12 December/audio/Track10.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 10 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 10."
-      }
+      { "start": 4.8, "en": "There once was a farmer who laboured in his fields all year round.", "ipa": "/ðɛər wʌns wɒz ə ˈfɑːrmər huː ˈleɪbərd ɪn hɪz fiːldz ɔːl jɪər raʊnd/", "vi": "Ngày xửa ngày xưa có một lão nông cặm cụi làm việc vất vả trên đồng ruộng suốt bốn mùa." },
+      { "start": 12.0, "en": "One day, as he was working, a hare came out of the bushes. Frightened at the sight of the farmer, the hare started to run. It ran so fast that it smashed into a tree and died.", "ipa": "/wʌn deɪ, æz hiː wɒz ˈwɜːrkɪŋ, ə hɛr keɪm aʊt əv ðə ˈbʊʃɪz. ˈfraɪtnd æt ðə saɪt əv ðə ˈfɑːrmər, ðə hɛr ˈstɑːrtɪd tuː rʌn. ɪt ræn soʊ fɑːst ðæt ɪt smæʃt ˈɪntuː ə triː ænd daɪd/", "vi": "Một hôm đang cày cấy, bỗng có một chú thỏ rừng từ bụi cây nhảy vụt ra. Hoảng sợ trước bóng dáng bác nông dân, chú thỏ cắm cổ chạy thục mạng và đâm sầm vào gốc cây chết tươi." },
+      { "start": 27.0, "en": "The farmer brought the hare home. He enjoyed a wonderful meal with his wife.", "ipa": "/ðə ˈfɑːrmər brɔːt ðə hɛr hoʊm. hiː ɪnˈdʒɔɪd ə ˈwʌndərfʊl miːl wɪð hɪz waɪf/", "vi": "Bác nông dân vui sướng nhặt chú thỏ mang về nhà, cùng vợ thưởng thức một bữa thịt thỏ ngon tuyệt." },
+      { "start": 35.0, "en": "The next day, the farmer did not work as hard as before. He turned his eyes to the bushes from time to time, hoping to see another hare.", "ipa": "/ðə nɛkst deɪ, ðə ˈfɑːrmər dɪd nɒt wɜːrk æz hɑːrd æz bɪˈfɔːr. hiː tɜːrnd hɪz aɪz tuː ðə ˈbʊʃɪz frɒm taɪm tuː taɪm, ˈhoʊpɪŋ tuː siː əˈnʌðər hɛr/", "vi": "Ngày hôm sau, bác nông dân không còn thiết tha làm lụng chăm chỉ như trước nữa. Thỉnh thoảng bác lại ngóng cổ về phía bụi cây, ôm mộng bắt được con thỏ dại thứ hai." },
+      { "start": 48.0, "en": "The whole day passed and the farmer didn't another [correction: didn't see another] hare. He didn't get much work done either.", "ipa": "/ðə hoʊl deɪ pɑːst ænd ðə ˈfɑːrmər ˈdɪdnt siː əˈnʌðər hɛr. hiː ˈdɪdnt ɡɛt mʌtʃ wɜːrk dʌn ˈaɪðər/", "vi": "Cả ngày trôi qua mà chẳng có chú thỏ nào đâm đầu vào gốc cây nữa, và đương nhiên đồng ruộng cũng bỏ hoang chẳng thu hoạch được gì." },
+      { "start": 59.0, "en": "The third day, the farmer was not in the mood to work in the fields anymore. He put his tools aside and sat near the tree. There, he waited for another hare.", "ipa": "/ðə θɜːrd deɪ, ðə ˈfɑːrmər wɒz nɒt ɪn ðə muːd tuː wɜːrk ɪn ðə fiːldz ˈɛniˌmɔːr. hiː pʊt hɪz tuːlz əˈsaɪd ænd sæt nɪər ðə triː. ðɛər, hiː ˈweɪtɪd fɔːr əˈnʌðər hɛr/", "vi": "Sang ngày thứ ba, bác hoàn toàn mất hết hứng làm việc. Bác vứt cuốc xẻng sang một bên, ngồi bệt dưới gốc cây túc trực chờ vận may." },
+      { "start": 72.0, "en": "Again, no hare appeared. From then on, every day, the farmer waited beside the tree. Days passed, and not a single hare showed up. Meanwhile, his fields became deserted and nothing grew on them.", "ipa": "/əˈɡɛn, noʊ hɛr əˈpɪərd. frɒm ðɛn ɒn, ˈɛvri deɪ, ðə ˈfɑːrmər ˈweɪtɪd bɪˈsaɪd ðə triː. deɪz pɑːst, ænd nɒt ə ˈsɪŋɡl hɛr ʃoʊd ʌp. ˈmiːnˌwaɪl, hɪz fiːldz bɪˈkeɪm dɪˈzɜːrtɪd ænd ˈnʌθɪŋ ɡruː ɒn ðɛm/", "vi": "Và kết quả là chẳng có con thỏ nào xuất hiện cả. Từ đó trở đi, ngày qua ngày lão nông cứ ôm gốc cây đợi chờ trong vô vọng. Cánh đồng lúa mọc đầy cỏ dại tàn lụi đi vì mất mùa đói kém." }
     ]
   },
   {
     "day": 11,
-    "title": "Story Day 11",
+    "title": "Goosebumps",
     "image": "12 December/images/day_11.webp",
     "audio": "12 December/audio/Track11.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 11 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 11."
-      }
+      { "start": 4.8, "en": "Brrrr! It was cold, really cold. Dustin felt little bumps all over his skin. 'What are they?' he asked his dad when he got home.", "ipa": "/brːr! ɪt wɒz koʊld, ˈriəli koʊld. ˈdʌstɪn fɛlt ˈlɪtl bʌmps ɔːl ˈoʊvər hɪz skɪn. wɒt ɑːr ðeɪ?, hiː ɑːskt hɪz dæd wɛn hiː ɡɒt hoʊm/", "vi": "Brrrr! Trời lạnh buốt, lạnh thấu xương. Dustin thấy nổi da gà khắp người. 'Cái gì thế này bố?' cậu hỏi bố ngay khi về đến nhà." },
+      { "start": 17.0, "en": "'That is a good question,' said his dad. 'Your skin is very interesting. Did you know that your skin has thousands of small holes in it?'", "ipa": "/ðæt ɪz ə ɡʊd ˈkwɛstʃən, sɛd hɪz dæd. jɔːr skɪn ɪz ˈvɛri ˈɪntrəstɪŋ. dɪd juː noʊ ðæt jɔːr skɪn hæz ˈθaʊzndz əv smɔːl hoʊlz ɪn ɪt?/", "vi": "'Đó là một câu hỏi hay,' bố đáp. 'Da của con rất kỳ diệu đấy. Con có biết da mình có hàng ngàn lỗ chân lông nhỏ xíu không?'" },
+      { "start": 29.0, "en": "'Small holes in my skin! That can't be a good thing,' thought Dustin. 'Why is my skin covered with small holes?' he asked.", "ipa": "/smɔːl hoʊlz ɪn maɪ skɪn! ðæt kænt biː ə ɡʊd θɪŋ, θɔːt ˈdʌstɪn. waɪ ɪz maɪ skɪn ˈkʌvərd wɪð smɔːl hoʊlz?, hiː ɑːskt/", "vi": "'Lỗ chân lông trên da á? Nghe có vẻ không ổn lắm đâu,' Dustin nghĩ thầm. 'Sao da con lại chằng chịt lỗ thế ạ?'" },
+      { "start": 41.0, "en": "'If you get too hot, the holes open a little bit, and salty water comes out to cool you off,' explained Dad.", "ipa": "/ɪf juː ɡɛt tuː hɒt, ðə hoʊlz ˈoʊpən ə ˈlɪtl bɪt, ænd ˈsɔːlti ˈwɔːtər kʌmz aʊt tuː kuːl juː ɒf, ɪkˈspleɪnd dæd/", "vi": "'Khi con quá nóng, các lỗ chân lông sẽ mở rộng ra một chút để tiết mồ hôi mặn làm mát cơ thể,' bố giải thích." },
+      { "start": 51.0, "en": "'If you get too cold, the holes get small and you feel warmer. Sometimes, you get cold really fast. The holes close quickly and you get little bumps all over your skin. Those are goosebumps. Don't worry, it's normal. Everyone gets goosebumps.'", "ipa": "/ɪf juː ɡɛt tuː koʊld, ðə hoʊlz ɡɛt smɔːl ænd juː fiːl ˈwɔːrmər. ˈsʌmˌtaɪmz, juː ɡɛt koʊld ˈriəli fɑːst. ðə hoʊlz cloʊz ˈkwɪkli ænd juː ɡɛt ˈlɪtl bʌmps ɔːl ˈoʊvər jɔːr skɪn. ðoʊz ɑːr ˈɡuːsˌbʌmps. doʊnt ˈwʌri, ɪts ˈnɔːrməl. ˈɛvriˌwʌn ɡɛts ˈɡuːsˌbʌmps/", "vi": "'Còn khi trời lạnh, chúng sẽ co lại để giữ ấm. Thi thoảng nếu gặp lạnh đột ngột, các lỗ chân lông khép lại cực nhanh khiến da nổi sần sùi lên. Đó chính là hiện tượng nổi da gà. Đừng lo, hoàn toàn bình thường thôi, ai cũng bị cả.'" },
+      { "start": 76.0, "en": "Dustin felt better. It's always good to know how your body works.", "ipa": "/ˈdʌstɪn fɛlt ˈbɛtər. ɪts ˈɔːlweɪz ɡʊd tuː noʊ haʊ jɔːr ˈbɑːdi wɜːrks/", "vi": "Dustin cảm thấy yên tâm hơn. Hiểu thêm về cơ chế hoạt động của cơ thể mình lúc nào cũng thú vị." }
     ]
   },
   {
     "day": 12,
-    "title": "Story Day 12",
+    "title": "Choices",
     "image": "12 December/images/day_12.webp",
     "audio": "12 December/audio/Track12.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 12 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 12."
-      }
+      { "start": 4.8, "en": "I live in Canada, but my family is from Chile, South America.", "ipa": "/aɪ lɪv ɪn ˈkænədə, bʌt maɪ ˈfæməli ɪz frɒm ˈtʃɪli, saʊθ əˈmɛrɪkə/", "vi": "Tôi sống ở Canada, nhưng gia đình tôi gốc ở Chile, Nam Mỹ." },
+      { "start": 12.0, "en": "In Chile, my grandfather was a tailor. He worked 50 years making suits for men. He taught my dad to be a tailor too. My dad has been a tailor for 20 years now.", "ipa": "/ɪn ˈtʃɪli, maɪ ˈɡrændˌfɑːðər wɒz ə ˈteɪlər. hiː wɜːrkt ˈfɪfti jɪərz ˈmeɪkɪŋ suːts fɔːr mɛn. hiː tɔːt maɪ dæd tuː biː ə ˈteɪlər tuː. maɪ dæd hæz biːn ə ˈteɪlər fɔːr ˈtwɛnti jɪərz naʊ/", "vi": "Ở quê nhà, ông nội tôi là một thợ may có tiếng, cặm cụi may Âu phục suốt 50 năm. Ông truyền nghề lại cho bố tôi, và bố cũng đã gắn bó với cây kéo thước thợ được 20 năm rồi." },
+      { "start": 26.0, "en": "One day, I said to my father, 'I would like to be a tailor too.' But my father said, 'I became a tailor because there were no schools in my little town.'", "ipa": "/wʌn deɪ, aɪ sɛd tuː maɪ ˈfɑːðər, aɪ wʊd laɪk tuː biː ə ˈteɪlər tuː. bʌt maɪ ˈfɑːðər sɛd, aɪ bɪˈkeɪm ə ˈteɪlər bɪˈkɒz ðɛər wɜːr noʊ skuːlz ɪn maɪ ˈlɪtl taʊn/", "vi": "Có lần tôi nói với bố: 'Con cũng muốn làm thợ may giống bố.' Nhưng bố lắc đầu: 'Bố làm thợ may vì ngày xưa ở thị trấn nhỏ của bố chẳng có trường học nào cả.'" },
+      { "start": 40.0, "en": "'One of the reasons we came to Canada was the schools,' he said.", "ipa": "/wʌn əv ðə ˈriːznz wiː keɪm tuː ˈkænədə wɒz ðə skuːlz, hiː sɛd/", "vi": "'Một trong những lý do lớn nhất gia đình ta di cư sang Canada chính là vì hệ thống giáo dục ở đây,' bố giải thích." },
+      { "start": 48.0, "en": "He went on, 'If you have a good education, you can do anything you want in the whole world. Then, if you want to be a tailor, a doctor or a pilot, you have the power to choose.'", "ipa": "/hiː wɛnt ɒn, ɪf juː hæv ə ɡʊd ˌɛdʒuˈkeɪʃn, juː kæn duː ˈɛniˌθɪŋ juː wɒnt ɪn ðə hoʊl wɜːrld. ðɛn, ɪf juː wɒnt tuː biː ə ˈteɪlər, ə ˈdɒktər ɔːr ə ˈpaɪlət, juː hæv ðə ˈpaʊər tuː tʃuːz/", "vi": "Bố vỗ vai tôi: 'Nếu có một nền tảng học thức tốt, con có thể làm bất cứ điều gì mình thích trên thế giới này. Lúc đó, dẫu con muốn làm thợ may, bác sĩ hay phi công, chính con là người nắm quyền tự quyết định tương lai của mình.'" },
+      { "start": 65.0, "en": "I realized that my dad is pretty smart. It's always better to have choices.", "ipa": "/aɪ ˈriəlaɪzd ðæt maɪ dæd ɪz ˈprɪti smɑːrt. ɪts ˈɔːlweɪz ˈbɛtər tuː hæv ˈtʃɔɪsɪz/", "vi": "Lúc đó tôi mới nhận ra bố mình thật thông minh uy bác. Cuộc đời luôn tuyệt vời hơn biết bao khi ta có nhiều sự lựa chọn." }
     ]
   },
   {
     "day": 13,
-    "title": "Story Day 13",
+    "title": "Not Messy Anymore",
     "image": "12 December/images/day_13.webp",
     "audio": "12 December/audio/Track13.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 13 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 13."
-      }
+      { "start": 4.8, "en": "My uncle is very messy. One time, my aunt went away for a few weeks. There was no one to clean up his mess anymore.", "ipa": "/maɪ ˈʌŋkl ɪz ˈvɛri ˈmɛsi. wʌn taɪm, maɪ ænt wɛnt əˈweɪ fɔːr ə fjuː wiːks. ðɛər wɒz noʊ wʌn tuː kliːn ʌp hɪz mɛs ˈɛniˌmɔːr/", "vi": "Ông chú của tôi nổi tiếng ở bẩn và bừa bộn. Có lần mợ đi vắng vài tuần, nhà cửa không có ai dọn dẹp nên bầy hầy như bãi rác." },
+      { "start": 15.0, "en": "The days passed, and the house got messier and messier.", "ipa": "/ðə deɪz pɑːst, ænd ðə haʊs ɡɒt ˈmɛsiər ænd ˈmɛsiər/", "vi": "Ngày tháng trôi qua, ngôi nhà ngày càng bừa bộn kinh hoàng." },
+      { "start": 21.0, "en": "On Saturday, he was going to a very big football game. He looked for his ticket. But he could not find it anywhere.", "ipa": "/ɒn ˈsætərdeɪ, hiː wɒz ˈɡoʊɪŋ tuː ə ˈvɛri bɪɡ ˈfʊtˌbɔːl ɡeɪm. hiː lʊkt fɔːr hɪz ˈtɪkɪt. bʌt hiː kʊd nɒt faɪnd ɪt ˈɛniˌwɛər/", "vi": "Vào thứ Bảy, chú dự định đi xem một trận bóng đá siêu kinh điển nên tất tả tìm vé, nhưng tìm mỏi mắt chẳng thấy đâu." },
+      { "start": 30.0, "en": "He thought, 'Well, I'll just buy a new ticket.' But he could not find his wallet. After looking for a while, he found it.", "ipa": "/hiː θɔːt, wɛl, aɪl dʒʌst baɪ ə njuː ˈtɪkɪt. bʌt hiː kʊd nɒt faɪnd hɪz ˈwɑːlɪt. ˈɑːftər ˈlʊkɪŋ fɔːr ə waɪl, hiː faʊnd ɪt/", "vi": "Chú tặc lưỡi: 'Thôi mua vé mới vậy.' Định lấy ví thì hỡi ôi ví tiền cũng mất tích. Lục tung cả nhà một lúc mới thấy cái ví." },
+      { "start": 42.0, "en": "He was about to leave when he realized that he couldn't find his car key... or even his key to the house!", "ipa": "/hiː wɒz əˈbaʊt tuː liːv wɛn hiː ˈriəlaɪzd ðæt hiː ˈkʊdnt faɪnd hɪz kɑːr kiː... ɔːr ˈiːvn hɪz kiː tuː ðə haʊs!/", "vi": "Chủ nhà chuẩn bị chuồn ra cửa thì tá hỏa phát hiện ra chìa khóa ô tô... và thậm chí cả chìa khóa nhà cũng không cánh mà bay!" },
+      { "start": 54.0, "en": "In the end, he missed the game and was very upset.", "ipa": "/ɪn ði ɛnd, hiː mɪst ðə ɡeɪm ænd wɒz ˈvɛri ʌpˈsɛt/", "vi": "Kết cục là chú đành ngậm ngùi lỡ hẹn trận cầu đinh và ôm cục tức bực bội." },
+      { "start": 60.0, "en": "When my aunt came home, she found the house perfectly clean. Surprised, she asked him, 'Who cleaned up the mess?'", "ipa": "/wɛn maɪ ænt keɪm hoʊm, ʃiː faʊnd ðə haʊs ˈpɜːrfɪktli kliːn. sərˈpraɪzd, ʃiː ɑːskt hɪm, huː kliːnd ʌp ðə mɛs?/", "vi": "Lúc mợ trở về nhà, ngạc nhiên tột độ khi thấy cơ ngơi sạch bóng không tì vết. Mợ liền hỏi: 'Ai dọn dẹp sạch sẽ bãi chiến trường này thế?'" },
+      { "start": 72.0, "en": "They both laughed when he said, 'I did! You know how much I hate a mess!'", "ipa": "/ðeɪ boʊθ lɑːft wɛn hiː sɛd, aɪ dɪd! juː noʊ haʊ mʌtʃ aɪ heɪt ə mɛs!/", "vi": "Cả hai vợ chồng phì cười khi nghe chú thú nhận: 'Anh tự dọn đấy! Em lạ gì tính anh ghét sự bừa bộn thế nào rồi cơ chứ!'" }
     ]
   },
   {
     "day": 14,
-    "title": "Story Day 14",
+    "title": "Cooking for Independence",
     "image": "12 December/images/day_14.webp",
     "audio": "12 December/audio/Track14.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 14 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 14."
-      }
+      { "start": 4.8, "en": "Terry is always amazed at how his mom cooks. It's like magic.", "ipa": "/ˈtɛri ɪz ˈɔːlweɪz əˈmeɪzd æt haʊ hɪz mɒm kʊks. ɪts laɪk ˈmædʒɪk/", "vi": "Terry luôn trầm trồ trước tài nấu nướng của mẹ, đối với cậu trông hệt như một phép thuật." },
+      { "start": 11.0, "en": "One day, Terry's mother said to him, 'Terry, why don't you learn to cook?'", "ipa": "/wʌn deɪ, ˈtɛriːz ˈmʌðər sɛd tuː hɪm, ˈtɛri, waɪ doʊnt juː lɜːrn tuː kʊk?/", "vi": "Một hôm, mẹ gợi ý: 'Terry này, sao con không học nấu ăn nhỉ?'" },
+      { "start": 18.0, "en": "'Can I?' asked Terry. 'Of course,' said his mom. 'Cooking is a skill that you can use forever.'", "ipa": "/kæn aɪ?, ɑːskt ˈtɛri. əv kɔːrs, sɛd hɪz mɒm. ˈkʊkɪŋ ɪz ə skɪl ðæt juː kæn juːz fəˈrɛvər/", "vi": "'Con học được ạ?' Terry ngạc nhiên. 'Đương nhiên rồi,' mẹ đáp. 'Nấu nướng là kỹ năng theo con suốt cả cuộc đời.'" },
+      { "start": 29.0, "en": "'Will you teach me then?' Terry asked. 'Sure!' his mom agreed.", "ipa": "/wɪl juː tiːtʃ miː ðɛn?, ˈtɛri ɑːskt. ʃʊr!, hɪz mɒm əˈɡriːd/", "vi": "'Vậy mẹ dạy con nhé?' 'Chắc chắn rồi!' mẹ vui vẻ nhận lời." },
+      { "start": 37.0, "en": "That weekend, Terry's mom explained all the cooking basics as they prepared a meal together. She told him that cooking was not complicated at all. 'You just need to measure and mix the right things,' she told him.", "ipa": "/ðæt ˈwiːkˌɛnd, ˈtɛriːz mɒm ɪkˈspleɪnd ɔːl ðə ˈkʊkɪŋ ˈbeɪsɪks æz ðeɪ prɪˈpɛrd ə miːl təˈɡɛðər. ʃiː toʊld hɪm ðæt ˈkʊkɪŋ wɒz nɒt ˈkɑːmplɪkeɪtɪd æt ɔːl. juː dʒʌst niːd tuː ˈmɛʒər ænd mɪks ðə raɪt θɪŋz, ʃiː toʊld hɪm/", "vi": "Cuối tuần đó, vừa cùng nhau chuẩn bị bữa ăn, mẹ vừa giảng giải cho Terry những nguyên tắc cơ bản trong nhà bếp. Mẹ bảo nấu ăn không hề phức tạp: 'Con chỉ cần đong đếm và trộn đúng các nguyên liệu là được.'" },
+      { "start": 57.0, "en": "'In a way, cooking is like a science experiment. If you do everything correctly, the results will be as planned.'", "ipa": "/ɪn ə weɪ, ˈkʊkɪŋ ɪz laɪk ə ˈsaɪəns ɪkˈspɛrɪmənt. ɪf juː duː ˈɛvriˌθɪŋ kəˈrɛktli, ðə rɪˈzʌlts wɪl biː æz plænd/", "vi": "'Nói một cách nào đó, nấu nướng giống như một thí nghiệm khoa học. Nếu con làm đúng quy trình, kết quả chắc chắn sẽ y như kế hoạch.'" },
+      { "start": 68.0, "en": "She also taught him about safety in the kitchen-especially around sharp knives and a hot stove.", "ipa": "/ʃiː ˈɔːlsoʊ tɔːt hɪm əˈbaʊt ˈseɪfti ɪn ðə ˈkɪtʃɪn-ɪˈspɛʃəli əˈraʊnd ʃɑːrp naɪvz ænd ə hɒt stoʊv/", "vi": "Mẹ cũng không quên dạy cậu cách an toàn trong bếp - đặc biệt chú ý dao sắc và bếp lửa nóng." },
+      { "start": 78.0, "en": "Under his mom's helpful eyes, Terry cooked his first simple meal: a vegetable and rice soup. It tasted very good.", "ipa": "/ˈʌndər hɪz mɒmz ˈhɛlpfl aɪz, ˈtɛri kʊkt hɪz fɜːrst ˈsɪmpl miːl: ə ˈvɛdʒtəbl ænd raɪs suːp. ɪt ˈteɪstɪd ˈvɛri ɡʊd/", "vi": "Dưới ánh mắt giám sát ân cần của mẹ, Terry đã hoàn thành bữa ăn đơn giản đầu tiên: món canh rau củ nấu cơm. Ăn ngon tuyệt cú mèo!" }
     ]
   },
   {
     "day": 15,
-    "title": "Story Day 15",
+    "title": "Money for a Well",
     "image": "12 December/images/day_15.webp",
     "audio": "12 December/audio/Track15.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 15 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 15."
-      }
+      { "start": 4.8, "en": "Do you know what a well is? A well is a hole in the ground from which people get water. But today, I learned something else about wells.", "ipa": "/duː juː noʊ wɒt ə wɛl ɪz? ə wɛl ɪz ə hoʊl ɪn ðə ɡraʊnd frɒm wɪtʃ ˈpiːpl ɡɛt ˈwɔːtər. bʌt təˈdeɪ, aɪ lɜːrnd ˈsʌmθɪŋ ɛls əˈbaʊt wɛlz/", "vi": "Bạn có biết cái giếng là gì không? Giếng là một cái hố sâu dưới lòng đất để lấy nước. Nhưng hôm nay, tôi lại biết thêm một điều ý nghĩa khác về những chiếc giếng." },
+      { "start": 16.0, "en": "Our teacher told the class about a village in Africa. 'People in this village do not have water,' said Ms. Andress. 'Many kids cannot go to school. They must walk five kilometres to fetch water back to their families.'", "ipa": "/ˈaʊər ˈtiːtʃər toʊld ðə klɑːs əˈbaʊt ə ˈvɪlɪdʒ ɪn ˈæfrɪkə. ˈpiːpl ɪn ðɪs ˈvɪlɪdʒ doʊnt hæv ˈwɔːtər, sɛd mɪz [correction: mɪs] ˈændrəs. ˈmɛni kɪdz ˈkænɒt ɡoʊ tuː skuːl. ðeɪ mʌst wɔːk faɪv ˈkɪləˌmiːtərz tuː fɛtʃ ˈwɔːtər bæk tuː ðɛər ˈfæməlɪz/", "vi": "Cô giáo kể cho cả lớp nghe về một ngôi làng ở châu Phi. 'Người dân ở đây không có nước sạch,' cô Andress chia sẻ. 'Nhiều đứa trẻ phải bỏ học giữa chừng vì hằng ngày phải đi bộ tới năm cây số để gánh nước về cho gia đình.'" },
+      { "start": 33.0, "en": "'Can we help?' asked children [correction: the children]. 'Yes, we can,' Ms. Andress said. 'For only one hundred dollars, that village can have a well. They can have water.'", "ipa": "/kæn wiː hɛlp?, ɑːskt ðə ˈtʃɪldrən. jɛs, wiː kæn, mɪs ˈændrəs sɛd. fɔːr ˈoʊnli wʌn ˈhʌndrəd ˈdɑːlərz, ðæt ˈvɪlɪdʒ kæn hæv ə wɛl. ðeɪ kæn hæv ˈwɔːtər/", "vi": "'Chúng em giúp được gì không ạ?' các bạn nhỏ hỏi. 'Có chứ,' cô Andress đáp. 'Chỉ với một trăm đô-la thôi là ngôi làng ấy sẽ có một cái giếng nước sạch cho riêng mình.'" },
+      { "start": 49.0, "en": "The whole class got excited. 'Let's make some money for a well.' 'We can have a car wash,' says Fatima.", "ipa": "/ðə hoʊl klɑːs ɡɒt ɪkˈsaɪtɪd. lɛts meɪk sʌm ˈmʌni fɔːr ə wɛl. wiː kæn hæv ə kɑːr wɒʃ, sɛz ˈfɑːtɪmə/", "vi": "Cả lớp ồ lên phấn khích. 'Hãy cùng nhau gây quỹ đào giếng đi ạ.' 'Chúng ta có thể mở dịch vụ rửa xe,' Fatima đề xuất." },
+      { "start": 60.0, "en": "'Good idea,' said Scott. 'Let's have a car wash! With the money we make, we will help the kids in Africa get water too.'", "ipa": "/ɡʊd aɪˈdiːə, sɛd skɒt. lɛts hæv ə kɑːr wɒʃ! wɪð ðə ˈmʌni wiː meɪk, wiː wɪl hɛlp ðə kɪdz ɪn ˈæfrɪkə ɡɛt ˈwɔːtər tuː/", "vi": "'Ý kiến hay đấy,' Scott hưởng ứng. 'Làm dịch vụ rửa xe thôi! Số tiền kiếm được sẽ giúp các bạn nhỏ châu Phi có nước sinh hoạt.'" },
+      { "start": 72.0, "en": "That Saturday, the class held a car wash. They made a big sign: Help a Village in Africa! When people drove by, they saw the sign. Many of them pulled over to have their cars washed by the kids.", "ipa": "/ðæt ˈsætərdeɪ, ðə klɑːs hɛld ə kɑːr wɒʃ. ðeɪ meɪd ə bɪɡ saɪn: hɛlp ə ˈvɪlɪdʒ ɪn ˈæfrɪkə! wɛn ˈpiːpl droʊv baɪ, ðeɪ sɔː ðə saɪn. ˈmɛni əv ðem pʊld ˈoʊvər tuː hæv ðɛər kɑːrz wɒʃt baɪ ðə kɪdz/", "vi": "Thứ Bảy hôm đó, cả lớp tưng bừng tổ chức rửa xe. Các em làm tấm biển lớn: 'Hãy giúp đỡ một ngôi làng ở châu Phi!' Khi xe chạy qua trông thấy biển hiệu, rất nhiều tài xế đã tấp vào lề đường để ủng hộ các bé rửa xe." },
+      { "start": 91.0, "en": "Everyone worked hard. At the end of the day, they collected 104 dollars to send to Africa.", "ipa": "/ˈɛvriˌwʌn wɜːrkt hɑːrd. æt ði ɛnd əv ðə deɪ, ðeɪ kəˈlɛktɪd ˈwʌn-ˈhʌndrəd-fɔːr ˈdɑːlərz tuː sɛnd tʊ [correction: tuː] ˈæfrɪkə/", "vi": "Ai nấy đều làm việc hăng say. Cuối ngày hôm đó, các em đã gom góp được 104 đô-la gửi sang châu Phi." }
     ]
   },
   {
     "day": 16,
-    "title": "Story Day 16",
+    "title": "When Bus Drivers Strike",
     "image": "12 December/images/day_16.webp",
     "audio": "12 December/audio/Track16.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 16 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 16."
-      }
+      { "start": 4.8, "en": "In the middle of December, the bus drivers went on strike. All over the city, the buses stopped running!", "ipa": "/ɪn ðə ˈmɪdl əv dɪˈsɛmbər, ðə bʌs ˈdraɪvərz wɛnt ɒn straɪk. ɔːl ˈoʊvər ðə ˈsɪti, ðə ˈbʌsɪz stɒpt ˈrʌnɪŋ!/", "vi": "Vào giữa tháng Mười Hai, các tài xế xe buýt đồng loạt đình công. Khắp thành phố, xe buýt ngừng hoạt động!" },
+      { "start": 13.0, "en": "Many people took buses to work, school and stores. How would they get around without buses?", "ipa": "/ˈmɛni ˈpiːpl tʊk ˈbʌsɪz tuː wɜːrk, skuːl ænd stɔːrz. haʊ wʊd ðeɪ ɡɛt əˈraʊnd wɪˈðaʊt ˈbʌsɪz?/", "vi": "Nhiều người thường đi xe buýt đến chỗ làm, trường học và cửa hàng. Làm sao họ có thể di chuyển đây khi không có xe buýt?" },
+      { "start": 21.0, "en": "One woman decided to walk. Every day, she walked three hours to the store where she worked as a cashier. She did not want to lose her job. She did not want to leave customers without service.", "ipa": "/wʌn ˈwʊmən dɪˈsaɪdɪd tuː wɔːk. ˈɛvri deɪ, ʃiː wɔːkt θriː ˈaʊərz tuː ðə stɔːr wɛr ʃiː wɜːrkt æz ə kæˈʃɪr. ʃiː dɪd nɒt wɒnt tuː luːz hɜːr dʒɒb. ʃiː dɪd nɒt wɒnt tuː liːv ˈkʌstəmərz wɪˈðaʊt ˈsɜːrvɪs/", "vi": "Một người phụ nữ quyết định đi bộ. Hàng ngày, cô đi bộ ba tiếng đồng hồ đến cửa hàng nơi cô làm nhân viên thu ngân. Cô không muốn mất việc, cũng không muốn khách hàng không được phục vụ." },
+      { "start": 39.0, "en": "After three days, a journalist at a local newspaper wrote an article about the woman. Many people called the newspaper to offer the woman a ride.", "ipa": "/ˈɑːftər θriː deɪz, ə ˈdʒɜːrnəlɪst æt ə ˈloʊkl ˈnuzˌpeɪpər roʊt ən ˈɑːrtɪkl əv [correction: əˈbaʊt] ðə ˈwʊmən. ˈmɛni ˈpiːpl kɔːld ðə ˈnuzˌpeɪpər tuː ˈɔːfər ðə ˈwʊmən ə raɪd/", "vi": "Sau ba ngày, một phóng viên báo địa phương đã viết một bài báo về người phụ nữ này. Rất nhiều người đã gọi điện đến tòa soạn đề nghị cho cô ấy đi nhờ xe." },
+      { "start": 52.0, "en": "She ended up accepting a ride from one of these people. Finally, she could stop walking long hours in the cold.", "ipa": "/ʃiː ˈɛndɪd ʌp əkˈsɛptɪŋ ə raɪd frɒm wʌn əv ðiːz ˈpiːpl. ˈfaɪnəli, ʃiː kʊd stɒp ˈwɔːkɪŋ lɒŋ ˈaʊərz ɪn ðə koʊld/", "vi": "Cuối cùng cô đã đồng ý nhận quá giang từ một trong những người tốt bụng đó. Cuối cùng cô cũng không phải đi bộ nhiều giờ liền trong giá lạnh nữa." },
+      { "start": 63.0, "en": "The woman told the newspaper, 'I'm so thankful to all the people in our community. They helped me through this difficult situation.'", "ipa": "/ðə ˈwʊmən toʊld ðə ˈnuzˌpeɪpər, aɪm soʊ ˈθæŋkfʊl tuː ɔːl ðə ˈpiːpl ɪn ˈaʊər kəˈmjuːnəti. ðeɪ hɛlpt miː θruː ðɪs ˈdɪfɪkəlt ˌsɪtʃuˈeɪʃn/", "vi": "Người phụ nữ xúc động chia sẻ với phóng viên: 'Tôi vô cùng biết ơn tất cả mọi người trong cộng đồng. Họ đã giúp tôi vượt qua hoàn cảnh khó khăn này.'" },
+      { "start": 76.0, "en": "This example just goes to show what can happen when people pull together in a time of need.", "ipa": "/ðɪs ɪɡˈzæmpəl dʒʌst ɡoʊz tuː ʃoʊ wɒt kæn ˈhæpən wɛn ˈpiːpl pʊl təˈɡɛðər ɪn ə taɪm əv niːd/", "vi": "Ví dụ này cho thấy điều kỳ diệu gì có thể xảy ra khi mọi người cùng đồng lòng chung sức lúc hoạn nạn khó khăn." }
     ]
   },
   {
     "day": 17,
-    "title": "Story Day 17",
+    "title": "Clown",
     "image": "12 December/images/day_17.webp",
     "audio": "12 December/audio/Track17.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 17 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 17."
-      }
+      { "start": 4.8, "en": "It was the annual Christmas parade. Annie was standing in the crowd. Her neighbour, Mr. Stone, was going to be in the parade.", "ipa": "/ɪt wɒz ði ˈænjuəl ˈkrɪsməs pəˈreɪd. ˈæni wɒz ˈstændɪŋ ɪn ðə kraʊd. hɜːr ˈneɪbər, ˈmɪstər stoʊn, wɒz ˈɡoʊɪŋ tuː biː ɪn ðə pəˈreɪd/", "vi": "Đó là cuộc diễu hành Giáng sinh thường niên. Annie đang đứng giữa đám đông. Hàng xóm của cô, bác Stone, sẽ tham gia vào đoàn diễu hành." },
+      { "start": 14.0, "en": "Soon, some clowns came along. One ran over and pulled Annie's nose. 'Maybe someday you'll have a big red nose like mine,' he said in a squeaky voice.", "ipa": "/suːn, sʌm klaʊnz keɪm əˈlɒŋ. wʌn ræn ˈoʊvər ænd pʊld ˈæniːz noʊz. ˈmeɪbi ˈsʌmˌdeɪ jʊl hæv ə bɪɡ rɛd noʊz laɪk maɪn, hiː sɛd ɪn ə ˈskwiːki vɔɪs/", "vi": "Chẳng mấy chốc, một vài chú hề xuất hiện. Một chú chạy tới véo mũi Annie và nói bằng giọng lanh lảnh: 'Biết đâu sau này cháu cũng có chiếc mũi đỏ to như của ta đấy.'" },
+      { "start": 28.0, "en": "Annie stepped back and watched. She didn't want to miss seeing Mr. Stone.", "ipa": "/ˈæni stɛpt bæk ænd wɒtʃt. ʃiː ˈdɪdnt wɒnt tuː mɪs ˈsiːɪŋ ˈmɪstər stoʊn/", "vi": "Annie lùi lại và quan sát. Cô không muốn bỏ lỡ khoảnh khắc nhìn thấy bác Stone." },
+      { "start": 35.0, "en": "The clown ran back and pulled Annie's nose again. Then, he pulled Annie out of the crowd to march with him.", "ipa": "/ðə klaʊn ræn bæk ænd pʊld ˈæniːz noʊz əˈɡɛn. ðɛn, hiː pʊld ˈæni aʊt əv ðə kraʊd tuː mɑːrtʃ wɪð hɪm/", "vi": "Chú hề quay lại và kéo mũi Annie một lần nữa. Sau đó, hắn kéo Annie ra khỏi đám đông để đi đều hành cùng mình." },
+      { "start": 44.0, "en": "'Let me go. I have to look for my friend, Mr. Stone,' said Annie. The clown laughed and let Annie go.", "ipa": "/lɛt miː ɡoʊ. aɪ hæv tuː lʊk fɔːr maɪ frɛnd, ˈmɪstər stoʊn, sɛd ˈæni. ðə klaʊn lɑːft ænd lɛt ˈæni ɡoʊ/", "vi": "'Thả cháu ra đi. Cháu phải tìm bạn của cháu là bác Stone,' Annie kêu lên. Chú hề bật cười và thả cô bé ra." },
+      { "start": 54.0, "en": "After the parade, Annie and her family went home. 'Did you see me in the parade?' asked Mr. Stone.", "ipa": "/ˈɑːftər ðə pəˈreɪd, ˈæni ænd hɜːr ˈfæməli wɛnt hoʊm. dɪd juː siː miː ɪn ðə pəˈreɪd?, ɑːskt ˈmɪstər stoʊn/", "vi": "Sau buổi diễu hành, Annie cùng gia đình về nhà. 'Cháu có thấy ta trong đoàn diễu hành không?' bác Stone hỏi." },
+      { "start": 62.0, "en": "'No,' said Annie. 'A clown kept coming and bothering me. I must have missed you.'", "ipa": "/noʊ, sɛd ˈæni. ə klaʊn kɛpt ˈkʌmɪŋ ænd ˈbɒðərɪŋ miː. aɪ mʌst hæv mɪst juː/", "vi": "'Dạ không ạ,' Annie đáp. 'Có một chú hề cứ đến làm phiền cháu suốt nên chắc cháu lỡ mất bác rồi.'" },
+      { "start": 70.0, "en": "'Maybe someday you'll have a red nose just like mine,' said Mr. Stone in a squeaky voice.", "ipa": "/ˈmeɪbi ˈsʌmˌdeɪ jʊl hæv ə rɛd noʊz dʒʌst laɪk maɪn, sɛd ˈmɪstər stoʊn ɪn ə ˈskwiːki vɔɪs/", "vi": "'Biết đâu sau này cháu cũng sẽ có chiếc mũi đỏ y hệt ta thì sao,' bác Stone cất giọng lanh lảnh trêu." },
+      { "start": 78.0, "en": "Annie laughed. The clown had been Mr. Stone the whole time!", "ipa": "/ˈæni lɑːft. ðə klaʊn hæd biːn ˈmɪstər stoʊn ðə hoʊl taɪm!/", "vi": "Annie bật cười ha hả. Hóa ra chú hề lúc nãy chính là bác Stone giả dạng suốt từ nãy đến giờ!" }
     ]
   },
   {
     "day": 18,
-    "title": "Story Day 18",
+    "title": "Stray Cat",
     "image": "12 December/images/day_18.webp",
     "audio": "12 December/audio/Track18.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 18 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 18."
-      }
+      { "start": 4.8, "en": "Jamie lives on a farm. There is usually plenty of time for having fun. But today is not a fun day.", "ipa": "/ˈdʒeɪmi lɪvz ɒn ə fɑːrm. ðɛər ɪz ˈjuːʒuəli ˈplɛnti əv taɪm fɔːr ˈhævɪŋ fʌn. bʌt təˈdeɪ ɪz nɒt ə fʌn deɪ/", "vi": "Jamie sống ở một trang trại. Thường thì có rất nhiều thời gian để vui chơi. Nhưng hôm nay không phải là một ngày vui vẻ." },
+      { "start": 13.0, "en": "A big car slows down on the road in front of Jamie's house. Suddenly, the car door opens. Someone throws a cat out on the road. Then, the car speeds away.", "ipa": "/ə bɪɡ kɑːr sloʊz daʊn ɒn ðə roʊd ɪn frʌnt əv ˈdʒeɪmiːz haʊs. ˈsʌdənli, ðə kɑːr dɔːr ˈoʊpənz. ˈsʌmwʌn θroʊz ə kæt aʊt ɒn ðə roʊd. ðɛn, ðə kɑːr spiːdz əˈweɪ/", "vi": "Một chiếc xe hơi lớn đi chậm lại trên con đường trước nhà Jamie. Đột nhiên, cửa xe mở ra. Ai đó ném một con mèo ra đường. Sau đó, chiếc xe phóng vụt đi." },
+      { "start": 26.0, "en": "Jamie cannot believe his eyes. Who would do something like that? The cat has no one to take care of it.", "ipa": "/ˈdʒeɪmi ˈkænɒt bɪˈliːv hɪz aɪz. huː wʊd duː ˈsʌmθɪŋ laɪk ðæt? ðə kæt hæz noʊ wʌn tuː teɪk kɛər əv ɪt/", "vi": "Jamie không thể tin vào mắt mình. Ai lại làm điều như vậy chứ? Con mèo chẳng có ai chăm sóc cả." },
+      { "start": 36.0, "en": "Jamie brings it inside the house. He gives it some milk. He tells his father what happened.", "ipa": "/ˈdʒeɪmi brɪŋz ɪt ɪnˈsaɪd ðə haʊs. hiː ɡɪvz ɪt sʌm mɪlk. hiː tɛlz hɪz ˈfɑːðər wɒt ˈhæpənd/", "vi": "Jamie đem nó vào trong nhà. Cậu cho nó một ít sữa. Cậu kể cho bố nghe những gì đã xảy ra." },
+      { "start": 44.0, "en": "'Oh, Jamie,' says Dad. 'The people in that car are not good people.' They are from the city nearby. They did not want this cat anymore, so they brought it to the countryside and let it go.", "ipa": "/oʊ, ˈdʒeɪmi, sɛz dæd. ðə ˈpiːpl ɪn ðæt kɑːr ɑːr nɒt ɡʊd ˈpiːpl. ðeɪ ɑːr frɒm ðə ˈsɪti nɪrˈbaɪ. ðeɪ dɪd nɒt wɒnt ðɪs kæt ˈɛniˌmɔːr, soʊ ðeɪ brɔːt ɪt tuː ðə ˈkʌntriˌsaɪd ænd lɛt ɪt ɡoʊ/", "vi": "'Ôi, Jamie,' bố nói. 'Những người trên chiếc xe đó không phải là người tốt.' Họ đến từ thành phố gần đó. Họ không muốn nuôi con mèo này nữa, nên đã đem nó đến vùng quê và thả đi." },
+      { "start": 62.0, "en": "Jamie is very sad. He will take care of this unlucky cat. But he wants people to know something important. Pets are our friends. They trust us.", "ipa": "/ˈdʒeɪmi ɪz ˈvɛri sæd. hiː wɪl teɪk kɛər əv ðɪs ʌnˈlʌki kæt. bʌt hiː wɒnts ˈpiːpl tuː noʊ ˈsʌmθɪŋ ɪmˈpɔːrtənt. pɛts ɑːr ˈaʊər frɛndz. ðeɪ trʌst ʌs/", "vi": "Jamie rất buồn. Cậu sẽ chăm sóc chú mèo bất hạnh này. Nhưng cậu muốn mọi người biết một điều quan trọng. Thú cưng là những người bạn của chúng ta. Chúng tin tưởng chúng ta." },
+      { "start": 76.0, "en": "If you decide to get a pet, be ready to take care of it. It's the right thing to do!", "ipa": "/ɪf juː dɪˈsaɪd tuː ɡɛt ə pɛt, biː ˈrɛdi tuː teɪk kɛər əv ɪt. ɪts ðə raɪt θɪŋ tuː duː!/", "vi": "Nếu bạn quyết định nuôi một con thú cưng, hãy sẵn sàng chăm sóc nó. Đó mới là việc đúng đắn nên làm!" }
     ]
   },
   {
     "day": 19,
-    "title": "Story Day 19",
+    "title": "Recipe for Life",
     "image": "12 December/images/day_19.webp",
     "audio": "12 December/audio/Track19.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 19 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 19."
-      }
+      { "start": 4.8, "en": "I love to watch my grandfather cook. He is really good at it. For many years, he's had his own restaurant.", "ipa": "/aɪ lʌv tuː wɒtʃ maɪ ˈɡrændˌfɑːðər kʊk. hiː ɪz ˈriəli ɡʊd æt ɪt. fɔːr ˈmɛni jɪərz, hiːz hæd hɪz oʊn ˈrɛstərɒnt/", "vi": "Tôi rất thích nhìn ông nội nấu ăn. Ông nấu rất ngon. Trong nhiều năm qua, ông đã có nhà hàng của riêng mình." },
+      { "start": 14.0, "en": "One day, I visited him at his restaurant. He made his favourite meal-stew.", "ipa": "/wʌn deɪ, aɪ ˈvɪzɪtɪd hɪm æt hɪz ˈrɛstərɒnt. hiː meɪd hɪz ˈfeɪvərɪt miːl-stuː/", "vi": "Một hôm, tôi đến thăm ông ở nhà hàng. Ông đã làm món ăn yêu thích của mình - món thịt hầm." },
+      { "start": 22.0, "en": "I asked my grandfather how he made stew. He said, 'Making stew is an adventure. I never know what I am going to put in it. It is different every time.'", "ipa": "/aɪ ɑːskt maɪ ˈɡrændˌfɑːðər haʊ hiː meɪd stuː. hiː sɛd, ˈmeɪkɪŋ stuː ɪz ən ədˈvɛntʃər. aɪ ˈnɛvər noʊ wɒt aɪ æm ˈɡoʊɪŋ tuː pʊt ɪn ɪt. ɪt ɪz ˈdɪfrənt ˈɛvri taɪm/", "vi": "Tôi hỏi ông nội cách ông làm món thịt hầm. Ông nói: 'Làm món hầm giống như một cuộc phiêu lưu vậy. Ông không bao giờ biết trước mình sẽ cho những gì vào đó. Mỗi lần nấu là một hương vị khác nhau.'" },
+      { "start": 39.0, "en": "'I use meat, carrots, celery, potatoes, onions and other foods I find in the kitchen,' he said.", "ipa": "/aɪ juːz miːt, ˈkærəts, ˈsɛləri, pəˈteɪtoʊz, ˈʌnjənz ænd ˈʌðər fuːdz aɪ faɪnd ɪn ðə ˈkɪtʃɪn, hiː sɛd/", "vi": "'Ông dùng thịt, cà rốt, cần tây, khoai tây, hành tây và các thực phẩm khác tìm thấy trong bếp,' ông nói." },
+      { "start": 49.0, "en": "'But how do you know how much of everything to put in?' I asked.", "ipa": "/bʌt haʊ duː juː noʊ haʊ mʌtʃ əv ˈɛvriˌθɪŋ tuː pʊt ɪn?, aɪ ɑːskt/", "vi": "'Nhưng làm thế nào ông biết cho bao nhiêu lượng mỗi thứ vào ạ?' tôi hỏi." },
+      { "start": 56.0, "en": "He looked at me. 'Making a good stew is like making a good life. A little bit of this, a little bit of that. But not too much of anything.'", "ipa": "/hiː lʊkt æt miː. ˈmeɪkɪŋ ə ɡʊd stuː ɪz laɪk ˈmeɪkɪŋ ə ɡʊd laɪf. ə ˈlɪtl bɪt əv ðɪs, ə ˈlɪtl bɪt əv ðæt. bʌt nɒt tuː mʌtʃ əv ˈɛniˌθɪŋ/", "vi": "Ông nhìn tôi. 'Nấu một nồi thịt hầm ngon cũng giống như việc tạo dựng một cuộc đời tốt đẹp vậy. Một chút cái này, một chút cái kia, nhưng không nên có quá nhiều bất cứ thứ gì.'" },
+      { "start": 70.0, "en": "This is a great recipe for good food and a good life!", "ipa": "/ðɪs ɪz ə ɡreɪt ˈrɛsəpi fɔːr ɡʊd fuːd ænd ə ɡʊd laɪf!/", "vi": "Đó quả là một công thức tuyệt vời cho món ăn ngon và cho cả một cuộc sống tốt đẹp!" }
     ]
   },
   {
     "day": 20,
-    "title": "Story Day 20",
+    "title": "Winter in Canada",
     "image": "12 December/images/day_20.webp",
     "audio": "12 December/audio/Track20.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 20 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 20."
-      }
+      { "start": 4.8, "en": "Meesha grew up in Africa. When she was five years old, her family decided to move to Canada.", "ipa": "/ˈmiːʃə ɡruː ʌp ɪn ˈæfrɪkə. wɛn ʃiː wɒz faɪv jɪərz oʊld, hɜːr ˈfæməli dɪˈsaɪdɪd tuː muːv tuː ˈkænədə/", "vi": "Meesha lớn lên ở châu Phi. Khi con bé lên năm tuổi, gia đình quyết định chuyển đến sinh sống ở Canada." },
+      { "start": 13.0, "en": "Meesha cried and cried. 'I don't want to go,' she said. 'Canada is cold! I have no friends there.' But her father said, 'You will like living there.'", "ipa": "/ˈmiːʃə kraɪd ænd kraɪd. aɪ doʊnt wɒnt tuː ɡoʊ, ʃiː sɛd. ˈkænədə ɪz koʊld! aɪ hæv noʊ frɛndz ðɛər. bʌt hɜːr ˈfɑːðər sɛd, juː wɪl laɪk ˈlɪvɪŋ ðɛər/", "vi": "Meesha khóc r rít lên. 'Con không muốn đi đâu,' con bé nói. 'Canada lạnh lắm! Con chẳng có bạn bè nào ở đó cả.' Nhưng bố cô bé bảo: 'Rồi con sẽ thích sống ở đó thôi.'" },
+      { "start": 26.0, "en": "And so, the family moved. In December, when the first snow fell, Meesha looked out of the window and saw big, fluffy snowflakes falling from the sky.", "ipa": "/ænd soʊ, ðə ˈfæməli muːvd. ɪn dɪˈsɛmbər, wɛn ðə fɜːrst snoʊ fɛl, ˈmiːʃə lʊkt aʊt əv ðə ˈwɪndoʊ ænd sɔː bɪɡ, ˈflʌfi ˈsnoʊˌfleɪks ˈfɔːlɪŋ frɒm ðə skaɪ/", "vi": "Và thế là gia đình chuyển đi. Vào tháng Mười Hai, khi trận tuyết đầu mùa rơi xuống, Meesha nhìn ra ngoài cửa sổ và thấy những bông tuyết lớn, xốp trắng đang rơi từ bầu trời xuống." },
+      { "start": 41.0, "en": "'It is pretty,' Meesha thought. 'But it will be very cold when I walk to school today.' She was not happy.", "ipa": "/ɪt ɪz ˈprɪti, ˈmiːʃə θɔːt. bʌt ɪt wɪl biː ˈvɛri koʊld wɛn aɪ wɔːk tuː skuːl təˈdeɪ. ʃiː wɒz nɒt ˈhæpi/", "vi": "'Trông đẹp thật đấy,' Meesha nghĩ. 'Nhưng hôm nay đi học chắc sẽ lạnh buốt đây.' Cô bé không vui chút nào." },
+      { "start": 51.0, "en": "Then her mother called her. 'Meesha, look what I have.' She was holding a brand new snowsuit.", "ipa": "/ðɛn hɜːr ˈmʌðər kɔːld hɜːr. ˈmiːʃə, lʊk wɒt aɪ hæv. ʃiː wɒz ˈhoʊldɪŋ ə brænd njuː ˈsnoʊˌsuːt/", "vi": "Rồi mẹ gọi cô bé lại. 'Meesha, nhìn xem mẹ có gì này.' Mẹ đang cầm trên tay một bộ đồ trượt tuyết mới tinh." },
+      { "start": 59.0, "en": "Her mom said, 'In Canada, people donate money so that families like us can have new snowsuits for the winter. This will keep you warm when you go outside. Do you want to try it on?'", "ipa": "/hɜːr mɒm sɛd, ɪn ˈkænədə, ˈpiːpl doʊˈneɪt ˈmʌni soʊ ðæt ˈfæməliːz laɪk ʌs kæn hæv njuː ˈsnoʊˌsuːts fɔːr ðə ˈwɪntər. ðɪs wɪl kiːp juː wɔːrm wɛn juː ɡoʊ ˌaʊtˈsaɪd. duː juː wɒnt tuː traɪ ɪt ɒn?/", "vi": "Mẹ nói: 'Ở Canada, mọi người quyên góp tiền để những gia đình như chúng ta có được những bộ đồ trượt tuyết mới cho mùa đông. Điều này sẽ giữ ấm cho con khi ra ngoài. Con có muốn mặc thử không?'" },
+      { "start": 75.0, "en": "Meesha put on her new, warm snowsuit. It fit her perfectly. 'It's pretty,' she thought. Now she was ready to go out and face the Canadian winter.", "ipa": "/ˈmiːʃə pʊt ɒn hɜːr njuː, wɔːrm ˈsnoʊˌsuːt. ɪt fɪt hɜːr ˈpɜːrfɪktli. ɪts ˈprɪti, ʃiː θɔːt. naʊ ʃiː wɒz ˈrɛdi tuː ɡoʊ aʊt ænd feɪs ðə kəˈneɪdiən ˈwɪntər/", "vi": "Meesha mặc bộ đồ trượt tuyết mới ấm áp vào. Nó vừa vặn cô bé một cách hoàn hảo. 'Trông đẹp phết,' cô nghĩ. Giờ thì cô đã sẵn sàng bước ra ngoài để đối mặt với mùa đông Canada." },
+      { "start": 88.0, "en": "Later, she told her parents that she had made a snowman with her friends at school. It was fun!", "ipa": "/ˈleɪtər, ʃiː toʊld hɜːr ˈpɛərənts ðæt ʃiː hæd meɪd ə ˈsnoʊˌmæn wɪð hɜːr frɛndz æt skuːl. ɪt wɒz fʌn!/", "vi": "Sau đó, cô bé khoe với bố mẹ rằng mình đã nặn được một người tuyết cùng các bạn ở trường. Vui lắm ạ!" }
     ]
   },
   {
     "day": 21,
-    "title": "Story Day 21",
+    "title": "When the Fire Happened (I)",
     "image": "12 December/images/day_21.webp",
     "audio": "12 December/audio/Track21.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 21 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 21."
-      }
+      { "start": 4.8, "en": "Jessie and her two young sisters lived with their mother in an apartment building. They moved to the city three months ago.", "ipa": "/ˈdʒɛsi ænd hɜːr tuː jʌŋ ˈsɪstərz lɪvd wɪð ðɛər ˈmʌðər ɪn ən əˈpɑːrtmənt ˈbɪldɪŋ. ðeɪ muːvd tuː ðə ˈsɪti θriː mʌnθs əˈɡoʊ/", "vi": "Jessie và hai cô em gái nhỏ sống cùng mẹ trong một tòa nhà chung cư. Họ mới chuyển đến thành phố này được ba tháng." },
+      { "start": 14.0, "en": "One evening, a fire started on the second floor of the building. The smoke quickly spread through the whole building.", "ipa": "/wʌn ˈiːvnɪŋ, ə ˈfaɪər ˈstɑːrtɪd ɒn ðə ˈsɛkənd flɔːr əv ðə ˈbɪldɪŋ. ðə smoʊk ˈkwɪkli sprɛd θruː ðə hoʊl ˈbɪldɪŋ/", "vi": "Một buổi tối nọ, một vụ hỏa hoạn bùng phát ở tầng hai của tòa nhà. Khói nhanh chóng lan ra khắp toàn bộ tòa nhà." },
+      { "start": 23.0, "en": "The fire alarm rang sharply. All the people ran out of the burning building. There was no time to gather valuables.", "ipa": "/ðə ˈfaɪər əˈlɑːrm ræŋ ˈʃɑːrpli. ɔːl ðə ˈpiːpl ræn aʊt əv ðə ˈbɜːrnɪŋ ˈbɪldɪŋ. ðɛər wɒz noʊ taɪm tuː ˈɡæðər ˈvæljuəblz/", "vi": "Chuông báo cháy réo vang chói tai. Tất cả mọi người tháo chạy khỏi tòa nhà đang bốc cháy. Không còn thời gian để thu gom tài sản có giá trị nữa." },
+      { "start": 33.0, "en": "The mother grabbed only winter jackets for her three children. They ran outside to safety.", "ipa": "/ðə ˈmʌðər ɡræbt ˈoʊnli ˈwɪntər ˈdʒækɪts fɔːr hɜːr θriː ˈtʃɪldrən. ðeɪ ræn ˌaʊtˈsaɪd tuː ˈseɪfti/", "vi": "Người mẹ chỉ kịp vớ lấy những chiếc áo khoác mùa đông cho ba đứa con rồi cùng chạy ra ngoài nơi an toàn." },
+      { "start": 41.0, "en": "Soon, the firefighters arrived. They were trying to control the fire so that it wouldn't spread to buildings nearby.", "ipa": "/suːn, ðə ˈfaɪərˌfaɪtərz əˈraɪvd. ðeɪ wɜːr ˈtraɪɪŋ tuː kənˈtroʊl ðə ˈfaɪər soʊ ðæt ɪt ˈwʊdnt sprɛd tuː ˈbɪldɪŋz nɪrˈbaɪ/", "vi": "Chẳng mấy chốc, lực lượng cứu hỏa đã có mặt. Họ cố gắng khống chế ngọn lửa để nó không lan sang các tòa nhà bên cạnh." },
+      { "start": 51.0, "en": "The small fire soon turned into a huge flame. Standing in horror, the children watched their apartment building burn for hours. Finally, it collapsed.", "ipa": "/ðə smɔːl ˈfaɪər suːn tɜːrnd ˈɪntuː ə hjuːdʒ fleɪm. ˈstændɪŋ ɪn ˈhɑːrər, ðə ˈtʃɪldrən wɒtʃt ðɛər əˈpɑːrtmənt ˈbɪldɪŋ bɜːrn fɔːr ˈaʊərz. ˈfaɪnəli, ɪt kəˈlæpst/", "vi": "Đám cháy nhỏ nhanh chóng biến thành ngọn lửa khổng lồ. Đứng chết lặng trong sợ hãi, lũ trẻ nhìn tòa chung cư của mình cháy rực suốt hàng giờ liền. Cuối cùng, nó cũng sụp đổ." },
+      { "start": 65.0, "en": "All of a sudden, this family and twelve other families in the same building were homeless. Their world was turned upside down.", "ipa": "/ɔːl əv ə ˈsʌdn, ðɪs ˈfæməli ænd twɛlv ˈʌðər ˈfæməliːz ɪn ðə seɪm ˈbɪldɪŋ wɜːr ˈhoʊmˌlɛs. ðɛər wɜːrld wɒz tɜːrnd ˈʌpˌsaɪd daʊn/", "vi": "Thình lình, gia đình này cùng mười hai hộ gia đình khác trong cùng tòa nhà bỗng chốc trở thành vô gia cư. Thế giới của họ đảo lộn hoàn toàn." }
     ]
   },
   {
     "day": 22,
-    "title": "Story Day 22",
+    "title": "When the Fire Happened (II)",
     "image": "12 December/images/day_22.webp",
     "audio": "12 December/audio/Track22.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 22 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 22."
-      }
+      { "start": 4.8, "en": "All the families were put in a hotel for the night. That immediate help came from the Red Cross office. But what would happen next? How would they get their lives back to normal?", "ipa": "/ɔːl ðə ˈfæməliːz wɜːr pʊt ɪn ə hoʊˈtɛl fɔːr ðə naɪt. ðæt ɪˈmiːdiət hɛlp keɪm frɒm ðə rɛd krɔːs ˈɒfɪs. bʌt wɒt wʊd ˈhæpən nɛkst? haʊ wʊd ðeɪ ɡɛt ðɛər laɪvz bæk tuː ˈnɔːrməl?/", "vi": "Tất cả các gia đình được bố trí ở tạm trong một khách sạn qua đêm. Sự hỗ trợ kịp thời đó đến từ văn phòng Hội Chữ Thập Đỏ. Nhưng điều gì sẽ xảy ra tiếp theo? Làm thế nào để họ đưa cuộc sống trở lại bình thường?" },
+      { "start": 21.0, "en": "Many people came to help their neighbours, friends, relatives and strangers. They brought clothes, food, money and even teddy bears.", "ipa": "/ˈmɛni ˈpiːpl keɪm tuː hɛlp ðɛər ˈneɪbərz, frɛndz, ˈrɛlətɪvz ænd ˈstreɪndʒərz. ðeɪ brɔːt cloʊðz, fuːd, ˈmʌni ænd ˈiːvn ˈtɛdi bɛrz/", "vi": "Rất nhiều người đã đến giúp đỡ láng giềng, bạn bè, họ hàng và cả những người xa lạ. Họ mang theo quần áo, thức ăn, tiền bạc và thậm chí cả gấu bông." },
+      { "start": 32.0, "en": "A week later, all the families settled into their newly rented houses.", "ipa": "/ə wiːk ˈleɪtər, ɔːl ðə ˈfæməliːz ˈsɛtld ˈɪntuː ðɛər ˈnuːli ˈrɛntɪd ˈhaʊzɪz/", "vi": "Một tuần sau, tất cả các gia đình đã ổn định trong những ngôi nhà mới thuê." },
+      { "start": 39.0, "en": "Jessie's mother told her children, 'So many people have helped us in this disaster. We must never forget what they have done for us.'", "ipa": "/ˈdʒɛsiːz ˈmʌðər toʊld hɜːr ˈtʃɪldrən, soʊ ˈmɛni ˈpiːpl hæv hɛlpt ʌs ɪn ðɪs dɪˈzæstər. wiː mʌst ˈnɛvər fərˈɡɛt wɒt ðeɪ hæv dʌn fɔːr ʌs/", "vi": "Mẹ của Jessie bảo các con: 'Rất nhiều người đã giúp đỡ chúng ta trong thảm họa này. Chúng ta không bao giờ được quên những gì họ đã làm cho mình.'" },
+      { "start": 51.0, "en": "The three children looked at their mom, and they all understood her.", "ipa": "/ðə θriː ˈtʃɪldrən lʊkt æt ðɛər mɒm, ænd ðeɪ ɔːl ˌʌndərˈstʊd hɜːr/", "vi": "Ba đứa trẻ nhìn mẹ và tất cả đều hiểu ý." },
+      { "start": 57.0, "en": "Right away, they started to make special cards to thank their classmates for helping them. At the bottom of their cards, they added this message: Don't play with fire. It's dangerous!", "ipa": "/raɪt əˈweɪ, ðeɪ ˈstɑːrtɪd tuː meɪk ˈspɛʃəl kɑːrdz tuː θæŋk ðɛər ˈklæsˌmeɪts fɔːr ˈhɛlpɪŋ ðɛm. æt ðə ˈbɒtəm əv ðɛər kɑːrdz, ðeɪ ˈædɪd ðɪs ˈmɛsɪdʒ: doʊnt pleɪ wɪð ˈfaɪər. ɪts ˈdeɪndʒərəs!/", "vi": "Ngay lập tức, chúng bắt tay làm những tấm thiệp đặc biệt để cảm ơn các bạn cùng lớp đã giúp đỡ. Ở cuối thiệp, chúng thêm vào thông điệp: Đừng nghịch lửa. Nguy hiểm lắm!" }
     ]
   },
   {
     "day": 23,
-    "title": "Story Day 23",
+    "title": "One Good Turn Deserves Another",
     "image": "12 December/images/day_23.webp",
     "audio": "12 December/audio/Track23.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 23 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 23."
-      }
+      { "start": 4.8, "en": "One day, Ant was tired after a long walk. He stopped at a lake for a drink of water. Suddenly, a strong wind blew, and he fell into the lake.", "ipa": "/wʌn deɪ, ænt wɒz ˈtaɪərd ˈɑːftər ə lɒŋ wɔːk. hiː stɒpt ænd [correction: æt] ə leɪk fɔːr ə drɪŋk əv ˈwɔːtər. ˈsʌdənli, ə strɔːŋ wɪnd bluː, ænd hiː fɛl ˈɪntuː ðə leɪk/", "vi": "Một hôm, Kiến cảm thấy mệt mỏi sau quãng đường đi bộ dài. Nó dừng lại bên một hồ nước để uống nước. Đột nhiên, một cơn gió mạnh thổi qua và nó rơi tõm xuống hồ." },
+      { "start": 18.0, "en": "Ant cried, 'Help, help! I am drowning!' A dove flying nearby heard the cries. She caught a leaf and dropped it into the water beside Ant. Ant climbed on and rode the leaf safely to land.", "ipa": "/ænt kraɪd, hɛlp, hɛlp! aɪ æm ˈdraʊnɪŋ! ə dʌv ˈflaɪɪŋ nɪrˈbaɪ hɜːrd ðə kraɪz. ʃiː kɔːt ə liːf ænd drɒpt ɪt ˈɪntuː ðə ˈwɔːtər bɪˈsaɪd ænt. ænd [correction: ænt] klaɪmd ɒn ænd roʊd ðə liːf ˈseɪfli tuː lænd/", "vi": "Kiến kêu cứu: 'Cứu tôi với, cứu tôi với! Tôi sắp chết đuối rồi!' Một cô bồ câu bay ngang qua nghe thấy tiếng kêu liền nhặt một chiếc lá thả xuống nước cạnh chỗ Kiến. Kiến leo lên lá và trôi dạt an toàn vào bờ." },
+      { "start": 35.0, "en": "Ant was very grateful to Dove, for she had saved his life.", "ipa": "/ænt wɒz ˈvɛri ˈɡreɪtfl tuː dʌv, fɔːr ʃiː hæd sɛvd hɪz laɪf/", "vi": "Kiến vô cùng biết ơn Bồ Câu vì cô ấy đã cứu mạng mình." },
+      { "start": 41.0, "en": "The next day, there was a man in the forest. He wanted to set a trap to catch the dove. As everyone knows, doves are very good to eat.", "ipa": "/ðə nɛkst deɪ, ðɛər wɒz ə mæn ɪn ðə ˈfɔːrɪst. hiː ˈwɒntɪd tuː sɛt ə træp tuː kætʃ ðə dʌv. æz ˈɛvriˌwʌn noʊz, dʌvz ɑːr ˈvɛri ɡʊd tuː iːt/", "vi": "Hôm sau, có một người thợ săn trong rừng. Ông ta muốn giăng bẫy để bắt bồ câu, vì ai cũng biết thịt bồ câu rất ngon." },
+      { "start": 54.0, "en": "Ant watched the man work. 'What to do? I have to help Dove.'", "ipa": "/ænt wɒtʃt ðə mæn wɜːrk. wɒt tuː duː? aɪ hæv tuː hɛlp dʌv/", "vi": "Kiến nhìn người đàn ông làm việc và thầm nghĩ: 'Phải làm sao đây? Mình phải cứu Bồ Câu.'" },
+      { "start": 62.0, "en": "Quickly, Ant crawled up the man's leg. He bit the man with all his strength. 'Ouch!' cried the man loudly, his voice echoing in the forest.", "ipa": "/ˈkwɪkli, ænt krɔːld ʌp ðə mænz lɛɡ. hiː bɪt ðə mæn wɪð ɔːl hɪz strɛŋθ. aʊtʃ!, kraɪd ðə mæn ˈlaʊdli, hɪz vɔɪs ˈɛkoʊɪŋ ɪn ðə ˈfɔːrɪst/", "vi": "Nhanh như cắt, Kiến bò ngược lên chân người đàn ông và cắn một cú thật mạnh bằng toàn bộ sức lực. 'Ái chà!' người đàn ông hét lớn, giọng vọng vang cả khu rừng." },
+      { "start": 76.0, "en": "Dove heard the man's cries and flew away to safety. She too was grateful to Ant for saving her life.", "ipa": "/dʌv hɜːrd ðə mænz kraɪz ænd fluː əˈweɪ tuː ˈseɪfti. ʃiː tuː wɒz ˈɡreɪtfl tuː ænt fɔːr ˈseɪvɪŋ hɜːr laɪf/", "vi": "Bồ Câu nghe tiếng hét liền vỗ cánh bay vụt đến nơi an toàn. Cô ấy cũng vô cùng biết ơn Kiến vì đã cứu mạng mình." }
     ]
   },
   {
     "day": 24,
-    "title": "Story Day 24",
+    "title": "The Night Before...",
     "image": "12 December/images/day_24.webp",
     "audio": "12 December/audio/Track24.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 24 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 24."
-      }
+      { "start": 4.8, "en": "Frank and Mary were so excited. Why? It was Christmas Eve-almost time for Santa Claus to come.", "ipa": "/fræŋk ænd ˈmɛri wɜːr soʊ ɪkˈsaɪtɪd. waɪ? ɪt wɒz ˈkrɪsməs iːv-ˈɔːlmoʊst taɪm fɔːr ˈsæntə klɔːz tuː kʌm/", "vi": "Frank và Mary vô cùng phấn khích. Tại sao ư? Vì hôm nay là đêm Giáng sinh - sắp đến giờ ông già Noel ghé thăm rồi." },
+      { "start": 13.0, "en": "'It's time for bed,' said Dad. 'You don't want to be late for bed tonight.'", "ipa": "/ɪts taɪm fɔːr bɛd, sɛd dæd. juː doʊnt wɒnt tuː biː leɪt fɔːr bɛd təˈnaɪt/", "vi": "'Đến giờ đi ngủ rồi các con,' bố nói. 'Các con không muốn bị muộn giấc ngủ đêm nay đâu nhé.'" },
+      { "start": 21.0, "en": "'But wait,' said Mary. 'We have to hang up our stockings!'", "ipa": "/bʌt weɪt, sɛd ˈmɛri. wiː hæv tuː hæŋ ʌp ˈaʊər ˈstɑːkɪŋz!/", "vi": "'Nhưng đợi đã bố,' Mary thưa. 'Chúng con còn phải treo tất lên nữa chứ!'" },
+      { "start": 28.0, "en": "Mary pulled out four red stockings: one for Mom, one for Dad, one for Mary and one for Frank. Dad hung them by the fireplace.", "ipa": "/ˈmɛri pʊld aʊt fɔːr rɛd ˈstɑːkɪŋz: wʌn fɔːr mɒm, wʌn fɔːr dæd, wʌn fɔːr ˈmɛri ænd wʌn fɔːr fræŋk. dæd hʌŋ ðɛm baɪ ðə ˈfaɪərˌpleɪs/", "vi": "Mary lôi ra bốn chiếc tất đỏ: một cho mẹ, một cho bố, một cho Mary và một cho Frank. Bố liền treo chúng ngay bên lò sưởi." },
+      { "start": 41.0, "en": "'I think you're ready,' said Mom. 'You'd better get to bed.'", "ipa": "/aɪ θɪŋk jʊər ˈrɛdi, sɛd mɒm. jʊd ˈbɛtər ɡɛt tuː bɛd/", "vi": "'Mẹ nghĩ thế là sẵn sàng rồi đấy,' mẹ giục. 'Các con mau lên giường đi thôi.'" },
+      { "start": 48.0, "en": "'But wait,' said Frank. 'We have to frost the cookies and put them on a plate for Santa!' So, Frank and Mary frosted the cookies.", "ipa": "/bʌt weɪt, sɛd fræŋk. wiː hæv tuː frɒst ðə ˈkʊkiz ænd pʊt ðɛm ɒn ə pleɪt fɔːr ˈsæntə! soʊ, fræŋk ænd ˈmɛri ˈfrɒstɪd ðə ˈkʊkiz/", "vi": "'Nhưng đợi chút đã,' Frank ngắt lời. 'Chúng con còn phải trang trí kem đường lên bánh quy và bày lên đĩa cho ông già Noel nữa!' Thế là Frank và Mary cùng nhau trang trí bánh quy." },
+      { "start": 62.0, "en": "'I think you're ready now,' said Dad. 'You'd better get to bed,' said Mom again.", "ipa": "/aɪ θɪŋk jʊər ˈrɛdi naʊ, sɛd dæd. jʊd ˈbɛtər ɡɛt tuː bɛd, sɛd mɒm əˈɡɛn/", "vi": "'Bố nghĩ giờ thì các con xong thật rồi đấy,' bố nói. 'Tốt nhất là lên giường ngay đi thôi,' mẹ nhắc lại." },
+      { "start": 70.0, "en": "'But wait,' said Mary. 'We need to write Santa a note!' Mary wrote a note and placed it on the table beside the plate of cookies.", "ipa": "/bʌt weɪt, sɛd ˈmɛri. wiː niːd tuː raɪt ˈsæntə ə noʊt! ˈmɛri roʊt ə noʊt ænd pleɪst ɪt ɒn ðə ˈteɪbl bɪˈsaɪd ðə pleɪt əv ˈkʊkiz/", "vi": "'Nhưng khoan đã,' Mary lại kêu lên. 'Chúng con phải viết thư gửi ông già Noel nữa!' Mary viết vội một mảnh giấy nhỏ rồi đặt lên bàn ngay cạnh đĩa bánh quy." },
+      { "start": 84.0, "en": "'Now we're ready,' said Mary and Frank together. Frank and Mary went to bed and waited for Santa Claus and Christmas morning.", "ipa": "/naʊ wɪər ˈrɛdi, sɛd ˈmɛri ænd fræŋk təˈɡɛðər. fræŋk ænd ˈmɛri wɛnt tuː bɛd ænd ˈweɪtɪd fɔːr ˈsæntə klɔːz ænd ˈkrɪsməs ˈmɔːrnɪŋ/", "vi": "'Bây giờ thì bọn con sẵn sàng thật rồi,' Mary và Frank đồng thanh. Cả hai ngoan ngoãn lên giường đi ngủ, hào hứng chờ đón ông già Noel và buổi sáng Giáng sinh." }
     ]
   },
   {
     "day": 25,
-    "title": "Story Day 25",
+    "title": "Santa Claus",
     "image": "12 December/images/day_25.webp",
     "audio": "12 December/audio/Track25.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 25 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 25."
-      }
+      { "start": 4.8, "en": "Bill had big boots. He stomped around the garden in his big boots.", "ipa": "/bɪl hæd bɪɡ buːts. hiː stɒmpt əˈraʊnd ðə ˈɡɑːrdn ɪn hɪz bɪɡ buːts/", "vi": "Bill có đôi bốt rất to. Cậu dậm chân đi vòng quanh khu vườn với đôi bốt to lớn của mình." },
+      { "start": 12.0, "en": "He made big steps. 'One, two, three, four, FIVE!'", "ipa": "/hiː meɪd bɪɡ stɛps. wʌn, tuː, θriː, fɔːr, faɪv!/", "vi": "Cậu bước những bước thật dài và đếm to: 'Một, hai, ba, bốn, NĂM!'" },
+      { "start": 19.0, "en": "On Christmas Eve, it snowed. Bill counted his footprints in the snow, 'One, two, three, four, FIVE!'", "ipa": "/ɒn ˈkrɪsməs iːv, ɪt snoʊd. bɪl ˈkaʊntɪd hɪz ˈfʊtˌprɪnts ɪn ðə snoʊ, wʌn, tuː, θriː, fɔːr, faɪv!/", "vi": "Vào đêm Giáng sinh, tuyết rơi trắng xóa. Bill đếm những dấu chân của mình in trên tuyết: 'Một, hai, ba, bốn, NĂM!'" },
+      { "start": 30.0, "en": "But what was this? Bill looked down and saw lots of very, very big footprints made by even bigger boots!", "ipa": "/bʌt wɒt wɒz ðɪs? bɪl lʊkt daʊn ænd sɔː lɒts əv ˈvɛri, ˈvɛri bɪɡ ˈfʊtˌprɪnts meɪd baɪ ˈiːvn ˈbɪɡər buːts!/", "vi": "Nhưng cái gì thế này? Bill cúi xuống và kinh ngạc thấy rất nhiều dấu chân cực kỳ to lớn được tạo ra bởi những chiếc bốt còn khổng lồ hơn nữa!" },
+      { "start": 41.0, "en": "Then, he heard little bells and looked up. Who was that on the roof? 'Ho! Ho! Ho!'", "ipa": "/ðɛn, hiː hɜːrd ˈlɪtl bɛlz ænd lʊkt ʌp. huː wɒz ðæt ɒn ðə ruːf? hoʊ! hoʊ! hoʊ!/", "vi": "Ngay sau đó, cậu nghe thấy tiếng chuông lanh lảnh vang lên và ngước nhìn lên mái nhà. Ai đang ở trên đó thế nhỉ? 'Ho! Ho! Ho!'" },
+      { "start": 51.0, "en": "Wearing very big boots, dressed all in red, and with a big white beard, Santa Claus smiled at Bill. 'Ho! Ho! Ho!' laughed Santa.", "ipa": "/ˈwɛərɪŋ ˈvɛri bɪɡ buːts, drɛst ɔːl ɪn rɛd, ænd wɪð a bɪɡ [correction: wɪð ə bɪɡ] waɪt bɪrd, ˈsæntə klɔːz smaɪld æt bɪl. hoʊ! hoʊ! hoʊ!, lɑːft ˈsæntə/", "vi": "Khoác lên mình bộ đồ đỏ rực, đi đôi bốt ngoại cỡ và sở hữu bộ râu trắng phau, ông già Noel mỉm cười nhìn xuống Bill. 'Ho! Ho! Ho!' ông cười vang." },
+      { "start": 64.0, "en": "'The number of footprints you count is the number of presents you will get!'", "ipa": "/ðə ˈnʌmbər əv ˈfʊtˌprɪnts juː kaʊnt ɪz ðə ˈnʌmbər əv ˈprɛznts juː wɪl ɡɛt!/", "vi": "'Số lượng dấu chân cháu đếm được chính là số món quà cháu sẽ nhận được đấy!'" },
+      { "start": 71.0, "en": "Bill smiled at Santa and waved. Then, he turned around to count the steps, 'One, two, three, four, five, six, seven, eight, nine, TEN!'", "ipa": "/bɪl smaɪld æt ˈsæntə ænd weɪvd. ðɛn, hiː tɜːrnd əˈraʊnd tuː kaʊnt ðə stɛps, wʌn, tuː, θriː, fɔːr, faɪv, sɪks, ˈsɛvn, eɪt, naɪn, tɛn!/", "vi": "Bill cười tươi vẫy tay chào ông già Noel. Cậu liền quay người đếm lại số bước chân: 'Một, hai, ba, bốn, năm, sáu, bảy, tám, chín, MƯỜI!'" },
+      { "start": 84.0, "en": "Bill looked up again. Santa was gone, but there was a big red sack and a note by the porch. 'Merry Christmas, Bill! From SANTA.'", "ipa": "/bɪl lʊkt ʌp əˈɡɛn. ˈsæntə wɒz ɡɒn, bʌt ðɛər wɒz a bɪɡ [correction: wɒz ə bɪɡ] rɛd sæk ænd ə noʊt baɪ ðə pɔːrtʃ. ˈmɛri ˈkrɪsməs, bɪl! frɒm ˈsæntə/", "vi": "Bill ngước lên tìm thì ông già Noel đã biến mất từ lúc nào, chỉ còn lại một cái túi đỏ thẫm to tướng cùng bức thư nhắn gửi bên hiên nhà: 'Giáng sinh an lành, Bill nhé! Gửi từ ÔNG GIÀ NOEL.'" }
     ]
   },
   {
     "day": 26,
-    "title": "Story Day 26",
+    "title": "The Moaning Ghost",
     "image": "12 December/images/day_26.webp",
     "audio": "12 December/audio/Track26.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 26 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 26."
-      }
+      { "start": 4.8, "en": "My dad fixes pianos and organs. One night, he asked me to come with him.", "ipa": "/maɪ dæd ˈfɪksɪz piˈænoʊz ænd ˈɔːrɡənz. wʌn naɪt, hiː ɑːskt miː tuː kʌm wɪð hɪm/", "vi": "Bố tôi là thợ sửa đàn piano và đàn ống phong cầm (organ lớn). Có một tối, bố rủ tôi đi làm cùng." },
+      { "start": 12.0, "en": "'Oh no!' I thought as I saw the house we were going to. All my friends and I knew this place was haunted. There were always strange moaning sounds coming from it.", "ipa": "/oʊ noʊ!, aɪ θɔːt æz aɪ sɔː ðə haʊs wiː wɜːr ˈɡoʊɪŋ tuː. ɔːl maɪ frɛndz ænd aɪ nuː ðɪs pleɪs wɒz ˈhɔːntɪd. ðɛər wɜːr ˈɔːlweɪz streɪndʒ ˈmoʊnɪŋ saʊndz ˈkʌmɪŋ frɒm ɪt/", "vi": "'Ôi không!' tôi thầm kêu lên khi nhìn thấy ngôi nhà mà hai bố con chuẩn bị bước vào. Đám bạn tôi ai cũng rỉ tai nhau rằng nơi này bị ma ám, lúc nào cũng phát ra những tiếng rên rỉ kỳ quái." },
+      { "start": 26.0, "en": "'Dad, there is a moaning ghost in there!'", "ipa": "/dæd, ðɛər ɪz ə ˈmoʊnɪŋ ɡoʊst ɪn ðɛər!/", "vi": "'Bố ơi, trong đó có con ma hay rên rỉ đấy ạ!'" },
+      { "start": 30.0, "en": "We rang the doorbell and went inside. As we walked in, I could hear that terrible, low moaning sound from before. 'Did you hear that, Dad?' I asked. My dad just smiled.", "ipa": "/wiː ræŋ ðə ˈdɔːrˌbɛl ænd wɛnt ˈɪnsaɪd. æz wiː wɔːkt ɪn, aɪ kʊd hɪər ðæt ˈtɛrəbl, loʊ ˈmoʊnɪŋ saʊnd frɒm bɪˈfɔːr. dɪd juː hɪər ðæt, dæd?, aɪ ɑːskt. maɪ dæd dʒʌst smaɪld/", "vi": "Chúng tôi bấm chuông cửa rồi bước vào trong. Vừa đặt chân vào nhà, tôi lại nghe thấy thứ âm thanh rên rỉ trầm đục đáng sợ như lời đồn. 'Bố có nghe thấy gì không?' tôi run rẩy hỏi. Bố chỉ mỉm cười điềm nhiên." },
+      { "start": 48.0, "en": "In one of the rooms, I could see a very large organ with long pipes that went to the ceiling. My dad went around to the back of the organ, closed something, and the low moaning sound suddenly stopped.", "ipa": "/ɪn wʌn əv ðə ruːmz, aɪ kʊd siː ə ˈvɛri lɑːrdʒ ˈɔːrɡən wɪð lɔːŋ paɪps ðæt wɛnt tuː ðə ˈsiːlɪŋ. maɪ dæd wɛnt əˈraʊnd tuː ðə bæk əv ðə ˈɔːrɡən, cloʊzd ˈsʌmθɪŋ, ænd ðə loʊ ˈmoʊnɪŋ saʊnd ˈsʌdənli stɒpt/", "vi": "Đứng ở một gian phòng, tôi thấy một cây đàn ống khổng lồ với những ống dẫn âm dài ngoằng vắt tận lên trần nhà. Bố rảo bước ra phía sau chiếc đàn, gạt chốt khóa thứ gì đó, và thế là tiếng rên rỉ rợn tóc gáy vụt tắt hẳn." },
+      { "start": 66.0, "en": "He said, 'The wind was blowing across the top of the pipes. This caused the organ to make sounds. That was your famous moaning ghost!'", "ipa": "/hiː sɛd, ðə wɪnd wɒz ˈbloʊɪŋ əˈkrɒs ðə tɒp əv ðə paɪps. ðɪs kɔːzd ðə ˈɔːrɡən tuː meɪk saʊndz. ðæt wɒz jɔːr ˈfeɪməs ˈmoʊnɪŋ ɡoʊst!/", "vi": "Bố giải thích: 'Gió thổi lùa qua miệng các ống đàn tạo ra hiện tượng cộng hưởng âm thanh. Đó chính là con ma rên rỉ nổi tiếng mà tụi trẻ tụi con đồn đại đấy!'" },
+      { "start": 78.0, "en": "So, it turned out that the moaning ghost was just a noisy old organ!", "ipa": "/soʊ, ɪt tɜːrnd aʊt ðæt ðə ˈmoʊnɪŋ ɡoʊst wɒz dʒʌst ə ˈnɔɪzi oʊld ˈɔːrɡən!/", "vi": "Hóa ra, 'con ma rên rỉ' đáng sợ thực chất chỉ là một cây đàn ống già nua phát ra tiếng động ồn ào!" }
     ]
   },
   {
     "day": 27,
-    "title": "Story Day 27",
+    "title": "Slower Than a Turtle",
     "image": "12 December/images/day_27.webp",
     "audio": "12 December/audio/Track27.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 27 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 27."
-      }
+      { "start": 4.8, "en": "'Hurry up, Millie! You are slower than a turtle today,' says Alana.", "ipa": "/ˈhɜːri ʌp, ˈmɪli! juː ɑːr ˈsloʊər ðæn ə ˈtɜːrtl təˈdeɪ, sɛz əˈlɑːnə/", "vi": "'Nhanh lên nào Millie! Hôm nay cậu chậm như sên ấy,' Alana giục giã." },
+      { "start": 11.0, "en": "'That's okay,' replies Millie. 'It is not a bad thing to be as slow as a turtle. Do you know that turtles live to be 200 and even 300 years old?'", "ipa": "/ðæts oʊˈkeɪ, rɪˈplaɪz ˈmɪli. ɪt ɪz nɒt ə bæd θɪŋ tuː biː æz sloʊ æz ə ˈtɜːrtl. duː juː noʊ ðæt ˈtɜːrtlz lɪv tuː biː ˈtuː-ˈhʌndrəd ænd ˈiːvn ˈθriː-ˈhʌndrəd jɪərz oʊld?/", "vi": "'Không sao cả,' Millie đáp thản nhiên. 'Chậm chạp như rùa hóa ra lại là điều hay ho đấy chứ. Cậu có biết rùa có tuổi thọ lên tới 200, thậm chí 300 năm không?'" },
+      { "start": 23.0, "en": "'Wow!' says Alana. 'How is that possible?'", "ipa": "/waʊ!, sɛz əˈlɑːnə. haʊ ɪz ðæt ˈpɑːsəbl?/", "vi": "'Ồ!' Alana trầm trồ. 'Làm sao mà sống thọ thế được nhỉ?'" },
+      { "start": 28.0, "en": "'There are many reasons,' says Millie. 'But mostly, it's because they take their time. They are never in a rush. They take life easy. People can learn a lesson from turtles.'", "ipa": "/ðɛər ɑːr ˈmɛni ˈriːznz, sɛz ˈmɪli. bʌt ˈmoʊstli, ɪts bɪˈkɒz ðeɪ teɪk ðɛər taɪm. ðeɪ ɑːr ˈnɛvər ɪn ə rʌʃ. ðeɪ teɪk laɪf ˈiːzi. ˈpiːpl kæn lɜːrn ə ˈlɛsn frɒm ˈtɜːrtlz/", "vi": "'Có rất nhiều nguyên nhân,' Millie giải thích. 'Nhưng chủ yếu là vì chúng biết cách tận hưởng thời gian, không bao giờ vội vã hấp tấp và luôn thản nhiên đối diện với cuộc sống. Con người chúng ta khối điều phải học hỏi từ loài rùa đấy.'" },
+      { "start": 44.0, "en": "Later, the two girls read about turtles. They discover that turtles walk very slowly. They are never in a hurry to eat.", "ipa": "/ˈleɪtər, ðə tuː ɡɜːrlz riːd əˈbaʊt ˈtɜːrtlz. ðeɪ dɪsˈkʌvər ðæt ˈtɜːrtlz wɔːk ˈvɛri ˈsloʊli. ðeɪ ɑːr ˈnɛvər ɪn ə ˈhɜːri tuː iːt/", "vi": "Hôm sau, hai cô bé tìm đọc sách về loài rùa và phát hiện ra chúng di chuyển cực kỳ từ tốn, khi ăn uống cũng chẳng bao giờ vội vàng." },
+      { "start": 54.0, "en": "Sometimes, they take many hours to eat a good meal. They breathe slowly and get lots of rest.", "ipa": "/ˈsʌmˌtaɪmz, ðeɪ teɪk ˈmɛni ˈaʊərz tuː iːt ə ɡʊd miːl. ðeɪ briːð ˈsloʊli ænd ɡɛt lɒts əv rɛst/", "vi": "Đôi khi chúng mất hàng tiếng đồng hồ để thưởng thức trọn vẹn một bữa ăn, thở rất chậm và dành nhiều thời gian nghỉ ngơi." },
+      { "start": 63.0, "en": "In winter, they make a big hole in the mud and go to sleep. Everything gets even slower. When they wake up in the spring, they begin to move. But, as always, they move slowly.", "ipa": "/ɪn ˈwɪntər, ðeɪ meɪk ə bɪɡ hoʊl ɪn ðə mʌd ænd ɡoʊ tuː sliːp. ˈɛvriˌθɪŋ ɡɛts ˈiːvn ˈsloʊər. wɛn ðeɪ weɪk ʌp ɪn ðə sprɪŋ, ðeɪ bɪˈɡɪn tuː muːv. bʌt, æz ˈɔːlweɪz, ðeɪ muːv ˈsloʊli/", "vi": "Đến mùa đông, chúng đào một cái hố sâu trong bùn lầy rồi ngủ vùi qua mùa giá rét. Mọi nhịp điệu dường như chậm lại tối đa. Khi mùa xuân tỉnh giấc, chúng mới bắt đầu chuyển động, và dĩ nhiên vẫn với phong thái thong thả chậm chạp muôn thuở." },
+      { "start": 81.0, "en": "That's the trick. Slow and steady wins the race. So what's the lesson to be learned from turtles? Don't get too excited and live a long life, just like a turtle.", "ipa": "/ðæts ðə trɪk. sloʊ ænd ˈstɛdi wɪnz ðə reɪs. soʊ wɒts ðə ˈlɛsn tuː biː lɜːrnd frɒm ˈtɜːrtlz? doʊnt ɡɛt tuː ɪkˈsaɪtɪd ænd lɪv ə lɒŋ laɪf, dʒʌst laɪk ə ˈtɜːrtl/", "vi": "Đó chính là bí quyết: 'Chậm mà chắc sẽ thắng cuộc'. Vậy bài học rút ra từ loài rùa là gì? Đừng quá nóng vội hấp tấp mà hãy sống một cuộc đời bình yên, thọ lâu trăm tuổi giống như loài rùa nhé." }
     ]
   },
   {
     "day": 28,
-    "title": "Story Day 28",
+    "title": "The Mixing Bowl",
     "image": "12 December/images/day_28.webp",
     "audio": "12 December/audio/Track28.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 28 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 28."
-      }
+      { "start": 4.8, "en": "There is a legend about the invention of firecrackers. Over 2,000 years ago, a chef in the Chinese army mixed three powders together in a bowl. He accidentally dropped the bowl and it burst into beautiful flames.", "ipa": "/ðɛər ɪz ə ˈlɛdʒənd əˈbaʊt ði ɪnˈvɛntʃn əv ˈfaɪərˌkrækərz. ˈoʊvər ˈtuː ˈθaʊznd jɪərz əˈɡoʊ, ə ʃɛf ɪn ðə ˈtʃaɪˈniːz ˈɑːrmi mɪkst θriː ˈpaʊdərz təˈɡɛðər ɪn ə boʊl. hiː ˌæksɪˈdɛntli drɒpt ðə boʊl ænd ɪt bɜːrst ˈɪntuː ˈbjuːtɪfl fleɪmz/", "vi": "Tương truyền có một truyền thuyết về nguồn gốc phát minh ra pháo hoa. Hơn 2.000 năm trước, một đầu bếp trong quân đội Trung Hoa vô tình trộn ba loại bột khác nhau trong một chiếc bát. Do sơ suất, ông làm rơi chiếc bát xuống đất và nó lập tức bùng lên những ngọn lửa rực rỡ tuyệt đẹp." },
+      { "start": 26.0, "en": "The chef got excited. He put the powders in a bamboo shoot. It exploded. BANG! The firecracker was born.", "ipa": "/ðə ʃɛf ɡɒt ɪkˈsaɪtɪd. hiː pʊt ðə ˈpaʊdərz ɪn ə bæmˈbuː ʃuːt. ɪt ɪkˈsploʊdɪd. bæŋ! ðə ˈfaɪərˌkrækər wɒz bɔːrn/", "vi": "Vị đầu bếp vô cùng phấn khích, bèn thử nhồi các loại bột đó vào trong một ống tre rồi châm lửa. PỤT! Pháo nổ tung vang dội. Pháo hoa chính thức ra đời từ đó." },
+      { "start": 37.0, "en": "Today, we still play with firecrackers. People use them during important events such as festivals and celebrations.", "ipa": "/təˈdeɪ, wiː stɪl pleɪ wɪð ˈfaɪərˌkrækərz. ˈpiːpl juːz ðɛm ˈdjʊərɪŋ ɪmˈpɔːrtənt ɪˈvɛnts sʌtʃ æz ˈfɛstɪvəlz ænd ˌsɛlɪˈbreɪʃnz/", "vi": "Ngày nay, chúng ta vẫn thường chơi pháo hoa trong các dịp sự kiện trọng đại như lễ hội và các buổi tiệc ăn mừng." },
+      { "start": 47.0, "en": "Playing with them can be dangerous. You can burn or hurt yourself when you light a firecracker. Or you could start a fire if the firecracker lands on something flammable. But people still love them.", "ipa": "/ˈpleɪɪŋ wɪð ðɛm kæn biː ˈdeɪndʒərəs. juː kæn bɜːrn ɔːr hɜːrt jɔːrˈsɛlf wɛn juː laɪt ə ˈfaɪərˌkrækər. ɔːr juː kʊd stɑːrt ə ˈfaɪər ɪf ðə ˈfaɪərˌkrækər lænds ɒn ˈsʌmθɪŋ ˈflæməbl. bʌt ˈpiːpl stɪl lʌv ðɛm/", "vi": "Tuy nhiên, chơi pháo tiềm ẩn nhiều hiểm họa khôn lường: bạn có thể bị bỏng hoặc thương tích nếu châm lửa bất cẩn, hay thậm chí gây hỏa hoạn lớn nếu pháo bắn vào vật liệu dễ bắt lửa. Dù vậy, mọi người vẫn vô cùng yêu thích pháo hoa." },
+      { "start": 68.0, "en": "From firecrackers came rockets. Today, we send rockets deep into space to other planets.", "ipa": "/frɒm ˈfaɪərˌkrækərz keɪm ˈrɒkɪts. təˈdeɪ, wiː sɛnd ˈrɒkɪts diːp ˈɪntuː speɪs tuː ˈʌðər ˈplænɪts/", "vi": "Từ những quả pháo hoa thô sơ, con người đã phát minh ra tên lửa. Ngày nay, chúng ta phóng các tên lửa bay sâu vào không gian vũ trụ để khám phá những hành tinh xa xôi." },
+      { "start": 78.0, "en": "So next time you see a rocket take off into space, think about that little chef and his bowl full of powder. If only he knew what he had started!", "ipa": "/soʊ nɛkst taɪm juː siː ə ˈrɒkɪt teɪk ɒf ˈɪntuː speɪs, θɪŋk əˈbaʊt ðæt ˈlɪtl ʃɛf ænd hɪz boʊl fʊl əv ˈpaʊdər. ɪf ˈoʊnli hiː nuː wɒt hiː hæd ˈstɑːrtɪd!/", "vi": "Thế nên lần tới khi chứng kiến một quả tên lửa rền vang phóng vụt vào không gian, hãy nhớ đến vị đầu bếp nhỏ bé năm xưa cùng chiếc bát sứ đựng đầy bột pha trộn ấy. Giá mà ông biết được phát minh tình cờ của mình đã làm thay đổi cả nhân loại!" }
     ]
   },
   {
     "day": 29,
-    "title": "Story Day 29",
+    "title": "Good Little Bugs",
     "image": "12 December/images/day_29.webp",
     "audio": "12 December/audio/Track29.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 29 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 29."
-      }
+      { "start": 4.8, "en": "My sister can't stand anything that is not clean. She washes her hands a lot. Everything has to be clean, clean, clean!", "ipa": "/maɪ ˈsɪstər kænt stænd ˈɛniˌθɪŋ ðæt ɪz nɒt kliːn. ʃiː ˈwɒʃɪz hɜːr hændz ə lɒt. ˈɛvriˌθɪŋ hæz tuː biː kliːn, kliːn, kliːn!/", "vi": "Chị gái tôi thuộc tuồng sạch sẽ thái quá, không thể chịu được bất cứ thứ gì dơ bẩn. Con bé rửa tay liên tục và cái gì cũng phải sạch bong kin kít!" },
+      { "start": 15.0, "en": "I'm not like her. I enjoy touching the earth. I love playing in the mud!", "ipa": "/aɪm nɒt laɪk hɜːr. aɪ ɪnˈdʒɔɪ ˈtʌtʃɪŋ ði ɜːrθ. aɪ lʌv ˈpleɪɪŋ ɪn ðə mʌd!/", "vi": "Tôi thì hoàn toàn ngược lại, rất thích nghịch đất cát và đặc biệt đam mê lội bùn." },
+      { "start": 23.0, "en": "When we went for our regular check-ups, the doctor told us, 'Everyone has some bugs or bacteria living on their bodies. They're so small that you can't even see them.'", "ipa": "/wɛn wiː wɛnt fɔːr ˈaʊər ˈrɛɡjələr ˈtʃɛk-ʌps, ðə ˈdɒktər toʊld ʌs, ˈɛvriˌwʌn hæz sʌm bʌɡz ɔːr bækˈtɪriə ˈlɪvɪŋ ɒn ðɛər ˈbɑːdiz. ðɛər soʊ smɔːl ðæt juː kænt ˈiːvn siː ðɛm/", "vi": "Trong một lần đi khám sức khỏe định kỳ, bác sĩ đã giải thích cho hai chị em: 'Trên cơ thể bất kỳ ai cũng tồn tại hàng triệu vi khuẩn hoặc vi sinh vật có lợi. Chúng nhỏ xíu đến mức mắt thường không thể nhìn thấy được.'" },
+      { "start": 38.0, "en": "'Is that true?' I asked, 'Yes. And no matter how hard you try, you can't get rid of them,' said the doctor.", "ipa": "/ɪz ðæt truː?, aɪ ɑːskt, jɛs. ænd noʊ ˈmætər haʊ hɑːrd juː traɪ, juː kænt ɡɛt rɪd əv ðɛm, sɛd ðə ˈdɒktər/", "vi": "'Thật vậy ạ?' tôi ngạc nhiên hỏi. 'Đúng thế cháu ạ. Và dù cháu có cố gắng tẩy rửa kỹ cỡ nào đi nữa thì cũng không tài nào loại bỏ hoàn toàn chúng được đâu,' bác sĩ mỉm cười." },
+      { "start": 50.0, "en": "The doctor explained, 'Some types of bacteria can make you sick. But other types are good, like the ones in cheese, yogurt and bread. They make these foods taste good! Bacteria are even used to make chocolate bars!'", "ipa": "/ðə ˈdɒktər ɪkˈspleɪnd, sʌm taɪps əv bækˈtɪriə kæn meɪk juː sɪk. bʌt ˈʌðər taɪps ɑːr ɡʊd, laɪk ðə wʌnz ɪn tʃiːz, ˈjoʊɡərt ænd brɛd. ðeɪ meɪk ðiːz fuːdz teɪst ɡʊd! bækˈtɪriə ɑːr ˈiːvn juːzd tuː meɪk ˈtʃɒklət bɑːrz!/", "vi": "Bác sĩ giảng giải thêm: 'Một số loại vi khuẩn gây bệnh cho ta, nhưng số khác lại cực kỳ hữu ích như loại có trong phô mai, sữa chua và bánh mì giúp tạo nên hương vị thơm ngon đặc trưng, thậm chí vi khuẩn còn góp phần sản xuất ra những thanh kẹo sô-cô-la ngọt ngào nữa đấy!'" },
+      { "start": 72.0, "en": "My sister was not happy to hear this. 'Yuck!' she said. I don't think she'll be joining me in the mud any time soon!", "ipa": "/maɪ ˈsɪstər wɒz nɒt ˈhæpi tuː hɪər ðɪs. jʌk!, ʃiː sɛd. aɪ doʊnt θɪŋk ʃiːl biː ˈdʒɔɪnɪŋ miː ɪn ðə mʌd ˈɛni taɪm suːn!/", "vi": "Chị tôi nghe xong nhăn mặt chê bai: 'Eo ôi, khiếp quá!' Xem chừng với phát hiện này, còn lâu chị mới chịu ra vườn nghịch bùn cùng tôi rồi đây!" }
     ]
   },
   {
     "day": 30,
-    "title": "Story Day 30",
+    "title": "Our New Year's Show",
     "image": "12 December/images/day_30.webp",
     "audio": "12 December/audio/Track30.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 30 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 30."
-      }
+      { "start": 4.8, "en": "Our school put on a show to celebrate the New Year. Each class, from kindergarten to Grade 6, was to do at least one thing-dancing, singing or poetry reading.", "ipa": "/ˈaʊər skuːl pʊt ɒn ə ʃoʊ tuː ˈsɛlɪˌbreɪt ðə nuː jɪər. iːtʃ klɑːs, frɒm ˈkɪndərˌɡɑːrtən tuː ɡreɪd sɪks, wɒz tuː duː æt liːst wʌn θɪŋ-ˈdænsɪŋ, ˈsɪŋɪŋ ɔːr ˈpoʊɪtri ˈriːdɪŋ/", "vi": "Trường chúng tôi tổ chức một chương trình văn nghệ hoành tráng chào đón năm mới. Mỗi lớp từ mẫu giáo đến lớp 6 đều đóng góp ít nhất một tiết mục đặc sắc như múa hát, ca khúc hoặc ngâm thơ." },
+      { "start": 18.0, "en": "Who would be in the audience? Of course, there would be lots of teachers, students and parents.", "ipa": "/huː wʊd biː ɪn ði ˈɔːdiəns? əv kɔːrs, ðɛər wʊd biː lɒts əv ˈtiːtʃərz, ˈstjuːdnts ænd ˈpɛərənts/", "vi": "Khán giả bên dưới là ai ư? Dĩ nhiên là đông đảo thầy cô giáo, học sinh và các bậc phụ huynh rồi." },
+      { "start": 27.0, "en": "The day of the show came. The show started with the kindergarten class. A group of kids, ages three to four, got on the stage.", "ipa": "/ðə deɪ əv ðə ʃoʊ keɪm. ðə ʃoʊ ˈstɑːrtɪd wɪð ðə ˈkɪndərˌɡɑːrtən klɑːs. ə ɡruːp əv kɪdz, eɪdʒɪz θriː tuː fɔːr, ɡɒt ɒn ðə steɪdʒ/", "vi": "Ngày biểu diễn cuối cùng cũng đến. Chương trình mở màn với tiết mục của các bé mẫu giáo. Một nhóm trẻ tầm 3 đến 4 tuổi hào hứng bước lên sân khấu." },
+      { "start": 38.0, "en": "Their teacher held the hand of the first kid. The rest followed them, hand in hand. When the music started, all the children started dancing in their own way.", "ipa": "/ðɛər ˈtiːtʃər hɛld ðə hænd əv ðə fɜːrst kɪd. ði rɛst ˈfɒloʊd ðɛm, hænd ɪn hænd. wɛn ðə ˈmjuːzɪk ˈstɑːrtɪd, ɔːl ðə ˈtʃɪldrən ˈstɑːrtɪd ˈdænsɪŋ ɪn ðɛər oʊn weɪ/", "vi": "Cô giáo nắm tay bé đứng đầu tiên, các bé đằng sau cứ thế nắm tay nhau nối dài bước lên. Khi nhạc nổi lên, tất cả lũ trẻ bắt đầu nhún nhảy theo cách ngộ nghĩnh của riêng mình." },
+      { "start": 54.0, "en": "Two little boys were just standing there, watching the audience. People applauded to cheer for them.", "ipa": "/tuː ˈlɪtl bɔɪz wɜːr dʒʌst ˈstændɪŋ ðɛər, ˈwɒtʃɪŋ ði ˈɔːdiəns. ˈpiːpl əˈplɔːdɪd tuː tʃɪər fɔːr ðɛm/", "vi": "Có hai cậu bé đứng trân trân ngẩn ngơ ngắm khán giả bên dưới, khiến ai nấy phì cười vỗ tay cổ vũ nhiệt tình." },
+      { "start": 63.0, "en": "When the music stopped, the class turned to leave. But one little girl didn't want to leave. She wanted to stay on stage and keep dancing.", "ipa": "/wɛn ðə ˈmjuːzɪk stɒpt, ðə klɑːs tɜːrnd tuː liːv. bʌt wʌn ˈlɪtl ɡɜːrl ˈdɪdnt wɒnt tuː liːv. ʃiː ˈwɒntɪd tuː steɪ ɒn steɪdʒ ænd kiːp ˈdænsɪŋ/", "vi": "Đến khi nhạc dứt, cả lớp quay người đi vào cánh gà, chỉ riêng một cô bé không chịu về vì vẫn muốn nhảy tiếp trên sân khấu." },
+      { "start": 75.0, "en": "People laughed. In the end, the teacher had to carry the girl off stage.", "ipa": "/ˈpiːpl lɑːft. ɪn ði ɛnd, ðə ˈtiːtʃər hæd tuː ˈkæri ðə ɡɜːrl ɔːf steɪdʒ/", "vi": "Khán giả cười ồ thích thú. Cuối cùng, cô giáo đành phải chạy lên bế xốc cô bé vào trong trong tiếng vỗ tay vang dội." },
+      { "start": 84.0, "en": "Everyone had a good time. It was a lot of fun to have our own show for the New Year's celebration!", "ipa": "/ˈɛvriˌwʌn hæd ə ɡʊd taɪm. ɪt wɒz ə lɒt əv fʌn tuː hæv ˈaʊər oʊn ʃoʊ fɔːr ðə nuː jɪərz ˌsɛlɪˈbreɪʃn!/", "vi": "Ai nấy đều có một khoảng thời gian tuyệt vời. Thật là một trải nghiệm đáng nhớ khi trường ta tự tổ chức một chương trình biểu diễn chào năm mới tưng bừng đến thế!" }
     ]
   },
   {
     "day": 31,
-    "title": "Story Day 31",
+    "title": "Pot of Wisdom",
     "image": "12 December/images/day_31.webp",
     "audio": "12 December/audio/Track31.mp3",
     "sentences": [
-      {
-        "start": 4.8,
-        "en": "Day 31 lesson content.",
-        "ipa": "",
-        "vi": "Nội dung bài học ngày 31."
-      }
+      { "start": 4.8, "en": "Long ago, when the world was young, a spider was given a pot containing all the wisdom of the world. Each day, he reached into the pot and learned something new.", "ipa": "/lɒŋ əˈɡoʊ, wɛn ðə wɜːrld wɒz jʌŋ, ə ˈspaɪdər wɒz ˈɡɪvn ə pɒt kənˈteɪnɪŋ ɔːl ðə ˈwɪzdəm əv ðə wɜːrld. iːtʃ deɪ, hiː riːtʃt ˈɪntuː ðə pɒt ænd lɜːrnd ˈsʌmθɪŋ nuː/", "vi": "Ngày xửa ngày xưa, khi thế giới hãy còn sơ khai, một chú nhện được thần linh ban cho chiếc vạc chứa toàn bộ trí tuệ của vũ trụ. Mỗi ngày, chú đều thò tay vào vạc để lĩnh hội thêm những điều mới mẻ." },
+      { "start": 18.0, "en": "But Spider would not share. He wanted to keep all the wisdom to himself.", "ipa": "/bʌt ˈspaɪdər wʊd nɒt ʃɛər. hiː ˈwɒntɪd tuː kiːp ɔːl ðə ˈwɪzdəm tuː hɪmˈsɛlf/", "vi": "Nhưng Nhện ta lại vô cùng ích kỷ, không muốn chia sẻ với bất kỳ ai mà muốn độc chiếm toàn bộ trí tuệ cho riêng mình." },
+      { "start": 26.0, "en": "Spider made a plan. He began to climb a tall tree. 'I will hide the wisdom pot way up high,' he said. 'I will be the wisest one in the world.'", "ipa": "/ˈspaɪdər meɪd ə plæn. hiː bɪˈɡæn tuː klaɪm ə tɔːl triː. aɪ wɪl haɪd ðə ˈwɪzdəm pɒt weɪ ʌp haɪ, hiː sɛd. aɪ wɪl biː ðə ˈwaɪzɪst wʌn ɪn ðə wɜːrld/", "vi": "Nhện bèn lên kế hoạch, cõng cái vạc trèo lên một ngọn cây cao chót vót. 'Ta sẽ giấu cái vạc trí tuệ này tít trên ngọn cao,' chú lẩm bẩm. 'Khi ấy ta sẽ là kẻ thông thái nhất trên đời.'" },
+      { "start": 42.0, "en": "As he climbed, he had a lot of trouble. The pot kept getting stuck in the branches. From below, Spider's son watched. He called out, 'Tie the pot to your back, Father. That way, it will be easier to climb.'", "ipa": "/æz hiː klaɪmd, hiː hæd ə lɒt əv ˈtrʌbl. ðə pɒt kɛpt ˈɡɛtɪŋ stʌk ɪn ðə ˈbræntʃɪz. frɒm bɪˈloʊ, ˈspaɪdərz sʌn wɒtʃt. hiː kɔːld aʊt, taɪ ðə pɒt tuː jɔːr bæk, ˈfɑːðər. ðæt weɪ, ɪt wɪl biː ˈiːziər tuː klaɪm/", "vi": "Vừa trèo chú vừa gặp vô vàn khó khăn vì chiếc vạc cứ vướng víu vào các cành lá. Đứng dưới gốc cây quan sát từ nãy đến giờ, cậu con trai liền gọi vọng lên: 'Bố buộc cái vạc sau lưng ấy, như thế trèo sẽ dễ hơn nhiều.'" },
+      { "start": 62.0, "en": "Spider got mad. He thought, 'My young son is wiser than I. I have the wisdom pot, yet he is wiser.'", "ipa": "/ˈspaɪdər ɡɒt mæd. hiː θɔːt, maɪ jʌŋ sʌn ɪz ˈwaɪzər ðæn aɪ. aɪ hæv ðə ˈwɪzdəm pɒt, jɛt hiː ɪz ˈwaɪzər/", "vi": "Nhện nghe xong bỗng nổi khùng lên tự ái. Chú ta nghĩ thầm: 'Đứa con trai bé bỏng của mình lại thông thái hơn cả mình cơ á? Mình đang giữ vạc trí tuệ trong tay mà sao nó lại khôn hơn mình được chứ?'" },
+      { "start": 72.0, "en": "Spider got very mad and threw the pot to the ground, breaking it into many pieces. Everyone picked up a piece of wisdom.", "ipa": "/ˈspaɪdər ɡɒt ˈvɛri mæd ænd θruː ðə pɒt tuː ðə ɡraʊnd, ˈbreɪkɪŋ ɪt ˈɪntuː ˈmɛni ˈpiːsɪz. ˈɛvriˌwʌn pɪkt ʌp ə piːs əv ˈwɪzdəm/", "vi": "Vì quá tức tối và ghen tị, Nhện quăng mạnh chiếc vạc xuống đất khiến nó vỡ tung thành trăm mảnh. Từng mảnh trí tuệ văng tứ tung và mỗi người dân đi ngang qua đều nhặt được một mảnh nhỏ." },
+      { "start": 86.0, "en": "And that is why many people know different things. But no one has all the wisdom in the world.", "ipa": "/ænd ðæt ɪz waɪ ˈmɛni ˈpiːpl noʊ ˈdɪfrənt θɪŋz. bʌt noʊ wʌn hæz ɔːl ðə ˈwɪzdəm ɪn ðə wɜːrld/", "vi": "Đó chính là lý do vì sao mỗi người trên thế giới này lại biết và giỏi về một lĩnh vực khác nhau, chẳng ai có thể thâu tóm toàn bộ trí tuệ của vũ trụ cả." }
     ]
   }
 ];
