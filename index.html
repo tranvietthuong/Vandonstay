@@ -930,7 +930,7 @@
         <ul class="footer-links">
           <li><a href="./tranghoctap/index.html">📚 <strong>Học tập</strong> : Kho học liệu tương tác cho bé</a></li>
           <li><a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer">💬 <strong>Chat Zalo 1-1</strong> : Nhận báo giá & lịch trống villa theo đoàn</a></li>
-          <li><a href="https://facebook.com/yourfanpage" target="_blank" rel="noopener noreferrer">👥 <strong>Fanpage Villa Sonasea</strong> : Kết nối trực tiếp عبر Fanpage</a></li>
+          <li><a href="https://facebook.com/yourfanpage" target="_blank" rel="noopener noreferrer">👥 <strong>Fanpage Villa Sonasea</strong> : Kết nối trực tiếp qua Fanpage</a></li>
           <li><a href="https://facebook.com/groups/yourgroupvilla" target="_blank" rel="noopener noreferrer">🏖️ <strong>Group Villa Sonasea</strong> : Review & chia sẻ kinh nghiệm nghỉ dưỡng</a></li>
           <li><a href="tel:0396588880">👑 <strong>Hỗ trợ khách đoàn</strong> : Ưu đãi gia đình dài ngày</a></li>
         </ul>
@@ -995,7 +995,7 @@
       if (isAdminLoggedIn()) { btn.innerText = '🔓 Thoát Admin'; btn.style.color = '#34d399'; }
     });
 
-    // ĐÚNG 16 CĂN KÈM THÔNG SỐ ĐẦY ĐỦ NHƯ TRONG BẢNG EXCEL MỚI
+    // DANH SÁCH ĐÚNG 16 CĂN KÈM THÔNG SỐ CHUẨN TỪ BẢNG EXCEL
     const villasMeta = [
       { folder: "V2A02", name: "Villa V2A02", desc: "3PN, 3 giường • 6NL, 3TE" },
       { folder: "V2C05A", name: "Villa V2C05A", desc: "3PN+1, 4 giường • 8NL, 3TE" },
@@ -1030,9 +1030,10 @@
 
     async function loadExcelData() {
       try {
-        // LINK GOOGLE SHEETS MỚI CỦA ANH ĐƯỢC CẤU HÌNH XUẤT EXCEL TRỰC TUYẾN
+        // LINK GOOGLE SHEETS MỚI CỦA ANH KÈM TAB GID
         const sheetID = "1mNuY4W50roh-s6KUVQrn-Bi0uUX5oAfs";
-        const url = `https://docs.google.com/spreadsheets/d/${sheetID}/export?format=xlsx`;
+        const gid = "604996768";
+        const url = `https://docs.google.com/spreadsheets/d/${sheetID}/export?format=xlsx&gid=${gid}`;
 
         const response = await fetch(url);
         const arrayBuffer = await response.arrayBuffer();
@@ -1071,7 +1072,6 @@
               const dayNum = parseInt(dayRow[c]);
               if (!isNaN(dayNum) && dayNum >= 1 && dayNum <= 31) {
                 const val = row[c];
-                // Nhận diện giá trị 1 hoặc 2 là có khách / lock
                 if (val === 1 || val === '1' || val === 2 || val === '2' || Number(val) === 1 || Number(val) === 2) {
                   bookedArr.push(dayNum);
                 }
