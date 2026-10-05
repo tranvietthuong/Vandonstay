@@ -748,7 +748,7 @@
       .footer-bottom { flex-direction: column; text-align: center; }
     }
 
-    /* NÚT GỌI NỔI 2 CHỨC NĂNG (ZALO & SĐT) */
+    /* NÚT GỌI ĐIỆN NỔI 2 CHỨC NĂNG (ZALO & SĐT) */
     .floating-call-container {
       position: fixed;
       bottom: 24px;
@@ -948,10 +948,10 @@
     <h2 class="section-title">🏡 DANH SÁCH 20 CĂN BIỆT THỰ NGHỈ DƯỠNG</h2>
     
     <div class="status-summary" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-size:13px; font-weight:700;">
-      <div id="searchMessage">Đang hiển thị: <strong>Hiện trạng phòng hôm nay</strong></div>
+      <div id="searchMessage">Đang đọc dữ liệu từ file Excel...</div>
       <div class="status-badges" style="display:flex; gap:10px;">
         <span class="badge-green" style="color:#059669;">● Còn phòng</span>
-        <span class="badge-red" style="color:#dc2626;">● Đã kín</span>
+        <span class="badge-red" style="color:#dc2626;">● Đã kín/Lock</span>
       </div>
     </div>
 
@@ -979,7 +979,7 @@
     </div>
   </div>
 
-  <!-- NÚT GỌI ĐIỆN NỔI GÓC DƯỚI BÊN PHẢI (2 CHỨC NĂNG ZALO & SĐT) -->
+  <!-- NÚT GỌI ĐIỆN NỔI -->
   <div class="floating-call-container" onclick="event.stopPropagation()">
     <div class="call-options-popup" id="callPopup">
       <a href="https://zalo.me/0396588880" target="_blank" rel="noopener noreferrer" class="call-option-item call-option-zalo">
@@ -994,7 +994,7 @@
     </button>
   </div>
 
-  <!-- 7. CHÂN TRANG ĐẦY ĐỦ KÈM GOOGLE MAPS -->
+  <!-- 7. CHÂN TRANG ĐẦY ĐỦ KÈM MAPS VÀ NÚT ADMIN -->
   <footer class="footer-section">
     <div class="footer-container">
       
@@ -1034,9 +1034,17 @@
 
     <div class="footer-bottom">
       <div>© 2026 VandonStay. Hệ thống quản lý & cho thuê biệt thự nghỉ dưỡng Sonasea Vân Đồn.</div>
-      <div>Phát triển và vận hành bởi đội ngũ Kỹ thuật Vandonstay</div>
+      <div style="display:flex; align-items:center; gap:15px;">
+        <span>Phát triển và vận hành bởi đội ngũ Kỹ thuật Vandonstay</span>
+        <button onclick="toggleAdminMode()" id="adminBtn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #cbd5e1; font-size: 10.5px; padding: 3px 8px; border-radius: 4px; cursor: pointer;">
+          🔒 Admin Mode
+        </button>
+      </div>
     </div>
   </footer>
+
+  <!-- Thư viện SheetJS đọc file Excel trực tiếp -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
   <script>
     // Hàm mở/đóng Popup gọi nổi
@@ -1046,7 +1054,6 @@
       popup.classList.toggle('show');
     }
 
-    // Tự động đóng popup khi bấm ra chỗ khác
     window.addEventListener('click', function(e) {
       const popup = document.getElementById('callPopup');
       if (popup && popup.classList.contains('show')) {
@@ -1054,7 +1061,7 @@
       }
     });
 
-    // Hàm mở/đóng Popup 27 danh mục Shopee
+    // Mở/đóng Popup Shopee
     function openShopeeModal() {
       document.getElementById('shopeeModal').style.display = 'flex';
     }
@@ -1068,7 +1075,63 @@
       }
     });
 
-    // ================= XỬ LÝ LỊCH & DANH SÁCH 20 VILLA =================
+    // ================= QUẢN TRỊ ADMIN MODE =================
+    function isAdminLoggedIn() {
+      return localStorage.getItem('vandon_admin') === 'true';
+    }
+
+    function toggleAdminMode() {
+      if (isAdminLoggedIn()) {
+        if (confirm('Bạn có muốn thoát chế độ Admin không?')) {
+          localStorage.removeItem('vandon_admin');
+          alert('Đã tắt chế độ Admin.');
+          location.reload();
+        }
+      } else {
+        const pass = prompt('Nhập mật khẩu quản trị viên:');
+        if (pass === 'C2026@') {
+          localStorage.setItem('vandon_admin', 'true');
+          alert('Đăng nhập thành công! Chế độ Quản trị đã được kích hoạt.');
+          location.reload();
+        } else if (pass !== null) {
+          alert('Mật khẩu không chính xác!');
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('adminBtn');
+      if (isAdminLoggedIn()) {
+        btn.innerText = '🔓 Thoát Admin';
+        btn.style.borderColor = '#34d399';
+        btn.style.color = '#34d399';
+      }
+    });
+
+    // ================= DANH SÁCH 20 VILLA CHUẨN =================
+    const villasMeta = [
+      { folder: "V2A02", name: "Villa V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ" },
+      { folder: "V2C05A", name: "Villa V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn" },
+      { folder: "V2C06", name: "Villa V2C06", desc: "3 PN • Không gian yên tĩnh" },
+      { folder: "V2C08A", name: "Villa V2C08A", desc: "3 PN • Thiết kế trang nhã" },
+      { folder: "V2D05A", name: "Villa V2D05A", desc: "3 PN • Nội thất gỗ cao cấp" },
+      { folder: "V3A09", name: "Villa V3A09", desc: "3 PN • Căn góc thoáng đãng" },
+      { folder: "V3A10", name: "Villa V3A10", desc: "3 PN • Bể bơi tràn bờ" },
+      { folder: "V3H01", name: "Villa V3H01", desc: "3 PN • Gần trục đường chính" },
+      { folder: "V3I02", name: "Villa V3I02", desc: "3 PN • Sân nướng BBQ riêng" },
+      { folder: "V3I03", name: "Villa V3I03", desc: "3 PN • Ban công view biển" },
+      { folder: "V3J03", name: "Villa V3J03", desc: "3 PN • Phong cách Địa Trung Hải" },
+      { folder: "V3K10", name: "Villa V3K10", desc: "3 PN • View công viên cây xanh" },
+      { folder: "V3K11", name: "Villa V3K11", desc: "4 PN • Không gian rộng lớn" },
+      { folder: "V3M05", name: "Villa V3M05", desc: "4 PN • Bể bơi panorama" },
+      { folder: "V3M11A", name: "Villa V3M11A", desc: "4 PN • Trực diện vịnh Bái Tử Long" },
+      { folder: "V3N01", name: "Villa V3N01", desc: "4 PN • Sang trọng đẳng cấp" },
+      { folder: "V3N08A", name: "Villa V3N08A", desc: "4 PN • Căn góc 2 mặt tiền" },
+      { folder: "villa-18", name: "Villa No.18 VIP", desc: "5 PN • Đơn lập VIP ven bãi cát" },
+      { folder: "villa-19", name: "Villa No.19 VIP", desc: "5 PN • Bể bơi lớn gia đình" },
+      { folder: "villa-20", name: "Villa No.20 VIP", desc: "5 PN • Nội thất 5 sao cao cấp" }
+    ];
+
     const today = new Date();
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -1078,39 +1141,90 @@
     const outInput = document.getElementById('checkout');
     inInput.value = toYMD(today);
     outInput.value = toYMD(tomorrow);
-    inInput.min = toYMD(today);
+    if (!isAdminLoggedIn()) inInput.min = toYMD(today);
 
-    const villas = [
-      { folder: "V2A02", name: "Villa V2A02", desc: "3 PN • Bể bơi riêng • Bếp BBQ", bookedDates: [toYMD(today)] },
-      { folder: "V2C05A", name: "Villa V2C05A", desc: "3 PN • Gần bãi tắm • Sân vườn", bookedDates: [] },
-      { folder: "V2C06", name: "Villa V2C06", desc: "3 PN • Không gian yên tĩnh", bookedDates: [] },
-      { folder: "V2C08A", name: "Villa V2C08A", desc: "3 PN • Thiết kế trang nhã", bookedDates: [toYMD(today)] },
-      { folder: "V2D05A", name: "Villa V2D05A", desc: "3 PN • Nội thất gỗ cao cấp", bookedDates: [] },
-      { folder: "V3A09", name: "Villa V3A09", desc: "3 PN • Căn góc thoáng đãng", bookedDates: [] },
-      { folder: "V3A10", name: "Villa V3A10", desc: "3 PN • Bể bơi tràn bờ", bookedDates: [] },
-      { folder: "V3H01", name: "Villa V3H01", desc: "3 PN • Gần trục đường chính", bookedDates: [toYMD(today)] },
-      { folder: "V3I02", name: "Villa V3I02", desc: "3 PN • Sân nướng BBQ riêng", bookedDates: [] },
-      { folder: "V3I03", name: "Villa V3I03", desc: "3 PN • Ban công view biển", bookedDates: [] },
-      { folder: "V3J03", name: "Villa V3J03", desc: "3 PN • Phong cách Địa Trung Hải", bookedDates: [] },
-      { folder: "V3K10", name: "Villa V3K10", desc: "3 PN • View công viên cây xanh", bookedDates: [] },
-      { folder: "V3K11", name: "Villa V3K11", desc: "4 PN • Không gian rộng lớn", bookedDates: [] },
-      { folder: "V3M05", name: "Villa V3M05", desc: "4 PN • Bể bơi panorama", bookedDates: [toYMD(today)] },
-      { folder: "V3M11A", name: "Villa V3M11A", desc: "4 PN • Trực diện vịnh Bái Tử Long", bookedDates: [] },
-      { folder: "V3N01", name: "Villa V3N01", desc: "4 PN • Sang trọng đẳng cấp", bookedDates: [] },
-      { folder: "V3N08A", name: "Villa V3N08A", desc: "4 PN • Căn góc 2 mặt tiền", bookedDates: [] },
-      { folder: "villa-18", name: "Villa No.18 VIP", desc: "5 PN • Đơn lập VIP ven bãi cát", bookedDates: [] },
-      { folder: "villa-19", name: "Villa No.19 VIP", desc: "5 PN • Bể bơi lớn gia đình", bookedDates: [] },
-      { folder: "villa-20", name: "Villa No.20 VIP", desc: "5 PN • Nội thất 5 sao cao cấp", bookedDates: [] }
-    ];
+    // ================= TỰ ĐỘNG ĐỌC FILE EXCEL ĐỒNG BỘ 0, 1, 2 =================
+    let excelBookings = {};
 
-    function isVillaBooked(villa, startDateStr, endDateStr) {
-      if (!villa.bookedDates || villa.bookedDates.length === 0) return false;
+    async function loadExcelData() {
+      try {
+        const response = await fetch('VILLA SONASEA VÂN ĐỒN 2026.xlsx');
+        const arrayBuffer = await response.arrayBuffer();
+        const data = new Uint8Array(arrayBuffer);
+        const workbook = XLSX.read(data, { type: 'array' });
+
+        const dCheck = new Date(inInput.value);
+        const m = dCheck.getMonth() + 1;
+        const y = dCheck.getFullYear();
+        const sheetName = `Tháng ${m}.${y}`;
+        
+        let worksheet = workbook.Sheets[sheetName] || workbook.Sheets[workbook.SheetNames[workbook.SheetNames.length - 1]];
+        if (worksheet) {
+          const rows = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+          
+          // Dựa theo cấu trúc thực tế: Hàng index 4 chứa các số ngày (1, 2, 3...) bắt đầu từ cột H (index 7) hoặc I (index 8)
+          let dayRowIdx = 4;
+          let dayRow = rows[4] || [];
+          
+          for (let i = 0; i < Math.min(rows.length, 8); i++) {
+            if (rows[i] && (rows[i].includes(1) || rows[i].includes('1')) && (rows[i].includes(15) || rows[i].includes('15'))) {
+              dayRowIdx = i;
+              dayRow = rows[i];
+              break;
+            }
+          }
+
+          let sheetResult = {};
+
+          // Duyệt qua các hàng villa từ sau hàng ngày trở xuống
+          for (let r = dayRowIdx + 1; r < rows.length; r++) {
+            const row = rows[r];
+            if (!row) continue;
+            const villaCode = String(row[1] || '').trim(); // Cột B: Mã Villa (V2A02, V2C05A...)
+            if (!villaCode || (!villaCode.startsWith('V') && !villaCode.startsWith('villa'))) continue;
+
+            let bookedArr = [];
+            for (let c = 0; c < dayRow.length; c++) {
+              const dayNum = parseInt(dayRow[c]);
+              if (!isNaN(dayNum) && dayNum >= 1 && dayNum <= 31) {
+                const val = row[c];
+                // Giá trị 1 (Đã đặt) hoặc 2 (Tạm Lock)
+                if (val === 1 || val === '1' || val === 2 || val === '2' || Number(val) === 1 || Number(val) === 2) {
+                  bookedArr.push(dayNum);
+                }
+              }
+            }
+            sheetResult[villaCode] = bookedArr;
+          }
+          excelBookings = sheetResult;
+        }
+        renderVillas(inInput.value, outInput.value, false);
+      } catch (err) {
+        console.log("Lỗi đọc file Excel:", err);
+        renderVillas(inInput.value, outInput.value, false);
+      }
+    }
+
+    function isVillaBooked(villaName, startDateStr, endDateStr) {
+      const codeMatch = villaName.match(/(V\d\w+\d*|villa-\d+)/i);
+      const villaKey = codeMatch ? codeMatch[0] : villaName;
+
+      let bookings = [];
+      for (let key in excelBookings) {
+        if (key.toUpperCase() === villaKey.toUpperCase() || villaName.toUpperCase().includes(key.toUpperCase())) {
+          bookings = excelBookings[key];
+          break;
+        }
+      }
+
+      if (!bookings || bookings.length === 0) return false;
+
       const start = new Date(startDateStr);
       const end = new Date(endDateStr);
 
       for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
-        const checkStr = toYMD(d);
-        if (villa.bookedDates.includes(checkStr)) return true;
+        const dayNum = d.getDate();
+        if (bookings.includes(dayNum)) return true;
       }
       return false;
     }
@@ -1120,22 +1234,18 @@
       grid.innerHTML = '';
       let availableCount = 0;
 
-      villas.forEach((villa) => {
-        const booked = isVillaBooked(villa, startDateStr, endDateStr);
+      villasMeta.forEach((villa) => {
+        const booked = isVillaBooked(villa.name, startDateStr, endDateStr);
         if (!booked) availableCount++;
 
         const card = document.createElement('div');
         card.className = `villa-item ${booked ? 'is-booked' : ''}`;
-        
         const coverUrl = `villasonasea/${villa.folder}/1.jpg`;
-        const statusLabel = booked ? 'Đã kín' : 'Còn phòng';
-        const statusClass = booked ? 'status-booked-tag' : 'status-available-tag';
-        const statusIcon = booked ? '⛔' : '✔';
         const zaloUrl = `https://zalo.me/0396588880?text=${encodeURIComponent('Chào bạn, tôi muốn đặt căn ' + villa.name + ' từ ngày ' + startDateStr + ' đến ' + endDateStr)}`;
 
         card.innerHTML = `
           <div class="item-thumb" style="background-image: url('${coverUrl}'), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80');" onclick="loadAndOpenVillaAlbum('${villa.name}', '${villa.folder}', ${booked})">
-            <span class="tag-status ${statusClass}">${statusIcon} ${statusLabel}</span>
+            <span class="tag-status ${booked ? 'status-booked-tag' : 'status-available-tag'}">${booked ? '⛔ Đã kín' : '✔ Còn phòng'}</span>
             <span class="thumb-hint">📷 Xem Album</span>
           </div>
           <div class="item-body">
@@ -1143,10 +1253,7 @@
             <p class="item-desc">${villa.desc}</p>
             <div class="item-foot">
               <span class="item-price">Giá tốt</span>
-              ${booked 
-                ? `<span class="btn-action-status btn-booked-out">⛔ Hết phòng</span>`
-                : `<a href="${zaloUrl}" target="_blank" rel="noopener noreferrer" class="btn-action-status btn-book-now" onclick="event.stopPropagation()">Đặt Căn Này ➔</a>`
-              }
+              ${booked ? `<span class="btn-action-status btn-booked-out">⛔ Hết phòng</span>` : `<a href="${zaloUrl}" target="_blank" rel="noopener noreferrer" class="btn-action-status btn-book-now" onclick="event.stopPropagation()">Đặt Căn Này ➔</a>`}
             </div>
           </div>
         `;
@@ -1154,10 +1261,12 @@
       });
 
       const messageBox = document.getElementById('searchMessage');
+      const adminNotice = isAdminLoggedIn() ? ' <span style="color:#d97706; font-size:11px;">[⚡ Chế độ Admin]</span>' : '';
+      
       if (isFiltered) {
-        messageBox.innerHTML = `Từ <strong>${startDateStr}</strong> đến <strong>${endDateStr}</strong>: Còn <strong>${availableCount}/20</strong> căn khả dụng.`;
+        messageBox.innerHTML = `Từ <strong>${startDateStr}</strong> đến <strong>${endDateStr}</strong>: Còn <strong>${availableCount}/20</strong> căn khả dụng.${adminNotice}`;
       } else {
-        messageBox.innerHTML = `Hôm nay: Còn <strong>${availableCount}/20</strong> căn sẵn sàng đón khách.`;
+        messageBox.innerHTML = `Hôm nay: Còn <strong>${availableCount}/20</strong> căn sẵn sàng đón khách.${adminNotice}`;
       }
     }
 
@@ -1165,14 +1274,24 @@
       e.preventDefault();
       const checkinVal = inInput.value;
       const checkoutVal = outInput.value;
-      if (new Date(checkoutVal) <= new Date(checkinVal)) {
+      const selectDate = new Date(checkinVal);
+      const todayDate = new Date();
+      todayDate.setHours(0, 0, 0, 0);
+
+      if (!isAdminLoggedIn() && selectDate < todayDate) {
+        alert('Khách hàng chỉ có thể tra cứu các tháng hiện tại và tương lai!');
+        inInput.value = toYMD(todayDate);
+        return;
+      }
+
+      if (new Date(checkoutVal) <= selectDate) {
         alert('Ngày trả phòng phải sau ngày nhận phòng!');
         return;
       }
-      renderVillas(checkinVal, checkoutVal, true);
+      loadExcelData();
     }
 
-    renderVillas(toYMD(today), toYMD(tomorrow), false);
+    loadExcelData();
 
     // ================= ALBUM ẢNH & ENGINE GIAO DIỆN =================
     let currentAlbum = [];
