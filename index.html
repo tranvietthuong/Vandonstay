@@ -9,7 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Thư viện SheetJS đọc file Excel trực tiếp -->
+  <!-- Thư viện SheetJS đọc dữ liệu trực tiếp -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
   <style>
@@ -855,7 +855,7 @@
         <a href="https://s.shopee.vn/6q0rQhkcYb" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🎒 Balo & Túi Ví Nam</a>
         <a href="https://s.shopee.vn/3VkPSbAvl3" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🧸 Đồ Chơi</a>
         <a href="https://s.shopee.vn/6q0rQnVY1h" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🐱 Chăm Sóc Thú Cưng</a>
-        <a href="https://s.shopee.vn/7ptOceeXle" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🛠️️ Dụng Cụ & Thiết Bị</a>
+        <a href="https://s.shopee.vn/7ptOceeXle" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🛠️ Dụng Cụ & Thiết Bị</a>
         <a href="https://s.shopee.vn/4qFn3DACBn" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👶 Thời Trang Trẻ Em</a>
         <a href="https://s.shopee.vn/5AsDrqZPPB" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🧼 Giặt Giũ & Nhà Cửa</a>
         <a href="https://s.shopee.vn/50ZDFYhgNc" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🎟️ Voucher & Dịch Vụ</a>
@@ -868,7 +868,7 @@
     <h2 class="section-title">🏡 DANH SÁCH 16 CĂN BIỆT THỰ NGHỈ DƯỠNG</h2>
     
     <div class="status-summary" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-size:12.5px; font-weight:600;">
-      <div id="searchMessage">Đang đọc dữ liệu từ file Excel...</div>
+      <div id="searchMessage">Đang đọc dữ liệu trực tuyến từ Google Sheets...</div>
       <div class="status-badges" style="display:flex; gap:10px;">
         <span class="badge-green" style="color:#059669;">● Còn phòng</span>
         <span class="badge-red" style="color:#dc2626;">● Có khách</span>
@@ -995,7 +995,7 @@
       if (isAdminLoggedIn()) { btn.innerText = '🔓 Thoát Admin'; btn.style.color = '#34d399'; }
     });
 
-    // ĐÃ CẬP NHẬT CHÍNH XÁC 16 CĂN KÈM THÔNG SỐ SỐ PHÒNG NGỦ VÀ TIÊU CHUẨN KHÁCH ĐÚNG NHƯ TRONG BẢNG EXCEL
+    // ĐÚNG 16 CĂN KÈM THÔNG SỐ PHÒNG NGỦ VÀ TIÊU CHUẨN KHÁCH ĐÚNG THỰC TẾ
     const villasMeta = [
       { folder: "V2A02", name: "Villa V2A02", desc: "3PN, 3 giường • 6NL, 3TE" },
       { folder: "V2C05A", name: "Villa V2C05A", desc: "3PN+1, 4 giường • 8NL, 3TE" },
@@ -1030,7 +1030,11 @@
 
     async function loadExcelData() {
       try {
-        const response = await fetch('VILLA SONASEA VÂN ĐỒN 2026.xlsx');
+        // LINK GOOGLE SHEETS TRỰC TUYẾN ĐƯỢC CHUYỂN ĐỔI CHUẨN XÁC ĐỂ TRUY XUẤT DỮ LIỆU
+        const sheetID = "1V-j0X4qI_LOPUjxw6TfU4AJ2FAc8HhJm";
+        const url = `https://docs.google.com/spreadsheets/d/${sheetID}/export?format=xlsx`;
+
+        const response = await fetch(url);
         const arrayBuffer = await response.arrayBuffer();
         const data = new Uint8Array(arrayBuffer);
         const workbook = XLSX.read(data, { type: 'array' });
@@ -1067,6 +1071,7 @@
               const dayNum = parseInt(dayRow[c]);
               if (!isNaN(dayNum) && dayNum >= 1 && dayNum <= 31) {
                 const val = row[c];
+                // Nhận diện giá trị 1 hoặc 2 là có khách / lock
                 if (val === 1 || val === '1' || val === 2 || val === '2' || Number(val) === 1 || Number(val) === 2) {
                   bookedArr.push(dayNum);
                 }
@@ -1078,7 +1083,7 @@
         }
         renderVillas(inInput.value, outInput.value, false);
       } catch (err) {
-        console.log("Lỗi đọc file Excel:", err);
+        console.log("Lỗi đọc Google Sheets:", err);
         renderVillas(inInput.value, outInput.value, false);
       }
     }
