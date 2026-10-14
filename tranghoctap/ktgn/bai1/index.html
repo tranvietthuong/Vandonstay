@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bài 1: Ghi Nhớ Số 00 - 09 | Siêu Trí Nhớ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Quicksand', sans-serif; }
+        /* Hỗ trợ chế độ phóng to toàn màn hình slide */
+        #flashcard-box:fullscreen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            padding: 20px;
+            width: 100vw;
+            height: 100vh;
+        }
+        #flashcard-box:-webkit-full-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            padding: 20px;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 flex justify-center items-center min-h-screen p-2 sm:p-4">
+
+<div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl p-4 sm:p-6 my-4 border border-slate-200 space-y-6">
+
+    <!-- Header điều hướng -->
+    <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <a href="../index.html" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition">
+            ⬅ Trang chủ (00 - 99)
+        </a>
+        <span class="text-xs font-bold text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+            Hành trình 1: Cổng & Sân trước
+        </span>
+    </div>
+
+    <div class="text-center">
+        <h1 class="text-xl sm:text-2xl font-black text-blue-600 uppercase tracking-wide">
+            📖 BÀI 1: HỌC SỐ TỪ 00 ĐẾN 09
+        </h1>
+        <p class="text-xs text-slate-500 mt-1">Phương pháp mã hóa hình ảnh & 10 Điểm neo Siêu Trí Nhớ</p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 1: BẢNG SLIDE PHẢN XẠ HỌC SỐ 00 - 09 -->
+    <!-- ========================================== -->
+    <div class="space-y-3">
+        <div id="flashcard-box" class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4 text-center relative min-h-[290px] sm:min-h-[330px] flex flex-col justify-center items-center shadow-inner">
+            <div class="absolute top-3 left-3 flex gap-2">
+                <button onclick="toggleFullscreen()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1 shadow-sm">
+                    ⛶ Toàn màn hình
+                </button>
+            </div>
+            <div id="counterDisplay" class="absolute top-3 right-4 text-xs font-bold text-slate-400">1/10</div>
+            
+            <div id="number-main" class="text-6xl sm:text-8xl font-black text-blue-600 mb-1">00</div>
+            
+            <div class="h-36 sm:h-44 flex items-center justify-center my-1">
+                <img id="img-main" src="../image/00.png" alt="00" class="max-h-full max-w-full object-contain rounded-xl shadow-md border border-slate-200">
+            </div>
+            
+            <div id="status-text" class="text-sm sm:text-lg font-bold text-slate-700 bg-blue-50 px-4 py-1.5 rounded-full border border-blue-200 min-h-[36px] flex items-center justify-center">
+                Quả trứng (Egg)
+            </div>
+        </div>
+
+        <!-- Bảng điều khiển slide -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 sm:p-4 space-y-2.5">
+            <div class="grid grid-cols-3 gap-2">
+                <div>
+                    <label class="text-[10px] text-slate-500 font-bold block mb-1">TỪ SỐ</label>
+                    <input type="number" id="inputFrom" value="0" min="0" max="9" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                </div>
+                <div>
+                    <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
+                    <input type="number" id="inputTo" value="9" min="0" max="9" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                </div>
+                <div>
+                    <label class="text-[10px] text-slate-500 font-bold block mb-1">GIÂY / SỐ</label>
+                    <input type="text" id="inputSpeed" value="1.5" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-around items-center pt-2 border-t border-slate-200 text-xs font-semibold text-slate-600">
+                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="forward" checked class="accent-blue-600"> Tiến (00-09)</label>
+                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="backward" class="accent-blue-600"> Lùi</label>
+                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="random" class="accent-blue-600"> Ngẫu nhiên</label>
+                <label class="flex items-center gap-1 text-green-600 cursor-pointer"><input type="checkbox" id="checkLoop" class="accent-green-600" checked> Lặp lại</label>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-dashed border-slate-200">
+                <span class="text-xs font-bold text-purple-700">🔊 Giọng đọc AI Tiếng Anh:</span>
+                <select id="audioEngine" class="text-xs p-1.5 border border-purple-300 rounded-lg font-bold bg-purple-50 text-purple-900 w-40">
+                    <option value="en-us" selected>Bật (English AI) 🇺🇸</option>
+                    <option value="off">Tắt âm thanh</option>
+                </select>
+            </div>
+        </div>
+
+        <button onclick="startPlay()" id="btnStart" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base">
+            ▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ 00 - 09
+        </button>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 2: CÂU CHUYỆN HÀI HƯỚC ĐIỂM NEO       -->
+    <!-- ========================================== -->
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3">
+        <div class="flex items-center gap-2">
+            <span class="text-lg">🎬</span>
+            <h2 class="text-sm sm:text-base font-bold text-amber-900 uppercase">
+                Câu Chuyện Hài Hước - 10 Điểm Neo (00 - 09)
+            </h2>
+        </div>
+        
+        <div class="bg-white p-4 rounded-xl border border-amber-200 text-slate-800 text-sm sm:text-base leading-relaxed space-y-3 shadow-sm font-medium">
+            <p>
+                Mở 🚪 <b>[Cổng nhà]</b>, bạn chết sững thấy 🥚 <b>quả trứng (00)</b> đang bốc cháy! Vớ vội 🌂 <b>cái ô (01)</b> ở 🧱 <b>[Hàng rào]</b>, ô bỗng biến thành 🦆 <b>con vịt (02)</b> nhảy nhót ngoài 🏡 <b>[Sân trước]</b>.
+            </p>
+            <p>
+                Vịt ta đâm bẹp ❤️ <b>trái tim (03)</b> ở 🌸 <b>[Bồn hoa]</b>, làm bạn ngã ngửa ngồi lên 🪑 <b>cái ghế (04)</b> ở 🪨 <b>[Ghế đá]</b>. Ghế chạy rầm rầm đâm vào 🍎 <b>cây táo (05)</b>, làm rơi quả táo trúng 🐚 <b>vỏ ốc (06)</b> ở 🌿 <b>[Gốc cây]</b>.
+            </p>
+            <p>
+                Bạn vớ 🪓 <b>cái rìu (07)</b> ở 🧱 <b>[Chân tường]</b> chém vỏ ốc, khiến ⛄ <b>người tuyết (08)</b> ở 🏠 <b>[Hiên nhà]</b> trượt ra, phun tuyết chào đón 🦒 <b>hươu cao cổ (09)</b> đang ngó đầu cười khà khà từ 🚪 <b>[Cửa chính]</b>!
+            </p>
+        </div>
+        <p class="text-[11px] text-amber-700 italic">
+            💡 <b>Mẹo nhớ:</b> Hình dung từng điểm neo liên tiếp kèm theo hành động vô lý, cảm xúc giật mình để khắc sâu vào não phải.
+        </p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 3: BỨC TRANH HOẠT HÌNH 3D (1.jfif)   -->
+    <!-- ========================================== -->
+    <div class="bg-pink-50 border border-pink-200 rounded-2xl p-4 sm:p-5 space-y-3 text-center">
+        <div class="flex items-center justify-center gap-2">
+            <span class="text-lg">🎨</span>
+            <h2 class="text-sm sm:text-base font-bold text-pink-700 uppercase">
+                Bức Tranh Hành Trình Trực Quan 3D (10 Điểm Neo)
+            </h2>
+        </div>
+
+        <div class="bg-white p-2 rounded-xl border border-pink-200 shadow-md overflow-hidden">
+            <img src="1.jfif" alt="Bức tranh hành trình 00-09" class="w-full h-auto rounded-lg object-cover hover:scale-[1.01] transition duration-300">
+        </div>
+        <p class="text-xs text-slate-500">
+            Minh họa toàn bộ chuỗi sự kiện từ <b>00 Quả trứng</b> ➔ <b>09 Hươu cao cổ</b>
+        </p>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PHẦN 4: TẠO CHUỖI TỪNG CẶP SỐ NGẪU NHIÊN LUYỆN PHẢN XẠ   -->
+    <!-- ======================================================== -->
+    <div class="bg-gradient-to-br from-slate-50 to-indigo-50 border-2 border-indigo-200 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-sm">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+                <span class="text-xl">🎲</span>
+                <h2 class="text-xs sm:text-sm font-black text-indigo-900 uppercase tracking-wide">
+                    Luyện Phản Xạ: Tạo Chuỗi Cặp Số Ngẫu Nhiên
+                </h2>
+            </div>
+            <span class="text-[11px] font-bold text-indigo-600 bg-white px-2.5 py-1 rounded-full border border-indigo-200 shadow-sm">
+                Bài 1 & Mở rộng
+            </span>
+        </div>
+
+        <!-- Các ô nhập dữ liệu tuỳ chỉnh linh hoạt -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
+                <label class="text-[10px] text-slate-500 font-bold block mb-1">SỐ LƯỢNG CẶP SỐ</label>
+                <input type="number" id="chainLength" value="20" min="1" max="100" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm text-indigo-600 bg-slate-50 focus:bg-white outline-none">
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
+                <label class="text-[10px] text-slate-500 font-bold block mb-1">TỪ SỐ</label>
+                <input type="number" id="chainFrom" value="0" min="0" max="99" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none">
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
+                <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
+                <input type="number" id="chainTo" value="5" min="0" max="99" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none">
+            </div>
+        </div>
+
+        <!-- Các nút bấm chức năng -->
+        <div class="flex flex-wrap gap-2">
+            <button onclick="generateRandomChain()" class="flex-1 min-w-[170px] bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-3 rounded-xl shadow-md transition active:scale-[0.99] text-xs sm:text-sm flex items-center justify-center gap-1.5">
+                ✨ TẠO CHUỖI CẶP SỐ
+            </button>
+            <button onclick="speakCurrentChain()" id="btnSpeakChain" title="Đọc lần lượt chuỗi số" class="bg-purple-600 hover:bg-purple-700 text-white px-3.5 py-3 rounded-xl font-bold text-xs transition flex items-center gap-1 shadow-sm">
+                🔊 Đọc chuỗi số
+            </button>
+            <button onclick="copyRandomChain()" id="btnCopyChain" title="Sao chép toàn bộ chuỗi số" class="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-3 rounded-xl font-bold text-xs transition flex items-center gap-1 shadow-sm">
+                📋 Sao chép
+            </button>
+        </div>
+
+        <!-- Khung hiển thị các cặp số xen kẽ màu sắc -->
+        <div class="space-y-1.5">
+            <div class="flex justify-between items-center text-[11px] font-bold text-slate-500 px-1">
+                <span>Kết quả (<span id="chainStats">0 cặp số</span>):</span>
+                <span class="text-slate-400 italic">Mỗi cặp số có màu sắc xen kẽ rõ ràng</span>
+            </div>
+            
+            <div id="chainDisplayBox" class="bg-white border-2 border-slate-200 rounded-xl p-3 sm:p-4 min-h-[90px] flex flex-wrap gap-2 items-center justify-center content-center shadow-inner">
+                <span class="text-xs text-slate-400 italic">Bấm nút trên để tạo chuỗi cặp số ngẫu nhiên...</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Dữ liệu 100 số chuẩn hoá để dùng chung cho cả đọc âm thanh và hiển thị chuỗi
+    const dataDict = {
+        "00": "Quả trứng", "01": "Cái ô", "02": "Con vịt", "03": "Trái tim", "04": "Cái ghế",
+        "05": "Quả táo", "06": "Vỏ ốc", "07": "Cái rìu", "08": "Người tuyết", "09": "Hươu cao cổ",
+        "10": "Con lợn", "11": "Cái thang", "12": "Cá mập", "13": "Con bướm", "14": "Thuyền buồm",
+        "15": "Túi tiền", "16": "Ốc sên", "17": "Nốt nhạc", "18": "Đèn giao thông", "19": "Con chó",
+        "20": "Quả bom", "21": "Ngọn nến", "22": "Thiên nga", "23": "Con công", "24": "Con sóc",
+        "25": "Cần cẩu", "26": "Gà trống", "27": "Con chuột", "28": "Thỏ", "29": "Chuột máy tính",
+        "30": "Núi và Mặt trời", "31": "Bóng đèn", "32": "Vòi sen", "33": "Khúc xương", "34": "Dưa hấu",
+        "35": "Đu đủ", "36": "Hoa hồng", "37": "Loa cầm tay", "38": "Nhẫn kim cương", "39": "Tê giác",
+        "40": "Bút chì", "41": "Bình cứu hỏa", "42": "Con diều", "43": "Người lướt sóng", "44": "Rừng thông",
+        "45": "Nam châm", "46": "Bắn cung", "47": "Bậc thang", "48": "Doraemon", "49": "Cốc Cafe",
+        "50": "Xe đạp", "51": "Sư tử", "52": "Ô tô", "53": "Cái răng", "54": "Người phục vụ",
+        "55": "Găng tay boxing", "56": "Phao cứu sinh", "57": "Cổng thành", "58": "Chú hề", "59": "Con mèo",
+        "60": "Con cua", "61": "Kẹo mút", "62": "Điện thoại", "63": "Xe máy", "64": "Người lính",
+        "65": "Chim cú mèo", "66": "Tai nghe", "67": "Con cá", "68": "Hồ lô", "69": "Bát quái",
+        "70": "Quả sầu riêng", "71": "Lá cờ", "72": "Con ma", "73": "Con trâu", "74": "Con đường",
+        "75": "Xe tăng", "76": "Nước mía", "77": "Súng", "78": "Cà chua", "79": "Trái dừa",
+        "80": "Dấu chân", "81": "Cái Loa", "82": "Cá sấu", "83": "Bạch tuộc", "84": "Kéo",
+        "85": "Hạt mầm", "86": "Chùm nho", "87": "Kính và sách", "88": "Còng số 8", "89": "Thuốc nổ",
+        "90": "Dao và thớt", "91": "Bóng rổ", "92": "Bóng bay", "93": "Cái cúp", "94": "Gốc cây",
+        "95": "Bác sĩ", "96": "Trống", "97": "Dê", "98": "Ong và hoa", "99": "Vợt cầu lông"
+    };
+
+    const dictEn = {
+        "Quả trứng": "Egg", "Cái ô": "Umbrella", "Con vịt": "Duck", "Trái tim": "Heart", "Cái ghế": "Chair",
+        "Quả táo": "Apple", "Vỏ ốc": "Seashell", "Cái rìu": "Axe", "Người tuyết": "Snowman", "Hươu cao cổ": "Giraffe",
+        "Con lợn": "Pig", "Cái thang": "Ladder", "Cá mập": "Shark", "Con bướm": "Butterfly", "Thuyền buồm": "Sailboat",
+        "Túi tiền": "Money bag", "Ốc sên": "Snail", "Nốt nhạc": "Musical note", "Đèn giao thông": "Traffic light", "Con chó": "Dog",
+        "Quả bom": "Bomb", "Ngọn nến": "Candle", "Thiên nga": "Swan", "Con công": "Peacock", "Con sóc": "Squirrel",
+        "Cần cẩu": "Crane", "Gà trống": "Rooster", "Con chuột": "Mouse", "Thỏ": "Rabbit", "Chuột máy tính": "Computer mouse",
+        "Núi và Mặt trời": "Sun over mountains", "Bóng đèn": "Light bulb", "Vòi sen": "Shower head", "Khúc xương": "Bone", "Dưa hấu": "Watermelon",
+        "Đu đủ": "Papaya", "Hoa hồng": "Rose", "Loa cầm tay": "Megaphone", "Nhẫn kim cương": "Diamond ring", "Tê giác": "Rhino",
+        "Bút chì": "Pencil", "Bình cứu hỏa": "Fire extinguisher", "Con diều": "Kite", "Người lướt sóng": "Surfer", "Rừng thông": "Pine forest",
+        "Nam châm": "Magnet", "Bắn cung": "Archery bow", "Bậc thang": "Stairs", "Doraemon": "Doraemon cat robot", "Cốc Cafe": "Coffee cup",
+        "Xe đạp": "Bicycle", "Sư tử": "Lion", "Ô tô": "Car", "Cái răng": "Tooth", "Người phục vụ": "Waiter",
+        "Găng tay boxing": "Boxing gloves", "Phao cứu sinh": "Lifebuoy", "Cổng thành": "Castle gate", "Chú hề": "Clown", "Con mèo": "Cat",
+        "Con cua": "Crab", "Kẹo mút": "Lollipop", "Điện thoại": "Telephone", "Xe máy": "Motorcycle", "Người lính": "Soldier",
+        "Chim cú mèo": "Owl", "Tai nghe": "Headphones", "Con cá": "Fish", "Hồ lô": "Gourd", "Bát quái": "Yin-Yang symbol",
+        "Quả sầu riêng": "Durian", "Lá cờ": "Flag", "Con ma": "Ghost", "Con trâu": "Buffalo", "Con đường": "Road",
+        "Xe tăng": "Tank", "Nước mía": "Sugarcane juice", "Súng": "Gun", "Cà chua": "Tomato", "Trái dừa": "Coconut",
+        "Dấu chân": "Footprints", "Cái Loa": "Speaker", "Cá sấu": "Crocodile", "Bạch tuộc": "Octopus", "Kéo": "Scissors",
+        "Hạt mầm": "Sprout", "Chùm nho": "Grapes", "Kính và sách": "Glasses and book", "Còng số 8": "Handcuffs", "Thuốc nổ": "Dynamite",
+        "Dao và thớt": "Knife and cutting board", "Bóng rổ": "Basketball", "Bóng bay": "Balloon", "Cái cúp": "Trophy", "Gốc cây": "Tree stump",
+        "Bác sĩ": "Doctor", "Trống": "Drum", "Dê": "Goat", "Ong và hoa": "Bee and flower", "Vợt cầu lông": "Badminton racket"
+    };
+
+    // Bảng màu xen kẽ cực kỳ rõ nét trên cả điện thoại & PC
+    const badgeColorStyles = [
+        "bg-blue-100 text-blue-800 border-blue-300",
+        "bg-amber-100 text-amber-900 border-amber-300",
+        "bg-emerald-100 text-emerald-800 border-emerald-300",
+        "bg-purple-100 text-purple-800 border-purple-300",
+        "bg-rose-100 text-rose-800 border-rose-300",
+        "bg-cyan-100 text-cyan-800 border-cyan-300"
+    ];
+
+    let intervalId = null;
+    let sequence = [];
+    let currentIdx = 0;
+    let currentAudio = null;
+    let currentGeneratedChain = [];
+    let isSpeakingChain = false;
+
+    // Phóng to toàn màn hình slide
+    function toggleFullscreen() {
+        const elem = document.getElementById('flashcard-box');
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+    }
+
+    // Đọc giọng tiếng Anh chuẩn qua Web TTS
+    function playEnglishAudio(textEn, callback = null) {
+        const engine = document.getElementById('audioEngine').value;
+        if (engine === 'off') {
+            if (callback) callback();
+            return;
+        }
+
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio = null;
+        }
+        window.speechSynthesis.cancel();
+
+        const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(textEn)}&tl=en&client=tw-ob`;
+        currentAudio = new Audio(ttsUrl);
+        
+        currentAudio.onended = () => {
+            if (callback) callback();
+        };
+
+        currentAudio.play().catch(e => {
+            let utterance = new SpeechSynthesisUtterance(textEn);
+            utterance.lang = 'en-US';
+            utterance.rate = 1.0;
+            utterance.onend = () => {
+                if (callback) callback();
+            };
+            window.speechSynthesis.speak(utterance);
+        });
+    }
+
+    function startPlay() {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+            if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+            window.speechSynthesis.cancel();
+            document.getElementById('btnStart').innerText = "▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ 00 - 09";
+            return;
+        }
+
+        let f = parseInt(document.getElementById('inputFrom').value);
+        let t = parseInt(document.getElementById('inputTo').value);
+        
+        if (isNaN(f) || f < 0) f = 0;
+        if (isNaN(t) || t > 9) t = 9;
+        if (f > t) { let tmp = f; f = t; t = tmp; }
+
+        document.getElementById('inputFrom').value = f;
+        document.getElementById('inputTo').value = t;
+
+        const s = parseFloat(document.getElementById('inputSpeed').value) || 1.5;
+        const mode = document.querySelector('input[name="playMode"]:checked').value;
+
+        sequence = [];
+        for (let i = f; i <= t; i++) {
+            sequence.push(i.toString().padStart(2, '0'));
+        }
+
+        if (sequence.length === 0) return;
+
+        if (mode === "random") sequence.sort(() => Math.random() - 0.5);
+        if (mode === "backward") sequence.reverse();
+        currentIdx = 0;
+
+        document.getElementById('btnStart').innerText = "⏸ TẠM DỪNG";
+
+        runSlideStep();
+        intervalId = setInterval(() => {
+            runSlideStep();
+        }, s * 1000);
+    }
+
+    function runSlideStep() {
+        if (currentIdx >= sequence.length) {
+            if (document.getElementById('checkLoop').checked) {
+                currentIdx = 0;
+            } else {
+                clearInterval(intervalId);
+                intervalId = null;
+                document.getElementById('status-text').innerText = "HOÀN THÀNH BÀI 1!";
+                document.getElementById('btnStart').innerText = "▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ 00 - 09";
+                playEnglishAudio("Completed");
+                return;
+            }
+        }
+
+        const num = sequence[currentIdx];
+        document.getElementById('number-main').innerText = num;
+        
+        const imgEl = document.getElementById('img-main');
+        imgEl.src = `../image/${num}.png`;
+
+        const nameVi = dataDict[num] || "Chưa rõ";
+        const nameEn = dictEn[nameVi] || "";
+
+        document.getElementById('status-text').innerText = `${nameVi} (${nameEn})`;
+        document.getElementById('counterDisplay').innerText = (currentIdx + 1) + "/" + sequence.length;
+
+        playEnglishAudio(nameEn);
+        currentIdx++;
+    }
+
+    // ========================================================
+    // TẠO CHUỖI TỪNG CẶP SỐ NGẪU NHIÊN THEO YÊU CẦU
+    // ========================================================
+    function generateRandomChain() {
+        let count = parseInt(document.getElementById('chainLength').value);
+        let fromVal = parseInt(document.getElementById('chainFrom').value);
+        let toVal = parseInt(document.getElementById('chainTo').value);
+
+        if (isNaN(count) || count <= 0) count = 20;
+        if (isNaN(fromVal) || fromVal < 0) fromVal = 0;
+        if (isNaN(toVal) || toVal > 99) toVal = 99;
+        if (fromVal > toVal) { let tmp = fromVal; fromVal = toVal; toVal = tmp; }
+
+        document.getElementById('chainLength').value = count;
+        document.getElementById('chainFrom').value = fromVal;
+        document.getElementById('chainTo').value = toVal;
+
+        currentGeneratedChain = [];
+        const box = document.getElementById('chainDisplayBox');
+        box.innerHTML = "";
+
+        const rangeSpan = (toVal - fromVal) + 1;
+
+        for (let i = 0; i < count; i++) {
+            const randNum = Math.floor(Math.random() * rangeSpan) + fromVal;
+            const pairStr = randNum.toString().padStart(2, '0');
+            currentGeneratedChain.push(pairStr);
+
+            const colorClass = badgeColorStyles[i % badgeColorStyles.length];
+            const nameItem = dataDict[pairStr] || "";
+            const enItem = dictEn[nameItem] || "";
+
+            const span = document.createElement('span');
+            span.id = `pair-badge-${i}`;
+            span.className = `px-3 py-1.5 rounded-xl border text-base sm:text-lg font-black shadow-sm transition hover:scale-110 select-all cursor-pointer ${colorClass}`;
+            span.title = `${pairStr}: ${nameItem} (${enItem})`;
+            span.innerText = pairStr;
+            span.onclick = () => playEnglishAudio(enItem || nameItem);
+
+            box.appendChild(span);
+        }
+
+        document.getElementById('chainStats').innerText = `${count} cặp số (Dải ${fromVal.toString().padStart(2,'0')} - ${toVal.toString().padStart(2,'0')})`;
+    }
+
+    function copyRandomChain() {
+        if (!currentGeneratedChain || currentGeneratedChain.length === 0) {
+            alert("Vui lòng bấm 'TẠO CHUỖI CẶP SỐ' trước!");
+            return;
+        }
+        const textToCopy = currentGeneratedChain.join(" ");
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const btn = document.getElementById('btnCopyChain');
+            btn.innerText = "✅ Đã chép!";
+            setTimeout(() => { btn.innerText = "📋 Sao chép"; }, 1500);
+        });
+    }
+
+    // Đọc lần lượt chuỗi số để luyện phản xạ
+    function speakCurrentChain() {
+        if (!currentGeneratedChain || currentGeneratedChain.length === 0) {
+            alert("Vui lòng bấm 'TẠO CHUỖI CẶP SỐ' trước!");
+            return;
+        }
+
+        const btn = document.getElementById('btnSpeakChain');
+        if (isSpeakingChain) {
+            isSpeakingChain = false;
+            btn.innerText = "🔊 Đọc chuỗi số";
+            if (currentAudio) currentAudio.pause();
+            window.speechSynthesis.cancel();
+            return;
+        }
+
+        isSpeakingChain = true;
+        btn.innerText = "⏹ Dừng đọc";
+
+        let idx = 0;
+        function readNext() {
+            if (!isSpeakingChain || idx >= currentGeneratedChain.length) {
+                isSpeakingChain = false;
+                btn.innerText = "🔊 Đọc chuỗi số";
+                // Xoá highlight
+                document.querySelectorAll('[id^="pair-badge-"]').forEach(el => el.classList.remove('ring-4', 'ring-purple-400'));
+                return;
+            }
+
+            // Highlight cặp số đang đọc
+            document.querySelectorAll('[id^="pair-badge-"]').forEach(el => el.classList.remove('ring-4', 'ring-purple-400'));
+            const currentBadge = document.getElementById(`pair-badge-${idx}`);
+            if (currentBadge) currentBadge.classList.add('ring-4', 'ring-purple-400');
+
+            const numStr = currentGeneratedChain[idx];
+            const nameVi = dataDict[numStr] || "";
+            const textToSpeak = dictEn[nameVi] || nameVi;
+
+            idx++;
+            playEnglishAudio(textToSpeak, () => {
+                setTimeout(readNext, 350); // Khoảng nghỉ giữa các cặp số
+            });
+        }
+
+        readNext();
+    }
+
+    window.onload = () => {
+        document.getElementById('inputFrom').value = 0;
+        document.getElementById('inputTo').value = 9;
+        // Tự động tạo 20 cặp số ngẫu nhiên ban đầu từ 00 đến 05
+        generateRandomChain();
+    };
+</script>
+</body>
+</html>
