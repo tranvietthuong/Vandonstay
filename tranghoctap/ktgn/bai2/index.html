@@ -179,7 +179,7 @@
             </span>
         </div>
 
-        <!-- Các ô nhập dữ liệu tuỳ chỉnh -->
+        <!-- Các ô nhập dữ liệu tuỳ chỉnh linh hoạt -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
                 <label class="text-[10px] text-slate-500 font-bold block mb-1">SỐ LƯỢNG CẶP SỐ</label>
@@ -397,6 +397,7 @@
         const num = sequence[currentIdx];
         document.getElementById('number-main').innerText = num;
         
+        // Trỏ chính xác đến ảnh trong thư mục ../image/
         const imgEl = document.getElementById('img-main');
         imgEl.src = `../image/${num}.png`;
 
