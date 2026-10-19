@@ -240,7 +240,7 @@
       </a>
     </div>
 
-    <!-- 2. BỘ 3 NÚT ĐIỀU HƯỚNG CÂN ĐỐI TRÊN 1 HÀNG -->
+    <!-- 2. BỘ 3 NÚT ĐIỀU HƯỚNG -->
     <div class="study-actions-row">
       <a href="../../index.html" class="study-action-btn btn-villa">
         <i class="fa-solid fa-hotel"></i> <span>Villa Sonasea</span>
@@ -345,7 +345,7 @@
       <div id="currentCardContainer" class="h-full flex flex-col justify-between"></div>
     </main>
 
-    <!-- 6. THANH ĐIỀU KHIỂN ÂM THANH DƯỚI ĐÁY -->
+    <!-- 6. THANH ĐIỀU KHIỂN DƯỚI ĐÁY -->
     <footer class="bg-white border-t border-slate-200 p-2 shrink-0 space-y-2 relative shadow-lg">
       
       <!-- Dropdown Lặp Xổ Lên -->
@@ -366,7 +366,7 @@
         <button data-speed="1.5" class="speed-opt w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">1.5x</button>
       </div>
 
-      <!-- ĐÚNG 6 NÚT GOM TRÊN 1 HÀNG NGANG -->
+      <!-- 6 NÚT ĐIỀU KHIỂN CHUẨN TRÊN 1 HÀNG -->
       <div class="grid grid-cols-6 gap-1.5 items-center">
         <!-- 1. Nút MP3 / AI -->
         <button id="voiceToggleBtn" class="h-9 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1" title="Chuyển đổi âm thanh">
@@ -454,8 +454,8 @@
 
     let currentMode = 'mp3';
     let currentSpeed = 1.0;
-    let currentRepeatLimit = 1;
-    let currentRepeat = 0;
+    let currentRepeatLimit = 1; // Số lần lặp toàn dải bài
+    let playlistLoopCount = 0;  // Đếm số vòng lặp dải bài đã hoàn thành
 
     let isPlaying = false;
     let showDetails = false;
@@ -554,7 +554,7 @@
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         currentRepeatLimit = parseInt(e.target.getAttribute('data-repeat'));
-        currentRepeat = 0;
+        playlistLoopCount = 0;
         updateRepeatDisplay();
         repeatMenu.classList.add('hidden');
       });
@@ -584,7 +584,7 @@
       }
       currentLessonIdx = startIdx;
       renderLesson(currentLessonIdx);
-      currentRepeat = 0;
+      playlistLoopCount = 0;
     });
 
     endSelect.addEventListener('change', (e) => {
@@ -596,7 +596,7 @@
       }
       currentLessonIdx = startIdx;
       renderLesson(currentLessonIdx);
-      currentRepeat = 0;
+      playlistLoopCount = 0;
     });
 
     const voiceBtn = document.getElementById('voiceToggleBtn');
@@ -621,12 +621,10 @@
       document.getElementById('toggleTransBtn').classList.toggle('bg-emerald-800', showDetails);
     });
 
-    // SỬA LỖI NÚT PLAY: ĐỒNG BỘ DẢI BÀI TỪ THẺ SELECT KHI BẤM PHÁT
     document.getElementById('playBtn').addEventListener('click', () => {
       if (isPlaying) {
         stopPlayback();
       } else {
-        // Cập nhật chuẩn xác dải bài từ ô select người dùng đang chọn
         startIdx = parseInt(startSelect.value);
         endIdx = parseInt(endSelect.value);
 
@@ -637,7 +635,7 @@
           currentLessonIdx = startIdx;
           renderLesson(currentLessonIdx);
         }
-        currentRepeat = 0;
+        playlistLoopCount = 0;
         playCurrentLesson();
       }
     });
@@ -651,27 +649,27 @@
       document.querySelectorAll('.sentence-row').forEach(el => el.classList.remove('active-sentence'));
     }
 
+    // LOGIC VÒNG LẶP DẢI BÀI (PLAYLIST LOOP): CHẠY HẾT 1 VÒNG DẢI BÀI, RỒI LẶP VÒNG TIẾP THEO
     function handleLessonFinished() {
       if (!isPlaying) return;
 
-      currentRepeat++;
-      if (currentRepeat < currentRepeatLimit) {
-        setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 400);
+      if (currentLessonIdx < endIdx) {
+        // Vẫn còn bài trong dải hiện tại -> Chuyển bài kế tiếp
+        currentLessonIdx++;
+        renderLesson(currentLessonIdx);
+        setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 500);
       } else {
-        currentRepeat = 0;
+        // Đã chạy đến bài cuối cùng của dải trong vòng này
+        playlistLoopCount++;
 
-        if (currentLessonIdx < endIdx) {
-          currentLessonIdx++;
+        if (currentRepeatLimit === 999 || playlistLoopCount < currentRepeatLimit) {
+          // Chưa đủ số lần lặp dải bài hoặc chọn vô tận (∞) -> Quay lại bài đầu dải (startIdx)
+          currentLessonIdx = startIdx;
           renderLesson(currentLessonIdx);
-          setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 600);
+          setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 700);
         } else {
-          if (currentRepeatLimit === 999) {
-            currentLessonIdx = startIdx;
-            renderLesson(currentLessonIdx);
-            setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 800);
-          } else {
-            stopPlayback();
-          }
+          // Đã hoàn thành đủ số vòng lặp -> Dừng phát
+          stopPlayback();
         }
       }
     }
@@ -769,7 +767,7 @@
         stopPlayback();
         currentLessonIdx--;
         renderLesson(currentLessonIdx);
-        currentRepeat = 0;
+        playlistLoopCount = 0;
       }
     });
 
@@ -778,7 +776,7 @@
         stopPlayback();
         currentLessonIdx++;
         renderLesson(currentLessonIdx);
-        currentRepeat = 0;
+        playlistLoopCount = 0;
       }
     });
 
