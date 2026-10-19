@@ -2,44 +2,63 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Bài 1: Ghi Nhớ Số 00 - 09 | Siêu Trí Nhớ</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Quicksand', sans-serif; }
-        /* Hỗ trợ chế độ phóng to toàn màn hình slide */
-        #flashcard-box:fullscreen {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #ffffff;
-            padding: 20px;
-            width: 100vw;
-            height: 100vh;
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            touch-action: manipulation;
         }
+        
+        /* CHUẨN HOÁ CHẾ ĐỘ TOÀN MÀN HÌNH - PHÓNG TO GẤP ĐÔI HÌNH ẢNH TRÊN DI ĐỘNG */
+        #flashcard-box:fullscreen,
         #flashcard-box:-webkit-full-screen {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #ffffff;
-            padding: 20px;
-            width: 100vw;
-            height: 100vh;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            background: #ffffff !important;
+            padding: env(safe-area-inset-top, 12px) 12px env(safe-area-inset-bottom, 12px) 12px !important;
+            width: 100vw !important;
+            height: 100dvh !important;
+            border: none !important;
+            border-radius: 0 !important;
+            overflow: hidden !important;
+        }
+
+        #flashcard-box:fullscreen #img-container,
+        #flashcard-box:-webkit-full-screen #img-container {
+            flex: 1 1 auto !important;
+            height: auto !important;
+            max-height: 65dvh !important;
+            width: 92vw !important;
+            max-width: 580px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: auto 0 !important;
+        }
+
+        #flashcard-box:fullscreen #img-main,
+        #flashcard-box:-webkit-full-screen #img-main {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            transform: scale(1.15) !important;
         }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 flex justify-center items-center min-h-screen p-2 sm:p-4">
+<body class="bg-slate-100 text-slate-800 flex justify-center items-center min-h-screen p-2 sm:p-4 select-none">
 
-<div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl p-4 sm:p-6 my-4 border border-slate-200 space-y-6">
+<div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl p-4 sm:p-6 my-2 border border-slate-200 space-y-6">
 
     <!-- Header điều hướng -->
     <div class="flex items-center justify-between border-b border-slate-200 pb-3">
         <a href="../index.html" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition">
-            ⬅ Trang chủ (00 - 99)
+            ⬅ Về Trang Chủ (00 - 99)
         </a>
         <span class="text-xs font-bold text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
             Hành trình 1: Cổng & Sân trước
@@ -50,67 +69,82 @@
         <h1 class="text-xl sm:text-2xl font-black text-blue-600 uppercase tracking-wide">
             📖 BÀI 1: HỌC SỐ TỪ 00 ĐẾN 09
         </h1>
-        <p class="text-xs text-slate-500 mt-1">Phương pháp mã hóa hình ảnh & 10 Điểm neo Siêu Trí Nhớ</p>
+        <p class="text-xs text-slate-500 mt-1">Phương pháp mã hóa chuẩn Nguyễn Phùng Phong & 10 Điểm neo</p>
     </div>
 
     <!-- ========================================== -->
-    <!-- PHẦN 1: BẢNG SLIDE PHẢN XẠ HỌC SỐ 00 - 09 -->
+    <!-- PHẦN 1: BẢNG SLIDE FLASHCARD PHẢN XẠ SỐ   -->
     <!-- ========================================== -->
-    <div class="space-y-3">
-        <div id="flashcard-box" class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4 text-center relative min-h-[290px] sm:min-h-[330px] flex flex-col justify-center items-center shadow-inner">
-            <div class="absolute top-3 left-3 flex gap-2">
-                <button onclick="toggleFullscreen()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1 shadow-sm">
-                    ⛶ Toàn màn hình
-                </button>
+    <div class="space-y-4">
+        <!-- Bảng Slide phản xạ -->
+        <div id="flashcard-box" class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4 text-center relative min-h-[350px] sm:min-h-[420px] flex flex-col justify-between items-center shadow-inner overflow-hidden">
+            
+            <!-- THANH ĐIỀU KHIỂN NỔI (Đồng bộ trang chủ) -->
+            <div class="w-full flex items-center justify-between z-20 px-1">
+                <div class="flex items-center gap-1.5 sm:gap-2">
+                    <button onclick="toggleFullscreen()" id="btnFsToggle" title="Toàn màn hình (F)" class="h-9 px-2.5 sm:px-3 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95">
+                        <span id="fs-icon">⛶</span> <span id="fs-text">Toàn màn hình</span>
+                    </button>
+
+                    <button type="button" onclick="toggleAudio()" id="btnAudioToggle" title="Bật/Tắt giọng đọc" class="h-9 w-9 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95">
+                        <span id="audioIcon" class="text-base">🔊</span>
+                    </button>
+
+                    <button type="button" onclick="toggleLabel()" id="btnLabelToggle" title="Ẩn/Hiện chữ giải thích" class="h-9 px-2.5 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95">
+                        <span id="labelIcon">Aa</span>
+                    </button>
+                    
+                    <button type="button" onclick="startPlay()" id="btnMiniPlay" title="Bắt đầu / Tạm dừng" class="h-9 px-3 bg-blue-600 text-white hover:bg-blue-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95">
+                        <span id="miniPlayIcon">▶</span> <span id="miniPlayText" class="hidden sm:inline">Chạy</span>
+                    </button>
+                </div>
+
+                <div id="counterDisplay" class="text-xs font-black text-slate-500 bg-white/90 px-2.5 py-1.5 rounded-xl border border-slate-200 shadow-sm">1/10</div>
             </div>
-            <div id="counterDisplay" class="absolute top-3 right-4 text-xs font-bold text-slate-400">1/10</div>
             
-            <div id="number-main" class="text-6xl sm:text-8xl font-black text-blue-600 mb-1">00</div>
+            <!-- Con số to đã ẩn hoàn toàn -->
+            <div id="number-main" class="hidden">00</div>
             
-            <div class="h-36 sm:h-44 flex items-center justify-center my-1">
-                <img id="img-main" src="../image/00.png" alt="00" class="max-h-full max-w-full object-contain rounded-xl shadow-md border border-slate-200">
+            <!-- Khung hình ảnh mở rộng phóng to -->
+            <div id="img-container" class="w-full flex-1 flex items-center justify-center my-2 transition-all">
+                <img id="img-main" src="../image/00.png" alt="00" class="max-h-[260px] sm:max-h-[320px] w-auto object-contain rounded-2xl shadow-md border border-slate-200 bg-white">
             </div>
             
-            <div id="status-text" class="text-sm sm:text-lg font-bold text-slate-700 bg-blue-50 px-4 py-1.5 rounded-full border border-blue-200 min-h-[36px] flex items-center justify-center">
-                Quả trứng (Egg)
+            <!-- Chữ giải thích -->
+            <div class="min-h-[44px] flex items-center justify-center w-full z-20 pb-1">
+                <div id="status-text" class="text-sm sm:text-base font-bold text-slate-700 bg-white/95 px-5 py-1.5 rounded-full border border-slate-200 shadow-sm transition-opacity">
+                    Quả trứng (Egg)
+                </div>
             </div>
         </div>
 
-        <!-- Bảng điều khiển slide -->
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 sm:p-4 space-y-2.5">
+        <!-- Điều khiển tham số Slide -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 sm:p-4 space-y-3">
             <div class="grid grid-cols-3 gap-2">
                 <div>
                     <label class="text-[10px] text-slate-500 font-bold block mb-1">TỪ SỐ</label>
-                    <input type="number" id="inputFrom" value="0" min="0" max="9" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                    <input type="number" id="inputFrom" value="0" min="0" max="9" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm bg-white outline-none focus:border-blue-500">
                 </div>
                 <div>
                     <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
-                    <input type="number" id="inputTo" value="9" min="0" max="9" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                    <input type="number" id="inputTo" value="9" min="0" max="9" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm bg-white outline-none focus:border-blue-500">
                 </div>
                 <div>
                     <label class="text-[10px] text-slate-500 font-bold block mb-1">GIÂY / SỐ</label>
-                    <input type="text" id="inputSpeed" value="1.5" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                    <input type="text" id="inputSpeed" value="1.5" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm bg-white outline-none focus:border-blue-500">
                 </div>
             </div>
 
-            <div class="flex flex-wrap justify-around items-center pt-2 border-t border-slate-200 text-xs font-semibold text-slate-600">
-                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="forward" checked class="accent-blue-600"> Tiến (00-09)</label>
-                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="backward" class="accent-blue-600"> Lùi</label>
-                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="random" class="accent-blue-600"> Ngẫu nhiên</label>
-                <label class="flex items-center gap-1 text-green-600 cursor-pointer"><input type="checkbox" id="checkLoop" class="accent-green-600" checked> Lặp lại</label>
-            </div>
-
-            <div class="flex items-center justify-between pt-2 border-t border-dashed border-slate-200">
-                <span class="text-xs font-bold text-purple-700">🔊 Giọng đọc AI Tiếng Anh:</span>
-                <select id="audioEngine" class="text-xs p-1.5 border border-purple-300 rounded-lg font-bold bg-purple-50 text-purple-900 w-40">
-                    <option value="en-us" selected>Bật (English AI) 🇺🇸</option>
-                    <option value="off">Tắt âm thanh</option>
-                </select>
+            <div class="flex flex-wrap justify-around items-center pt-2 border-t border-slate-200 text-xs font-semibold text-slate-600 gap-y-2">
+                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="forward" checked class="accent-blue-600 w-4 h-4"> Tiến (00-09)</label>
+                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="backward" class="accent-blue-600 w-4 h-4"> Lùi</label>
+                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="random" class="accent-blue-600 w-4 h-4"> Ngẫu nhiên</label>
+                <label class="flex items-center gap-1.5 text-green-700 font-bold cursor-pointer py-1"><input type="checkbox" id="checkLoop" class="accent-green-600 w-4 h-4" checked> Lặp lại</label>
             </div>
         </div>
 
-        <button onclick="startPlay()" id="btnStart" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base">
-            ▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ 00 - 09
+        <button onclick="startPlay()" id="btnStart" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2">
+            <span id="btnStartIcon">▶</span> <span id="btnStartText">BẮT ĐẦU PHẢN XẠ 00 - 09 (Space)</span>
         </button>
     </div>
 
@@ -127,17 +161,17 @@
         
         <div class="bg-white p-4 rounded-xl border border-amber-200 text-slate-800 text-sm sm:text-base leading-relaxed space-y-3 shadow-sm font-medium">
             <p>
-                Mở 🚪 <b>[Cổng nhà]</b>, bạn chết sững thấy 🥚 <b>quả trứng (00)</b> đang bốc cháy! Vớ vội 🌂 <b>cái ô (01)</b> ở 🧱 <b>[Hàng rào]</b>, ô bỗng biến thành 🦆 <b>con vịt (02)</b> nhảy nhót ngoài 🏡 <b>[Sân trước]</b>.
+                Mở 🚪 <b>[Cổng nhà]</b>, bạn khiếp vía thấy 🥚 <b>quả trứng (00)</b> đang bốc cháy! Vớ vội 🌂 <b>cái ô (01)</b> ở 🧱 <b>[Hàng rào]</b> chọc thử, ô bỗng biến hình thành chú 🦆 <b>con vịt (02)</b> nhảy múa ngoài 🏡 <b>[Sân trước]</b>.
             </p>
             <p>
-                Vịt ta đâm bẹp ❤️ <b>trái tim (03)</b> ở 🌸 <b>[Bồn hoa]</b>, làm bạn ngã ngửa ngồi lên 🪑 <b>cái ghế (04)</b> ở 🪨 <b>[Ghế đá]</b>. Ghế chạy rầm rầm đâm vào 🍎 <b>cây táo (05)</b>, làm rơi quả táo trúng 🐚 <b>vỏ ốc (06)</b> ở 🌿 <b>[Gốc cây]</b>.
+                Vịt ta chạy lao đâm bẹp ❤️ <b>trái tim (03)</b> ở 🌸 <b>[Bồn hoa]</b>, làm bạn giật mình ngã ngửa ngồi lên 🪑 <b>cái ghế (04)</b> ở 🪨 <b>[Ghế đá]</b>. Ghế bật lò xo chạy rầm rầm đâm vào 🍎 <b>cây táo (05)</b>, làm rụng quả táo trúng 🐚 <b>vỏ ốc (06)</b> ở 🌿 <b>[Gốc cây]</b>.
             </p>
             <p>
-                Bạn vớ 🪓 <b>cái rìu (07)</b> ở 🧱 <b>[Chân tường]</b> chém vỏ ốc, khiến ⛄ <b>người tuyết (08)</b> ở 🏠 <b>[Hiên nhà]</b> trượt ra, phun tuyết chào đón 🦒 <b>hươu cao cổ (09)</b> đang ngó đầu cười khà khà từ 🚪 <b>[Cửa chính]</b>!
+                Bạn nhặt 🪓 <b>cái rìu (07)</b> ở 🧱 <b>[Chân tường]</b> chém vỏ ốc, khiến ⛄ <b>người tuyết (08)</b> ở 🏠 <b>[Hiên nhà]</b> hoảng hốt trượt băng ra, phun tuyết chào đón 🦒 <b>hươu cao cổ (09)</b> đang cười khà khà thò đầu ra từ 🚪 <b>[Cửa chính]</b>!
             </p>
         </div>
         <p class="text-[11px] text-amber-700 italic">
-            💡 <b>Mẹo nhớ:</b> Hình dung từng điểm neo liên tiếp kèm theo hành động vô lý, cảm xúc giật mình để khắc sâu vào não phải.
+            💡 <b>Mẹo nhớ:</b> Hình dung chuỗi hành động phóng đại, ngộ nghĩnh và kết nối liền mạch từ điểm neo này sang điểm neo tiếp theo.
         </p>
     </div>
 
@@ -153,7 +187,7 @@
         </div>
 
         <div class="bg-white p-2 rounded-xl border border-pink-200 shadow-md overflow-hidden">
-            <img src="1.jfif" alt="Bức tranh hành trình 00-09" class="w-full h-auto rounded-lg object-cover hover:scale-[1.01] transition duration-300">
+            <img src="1.jfif" alt="Bức tranh hành trình 00-09" class="w-full h-auto rounded-lg object-cover hover:scale-[1.01] transition duration-300" onerror="this.src='https://via.placeholder.com/600x300?text=Buc+Tranh+Hanh+Trinh+1.jfif'">
         </div>
         <p class="text-xs text-slate-500">
             Minh họa toàn bộ chuỗi sự kiện từ <b>00 Quả trứng</b> ➔ <b>09 Hươu cao cổ</b>
@@ -172,11 +206,10 @@
                 </h2>
             </div>
             <span class="text-[11px] font-bold text-indigo-600 bg-white px-2.5 py-1 rounded-full border border-indigo-200 shadow-sm">
-                Bài 1 & Mở rộng
+                Bài 1 (00 - 09)
             </span>
         </div>
 
-        <!-- Các ô nhập dữ liệu tuỳ chỉnh linh hoạt -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
                 <label class="text-[10px] text-slate-500 font-bold block mb-1">SỐ LƯỢNG CẶP SỐ</label>
@@ -188,24 +221,19 @@
             </div>
             <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
                 <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
-                <input type="number" id="chainTo" value="5" min="0" max="99" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none">
+                <input type="number" id="chainTo" value="9" min="0" max="99" class="w-full p-2 border border-slate-300 rounded-lg text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none">
             </div>
         </div>
 
-        <!-- Các nút bấm chức năng -->
         <div class="flex flex-wrap gap-2">
             <button onclick="generateRandomChain()" class="flex-1 min-w-[170px] bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-3 rounded-xl shadow-md transition active:scale-[0.99] text-xs sm:text-sm flex items-center justify-center gap-1.5">
                 ✨ TẠO CHUỖI CẶP SỐ
             </button>
-            <button onclick="speakCurrentChain()" id="btnSpeakChain" title="Đọc lần lượt chuỗi số" class="bg-purple-600 hover:bg-purple-700 text-white px-3.5 py-3 rounded-xl font-bold text-xs transition flex items-center gap-1 shadow-sm">
-                🔊 Đọc chuỗi số
-            </button>
-            <button onclick="copyRandomChain()" id="btnCopyChain" title="Sao chép toàn bộ chuỗi số" class="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-3 rounded-xl font-bold text-xs transition flex items-center gap-1 shadow-sm">
+            <button onclick="copyRandomChain()" id="btnCopyChain" title="Sao chép toàn bộ chuỗi số" class="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-4 py-3 rounded-xl font-bold text-xs transition flex items-center gap-1.5 shadow-sm active:scale-95">
                 📋 Sao chép
             </button>
         </div>
 
-        <!-- Khung hiển thị các cặp số xen kẽ màu sắc -->
         <div class="space-y-1.5">
             <div class="flex justify-between items-center text-[11px] font-bold text-slate-500 px-1">
                 <span>Kết quả (<span id="chainStats">0 cặp số</span>):</span>
@@ -221,7 +249,6 @@
 </div>
 
 <script>
-    // Dữ liệu 100 số chuẩn hoá để dùng chung cho cả đọc âm thanh và hiển thị chuỗi
     const dataDict = {
         "00": "Quả trứng", "01": "Cái ô", "02": "Con vịt", "03": "Trái tim", "04": "Cái ghế",
         "05": "Quả táo", "06": "Vỏ ốc", "07": "Cái rìu", "08": "Người tuyết", "09": "Hươu cao cổ",
@@ -268,80 +295,102 @@
         "Bác sĩ": "Doctor", "Trống": "Drum", "Dê": "Goat", "Ong và hoa": "Bee and flower", "Vợt cầu lông": "Badminton racket"
     };
 
-    // Bảng màu xen kẽ cực kỳ rõ nét trên cả điện thoại & PC
-    const badgeColorStyles = [
-        "bg-blue-100 text-blue-800 border-blue-300",
-        "bg-amber-100 text-amber-900 border-amber-300",
-        "bg-emerald-100 text-emerald-800 border-emerald-300",
-        "bg-purple-100 text-purple-800 border-purple-300",
-        "bg-rose-100 text-rose-800 border-rose-300",
-        "bg-cyan-100 text-cyan-800 border-cyan-300"
-    ];
-
     let intervalId = null;
     let sequence = [];
     let currentIdx = 0;
-    let currentAudio = null;
     let currentGeneratedChain = [];
-    let isSpeakingChain = false;
 
-    // Phóng to toàn màn hình slide
-    function toggleFullscreen() {
-        const elem = document.getElementById('flashcard-box');
-        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen();
-            }
+    let isAudioEnabled = true;
+    let isLabelVisible = true;
+
+    const badgeColorStyles = [
+        "bg-blue-100 text-blue-900 border-blue-300",
+        "bg-amber-100 text-amber-900 border-amber-300",
+        "bg-emerald-100 text-emerald-900 border-emerald-300",
+        "bg-purple-100 text-purple-900 border-purple-300",
+        "bg-rose-100 text-rose-900 border-rose-300",
+        "bg-cyan-100 text-cyan-900 border-cyan-300"
+    ];
+
+    function toggleAudio() {
+        isAudioEnabled = !isAudioEnabled;
+        const btn = document.getElementById('btnAudioToggle');
+        const icon = document.getElementById('audioIcon');
+
+        if (isAudioEnabled) {
+            btn.className = "h-9 w-9 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "🔊";
         } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            }
+            btn.className = "h-9 w-9 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "🔇";
+            window.speechSynthesis.cancel();
         }
     }
 
-    // Đọc giọng tiếng Anh chuẩn qua Web TTS
-    function playEnglishAudio(textEn, callback = null) {
-        const engine = document.getElementById('audioEngine').value;
-        if (engine === 'off') {
-            if (callback) callback();
-            return;
-        }
+    function toggleLabel() {
+        isLabelVisible = !isLabelVisible;
+        const btn = document.getElementById('btnLabelToggle');
+        const icon = document.getElementById('labelIcon');
+        const statusEl = document.getElementById('status-text');
 
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio = null;
+        if (isLabelVisible) {
+            btn.className = "h-9 px-2.5 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "Aa";
+            statusEl.style.opacity = "1";
+            statusEl.style.visibility = "visible";
+        } else {
+            btn.className = "h-9 px-2.5 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl text-xs font-black tracking-wider line-through transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "Aa";
+            statusEl.style.opacity = "0";
+            statusEl.style.visibility = "hidden";
         }
+    }
+
+    function toggleFullscreen() {
+        const elem = document.getElementById('flashcard-box');
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+            if (elem.requestFullscreen) elem.requestFullscreen();
+            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        }
+    }
+
+    document.addEventListener('fullscreenchange', handleFsChange);
+    document.addEventListener('webkitfullscreenchange', handleFsChange);
+
+    function handleFsChange() {
+        const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+        const btn = document.getElementById('btnFsToggle');
+        if (isFs) {
+            document.getElementById('fs-icon').innerText = "✕";
+            document.getElementById('fs-text').innerText = "Thu nhỏ";
+            btn.className = "h-9 px-2.5 sm:px-3 bg-rose-600 text-white hover:bg-rose-700 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
+        } else {
+            document.getElementById('fs-icon').innerText = "⛶";
+            document.getElementById('fs-text').innerText = "Toàn màn hình";
+            btn.className = "h-9 px-2.5 sm:px-3 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
+        }
+    }
+
+    function playEnglishAudio(textVi) {
+        if (!isAudioEnabled) return;
         window.speechSynthesis.cancel();
 
-        const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(textEn)}&tl=en&client=tw-ob`;
-        currentAudio = new Audio(ttsUrl);
-        
-        currentAudio.onended = () => {
-            if (callback) callback();
-        };
-
-        currentAudio.play().catch(e => {
-            let utterance = new SpeechSynthesisUtterance(textEn);
-            utterance.lang = 'en-US';
-            utterance.rate = 1.0;
-            utterance.onend = () => {
-                if (callback) callback();
-            };
-            window.speechSynthesis.speak(utterance);
-        });
+        const englishText = dictEn[textVi] || textVi;
+        let utterance = new SpeechSynthesisUtterance(englishText);
+        utterance.lang = 'en-US';
+        utterance.rate = 1.0;
+        window.speechSynthesis.speak(utterance);
     }
 
     function startPlay() {
         if (intervalId) {
             clearInterval(intervalId);
             intervalId = null;
-            if (currentAudio) { currentAudio.pause(); currentAudio = null; }
             window.speechSynthesis.cancel();
-            document.getElementById('btnStart').innerText = "▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ 00 - 09";
+            updatePlayButtons(false);
             return;
         }
 
@@ -369,12 +418,37 @@
         if (mode === "backward") sequence.reverse();
         currentIdx = 0;
 
-        document.getElementById('btnStart').innerText = "⏸ TẠM DỪNG";
-
+        updatePlayButtons(true);
         runSlideStep();
+
         intervalId = setInterval(() => {
             runSlideStep();
         }, s * 1000);
+    }
+
+    function updatePlayButtons(isPlaying) {
+        const btnStart = document.getElementById('btnStart');
+        const miniBtn = document.getElementById('btnMiniPlay');
+        const miniIcon = document.getElementById('miniPlayIcon');
+        const miniText = document.getElementById('miniPlayText');
+
+        if (isPlaying) {
+            document.getElementById('btnStartText').innerText = "TẠM DỪNG (Space)";
+            document.getElementById('btnStartIcon').innerText = "⏸";
+            btnStart.className = "w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2";
+
+            miniIcon.innerText = "⏸";
+            miniText.innerText = "Dừng";
+            miniBtn.className = "h-9 px-3 bg-amber-600 text-white hover:bg-amber-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95";
+        } else {
+            document.getElementById('btnStartText').innerText = "TIẾP TỤC PHẢN XẠ 00 - 09 (Space)";
+            document.getElementById('btnStartIcon').innerText = "▶";
+            btnStart.className = "w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2";
+
+            miniIcon.innerText = "▶";
+            miniText.innerText = "Chạy";
+            miniBtn.className = "h-9 px-3 bg-blue-600 text-white hover:bg-blue-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95";
+        }
     }
 
     function runSlideStep() {
@@ -385,31 +459,28 @@
                 clearInterval(intervalId);
                 intervalId = null;
                 document.getElementById('status-text').innerText = "HOÀN THÀNH BÀI 1!";
-                document.getElementById('btnStart').innerText = "▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ 00 - 09";
+                updatePlayButtons(false);
+                document.getElementById('btnStartText').innerText = "BẮT ĐẦU LẠI 00 - 09 (Space)";
                 playEnglishAudio("Completed");
                 return;
             }
         }
 
         const num = sequence[currentIdx];
-        document.getElementById('number-main').innerText = num;
         
         const imgEl = document.getElementById('img-main');
         imgEl.src = `../image/${num}.png`;
 
-        const nameVi = dataDict[num] || "Chưa rõ";
-        const nameEn = dictEn[nameVi] || "";
+        const nameVi = dataDict[num] || "Chưa có tên";
+        const nameEn = dictEn[nameVi] || nameVi;
 
         document.getElementById('status-text').innerText = `${nameVi} (${nameEn})`;
         document.getElementById('counterDisplay').innerText = (currentIdx + 1) + "/" + sequence.length;
 
-        playEnglishAudio(nameEn);
+        playEnglishAudio(nameVi);
         currentIdx++;
     }
 
-    // ========================================================
-    // TẠO CHUỖI TỪNG CẶP SỐ NGẪU NHIÊN THEO YÊU CẦU
-    // ========================================================
     function generateRandomChain() {
         let count = parseInt(document.getElementById('chainLength').value);
         let fromVal = parseInt(document.getElementById('chainFrom').value);
@@ -437,14 +508,11 @@
 
             const colorClass = badgeColorStyles[i % badgeColorStyles.length];
             const nameItem = dataDict[pairStr] || "";
-            const enItem = dictEn[nameItem] || "";
 
             const span = document.createElement('span');
-            span.id = `pair-badge-${i}`;
-            span.className = `px-3 py-1.5 rounded-xl border text-base sm:text-lg font-black shadow-sm transition hover:scale-110 select-all cursor-pointer ${colorClass}`;
-            span.title = `${pairStr}: ${nameItem} (${enItem})`;
+            span.className = `px-3 py-1.5 rounded-xl border text-base sm:text-lg font-black shadow-sm transition hover:scale-105 active:scale-95 select-all ${colorClass}`;
+            span.title = `${pairStr}: ${nameItem} (${dictEn[nameItem] || ''})`;
             span.innerText = pairStr;
-            span.onclick = () => playEnglishAudio(enItem || nameItem);
 
             box.appendChild(span);
         }
@@ -453,69 +521,29 @@
     }
 
     function copyRandomChain() {
-        if (!currentGeneratedChain || currentGeneratedChain.length === 0) {
-            alert("Vui lòng bấm 'TẠO CHUỖI CẶP SỐ' trước!");
-            return;
-        }
+        if (!currentGeneratedChain || currentGeneratedChain.length === 0) return;
         const textToCopy = currentGeneratedChain.join(" ");
         navigator.clipboard.writeText(textToCopy).then(() => {
             const btn = document.getElementById('btnCopyChain');
-            btn.innerText = "✅ Đã chép!";
-            setTimeout(() => { btn.innerText = "📋 Sao chép"; }, 1500);
+            btn.innerHTML = "✅ Đã chép!";
+            setTimeout(() => { btn.innerHTML = "📋 Sao chép"; }, 1500);
         });
     }
 
-    // Đọc lần lượt chuỗi số để luyện phản xạ
-    function speakCurrentChain() {
-        if (!currentGeneratedChain || currentGeneratedChain.length === 0) {
-            alert("Vui lòng bấm 'TẠO CHUỖI CẶP SỐ' trước!");
-            return;
+    window.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT') return;
+        if (e.code === 'Space') {
+            e.preventDefault();
+            startPlay();
+        } else if (e.key === 'f' || e.key === 'F') {
+            e.preventDefault();
+            toggleFullscreen();
         }
-
-        const btn = document.getElementById('btnSpeakChain');
-        if (isSpeakingChain) {
-            isSpeakingChain = false;
-            btn.innerText = "🔊 Đọc chuỗi số";
-            if (currentAudio) currentAudio.pause();
-            window.speechSynthesis.cancel();
-            return;
-        }
-
-        isSpeakingChain = true;
-        btn.innerText = "⏹ Dừng đọc";
-
-        let idx = 0;
-        function readNext() {
-            if (!isSpeakingChain || idx >= currentGeneratedChain.length) {
-                isSpeakingChain = false;
-                btn.innerText = "🔊 Đọc chuỗi số";
-                // Xoá highlight
-                document.querySelectorAll('[id^="pair-badge-"]').forEach(el => el.classList.remove('ring-4', 'ring-purple-400'));
-                return;
-            }
-
-            // Highlight cặp số đang đọc
-            document.querySelectorAll('[id^="pair-badge-"]').forEach(el => el.classList.remove('ring-4', 'ring-purple-400'));
-            const currentBadge = document.getElementById(`pair-badge-${idx}`);
-            if (currentBadge) currentBadge.classList.add('ring-4', 'ring-purple-400');
-
-            const numStr = currentGeneratedChain[idx];
-            const nameVi = dataDict[numStr] || "";
-            const textToSpeak = dictEn[nameVi] || nameVi;
-
-            idx++;
-            playEnglishAudio(textToSpeak, () => {
-                setTimeout(readNext, 350); // Khoảng nghỉ giữa các cặp số
-            });
-        }
-
-        readNext();
-    }
+    });
 
     window.onload = () => {
         document.getElementById('inputFrom').value = 0;
         document.getElementById('inputTo').value = 9;
-        // Tự động tạo 20 cặp số ngẫu nhiên ban đầu từ 00 đến 05
         generateRandomChain();
     };
 </script>

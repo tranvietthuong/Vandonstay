@@ -2,172 +2,320 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Học Kỹ Thuật Ghi Nhớ - 100 Số Nguyễn Phùng Phong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Bài 4: Ghi Nhớ Số 30 - 39 | Siêu Trí Nhớ</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Quicksand', sans-serif; }
-        /* Tùy chỉnh chế độ phóng to toàn màn hình slide */
-        #flashcard-box:fullscreen {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #ffffff;
-            padding: 40px;
-            width: 100vw;
-            height: 100vh;
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* CHUẨN HOÁ CHẾ ĐỘ TOÀN MÀN HÌNH */
+        #flashcard-box:fullscreen,
         #flashcard-box:-webkit-full-screen {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #ffffff;
-            padding: 40px;
-            width: 100vw;
-            height: 100vh;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            background: #ffffff !important;
+            padding: env(safe-area-inset-top, 16px) 16px env(safe-area-inset-bottom, 16px) 16px !important;
+            width: 100vw !important;
+            height: 100dvh !important;
+            border: none !important;
+            border-radius: 0 !important;
+            overflow: hidden !important;
+        }
+
+        #flashcard-box:fullscreen #img-container,
+        #flashcard-box:-webkit-full-screen #img-container {
+            flex: 1 1 auto !important;
+            height: auto !important;
+            max-height: 68dvh !important;
+            width: 94vw !important;
+            max-width: 600px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: auto 0 !important;
+        }
+
+        #flashcard-box:fullscreen #img-main,
+        #flashcard-box:-webkit-full-screen #img-main {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            transform: scale(1.12) !important;
         }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 flex justify-center items-center min-h-screen p-2 sm:p-4">
+<body class="bg-slate-100 text-slate-800 flex justify-center items-center min-h-screen p-2 sm:p-4 select-none">
 
-<div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl p-4 sm:p-6 my-4 border border-slate-200">
-    <!-- Tiêu đề -->
-    <div class="text-center mb-4">
-        <h1 class="text-lg sm:text-2xl font-bold text-blue-600 uppercase tracking-wide">🧠 PHẢN XẠ SỐ & HÀNH TRÌNH SIÊU TRÍ NHỚ</h1>
-        <p class="text-xs text-slate-500 mt-1">Phương pháp mã hóa số thành hình ảnh chuẩn Nguyễn Phùng Phong</p>
-    </div>
+<div class="bg-white w-full max-w-2xl rounded-3xl shadow-xl p-4 sm:p-6 my-2 border border-slate-200 space-y-5">
 
-    <!-- Tab điều hướng -->
-    <div class="flex rounded-xl bg-slate-100 p-1 mb-4">
-        <button onclick="switchTab('flashcard')" id="tab-flashcard" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-blue-600 text-white shadow transition">🎯 1. Phản Xạ Slide</button>
-        <button onclick="switchTab('library')" id="tab-library" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-blue-600 transition">📚 2. Tra Cứu 100 Số</button>
-        <button onclick="switchTab('journey')" id="tab-journey" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-blue-600 transition">🗺️ 3. Kể Chuyện Neo</button>
-    </div>
-
-    <!-- TAB 1: PHẢN XẠ & TỰ ĐỘNG -->
-    <div id="panel-flashcard" class="space-y-3">
-        <div id="flashcard-box" class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4 text-center relative min-h-[280px] sm:min-h-[320px] flex flex-col justify-center items-center shadow-inner">
-            <div class="absolute top-3 left-3 flex gap-2">
-                <button onclick="toggleFullscreen()" title="Phóng to toàn màn hình" class="bg-slate-200 hover:bg-slate-300 text-slate-700 p-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1">
-                    ⛶ Toàn màn hình
+    <!-- TIÊU ĐỀ KÈM MENU DROPDOWN CHỌN BÀI -->
+    <div class="text-center relative pt-1">
+        <div class="flex flex-wrap items-center justify-center gap-2">
+            <h1 class="text-lg sm:text-2xl font-black text-blue-600 uppercase tracking-wide">
+                📖 BÀI 4: HỌC SỐ TỪ 30 ĐẾN 39
+            </h1>
+            
+            <!-- Nút xổ danh sách bài học -->
+            <div class="relative inline-block text-left">
+                <button type="button" onclick="toggleDropdown()" id="btnDropdown" aria-expanded="false" aria-haspopup="true" class="bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm transition flex items-center gap-1.5 active:scale-95">
+                    <span>Chọn bài</span>
+                    <span id="dropdownArrow" class="text-[10px] transition-transform duration-200">▼</span>
                 </button>
+
+                <!-- Cột menu xổ xuống (Dropdown Menu) -->
+                <div id="dropdownMenu" class="hidden absolute left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 mt-2 w-72 bg-white border border-slate-200 rounded-2xl shadow-2xl py-2 z-50 max-h-84 overflow-y-auto custom-scrollbar">
+                    <div class="px-3.5 py-1.5 text-[10px] font-black text-slate-400 uppercase tracking-wider border-b border-slate-100">
+                        Chuyển nhanh hành trình
+                    </div>
+                    
+                    <a href="../index.html" class="flex items-center justify-between px-3.5 py-2.5 text-xs font-bold text-blue-600 hover:bg-blue-50 transition border-b border-slate-100">
+                        <span class="flex items-center gap-2">🏠 <span>Trang Chủ Phản Xạ</span></span>
+                        <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-bold">00 - 99</span>
+                    </a>
+                    
+                    <a href="../bai1/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 1: Cổng & Sân trước</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">00 - 09</span>
+                    </a>
+                    <a href="../bai2/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 2: Phòng khách</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">10 - 19</span>
+                    </a>
+                    <a href="../bai3/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 3: Sân vườn & Tiểu cảnh</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">20 - 29</span>
+                    </a>
+                    <a href="../bai4/index.html" class="flex items-center justify-between px-3.5 py-2.5 text-xs font-black bg-blue-50 text-blue-600 border-l-4 border-blue-600 transition">
+                        <span>🎯 Bài 4: Phòng tắm</span>
+                        <span class="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold">30 - 39</span>
+                    </a>
+                    <a href="../bai5/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 5: Bếp ăn</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">40 - 49</span>
+                    </a>
+                    <a href="../bai6/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 6: Phòng ngủ</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">50 - 59</span>
+                    </a>
+                    <a href="../bai7/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 7: Phòng làm việc</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">60 - 69</span>
+                    </a>
+                    <a href="../bai8/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 8: Sân thượng & Ban công</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">70 - 79</span>
+                    </a>
+                    <a href="../bai9/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 9: Gara xe & Kho</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">80 - 89</span>
+                    </a>
+                    <a href="../bai10/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                        <span>Bài 10: Toàn bộ ngôi nhà</span>
+                        <span class="text-[10px] text-slate-400 font-semibold">90 - 99</span>
+                    </a>
+                </div>
             </div>
-            <div id="counterDisplay" class="absolute top-3 right-4 text-xs font-bold text-slate-400">0/0</div>
+        </div>
+        <p class="text-xs text-slate-500 mt-1">Phương pháp mã hóa chuẩn Nguyễn Phùng Phong & 10 Điểm neo</p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 1: BẢNG SLIDE FLASHCARD PHẢN XẠ SỐ   -->
+    <!-- ========================================== -->
+    <div class="space-y-4">
+        <!-- Bảng Slide phản xạ -->
+        <div id="flashcard-box" class="bg-slate-50 border-2 border-slate-200 rounded-3xl p-3 sm:p-5 text-center relative min-h-[360px] sm:min-h-[430px] flex flex-col justify-between items-center shadow-inner overflow-hidden">
             
-            <div id="number-main" class="text-6xl sm:text-8xl font-black text-blue-600 mb-1">--</div>
-            
-            <div class="h-36 sm:h-44 flex items-center justify-center my-1">
-                <img id="img-main" src="" alt="Hình ảnh số" class="max-h-full max-w-full object-contain rounded-xl shadow-md border border-slate-200 hidden">
+            <!-- THANH ĐIỀU KHIỂN NỔI -->
+            <div class="w-full flex items-center justify-between z-20 px-1 gap-2">
+                <div class="flex items-center gap-1.5 sm:gap-2">
+                    <button onclick="toggleFullscreen()" id="btnFsToggle" title="Toàn màn hình (F)" class="h-10 px-3 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95">
+                        <span id="fs-icon">⛶</span> <span id="fs-text" class="hidden sm:inline">Toàn màn hình</span>
+                    </button>
+
+                    <button type="button" onclick="toggleAudio()" id="btnAudioToggle" title="Bật/Tắt giọng đọc (M)" class="h-10 w-10 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95">
+                        <span id="audioIcon" class="text-base">🔊</span>
+                    </button>
+
+                    <button type="button" onclick="toggleLabel()" id="btnLabelToggle" title="Ẩn/Hiện chữ giải thích (H)" class="h-10 px-3 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95">
+                        <span id="labelIcon">Aa</span>
+                    </button>
+                    
+                    <button type="button" onclick="startPlay()" id="btnMiniPlay" title="Bắt đầu / Tạm dừng (Space)" class="h-10 px-3.5 bg-blue-600 text-white hover:bg-blue-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95">
+                        <span id="miniPlayIcon">▶</span> <span id="miniPlayText" class="hidden sm:inline">Chạy</span>
+                    </button>
+                </div>
+
+                <div id="counterDisplay" class="text-xs font-black text-slate-500 bg-white/95 px-3 py-2 rounded-xl border border-slate-200 shadow-sm shrink-0">1/10</div>
             </div>
             
-            <div id="status-text" class="text-sm sm:text-lg font-bold text-slate-700 bg-blue-50 px-4 py-1.5 rounded-full border border-blue-200 min-h-[36px] flex items-center justify-center">
-                Sẵn sàng học tập!
+            <!-- Con số to ẩn định dạng -->
+            <div id="number-main" class="hidden">30</div>
+            
+            <!-- Khung hình ảnh mở rộng phóng to -->
+            <div id="img-container" class="w-full flex-1 flex items-center justify-center my-2 transition-all">
+                <img id="img-main" src="../image/30.png" alt="30" class="max-h-[260px] sm:max-h-[320px] w-auto object-contain rounded-2xl shadow-md border border-slate-200 bg-white">
+            </div>
+            
+            <!-- Chữ giải thích (cố định min-height chống giật bố cục) -->
+            <div class="min-h-[46px] flex items-center justify-center w-full z-20 pb-1">
+                <div id="status-text" class="text-sm sm:text-base font-bold text-slate-700 bg-white/95 px-5 py-2 rounded-full border border-slate-200 shadow-sm transition-all duration-200">
+                    Núi và Mặt trời (Sun over mountains)
+                </div>
             </div>
         </div>
 
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 space-y-2.5">
+        <!-- Điều khiển tham số Slide -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 space-y-3">
             <div class="grid grid-cols-3 gap-2">
                 <div>
                     <label class="text-[10px] text-slate-500 font-bold block mb-1">TỪ SỐ</label>
-                    <input type="number" id="inputFrom" value="0" min="0" max="99" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                    <input type="number" id="inputFrom" value="30" min="30" max="39" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm bg-white outline-none focus:border-blue-500 transition">
                 </div>
                 <div>
                     <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
-                    <input type="number" id="inputTo" value="99" min="0" max="99" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                    <input type="number" id="inputTo" value="39" min="30" max="39" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm bg-white outline-none focus:border-blue-500 transition">
                 </div>
                 <div>
                     <label class="text-[10px] text-slate-500 font-bold block mb-1">GIÂY / SỐ</label>
-                    <input type="text" id="inputSpeed" value="1.5" class="w-full p-2 border border-slate-300 rounded-lg text-center font-bold text-sm bg-white">
+                    <input type="text" id="inputSpeed" value="1.5" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm bg-white outline-none focus:border-blue-500 transition">
                 </div>
             </div>
 
-            <div class="flex flex-wrap justify-around items-center pt-2 border-t border-slate-200 text-xs font-semibold text-slate-600">
-                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="forward" checked class="accent-blue-600"> Tiến (00-99)</label>
-                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="backward" class="accent-blue-600"> Lùi</label>
-                <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="random" class="accent-blue-600"> Ngẫu nhiên</label>
-                <label class="flex items-center gap-1 text-green-600 cursor-pointer"><input type="checkbox" id="checkLoop" class="accent-green-600" checked> Lặp lại</label>
-            </div>
-
-            <div class="flex items-center justify-between pt-2 border-t border-dashed border-slate-200">
-                <span class="text-xs font-bold text-purple-700">🔊 Giọng đọc AI Tiếng Anh:</span>
-                <select id="audioEngine" class="text-xs p-1.5 border border-purple-300 rounded-lg font-bold bg-purple-50 text-purple-900 w-40">
-                    <option value="en-us" selected>Bật (English AI) 🇺🇸</option>
-                    <option value="off">Tắt âm thanh</option>
-                </select>
+            <div class="flex flex-wrap justify-around items-center pt-2 border-t border-slate-200 text-xs font-semibold text-slate-600 gap-y-2">
+                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="forward" checked class="accent-blue-600 w-4 h-4"> Tiến (30-39)</label>
+                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="backward" class="accent-blue-600 w-4 h-4"> Lùi</label>
+                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="random" class="accent-blue-600 w-4 h-4"> Ngẫu nhiên</label>
+                <label class="flex items-center gap-1.5 text-green-700 font-bold cursor-pointer py-1"><input type="checkbox" id="checkLoop" class="accent-green-600 w-4 h-4" checked> Lặp lại</label>
             </div>
         </div>
 
-        <button onclick="startPlay()" id="btnStart" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base">
-            ▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ
+        <button onclick="startPlay()" id="btnStart" class="w-full h-13 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2">
+            <span id="btnStartIcon">▶</span> <span id="btnStartText">BẮT ĐẦU PHẢN XẠ 30 - 39 (Space)</span>
         </button>
     </div>
 
-    <!-- TAB 2: TRA CỨU 100 SỐ -->
-    <div id="panel-library" class="hidden space-y-3">
-        <div class="flex gap-2">
-            <input type="text" id="searchBox" placeholder="🔍 Tìm số (05) hoặc tiếng Anh (apple)..." oninput="filterLibrary()" class="w-full p-2.5 border border-slate-300 rounded-xl text-sm font-medium bg-slate-50 focus:bg-white transition outline-none">
+    <!-- ========================================== -->
+    <!-- PHẦN 2: CÂU CHUYỆN HÀI HƯỚC ĐIỂM NEO       -->
+    <!-- ========================================== -->
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3">
+        <div class="flex items-center gap-2">
+            <span class="text-lg">🎬</span>
+            <h2 class="text-sm sm:text-base font-bold text-amber-900 uppercase">
+                Câu Chuyện Hài Hước - 10 Điểm Neo (30 - 39)
+            </h2>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 max-h-[460px] overflow-y-auto p-1" id="libraryGrid"></div>
+        
+        <div class="bg-white p-4 rounded-xl border border-amber-200 text-slate-800 text-sm sm:text-base leading-relaxed space-y-3 shadow-sm font-medium">
+            <p>
+                Vừa bước vào 🚪 <b>[Cửa phòng tắm]</b>, bạn choáng váng thấy bức tranh 🌄 <b>núi và mặt trời (30)</b> bỗng bốc cháy ngùn ngụt[cite: 7]! Bạn vội với tay giật 💡 <b>[Bóng đèn trần]</b> hình <b>bóng đèn (31)</b> để soi đường, vô tình làm bật tung 🚿 <b>[Vòi hoa sen]</b> khiến <b>vòi sen (32)</b> phun nước ào ào[cite: 7].
+            </p>
+            <p>
+                Nước xối mạnh vào 🛁 <b>[Bồn tắm]</b> làm trôi ra một 🦴 <b>khúc xương (33)</b> to tướng[cite: 7]! Khúc xương văng trúng 🧺 <b>[Kệ để khăn]</b> đập vỡ toác quả 🍉 <b>dưa hấu (34)</b> đỏ lòm[cite: 7]. Nước dưa bắn tung tóe sang 🪞 <b>[Gương soi]</b>, làm rụng một quả 🍈 <b>đu đủ (35)</b> chín vàng giấu sau gương[cite: 7].
+            </p>
+            <p>
+                Quả đu đủ lăn lông lốc xuống 🚰 <b>[Bồn rửa mặt]</b> cắm ngập vào đóa 🌹 <b>hoa hồng (36)</b> gai góc[cite: 7]! Bông hoa bỗng biến thành chiếc 📢 <b>[Móc treo tường]</b> là một cái <b>loa cầm tay (37)</b> gầm rú vang dội[cite: 7]. Tiếng loa thổi bay 💍 <b>nhẫn kim cương (38)</b> trên 🚽 <b>[Nắp bồn cầu]</b> rơi tọt xuống sàn[cite: 7], làm chú 🦏 <b>tê giác (39)</b> ở 🧼 <b>[Thảm lau chân]</b> giật mình nhảy cẫng lên đòi đeo nhẫn[cite: 7]!
+            </p>
+        </div>
+        <p class="text-[11px] text-amber-700 italic">
+            💡 <b>Mẹo nhớ:</b> 30 Cửa phòng tắm ➔ 31 Bóng đèn trần ➔ 32 Vòi hoa sen ➔ 33 Bồn tắm ➔ 34 Kệ để khăn ➔ 35 Gương soi ➔ 36 Bồn rửa mặt ➔ 37 Móc treo tường ➔ 38 Nắp bồn cầu ➔ 39 Thảm lau chân[cite: 7].
+        </p>
     </div>
 
-    <!-- TAB 3: KỂ CHUYỆN ĐIỂM NEO -->
-    <div id="panel-journey" class="hidden space-y-3">
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 sm:p-4 space-y-3">
-            <div class="text-xs font-bold text-blue-600 uppercase">Tạo chuỗi con số ngẫu nhiên liên kết hành trình:</div>
-            <div id="resultChain" class="bg-white border border-slate-200 rounded-xl p-3 min-h-[50px] flex flex-wrap justify-center items-center gap-2 font-bold text-lg text-slate-700">
-                Chưa tạo chuỗi số...
+    <!-- ========================================== -->
+    <!-- PHẦN 3: BỨC TRANH HOẠT HÌNH 3D (1.jfif)   -->
+    <!-- ========================================== -->
+    <div class="bg-pink-50 border border-pink-200 rounded-2xl p-4 sm:p-5 space-y-3 text-center">
+        <div class="flex items-center justify-center gap-2">
+            <span class="text-lg">🎨</span>
+            <h2 class="text-sm sm:text-base font-bold text-pink-700 uppercase">
+                Bức Tranh Hành Trình Trực Quan 3D (10 Điểm Neo)
+            </h2>
+        </div>
+
+        <div class="bg-white p-2 rounded-xl border border-pink-200 shadow-md overflow-hidden flex justify-center">
+            <img src="1.jfif" alt="Bức tranh hành trình 30-39" class="w-full max-w-md h-auto rounded-lg object-cover hover:scale-[1.01] transition duration-300" onerror="this.src='1.png'; this.onerror=function(){this.src='https://via.placeholder.com/600x340?text=Buc+Tranh+Hanh+Trinh+30-39';};">
+        </div>
+        <p class="text-xs text-slate-500">
+            Minh họa toàn bộ chuỗi sự kiện từ <b>30 Núi & Mặt trời</b> ➔ <b>39 Tê giác</b>[cite: 7]
+        </p>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PHẦN 4: TẠO CHUỖI TỪNG CẶP SỐ NGẪU NHIÊN LUYỆN PHẢN XẠ   -->
+    <!-- ======================================================== -->
+    <div class="bg-gradient-to-br from-slate-50 to-indigo-50 border-2 border-indigo-200 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-sm">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+                <span class="text-xl">🎲</span>
+                <h2 class="text-xs sm:text-sm font-black text-indigo-900 uppercase tracking-wide">
+                    Luyện Phản Xạ: Tạo Chuỗi Cặp Số Ngẫu Nhiên
+                </h2>
             </div>
-            <div class="flex gap-2">
-                <div class="flex items-center gap-2 bg-white border border-slate-300 px-3 rounded-xl">
-                    <span class="text-xs font-bold text-slate-500">Số lượng:</span>
-                    <input type="number" id="inputLen" value="6" min="3" max="15" class="w-12 py-2 text-center font-bold text-sm outline-none">
-                </div>
-                <button onclick="makeChain()" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl shadow transition text-xs sm:text-sm">
-                    ✨ TẠO CHUỖI & KỂ CHUYỆN
-                </button>
+            <span class="text-[11px] font-bold text-indigo-600 bg-white px-2.5 py-1 rounded-full border border-indigo-200 shadow-sm">
+                Bài 4 (30 - 39)
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
+                <label class="text-[10px] text-slate-500 font-bold block mb-1">SỐ LƯỢNG CẶP SỐ</label>
+                <input type="number" id="chainLength" value="20" min="1" max="100" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm text-indigo-600 bg-slate-50 focus:bg-white outline-none transition">
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
+                <label class="text-[10px] text-slate-500 font-bold block mb-1">TỪ SỐ</label>
+                <input type="number" id="chainFrom" value="30" min="0" max="99" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none transition">
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-sm">
+                <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
+                <input type="number" id="chainTo" value="39" min="0" max="99" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none transition">
             </div>
         </div>
 
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 sm:p-4 space-y-3">
-            <div class="text-xs font-bold text-amber-800 uppercase flex items-center gap-1">🧠 Kịch bản câu chuyện điểm neo</div>
-            <div class="flex flex-wrap gap-1.5" id="storyTags"></div>
+        <div class="flex flex-wrap gap-2">
+            <button onclick="generateRandomChain()" class="flex-1 min-w-[170px] h-11 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold rounded-xl shadow-md transition active:scale-[0.99] text-xs sm:text-sm flex items-center justify-center gap-1.5">
+                ✨ TẠO CHUỖI CẶP SỐ
+            </button>
+            <button onclick="copyRandomChain()" id="btnCopyChain" title="Sao chép toàn bộ chuỗi số" class="h-11 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-4 rounded-xl font-bold text-xs transition flex items-center gap-1.5 shadow-sm active:scale-95">
+                📋 Sao chép
+            </button>
+        </div>
+
+        <div class="space-y-1.5">
+            <div class="flex justify-between items-center text-[11px] font-bold text-slate-500 px-1">
+                <span>Kết quả (<span id="chainStats">0 cặp số</span>):</span>
+                <span class="text-slate-400 italic">Mỗi cặp số có màu sắc xen kẽ rõ ràng</span>
+            </div>
             
-            <div class="bg-white border border-amber-200 rounded-lg p-3 text-xs text-slate-700 space-y-2">
-                <div class="font-bold text-purple-700">📍 Bảng định vị điểm neo thực tế (Nhà của bạn):</div>
-                <div id="anchorList" class="space-y-1"><i>Bấm nút tạo chuỗi để xem chi tiết từng điểm neo.</i></div>
-            </div>
-
-            <div id="storyText" class="text-xs leading-relaxed text-slate-700 bg-white p-3 rounded-lg border border-amber-200 min-h-[60px]">
-                Nhấn <b>"TẠO CHUỖI & KỂ CHUYỆN"</b> để hệ thống tự động kết nối các hình ảnh vào các vị trí trong nhà!
-            </div>
-
-            <div class="bg-pink-50 border border-pink-200 rounded-xl p-3 text-center space-y-2">
-                <div class="text-xs font-bold text-pink-600 uppercase">🎨 Tranh minh họa hành trình tự động bằng AI</div>
-                <button onclick="generateAIStoryImage()" id="btnAIDraw" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-2.5 rounded-lg text-xs shadow transition">
-                    🎨 BẤM ĐỂ AI VẼ TRANH CÂU CHUYỆN NÀY
-                </button>
-                <div id="ai-image-display" class="min-h-[160px] bg-white rounded-lg border border-dashed border-pink-300 flex items-center justify-center relative overflow-hidden">
-                    <span id="aiLoading" class="hidden text-xs font-bold text-pink-600 animate-pulse">⏳ AI đang kích hoạt não phải để vẽ bức tranh hành trình...</span>
-                    <span id="aiPlaceholder" class="text-[11px] text-slate-400 p-4">Bấm nút trên để tạo bức tranh trực quan giúp não ghi nhớ vĩnh viễn.</span>
-                    <img id="ai-img" src="" alt="AI Memory Canvas" class="max-w-full h-auto rounded-lg hidden">
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-            <div class="flex justify-between items-center mb-1">
-                <span class="text-[11px] font-bold text-slate-500">📌 PROMPT GỢI Ý CHO CHUYÊN GIA AI:</span>
-                <button onclick="copyPrompt()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-2 py-1 rounded text-[10px] transition">Sao chép</button>
-            </div>
-            <div id="promptText" class="text-[11px] font-mono bg-white p-2.5 rounded border border-slate-200 text-slate-600 max-h-24 overflow-y-auto">
-                Chưa có prompt.
+            <div id="chainDisplayBox" class="bg-white border-2 border-slate-200 rounded-2xl p-3 sm:p-4 min-h-[96px] flex flex-wrap gap-2 items-center justify-center content-center shadow-inner">
+                <span class="text-xs text-slate-400 italic">Bấm nút trên để tạo chuỗi cặp số ngẫu nhiên...</span>
             </div>
         </div>
     </div>
+
 </div>
 
 <script>
@@ -217,98 +365,151 @@
         "Bác sĩ": "Doctor", "Trống": "Drum", "Dê": "Goat", "Ong và hoa": "Bee and flower", "Vợt cầu lông": "Badminton racket"
     };
 
-    const anchorPoints = ["Cổng nhà", "Sân trước", "Bậc tam cấp", "Cửa chính", "Phòng khách", "Bàn làm việc", "Cầu thang", "Phòng ngủ", "Ban công", "Sân thượng"];
-    const anchorEn = ["House Entrance Gate", "Front Yard", "Doorstep Stairs", "Main Front Door", "Living Room", "Working Desk", "Staircase", "Bedroom", "Balcony", "Rooftop Terrace"];
-    const dynamicActions = ["bốc cháy ngùn ngụt 🔥", "phát tiếng nổ OÀNH 💥", "nhảy múa lung linh ✨", "văng vỡ tan tành ⚡", "biến hình khổng lồ 🌟", "bay xoay tròn 🌀"];
-
     let intervalId = null;
     let sequence = [];
     let currentIdx = 0;
-    let activeSequence = [];
-    let currentAudio = null;
+    let currentGeneratedChain = [];
 
-    function switchTab(tabName) {
-        if (intervalId) { clearInterval(intervalId); intervalId = null; }
-        if (currentAudio) { currentAudio.pause(); currentAudio = null; }
-        window.speechSynthesis.cancel();
+    let isAudioEnabled = true;
+    let isLabelVisible = true;
 
-        document.getElementById('panel-flashcard').classList.add('hidden');
-        document.getElementById('panel-library').classList.add('hidden');
-        document.getElementById('panel-journey').classList.add('hidden');
+    const badgeColorStyles = [
+        "bg-blue-100 text-blue-900 border-blue-300",
+        "bg-amber-100 text-amber-900 border-amber-300",
+        "bg-emerald-100 text-emerald-900 border-emerald-300",
+        "bg-purple-100 text-purple-900 border-purple-300",
+        "bg-rose-100 text-rose-900 border-rose-300",
+        "bg-cyan-100 text-cyan-900 border-cyan-300"
+    ];
+
+    // XỬ LÝ MENU DROPDOWN CHỌN BÀI
+    function toggleDropdown() {
+        const menu = document.getElementById('dropdownMenu');
+        const btn = document.getElementById('btnDropdown');
+        const arrow = document.getElementById('dropdownArrow');
+        const isHidden = menu.classList.contains('hidden');
         
-        document.getElementById('tab-flashcard').className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-blue-600 transition";
-        document.getElementById('tab-library').className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-blue-600 transition";
-        document.getElementById('tab-journey').className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-blue-600 transition";
-
-        if (tabName === 'flashcard') {
-            document.getElementById('panel-flashcard').classList.remove('hidden');
-            document.getElementById('tab-flashcard').className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-blue-600 text-white shadow transition";
-        } else if (tabName === 'library') {
-            document.getElementById('panel-library').classList.remove('hidden');
-            document.getElementById('tab-library').className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-blue-600 text-white shadow transition";
-            renderLibrary();
-        } else if (tabName === 'journey') {
-            document.getElementById('panel-journey').classList.remove('hidden');
-            document.getElementById('tab-journey').className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-blue-600 text-white shadow transition";
+        if (isHidden) {
+            menu.classList.remove('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+            arrow.style.transform = 'rotate(180deg)';
+        } else {
+            menu.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+            arrow.style.transform = 'rotate(0deg)';
         }
     }
 
-    // Phóng to toàn màn hình slide
+    // Đóng dropdown khi bấm ngoài hoặc nhấn Escape
+    document.addEventListener('click', (e) => {
+        const btn = document.getElementById('btnDropdown');
+        const menu = document.getElementById('dropdownMenu');
+        if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+            document.getElementById('dropdownArrow').style.transform = 'rotate(0deg)';
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const menu = document.getElementById('dropdownMenu');
+            const btn = document.getElementById('btnDropdown');
+            if (menu && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+                document.getElementById('dropdownArrow').style.transform = 'rotate(0deg)';
+            }
+        }
+    });
+
+    function toggleAudio() {
+        isAudioEnabled = !isAudioEnabled;
+        const btn = document.getElementById('btnAudioToggle');
+        const icon = document.getElementById('audioIcon');
+
+        if (isAudioEnabled) {
+            btn.className = "h-10 w-10 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "🔊";
+        } else {
+            btn.className = "h-10 w-10 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "🔇";
+            window.speechSynthesis.cancel();
+        }
+    }
+
+    function toggleLabel() {
+        isLabelVisible = !isLabelVisible;
+        const btn = document.getElementById('btnLabelToggle');
+        const icon = document.getElementById('labelIcon');
+        const statusEl = document.getElementById('status-text');
+
+        if (isLabelVisible) {
+            btn.className = "h-10 px-3 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "Aa";
+            statusEl.style.opacity = "1";
+            statusEl.style.visibility = "visible";
+        } else {
+            btn.className = "h-10 px-3 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl text-xs font-black tracking-wider line-through transition flex items-center justify-center shadow-sm active:scale-95";
+            icon.innerText = "Aa";
+            statusEl.style.opacity = "0";
+            statusEl.style.visibility = "hidden";
+        }
+    }
+
     function toggleFullscreen() {
         const elem = document.getElementById('flashcard-box');
         if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen();
-            }
+            if (elem.requestFullscreen) elem.requestFullscreen();
+            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
         } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            }
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
         }
     }
 
-    // Đọc giọng tiếng Anh chuẩn AI Google TTS
-    function playEnglishAudio(textVi) {
-        const engine = document.getElementById('audioEngine').value;
-        if (engine === 'off') return;
+    document.addEventListener('fullscreenchange', handleFsChange);
+    document.addEventListener('webkitfullscreenchange', handleFsChange);
 
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio = null;
+    function handleFsChange() {
+        const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+        const btn = document.getElementById('btnFsToggle');
+        if (isFs) {
+            document.getElementById('fs-icon').innerText = "✕";
+            document.getElementById('fs-text').innerText = "Thu nhỏ";
+            btn.className = "h-10 px-3 bg-rose-600 text-white hover:bg-rose-700 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
+        } else {
+            document.getElementById('fs-icon').innerText = "⛶";
+            document.getElementById('fs-text').innerText = "Toàn màn hình";
+            btn.className = "h-10 px-3 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
         }
+    }
+
+    function playEnglishAudio(textVi) {
+        if (!isAudioEnabled) return;
         window.speechSynthesis.cancel();
 
         const englishText = dictEn[textVi] || textVi;
-        const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(englishText)}&tl=en&client=tw-ob`;
-        
-        currentAudio = new Audio(ttsUrl);
-        currentAudio.play().catch(e => {
-            let utterance = new SpeechSynthesisUtterance(englishText);
-            utterance.lang = 'en-US';
-            utterance.rate = 1.0;
-            window.speechSynthesis.speak(utterance);
-        });
+        let utterance = new SpeechSynthesisUtterance(englishText);
+        utterance.lang = 'en-US';
+        utterance.rate = 1.0;
+        window.speechSynthesis.speak(utterance);
     }
 
     function startPlay() {
         if (intervalId) {
             clearInterval(intervalId);
             intervalId = null;
-            if (currentAudio) { currentAudio.pause(); currentAudio = null; }
             window.speechSynthesis.cancel();
-            document.getElementById('btnStart').innerText = "▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ";
+            updatePlayButtons(false);
             return;
         }
 
         let f = parseInt(document.getElementById('inputFrom').value);
         let t = parseInt(document.getElementById('inputTo').value);
         
-        if (isNaN(f) || f < 0) f = 0;
-        if (isNaN(t) || t > 99) t = 99;
+        if (isNaN(f) || f < 30) f = 30;
+        if (isNaN(t) || t > 39) t = 39;
         if (f > t) { let tmp = f; f = t; t = tmp; }
 
         document.getElementById('inputFrom').value = f;
@@ -322,22 +523,43 @@
             sequence.push(i.toString().padStart(2, '0'));
         }
 
-        if (sequence.length === 0) {
-            alert("Vui lòng chọn khoảng số hợp lệ!");
-            return;
-        }
+        if (sequence.length === 0) return;
 
         if (mode === "random") sequence.sort(() => Math.random() - 0.5);
         if (mode === "backward") sequence.reverse();
         currentIdx = 0;
 
-        document.getElementById('btnStart').innerText = "⏸ TẠM DỪNG";
-
+        updatePlayButtons(true);
         runSlideStep();
 
         intervalId = setInterval(() => {
             runSlideStep();
         }, s * 1000);
+    }
+
+    function updatePlayButtons(isPlaying) {
+        const btnStart = document.getElementById('btnStart');
+        const miniBtn = document.getElementById('btnMiniPlay');
+        const miniIcon = document.getElementById('miniPlayIcon');
+        const miniText = document.getElementById('miniPlayText');
+
+        if (isPlaying) {
+            document.getElementById('btnStartText').innerText = "TẠM DỪNG (Space)";
+            document.getElementById('btnStartIcon').innerText = "⏸";
+            btnStart.className = "w-full h-13 bg-amber-600 hover:bg-amber-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2";
+
+            miniIcon.innerText = "⏸";
+            miniText.innerText = "Dừng";
+            miniBtn.className = "h-10 px-3.5 bg-amber-600 text-white hover:bg-amber-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95";
+        } else {
+            document.getElementById('btnStartText').innerText = "TIẾP TỤC PHẢN XẠ 30 - 39 (Space)";
+            document.getElementById('btnStartIcon').innerText = "▶";
+            btnStart.className = "w-full h-13 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2";
+
+            miniIcon.innerText = "▶";
+            miniText.innerText = "Chạy";
+            miniBtn.className = "h-10 px-3.5 bg-blue-600 text-white hover:bg-blue-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95";
+        }
     }
 
     function runSlideStep() {
@@ -347,19 +569,28 @@
             } else {
                 clearInterval(intervalId);
                 intervalId = null;
-                document.getElementById('status-text').innerText = "HOÀN THÀNH!";
-                document.getElementById('btnStart').innerText = "▶ BẮT ĐẦU / TẠM DỪNG PHẢN XẠ";
+                document.getElementById('status-text').innerText = "HOÀN THÀNH BÀI 4!";
+                updatePlayButtons(false);
+                document.getElementById('btnStartText').innerText = "BẮT ĐẦU LẠI 30 - 39 (Space)";
                 playEnglishAudio("Completed");
                 return;
             }
         }
 
         const num = sequence[currentIdx];
-        document.getElementById('number-main').innerText = num;
         
         const imgEl = document.getElementById('img-main');
-        imgEl.src = `image/${num}.png`;
-        imgEl.style.display = "block";
+        imgEl.onerror = function() {
+            if (this.src.endsWith('.png')) {
+                this.src = `../image/${num}.jpg`;
+            } else if (this.src.endsWith('.jpg')) {
+                this.src = `../image/${num}.jpeg`;
+            } else {
+                this.onerror = null;
+                this.src = `https://via.placeholder.com/300?text=${num}`;
+            }
+        };
+        imgEl.src = `../image/${num}.png`;
 
         const nameVi = dataDict[num] || "Chưa có tên";
         const nameEn = dictEn[nameVi] || nameVi;
@@ -371,172 +602,79 @@
         currentIdx++;
     }
 
-    function renderLibrary(filter = "") {
-        const grid = document.getElementById('libraryGrid');
-        grid.innerHTML = "";
-        
-        for (let i = 0; i <= 99; i++) {
-            const numStr = i.toString().padStart(2, '0');
-            const nameVi = dataDict[numStr] || "";
-            const nameEn = dictEn[nameVi] || "";
-            
-            if (filter && !numStr.includes(filter) && !nameVi.toLowerCase().includes(filter.toLowerCase()) && !nameEn.toLowerCase().includes(filter.toLowerCase())) {
-                continue;
-            }
+    function generateRandomChain() {
+        let count = parseInt(document.getElementById('chainLength').value);
+        let fromVal = parseInt(document.getElementById('chainFrom').value);
+        let toVal = parseInt(document.getElementById('chainTo').value);
 
-            const card = document.createElement('div');
-            card.className = "bg-white border border-slate-200 rounded-xl p-2 text-center shadow-sm hover:shadow-md transition flex flex-col items-center cursor-pointer";
-            card.onclick = () => playEnglishAudio(nameVi);
-            card.innerHTML = `
-                <div class="text-xs font-bold text-blue-600 mb-1">${numStr}</div>
-                <div class="w-16 h-16 flex items-center justify-center my-1 bg-slate-50 rounded-lg">
-                    <img src="image/${numStr}.png" alt="${nameVi}" class="max-h-full max-w-full object-contain" onerror="this.src='https://via.placeholder.com/60?text=${numStr}'">
-                </div>
-                <div class="text-[11px] font-bold text-slate-700 truncate w-full" title="${nameVi}">🔊 ${nameEn}</div>
-            `;
-            grid.appendChild(card);
-        }
-    }
+        if (isNaN(count) || count <= 0) count = 20;
+        if (isNaN(fromVal) || fromVal < 0) fromVal = 0;
+        if (isNaN(toVal) || toVal > 99) toVal = 99;
+        if (fromVal > toVal) { let tmp = fromVal; fromVal = toVal; toVal = tmp; }
 
-    function filterLibrary() {
-        const query = document.getElementById('searchBox').value;
-        renderLibrary(query);
-    }
+        document.getElementById('chainLength').value = count;
+        document.getElementById('chainFrom').value = fromVal;
+        document.getElementById('chainTo').value = toVal;
 
-    function makeChain() {
-        const len = parseInt(document.getElementById('inputLen').value) || 6;
-        const box = document.getElementById('resultChain');
-        const storyText = document.getElementById('storyText');
-        const storyTags = document.getElementById('storyTags');
-        const anchorList = document.getElementById('anchorList');
-        const promptText = document.getElementById('promptText');
-        
+        currentGeneratedChain = [];
+        const box = document.getElementById('chainDisplayBox');
         box.innerHTML = "";
-        storyTags.innerHTML = "";
-        anchorList.innerHTML = "";
-        
-        document.getElementById('ai-img').style.display = 'none';
-        document.getElementById('aiPlaceholder').style.display = 'block';
-        
-        activeSequence = [];
 
-        for (let i = 0; i < len; i++) {
-            const pair = Math.floor(Math.random() * 100).toString().padStart(2, '0');
-            activeSequence.push(pair);
+        const rangeSpan = (toVal - fromVal) + 1;
+
+        for (let i = 0; i < count; i++) {
+            const randNum = Math.floor(Math.random() * rangeSpan) + fromVal;
+            const pairStr = randNum.toString().padStart(2, '0');
+            currentGeneratedChain.push(pairStr);
+
+            const colorClass = badgeColorStyles[i % badgeColorStyles.length];
+            const nameItem = dataDict[pairStr] || "";
 
             const span = document.createElement('span');
-            span.className = "px-2.5 py-1 bg-blue-50 text-blue-700 rounded-lg border border-blue-200 text-base font-black";
-            span.innerText = pair;
+            span.className = `px-3.5 py-2 rounded-xl border text-base sm:text-lg font-black shadow-sm transition hover:scale-105 active:scale-95 select-all cursor-pointer ${colorClass}`;
+            span.title = `${pairStr}: ${nameItem} (${dictEn[nameItem] || ''})`;
+            span.innerText = pairStr;
+            span.onclick = () => playEnglishAudio(nameItem);
+
             box.appendChild(span);
         }
 
-        activeSequence.forEach((num) => {
-            const tag = document.createElement('span');
-            tag.className = 'bg-amber-100 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-md';
-            tag.innerText = `${num}: ${dataDict[num]} (${dictEn[dataDict[num]]})`;
-            storyTags.appendChild(tag);
-        });
-
-        renderAnchorStats(activeSequence);
-        storyText.innerHTML = generateMemoryStory(activeSequence);
-
-        const numStr = activeSequence.join(' - ');
-        promptText.innerText = `Bạn là chuyên gia kỹ thuật ghi nhớ Nguyễn Phùng Phong. Hãy tạo một câu chuyện siêu độc đáo, hài hước và giàu hình ảnh theo phương pháp hành trình điểm neo để liên kết chuỗi số sau: ${numStr}`;
+        document.getElementById('chainStats').innerText = `${count} cặp số (Dải ${fromVal.toString().padStart(2,'0')} - ${toVal.toString().padStart(2,'0')})`;
     }
 
-    function renderAnchorStats(seq) {
-        const anchorList = document.getElementById('anchorList');
-        let html = "";
-        for (let i = 0; i < seq.length; i++) {
-            const num = seq[i];
-            const imgName = dataDict[num] || num;
-            const anchor = anchorPoints[i % anchorPoints.length];
-            html += `<div class="text-[11px] bg-slate-50 p-1.5 rounded border border-slate-200">
-                <b>Vị trí ${i+1}:</b> [${anchor}] ➔ Neo hình ảnh <b>${imgName} (${num})</b>. 
-            </div>`;
-        }
-        anchorList.innerHTML = html;
-    }
-
-    function generateMemoryStory(seq) {
-        if (seq.length === 0) return "Chưa có dãy số.";
-        let storyHtml = "<b>🎬 KỊCH BẢN KỂ CHUYỆN HÀNH TRÌNH:</b><br><ol class='list-decimal pl-4 space-y-1 mt-1'>";
-        for (let i = 0; i < seq.length; i++) {
-            const num = seq[i];
-            const imgName = dataDict[num] || num;
-            const anchor = anchorPoints[i % anchorPoints.length];
-            const act = dynamicActions[i % dynamicActions.length];
-            
-            if (i === 0) {
-                storyHtml += `<li>Bước đến <b>[${anchor}]</b>, bạn kinh ngạc thấy một <b>${imgName} (${num})</b> ${act}!</li>`;
-            } else {
-                const prevNum = seq[i-1];
-                const prevImg = dataDict[prevNum] || prevNum;
-                storyHtml += `<li>Từ <b>${prevImg}</b>, bạn lao tiếp tới <b>[${anchor}]</b> thì va chạm mạnh khiến một <b>${imgName} (${num})</b> xuất hiện và ${act}!</li>`;
-            }
-        }
-        storyHtml += "</ol>";
-        storyHtml += "<div class='mt-2 text-[10px] text-slate-500 italic'>✨ Quy tắc Nguyễn Phùng Phong: Gắn vào Điểm neo ➔ Chuyển động bất ngờ / Vô lý ➔ Nhớ vĩnh viễn!</div>";
-        return storyHtml;
-    }
-
-    function generateAIStoryImage() {
-        if (!activeSequence || activeSequence.length === 0) {
-            alert("Vui lòng bấm 'TẠO CHUỖI & KỂ CHUYỆN' trước khi vẽ tranh!");
-            return;
-        }
-
-        const btn = document.getElementById('btnAIDraw');
-        const loader = document.getElementById('aiLoading');
-        const placeholder = document.getElementById('aiPlaceholder');
-        const aiImg = document.getElementById('ai-img');
-
-        btn.disabled = true;
-        loader.classList.remove('hidden');
-        placeholder.classList.add('hidden');
-        aiImg.classList.add('hidden');
-
-        let promptElements = [];
-        for (let i = 0; i < activeSequence.length; i++) {
-            const num = activeSequence[i];
-            const vnName = dataDict[num] || "Object";
-            const enObj = dictEn[vnName] || vnName;
-            const enAnchor = anchorEn[i % anchorEn.length];
-            promptElements.push(`at ${enAnchor} a giant glowing ${enObj}`);
-        }
-
-        const storyVisualPrompt = `A high quality continuous memory palace visual storyboard comic panel, sequentially showing: ${promptElements.join(', connected to ')}. Vibrant colors, surreal funny fantasy style, hyper-detailed, masterpiece, highly visual memory map.`;
-        
-        const encodedPrompt = encodeURIComponent(storyVisualPrompt);
-        const seed = Math.floor(Math.random() * 999999);
-        const aiImageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=800&height=500&seed=${seed}&nologo=true`;
-
-        const tempImage = new Image();
-        tempImage.src = aiImageUrl;
-        
-        tempImage.onload = function() {
-            aiImg.src = aiImageUrl;
-            aiImg.classList.remove('hidden');
-            loader.classList.add('hidden');
-            btn.disabled = false;
-        };
-
-        tempImage.onerror = function() {
-            loader.innerText = "⚠️ Lỗi kết nối AI, vui lòng thử bấm vẽ lại!";
-            btn.disabled = false;
-        };
-    }
-
-    function copyPrompt() {
-        const text = document.getElementById('promptText').innerText;
-        navigator.clipboard.writeText(text).then(() => {
-            alert("Đã sao chép Prompt thành công!");
+    function copyRandomChain() {
+        if (!currentGeneratedChain || currentGeneratedChain.length === 0) return;
+        const textToCopy = currentGeneratedChain.join(" ");
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const btn = document.getElementById('btnCopyChain');
+            btn.innerHTML = "✅ Đã chép!";
+            setTimeout(() => { btn.innerHTML = "📋 Sao chép"; }, 1500);
         });
     }
+
+    // TỐI ƯU TOÀN DIỆN PHÍM TẮT TRẢI NGHIỆM
+    window.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT') return;
+        
+        if (e.code === 'Space') {
+            e.preventDefault();
+            startPlay();
+        } else if (e.key === 'f' || e.key === 'F') {
+            e.preventDefault();
+            toggleFullscreen();
+        } else if (e.key === 'm' || e.key === 'M') {
+            e.preventDefault();
+            toggleAudio();
+        } else if (e.key === 'h' || e.key === 'H') {
+            e.preventDefault();
+            toggleLabel();
+        }
+    });
 
     window.onload = () => {
-        renderLibrary();
-        document.getElementById('inputTo').value = 99;
+        document.getElementById('inputFrom').value = 30;
+        document.getElementById('inputTo').value = 39;
+        generateRandomChain();
     };
 </script>
 </body>
