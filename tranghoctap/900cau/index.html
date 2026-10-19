@@ -14,7 +14,7 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #F4F7F5; /* Tone sáng tươi hợp Mệnh Mộc */
+      background-color: #F4F7F5;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: #1e293b;
     }
@@ -27,7 +27,6 @@
       50% { transform: translateY(-4px); }
     }
 
-    /* ================= BANNER & 3 NÚT ĐIỀU HƯỚNG ================= */
     .study-header-banner {
       background: #ffffff;
       border-bottom: 1.5px solid #d1fae5;
@@ -75,7 +74,6 @@
     .btn-study  { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
     .btn-group  { background: linear-gradient(135deg, #0284c7, #0369a1); }
 
-    /* ================= DẢI GÓC ỦNG HỘ & POPUP ================= */
     .shopee-promo-bar {
       width: 100%;
       padding: 0 8px 6px;
@@ -148,7 +146,6 @@
       display: block;
     }
 
-    /* Popup 27 danh mục cao cấp */
     .shopee-modal-overlay {
       position: fixed;
       inset: 0;
@@ -371,7 +368,7 @@
 
       <!-- ĐÚNG 6 NÚT GOM TRÊN 1 HÀNG NGANG -->
       <div class="grid grid-cols-6 gap-1.5 items-center">
-        <!-- 1. Nút MP3 / AI (MẶC ĐỊNH LÀ MP3) -->
+        <!-- 1. Nút MP3 / AI -->
         <button id="voiceToggleBtn" class="h-9 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1" title="Chuyển đổi âm thanh">
           <i class="fa-solid fa-file-audio text-[12px]" id="voiceIcon"></i>
           <span id="voiceText" class="text-[11px]">MP3</span>
@@ -411,7 +408,6 @@
 
   <script src="js/data.js"></script>
   <script>
-    // Hàm mở/đóng Popup 27 danh mục Shopee
     function openShopeeModal() {
       document.getElementById('shopeeModal').style.display = 'flex';
     }
@@ -456,14 +452,13 @@
     let startIdx = 0;
     let endIdx = 0;
 
-    // MẶC ĐỊNH LÀ MP3 GỐC
     let currentMode = 'mp3';
     let currentSpeed = 1.0;
     let currentRepeatLimit = 1;
     let currentRepeat = 0;
 
     let isPlaying = false;
-    let showDetails = false; // Mặc định ẩn Dịch & IPA
+    let showDetails = false;
     let audioPlayer = new Audio();
 
     const startSelect = document.getElementById('startLessonSelect');
@@ -490,9 +485,8 @@
         endSelect.appendChild(opt2);
       });
 
-      // MẶC ĐỊNH TỪ BÀI 1 ĐẾN BÀI 1
       startIdx = 0;
-      endIdx = 0;
+      endIdx = Math.min(2, LESSONS_DATA.length - 1); // Mặc định từ bài 1 đến bài 3
       startSelect.value = startIdx;
       endSelect.value = endIdx;
       currentLessonIdx = startIdx;
@@ -510,7 +504,6 @@
               <span class="font-bold text-slate-800 text-[13px] leading-tight">• ${s.en}</span>
               <i class="fa-solid fa-volume-high text-[11px] text-emerald-600 opacity-80 ml-1.5"></i>
             </div>
-            <!-- MẶC ĐỊNH ẨN DỊCH & IPA NẾU showDetails = false -->
             <div class="trans-box ${showDetails ? '' : 'hidden'} mt-0.5 space-y-0.5 text-[11px]">
               <p class="ipa-text font-mono leading-tight">${s.ipa || ''}</p>
               <p class="vn-text font-medium leading-tight"><span class="bg-emerald-100 text-emerald-800 px-1 rounded text-[9px] mr-1 font-bold">VN</span>${s.vi || ''}</p>
@@ -606,7 +599,6 @@
       currentRepeat = 0;
     });
 
-    // CHUYỂN ĐỔI CHẾ ĐỘ GIỌNG ĐỌC MP3 VÀ AI CHUẨN XÁC
     const voiceBtn = document.getElementById('voiceToggleBtn');
     voiceBtn.addEventListener('click', () => {
       stopPlayback();
@@ -629,10 +621,15 @@
       document.getElementById('toggleTransBtn').classList.toggle('bg-emerald-800', showDetails);
     });
 
+    // SỬA LỖI NÚT PLAY: ĐỒNG BỘ DẢI BÀI TỪ THẺ SELECT KHI BẤM PHÁT
     document.getElementById('playBtn').addEventListener('click', () => {
       if (isPlaying) {
         stopPlayback();
       } else {
+        // Cập nhật chuẩn xác dải bài từ ô select người dùng đang chọn
+        startIdx = parseInt(startSelect.value);
+        endIdx = parseInt(endSelect.value);
+
         isPlaying = true;
         document.getElementById('playIcon').className = "fa-solid fa-pause text-sm";
 
@@ -665,10 +662,6 @@
 
         if (currentLessonIdx < endIdx) {
           currentLessonIdx++;
-          startIdx = currentLessonIdx;
-          endIdx = currentLessonIdx;
-          startSelect.value = startIdx;
-          endSelect.value = endIdx;
           renderLesson(currentLessonIdx);
           setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 600);
         } else {
@@ -692,7 +685,6 @@
       }
     }
 
-    // XỬ LÝ PHÁT MP3 GỐC ĐÚNG THƯ MỤC VÀ TÊN FILE DỰ PHÒNG
     function playMp3() {
       const item = LESSONS_DATA[currentLessonIdx];
       let mp3Path = item.mp3Url;
@@ -704,7 +696,6 @@
       audioPlayer.playbackRate = currentSpeed;
       
       audioPlayer.play().catch(() => {
-        // Tự động fallback sang AI nếu không tìm thấy file MP3 vật lý
         currentMode = 'ai';
         voiceBtn.className = "h-9 rounded-lg font-bold text-xs bg-teal-600 hover:bg-teal-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1";
         document.getElementById('voiceIcon').className = "fa-solid fa-robot text-[12px]";
@@ -773,29 +764,19 @@
       synth.speak(currentUtterance);
     };
 
-    // BÀI TRƯỚC (PREV): TỰ ĐỘNG NHẢY SỐ Ô "TỪ... ĐẾN..." VỀ BÀI HIỆN TẠI
     document.getElementById('prevBtn').addEventListener('click', () => {
       if (currentLessonIdx > 0) {
         stopPlayback();
         currentLessonIdx--;
-        startIdx = currentLessonIdx;
-        endIdx = currentLessonIdx;
-        startSelect.value = startIdx;
-        endSelect.value = endIdx;
         renderLesson(currentLessonIdx);
         currentRepeat = 0;
       }
     });
 
-    // BÀI SAU (NEXT): TỰ ĐỘNG NHẢY SỐ Ô "TỪ... ĐẾN..." VỀ BÀI HIỆN TẠI
     document.getElementById('nextBtn').addEventListener('click', () => {
       if (currentLessonIdx < LESSONS_DATA.length - 1) {
         stopPlayback();
         currentLessonIdx++;
-        startIdx = currentLessonIdx;
-        endIdx = currentLessonIdx;
-        startSelect.value = startIdx;
-        endSelect.value = endIdx;
         renderLesson(currentLessonIdx);
         currentRepeat = 0;
       }
