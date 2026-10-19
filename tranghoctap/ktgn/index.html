@@ -6,7 +6,8 @@
     <title>Học Kỹ Thuật Ghi Nhớ - 100 Số Nguyễn Phùng Phong</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Quicksand', sans-serif; 
@@ -14,14 +15,216 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 8px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-        
+
+        /* BANNER TRANG HỌC TẬP CSS */
+        .study-header-banner {
+            background: #ffffff;
+            border-bottom: 1.5px solid #d1fae5;
+            padding: 8px 14px;
+            text-align: center;
+            border-radius: 16px 16px 0 0;
+        }
+        .study-header-banner a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 15px;
+            font-weight: 900;
+            color: #065f46;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .study-header-banner a:hover {
+            color: #047857;
+        }
+
+        .study-actions-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            width: 100%;
+            padding: 8px 8px 6px;
+            box-sizing: border-box;
+            background: #ffffff;
+        }
+        .study-action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 7px 4px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #ffffff;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+        .study-action-btn:hover { transform: translateY(-1px); }
+        .btn-villa  { background: linear-gradient(135deg, #059669, #047857); }
+        .btn-study  { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+        .btn-group  { background: linear-gradient(135deg, #0284c7, #0369a1); }
+
+        .shopee-promo-bar {
+            width: 100%;
+            padding: 0 8px 8px;
+            box-sizing: border-box;
+            background: #ffffff;
+            border-radius: 0 0 16px 16px;
+        }
+        .shopee-promo-container {
+            background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+            border: 1px solid #059669;
+            border-radius: 12px;
+            padding: 6px 10px;
+            box-shadow: 0 3px 10px rgba(5, 150, 105, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .shopee-bar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+        }
+        .shopee-label {
+            font-size: 11px;
+            font-weight: 800;
+            color: #34d399;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+        }
+        .shopee-buttons-group {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .shopee-action-chip {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border: 1px solid #fbbf24;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+            transition: all 0.2s;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .shopee-action-chip:hover { background: #d97706; transform: translateY(-1px); }
+        .shopee-marquee-row {
+            font-size: 10px;
+            font-weight: 600;
+            color: #fef08a;
+            overflow: hidden;
+            border-top: 1px dashed rgba(52, 211, 153, 0.3);
+            padding-top: 3px;
+        }
+        .shopee-marquee-row a {
+            color: #fef08a;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* MODAL POPUP 27 DANH MỤC */
+        .shopee-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.75);
+            z-index: 999999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            backdrop-filter: blur(6px);
+        }
+        .shopee-modal-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+        .shopee-modal-header {
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shopee-modal-title {
+            font-size: 14px;
+            font-weight: 900;
+            color: #059669;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .shopee-modal-close {
+            background: #e2e8f0;
+            border: none;
+            color: #334155;
+            font-size: 13px;
+            font-weight: 800;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .shopee-modal-close:hover { background: #dc2626; color: #ffffff; }
+        .shopee-modal-body {
+            padding: 16px;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            background: #ffffff;
+        }
+        .shopee-grid-item {
+            background: #f8fafc;
+            border: 1.5px solid #e2e8f0;
+            color: #1e293b;
+            padding: 9px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        .shopee-grid-item:hover {
+            background: #ecfdf5;
+            border-color: #059669;
+            color: #047857;
+            transform: translateY(-2px);
+        }
+
         /* CHUẨN HOÁ CHẾ ĐỘ TOÀN MÀN HÌNH */
         #flashcard-box:fullscreen,
         #flashcard-box:-webkit-full-screen {
@@ -62,23 +265,86 @@
 </head>
 <body class="bg-slate-100 text-slate-800 flex justify-center items-center min-h-screen p-2 sm:p-4 select-none">
 
-<div class="bg-white w-full max-w-2xl rounded-3xl shadow-xl p-4 sm:p-6 my-2 border border-slate-200 space-y-4">
+<div class="bg-white w-full max-w-2xl rounded-3xl shadow-xl p-3 sm:p-5 my-2 border border-slate-200 space-y-4">
     
-    <!-- Tiêu đề & Nút Chọn Bài thả xuống -->
-    <div class="text-center relative pt-1">
-        <div class="flex flex-wrap items-center justify-center gap-2">
-            <h1 class="text-lg sm:text-2xl font-black text-blue-600 uppercase tracking-wide">
-                🧠 SIÊU TRÍ NHỚ 100 SỐ
-            </h1>
+    <!-- ======================================================== -->
+    <!-- PHẦN 1: BANNER TRANG HỌC TẬP & GÓC ỦNG HỘ SHOPEE          -->
+    <!-- ======================================================== -->
+    <div class="border border-emerald-100 rounded-2xl shadow-sm bg-white overflow-hidden">
+        <!-- Tiêu đề Header quay về index của tranghoctap -->
+        <div class="study-header-banner">
+            <a href="../index.html">
+                <i class="fa-solid fa-graduation-cap text-emerald-600"></i> TRANG HỌC TẬP
+            </a>
+        </div>
+
+        <!-- 3 Nút điều hướng -->
+        <div class="study-actions-row">
+            <!-- Nút 1: Ra thư mục ngoài Vandonstay -->
+            <a href="../../index.html" class="study-action-btn btn-villa">
+                <i class="fa-solid fa-hotel"></i> <span>Villa Sonasea</span>
+            </a>
+            <!-- Nút 2: Về index của tranghoctap -->
+            <a href="../index.html" class="study-action-btn btn-study">
+                <i class="fa-solid fa-graduation-cap"></i> <span>Trang Học Tập</span>
+            </a>
+            <!-- Nút 3: Vào Group Học Tập -->
+            <a href="https://facebook.com/groups/yourgrouphoctap" target="_blank" rel="noopener noreferrer" class="study-action-btn btn-group" title="Tham gia Group Học Tập">
+                <i class="fa-solid fa-users"></i> <span>Group Học Tập</span>
+            </a>
+        </div>
+
+        <!-- Dải góc ủng hộ Shopee -->
+        <div class="shopee-promo-bar">
+            <div class="shopee-promo-container">
+                <div class="shopee-bar-top">
+                    <div class="shopee-label">
+                        <span>🛍️</span> <span>Góc Ủng Hộ:</span>
+                    </div>
+                    <div class="shopee-buttons-group">
+                        <a href="https://s.shopee.vn/3qNFfgl0qh" target="_blank" rel="noopener noreferrer" class="shopee-action-chip">
+                            <span>🛒</span> Shopee
+                        </a>
+                        <a href="https://s.shopee.vn/W6nhiG47X" target="_blank" rel="noopener noreferrer" class="shopee-action-chip">
+                            <span>👑</span> Mall
+                        </a>
+                        <button type="button" onclick="openShopeeModal()" class="shopee-action-chip" style="background: linear-gradient(135deg, #10b981, #047857); border-color: #34d399;">
+                            <span>📂</span> Danh Mục ➔
+                        </button>
+                    </div>
+                </div>
+                <div class="shopee-marquee-row">
+                    <a href="https://s.shopee.vn/3qNFfgl0qh" target="_blank" rel="noopener noreferrer" title="Bấm để ủng hộ kinh phí">
+                        <marquee behavior="scroll" direction="left" scrollamount="4">
+                            🌱 Mọi đóng góp nhỏ qua mỗi lượt mua sắm Shopee sẽ là nguồn kinh phí quý giá giúp trang <strong style="color: #34d399; font-weight: 800;">HỌC TẬP</strong> luôn mở cửa miễn phí cho tất cả mọi người. Trân trọng cảm ơn bạn! ❤️
+                        </marquee>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PHẦN 2: BANNER HỌC SIÊU TRÍ NHỚ & CHỌN BÀI HỌC           -->
+    <!-- ======================================================== -->
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-3 sm:p-4 text-center relative shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+            <div class="text-left">
+                <h1 class="text-base sm:text-xl font-black text-blue-700 uppercase tracking-wide flex items-center gap-2">
+                    <span>🧠</span> SIÊU TRÍ NHỚ 100 SỐ
+                </h1>
+                <p class="text-[11px] text-slate-500 font-medium">Mã hóa số thành hình ảnh chuẩn Nguyễn Phùng Phong</p>
+            </div>
             
+            <!-- NÚT CHỌN BÀI HỌC (Dropdown) -->
             <div class="relative inline-block text-left">
-                <button type="button" onclick="toggleDropdown()" id="btnDropdown" aria-expanded="false" class="bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm transition flex items-center gap-1.5 active:scale-95">
-                    <span>Vào học 10 Bài</span>
+                <button type="button" onclick="toggleDropdown()" id="btnDropdown" aria-expanded="false" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-black px-3.5 py-2 rounded-xl shadow-md transition flex items-center gap-1.5 active:scale-95">
+                    <span>Chọn bài học</span>
                     <span id="dropdownArrow" class="text-[10px] transition-transform duration-200">▼</span>
                 </button>
 
                 <!-- Menu xổ nhanh 10 bài học -->
-                <div id="dropdownMenu" class="hidden absolute left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 mt-2 w-72 bg-white border border-slate-200 rounded-2xl shadow-2xl py-2 z-50 max-h-84 overflow-y-auto custom-scrollbar">
+                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-72 bg-white border border-slate-200 rounded-2xl shadow-2xl py-2 z-50 max-h-84 overflow-y-auto custom-scrollbar text-left">
                     <div class="px-3.5 py-1.5 text-[10px] font-black text-slate-400 uppercase tracking-wider border-b border-slate-100">
                         Danh sách 10 Bài học neo
                     </div>
@@ -102,224 +368,223 @@
                         <span>Bài 5: Bếp ăn</span>
                         <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md font-semibold">40 - 49</span>
                     </a>
-                    <a href="bai6/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                    <a href="bai6/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition">
                         <span>Bài 6: Phòng ngủ</span>
                         <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md font-semibold">50 - 59</span>
                     </a>
-                    <a href="bai7/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                    <a href="bai7/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition">
                         <span>Bài 7: Phòng làm việc</span>
                         <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md font-semibold">60 - 69</span>
                     </a>
-                    <a href="bai8/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                    <a href="bai8/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition">
                         <span>Bài 8: Sân thượng & Ban công</span>
                         <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md font-semibold">70 - 79</span>
                     </a>
-                    <a href="bai9/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                    <a href="bai9/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition">
                         <span>Bài 9: Gara xe & Kho</span>
                         <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md font-semibold">80 - 89</span>
                     </a>
-                    <a href="bai10/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition">
+                    <a href="bai10/index.html" class="flex items-center justify-between px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition">
                         <span>Bài 10: Toàn bộ ngôi nhà</span>
                         <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md font-semibold">90 - 99</span>
                     </a>
                 </div>
             </div>
         </div>
-        <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Phương pháp mã hóa chuẩn Nguyễn Phùng Phong</p>
     </div>
 
-    <!-- THANH CUỘN NHANH 10 BÀI HỌC (QUICK ACCESS CAPSULES) -->
-    <div class="bg-slate-50 border border-slate-200 p-2 rounded-2xl">
-        <div class="flex items-center justify-between px-1 mb-1.5">
-            <span class="text-[10px] font-black text-slate-400 uppercase tracking-wider">Học theo bài (Vuốt ngang):</span>
-            <span class="text-[10px] font-bold text-blue-600 cursor-pointer" onclick="switchTab('lessons')">Xem tất cả ➔</span>
-        </div>
-        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 px-0.5">
-            <a href="bai1/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>Bài 1 (00-09)
-            </a>
-            <a href="bai2/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-blue-500"></span>Bài 2 (10-19)
-            </a>
-            <a href="bai3/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>Bài 3 (20-29)
-            </a>
-            <a href="bai4/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-cyan-500"></span>Bài 4 (30-39)
-            </a>
-            <a href="bai5/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-amber-500"></span>Bài 5 (40-49)
-            </a>
-            <a href="bai6/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span>Bài 6 (50-59)
-            </a>
-            <a href="bai7/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-rose-500"></span>Bài 7 (60-69)
-            </a>
-            <a href="bai8/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-teal-500"></span>Bài 8 (70-79)
-            </a>
-            <a href="bai9/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-orange-500"></span>Bài 9 (80-89)
-            </a>
-            <a href="bai10/index.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm shrink-0 hover:border-blue-500 hover:text-blue-600 transition active:scale-95">
-                <span class="w-2 h-2 rounded-full bg-pink-500"></span>Bài 10 (90-99)
-            </a>
-        </div>
-    </div>
-
-    <!-- Tab điều hướng nội dung chính -->
-    <div class="flex rounded-2xl bg-slate-100 p-1">
-        <button onclick="switchTab('flashcard')" id="tab-flashcard" class="flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-blue-600 text-white shadow transition">🎯 1. Phản Xạ Slide</button>
-        <button onclick="switchTab('library')" id="tab-library" class="flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition">📚 2. Tra Cứu 100 Số</button>
-        <button onclick="switchTab('lessons')" id="tab-lessons" class="flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition">📖 3. Học 10 Bài Neo</button>
-    </div>
-
-    <!-- TAB 1: PHẢN XẠ & TỰ ĐỘNG -->
-    <div id="panel-flashcard" class="space-y-4">
-        <!-- Bảng Slide phản xạ -->
-        <div id="flashcard-box" class="bg-slate-50 border-2 border-slate-200 rounded-3xl p-3 sm:p-5 text-center relative min-h-[360px] sm:min-h-[430px] flex flex-col justify-between items-center shadow-inner overflow-hidden">
-            
-            <!-- THANH ĐIỀU KHIỂN NỔI -->
-            <div class="w-full flex items-center justify-between z-20 px-1 gap-2">
-                <div class="flex items-center gap-1.5 sm:gap-2">
-                    <button onclick="toggleFullscreen()" id="btnFsToggle" title="Toàn màn hình (F)" class="h-10 px-3 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95">
-                        <span id="fs-icon">⛶</span> <span id="fs-text" class="hidden sm:inline">Toàn màn hình</span>
-                    </button>
-
-                    <button type="button" onclick="toggleAudio()" id="btnAudioToggle" title="Bật/Tắt giọng đọc (M)" class="h-10 w-10 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95">
-                        <span id="audioIcon" class="text-base">🔊</span>
-                    </button>
-
-                    <button type="button" onclick="toggleLabel()" id="btnLabelToggle" title="Ẩn/Hiện chữ giải thích (H)" class="h-10 px-3 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95">
-                        <span id="labelIcon">Aa</span>
-                    </button>
-                    
-                    <button type="button" onclick="startPlay()" id="btnMiniPlay" title="Bắt đầu / Tạm dừng (Space)" class="h-10 px-3.5 bg-blue-600 text-white hover:bg-blue-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95">
-                        <span id="miniPlayIcon">▶</span> <span id="miniPlayText" class="hidden sm:inline">Chạy</span>
-                    </button>
-                </div>
-
-                <div id="counterDisplay" class="text-xs font-black text-slate-500 bg-white/95 px-3 py-2 rounded-xl border border-slate-200 shadow-sm shrink-0">0/0</div>
-            </div>
-            
-            <div id="number-main" class="hidden">--</div>
-            
-            <div id="img-container" class="w-full flex-1 flex items-center justify-center my-2 transition-all">
-                <img id="img-main" src="" alt="Hình ảnh số" class="max-h-[260px] sm:max-h-[320px] w-auto object-contain rounded-2xl shadow-md border border-slate-200 hidden bg-white">
-            </div>
-            
-            <div class="min-h-[46px] flex items-center justify-center w-full z-20 pb-1">
-                <div id="status-text" class="text-sm sm:text-base font-bold text-slate-700 bg-white/95 px-5 py-2 rounded-full border border-slate-200 shadow-sm transition-all duration-200">
-                    Sẵn sàng học tập!
-                </div>
-            </div>
+    <!-- ======================================================== -->
+    <!-- PHẦN 3: KHU VỰC HỌC SIÊU TRÍ NHỚ (FLASHCARD & TRA CỨU)    -->
+    <!-- ======================================================== -->
+    <div class="space-y-3">
+        <!-- 2 Tab chính -->
+        <div class="flex rounded-2xl bg-slate-100 p-1">
+            <button type="button" onclick="switchTab('flashcard')" id="tab-flashcard" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-xl bg-blue-600 text-white shadow transition">🎯 1. Học Flashcard</button>
+            <button type="button" onclick="switchTab('library')" id="tab-library" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition">📚 2. Tra Cứu 100 Số</button>
         </div>
 
-        <!-- Điều khiển tham số Slide -->
-        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 space-y-3">
-            <div class="grid grid-cols-3 gap-2">
-                <div>
-                    <label class="text-[10px] text-slate-500 font-bold block mb-1">TỪ SỐ</label>
-                    <input type="number" id="inputFrom" value="0" min="0" max="99" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm bg-white outline-none focus:border-blue-500 transition">
-                </div>
-                <div>
-                    <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
-                    <input type="number" id="inputTo" value="9" min="0" max="99" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm bg-white outline-none focus:border-blue-500 transition">
-                </div>
-                <div>
-                    <label class="text-[10px] text-slate-500 font-bold block mb-1">GIÂY / SỐ</label>
-                    <input type="text" id="inputSpeed" value="1.5" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm bg-white outline-none focus:border-blue-500 transition">
-                </div>
-            </div>
+        <!-- PANEL HỌC FLASHCARD -->
+        <div id="panel-flashcard" class="space-y-3">
+            <!-- Khung Flashcard trình chiếu -->
+            <div id="flashcard-box" class="bg-slate-50 border-2 border-slate-200 rounded-3xl p-3 sm:p-4 text-center relative min-h-[340px] sm:min-h-[400px] flex flex-col justify-between items-center shadow-inner overflow-hidden">
+                
+                <!-- Thanh nút phụ trợ trên ảnh -->
+                <div class="w-full flex items-center justify-between z-20 px-1 gap-2">
+                    <div class="flex items-center gap-1.5">
+                        <button type="button" onclick="toggleFullscreen()" id="btnFsToggle" title="Toàn màn hình (F)" class="h-9 px-2.5 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95">
+                            <span id="fs-icon">⛶</span> <span id="fs-text" class="hidden sm:inline">Toàn màn hình</span>
+                        </button>
 
-            <div class="flex flex-wrap justify-around items-center pt-2 border-t border-slate-200 text-xs font-semibold text-slate-600 gap-y-2">
-                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="forward" checked class="accent-blue-600 w-4 h-4"> Tiến (00-99)</label>
-                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="backward" class="accent-blue-600 w-4 h-4"> Lùi</label>
-                <label class="flex items-center gap-1.5 cursor-pointer py-1"><input type="radio" name="playMode" value="random" class="accent-blue-600 w-4 h-4"> Ngẫu nhiên</label>
-                <label class="flex items-center gap-1.5 text-green-700 font-bold cursor-pointer py-1"><input type="checkbox" id="checkLoop" class="accent-green-600 w-4 h-4" checked> Lặp lại</label>
-            </div>
-        </div>
+                        <button type="button" onclick="toggleAudio()" id="btnAudioToggle" title="Bật/Tắt giọng đọc (M)" class="h-9 w-9 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95">
+                            <span id="audioIcon" class="text-sm">🔊</span>
+                        </button>
 
-        <button onclick="startPlay()" id="btnStart" class="w-full h-13 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2">
-            <span id="btnStartIcon">▶</span> <span id="btnStartText">BẮT ĐẦU PHẢN XẠ (Space)</span>
-        </button>
+                        <button type="button" onclick="toggleLabel()" id="btnLabelToggle" title="Ẩn/Hiện chữ giải thích (H)" class="h-9 px-2.5 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95">
+                            <span id="labelIcon">Aa</span>
+                        </button>
+                    </div>
 
-        <!-- MỤC TẠO CHUỖI TỪNG CẶP SỐ NGẪU NHIÊN -->
-        <div class="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-sm">
-            <div class="flex items-center justify-between flex-wrap gap-2">
-                <div class="flex items-center gap-2">
-                    <span class="text-xl">🎲</span>
-                    <h2 class="text-xs sm:text-sm font-black text-blue-900 uppercase tracking-wide">
-                        Luyện Phản Xạ: Tạo Chuỗi Cặp Số
-                    </h2>
-                </div>
-                <span class="text-[11px] font-bold text-blue-600 bg-white px-2.5 py-1 rounded-full border border-blue-200 shadow-sm">
-                    Kỹ thuật ghi nhớ
-                </span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                <div class="bg-white p-2.5 rounded-xl border border-blue-100 shadow-sm">
-                    <label class="text-[10px] text-slate-500 font-bold block mb-1">SỐ LƯỢNG CẶP SỐ</label>
-                    <input type="number" id="chainLength" value="20" min="1" max="100" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm text-blue-600 bg-slate-50 focus:bg-white outline-none transition">
-                </div>
-                <div class="bg-white p-2.5 rounded-xl border border-blue-100 shadow-sm">
-                    <label class="text-[10px] text-slate-500 font-bold block mb-1">TỪ SỐ</label>
-                    <input type="number" id="chainFrom" value="0" min="0" max="99" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none transition">
-                </div>
-                <div class="bg-white p-2.5 rounded-xl border border-blue-100 shadow-sm">
-                    <label class="text-[10px] text-slate-500 font-bold block mb-1">ĐẾN SỐ</label>
-                    <input type="number" id="chainTo" value="5" min="0" max="99" class="w-full h-10 p-2 border border-slate-300 rounded-xl text-center font-black text-sm text-slate-700 bg-slate-50 focus:bg-white outline-none transition">
-                </div>
-            </div>
-
-            <div class="flex flex-wrap gap-2">
-                <button onclick="generateRandomChain()" class="flex-1 min-w-[170px] h-11 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-xl shadow-md transition active:scale-[0.99] text-xs sm:text-sm flex items-center justify-center gap-1.5">
-                    ✨ TẠO CHUỖI CẶP SỐ
-                </button>
-                <button onclick="copyRandomChain()" id="btnCopyChain" title="Sao chép toàn bộ chuỗi số" class="h-11 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-4 rounded-xl font-bold text-xs transition flex items-center gap-1.5 shadow-sm active:scale-95">
-                    📋 Copy
-                </button>
-            </div>
-
-            <div class="space-y-1.5">
-                <div class="flex justify-between items-center text-[11px] font-bold text-slate-500 px-1">
-                    <span>Kết quả hiển thị (<span id="chainStats">0 cặp số</span>):</span>
-                    <span class="text-slate-400 italic">Nhóm các cặp số có màu sắc xen kẽ</span>
+                    <div id="counterDisplay" class="text-xs font-black text-slate-500 bg-white/95 px-3 py-1.5 rounded-xl border border-slate-200 shadow-sm shrink-0">0/0</div>
                 </div>
                 
-                <div id="chainDisplayBox" class="bg-white border-2 border-slate-200 rounded-2xl p-3 sm:p-4 min-h-[96px] flex flex-wrap gap-2 items-center justify-center content-center shadow-inner">
-                    <span class="text-xs text-slate-400 italic">Bấm nút trên để tạo chuỗi cặp số...</span>
+                <div id="number-main" class="hidden">--</div>
+                
+                <div id="img-container" class="w-full flex-1 flex items-center justify-center my-2 transition-all">
+                    <img id="img-main" src="" alt="Hình ảnh số" class="max-h-[250px] sm:max-h-[300px] w-auto object-contain rounded-2xl shadow-md border border-slate-200 hidden bg-white">
                 </div>
+                
+                <div class="min-h-[42px] flex items-center justify-center w-full z-20 pb-1">
+                    <div id="status-text" class="text-xs sm:text-sm font-bold text-slate-700 bg-white/95 px-4 py-1.5 rounded-full border border-slate-200 shadow-sm transition-all duration-200">
+                        Sẵn sàng học tập!
+                    </div>
+                </div>
+            </div>
+
+            <!-- THANH THIẾT LẬP THU NHỎ & NÚT HỌC CÙNG HÀNG -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2.5 sm:p-3 space-y-2 shadow-sm">
+                <!-- Hàng 1: Từ số - Đến số - Giây - NÚT HỌC -->
+                <div class="grid grid-cols-12 gap-1.5 sm:gap-2 items-center">
+                    <div class="col-span-3 sm:col-span-2">
+                        <label class="text-[9px] text-slate-500 font-bold block mb-0.5">TỪ SỐ</label>
+                        <input type="number" id="inputFrom" value="0" min="0" max="99" class="w-full h-8 p-1 border border-slate-300 rounded-lg text-center font-black text-xs bg-white outline-none focus:border-blue-500">
+                    </div>
+                    <div class="col-span-3 sm:col-span-2">
+                        <label class="text-[9px] text-slate-500 font-bold block mb-0.5">ĐẾN SỐ</label>
+                        <input type="number" id="inputTo" value="9" min="0" max="99" class="w-full h-8 p-1 border border-slate-300 rounded-lg text-center font-black text-xs bg-white outline-none focus:border-blue-500">
+                    </div>
+                    <div class="col-span-2 sm:col-span-2">
+                        <label class="text-[9px] text-slate-500 font-bold block mb-0.5">GIÂY</label>
+                        <input type="text" id="inputSpeed" value="1.5" class="w-full h-8 p-1 border border-slate-300 rounded-lg text-center font-black text-xs bg-white outline-none focus:border-blue-500">
+                    </div>
+                    <!-- Nút HỌC cùng hàng -->
+                    <div class="col-span-4 sm:col-span-6 pt-3.5">
+                        <button type="button" onclick="startPlay()" id="btnStart" class="w-full h-8 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-lg shadow transition active:scale-95 text-xs flex items-center justify-center gap-1.5 cursor-pointer">
+                            <span id="btnStartIcon">▶</span> <span id="btnStartText">HỌC</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hàng 2: Tiến - Lùi - Ngẫu nhiên - Lặp lại -->
+                <div class="flex items-center justify-between pt-1.5 border-t border-slate-200 text-[11px] font-bold text-slate-600 flex-wrap gap-1 px-1">
+                    <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="forward" checked class="accent-blue-600 w-3.5 h-3.5"> Tiến</label>
+                    <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="backward" class="accent-blue-600 w-3.5 h-3.5"> Lùi</label>
+                    <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="playMode" value="random" class="accent-blue-600 w-3.5 h-3.5"> Ngẫu nhiên</label>
+                    <label class="flex items-center gap-1 text-green-700 cursor-pointer"><input type="checkbox" id="checkLoop" class="accent-green-600 w-3.5 h-3.5" checked> Lặp lại</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANEL TRA CỨU 100 SỐ -->
+        <div id="panel-library" class="hidden space-y-3">
+            <div class="flex gap-2">
+                <input type="text" id="searchBox" placeholder="🔍 Tìm số (05) hoặc tên (quả táo, apple)..." oninput="filterLibrary()" class="w-full p-2.5 border border-slate-300 rounded-xl text-xs sm:text-sm font-medium bg-slate-50 focus:bg-white transition outline-none">
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 max-h-[440px] overflow-y-auto p-1 custom-scrollbar" id="libraryGrid"></div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PHẦN 4: KHU VỰC LUYỆN TẬP DÃY SỐ (TẠO CHUỖI CẶP SỐ)       -->
+    <!-- ======================================================== -->
+    <div class="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-3 sm:p-4 space-y-3 shadow-sm">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+                <span class="text-lg">🎲</span>
+                <h2 class="text-xs sm:text-sm font-black text-blue-900 uppercase tracking-wide">
+                    Luyện Phản Xạ: Tạo Dãy Chuỗi Số
+                </h2>
+            </div>
+            <span class="text-[10px] font-bold text-blue-600 bg-white px-2 py-0.5 rounded-full border border-blue-200 shadow-sm">
+                Luyện trí nhớ
+            </span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-2">
+            <div class="bg-white p-2 rounded-xl border border-blue-100 shadow-sm">
+                <label class="text-[9px] text-slate-500 font-bold block mb-0.5">SỐ CẶP</label>
+                <input type="number" id="chainLength" value="20" min="1" max="100" class="w-full h-8 p-1 border border-slate-300 rounded-lg text-center font-black text-xs text-blue-600 bg-slate-50 focus:bg-white outline-none">
+            </div>
+            <div class="bg-white p-2 rounded-xl border border-blue-100 shadow-sm">
+                <label class="text-[9px] text-slate-500 font-bold block mb-0.5">TỪ SỐ</label>
+                <input type="number" id="chainFrom" value="0" min="0" max="99" class="w-full h-8 p-1 border border-slate-300 rounded-lg text-center font-black text-xs text-slate-700 bg-slate-50 focus:bg-white outline-none">
+            </div>
+            <div class="bg-white p-2 rounded-xl border border-blue-100 shadow-sm">
+                <label class="text-[9px] text-slate-500 font-bold block mb-0.5">ĐẾN SỐ</label>
+                <input type="number" id="chainTo" value="5" min="0" max="99" class="w-full h-8 p-1 border border-slate-300 rounded-lg text-center font-black text-xs text-slate-700 bg-slate-50 focus:bg-white outline-none">
+            </div>
+        </div>
+
+        <div class="flex gap-2">
+            <button type="button" onclick="generateRandomChain()" id="btnGenerateChain" class="flex-1 h-9 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-xl shadow transition active:scale-95 text-xs flex items-center justify-center gap-1.5 cursor-pointer">
+                ✨ TẠO CHUỖI SỐ
+            </button>
+            <button type="button" onclick="copyRandomChain()" id="btnCopyChain" title="Sao chép toàn bộ chuỗi số" class="h-9 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3 rounded-xl font-bold text-xs transition flex items-center gap-1 shadow-sm active:scale-95 cursor-pointer">
+                📋 Copy
+            </button>
+        </div>
+
+        <div class="space-y-1">
+            <div class="flex justify-between items-center text-[10px] font-bold text-slate-500 px-1">
+                <span>Dãy số (<span id="chainStats">0 cặp số</span>):</span>
+                <span class="text-slate-400 italic">Mỗi cặp số có màu sắc phân biệt</span>
+            </div>
+            
+            <div id="chainDisplayBox" class="bg-white border border-slate-200 rounded-xl p-2.5 min-h-[80px] flex flex-wrap gap-1.5 items-center justify-center content-center shadow-inner">
+                <span class="text-[11px] text-slate-400 italic">Bấm nút trên để tạo chuỗi số...</span>
             </div>
         </div>
     </div>
 
-    <!-- TAB 2: TRA CỨU 100 SỐ -->
-    <div id="panel-library" class="hidden space-y-3">
-        <div class="flex gap-2">
-            <input type="text" id="searchBox" placeholder="🔍 Tìm số (05) hoặc tên (quả táo, apple)..." oninput="filterLibrary()" class="w-full p-3 border border-slate-300 rounded-2xl text-sm font-medium bg-slate-50 focus:bg-white transition outline-none">
+    <!-- ======================================================== -->
+    <!-- POPUP 27 DANH MỤC TIỆN ÍCH SHOPEE                         -->
+    <!-- ======================================================== -->
+    <div class="shopee-modal-overlay" id="shopeeModal">
+        <div class="shopee-modal-box">
+            <div class="shopee-modal-header">
+                <div class="shopee-modal-title">
+                    <i class="fa-solid fa-store"></i> 27 Danh Mục Tiện Ích Shopee Ủng Hộ Quỹ Học Tập
+                </div>
+                <button type="button" class="shopee-modal-close" onclick="closeShopeeModal()">✕</button>
+            </div>
+            <div class="shopee-modal-body custom-scrollbar">
+                <a href="https://s.shopee.vn/2LYS3IwS7j" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👕 Thời Trang Nam</a>[cite: 16]
+                <a href="https://s.shopee.vn/9fL2nN1w88" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📱 Điện Thoại & Phụ Kiện</a>[cite: 16]
+                <a href="https://s.shopee.vn/4fwMqCtQBZ" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📺 Thiết Bị Điện Tử</a>[cite: 16]
+                <a href="https://s.shopee.vn/LnNgHDqy1" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💻 Máy Tính & Laptop</a>[cite: 16]
+                <a href="https://s.shopee.vn/20vbfNflGC" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📷 Máy Ảnh & Quay Phim</a>[cite: 16]
+                <a href="https://s.shopee.vn/9zxtC6N8dB" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">⌚ Đồng Hồ</a>[cite: 16]
+                <a href="https://s.shopee.vn/8fSVbfSuUJ" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👞 Giày Dép Nam</a>[cite: 16]
+                <a href="https://s.shopee.vn/3LQzFvcBDI" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">⚡ Thiết Bị Điện Gia Dụng</a>[cite: 16]
+                <a href="https://s.shopee.vn/2VrsGN6He2" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">⚽ Thể Thao & Du Lịch</a>[cite: 16]
+                <a href="https://s.shopee.vn/9zxtCDpnQu" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🛵 Ô Tô, Xe Máy & Xe Đạp</a>[cite: 16]
+                <a href="https://s.shopee.vn/1qcBTFp5Ay" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👗 Thời Trang Nữ</a>[cite: 16]
+                <a href="https://s.shopee.vn/4VcweeETuBA" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🍼 Mẹ & Bé</a>[cite: 16]
+                <a href="https://s.shopee.vn/9KiCP8XAVy" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🍳 Nhà Cửa & Đời Sống</a>[cite: 16]
+                <a href="https://s.shopee.vn/70KHcrjlwk" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💄 Sắc Đẹp</a>[cite: 16]
+                <a href="https://s.shopee.vn/4Vcwelax2W" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💊 Sức Khỏe</a>[cite: 16]
+                <a href="https://s.shopee.vn/40gg3Ocrd2" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👠 Giày Dép Nữ</a>[cite: 16]
+                <a href="https://s.shopee.vn/4qFn2wqbw8" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👜 Túi Ví Nữ</a>[cite: 16]
+                <a href="https://s.shopee.vn/1LfusXKVoB" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">💍 Phụ Kiện & Trang Sức</a>[cite: 16]
+                <a href="https://s.shopee.vn/8AWF16zFVq" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🍫 Bách Hóa Online</a>[cite: 16]
+                <a href="https://s.shopee.vn/AAHJOoCxGt" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">📚 Nhà Sách Online</a>[cite: 16]
+                <a href="https://s.shopee.vn/6q0rQhkcYb" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🎒 Balo & Túi Ví Nam</a>[cite: 16]
+                <a href="https://s.shopee.vn/3VkPSbAvl3" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🧸 Đồ Chơi</a>[cite: 16]
+                <a href="https://s.shopee.vn/6q0rQnVY1h" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🐱 Chăm Sóc Thú Cưng</a>[cite: 16]
+                <a href="https://s.shopee.vn/7ptOceeXle" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🛠️ Dụng Cụ & Thiết Bị</a>[cite: 16]
+                <a href="https://s.shopee.vn/4qFn3DACBn" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">👶 Thời Trang Trẻ Em</a>[cite: 16]
+                <a href="https://s.shopee.vn/5AsDrqZPPB" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🧼 Giặt Giũ & Nhà Cửa</a>[cite: 16]
+                <a href="https://s.shopee.vn/50ZDFYhgNc" target="_blank" rel="noopener noreferrer" class="shopee-grid-item">🎟️ Voucher & Dịch Vụ</a>[cite: 16]
+            </div>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 max-h-[460px] overflow-y-auto p-1 custom-scrollbar" id="libraryGrid"></div>
     </div>
 
-    <!-- TAB 3: HỌC 10 BÀI NEO (CARD GIAO DIỆN MỚI TRỰC QUAN) -->
-    <div id="panel-lessons" class="hidden space-y-3">
-        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center space-y-1">
-            <h2 class="text-sm font-black text-amber-800 uppercase">📖 DANH SÁCH 10 BÀI HỌC KỸ THUẬT GHI NHỚ</h2>
-            <p class="text-xs text-slate-600">Chọn hành trình bạn muốn chinh phục hôm nay:</p>
-        </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[480px] overflow-y-auto p-1 custom-scrollbar" id="lessonListGrid"></div>
-    </div>
 </div>
 
 <script>
     const dataDict = {
         "00": "Quả trứng", "01": "Cái ô", "02": "Con vịt", "03": "Trái tim", "04": "Cái ghế",
         "05": "Quả táo", "06": "Vỏ ốc", "07": "Cái rìu", "08": "Người tuyết", "09": "Hươu cao cổ",
-        "10": "Con lợn", "11": "Cái thang", "12": "Cá mập", "13": "Con bướm", "14": "Thuyền buồm",
+        "10": "Con lợn", "11": "Cái thang", "12": "Cá mập", "13": "Con bướm", "14": "Th thuyền buồm",
         "15": "Túi tiền", "16": "Ốc sên", "17": "Nốt nhạc", "18": "Đèn giao thông", "19": "Con chó",
         "20": "Quả bom", "21": "Ngọn nến", "22": "Thiên nga", "23": "Con công", "24": "Con sóc",
         "25": "Cần cẩu", "26": "Gà trống", "27": "Con chuột", "28": "Thỏ", "29": "Chuột máy tính",
@@ -379,29 +644,48 @@
         "bg-cyan-100 text-cyan-900 border-cyan-300"
     ];
 
+    // XỬ LÝ POPUP 27 DANH MỤC SHOPEE
+    function openShopeeModal() {
+        const modal = document.getElementById('shopeeModal');
+        if (modal) modal.style.display = 'flex';
+    }
+    function closeShopeeModal() {
+        const modal = document.getElementById('shopeeModal');
+        if (modal) modal.style.display = 'none';
+    }
+    window.addEventListener('click', (e) => {
+        const modal = document.getElementById('shopeeModal');
+        if (modal && e.target === modal) {
+            closeShopeeModal();
+        }
+    });
+
+    // XỬ LÝ MENU DROPDOWN CHỌN BÀI HỌC
     function toggleDropdown() {
         const menu = document.getElementById('dropdownMenu');
         const btn = document.getElementById('btnDropdown');
         const arrow = document.getElementById('dropdownArrow');
+        if (!menu) return;
         const isHidden = menu.classList.contains('hidden');
         if (isHidden) {
             menu.classList.remove('hidden');
-            btn.setAttribute('aria-expanded', 'true');
-            arrow.style.transform = 'rotate(180deg)';
+            if (btn) btn.setAttribute('aria-expanded', 'true');
+            if (arrow) arrow.style.transform = 'rotate(180deg)';
         } else {
             menu.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-            arrow.style.transform = 'rotate(0deg)';
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
         }
     }
 
     document.addEventListener('click', (e) => {
         const btn = document.getElementById('btnDropdown');
         const menu = document.getElementById('dropdownMenu');
+        const arrow = document.getElementById('dropdownArrow');
         if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
             menu.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-            document.getElementById('dropdownArrow').style.transform = 'rotate(0deg)';
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
         }
     });
 
@@ -409,11 +693,13 @@
         if (e.key === 'Escape') {
             const menu = document.getElementById('dropdownMenu');
             const btn = document.getElementById('btnDropdown');
+            const arrow = document.getElementById('dropdownArrow');
             if (menu && !menu.classList.contains('hidden')) {
                 menu.classList.add('hidden');
-                btn.setAttribute('aria-expanded', 'false');
-                document.getElementById('dropdownArrow').style.transform = 'rotate(0deg)';
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+                if (arrow) arrow.style.transform = 'rotate(0deg)';
             }
+            closeShopeeModal();
         }
     });
 
@@ -421,31 +707,30 @@
         isAudioEnabled = !isAudioEnabled;
         const btn = document.getElementById('btnAudioToggle');
         const icon = document.getElementById('audioIcon');
+        if (!btn || !icon) return;
 
         if (isAudioEnabled) {
-            btn.className = "h-10 w-10 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
+            btn.className = "h-9 w-9 bg-purple-600 text-white hover:bg-purple-700 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
             icon.innerText = "🔊";
         } else {
-            btn.className = "h-10 w-10 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
+            btn.className = "h-9 w-9 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl font-bold transition flex items-center justify-center shadow-sm active:scale-95";
             icon.innerText = "🔇";
-            window.speechSynthesis.cancel();
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
         }
     }
 
     function toggleLabel() {
         isLabelVisible = !isLabelVisible;
         const btn = document.getElementById('btnLabelToggle');
-        const icon = document.getElementById('labelIcon');
         const statusEl = document.getElementById('status-text');
+        if (!btn || !statusEl) return;
 
         if (isLabelVisible) {
-            btn.className = "h-10 px-3 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95";
-            icon.innerText = "Aa";
+            btn.className = "h-9 px-2.5 bg-emerald-600 text-white hover:bg-emerald-700 rounded-xl text-xs font-black tracking-wider transition flex items-center justify-center shadow-sm active:scale-95";
             statusEl.style.opacity = "1";
             statusEl.style.visibility = "visible";
         } else {
-            btn.className = "h-10 px-3 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl text-xs font-black tracking-wider line-through transition flex items-center justify-center shadow-sm active:scale-95";
-            icon.innerText = "Aa";
+            btn.className = "h-9 px-2.5 bg-white text-slate-400 border border-slate-300 hover:bg-slate-100 rounded-xl text-xs font-black tracking-wider line-through transition flex items-center justify-center shadow-sm active:scale-95";
             statusEl.style.opacity = "0";
             statusEl.style.visibility = "hidden";
         }
@@ -453,32 +738,31 @@
 
     function switchTab(tabName) {
         if (intervalId) { clearInterval(intervalId); intervalId = null; updatePlayButtons(false); }
-        window.speechSynthesis.cancel();
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
 
-        document.getElementById('panel-flashcard').classList.add('hidden');
-        document.getElementById('panel-library').classList.add('hidden');
-        document.getElementById('panel-lessons').classList.add('hidden');
-        
-        document.getElementById('tab-flashcard').className = "flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition";
-        document.getElementById('tab-library').className = "flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition";
-        document.getElementById('tab-lessons').className = "flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition";
+        const pFlash = document.getElementById('panel-flashcard');
+        const pLib = document.getElementById('panel-library');
+        const tFlash = document.getElementById('tab-flashcard');
+        const tLib = document.getElementById('tab-library');
+
+        if (pFlash) pFlash.classList.add('hidden');
+        if (pLib) pLib.classList.add('hidden');
+        if (tFlash) tFlash.className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition";
+        if (tLib) tLib.className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-blue-600 transition";
 
         if (tabName === 'flashcard') {
-            document.getElementById('panel-flashcard').classList.remove('hidden');
-            document.getElementById('tab-flashcard').className = "flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-blue-600 text-white shadow transition";
+            if (pFlash) pFlash.classList.remove('hidden');
+            if (tFlash) tFlash.className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-xl bg-blue-600 text-white shadow transition";
         } else if (tabName === 'library') {
-            document.getElementById('panel-library').classList.remove('hidden');
-            document.getElementById('tab-library').className = "flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-blue-600 text-white shadow transition";
+            if (pLib) pLib.classList.remove('hidden');
+            if (tLib) tLib.className = "flex-1 py-2 text-xs sm:text-sm font-bold rounded-xl bg-blue-600 text-white shadow transition";
             renderLibrary();
-        } else if (tabName === 'lessons') {
-            document.getElementById('panel-lessons').classList.remove('hidden');
-            document.getElementById('tab-lessons').className = "flex-1 py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-blue-600 text-white shadow transition";
-            renderLessonList();
         }
     }
 
     function toggleFullscreen() {
         const elem = document.getElementById('flashcard-box');
+        if (!elem) return;
         if (!document.fullscreenElement && !document.webkitFullscreenElement) {
             if (elem.requestFullscreen) elem.requestFullscreen();
             else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
@@ -494,19 +778,22 @@
     function handleFsChange() {
         const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
         const btn = document.getElementById('btnFsToggle');
+        const icon = document.getElementById('fs-icon');
+        const text = document.getElementById('fs-text');
+        if (!btn) return;
         if (isFs) {
-            document.getElementById('fs-icon').innerText = "✕";
-            document.getElementById('fs-text').innerText = "Thu nhỏ";
-            btn.className = "h-10 px-3 bg-rose-600 text-white hover:bg-rose-700 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
+            if (icon) icon.innerText = "✕";
+            if (text) text.innerText = "Thu nhỏ";
+            btn.className = "h-9 px-2.5 bg-rose-600 text-white hover:bg-rose-700 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
         } else {
-            document.getElementById('fs-icon').innerText = "⛶";
-            document.getElementById('fs-text').innerText = "Toàn màn hình";
-            btn.className = "h-10 px-3 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
+            if (icon) icon.innerText = "⛶";
+            if (text) text.innerText = "Toàn màn hình";
+            btn.className = "h-9 px-2.5 bg-white/95 hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm active:scale-95";
         }
     }
 
     function playEnglishAudio(textVi) {
-        if (!isAudioEnabled) return;
+        if (!isAudioEnabled || !('speechSynthesis' in window)) return;
         window.speechSynthesis.cancel();
 
         const englishText = dictEn[textVi] || textVi;
@@ -516,27 +803,33 @@
         window.speechSynthesis.speak(utterance);
     }
 
+    // NÚT HỌC / DỪNG
     function startPlay() {
         if (intervalId) {
             clearInterval(intervalId);
             intervalId = null;
-            window.speechSynthesis.cancel();
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
             updatePlayButtons(false);
             return;
         }
 
-        let f = parseInt(document.getElementById('inputFrom').value);
-        let t = parseInt(document.getElementById('inputTo').value);
+        const inputF = document.getElementById('inputFrom');
+        const inputT = document.getElementById('inputTo');
+        const inputS = document.getElementById('inputSpeed');
+        const checkedMode = document.querySelector('input[name="playMode"]:checked');
+
+        let f = parseInt(inputF ? inputF.value : 0);
+        let t = parseInt(inputT ? inputT.value : 9);
         
         if (isNaN(f) || f < 0) f = 0;
         if (isNaN(t) || t > 99) t = 99;
         if (f > t) { let tmp = f; f = t; t = tmp; }
 
-        document.getElementById('inputFrom').value = f;
-        document.getElementById('inputTo').value = t;
+        if (inputF) inputF.value = f;
+        if (inputT) inputT.value = t;
 
-        const s = parseFloat(document.getElementById('inputSpeed').value) || 1.5;
-        const mode = document.querySelector('input[name="playMode"]:checked').value;
+        const s = parseFloat(inputS ? inputS.value : 1.5) || 1.5;
+        const mode = checkedMode ? checkedMode.value : 'forward';
 
         sequence = [];
         for (let i = f; i <= t; i++) {
@@ -559,86 +852,93 @@
 
     function updatePlayButtons(isPlaying) {
         const btnStart = document.getElementById('btnStart');
-        const miniBtn = document.getElementById('btnMiniPlay');
-        const miniIcon = document.getElementById('miniPlayIcon');
-        const miniText = document.getElementById('miniPlayText');
+        const btnIcon = document.getElementById('btnStartIcon');
+        const btnText = document.getElementById('btnStartText');
+
+        if (!btnStart) return;
 
         if (isPlaying) {
-            document.getElementById('btnStartText').innerText = "TẠM DỪNG (Space)";
-            document.getElementById('btnStartIcon').innerText = "⏸";
-            btnStart.className = "w-full h-13 bg-amber-600 hover:bg-amber-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2";
-
-            miniIcon.innerText = "⏸";
-            miniText.innerText = "Dừng";
-            miniBtn.className = "h-10 px-3.5 bg-amber-600 text-white hover:bg-amber-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95";
+            if (btnText) btnText.innerText = "DỪNG";
+            if (btnIcon) btnIcon.innerText = "⏸";
+            btnStart.className = "w-full h-8 bg-amber-600 hover:bg-amber-700 text-white font-black rounded-lg shadow transition active:scale-95 text-xs flex items-center justify-center gap-1.5 cursor-pointer";
         } else {
-            document.getElementById('btnStartText').innerText = "TIẾP TỤC PHẢN XẠ (Space)";
-            document.getElementById('btnStartIcon').innerText = "▶";
-            btnStart.className = "w-full h-13 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition active:scale-[0.99] text-sm sm:text-base flex items-center justify-center gap-2";
-
-            miniIcon.innerText = "▶";
-            miniText.innerText = "Chạy";
-            miniBtn.className = "h-10 px-3.5 bg-blue-600 text-white hover:bg-blue-700 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm active:scale-95";
+            if (btnText) btnText.innerText = "HỌC";
+            if (btnIcon) btnIcon.innerText = "▶";
+            btnStart.className = "w-full h-8 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-lg shadow transition active:scale-95 text-xs flex items-center justify-center gap-1.5 cursor-pointer";
         }
     }
 
     function runSlideStep() {
+        const loopEl = document.getElementById('checkLoop');
+        const statusEl = document.getElementById('status-text');
+        const counterEl = document.getElementById('counterDisplay');
+        const btnText = document.getElementById('btnStartText');
+
         if (currentIdx >= sequence.length) {
-            if (document.getElementById('checkLoop').checked) {
+            if (loopEl && loopEl.checked) {
                 currentIdx = 0;
             } else {
                 clearInterval(intervalId);
                 intervalId = null;
-                document.getElementById('status-text').innerText = "HOÀN THÀNH!";
+                if (statusEl) statusEl.innerText = "HOÀN THÀNH!";
                 updatePlayButtons(false);
-                document.getElementById('btnStartText').innerText = "BẮT ĐẦU LẠI (Space)";
+                if (btnText) btnText.innerText = "LẠI";
                 playEnglishAudio("Completed");
                 return;
             }
         }
 
         const num = sequence[currentIdx];
-        
         const imgEl = document.getElementById('img-main');
-        imgEl.onerror = function() {
-            if (this.src.endsWith('.png')) {
-                this.src = `image/${num}.jpg`;
-            } else if (this.src.endsWith('.jpg')) {
-                this.src = `image/${num}.jpeg`;
-            } else {
-                this.onerror = null;
-                this.src = `https://via.placeholder.com/300?text=${num}`;
-            }
-        };
-        imgEl.src = `image/${num}.png`;
-        imgEl.style.display = "block";
+
+        if (imgEl) {
+            imgEl.onerror = function() {
+                if (this.src.endsWith('.png')) {
+                    this.src = `image/${num}.jpg`;
+                } else if (this.src.endsWith('.jpg')) {
+                    this.src = `image/${num}.jpeg`;
+                } else {
+                    this.onerror = null;
+                    this.src = `https://via.placeholder.com/300?text=${num}`;
+                }
+            };
+            imgEl.src = `image/${num}.png`;
+            imgEl.style.display = "block";
+        }
 
         const nameVi = dataDict[num] || "Chưa có tên";
         const nameEn = dictEn[nameVi] || nameVi;
 
-        document.getElementById('status-text').innerText = `${nameVi} (${nameEn})`;
-        document.getElementById('counterDisplay').innerText = (currentIdx + 1) + "/" + sequence.length;
+        if (statusEl) statusEl.innerText = `${nameVi} (${nameEn})`;
+        if (counterEl) counterEl.innerText = (currentIdx + 1) + "/" + sequence.length;
 
         playEnglishAudio(nameVi);
         currentIdx++;
     }
 
+    // NÚT TẠO CHUỖI CẶP SỐ NGẪU NHIÊN
     function generateRandomChain() {
-        let count = parseInt(document.getElementById('chainLength').value);
-        let fromVal = parseInt(document.getElementById('chainFrom').value);
-        let toVal = parseInt(document.getElementById('chainTo').value);
+        const inputLen = document.getElementById('chainLength');
+        const inputF = document.getElementById('chainFrom');
+        const inputT = document.getElementById('chainTo');
+        const box = document.getElementById('chainDisplayBox');
+        const statsEl = document.getElementById('chainStats');
+
+        let count = parseInt(inputLen ? inputLen.value : 20);
+        let fromVal = parseInt(inputF ? inputF.value : 0);
+        let toVal = parseInt(inputT ? inputT.value : 5);
 
         if (isNaN(count) || count <= 0) count = 20;
         if (isNaN(fromVal) || fromVal < 0) fromVal = 0;
         if (isNaN(toVal) || toVal > 99) toVal = 99;
         if (fromVal > toVal) { let tmp = fromVal; fromVal = toVal; toVal = tmp; }
 
-        document.getElementById('chainLength').value = count;
-        document.getElementById('chainFrom').value = fromVal;
-        document.getElementById('chainTo').value = toVal;
+        if (inputLen) inputLen.value = count;
+        if (inputF) inputF.value = fromVal;
+        if (inputT) inputT.value = toVal;
 
         currentGeneratedChain = [];
-        const box = document.getElementById('chainDisplayBox');
+        if (!box) return;
         box.innerHTML = "";
 
         const rangeSpan = (toVal - fromVal) + 1;
@@ -652,7 +952,7 @@
             const nameItem = dataDict[pairStr] || "";
 
             const span = document.createElement('span');
-            span.className = `px-3.5 py-2 rounded-xl border text-base sm:text-lg font-black shadow-sm transition hover:scale-105 active:scale-95 select-all cursor-pointer ${colorClass}`;
+            span.className = `px-2.5 py-1 rounded-lg border text-sm sm:text-base font-black shadow-sm transition hover:scale-105 active:scale-95 select-all cursor-pointer ${colorClass}`;
             span.title = `${pairStr}: ${nameItem} (${dictEn[nameItem] || ''})`;
             span.innerText = pairStr;
             span.onclick = () => playEnglishAudio(nameItem);
@@ -660,19 +960,25 @@
             box.appendChild(span);
         }
 
-        document.getElementById('chainStats').innerText = `${count} cặp số (Dải ${fromVal.toString().padStart(2,'0')} - ${toVal.toString().padStart(2,'0')})`;
+        if (statsEl) {
+            statsEl.innerText = `${count} cặp số (Dải ${fromVal.toString().padStart(2,'0')} - ${toVal.toString().padStart(2,'0')})`;
+        }
     }
 
+    // NÚT COPY CHUỖI SỐ
     function copyRandomChain() {
         if (!currentGeneratedChain || currentGeneratedChain.length === 0) return;
         const textToCopy = currentGeneratedChain.join(" ");
         navigator.clipboard.writeText(textToCopy).then(() => {
             const btn = document.getElementById('btnCopyChain');
-            btn.innerHTML = "✅ Đã copy!";
-            setTimeout(() => { btn.innerHTML = "📋 Copy"; }, 1500);
+            if (btn) {
+                btn.innerHTML = "✅ Đã copy!";
+                setTimeout(() => { btn.innerHTML = "📋 Copy"; }, 1500);
+            }
         });
     }
 
+    // TRA CỨU 100 SỐ
     function renderLibrary(filter = "") {
         const grid = document.getElementById('libraryGrid');
         if (!grid) return;
@@ -688,66 +994,28 @@
             }
 
             const card = document.createElement('div');
-            card.className = "bg-white border border-slate-200 rounded-2xl p-2.5 text-center shadow-sm hover:shadow-md transition flex flex-col items-center cursor-pointer active:scale-95";
+            card.className = "bg-white border border-slate-200 rounded-xl p-2 text-center shadow-sm hover:shadow-md transition flex flex-col items-center cursor-pointer active:scale-95";
             card.onclick = () => playEnglishAudio(nameVi);
             card.innerHTML = `
-                <div class="text-xs font-black text-blue-600 mb-1">${numStr}</div>
-                <div class="w-16 h-16 flex items-center justify-center my-1 bg-slate-50 rounded-xl overflow-hidden">
+                <div class="text-[11px] font-black text-blue-600 mb-0.5">${numStr}</div>
+                <div class="w-14 h-14 flex items-center justify-center my-0.5 bg-slate-50 rounded-lg overflow-hidden">
                     <img src="image/${numStr}.png" alt="${nameVi}" class="max-h-full max-w-full object-contain" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/60?text=${numStr}'">
                 </div>
-                <div class="text-[11px] font-bold text-slate-700 truncate w-full" title="${nameVi}">🔊 ${nameEn}</div>
+                <div class="text-[10px] font-bold text-slate-700 truncate w-full" title="${nameVi}">🔊 ${nameEn}</div>
             `;
             grid.appendChild(card);
         }
     }
 
     function filterLibrary() {
-        const query = document.getElementById('searchBox').value;
+        const searchInput = document.getElementById('searchBox');
+        const query = searchInput ? searchInput.value : '';
         renderLibrary(query);
     }
 
-    // Render danh sách 10 bài học dạng Card với thẻ màu phân biệt
-    function renderLessonList() {
-        const container = document.getElementById('lessonListGrid');
-        if (!container || container.children.length > 0) return;
-        
-        const lessons = [
-            { id: 1, range: "00 - 09", title: "Cổng & Sân trước", desc: "Quả trứng ➔ Hươu cao cổ", color: "border-emerald-200 bg-emerald-50/50 text-emerald-800" },
-            { id: 2, range: "10 - 19", title: "Phòng khách", desc: "Con lợn ➔ Con chó", color: "border-blue-200 bg-blue-50/50 text-blue-800" },
-            { id: 3, range: "20 - 29", title: "Sân vườn & Tiểu cảnh", desc: "Quả bom ➔ Chuột máy tính", color: "border-indigo-200 bg-indigo-50/50 text-indigo-800" },
-            { id: 4, range: "30 - 39", title: "Phòng tắm", desc: "Núi & Mặt trời ➔ Tê giác", color: "border-cyan-200 bg-cyan-50/50 text-cyan-800" },
-            { id: 5, range: "40 - 49", title: "Bếp ăn", desc: "Bút chì ➔ Cốc Cafe", color: "border-amber-200 bg-amber-50/50 text-amber-800" },
-            { id: 6, range: "50 - 59", title: "Phòng ngủ", desc: "Xe đạp ➔ Con mèo", color: "border-purple-200 bg-purple-50/50 text-purple-800" },
-            { id: 7, range: "60 - 69", title: "Phòng làm việc", desc: "Con cua ➔ Bát quái", color: "border-rose-200 bg-rose-50/50 text-rose-800" },
-            { id: 8, range: "70 - 79", title: "Sân thượng & Ban công", desc: "Quả sầu riêng ➔ Trái dừa", color: "border-teal-200 bg-teal-50/50 text-teal-800" },
-            { id: 9, range: "80 - 89", title: "Gara xe & Kho", desc: "Dấu chân ➔ Thuốc nổ", color: "border-orange-200 bg-orange-50/50 text-orange-800" },
-            { id: 10, range: "90 - 99", title: "Toàn bộ ngôi nhà", desc: "Dao và thớt ➔ Vợt cầu lông", color: "border-pink-200 bg-pink-50/50 text-pink-800" }
-        ];
-
-        lessons.forEach(l => {
-            const btn = document.createElement('a');
-            btn.href = `bai${l.id}/index.html`;
-            btn.className = `p-3.5 bg-white border border-slate-200 hover:border-blue-500 rounded-2xl text-left shadow-sm hover:shadow-md transition flex items-center justify-between group active:scale-[0.98]`;
-            btn.innerHTML = `
-                <div class="space-y-0.5">
-                    <div class="flex items-center gap-2">
-                        <span class="text-xs font-black text-blue-600">Bài ${l.id}</span>
-                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border ${l.color}">${l.range}</span>
-                    </div>
-                    <div class="text-xs font-bold text-slate-700">${l.title}</div>
-                    <div class="text-[11px] text-slate-400">${l.desc}</div>
-                </div>
-                <div class="w-8 h-8 rounded-xl bg-slate-50 group-hover:bg-blue-600 group-hover:text-white flex items-center justify-center text-slate-400 font-bold transition">
-                    ➔
-                </div>
-            `;
-            container.appendChild(btn);
-        });
-    }
-
-    // Phím tắt điều khiển
+    // PHÍM TẮT TIỆN LỢI
     window.addEventListener('keydown', (e) => {
-        if (e.target.tagName === 'INPUT') return;
+        if (e.target && e.target.tagName === 'INPUT') return;
         if (e.code === 'Space') {
             e.preventDefault();
             startPlay();
@@ -763,10 +1031,17 @@
         }
     });
 
-    window.onload = () => {
+    // KHỞI CHẠY TỰ ĐỘNG CHẮC CHẮN
+    function initApp() {
         renderLibrary();
         generateRandomChain();
-    };
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+        initApp();
+    }
 </script>
 </body>
 </html>
