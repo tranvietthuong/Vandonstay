@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>One Story A Day 1 - Vandonstay Academy</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>900 Mẫu Câu Giao Tiếp Cùng Bé - VandonStay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Giao diện sáng tươi hợp phong thủy Mệnh Mộc */
-    body {
+    html, body {
+      height: 100%;
+      height: 100dvh;
       margin: 0;
       padding: 0;
-      background-color: #F4F7F5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      height: 100dvh;
       overflow: hidden;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #F4F7F5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: #1e293b;
     }
-
-    .main-wrapper {
-      width: 100%;
-      max-width: 440px; /* Khung điện thoại chuẩn */
-      height: 100%;
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-      position: relative;
-      overflow: hidden;
+    .ipa-text { color: #047857; font-style: italic; }
+    .vn-text { color: #475569; }
+    .active-sentence { border-color: #059669 !important; background-color: rgba(5, 150, 105, 0.12) !important; }
+    .char-animation { animation: float 3s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
     }
 
-    /* ================= BANNER & 3 NÚT ĐIỀU HƯỚNG ================= */
     .study-header-banner {
       background: #ffffff;
       border-bottom: 1.5px solid #d1fae5;
@@ -82,7 +74,6 @@
     .btn-study  { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
     .btn-group  { background: linear-gradient(135deg, #0284c7, #0369a1); }
 
-    /* ================= DẢI GÓC ỦNG HỘ & POPUP ================= */
     .shopee-promo-bar {
       width: 100%;
       padding: 0 8px 6px;
@@ -155,7 +146,6 @@
       display: block;
     }
 
-    /* Popup 27 danh mục cao cấp */
     .shopee-modal-overlay {
       position: fixed;
       inset: 0;
@@ -238,119 +228,11 @@
       color: #047857;
       transform: translateY(-2px);
     }
-
-    /* ================= KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG ================= */
-    .lesson-control-header {
-      background: #ecfdf5;
-      border-bottom: 1px solid #a7f3d0;
-      padding: 6px 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 30;
-    }
-
-    .series-dropdown-wrap {
-      position: relative;
-      width: 100%;
-    }
-    .btn-series-select {
-      width: 100%;
-      background: #ffffff;
-      color: #065f46;
-      border: 1.5px solid #059669;
-      padding: 5px 12px;
-      border-radius: 8px;
-      font-size: 12.5px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    .series-menu {
-      position: absolute;
-      top: calc(100% + 4px);
-      left: 0;
-      right: 0;
-      background: #ffffff;
-      border: 1.5px solid #059669;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      display: flex;
-      flex-direction: column;
-      z-index: 100;
-    }
-    .series-item {
-      padding: 8px 12px;
-      color: #1e293b;
-      font-size: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .series-item:hover { background: #ecfdf5; color: #047857; }
-    .series-item.active { background: #d1fae5; color: #065f46; }
-    .series-item.disabled { opacity: 0.5; cursor: not-allowed; }
-
-    .action-row-4 {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr 1fr 0.9fr;
-      gap: 5px;
-      align-items: center;
-    }
-    .action-row-4 select,
-    .action-row-4 button {
-      height: 32px;
-      padding: 0 6px;
-      font-size: 11.5px;
-      font-weight: 800;
-      border-radius: 7px;
-      outline: none;
-      border: 1.5px solid #059669;
-      background: #ffffff;
-      color: #065f46;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      text-align: center;
-      box-sizing: border-box;
-      box-shadow: 0 2px 4px rgba(5, 150, 105, 0.12);
-      transition: all 0.2s ease;
-    }
-    .action-row-4 select:hover,
-    .action-row-4 button:hover {
-      background: #ecfdf5;
-      border-color: #047857;
-    }
-    .action-row-4 select {
-      text-align-last: center;
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23065f46'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: right 4px center;
-      background-size: 14px;
-      padding-right: 16px;
-    }
-    .action-row-4 button.btn-active-trans {
-      background: #059669 !important;
-      color: #ffffff !important;
-      border-color: #047857 !important;
-    }
   </style>
 </head>
-<body onclick="closeSeriesMenu(event)">
-  <div class="main-wrapper">
-
+<body class="flex justify-center text-slate-800 select-none">
+  <div class="w-full max-w-md bg-white flex flex-col h-full shadow-2xl relative justify-between border-x border-slate-200">
+    
     <!-- 1. BANNER TRANG HỌC TẬP -->
     <div class="study-header-banner">
       <a href="../index.html">
@@ -358,7 +240,7 @@
       </a>
     </div>
 
-    <!-- 2. BỐ CỤC 3 NÚT ĐIỀU HƯỚNG -->
+    <!-- 2. BỘ 3 NÚT ĐIỀU HƯỚNG CÂN ĐỐI TRÊN 1 HÀNG -->
     <div class="study-actions-row">
       <a href="../../index.html" class="study-action-btn btn-villa">
         <i class="fa-solid fa-hotel"></i> <span>Villa Sonasea</span>
@@ -441,141 +323,90 @@
       </div>
     </div>
 
-    <!-- 4. KHUNG ĐIỀU HƯỚNG BÀI HỌC 2 TẦNG -->
-    <div class="lesson-control-header">
-      
-      <!-- Tầng 1: Tên giáo trình kèm Dropdown chọn Tập 1 - 2 - 3 -->
-      <div class="series-dropdown-wrap">
-        <button type="button" class="btn-series-select" onclick="toggleSeriesMenu(event)">
-          <span>📖 One Story A Day (Tập 1)</span>
-          <span style="font-size: 10px;">▼</span>
-        </button>
-        <div id="seriesMenu" class="series-menu" style="display: none;">
-          <a href="./index.html" class="series-item active">
-            <span>Tập 1 (365 truyện nền tảng)</span>
-            <span>✔ Đang học</span>
-          </a>
-          <a href="../onestoryaday2/index.html" class="series-item">
-            <span>Tập 2 (365 truyện nâng cao)</span>
-            <span>➔ Vào học</span>
-          </a>
-          <div class="series-item disabled">
-            <span>Tập 3 (Trọn bộ sắp ra mắt)</span>
-            <span style="font-size: 10px;">Sắp có</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tầng 2: 4 nút điều hướng -->
-      <div class="action-row-4">
-        <button id="btnOpenIndex" type="button" title="Mục lục toàn bài">
-          📋 Mục lục
-        </button>
-
-        <select id="selectMonth">
-          <option value="01 January">Tháng 1</option>
-          <option value="02 February">Tháng 2</option>
-          <option value="03 March">Tháng 3</option>
-          <option value="04 April">Tháng 4</option>
-          <option value="05 May">Tháng 5</option>
-          <option value="06 June">Tháng 6</option>
-          <option value="07 July">Tháng 7</option>
-          <option value="08 August">Tháng 8</option>
-          <option value="09 September">Tháng 9</option>
-          <option value="10 October">Tháng 10</option>
-          <option value="11 November">Tháng 11</option>
-          <option value="12 December">Tháng 12</option>
+    <!-- 4. KHUNG CHỌN BÀI HỌC -->
+    <header class="bg-emerald-50/80 border border-emerald-200 rounded-xl px-2.5 py-1.5 flex items-center justify-between shadow-sm shrink-0 gap-1 text-[11px] mx-2 mt-1">
+      <div class="flex items-center gap-1 font-semibold text-emerald-900">
+        <span class="font-bold text-emerald-950">Chọn nghe:</span>
+        <span class="text-slate-600">Từ</span>
+        <select id="startLessonSelect" class="bg-white text-emerald-900 font-bold py-0.5 px-1.5 rounded border border-emerald-300 focus:outline-none text-xs shadow-sm">
         </select>
-
-        <select id="selectDay"></select>
-
-        <button id="btnToggleTrans" type="button" title="Bật/Tắt Dịch & IPA">
-          🔤 Dịch
-        </button>
+        <span class="text-slate-600 ml-0.5">đến</span>
+        <select id="endLessonSelect" class="bg-white text-emerald-900 font-bold py-0.5 px-1.5 rounded border border-emerald-300 focus:outline-none text-xs shadow-sm">
+        </select>
       </div>
-    </div>
 
-    <!-- Khu vực hiển thị chính -->
-    <main class="story-stage">
-      <div class="view-image">
-        <img id="imgDisplay" src="" alt="Story illustration">
-      </div>
-      <div class="view-text">
-        <div id="storyTitle" class="story-heading"></div>
-        <div id="textContent"></div>
-      </div>
+      <button id="toggleTransBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1 rounded-lg font-bold flex items-center gap-1 shadow-sm transition text-xs">
+        <i class="fa-solid fa-language text-xs"></i> <span>Dịch & IPA</span>
+      </button>
+    </header>
+
+    <!-- 5. KHUNG NỘI DUNG BÀI HỌC -->
+    <main class="flex-1 flex flex-col justify-between py-1 px-2 overflow-hidden" id="mainContent">
+      <div id="currentCardContainer" class="h-full flex flex-col justify-between"></div>
     </main>
 
-    <!-- Thanh công cụ Luyện tập AI -->
-    <div id="aiToolBar" class="ai-toolbar hidden">
-      <span class="lbl-practice">Luyện tập:</span>
-      <button id="btnPracticeCount" class="btn-practice">
-        Đọc <span id="lblCount" class="highlight-num">1 câu</span>
-      </button>
-      <span class="hint-click">(Bấm để tăng số câu)</span>
-    </div>
-
-    <!-- Player Bar điều khiển -->
-    <footer class="player-bar">
-      <button id="btnToggleMode" class="btn-ctrl btn-mode mp3" title="Chuyển chế độ đọc">
-        <span class="icon">🎵</span>
-        <span class="txt">MP3</span>
-      </button>
-
-      <button id="btnPrev" class="btn-ctrl btn-icon-step" title="Bài trước">
-        <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-      </button>
-
-      <button id="btnPlay" class="btn-ctrl btn-main-play" title="Phát / Dừng">
-        <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        <svg id="iconPause" class="hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-      </button>
-
-      <button id="btnNext" class="btn-ctrl btn-icon-step" title="Bài kế tiếp">
-        <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-      </button>
-
-      <div class="dropup-box">
-        <button id="btnRepeat" class="btn-ctrl btn-badge" title="Lặp lại">
-          <span class="badge-lbl">Lặp</span>
-          <span id="lblRepeat" class="badge-val">1</span>
-        </button>
-        <div id="menuRepeat" class="dropup-menu hidden">
-          <div class="dropup-item active" data-val="1">Lặp 1 lần</div>
-          <div class="dropup-item" data-val="2">Lặp 2 lần</div>
-          <div class="dropup-item" data-val="3">Lặp 3 lần</div>
-          <div class="dropup-item" data-val="5">Lặp 5 lần</div>
-          <div class="dropup-item" data-val="999">Lặp vô tận (∞)</div>
-        </div>
+    <!-- 6. THANH ĐIỀU KHIỂN ÂM THANH DƯỚI ĐÁY -->
+    <footer class="bg-white border-t border-slate-200 p-2 shrink-0 space-y-2 relative shadow-lg">
+      
+      <!-- Dropdown Lặp Xổ Lên -->
+      <div id="repeatMenu" class="hidden absolute bottom-[58px] left-[55%] -translate-x-1/2 w-28 bg-white border border-slate-200 rounded-xl shadow-2xl z-50 p-1 text-xs">
+        <button data-repeat="1" class="repeat-opt w-full text-left px-2 py-1.5 rounded text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-bold">1 lần</button>
+        <button data-repeat="2" class="repeat-opt w-full text-left px-2 py-1.5 rounded text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">2 lần</button>
+        <button data-repeat="3" class="repeat-opt w-full text-left px-2 py-1.5 rounded text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">3 lần</button>
+        <button data-repeat="5" class="repeat-opt w-full text-left px-2 py-1.5 rounded text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">5 lần</button>
+        <button data-repeat="999" class="repeat-opt w-full text-left px-2 py-1.5 rounded text-amber-600 hover:bg-emerald-50 font-bold">Vô tận (∞)</button>
       </div>
 
-      <div class="dropup-box">
-        <button id="btnSpeed" class="btn-ctrl btn-badge" title="Tốc độ đọc">
-          <span class="badge-lbl">Tốc</span>
-          <span id="lblSpeed" class="badge-val">1.0x</span>
-        </button>
-        <div id="menuSpeed" class="dropup-menu hidden">
-          <div class="dropup-item" data-val="0.75">0.75x (Chậm)</div>
-          <div class="dropup-item active" data-val="1.0">1.0x (Chuẩn)</div>
-          <div class="dropup-item" data-val="1.25">1.25x (Nhanh)</div>
-        </div>
+      <!-- Dropdown Tốc độ Xổ Lên -->
+      <div id="speedMenu" class="hidden absolute bottom-[58px] right-2 w-24 bg-white border border-slate-200 rounded-xl shadow-2xl z-50 p-1 text-xs">
+        <button data-speed="0.5" class="speed-opt w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">0.5x</button>
+        <button data-speed="0.75" class="speed-opt w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">0.75x</button>
+        <button data-speed="1.0" class="speed-opt w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50 font-bold">1.0x Chuẩn</button>
+        <button data-speed="1.25" class="speed-opt w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">1.25x</button>
+        <button data-speed="1.5" class="speed-opt w-full text-left px-2 py-1 rounded text-slate-700 hover:bg-emerald-50">1.5x</button>
       </div>
+
+      <!-- ĐÚNG 6 NÚT GOM TRÊN 1 HÀNG NGANG -->
+      <div class="grid grid-cols-6 gap-1.5 items-center">
+        <!-- 1. Nút MP3 / AI -->
+        <button id="voiceToggleBtn" class="h-9 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1" title="Chuyển đổi âm thanh">
+          <i class="fa-solid fa-file-audio text-[12px]" id="voiceIcon"></i>
+          <span id="voiceText" class="text-[11px]">MP3</span>
+        </button>
+
+        <!-- 2. Nút Bài trước (Prev) -->
+        <button id="prevBtn" class="h-9 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg border border-slate-200 flex items-center justify-center transition shadow-sm" title="Bài trước">
+          <i class="fa-solid fa-backward-step text-sm"></i>
+        </button>
+
+        <!-- 3. Nút Play / Stop -->
+        <button id="playBtn" class="h-9 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold rounded-lg flex items-center justify-center shadow transition px-1" title="Phát / Dừng">
+          <i class="fa-solid fa-play text-sm" id="playIcon"></i>
+        </button>
+
+        <!-- 4. Nút Bài sau (Next) -->
+        <button id="nextBtn" class="h-9 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg border border-slate-200 flex items-center justify-center transition shadow-sm" title="Bài tiếp theo">
+          <i class="fa-solid fa-forward-step text-sm"></i>
+        </button>
+
+        <!-- 5. Nút Lặp -->
+        <button id="repeatToggleBtn" class="h-9 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg text-[11px] font-bold text-slate-700 flex flex-col items-center justify-center transition shadow-sm px-0.5" title="Cài đặt lặp">
+          <span class="text-[9px] text-slate-500 leading-none">Lặp</span>
+          <span id="repeatText" class="leading-tight">1</span>
+        </button>
+
+        <!-- 6. Nút Tốc độ -->
+        <button id="speedToggleBtn" class="h-9 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg text-[11px] font-bold text-slate-700 flex flex-col items-center justify-center transition shadow-sm px-0.5" title="Cài đặt tốc độ">
+          <span class="text-[9px] text-slate-500 leading-none">Tốc</span>
+          <span id="speedText" class="leading-tight">1.0x</span>
+        </button>
+      </div>
+
     </footer>
 
-    <audio id="audioElement" preload="auto"></audio>
-
-    <!-- Modal Mục Lục Toàn Cảnh -->
-    <div id="indexModal" class="modal-backdrop hidden">
-      <div class="modal-box">
-        <div class="modal-header">
-          <h3 id="modalTitle">Mục Lục 12 Tháng</h3>
-          <button id="btnCloseIndex" class="btn-close">&times;</button>
-        </div>
-        <div id="indexListContainer" class="modal-body"></div>
-      </div>
-    </div>
   </div>
 
+  <script src="js/data.js"></script>
   <script>
     function openShopeeModal() {
       document.getElementById('shopeeModal').style.display = 'flex';
@@ -590,34 +421,370 @@
       }
     });
 
-    function toggleSeriesMenu(e) {
-      e.stopPropagation();
-      const menu = document.getElementById('seriesMenu');
-      menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
-    }
-    function closeSeriesMenu(e) {
-      const menu = document.getElementById('seriesMenu');
-      if (menu && !e.target.closest('.series-dropdown-wrap')) {
-        menu.style.display = 'none';
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+    let isSpeechUnlocked = false;
+
+    function unlockAudioEngine() {
+      if (!isSpeechUnlocked && synth) {
+        try {
+          const u = new SpeechSynthesisUtterance('');
+          u.volume = 0;
+          synth.speak(u);
+          isSpeechUnlocked = true;
+        } catch (e) {}
       }
     }
+    document.body.addEventListener('touchstart', unlockAudioEngine, { once: true });
+    document.body.addEventListener('click', unlockAudioEngine, { once: true });
+
+    function getEnVoice() {
+      if (!synth) return null;
+      const voices = synth.getVoices() || [];
+      return voices.find(v => v.lang === 'en-US' || v.lang === 'en_US') ||
+             voices.find(v => v.lang.startsWith('en')) || null;
+    }
+    if (synth && synth.onvoiceschanged !== undefined) {
+      synth.onvoiceschanged = () => { synth.getVoices(); };
+    }
+
+    let currentLessonIdx = 0;
+    let startIdx = 0;
+    let endIdx = 0;
+
+    let currentMode = 'mp3';
+    let currentSpeed = 1.0;
+    let currentRepeatLimit = 1;
+    let currentRepeat = 0;
+
+    let isPlaying = false;
+    let showDetails = false;
+    let audioPlayer = new Audio();
+
+    const startSelect = document.getElementById('startLessonSelect');
+    const endSelect = document.getElementById('endLessonSelect');
+    const currentCardContainer = document.getElementById('currentCardContainer');
+
+    const repeatMenu = document.getElementById('repeatMenu');
+    const speedMenu = document.getElementById('speedMenu');
+
+    function initLessonSelectors() {
+      startSelect.innerHTML = '';
+      endSelect.innerHTML = '';
+      if (typeof LESSONS_DATA === 'undefined') return;
+
+      LESSONS_DATA.forEach((item, idx) => {
+        const opt1 = document.createElement('option');
+        opt1.value = idx;
+        opt1.innerText = `${item.id}`;
+        startSelect.appendChild(opt1);
+
+        const opt2 = document.createElement('option');
+        opt2.value = idx;
+        opt2.innerText = `${item.id}`;
+        endSelect.appendChild(opt2);
+      });
+
+      startIdx = 0;
+      endIdx = Math.min(2, LESSONS_DATA.length - 1); // Mặc định từ bài 1 đến bài 3
+      startSelect.value = startIdx;
+      endSelect.value = endIdx;
+      currentLessonIdx = startIdx;
+    }
+
+    function renderLesson(idx) {
+      if (typeof LESSONS_DATA === 'undefined' || !LESSONS_DATA[idx]) return;
+      const item = LESSONS_DATA[idx];
+
+      let sentencesHtml = '';
+      if (item.sentences && item.sentences.length) {
+        sentencesHtml = item.sentences.map((s, sIdx) => `
+          <div id="sent-${sIdx}" class="sentence-row px-2.5 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-emerald-50/50 cursor-pointer transition flex flex-col justify-center shadow-sm" onclick="playSingleSentence('${s.en.replace(/'/g, "\\'")}', ${sIdx})">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-800 text-[13px] leading-tight">• ${s.en}</span>
+              <i class="fa-solid fa-volume-high text-[11px] text-emerald-600 opacity-80 ml-1.5"></i>
+            </div>
+            <div class="trans-box ${showDetails ? '' : 'hidden'} mt-0.5 space-y-0.5 text-[11px]">
+              <p class="ipa-text font-mono leading-tight">${s.ipa || ''}</p>
+              <p class="vn-text font-medium leading-tight"><span class="bg-emerald-100 text-emerald-800 px-1 rounded text-[9px] mr-1 font-bold">VN</span>${s.vi || ''}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      currentCardContainer.innerHTML = `
+        <div class="border border-emerald-200 bg-emerald-50/30 rounded-2xl p-2 shadow-sm flex flex-col justify-between h-full">
+          
+          <div class="flex items-center justify-between pb-1 border-b border-emerald-100 shrink-0">
+            <span class="text-[10.5px] font-black uppercase text-emerald-800 tracking-wider">Tình huống thực tế</span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-700 text-white flex items-center justify-center text-[10.5px] font-black">Bài ${item.id}</span>
+          </div>
+
+          <div class="w-full bg-white rounded-xl p-1 border border-emerald-100 flex items-center justify-center overflow-hidden my-1 flex-1 min-h-[130px] shadow-inner">
+            <img src="${item.image}" alt="Minh họa bài ${item.id}" 
+                 class="max-w-full max-h-full object-contain scale-105 char-animation drop-shadow-sm" 
+                 onerror="this.src='extracted_images/card_${item.id}.png'">
+          </div>
+
+          <div class="space-y-1.5 shrink-0">
+            ${sentencesHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    document.getElementById('repeatToggleBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      speedMenu.classList.add('hidden');
+      repeatMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('speedToggleBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      repeatMenu.classList.add('hidden');
+      speedMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', () => {
+      repeatMenu.classList.add('hidden');
+      speedMenu.classList.add('hidden');
+    });
+
+    document.querySelectorAll('.repeat-opt').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentRepeatLimit = parseInt(e.target.getAttribute('data-repeat'));
+        currentRepeat = 0;
+        updateRepeatDisplay();
+        repeatMenu.classList.add('hidden');
+      });
+    });
+
+    function updateRepeatDisplay() {
+      const limitStr = currentRepeatLimit === 999 ? '∞' : `${currentRepeatLimit}`;
+      document.getElementById('repeatText').innerText = limitStr;
+    }
+
+    document.querySelectorAll('.speed-opt').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentSpeed = parseFloat(e.target.getAttribute('data-speed'));
+        document.getElementById('speedText').innerText = `${currentSpeed}x`;
+        if (audioPlayer) audioPlayer.playbackRate = currentSpeed;
+        speedMenu.classList.add('hidden');
+      });
+    });
+
+    startSelect.addEventListener('change', (e) => {
+      stopPlayback();
+      startIdx = parseInt(e.target.value);
+      if (endIdx < startIdx) {
+        endIdx = startIdx;
+        endSelect.value = endIdx;
+      }
+      currentLessonIdx = startIdx;
+      renderLesson(currentLessonIdx);
+      currentRepeat = 0;
+    });
+
+    endSelect.addEventListener('change', (e) => {
+      stopPlayback();
+      endIdx = parseInt(e.target.value);
+      if (endIdx < startIdx) {
+        startIdx = endIdx;
+        startSelect.value = startIdx;
+      }
+      currentLessonIdx = startIdx;
+      renderLesson(currentLessonIdx);
+      currentRepeat = 0;
+    });
+
+    const voiceBtn = document.getElementById('voiceToggleBtn');
+    voiceBtn.addEventListener('click', () => {
+      stopPlayback();
+      if (currentMode === 'mp3') {
+        currentMode = 'ai';
+        voiceBtn.className = "h-9 rounded-lg font-bold text-xs bg-teal-600 hover:bg-teal-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1";
+        document.getElementById('voiceIcon').className = "fa-solid fa-robot text-[12px]";
+        document.getElementById('voiceText').innerText = "AI";
+      } else {
+        currentMode = 'mp3';
+        voiceBtn.className = "h-9 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1";
+        document.getElementById('voiceIcon').className = "fa-solid fa-file-audio text-[12px]";
+        document.getElementById('voiceText').innerText = "MP3";
+      }
+    });
+
+    document.getElementById('toggleTransBtn').addEventListener('click', () => {
+      showDetails = !showDetails;
+      document.querySelectorAll('.trans-box').forEach(el => el.classList.toggle('hidden', !showDetails));
+      document.getElementById('toggleTransBtn').classList.toggle('bg-emerald-800', showDetails);
+    });
+
+    // SỬA LỖI NÚT PLAY: ĐỒNG BỘ DẢI BÀI TỪ THẺ SELECT KHI BẤM PHÁT
+    document.getElementById('playBtn').addEventListener('click', () => {
+      if (isPlaying) {
+        stopPlayback();
+      } else {
+        // Cập nhật chuẩn xác dải bài từ ô select người dùng đang chọn
+        startIdx = parseInt(startSelect.value);
+        endIdx = parseInt(endSelect.value);
+
+        isPlaying = true;
+        document.getElementById('playIcon').className = "fa-solid fa-pause text-sm";
+
+        if (currentLessonIdx < startIdx || currentLessonIdx > endIdx) {
+          currentLessonIdx = startIdx;
+          renderLesson(currentLessonIdx);
+        }
+        currentRepeat = 0;
+        playCurrentLesson();
+      }
+    });
+
+    function stopPlayback() {
+      isPlaying = false;
+      if (audioPlayer) { audioPlayer.pause(); audioPlayer.currentTime = 0; }
+      if (synth) synth.cancel();
+      currentUtterance = null;
+      document.getElementById('playIcon').className = "fa-solid fa-play text-sm";
+      document.querySelectorAll('.sentence-row').forEach(el => el.classList.remove('active-sentence'));
+    }
+
+    function handleLessonFinished() {
+      if (!isPlaying) return;
+
+      currentRepeat++;
+      if (currentRepeat < currentRepeatLimit) {
+        setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 400);
+      } else {
+        currentRepeat = 0;
+
+        if (currentLessonIdx < endIdx) {
+          currentLessonIdx++;
+          renderLesson(currentLessonIdx);
+          setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 600);
+        } else {
+          if (currentRepeatLimit === 999) {
+            currentLessonIdx = startIdx;
+            renderLesson(currentLessonIdx);
+            setTimeout(() => { if (isPlaying) playCurrentLesson(); }, 800);
+          } else {
+            stopPlayback();
+          }
+        }
+      }
+    }
+
+    function playCurrentLesson() {
+      if (!isPlaying) return;
+      if (currentMode === 'mp3') {
+        playMp3();
+      } else {
+        playAi(0);
+      }
+    }
+
+    function playMp3() {
+      const item = LESSONS_DATA[currentLessonIdx];
+      let mp3Path = item.mp3Url;
+      if (!mp3Path) {
+        mp3Path = `listening/card_${item.id}.mp3`;
+      }
+      
+      audioPlayer.src = mp3Path;
+      audioPlayer.playbackRate = currentSpeed;
+      
+      audioPlayer.play().catch(() => {
+        currentMode = 'ai';
+        voiceBtn.className = "h-9 rounded-lg font-bold text-xs bg-teal-600 hover:bg-teal-700 text-white transition flex items-center justify-center gap-1 shadow-sm px-1";
+        document.getElementById('voiceIcon').className = "fa-solid fa-robot text-[12px]";
+        document.getElementById('voiceText').innerText = "AI";
+        playAi(0);
+      });
+
+      audioPlayer.onended = () => {
+        handleLessonFinished();
+      };
+    }
+
+    function playAi(sIdx) {
+      if (!synth || !isPlaying) return;
+      const item = LESSONS_DATA[currentLessonIdx];
+
+      if (!item.sentences || sIdx >= item.sentences.length) {
+        handleLessonFinished();
+        return;
+      }
+
+      document.querySelectorAll('.sentence-row').forEach(el => el.classList.remove('active-sentence'));
+      const row = document.getElementById(`sent-${sIdx}`);
+      if (row) row.classList.add('active-sentence');
+
+      synth.cancel();
+      if (synth.paused) synth.resume();
+
+      currentUtterance = new SpeechSynthesisUtterance(item.sentences[sIdx].en);
+      currentUtterance.lang = 'en-US';
+      currentUtterance.rate = currentSpeed;
+      
+      const v = getEnVoice();
+      if (v) currentUtterance.voice = v;
+
+      currentUtterance.onend = () => {
+        if (isPlaying) setTimeout(() => playAi(sIdx + 1), 350);
+      };
+      currentUtterance.onerror = () => {
+        if (isPlaying) setTimeout(() => playAi(sIdx + 1), 350);
+      };
+
+      synth.speak(currentUtterance);
+    }
+
+    window.playSingleSentence = function(text, sIdx) {
+      stopPlayback();
+      if (!synth) return;
+      document.querySelectorAll('.sentence-row').forEach(el => el.classList.remove('active-sentence'));
+      const row = document.getElementById(`sent-${sIdx}`);
+      if (row) row.classList.add('active-sentence');
+      
+      synth.cancel();
+      if (synth.paused) synth.resume();
+
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-US';
+      currentUtterance.rate = currentSpeed;
+      
+      const v = getEnVoice();
+      if (v) currentUtterance.voice = v;
+
+      currentUtterance.onend = () => row.classList.remove('active-sentence');
+      currentUtterance.onerror = () => row.classList.remove('active-sentence');
+
+      synth.speak(currentUtterance);
+    };
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentLessonIdx > 0) {
+        stopPlayback();
+        currentLessonIdx--;
+        renderLesson(currentLessonIdx);
+        currentRepeat = 0;
+      }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentLessonIdx < LESSONS_DATA.length - 1) {
+        stopPlayback();
+        currentLessonIdx++;
+        renderLesson(currentLessonIdx);
+        currentRepeat = 0;
+      }
+    });
+
+    initLessonSelectors();
+    renderLesson(startIdx);
+    updateRepeatDisplay();
   </script>
-
-  <!-- Nạp đầy đủ dữ liệu từ tháng 1 đến tháng 12 -->
-  <script src="data_01.js"></script>
-  <script src="data_02.js"></script>
-  <script src="data_03.js"></script>
-  <script src="data_04.js"></script>
-  <script src="data_05.js"></script>
-  <script src="data_06.js"></script>
-  <script src="data_07.js"></script>
-  <script src="data_08.js"></script>
-  <script src="data_09.js"></script>
-  <script src="data_10.js"></script>
-  <script src="data_11.js"></script>
-  <script src="data_12.js"></script>
-
-  <!-- Script điều khiển chính -->
-  <script src="app.js"></script>
 </body>
 </html>
