@@ -44,10 +44,10 @@ const lblCount = document.getElementById("lblCount");
 const btnToggleTrans = document.getElementById("btnToggleTrans");
 
 const btnOpenIndex = document.getElementById("btnOpenIndex");
-const btnCloseIndex = document.getElementById("btnCloseIndex");
 const indexModal = document.getElementById("indexModal");
 const indexListContainer = document.getElementById("indexListContainer");
 const modalTitle = document.getElementById("modalTitle");
+const btnCloseIndex = document.getElementById("btnCloseIndex");
 
 const btnPlay = document.getElementById("btnPlay");
 const iconPlay = document.getElementById("iconPlay");
@@ -99,21 +99,38 @@ function loadStory(idx) {
   stopAll();
 
   const story = list[idx];
-  imgDisplay.src = story.image;
+  
+  // Chuẩn hóa đường dẫn ảnh tự động
+  let imagePath = story.image;
+  if (!imagePath || (imagePath.startsWith("http") === false && imagePath.includes("/") === false)) {
+    const dayStr = String(story.day).padStart(2, "0");
+    imagePath = `${currentMonth}/images/day_${dayStr}.webp`;
+  }
+  imgDisplay.src = imagePath;
 
   imgDisplay.onerror = function () {
-    this.src = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D'400'%20height%3D'200'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%230c241b'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20fill%3D'%2334d399'%20font-size%3D'13'%20text-anchor%3D'middle'%20dy%3D'.3em'%3EChưa có ảnh%3C%2Ftext%3E%3C%2Fsvg%3E";
+    const dayStr = String(story.day).padStart(2, "0");
+    this.src = `${currentMonth}/images/day_${dayStr}.jpg`;
   };
 
   storyTitle.textContent = `Bài ${story.day}: ${story.title}`;
 
-  // Tự động chuẩn hóa đường dẫn file Audio theo chuẩn thư mục
+  // Chuẩn hóa đường dẫn Audio thông minh tương thích mọi tên file trên ổ cứng
   let audioPath = story.audio;
   if (!audioPath) {
     const mObj = ALL_MONTHS.find(m => m.key === currentMonth);
     const prefix = mObj ? mObj.prefix : "A01";
     const dayStr = String(story.day).padStart(2, "0");
-    audioPath = `${currentMonth}/audio/${prefix}${dayStr} ${story.title}.mp3`;
+    
+    let cleanTitle = story.title
+      .replace(/- Part (\d+)/g, " - $1")
+      .replace(/ - (\d+)/g, " - $1")
+      .replace(/-(\d+)/g, " - $1")
+      .replace(/—/g, "-")
+      .replace(/'/g, "_")
+      .replace(/['"]/g, "");
+      
+    audioPath = `${currentMonth}/audio/${prefix}${dayStr} ${cleanTitle}.mp3`;
   }
   audioElement.src = audioPath;
 
@@ -193,7 +210,7 @@ btnPracticeCount.addEventListener("click", () => {
 
 btnToggleTrans.addEventListener("click", () => {
   showTrans = !showTrans;
-  btnToggleTrans.classList.toggle("active", showTrans);
+  btnToggleTrans.classList.toggle("btn-active-trans", showTrans);
   renderSentences();
 });
 
@@ -257,7 +274,9 @@ btnOpenIndex.addEventListener("click", () => {
   indexModal.classList.remove("hidden");
 });
 
-btnCloseIndex.addEventListener("click", () => indexModal.classList.add("hidden"));
+if (btnCloseIndex) {
+  btnCloseIndex.addEventListener("click", () => indexModal.classList.add("hidden"));
+}
 indexModal.addEventListener("click", (e) => {
   if (e.target === indexModal) indexModal.classList.add("hidden");
 });

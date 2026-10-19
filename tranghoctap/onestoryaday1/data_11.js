@@ -9,10 +9,10 @@ STORIES_DATA["11 November"] = [
     image: "11 November/images/day_01.webp",
     audio: "11 November/audio/A1101 The Bike Shop.mp3",
     sentences: [
-      { start: 4.8, en: "A family friend gave my brother a bike. It was not a very old bike, but it had a flat tire.", ipa: "/ə ˈfæməli frɛnd ɡeɪv maɪ ˈbrʌðər ə baɪk. ɪt wɒz nɒt ə ˈvɛri oʊld baɪk bʌt ɪt hæd ə flæt ˈtaɪər/", vi: "Một người bạn của gia đình tặng anh tôi chiếc xe đạp. Nó chưa cũ lắm, nhưng lại bị thủng xăm." },
+      { start: 4.8, en: "A family friend gave my brother a bike. It was not a very old bike, but it had a flat tire.", ipa: "/ə ˈfæməli frɛnd ɡeɪv maɪ ˈbrʌðər ə baɪk. ɪt wɒz nɒt ə ˈvɛri oʊld baɪk bʌt ɪt hæz ə flæt ˈtaɪər/", vi: "Một người bạn của gia đình tặng anh tôi chiếc xe đạp. Nó chưa cũ lắm, nhưng lại bị thủng xăm." },
       { start: 12.0, en: "My brother and I went to a bike shop to have it repaired.", ipa: "/maɪ ˈbrʌðər ænd aɪ wɛnt tuː ə baɪk ʃɒp tuː hæv ɪt rɪˈpɛrd/", vi: "Anh tôi và tôi liền đến cửa hàng sửa xe đạp để vá lốp." },
       { start: 18.0, en: "The man in the shop said, 'It's easy! In fact, I'll tell you how to repair the bike, and you will be the one to do it.'", ipa: "/ðə mæn ɪn ðə ʃɒp sɛd ɪts ˈiːzi! ɪn fækt aɪl tɛl juː haʊ tuː rɪˈpɛr ðə baɪk ænd juː wɪl biː ðə wʌn tuː duː ɪt/", vi: "Người thợ trong cửa hàng bảo: 'Dễ lắm! Thực ra, ta sẽ chỉ cách để các cháu tự sửa xe, và chính các cháu sẽ là người làm điều đó.'" },
-      { start: 29.5, en: "Well, that was not what we expected. But my brother liked the idea. At the end, we fixed the flat tire and learned how to repair the bike.", ipa: "/wɛl ðæt wɒz nɒt wɒt wiː ɪkˈspɛktɪd. bʌt maɪ ˈbrʌðər laɪkt ði aɪˈdɪə. æt ði ɛnd wiː fɪkst ðə flæt ˈtaɪər ænd lɜːrnd haʊ tuː rɪˈpɛr ðə baɪk/", vi: "Chà, điều đó hoàn toàn nằm ngoài dự tính của chúng tôi. Nhưng anh tôi lại rất thích ý tưởng này. Cuối cùng, chúng tôi đã tự vá xong chiếc lốp xịt và học được cách sửa xe đạp." },
+      { start: 29.5, en: "Well, that was not what we expected. But my brother liked the idea. At the end, we fixed the flat tire and learned how to repair the bike.", ipa: "/wɛl ðæt wɒz nɒt wɒt wiː ɪkˈspɛktɪd. bʌt maɪ ˈbrʌðər laɪkt ði aɪˈdɪə. ænd ði ɛnd wiː fɪkst ðə flæt ˈtaɪər ænd lɜːrnd haʊ tuː rɪˈpɛr ðə baɪk/", vi: "Chà, điều đó hoàn toàn nằm ngoài dự tính của chúng tôi. Nhưng anh tôi lại rất thích ý tưởng này. Cuối cùng, chúng tôi đã tự vá xong chiếc lốp xịt và học được cách sửa xe đạp." },
       { start: 42.0, en: "What a great shop!", ipa: "/wɒt ə ɡreɪt ʃɒp!/", vi: "Đúng là một cửa hàng tuyệt vời!" }
     ]
   },
@@ -32,7 +32,7 @@ STORIES_DATA["11 November"] = [
     day: 3,
     title: "A Messy Room - Part 1",
     image: "11 November/images/day_03.webp",
-    audio: "11 November/audio/A1103 A Messy Room 1.mp3",
+    audio: "11 November/audio/A1103 A Messy Room - 1.mp3",
     sentences: [
       { start: 4.8, en: "Timmy was playing with his friends in his room. They jumped on the bed. They played with trucks and his old toys.", ipa: "/ˈtɪmi wɒz ˈpleɪɪŋ wɪð hɪz frɛndz ɪn hɪz ruːm. ðeɪ dʒʌmpt ɒn ðə bɛd. ðeɪ pleɪd wɪð trʌks ænd hɪz oʊld tɔɪz/", vi: "Timmy đang chơi đùa cùng đám bạn trong phòng ngủ. Chúng nhảy nhót trên giường, chơi ô tô tải và cả những món đồ chơi cũ." },
       { start: 16.0, en: "They had so much fun. They didn't notice how messy his room had become.", ipa: "/ðeɪ hæd soʊ mʌtʃ fʌn. ðeɪ ˈdɪdnt ˈnoʊtɪs haʊ ˈmɛsi hɪz ruːm hæd bɪˈkʌm/", vi: "Chúng chơi vui đến mức quên cả trời đất và chẳng hề hay biết phòng ngủ đã trở nên bừa bộn từ lúc nào." },
@@ -43,10 +43,10 @@ STORIES_DATA["11 November"] = [
     day: 4,
     title: "A Messy Room - Part 2",
     image: "11 November/images/day_04.webp",
-    audio: "11 November/audio/A1104 A Messy Room 2.mp3",
+    audio: "11 November/audio/A1104 A Messy Room - 2.mp3",
     sentences: [
       { start: 4.8, en: "Timmy started to clean his room. He put the trucks in his toy box, the sheets back on his bed, and the old toys back on the shelf.", ipa: "/ˈtɪmi ˈstɑːrtɪd tuː kliːn hɪz ruːm. hiː pʊt ðə trʌks ɪn hɪz tɔɪ bɒks ðə ʃiːts bæk ɒn hɪz bɛd ænd ði oʊld tɔɪz bæk ɒn ðə ʃɛlf/", vi: "Timmy vội vàng bắt tay vào dọn dẹp phòng. Cậu bỏ xe tải vào thùng đồ chơi, trải lại ga giường và xếp gọn đồ chơi lên giá sách." },
-      { start: 18.0, en: "Just as he finished, his mother got home. She said, 'Your room is so clean!'", ipa: "/dʒʌst æz hiː ˈfɪnɪʃt hɪz ˈmʌðər ɡɒt hoʊm. ʃiː sɛd jɔːr ruːm ɪz soʊ kliːn/", vi: "Vừa dọn xong xuôi thì mẹ về đến nhà. Mẹ ngạc nhiên thốt lên: 'Phòng của con sạch sẽ quá vậy!'y" },
+      { start: 18.0, en: "Just as he finished, his mother got home. She said, 'Your room is so clean!'", ipa: "/dʒʌst æz hiː ˈfɪnɪʃt hɪz ˈmʌðər ɡɒt hoʊm. ʃiː sɛd jɔːr ruːm ɪz soʊ kliːn/", vi: "Vừa dọn xong xuôi thì mẹ về đến nhà. Mẹ ngạc nhiên thốt lên: 'Phòng của con sạch sẽ quá vậy!'" },
       { start: 26.5, en: "Timmy smiled. 'Next time, I'll ask my friends to help me clean the room when we are done playing,' thought Timmy.", ipa: "/ˈtɪmi smaɪld. nɛkst taɪm aɪl ɑːsk maɪ frɛndz tuː hɛlp miː kliːn ðə ruːm wɛn wiː ɑːr dʌn ˈpleɪɪŋ θɔːt ˈtɪmi/", vi: "Timmy mỉm cười tự mãn và tự nhủ: 'Lần sau chơi xong, mình sẽ bắt lũ bạn ở lại phụ mình dọn dẹp luôn thể.'" }
     ]
   },
@@ -54,7 +54,7 @@ STORIES_DATA["11 November"] = [
     day: 5,
     title: "Mom's Favourite Sweater - Part 1",
     image: "11 November/images/day_05.webp",
-    audio: "11 November/audio/A1105 Mom_s Favourite Sweater 1.mp3",
+    audio: "11 November/audio/A1105 Mom_s Favourite Sweater - 1.mp3",
     sentences: [
       { start: 4.8, en: "Mom had a blue sweater. It was her favourite of all her clothes. It was made of wool.", ipa: "/mɒm hæd ə bluː ˈswɛtər. ɪt wɒz hɜːr ˈfeɪvərɪt əv ɔːl hɜːr kloʊðz. ɪt wɒz meɪd əv wʊl/", vi: "Mẹ có một chiếc áo len màu xanh dương. Đó là món trang phục yêu thích nhất trong tủ đồ của mẹ và được dệt hoàn toàn bằng chất liệu len." },
       { start: 14.5, en: "One day, she wanted to wear it to a meeting. When she took out her sweater, something was wrong.", ipa: "/wʌn deɪ ʃiː ˈwɒntɪd tuː wɛər ɪt tuː ə ˈmiːtɪŋ. wɛn ʃiː tʊk aʊt hɜːr ˈswɛtər ˈsʌmθɪŋ wɒz rɒŋ/", vi: "Một hôm, mẹ định diện chiếc áo đó đi họp. Nhưng khi vừa lấy áo ra, mẹ phát hiện có điều gì đó bất thường." },
@@ -66,7 +66,7 @@ STORIES_DATA["11 November"] = [
     day: 6,
     title: "Mom's Favourite Sweater - Part 2",
     image: "11 November/images/day_06.webp",
-    audio: "11 November/audio/A1106 Mom_s Favourite Sweater 2.mp3",
+    audio: "11 November/audio/A1106 Mom_s Favourite Sweater - 2.mp3",
     sentences: [
       { start: 4.8, en: "Mom looked at her sweater carefully. Then she called out, 'Look, there are worms! There are worms on my sweater!'", ipa: "/mɒm lʊkt æt hɜːr ˈswɛtər ˈkɛrfəli. ðɛn ʃiː kɔːld aʊt lʊk ðɛər ɑːr wɜːrmz! ðɛər ɑːr wɜːrmz ɒn maɪ ˈswɛtər/", vi: "Mẹ săm soi chiếc áo thật kỹ. Rồi mẹ hốt hoảng la lên: 'Nhìn này, có sâu đấy! Có mấy con sâu đang bám trên áo len của mẹ này!'" },
       { start: 16.5, en: "We all ran over to see her sweater.", ipa: "/wiː ɔːl ræn ˈoʊvər tuː siː hɜːr ˈswɛtər/", vi: "Tất cả chúng tôi liền chạy xúm lại để xem." },
@@ -117,7 +117,7 @@ STORIES_DATA["11 November"] = [
     day: 10,
     title: "Dentist Visit - Part 1",
     image: "11 November/images/day_10.webp",
-    audio: "11 November/audio/A1110 Dentist Visit 1.mp3",
+    audio: "11 November/audio/A1110 Dentist Visit - 1.mp3",
     sentences: [
       { start: 4.8, en: "Leo visited a dentist while he was in China.", ipa: "/ˈliːoʊ ˈvɪzɪtɪd ə ˈdɛntɪst waɪl hiː wɒz ɪn ˈtʃaɪnə/", vi: "Trong chuyến đi du lịch Trung Quốc, Leo có dịp ghé qua phòng khám nha khoa." },
       { start: 10.0, en: "Leo didn't want other people to go with him because seeing a dentist could take a lot of time. He went to the dentist's office by himself.", ipa: "/ˈliːoʊ ˈdɪdnt wɒnt ˈʌðər ˈpiːpl tuː ɡoʊ wɪð hɪm bɪˈkəz ˈsiːɪŋ ə ˈdɛntɪst kʊd teɪk ə lɒt əv taɪm. hiː wɛnt tuː ðə ˈdɛntɪsts ˈɔːfɪs baɪ hɪmsɛlf/", vi: "Leo không muốn phiền ai đi cùng vì nghĩ khám răng sẽ mất nhiều thời gian. Cậu quyết định tự mình đến phòng khám." },
@@ -129,7 +129,7 @@ STORIES_DATA["11 November"] = [
     day: 11,
     title: "Dentist Visit - Part 2",
     image: "11 November/images/day_11.webp",
-    audio: "11 November/audio/A1111 Dentist Visit 2.mp3",
+    audio: "11 November/audio/A1111 Dentist Visit - 2.mp3",
     sentences: [
       { start: 4.8, en: "Leo sat in the dentist's chair. He opened his mouth to let the dentist see his teeth.", ipa: "/ˈliːoʊ sæt ɪn ðə ˈdɛntɪsts tʃɛər. hiː ˈoʊpənd hɪz maʊθ tuː lɛt ðə ˈdɛntɪst siː hɪz tiːθ/", vi: "Leo ngồi lên ghế nha khoa và há miệng thật to để bác sĩ kiểm tra hàm răng." },
       { start: 13.0, en: "A few of his teeth had problems. Some needed to be pulled out. Some had to be fixed. There were many ways to do the work.", ipa: "/ə fjuː əv hɪz tiːθ hæd ˈprɒbləmz. sʌm ˈniːdɪd tuː biː pʊld aʊt. sʌm hæd tuː biː fɪkst. ðɛər wɜːr ˈmɛni weɪz tuː duː ðə wɜːrk/", vi: "Vài chiếc răng của cậu đang gặp vấn đề: cái thì phải nhổ bỏ, cái thì cần trám lại. Có rất nhiều phương án điều trị khác nhau." },
@@ -141,12 +141,12 @@ STORIES_DATA["11 November"] = [
     day: 12,
     title: "Dentist Visit - Part 3",
     image: "11 November/images/day_12.webp",
-    audio: "11 November/audio/A1112 Dentist Visit 3.mp3",
+    audio: "11 November/audio/A1112 Dentist Visit - 3.mp3",
     sentences: [
       { start: 4.8, en: "The dentist looked at Leo's teeth and talked to him in Chinese. Leo didn't understand. They both shook their heads and smiled.", ipa: "/ðə ˈdɛntɪst lʊkt æt ˈliːoʊz tiːθ ænd tɔːkt tuː hɪm ɪn ˈtʃaɪniːz. ˈliːoʊ ˈdɪdnt ˌʌndərˈstænd. ðeɪ boʊθ ʃʊk ðɛər hɛdz ænd smaɪld/", vi: "Nha sĩ kiểm tra hàm răng của Leo và trò chuyện bằng tiếng Trung. Leo ngẩn người không hiểu. Cả hai nhìn nhau bật cười rồi cùng lắc đầu ngao ngán." },
       { start: 16.0, en: "Then, the dentist found an online translator. She put the questions in Chinese. The computer changed them to English.", ipa: "/ðɛn ðə ˈdɛntɪst faʊnd ən ˈɒnˌlaɪn trænzˈleɪtər. ʃiː pʊt ðə ˈkwɛstʃənz ɪn ˈtʃaɪniːz. ðə kəmˈpjuːtər tʃeɪndʒd ðɛm tuː ˈɪŋɡlɪʃ/", vi: "Ngay sau đó, nữ nha sĩ sực nhớ ra phần mềm dịch thuật trực tuyến. Cô nhập các câu hỏi bằng tiếng Trung, máy tính liền tự động chuyển ngữ sang tiếng Anh." },
       { start: 27.5, en: "Then, Leo answered the questions in English. The computer gave his answers in Chinese.", ipa: "/ðɛn ˈliːoʊ ˈɑːnsərd ðə ˈkwɛstʃənz ɪn ˈɪŋɡlɪʃ. ðə kəmˈpjuːtər ɡeɪv hɪz ˈɑːnsərz ɪn ˈtʃaɪniːz/", vi: "Thế là Leo cứ thế trả lời các câu hỏi bằng tiếng Anh, và máy tính lại dịch ngược câu trả lời của cậu sang tiếng Trung cho bác sĩ." },
-      { start: 36.5, en: "The two managed to talk to each other that way. By the end of the visit, Leo got his teeth fixed.", ipa: "/ðə tuː ˈmænɪdʒd tuː tɔːk tuː iːtʃ ˈʌðər ðæt weɪ. baɪ ði ɛnd əv ðə ˈvɪzɪt ˈliːoʊ ɡɒt hɪz tiːθ fɪkst/", vi: "Bằng cách đó, họ đã trò chuyện và hiểu nhau suôn sẻ. Cuối cùng, buổi khám kết thúc tốt đẹp và hàm răng của Leo đã được chữa trị hoàn tất." }
+      { start: 36.5, en: "The two managed to talk to each other that way. By the end of the visit, Leo got his teeth fixed.", ipa: "/ðə tuː ˈmænɪdʒd tuː tɔːk tuː iːtʃ ˈʌðər ðæt way. baɪ ði ɛnd əv ðə ˈvɪzɪt ˈliːoʊ ɡɒt hɪz tiːθ fɪkst/", vi: "Bằng cách đó, họ đã trò chuyện và hiểu nhau suôn sẻ. Cuối cùng, buổi khám kết thúc tốt đẹp và hàm răng của Leo đã được chữa trị hoàn tất." }
     ]
   },
   {
@@ -208,7 +208,7 @@ STORIES_DATA["11 November"] = [
       { start: 4.8, en: "Rabbit and Bear are best friends. In the summer, they sit by the river and enjoy the sun. In the fall, they play in the leaves.", ipa: "/ˈræbɪt ænd bɛər ɑːr bɛst frɛndz. ɪn ðə ˈsʌmər ðeɪ sɪt baɪ ðə ˈrɪvər ænd ɪnˈdʒɔɪ ðə sʌn. ɪn ðə fɔːl ðeɪ pleɪ ɪn ðə liːvz/", vi: "Thỏ và Gấu là đôi bạn thân thiết. Vào mùa hè, cả hai cùng ngồi bên bờ sông tắm nắng. Đến mùa thu, chúng lại nô đùa thỏa thích giữa những thảm lá vàng rơi." },
       { start: 17.5, en: "Then, winter comes. Bear says, 'I have to go away now.'", ipa: "/ðɛn ˈwɪntər kʌmz. bɛər sɛz aɪ hæv tuː ɡoʊ əˈweɪ naʊ/", vi: "Rồi mùa đông lạnh giá cũng tới. Gấu buồn bã nói: 'Tớ phải đi ngủ đông rồi.'" },
       { start: 24.5, en: "'I know. Bears sleep all winter. Time to say goodbye!' Rabbit says sadly.", ipa: "/aɪ noʊ. bɛərz sliːp ɔːl ˈwɪntər. taɪm tuː seɪ ɡʊdˈbaɪ! ˈræbɪt sɛz ˈsædli/", vi: "'Tớ biết chứ. Loài gấu các cậu ngủ vùi suốt cả mùa đông cơ mà. Đã đến lúc phải nói lời tạm biệt rồi!' Thỏ buồn rầu đáp." },
-      { start: 33.0, en: "'Don't be sad. When I wake up in the spring, we will play again! Let's say see you later,' says Bear.", ipa: "/doʊnt biː sæd. wɛn aɪ weɪk ʌp ɪn ðə sprɪŋ wiː wɪl pleɪ əˈɡɛn! lɛts seɪ siː juː ˈleɪtər sɛd bɛər/", vi: "'Đừng buồn thế cậu bạn. Khi tớ thức dậy vào mùa xuân tới, chúng mình lại cùng nhau chơi đùa nhé! Hãy nói hẹn gặp lại nào,' Gấu an ủi." },
+      { start: 33.0, en: "'Don't be sad. When I wake up in the spring, we will play again! Let's say see you later,' says Bear.", ipa: "/doʊnt biː sæd. wɛn aɪ weɪk ʌp ɪn ðə sprɪŋ wiː wɪl pleɪ əˈɡɛn! lɛts seɪ siː juː ˈleɪtər sɛd bɛər/", vi: "'Don't be sad. When I wake up in the spring, we will play again! Let's say see you later,' says Bear." },
       { start: 43.5, en: "Rabbit smiles and says, 'See you later!'", ipa: "/ˈræbɪt smaɪlz ænd sɛd siː juː ˈleɪtər/", vi: "Thỏ mỉm cười tươi và vẫy tay: 'Hẹn gặp lại cậu nhé!'" }
     ]
   },
@@ -220,7 +220,7 @@ STORIES_DATA["11 November"] = [
     sentences: [
       { start: 4.8, en: "Zebras live in Africa. They look a lot like horses, but there is one big difference.", ipa: "/ˈziːbrəz lɪv ɪn ˈæfrɪkə. ðeɪ lʊk ə lɒt laɪk ˈhɔːrsɪz bʌt ðɛər ɪz wʌn bɪɡ ˈdɪfrəns/", vi: "Ngựa vằn sinh sống ở Châu Phi. Trông chúng rất giống ngựa nhà, nhưng có một điểm khác biệt lớn." },
       { start: 13.0, en: "Horses come in many colours. Horses can be white, black or brown. But zebras all look the same - white with black stripes.", ipa: "/ˈhɔːrsɪz kʌm ɪn ˈmɛni ˈkʌlərz. ˈhɔːrsɪz kæn biː waɪt blæk ɔːr braʊn. bʌt ˈziːbrəz ɔːl lʊk ðə seɪm waɪt wɪð blæk straɪps/", vi: "Loài ngựa thì có rất nhiều màu sắc khác nhau như trắng, đen hoặc nâu. Riêng ngựa vằn thì con nào trông cũng y hệt nhau — bộ lông màu trắng sọc đen đặc trưng." },
-      { start: 25.5, en: "If you look at a herd of zebras, it's hard to see any differences between them. But look closer. There is something really special about those zebras.", ipa: "/ɪf juː lʊk æt ə hɜːrd əv ˈziːbrəz ɪts hɑːrd tuː siː ˈɛni ˈdɪfrənsɪz bɪˈtwɪːn ðɛm. bʌt lʊk ˈkloʊsər. ðɛər ɪz ˈsʌmθɪŋ ˈrɪəli ˈspɛʃəl əˈbaʊt ðoʊz ˈziːbrəz/", vi: "Nếu nhìn lướt qua một bầy ngựa vằn, bạn sẽ khó lòng phân biệt được chúng. Nhưng hãy quan sát kỹ hơn xem, có một điều cực kỳ đặc biệt ở loài vật này đấy." },
+      { start: 25.5, en: "If you look at a herd of zebras, it's hard to see any differences between them. But look closer. There is something really special about those zebras.", ipa: "/ɪf juː lʊk æt ə hɜːrd əv ˈziːbrəz ɪts hɑːrd tuː siː ˈɛni ˈdɪfrənsɪz bɪˈtwɪːn ðɛm. bʌt lʊk ˈkloʊsər. ðɛər ɪz ˈsʌmθɪŋ ˈrɪəli ˈspɛʃl əˈbaʊt ðoʊz ˈziːbrəz/", vi: "Nếu nhìn lướt qua một bầy ngựa vằn, bạn sẽ khó lòng phân biệt được chúng. Nhưng hãy quan sát kỹ hơn xem, có một điều cực kỳ đặc biệt ở loài vật này đấy." },
       { start: 38.5, en: "The stripes on every zebra are different. No two zebras have the same stripes. Isn't that cool?", ipa: "/ðə straɪps ɒn ˈɛvri ˈziːbrə ɑːr ˈdɪfrənt. noʊ tuː ˈziːbrəz hæv ðə seɪm straɪps. ˈɪznt ðæt kuːl/", vi: "Các đường sọc vằn trên mình mỗi con ngựa vằn hoàn toàn khác nhau. Không có bất kỳ hai con ngựa vằn nào sở hữu bộ vằn giống hệt nhau cả. Thật tuyệt diệu phải không nào!" }
     ]
   },

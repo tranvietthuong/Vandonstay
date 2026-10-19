@@ -30,7 +30,7 @@ STORIES_DATA["01 January"] = [
       { start: 15.6, en: "Kim is the opposite.", ipa: "/kɪm ɪz ðiː ˈɒpəzɪt/", vi: "Kim thì ngược lại." },
       { start: 18.0, en: "She likes fruit, but not vegetables.", ipa: "/ʃiː laɪks fruːt bʌt nɒt ˈvɛdʒtəblz/", vi: "Cô bé thích trái cây, nhưng không thích rau củ." },
       { start: 21.6, en: 'At lunch, their friend Rachel says, "There are places where people don\'t have food to eat, and they go hungry."', ipa: '/æt lʌntʃ ðɛər frɛnd ˈreɪtʃəl sɛz ðɛər ɑːr ˈpleɪsɪz wɛər ˈpiːpl doʊnt hæv fuːd tuː iːt ænd ðeɪ ɡoʊ ˈhʌŋɡri/', vi: 'Vào bữa trưa, bạn của họ là Rachel nói: "Có những nơi người ta không có đồ ăn, và họ bị đói."' },
-      { start: 29.5, en: 'Then she says, "If you think about that, you see all food is good!"', ipa: '/ðɛn ʃiː sɛz ɪf juː θɪŋk əˈbaʊt ðæt juː siː ɔːl fuːd ɪz ɡʊd/', vi: 'Rồi bạn ấy nói: "Nếu nghĩ về điều đó, bạn sẽ thấy mọi thức ăn đều đáng quý!"' },
+      { start: 29.5, en: 'Then she says, "If you think about that, you see all food is good!"', ipa: '/ðɛn ʃiː sɛd ɪf juː θɪŋk əˈbaʊt ðæt juː siː ɔːl fuːd ɪz ɡʊd/', vi: 'Rồi bạn ấy nói: "Nếu nghĩ về điều đó, bạn sẽ thấy mọi thức ăn đều đáng quý!"' },
       { start: 35.8, en: "You don't like fruit?", ipa: "/juː doʊnt laɪk fruːt?/", vi: "Cậu không thích trái cây sao?" }
     ]
   },
@@ -402,7 +402,7 @@ STORIES_DATA["01 January"] = [
       { start: 11.8, en: "Birds eat many things. Some birds eat worms. Some birds eat seeds and nuts.", ipa: "/bɜːrdz iːt ˈmɛni θɪŋz. sʌm bɜːrdz iːt wɜːrmz. sʌm bɜːrdz iːt siːdz ænd nʌts/", vi: "Chim ăn rất nhiều thứ. Có loài ăn sâu bọ, có loài ăn các loại hạt quả hạch." },
       { start: 19.5, en: "Do you want to know something funny? Birds eat many different things, but they don't have teeth!", ipa: "/duː juː wɒnt tuː noʊ ˈsʌmθɪŋ ˈfʌni? bɜːrdz iːt ˈmɛni ˈdɪfrənt θɪŋz bʌt ðeɪ doʊnt hæv tiːθ!/", vi: "Bạn có muốn biết điều buồn cười này không? Chim ăn nhiều thứ nhưng chúng lại không hề có răng!" },
       { start: 28.5, en: "How do they chew their food? I wonder.", ipa: "/haʊ duː ðeɪ tʃuː ðɛər fuːd? aɪ ˈwʌndər/", vi: "Làm sao chúng nhai được thức ăn nhỉ? Tôi tự hỏi." },
-      { start: 32.5, en: "How am I going to eat?", ipa: "/haʊ æm aɪ ˈɡoʊɪŋ tuː iːt?/", vi: "Làm sao để tôi ăn được bây giờ?" }
+      { start: 32.5, en: "How am I going to eat?", ipa: "/haʊ æm aɪ ˈɡoʊɪŋ tʊ iːt?/", vi: "Làm sao để tôi ăn được bây giờ?" }
     ]
   },
   {

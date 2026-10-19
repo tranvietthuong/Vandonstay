@@ -35,7 +35,7 @@ STORIES_DATA["12 December"] = [
     image: "12 December/images/day_03.webp",
     audio: "12 December/audio/A1203 A New Friend.mp3",
     sentences: [
-      { start: 4.8, en: "There was a poor man who was very happy every day.", ipa: "/ðɛər wɒz ə pʊr mæn huː wɒz ˈvɛri ˈhæpi ˈɛvri deɪ/", vi: "Có một người đàn ông nghèo nhưng lúc nào cũng vui vẻ, hạnh phúc mỗi ngày." },
+      { start: 4.8, en: "There was a poor man who was very happy every day.", ipa: "/ðɛər wʌns wɒz ə pʊr mæn huː wɒz ˈvɛri ˈhæpi ˈɛvri deɪ/", vi: "Có một người đàn ông nghèo nhưng lúc nào cũng vui vẻ, hạnh phúc mỗi ngày." },
       { start: 10.5, en: "One day, a rich man came to him and said, 'Here, take some money and tell me what makes you happy.'", ipa: "/wʌn deɪ ə rɪtʃ mæn keɪm tuː hɪm ænd sɛd hɪər teɪk sʌm ˈmʌni ænd tɛl miː wɒt meɪks juː ˈhæpi/", vi: "Một hôm, một người giàu có tìm đến ông và nói: 'Này, cầm lấy số tiền này và nói cho ta biết điều gì khiến ngươi luôn vui vẻ thế.'" },
       { start: 20.0, en: "The man said, 'No, thank you. But I can give you something.' The rich man was surprised.", ipa: "/ðə mæn sɛd noʊ θæŋk juː. bʌt aɪ kæn ɡɪv juː ˈsʌmθɪŋ. ðə rɪtʃ mæn wɒz sərˈpraɪzd/", vi: "Người nghèo từ chối: 'Dạ thôi, cảm ơn ông. Nhưng tôi có thể tặng ông một thứ.' Người giàu ngạc nhiên hỏi lại." },
       { start: 28.5, en: "He said, 'What can you give me? I have everything.'", ipa: "/hiː sɛd wɒt kæn juː ɡɪv miː? aɪ hæv ˈɛvriˌθɪŋ/", vi: "'Ngươi thì có gì để cho ta chứ? Ta có trong tay mọi thứ rồi.' Cậu ta ngạo nghễ nói." },
@@ -50,7 +50,7 @@ STORIES_DATA["12 December"] = [
     sentences: [
       { start: 4.8, en: "I wrote a song for my mother's birthday. I sang the song for her at our family party.", ipa: "/aɪ roʊt ə sɔːŋ fɔːr maɪ ˈmʌðərz ˈbɜːrθdeɪ. aɪ sæŋ ðə sɔːŋ fɔːr hɜːr æt ˈaʊər ˈfæməli ˈpɑːrti/", vi: "Tôi đã tự sáng tác một bài hát dành tặng sinh nhật mẹ và cất cao tiếng hát trong bữa tiệc gia đình." },
       { start: 13.5, en: "I could hear my brothers laugh as I was singing. I am not a good singer. But my mother said it was the best song she'd ever heard.", ipa: "/aɪ kʊd hɪər maɪ ˈbrʌðərz lɑːf æz aɪ wɒz ˈsɪŋɪŋ. aɪ æm nɒt ə ɡʊd ˈsɪŋər. bʌt maɪ ˈmʌðər sɛd ɪt wɒz ðə bɛst sɔːŋ ʃiːd ˈɛvər hɜːrd/", vi: "Tôi nghe thấy tiếng mấy người anh em khúc khích cười cợt khi tôi đang hát vì giọng tôi vốn chẳng hay ho gì. Nhưng mẹ lại bảo đó là bài hát hay nhất mà mẹ từng được nghe." },
-      { start: 26.5, en: "Then my mom asked my brothers to sing. They did. Their singing was worse than mine! We all laughed.", ipa: "/ðɛn maɪ mɒm ɑːskt maɪ ˈbrʌðərz tuː sɪŋ. ðeɪ dɪd. ðɛər ˈsɪŋɪŋ wɒz wɜːrs ðæn maɪn! wiː ɔːl lɑːft/", vi: "Sau đó mẹ liền gọi các anh tôi cất giọng hát thử xem sao. Họ làm theo ngay. Quả thực giọng hát của họ còn thảm họa hơn cả tôi! Cả nhà được một trận cười bể bụng." },
+      { start: 26.5, en: "Then my mom asked my brothers to sing. They did. Their singing was worse than mine! We all laughed.", ipa: "/ðɛn maɪ mɒm ɑːsks maɪ ˈbrʌðərz tuː sɪŋ. ðeɪ dɪd. ðɛər ˈsɪŋɪŋ wɒz wɜːrs ðæn maɪn! wiː ɔːl lɑːft/", vi: "Sau đó mẹ liền gọi các anh tôi cất giọng hát thử xem sao. Họ làm theo ngay. Quả thực giọng hát của họ còn thảm họa hơn cả tôi! Cả nhà được một trận cười bể bụng." },
       { start: 38.0, en: "My mother said, 'That should teach you a lesson!'", ipa: "/maɪ ˈmʌðər sɛd ðæt ʃʊd tiːtʃ juː ə ˈlɛsn/", vi: "Mẹ mỉm cười kết luận: 'Đấy, thế mới biết bài học rút ra là gì nhé!'" }
     ]
   },
@@ -84,7 +84,7 @@ STORIES_DATA["12 December"] = [
     image: "12 December/images/day_07.webp",
     audio: "12 December/audio/A1207 Hurly Burly.mp3",
     sentences: [
-      { start: 4.8, en: "Grandma uses all kinds of funny words. One day, my two brothers and I were running around in the house.", ipa: "/ˈɡrænmɑː ˈjuːzɪz ɔːl kaɪndz əv ˈfʌni wɜːrdz. wʌn deɪ maɪ tuː ˈbrʌðərz ænd aɪ wɜːr ˈrʌnɪŋ əˈraʊnd ɪn ðə haʊs/", vi: "Bà ngoại rất hay dùng những từ ngữ kỳ cục và hài hước. Có hôm, ba anh em chúng tôi chạy đùa rầm rầm khắp nhà." },
+      { start: 4.8, en: "Grandma uses all kinds of funny words. One day, my two brothers and I were running around in the house.", ipa: "/ˈɡrænmɑː ˈjuːzɪz ɔːl kaɪndz əv ˈfʌni wɜːrdz. wʌn deɪ maɪ tuː ˈbrʌðərz ænd aɪ wɜːr ˈrʌnɪŋ əˈraʊnd ɪn ðə haʊs/", vi: "B่อ ngoại rất hay dùng những từ ngữ kỳ cục và hài hước. Có hôm, ba anh em chúng tôi chạy đùa rầm rầm khắp nhà." },
       { start: 13.5, en: "She said, 'Enough of all this hurly-burly!' We stopped and asked, 'What's that, Grandma?'", ipa: "/ʃiː sɛd ɪˈnʌf əv ɔːl ðɪs ˈhɜːrli-ˈbɜːrli! wiː stɒpt ænd ɑːskt wɒts ðæt ˈɡrænmɑː/", vi: "Bà liền quát lớn: 'Đủ cái trò hỗn độn ồn ào này chưa hả!' Chúng tôi khựng lại hỏi: 'Hả, từ đó nghĩa là gì vậy bà?'" },
       { start: 24.5, en: "'It means stop running around and making so much noise,' said Grandma.", ipa: "/ɪt miːnz stɒp ˈrʌnɪŋ əˈraʊnd ænd ˈmeɪkɪŋ soʊ mʌtʃ nɔɪz sɛd ˈɡrænmɑː/", vi: "'Nó có nghĩa là dừng ngay cái việc chạy nhảy quậy phá làm ồn ào đi chứ sao,' bà mắng yêu." },
       { start: 32.5, en: "I like to use her words too because they remind me of her.", ipa: "/aɪ laɪk tʊ juːz hɜːr wɜːrdz tuː bɪˈkəz ðeɪ rɪˈmaɪnd miː əv hɜːr/", vi: "Tôi rất thích dùng lại những từ độc đáo của bà, bởi vì chúng luôn gợi cho tôi nhớ về bà mỗi khi vang lên." }
@@ -135,14 +135,14 @@ STORIES_DATA["12 December"] = [
       { start: 13.0, en: "Chuma really wants to go with his father. 'Papa, can I climb the mountain with you?'", ipa: "/ˈtʃuːmə ˈrɪəli wɒnts tuː ɡoʊ wɪð hɪz ˈfɑːðər. ˈpɑːpə kæn aɪ klaɪm ðə ˈmaʊntɪn wɪð juː/", vi: "Chuma rất khao khát được đi cùng bố. Cậu bé nài nỉ: 'Bố ơi, con có thể leo núi cùng bố được không ạ?'" },
       { start: 21.0, en: "'You must be big and strong. The mountain is 4,900 metres tall,' said Papa.", ipa: "/juː mʌst biː bɪɡ ænd strɒŋ. ðə ˈmaʊntɪn ɪz fɔːr ˈθaʊznd naɪn ˈhʌndrəd ˈmiːtərz tɔːl sɛd ˈpɑːpə/", vi: "'Con phải thật to con và khỏe mạnh đã. Ngọn núi này cao tới 4.900 mét cơ mà,' bố xoa đầu đáp." },
       { start: 30.0, en: "Chuma smiled, 'I will eat all my food and get strong. Then I can climb the mountain.'", ipa: "/ˈtʃuːmə smaɪld aɪ wɪl iːt ɔːl maɪ fuːd ænd ɡɛt strɒŋ. ðɛn aɪ kæn klaɪm ðə ˈmaʊntɪn/", vi: "Chuma cười tươi tự tin: 'Con sẽ ăn thật nhiều để trở nên lực lưỡng. Khi đó con sẽ được leo núi cùng bố.'" },
-      { start: 39.0, en: "Papa laughed and said, 'Yes, my son, one day we will climb the mountain together!'", ipa: "/ˈpɑːpə lɑːft ænd sɛd jɛs maɪ sʌn wʌn deɪ wiː wɪl klaɪm ðə ˈmaʊntɪn təˈɡɛðər/", vi: "Bố bật cười sảng khoái: 'Được chứ con trai, nhất định một ngày nào đó hai bố con mình sẽ cùng nhau chinh phục đỉnh núi!'y" }
+      { start: 39.0, en: "Papa laughed and said, 'Yes, my son, one day we will climb the mountain together!'", ipa: "/ˈpɑːpə lɑːft ænd sɛd jɛs maɪ sʌn wʌn deɪ wiː wɪl klaɪm ðə ˈmaʊntɪn təˈɡɛðər/", vi: "Bố bật cười sảng khoái: 'Được chứ con trai, nhất định một ngày nào đó hai bố con mình sẽ cùng nhau chinh phục đỉnh núi!'" }
     ]
   },
   {
     day: 12,
     title: "The Boys and the Old Man - Part 1",
     image: "12 December/images/day_12.webp",
-    audio: "12 December/audio/A1212 The Boys and the Old Man 1.mp3",
+    audio: "12 December/audio/A1212 The Boys and the Old Man - 1.mp3",
     sentences: [
       { start: 4.8, en: "-based on Korean folk tale", ipa: "/beɪst ɒn kəˈriːən foʊk teɪl/", vi: "-dựa theo truyện cổ dân gian Hàn Quốc" },
       { start: 9.5, en: "Two boys went out to find happiness. On their path, they met an old man.", ipa: "/tuː bɔɪz wɛnt aʊt tuː faɪnd ˈhæpinəs. ɒn ðɛər pæθ ðeɪ mɛt ən oʊld mæn/", vi: "Hai cậu bé lên đường đi tìm kiếm hạnh phúc. Trên đường đi, họ tình cờ gặp một cụ già." },
@@ -157,7 +157,7 @@ STORIES_DATA["12 December"] = [
     day: 13,
     title: "The Boys and the Old Man - Part 2",
     image: "12 December/images/day_13.webp",
-    audio: "12 December/audio/A1213 The Boys and the Old Man 2.mp3",
+    audio: "12 December/audio/A1213 The Boys and the Old Man - 2.mp3",
     sentences: [
       { start: 4.8, en: "Now, the old man put down his bag. 'I am very tired,' he said. 'Who will help me carry my bag?'", ipa: "/naʊ ði oʊld mæn pʊt daʊn hɪz bæɡ. aɪ æm ˈvɛri ˈtaɪərd hiː sɛd. huː wɪl hɛlp miː ˈkæri maɪ bæɡ/", vi: "Lúc này, cụ già đặt chiếc túi nặng nhọc xuống đất và nói: 'Ta mệt quá. Ai có thể giúp ta xách chiếc túi này được không?'" },
       { start: 15.5, en: "The big boy did not say anything. The small boy took up the bag. 'You are tired. I will carry it for you,' he said.", ipa: "/ðə bɪɡ bɔɪ dɪd nɒt seɪ ˈɛniˌθɪŋ. ðə smɔːl bɔɪ tʊk ʌp ðə bæɡ. jʊər ˈtaɪərd. aɪ wɪl ˈkæri ɪt fɔːr juː hiː sɛd/", vi: "Cậu bé lớn làm như không nghe thấy gì và im thin thít. Riêng cậu bé nhỏ tuổi hơn liền bước đến nhấc túi lên: 'Chắc cụ mệt lắm rồi. Để cháu xách giúp cụ nhé.'" },
@@ -173,7 +173,7 @@ STORIES_DATA["12 December"] = [
     sentences: [
       { start: 4.8, en: "Tim does not like getting his hair cut. His mom tells him that we all need to cut our hair.", ipa: "/tɪm dʌz nɒt laɪk ˈɡɛtɪŋ hɪz hɛr kʌt. hɪz mɒm tɛlz hɪm ðæt wiː ɔːl niːd tuː kʌt ˈaʊər hɛr/", vi: "Tim rất ghét mỗi khi phải đi cắt tóc. Mẹ phải giải thích rằng ai trong chúng ta cũng cần phải cắt tóc định kỳ." },
       { start: 13.5, en: "'But why?' asks Tim. His mom explains that if he does not cut his hair, it will get too long.", ipa: "/bʌt waɪ? ɑːsks tɪm. hɪz mɒm ɪkˈspleɪnz ðæt ɪf hiː dʌz nɒt kʌt hɪz hɛr ɪt wɪl ɡɛt tuː lɒŋ/", vi: "'Nhưng tại sao ạ?' Tim thắc mắc. Mẹ giảng giải rằng nếu để tóc mãi không cắt, mái tóc sẽ mọc dài thòng luộm thuộm." },
-      { start: 23.5, en: "'We have more than 100,000 hairs on our head,' she says.", ipa: "/wiː hæv mɔːr ðæn wʌn ˈhʌndrəd ˈθaʊznd hɛərz ɒn ˈaʊər hɛd ʃiː sɛz/", vi: "'Trên đầu chúng ta có tới hơn 100.000 sợi tóc cơ đấy,' mẹ cho biết." },
+      { start: 23.5, en: "'We have more than 100,000 hairs on our head,' she says.", ipa: "/wiː hæv mɔːr ðæn wʌn ˈhʌndrəd ˈθaʊznd hɛərz ɒn ˈaʊər hɛd ʃiː sɛd/", vi: "'Trên đầu chúng ta có tới hơn 100.000 sợi tóc cơ đấy,' mẹ cho biết." },
       { start: 31.0, en: "'Think of how you will look if you don't cut your hair and your hair keeps growing!' says his mom.", ipa: "/θɪŋk əv haʊ juː wɪl lʊk ɪf juː doʊnt kʌt jɔːr hɛr ænd jɔːr hɛr kiːps ˈɡroʊɪŋ sɛd hɪz mɒm/", vi: "'Hãy tưởng tượng xem con trông sẽ thảm hại thế nào nếu cứ để tóc mọc dài mãi không cắt!' mẹ cười trêu." },
       { start: 40.5, en: "'Hmmm... I would look terrible!' says Tim.", ipa: "/hɪm... aɪ wʊd lʊk ˈtɛrəbl! sɛd tɪm/", vi: "'Hừm... Chắc lúc đó con trông khiếp lắm nhỉ!' Tim gãi đầu thừa nhận." }
     ]
@@ -229,7 +229,7 @@ STORIES_DATA["12 December"] = [
     day: 19,
     title: "Chinese Animal Years - Part 1",
     image: "12 December/images/day_19.webp",
-    audio: "12 December/images/A1219 Chinese Animal Years 1.mp3",
+    audio: "12 December/audio/A1219 Chinese Animal Years - 1.mp3",
     sentences: [
       { start: 4.8, en: "A boy wanted to learn about the Chinese years, and why they named the years after animals. He asked his uncle, Dr. Tian.", ipa: "/ə bɔɪ ˈwɒntɪd tuː lɜːrn əˈbaʊt ðə ˈtʃaɪniːz jɪərz ænd waɪ ðeɪ neɪmd ðə jɪərz ˈɑːftər ˈænɪmlz. hiː ɑːskt hɪz ˈʌŋkl ˈdɒktər tiən/", vi: "Cậu bé muốn tìm hiểu về hệ thống tính năm theo con giáp của người Trung Hoa, và lý do vì sao người ta lại đặt tên các năm theo tên loài vật. Cậu bèn đem thắc mắc này hỏi người chú là Tiến sĩ Tian." },
       { start: 16.0, en: "Dr. Tian said, 'Long ago, there was a race to get across a big river. The years are named for the first 12 animals to get across the river.'", ipa: "/ˈdɒktər tiən sɛd lɒŋ əˈgoʊ ðɛr wɒz ə reɪs tuː ɡɛt əˈkrɒs ə bɪɡ ˈrɪvər. ðə jɪərz ɑːr neɪmd fɔːr ðə fɜːrst twɛlv ˈænɪmlz tuː ɡɛt əˈkrɒs ðə ˈrɪvər/", vi: "Tiến sĩ Tian từ tốn giải thích: 'Thuở xưa, có một cuộc đua vượt qua con sông lớn. Tên của các năm được đặt theo thứ tự của 12 loài vật đầu tiên bơi qua được bờ bên kia.'" },
@@ -241,7 +241,7 @@ STORIES_DATA["12 December"] = [
     day: 20,
     title: "Chinese Animal Years - Part 2",
     image: "12 December/images/day_20.webp",
-    audio: "12 December/audio/A1220 Chinese Animal Years 2.mp3",
+    audio: "12 December/audio/A1220 Chinese Animal Years - 2.mp3",
     sentences: [
       { start: 4.8, en: "'What about the cat? Why isn't the cat one of the twelve animals?' asked the boy.", ipa: "/wɒt əˈbaʊt ðə kæt? waɪ ˈɪznt ðə kæt wʌn əv ðə twɛlv ˈænɪmlz? ɑːsks ðə bɔɪ/", vi: "'Thế còn con mèo thì sao ạ? Tại sao trong danh sách lại không có con mèo?' cậu bé thắc mắc." },
       { start: 12.0, en: "'When crossing the river, both the cat and rat got a ride on the ox. But near the end, the rat pushed the cat into the river,' said Dr. Tian.", ipa: "/wɛn ˈkrɒsɪŋ ðə ˈrɪvər boʊθ ðə kæt ænd ræt ɡɒt ə raɪd ɒn ði ɒks. bʌt nɪər ði ɛnd ðə ræt pʊʃt ðə kæt ˈɪntuː ðə ˈrɪvər sɛd ˈdɒktər tiən/", vi: "'Khi vượt sông, cả mèo và chuột đều khôn lỏi xin đi ké trên lưng trâu. Nhưng gần đến đích, con chuột lại nhẫn tâm đẩy con mèo rớtỏm xuống nước,' Tiến sĩ Tian kể." },
@@ -266,7 +266,7 @@ STORIES_DATA["12 December"] = [
     day: 22,
     title: "Uncle's Phone - Part 1",
     image: "12 December/images/day_22.webp",
-    audio: "12 December/audio/A1222 Uncle_s Phone 1.mp3",
+    audio: "12 December/audio/A1222 Uncle_s Phone - 1.mp3",
     sentences: [
       { start: 4.8, en: "Uncle Anthony loves his phone. He takes it everywhere he goes.", ipa: "/ˈʌŋkl ˈænθəni lʌvz hɪz foʊn. hiː teɪks ɪt ˈɛvriˌwɛər hiː ɡoʊz/", vi: "Chú Anthony rất nghiện điện thoại di động. Chú mang theo nó đi bất cứ nơi đâu." },
       { start: 11.5, en: "Even at home, he always has his phone nearby. He wants to be able to check his emails often.", ipa: "/ˈiːvn æt hoʊm hiː ˈɔːlweɪz hæz hɪz foʊn nɪərˈbaɪ. hiː wɒnts tʊ biː ˈeɪbl tuː tʃɛk hɪz ˈiːˌmeɪlz ˈɒfn/", vi: "Ngay cả khi ở nhà, chú cũng kè kè chiếc điện thoại bên cạnh vì luôn muốn check email công việc liên tục." },
@@ -279,11 +279,11 @@ STORIES_DATA["12 December"] = [
     day: 23,
     title: "Uncle's Phone - Part 2",
     image: "12 December/images/day_23.webp",
-    audio: "12 December/audio/A1223 Uncle_s Phone 2.mp3",
+    audio: "12 December/audio/A1223 Uncle_s Phone - 2.mp3",
     sentences: [
       { start: 4.8, en: "Uncle Anthony used his phone for many things. He used it to take pictures. Then, all of his pictures were gone.", ipa: "/ˈʌŋkl ˈænθəni juːzd hɪz foʊn fɔːr ˈmɛni θɪŋz. hiː juːzd ɪt tuː teɪk ˈpɪktʃərz. ðɛn ɔːl əv hɪz ˈpɪktʃərz wɜːr ɡɒn/", vi: "Chú Anthony dùng điện thoại vào vô số việc. Chú dùng để chụp ảnh, nhưng giờ đây toàn bộ kho ảnh kỷ niệm đã bay màu sạch sẽ." },
       { start: 14.0, en: "He used the phone as a watch. Without the phone, he could not see what time it was.", ipa: "/hiː juːzd ðə foʊn æz ə wɒtʃ. wɪˈaʊt ðə foʊn hiː kʊd nɒt siː wɒt taɪm ɪt wɒz/", vi: "Chú còn dùng điện thoại làm đồng hồ đeo tay. Không có nó, chú chẳng thể biết bây giờ là mấy giờ." },
-      { start: 21.0, en: "That was not all. He used his phone to send and receive emails. But on that day, he had no way to check his email. Of course, he could not talk to his family on the phone either.", ipa: "/ðæt wɒz nɒt ɔːl. hiː juːzd hɪz foʊn tuː sɛnd ænd rɪˈsiːv ˈiːˌmeɪlz. bʌt ɒn ðæt deɪ hiː hæd noʊ weɪ tuː tʃɛk hɪz ˈiːˌmeɪl. əv kɔːrs hiː kʊd nɒt tɔːk tuː hɪz ˈfæməli ɒn ðə foʊn ˈiːðər/", vi: "Vẫn chưa hết, chú dùng điện thoại để check mail. Nhưng hôm đó thì chịu chết. Đương nhiên, chú cũng chẳng thể gọi điện thoại về thăm gia đình được luôn." },
+      { start: 21.0, en: "That was not all. He used his phone to send and receive emails. But on that day, he had no way to check his email. Of course, he could not talk to his family on the phone either.", ipa: "/ðæt wɒz nɒt ɔːl. hiː juːzd hɪz foʊn tuː sɛnd ænd rɪˈsiːv ˈiːˌmeɪlz. bʌt ɒn ðæt deɪ hiː hæd noʊ way tuː tʃɛk hɪz ˈiːˌmeɪl. əv kɔːrs hiː kʊd nɒt tɔːk tuː hɪz ˈfæməli ɒn ðə foʊn ˈiːðər/", vi: "Vẫn chưa hết, chú dùng điện thoại để check mail. Nhưng hôm đó thì chịu chết. Đương nhiên, chú cũng chẳng thể gọi điện thoại về thăm gia đình được luôn." },
       { start: 36.5, en: "'Suddenly, I am thrown back to 30 years ago!' said my poor Uncle.", ipa: "/ˈsʌdənli aɪ æm θroʊn bæk tuː ˈθɜːrti jɪərz əˈgoʊ sɛd maɪ pʊr ˈʌŋkl/", vi: "'Chỉ trong chớp mắt mà ta cứ ngỡ như bị ném ngược về thời điểm 30 năm về trước!' tội nghiệp chú tôi cảm thán." }
     ]
   },
@@ -318,7 +318,7 @@ STORIES_DATA["12 December"] = [
     sentences: [
       { start: 4.8, en: "There once was a man who travelled all over the world. He saw many things. He learned about different places, met many people and ate many different kinds of food.", ipa: "/ðɛər wʌns wɒz ə mæn huː ˈtrævəld ɔːl ˈoʊvər ðə wɜːrld. hiː sɔː ˈmɛni θɪŋz. hiː lɜːrnd əˈbaʊt ˈdɪfrənt ˈpleɪsɪz mɛt ˈmɛni ˈpiːpl ænd eɪt ˈmɛni ˈdɪfrənt kaɪndz əv fuːd/", vi: "Ngày xửa ngày xưa, có một người đàn ông đi du lịch khắp nơi trên thế giới. Ông tận mắt chứng kiến bao điều kỳ thú, tìm hiểu các vùng đất lạ, gặp gỡ nhiều người và nếm thử vô số món ăn khác nhau." },
       { start: 17.5, en: "He climbed mountains and swam in beautiful oceans. After a year of travel, he came home to his wife and children.", ipa: "/hiː klaɪmd ˈmaʊntɪnz ænd swæm ɪn ˈbjuːtɪfl ˈoʊʃnz. ˈɑːftər ə jɪər əv ˈtrævəl hiː keɪm hoʊm tuː hɜːr waɪf ænd ˈtʃɪldrən/", vi: "Ông từng leo lên những ngọn núi cao và bơi lội trong những đại dương xanh ngắt. Sau một năm bôn ba khắp chốn, cuối cùng ông cũng trở về quây quần bên vợ con." },
-      { start: 29.5, en: "He sat by the fire and said, 'I have everything I want right here. This is home. There really is no place like home!'", ipa: "/hiː sæt baɪ ðə ˈfaɪər ænd sɛd aɪ hæv ˈɛvriˌθɪŋ aɪ wɒnt raɪt hɪər. ðɪs ɪz hoʊm. ðɛər ˈrɪəli ɪz noʊ pleɪs laɪk hoʊm/", vi: "Ngồi sưởi ấm bên ánh lửa hồng, ông mãn nguyện thốt lên: 'Ta đã có trong tay tất cả những gì khao khát ngay tại nơi này. Đây chính là nhà. Quả thực không có nơi nào tuyệt vời bằng nhà của chúng ta!'" }
+      { start: 29.5, en: "He sat by the fire and said, 'I have everything I want right here. This is home. There really is no place like home!'", ipa: "/hiː sæt baɪ ðə ˈfaɪər ænd sɛd aɪ hæv ˈɛvriˌθɪŋ aɪ wɒt raɪt hɪər. ðɪs ɪz hoʊm. ðɛər ˈrɪəli ɪz noʊ pleɪs laɪk hoʊm/", vi: "Ngồi sưởi ấm bên ánh lửa hồng, ông mãn nguyện thốt lên: 'Ta đã có trong tay tất cả những gì khao khát ngay tại nơi này. Đây chính là nhà. Quả thực không có nơi nào tuyệt vời bằng nhà của chúng ta!'" }
     ]
   },
   {
@@ -328,7 +328,7 @@ STORIES_DATA["12 December"] = [
     audio: "12 December/audio/A1227 A Proverb.mp3",
     sentences: [
       { start: 4.8, en: "'What is a proverb?' the little girl asks her father.", ipa: "/wɒt ɪz ə ˈprɒvɜːrb? ðə ˈlɪtl ɡɜːrl ɑːsks hɜːr ˈfɑːðər/", vi: "'Thưa bố, tục ngữ là gì ạ?' cô con gái nhỏ ngước lên hỏi bố." },
-      { start: 10.0, en: "'It is an old saving that has a special meaning,' her father answers.", ipa: "/ɪt ɪz ən oʊld ˈseɪɪŋ ðæt hæz ə ˈspɛʃəl ˈmiːnɪŋ hɜːr ˈfɑːðər ˈɑːnsərz/", vi: "'Đó là những câu nói dân gian truyền miệng mang ý nghĩa sâu sắc đặc biệt,' bố ân cần giải thích." },
+      { start: 10.0, en: "'It is an old saving that has a special meaning,' her father answers.", ipa: "/ɪt ɪz ən oʊld ˈseɪɪŋ ðæt hæz ə ˈspɛʃl ˈmiːnɪŋ hɜːr ˈfɑːðər ˈɑːnsərz/", vi: "'Đó là những câu nói dân gian truyền miệng mang ý nghĩa sâu sắc đặc biệt,' bố ân cần giải thích." },
       { start: 17.5, en: "There are many proverbs being used all over the world. A proverb can help us understand things in an easy and simple way.", ipa: "/ðɛər ɑːr ˈmɛni ˈprɒvɜːrbz ˈbiːɪŋ juːzd ɔːl ˈoʊvər ðə wɜːrld. ə ˈprɒvɜːrb kæn hɛlp ʌs ˌʌndərˈstænd θɪŋz ɪn ən ˈiːzi ænd ˈsɪmpl weɪ/", vi: "Có rất nhiều câu tục ngữ, thành ngữ được sử dụng rộng rãi trên khắp thế giới. Chúng giúp chúng ta nhận thức các vấn đề trong cuộc sống một cách dễ hiểu và giản dị nhất." },
       { start: 29.5, en: "Here is an example: Don't count your chickens before they are hatched. Can you guess what it really means?", ipa: "/hɪər ɪz ən ɪɡˈzæmpl: doʊnt kaʊnt jɔːr ˈtʃɪkɪnz bɪˈfɔːr ðeɪ ɑːr hætʃt. kæn juː ɡɛs wɒt ɪt ˈrɪəli miːnz/", vi: "Ví dụ như câu: 'Đừng đếm cua trong lỗ' (hoặc Đừng đếm gà khi chưa nở). Đố con đoán được ẩn ý thực sự của câu này là gì nào?" }
     ]
@@ -337,7 +337,7 @@ STORIES_DATA["12 December"] = [
     day: 28,
     title: "A Man and His Chickens - Part 1",
     image: "12 December/images/day_28.webp",
-    audio: "12 December/audio/A1228 A Man and His Chickens 1.mp3",
+    audio: "12 December/audio/A1228 A Man and his Chickens - 1.mp3",
     sentences: [
       { start: 4.8, en: "A man had a chicken and it laid six eggs in its nest.", ipa: "/ə mæn hæd ə ˈtʃɪkɪn ænd ɪt leɪd sɪks ɛɡz ɪn ɪts nɛst/", vi: "Có một người nông dân nuôi một con gà mái, và nó vừa đẻ được sáu quả trứng tròn trịa trong tổ." },
       { start: 11.5, en: "The man looked at the eggs and counted. One, two, three, four, five, six!", ipa: "/ðə mæn lʊkt æt ði ɛɡz ænd ˈkaʊntɪd. wʌn tuː θriː fɔːr faɪv sɪks/", vi: "Người đàn ông nhìn đống trứng rồi hớ hở đếm: Một, hai, ba, bốn, năm, sáu!" },
@@ -350,7 +350,7 @@ STORIES_DATA["12 December"] = [
     day: 29,
     title: "A Man and His Chickens - Part 2",
     image: "12 December/images/day_29.webp",
-    audio: "12 December/audio/A1229 A Man and His Chickens 2.mp3",
+    audio: "12 December/audio/A1229 A Man and his Chickens - 2.mp3",
     sentences: [
       { start: 4.8, en: "The man went to see the shoe maker. 'Make me a new pair of shoes,' he said, 'and I will give you six chickens.'", ipa: "/ðə mæn wɛnt tuː siː ðə ʃuː ˈmeɪkər. meɪk miː ə nuː pɛr əv ʃuːz hiː sɛd ænd aɪ wɪl ɡɪv juː sɪks ˈtʃɪkɪnz/", vi: "Ông ta liền tất tả chạy đi tìm thợ đóng giày và thỏa thuận: 'Hãy đóng cho tôi một đôi giày mới, tôi sẽ trả công bằng sáu con gà.'" },
       { start: 16.0, en: "The shoemaker agreed. A few days later, when the man went to check his eggs, he saw only broken egg shells.", ipa: "/ðə ˈʃuːˌmeɪkər əˈɡriːd. ə fjuː deɪz ˈleɪtər wɛn ðə mæn wɛnt tuː tʃɛk hɪz ɛɡz hiː sɔː ˈoʊnli ˈbroʊkən ɛɡ ʃɛlz/", vi: "Thợ đóng giày vui vẻ đồng ý. Vài ngày sau, khi ông nông dân ra ổ gà kiểm tra trứng, trước mắt ông chỉ còn lại những mảnh vỏ trứng vỡ vụn." },

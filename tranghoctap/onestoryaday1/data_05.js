@@ -32,7 +32,7 @@ STORIES_DATA["05 May"] = [
       { start: 24.0, en: "On the bottom of the truck, there are some words: Donated by Elliot on his first birthday.", ipa: "/ɒn ðə ˈbɒtəm əv ðə trʌk ðɛər ɑːr sʌm wɜːrdz: ˈdoʊneɪtɪd baɪ ˈɛliət ɒn hɪz fɜːrst ˈbɜːrθdeɪ/", vi: "Phía dưới đáy xe có khắc dòng chữ: Do Elliot tặng nhân dịp sinh nhật lần đầu tiên của mình." },
       { start: 35.5, en: "It was Elliot who gave his new truck to the park.", ipa: "/ɪt wɒz ˈɛliət huː ɡeɪv hɪz nuː trʌk tuː ðə pɑːrk/", vi: "Chính Elliot là người đã tặng chiếc xe tải mới tinh của mình cho công viên." },
       { start: 41.5, en: "Elliot, what a nice boy!", ipa: "/ˈɛliət wɒt ə naɪs bɔɪ!/", vi: "Elliot đúng là một cậu bé thật tốt bụng!" },
-      { start: 46.0, en: "Thank you, Elliot!", ipa: "/θæŋk juː ˈɛliət!/", vi: "Cảm ơn Elliot nhé!" }
+      { start: 46.0, en: "Thank you, Elliot!", ipa: "/θænk juː ˈɛliət!/", vi: "Cảm ơn Elliot nhé!" }
     ]
   },
   {
@@ -111,7 +111,7 @@ STORIES_DATA["05 May"] = [
     day: 8,
     title: "A Bear's Visit - Part 1",
     image: "05 May/images/day_08.webp",
-    audio: "05 May/audio/A0508 A Bear_s Visit 1.mp3",
+    audio: "05 May/audio/A0508 A Bear_s Visit - 1.mp3",
     sentences: [
       { start: 4.8, en: "Leo loves nature. He lives outside the city.", ipa: "/ˈliːoʊ lʌvz ˈneɪtʃər. hiː lɪvz ˌaʊtˈsaɪd ðə ˈsɪti/", vi: "Leo rất yêu thiên nhiên. Cậu sống ở vùng ngoại ô thành phố." },
       { start: 10.5, en: "One day, as he was working in the garden, his dog began to growl.", ipa: "/wʌn deɪ æz hiː wɒz ˈwɜːrkɪŋ ɪn ðə ˈɡɑːrdn hɪz dɒɡ bɪˈɡæn tuː ɡraʊl/", vi: "Một hôm, khi cậu đang làm vườn trong sân, chú chó cưng bỗng gầm gừ." },
@@ -127,7 +127,7 @@ STORIES_DATA["05 May"] = [
     day: 9,
     title: "A Bear's Visit - Part 2",
     image: "05 May/images/day_09.webp",
-    audio: "05 May/audio/A0509 A Bear_s Visit 2.mp3",
+    audio: "05 May/audio/A0509 A Bear_s Visit - 2.mp3",
     sentences: [
       { start: 4.8, en: "When Leo got close to his house, he didn't hear the sound of the bear behind him.", ipa: "/wɛn ˈliːoʊ ɡɒt kloʊs tuː hɪz haʊs hiː ˈdɪdnt hɪər ðə saʊnd əv ðə bɛər bɪˈhaɪnd hɪm/", vi: "Khi chạy đến gần nhà, Leo không còn nghe thấy tiếng động của con gấu đuổi theo phía sau nữa." },
       { start: 13.5, en: "He stopped and turned around to see where the bear was.", ipa: "/hiː stɒpt ænd tɜːrnd əˈraʊnd tuː siː wɛər ðə bɛər wɒz/", vi: "Cậu dừng lại và quay người ngoái nhìn xem con gấu đâu rồi." },
@@ -196,7 +196,7 @@ STORIES_DATA["05 May"] = [
       { start: 13.0, en: "Then, a big bird appears high in the sky and makes a big dive into the water.", ipa: "/ðɛn ə bɪɡ bɜːrd əˈpɪərz haɪ ɪn ðə skaɪ ænd meɪks ə bɪɡ daɪv ˈɪntuː ðə ˈwɔːtər/", vi: "Bỗng nhiên, một chú chim lớn xuất hiện trên bầu trời cao rồi lao mình bổ nhào xuống nước." },
       { start: 22.0, en: "When the bird comes out of the water, it has a big fish in its mouth. Wow! That was cool.", ipa: "/wɛn ðə bɜːrd kʌmz aʊt əv ðə ˈwɔːtər ɪt hæz ə bɪɡ fɪʃ ɪn ɪts maʊθ. waʊ! ðæt wɒz kuːl/", vi: "Khi chú chim ngoi lên khỏi mặt nước, trong mỏ nó ngậm chặt một con cá bự. Chà! Trông thật ngầu làm sao." },
       { start: 32.5, en: "'What was that?' I ask my uncle.", ipa: "/wɒt wɒz ðæt? aɪ ɑːsk maɪ ˈʌŋkl/", vi: "'Đó là con chim gì vậy chú?' tôi hỏi chú." },
-      { start: 37.0, en: "'That was a fish hawk,' he says with a smile.", ipa: "/ðæt wɒz ə fɪʃ hɔːk hiː sɛz wɪð ə smaɪl/", vi: "'Đó là một con chim ưng biển,' chú cười và đáp." },
+      { start: 37.0, en: "'That was a fish hawk,' he says with a smile.", ipa: "/ðæt wɒz ə fɪʃ hɔːk hiː sɛd wɪð ə smaɪl/", vi: "'Đó là một con chim ưng biển,' chú cười và đáp." },
       { start: 43.0, en: "And I smile too. That bird is a better fisherman than me!", ipa: "/ænd aɪ smaɪl tuː. ðæt bɜːrd ɪz ə ˈbɛtər ˈfɪʃərmən ðæn miː/", vi: "Và tôi cũng mỉm cười theo. Chú chim ấy đúng là một tay câu cá cừ khôi hơn tôi nhiều!" }
     ]
   },
@@ -262,7 +262,7 @@ STORIES_DATA["05 May"] = [
     day: 18,
     title: "Fire Station - Part 1",
     image: "05 May/images/day_18.webp",
-    audio: "05 May/audio/A0518 Fire Station 1.mp3",
+    audio: "05 May/audio/A0518 Fire Station - 1.mp3",
     sentences: [
       { start: 4.8, en: "Micah likes fire trucks.", ipa: "/ˈmaɪkə laɪks ˈfaɪər trʌks/", vi: "Cậu bé Micah rất thích xe cứu hỏa." },
       { start: 8.5, en: "He is only two years old, but he knows fire trucks can do great things.", ipa: "/hiː ɪz ˈoʊnli tuː jɪərz oʊld bʌt hiː noʊz ˈfaɪər trʌks kæn duː ɡreɪt θɪŋz/", vi: "Bé mới hai tuổi thôi nhưng đã biết rằng xe cứu hỏa có thể làm được những việc vô cùng vĩ đại." },
@@ -276,7 +276,7 @@ STORIES_DATA["05 May"] = [
     day: 19,
     title: "Fire Station - Part 2",
     image: "05 May/images/day_19.webp",
-    audio: "05 May/audio/A0519 Fire Station 2.mp3",
+    audio: "05 May/audio/A0519 Fire Station - 2.mp3",
     sentences: [
       { start: 4.8, en: "When Micah came to the fire station, a fireman was standing by the truck.", ipa: "/wɛn ˈmaɪkə keɪm tuː ðə ˈfaɪər ˈsteɪʃən ə ˈfaɪərmən wɒz ˈstændɪŋ baɪ ðə trʌk/", vi: "Khi Micah đến nơi, có một chú lính cứu hỏa đang đứng cạnh chiếc xe." },
       { start: 12.0, en: "Micah asked the man, 'May I come close to see the fire truck?'", ipa: "/ˈmaɪkə ɑːskt ðə mæn meɪ aɪ kʌm kloʊs tuː siː ðə ˈfaɪər trʌk/", vi: "Micah rụt rè hỏi chú ấy: 'Cháu có thể đến gần để ngắm xe cứu hỏa được không ạ?'" },
@@ -352,7 +352,7 @@ STORIES_DATA["05 May"] = [
     sentences: [
       { start: 4.8, en: "Sometimes, people give names to places that really tell what the place is like.", ipa: "/ˈsʌmˌtaɪmz ˈpiːpl ɡɪv neɪmz tuː ˈpleɪsɪz ðæt ˈrɪəli tɛl wɒt ðə pleɪs ɪz laɪk/", vi: "Đôi khi, người ta đặt tên cho các vùng đất phản ánh đúng thực tế nơi đó ra sao." },
       { start: 13.0, en: "When the Vikings came to another island in the far north, they saw ice and snow as far as they could see.", ipa: "/wɛn ðə ˈvaɪkɪŋz keɪm tuː əˈnʌðər ˈaɪlənd ɪn ðə fɑːr nɔːrθ ðeɪ sɔː aɪs ænd snoʊ æz fɑːr æz ðeɪ kʊd siː/", vi: "Khi người Viking đến một hòn đảo khác cũng ở phương bắc xa xôi, họ chỉ thấy băng tuyết bạt ngàn tầm mắt." },
-      { start: 23.5, en: "What name did they give to this place? They called it Iceland.", ipa: "/wɒt neɪm dɪd ðeɪ ɡɪv tuː ðɪs pleɪs? ðeɪ kɔːld ɪt ˈaɪsˌlænd/", vi: "Họ đã đặt tên cho nơi này là gì? Họ gọi đó là Iceland (Xứ sở băng giá)." },
+      { start: 23.5, en: "What name did they give to this place? They called it Iceland.", ipa: "/wɒt neɪm dɪd ðeɪ ɡɪv tuː ðɪs pleɪs? ðeɪ kɔːld ɪt ˈaɪsˌlænd/", vi: "Họ đã đặt tên cho nơi này là gì? Gọi đó là Iceland (Xứ sở băng giá)." },
       { start: 31.0, en: "This time, they did not try to trick anyone.", ipa: "/ðɪs taɪm ðeɪ dɪd nɒt traɪ tuː trɪk ˈɛniˌwʌn/", vi: "Lần này thì họ không hề có ý định lừa phỉnh ai nữa cả." }
     ]
   },
@@ -415,7 +415,7 @@ STORIES_DATA["05 May"] = [
     day: 29,
     title: "Bug School - Part 1",
     image: "05 May/images/day_29.webp",
-    audio: "05 May/audio/A0529 Bug School 1.mp3",
+    audio: "05 May/audio/A0529 Bug School - 1.mp3",
     sentences: [
       { start: 4.8, en: "There are ants, crickets, butterflies, earwigs, and many other insects in the Bug School.", ipa: "/ðɛər ɑːr ænts ˈkrɪkɪts ˈbʌtərˌflaɪz ˈɪərˌwɪɡz ænd ˈmɛni ˈʌðər ˈɪnsɛkts ɪn ðə bʌɡ skuːl/", vi: "Có rất nhiều kiến, dế, bướm, sâu bọ và vô số loài côn trùng khác theo học tại Trường học Côn trùng." },
       { start: 16.0, en: "Everyone likes their school. Everyone, except the spider.", ipa: "/ˈɛvriˌwʌn laɪks ðɛər skuːl. ˈɛvriˌwʌn ɪkˈsɛpt ðə ˈspaɪdər/", vi: "Ai ai cũng yêu mến ngôi trường của mình, ngoại trừ chú nhện nhỏ." },
@@ -429,7 +429,7 @@ STORIES_DATA["05 May"] = [
     day: 30,
     title: "Bug School - Part 2",
     image: "05 May/images/day_30.webp",
-    audio: "05 May/audio/A0530 Bug School 2.mp3",
+    audio: "05 May/audio/A0530 Bug School - 2.mp3",
     sentences: [
       { start: 4.8, en: "Spider begins to cry. Tears run down his face.", ipa: "/ˈspaɪdər bɪˈɡɪnz tuː kraɪ. tɪərz rʌn daʊn hɪz feɪs/", vi: "Nhện nhỏ lại òa khóc, nước mắt giàn giụa trên khuôn mặt." },
       { start: 10.5, en: "The insects make fun of Spider because he is different. All insects have six legs. But spiders have eight legs.", ipa: "/ðə ˈɪnsɛkts meɪk fʌn əv ˈspaɪdər bɪˈkəz hiː ɪz ˈdɪfrənt. ɔːl ˈɪnsɛkts hæv sɪks lɛɡz. bʌt ˈspaɪdərz hæv eɪt lɛɡz/", vi: "Bọn côn trùng trêu ghẹo nhện vì trông nó khác lạ. Tất cả côn trùng chỉ có sáu chân, riêng nhện lại có tới tám chân." },

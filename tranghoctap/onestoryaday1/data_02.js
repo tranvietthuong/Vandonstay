@@ -200,7 +200,7 @@ STORIES_DATA["02 February"] = [
     day: 16,
     title: "Swimming with the Ducks",
     image: "02 February/images/day_16.webp",
-    audio: "02 February/audio/A0216 Swimming with the Ducks.mp3",
+    audio: "02 February/audio/A0216 Swimming With the Ducks.mp3",
     sentences: [
       { start: 4.8, en: 'Emily was afraid to swim in the lake. "Come in the water," said her mom. "It\'s nice and cool," said her dad.', ipa: '/ˈɛmɪli wɒz əˈfreɪd tuː swɪm ɪn ðə leɪk. kʌm ɪn ðə ˈwɔːtər sɛd hɜːr mɒm. ɪts naɪs ænd kuːl sɛd hɜːr dæd/', vi: 'Emily sợ không dám bơi dưới hồ. "Xuống nước đi con," mẹ bảo. "Nước mát rượi thích lắm," bố nói.' },
       { start: 14.5, en: '"Look over there," said her brother. "There\'s a family of ducks."', ipa: '/lʊk ˈoʊvər ðɛər sɛd hɜːr ˈbrʌðər. ðɛərz ə ˈfæməli əv dʌks/', vi: '"Nhìn đằng kia kìa," anh trai bảo. "Có cả một gia đình nhà vịt."' },
@@ -213,7 +213,7 @@ STORIES_DATA["02 February"] = [
     day: 17,
     title: "Who Is Your Hero? - Part 1",
     image: "02 February/images/day_17.webp",
-    audio: "02 February/audio/A0217 Who Is Your Hero-1.mp3",
+    audio: "02 February/audio/A0217 Who Is Your Hero 1.mp3",
     sentences: [
       { start: 4.8, en: 'My teacher asked us to write about a hero. She said, "Your hero has to be someone that you know."', ipa: '/maɪ ˈtiːtʃər æskt ʌs tuː raɪt əˈbaʊt ə ˈhɪəroʊ. ʃiː sɛd jɔːr ˈhɪəroʊ hæz tuː biː ˈsʌmwʌn ðæt juː noʊ/', vi: 'Cô giáo yêu cầu chúng tôi viết về một người hùng. Cô dặn: "Người hùng của em phải là người em quen biết ngoài đời."' },
       { start: 13.8, en: 'At home, my father said, "You can write about me! I have done many good things."', ipa: '/æt hoʊm maɪ ˈfɑːðər sɛd juː kæn raɪt əˈbaʊt miː! aɪ hæv dʌn ˈmɛni ɡʊd θɪŋz/', vi: 'Ở nhà, bố tôi bảo: "Con viết về bố đi! Bố đã làm được nhiều việc tốt lắm."' },
@@ -225,11 +225,11 @@ STORIES_DATA["02 February"] = [
     day: 18,
     title: "Who Is Your Hero? - Part 2",
     image: "02 February/images/day_18.webp",
-    audio: "02 February/audio/A0218 Who Is Your Hero-2.mp3",
+    audio: "02 February/audio/A0218 Who Is Your Hero 2.mp3",
     sentences: [
       { start: 4.8, en: 'I called my uncle. He said, "You should write about your grandpa."', ipa: '/aɪ kɔːld maɪ ˈʌŋkl. hiː sɛd juː ʃʊd raɪt əˈbaʊt jɔːr ˈɡrændpɑː/', vi: 'Tôi gọi điện cho chú. Chú bảo: "Cháu nên viết về ông nội."' },
       { start: 10.5, en: '"Why is Grandpa a hero?" I asked.', ipa: '/waɪ ɪz ˈɡrændpɑː ə ˈhɪəroʊ? aɪ ɑːskt/', vi: '"Tại sao ông lại là người hùng ạ?" tôi hỏi.' },
-      { start: 13.8, en: '"He raised eight children when there was little food at that time," said my uncle.', ipa: '/hiː reɪzd eɪt ˈtʃɪldrən wɛn ðɛər wɒz ˈlɪtl fuːd æt ðæt taɪm sɛd maɪ ˈʌŋkl/', vi: '"Ông đã nuôi nấng tám người con khôn lớn trong thời kỳ thức ăn vô cùng khan hiếm," chú tôi nói.' },
+      { start: 13.8, en: '"He raised eight children when there was little food at that time," said my uncle.', ipa: '/hiː reɪzd eɪt ˈtʃɪldrən wɛn ðɛər wɒz ˈlɪtl fuːd ænd ðæt taɪm sɛd maɪ ˈʌŋkl/', vi: '"Ông đã nuôi nấng tám người con khôn lớn trong thời kỳ thức ăn vô cùng khan hiếm," chú tôi nói.' },
       { start: 20.5, en: '"He was a very skilled man, and he used his skills to help others. In return, people gave him food to feed the children."', ipa: '/hiː wɒz ə ˈvɛri skɪld mæn ænd hiː juːzd hɪz skɪlz tuː hɛlp ˈʌðərz. ɪn rɪˈtɜːrn ˈpiːpl ɡeɪv hɪm fuːd tuː fiːd ðə ˈtʃɪldrən/', vi: '"Ông là người rất khéo tay, ông dùng tài năng giúp đỡ mọi người. Đổi lại, người ta biếu ông lương thực nuôi các con."' },
       { start: 31.5, en: "Wow! I found a hero in my family.", ipa: "/waʊ! aɪ faʊnd ə ˈhɪəroʊ ɪn maɪ ˈfæməli/", vi: "Tuyệt vời! Tôi đã tìm thấy người hùng ngay trong gia đình mình." },
       { start: 36.5, en: "You can write about your grandpa.", ipa: "/juː kæn raɪt əˈbaʊt jɔːr ˈɡrændpɑː/", vi: "Cháu có thể viết về người ông của mình." }

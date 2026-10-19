@@ -56,7 +56,7 @@ STORIES_DATA["06 June"] = [
       { start: 4.8, en: "Rice is the most popular food in Asia.", ipa: "/raɪs ɪz ðə moʊst ˈpɒpjʊlər fuːd ɪn ˈeɪʒə/", vi: "Cơm gạo là loại thực phẩm phổ biến nhất ở Châu Á." },
       { start: 10.0, en: "Rice is a very good food. It gives people lots of energy. It tastes good. It is easy to cook. And it is easy to grow.", ipa: "/raɪs ɪz ə ˈvɛri ɡʊd fuːd. ɪt ɡɪvz ˈpiːpl lɒts əv ˈɛnərdʒi. ɪt teɪsts ɡʊd. ɪt ɪz ˈiːzi tuː kʊk. ænd ɪt ɪz ˈiːzi tuː ɡroʊ/", vi: "Gạo là một loại thực phẩm rất tốt. Nó cung cấp cho con người nhiều năng lượng, ăn rất ngon, dễ nấu và cũng dễ trồng." },
       { start: 22.0, en: "Not all rice looks and tastes the same. There are more than 40,000 different kinds of rice.", ipa: "/nɒt ɔːl raɪs lʊks ænd teɪsts ðə seɪm. ðɛər ɑːr mɔːr ðæn fɔːrˈtiːˌθaʊznd ˈdɪfrənt kaɪndz əv raɪs/", vi: "Không phải loại gạo nào cũng có hình thức và hương vị giống nhau. Có hơn 40.000 giống lúa gạo khác nhau trên thế giới." },
-      { start: 32.5, en: "About 90 percent of all the rice in the world is grown and eaten in Asia.", ipa: "/əˈbaʊt ˈnaɪnti pərˈsɛnt əv ɔːl ðə raɪs ɪn ðə wɜːrld ɪz ɡroʊn ænd ˈiːtn ɪn ˈeɪʒə/", vi: "Khoảng 90 phần trăm tổngLượng gạo trên toàn thế giới được trồng và tiêu thụ ở Châu Á." },
+      { start: 32.5, en: "About 90 percent of all the rice in the world is grown and eaten in Asia.", ipa: "/əˈbaʊt ˈnaɪnti pərˈsɛnt əv ɔːl ðə raɪs ɪn ðə wɜːrld ɪz ɡroʊn ænd ˈiːtn ɪn ˈeɪʒə/", vi: "Khoảng 90 phần trăm tổng lượng gạo trên toàn thế giới được trồng và tiêu thụ ở Châu Á." },
       { start: 41.0, en: "In Asia today, one person eats about 200 kilograms of rice a year.", ipa: "/ɪn ˈeɪʒə təˈdeɪ wʌn ˈpɜːrsn iːts əˈbaʊt ˈtuː ˈhʌndrəd ˈkɪləˌɡræmz əv raɪs ə jɪər/", vi: "Ngày nay ở Châu Á, trung bình mỗi người tiêu thụ khoảng 200 kg gạo một năm." },
       { start: 49.5, en: "I eat rice every day!", ipa: "/aɪ iːt raɪs ˈɛvri deɪ!/", vi: "Tớ ăn cơm mỗi ngày luôn đấy!" }
     ]
@@ -93,7 +93,7 @@ STORIES_DATA["06 June"] = [
     day: 7,
     title: "Joe's Sweet Tooth - Part 1",
     image: "06 June/images/day_07.webp",
-    audio: "06 June/audio/A0607 Joe_s Sweet Tooth 1.mp3",
+    audio: "06 June/audio/A0607 Joe_s Sweet Tooth - 1.mp3",
     sentences: [
       { start: 4.8, en: "Joe has a sweet tooth. That means he likes to eat sweets.", ipa: "/dʒoʊ hæz ə swiːt tuːθ. ðæt miːnz hiː laɪks tuː iːt swiːts/", vi: "Joe rất hảo ngọt. Điều đó có nghĩa là cậu rất thích ăn đồ ngọt." },
       { start: 11.0, en: "But there is a problem. Joe doesn't like to brush his teeth.", ipa: "/bʌt ðɛər ɪz ə ˈprɒbləm. dʒoʊ ˈdʌznt laɪk tuː brʌʃ hɪz tiːθ/", vi: "Nhưng có một rắc rối là Joe lại lười đánh răng." },
@@ -108,7 +108,7 @@ STORIES_DATA["06 June"] = [
     day: 8,
     title: "Joe's Sweet Tooth - Part 2",
     image: "06 June/images/day_08.webp",
-    audio: "06 June/audio/A0608 Joe_s Sweet Tooth 2.mp3",
+    audio: "06 June/audio/A0608 Joe_s Sweet Tooth - 2.mp3",
     sentences: [
       { start: 4.8, en: "'Everyone only get two sets of teeth. First, we get baby teeth. At age 6, our baby teeth fall out, and we grow new strong teeth,' says his mother.", ipa: "/ˈɛvriˌwʌn ˈoʊnli ɡɛt tuː sɛts əv tiːθ. fɜːrst wiː ɡɛt ˈbeɪbi tiːθ. æt eɪdʒ sɪks ˈaʊər ˈbeɪbi tiːθ fɔːl aʊt ænd wiː ɡroʊ nuː strɒŋ tiːθ sɛz hɪz ˈmʌðər/", vi: "'Mỗi người chúng ta chỉ có hai bộ răng trong đời. Đầu tiên là răng sữa. Đến năm sáu tuổi, răng sữa rụng đi và chúng ta mọc răng mới chắc khỏe hơn,' mẹ giải thích." },
       { start: 22.0, en: "'And then what?' asks Joe.", ipa: "/ænd ðɛn wɒt? ɑːsks dʒoʊ/", vi: "'Rồi sau đó thì sao nữa ạ?' Joe hỏi." },
@@ -141,7 +141,7 @@ STORIES_DATA["06 June"] = [
       { start: 19.5, en: "But there was a time when pennies were more useful. There are many sayings about the penny.", ipa: "/bʌt ðɛər wɒz ə taɪm wɛn ˈpɛniz wɜːr mɔːr ˈjuːsfʊl. ðɛər ɑːr ˈmɛni ˈseɪɪŋz əˈbaʊt ðə ˈpɛni/", vi: "Nhưng đã từng có thời gian những đồng xu một xu vô cùng hữu dụng. Có rất nhiều câu thành ngữ nói về đồng xu này." },
       { start: 29.5, en: "For example: A penny saved is a penny earned.", ipa: "/fɔːr ɪɡˈzæmpl: ə ˈpɛni seɪvd ɪz ə ˈpɛni ɜːrnd/", vi: "Ví dụ như câu: 'Tiết kiệm được một xu cũng quý giá như kiếm được một xu vậy.'" },
       { start: 36.5, en: "What does that mean?", ipa: "/wɒt dʌz ðæt miːn?/", vi: "Câu nói đó có ý nghĩa gì?" },
-      { start: 39.5, en: "It means saving money is as important as earning it.", ipa: "/ɪt miːnz ˈseɪvɪŋ ˈmʌni ɪz æz ɪmˈpɔːrtnt æz ˈɜːrnɪŋ ɪt/", vi: "Nó có nghĩa là việc tiết kiệm tiền bạc cũng quan trọng hệt như việc kiếm ra tiền vậy." },
+      { start: 39.5, en: "It means saving money is as important as earning it.", ipa: "/ɪt miːnz ˈsɪvɪŋ ˈmʌni ɪz æz ɪmˈpɔːrtnt æz ˈɜːrnɪŋ ɪt/", vi: "Nó có nghĩa là việc tiết kiệm tiền bạc cũng quan trọng hệt như việc kiếm ra tiền vậy." },
       { start: 47.0, en: "Even though we don't use pennies anymore, that saying is still very true.", ipa: "/ˈiːvn ðoʊ wiː doʊnt juːz ˈpɛniz ˈɛniˌmɔːr ðæt ˈseɪɪŋ ɪz stɪl ˈvɛri truː/", vi: "Mặc dù giờ đây chúng ta không còn dùng đồng xu một xu nữa, câu ngạn ngữ đó vẫn vô cùng chính xác." },
       { start: 55.5, en: "I love my piggy bank.", ipa: "/aɪ lʌv maɪ ˈpɪɡi bæŋk/", vi: "Tớ rất yêu ống heo tiết kiệm của mình." }
     ]
@@ -164,20 +164,20 @@ STORIES_DATA["06 June"] = [
     day: 12,
     title: "Leo's Garden - Part 1",
     image: "06 June/images/day_12.webp",
-    audio: "06 June/audio/A0612 Leo_s Garden 1.mp3",
+    audio: "06 June/audio/A0612 Leo_s Garden - 1.mp3",
     sentences: [
       { start: 4.8, en: "Leo has a lovely garden. In the garden, he has tomatoes, strawberries, beans, and corn.", ipa: "/ˈliːoʊ hæz ə ˈlʌvli ˈɡɑːrdn. ɪn ðə ˈɡɑːrdn hiː hæz təˈmɑːtoʊz ˈstrɔːˌbɛriz biːnz ænd kɔːrn/", vi: "Leo có một khu vườn xinh xắn. Trong vườn, cậu trồng cà chua, dâu tây, đậu và ngô." },
       { start: 16.0, en: "Leo lives in the countryside. He knows that wild animals like to visit his garden.", ipa: "/ˈliːoʊ lɪvz ɪn ðə ˈkʌntriˌsaɪd. hiː noʊz ðæt waɪld ˈænɪmlz laɪk tuː ˈvɪzɪt hɪz ˈɡɑːrdn/", vi: "Leo sống ở vùng nông thôn. Cậu biết rằng các loài động vật hoang dã rất thích lui tới khu vườn của mình." },
       { start: 24.5, en: "So he builds a fence around the garden.", ipa: "/soʊ hiː bɪldz ə fɛns əˈraʊnd ðə ˈɡɑːrdn/", vi: "Thế là cậu bèn dựng một hàng rào xung quanh khu vườn." },
       { start: 30.0, en: "The fence is about five feet tall. He is sure no animals will get in his garden to eat his vegetables and fruit.", ipa: "/ðə fɛns ɪz əˈbaʊt faɪv fiːt tɔːl. hiː ɪz ʃʊr noʊ ˈænɪmlz wɪl ɡɛt ɪn hɪz ˈɡɑːrdn tuː iːt hɪz ˈvɛdʒtəblz ænd fruːt/", vi: "Hàng rào cao khoảng năm mét (năm foot). Cậu chắc mẩm sẽ không có con thú nào đột nhập vào được để ăn trộm rau củ và trái cây." },
-      { start: 42.5, en: "Look at my lovely garden!", ipa: "/lʊk æt maɪ ˈlʌvli ˈɡɑːrdn!/", vi: "Hãy ngắm khu vườn đáng yêu của tớ này!" }
+      { start: 42.5, en: "Look at my lovely garden!", ipa: "/lʊk æt maɪ ˈlʌvli ˈɡɑːrdn!/", vi: "Hãy ngắm khu vườn đáng yêu của tớ nhé!" }
     ]
   },
   {
     day: 13,
     title: "Leo's Garden - Part 2",
     image: "06 June/images/day_13.webp",
-    audio: "06 June/audio/A0613 Leo_s Garden 2.mp3",
+    audio: "06 June/audio/A0613 Leo_s Garden - 2.mp3",
     sentences: [
       { start: 4.8, en: "One morning, Leo went to check on his garden.", ipa: "/wʌn ˈmɔːrnɪŋ ˈliːoʊ wɛnt tuː tʃɛk ɒn hɪz ˈɡɑːrdn/", vi: "Vào một buổi sáng nọ, Leo ra thăm khu vườn của mình." },
       { start: 10.5, en: "To his surprise, all the vegetables and fruit were gone!", ipa: "/tuː hɪz sərˈpraɪz ɔːl ðə ˈvɛdʒtəblz ænd fruːt wɜːr ɡɒn/", vi: "Cậu vô cùng kinh ngạc khi thấy toàn bộ rau củ và trái cây đã biến sạch không còn một mống!" },
@@ -235,7 +235,7 @@ STORIES_DATA["06 June"] = [
     image: "06 June/images/day_17.webp",
     audio: "06 June/audio/A0617 Stars in the Sky.mp3",
     sentences: [
-      { start: 4.8, en: "Look at all the stars in the sky at night. They are very small. They are far away from us.", ipa: "/lʊk æt ɔːl ðə stɑːrz ɪn ðə skaɪ æt naɪt. ðeɪ ɑːr ˈvɛri smɔːl. ðeɪ ɑːr fɑːr əˈweɪ frɒm ʌs/", vi: "Ngắm nhìn những ngôi sao trên bầu trời đêm kìa. Trông chúng thật nhỏ bé và ở cách xa chúng ta vô cùng." },
+      { start: 4.8, en: "Look at all the stars in the sky at night. They are very small. They are far away from us.", ipa: "/lʊk æt ɔːl ðə stɑːrz ɪn ðə skaɪ ænd naɪt. ðeɪ ɑːr ˈvɛri smɔːl. ðeɪ ɑːr fɑːr əˈweɪ frɒm ʌs/", vi: "Ngắm nhìn những ngôi sao trên bầu trời đêm kìa. Trông chúng thật nhỏ bé và ở cách xa chúng ta vô cùng." },
       { start: 15.0, en: "What is the closest star to Earth? It's our sun. Yes, the sun is a star.", ipa: "/wɒt ɪz ðə ˈkloʊsɪst stɑːr tuː ɜːrθ? ɪts ˈaʊər sʌn. jɛs ðə sʌn ɪz ə stɑːr/", vi: "Ngôi sao nào ở gần Trái Đất nhất? Chính là mặt trời của chúng ta. Vâng, mặt trời thực chất cũng là một ngôi sao." },
       { start: 25.5, en: "Would you like to go to the sun? Well, it is too hot for us. But even if we could visit the sun, it would take us a long time to get there.", ipa: "/wʊd juː laɪk tuː ɡoʊ tuː ðə sʌn? wɛl ɪt ɪz tuː hɒt fɔːr ʌs. bʌt ˈiːvn ɪf wiː kʊd ˈvɪzɪt ðə sʌn ɪt wʊd teɪk ʌs ə lɒŋ taɪm tuː ɡɛt ðɛər/", vi: "Bạn có muốn du hành đến mặt trời không? Chà, nơi đó quá nóng đối với chúng ta. Hơn nữa, dù có thể đến đó đi chăng nữa, chúng ta cũng mất rất nhiều thời gian mới tới nơi." },
       { start: 39.0, en: "How long? It would take about 18 years to get there if you took a jet airplane.", ipa: "/haʊ lɒŋ? ɪt wʊd teɪk əˈbaʊt ˈeɪˈtiːn jɪərz tuː ɡɛt ðɛər ɪf juː tʊk ə dʒɛt ˈɛrˌpleɪn/", vi: "Mất bao lâu ư? Sẽ mất khoảng 18 năm di chuyển bằng máy bay phản lực đấy." },
@@ -387,7 +387,7 @@ STORIES_DATA["06 June"] = [
     day: 28,
     title: "Special Friends - Part 1",
     image: "06 June/images/day_28.webp",
-    audio: "06 June/audio/A0628 Special Friends 1.mp3",
+    audio: "06 June/audio/A0628 Special Friends - 1.mp3",
     sentences: [
       { start: 4.8, en: "Lynne loves cats. She has three cats. All of them were saved by her from the street.", ipa: "/lɪn lʌvz kæts. ʃiː hæz θriː kæts. ɔːl əv ðɛm wɜːr seɪvd baɪ hɜːr frɒm ðə striːt/", vi: "Lynne rất yêu mèo. Cô đang nuôi ba chú mèo, và tất cả chúng đều được cô cứu mang về từ ngoài đường phố." },
       { start: 14.0, en: "Every day when she goes to school, she says goodbye to the cats. The three cats follow her to the door.", ipa: "/ˈɛvri deɪ wɛn ʃiː ɡoʊz tuː skuːl ʃiː sɛz ɡʊdˈbaɪ tuː ðə kæts. ðə θriː kæts ˈfɒloʊ hɜːr tuː ðə dɔːr/", vi: "Mỗi ngày khi chuẩn bị đi học, cô đều chào tạm biệt lũ mèo. Cả ba chú mèo đều lẽo đẽo theo chân cô ra tận cửa." },
@@ -400,7 +400,7 @@ STORIES_DATA["06 June"] = [
     day: 29,
     title: "Special Friends - Part 2",
     image: "06 June/images/day_29.webp",
-    audio: "06 June/audio/A0629 Special Friends 2.mp3",
+    audio: "06 June/audio/A0629 Special Friends - 2.mp3",
     sentences: [
       { start: 4.8, en: "One day, Lynne said to her friend, 'Soon, one of the cats will turn one year old. Let's celebrate her birthday!'", ipa: "/wʌn deɪ lɪn sɛd tuː hɜːr frɛnd suːn wʌn əv ðə kæts wɪl tɜːrn wʌn jɪər oʊld. lɛts ˈsɛlɪbreɪt hɜːr ˈbɜːrθdeɪ/", vi: "Một hôm, Lynne bảo với người bạn của mình: 'Sắp tới, một trong số mấy chú mèo sẽ tròn một tuổi rồi đấy. Chúng ta hãy tổ chức sinh nhật cho nó đi.'" },
       { start: 16.5, en: "'What do you mean?' Joe asked.", ipa: "/wɒt duː juː miːn? dʒoʊ ˈɑːskt/", vi: "'Ý cậu là sao cơ?' Joe thắc mắc." },
@@ -414,11 +414,11 @@ STORIES_DATA["06 June"] = [
     day: 30,
     title: "Special Friends - Part 3",
     image: "06 June/images/day_30.webp",
-    audio: "06 June/audio/A0630 Special Friends 3.mp3",
+    audio: "06 June/audio/A0630 Special Friends - 3.mp3",
     sentences: [
-      { start: 4.8, en: "When the day came, Lynne made a special cake - a cake made of fish. She made a birthday hat too.", ipa: "/wɛn ðə deɪ keɪm lɪn meɪd ə ˈspɛʃl keɪk ə keɪk meɪd əv fɪʃ. ʃiː meɪd ə ˈbɜːrθdeɪ hæt tuː/", vi: "Đúng ngày sinh nhật, Lynne kỳ công làm một chiếc bánh đặc biệt — chiếc bánh làm hoàn toàn bằng cá. Cô bé còn tự tay làm cả mũ sinh nhật nữa." },
+      { start: 4.8, en: "When the day came, Lynne made a special cake - a cake made of fish. She made a birthday hat too.", ipa: "/wɛn ðə deɪ keɪm lɪn meɪd ə ˈspɛʃl keɪk ə keɪk made əv fɪʃ. ʃiː meɪd ə ˈbɜːrθdeɪ hæt tuː/", vi: "Đúng ngày sinh nhật, Lynne kỳ công làm một chiếc bánh đặc biệt — chiếc bánh làm hoàn toàn bằng cá. Cô bé còn tự tay làm cả mũ sinh nhật nữa." },
       { start: 16.0, en: "Then she put the hat on the cat, and put the cake on the floor. The party began!", ipa: "/ðɛn ʃiː pʊt ðə hæt ɒn ðə kæt ænd pʊt ðə keɪk ɒn ðə flɔːr. ðə ˈpɑːrti bɪˈɡæn/", vi: "Sau đó, cô đội chiếc mũ chóp lên đầu chú mèo và đặt chiếc bánh cá xuống sàn nhà. Thế là bữa tiệc chính thức bắt đầu!" },
-      { start: 25.5, en: "Three cats ran to eat the cake. In just a minute, the cake was gone!", ipa: "/θriː kæts ræn tuː iːt ðə keɪk. ɪn dʒʌst ə ˈmɪnɪt ðə keɪk wɒz ɡɒn/", vi: "Cả ba chú mèo lao tới ngấu nghiến chiếc bánh. Chỉ trong vòng một phút ngắn ngủi, chiếc bánh đã sạch bách!" },
+      { start: 25.5, en: "Three cats ran to eat the cake. In just a minute, the cake was gone!", ipa: "/θriː kæts ræn tʊ iːt ðə keɪk. ɪn dʒʌst ə ˈmɪnɪt ðə keɪk wɒz ɡɒn/", vi: "Cả ba chú mèo lao tới ngấu nghiến chiếc bánh. Chỉ trong vòng một phút ngắn ngủi, chiếc bánh đã sạch bách!" },
       { start: 33.5, en: "How about the hat?", ipa: "/haʊ əˈbaʊt ðə hæt?/", vi: "Thế còn chiếc mũ sinh nhật thì sao nhỉ?" },
       { start: 37.0, en: "'The cat hated the hat!' said Lynne. 'She scratched the hat and took it off right away!'", ipa: "/ðə kæt ˈheɪtɪd ðə hæt sɛd lɪn. ʃiː skrætʃt ðə hæt ænd tʊk ɪt ɒf raɪt əˈweɪ/", vi: "'Con mèo ghét chiếc mũ đó lắm!' Lynne kể lại. 'Nó cào rách mũ ra và hất văng ra ngay tức khắc!'" },
       { start: 47.5, en: "We don't wear hats!", ipa: "/wiː doʊnt wɛər hæts!/", vi: "Bọn tớ đời nào chịu đội mũ!" }

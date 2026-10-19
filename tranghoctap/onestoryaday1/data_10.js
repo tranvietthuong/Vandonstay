@@ -19,7 +19,7 @@ STORIES_DATA["10 October"] = [
     day: 2,
     title: "One Little Seed, One Big Tree",
     image: "10 October/images/day_02.webp",
-    audio: "10 October/audio/A1002 One Little Seed One Big Tree.mp3",
+    audio: "10 October/audio/A1002 One Little Seed, One Big Tree.mp3",
     sentences: [
       { start: 4.8, en: "Kate really likes apples. She asks her teacher, 'Where do apples come from?'", ipa: "/keɪt ˈrɪəli laɪks ˈæplz. ʃiː ɑːsks hɜːr ˈtiːtʃər wɛr duː ˈæplz kʌm frɒm/", vi: "Kate rất thích ăn táo. Cô bé hỏi giáo viên của mình rằng: 'Táo xuất phát từ đâu vậy thưa cô?'" },
       { start: 12.0, en: "'Apples grow on apple trees,' says her teacher.", ipa: "/ˈæplz ɡroʊ ɒn ˈæpl triːz sɛz hɜːr ˈtiːtʃər/", vi: "'Táo mọc trên cây táo,' cô giáo trả lời." },
@@ -42,9 +42,9 @@ STORIES_DATA["10 October"] = [
   },
   {
     day: 4,
-    title: "Our Changing Teeth - Part 1",
+    title: "Our Changing Teeth - 1",
     image: "10 October/images/day_04.webp",
-    audio: "10 October/audio/A1004 Our Changing Teeth 1.mp3",
+    audio: "10 October/audio/A1004 Our Changing Teeth - 1.mp3",
     sentences: [
       { start: 4.8, en: "Do you know that our teeth are changing as we grow?", ipa: "/duː juː noʊ ðæt ˈaʊər tiːθ ɑːr ˈtʃeɪndʒɪŋ æz wiː ɡroʊ/", vi: "Bạn có biết rằng hàm răng của chúng ta thay đổi theo quá trình lớn lên không?" },
       { start: 10.5, en: "Around the age of eight months, our first teeth begin to grow.", ipa: "/əˈraʊnd ði eɪdʒ əv eɪt mʌnθs ˈaʊər fɜːrst tiːθ bɪˈɡɪn tuː ɡroʊ/", vi: "Vào khoảng tám tháng tuổi, những chiếc răng đầu tiên bắt đầu nhú lên." },
@@ -54,9 +54,9 @@ STORIES_DATA["10 October"] = [
   },
   {
     day: 5,
-    title: "Our Changing Teeth - Part 2",
+    title: "Our Changing Teeth - 2",
     image: "10 October/images/day_05.webp",
-    audio: "10 October/audio/A1005 Our Changing Teeth 2.mp3",
+    audio: "10 October/audio/A1005 Our Changing Teeth - 2.mp3",
     sentences: [
       { start: 4.8, en: "By the time we reach the age of seven, our baby teeth begin to fall out.", ipa: "/baɪ ðə taɪm wiː riːtʃ ði eɪdʒ əv ˈsɛvən ˈaʊər ˈbeɪbi tiːθ bɪˈɡɪn tuː fɔːl aʊt/", vi: "Đến khi lên bảy tuổi, những chiếc răng sữa bắt đầu lung lay và rụng dần." },
       { start: 13.0, en: "First, the front middle teeth fall out. Then the teeth on the side, and finally the teeth at the back of our mouth.", ipa: "/fɜːrst ðə frʌnt ˈmɪdl tiːθ fɔːl aʊt. ðɛn ðə tiːθ ɒn ðə saɪd ænd ˈfaɪnəli ðə tiːθ æt ðə bæk əv ˈaʊər maʊθ/", vi: "Đầu tiên là răng cửa phía trước, tiếp đến là răng hai bên và cuối cùng là răng hàm phía trong." },
@@ -66,9 +66,9 @@ STORIES_DATA["10 October"] = [
   },
   {
     day: 6,
-    title: "Purple Mountains - Part 1",
+    title: "Purple Mountains - 1",
     image: "10 October/images/day_06.webp",
-    audio: "10 October/audio/A1006 Purple Mountains 1.mp3",
+    audio: "10 October/audio/A1006 Purple Mountains - 1.mp3",
     sentences: [
       { start: 4.8, en: "Josh's family lives near the mountains. In the fall, the mountains look beautiful.", ipa: "/dʒɒʃɪz ˈfæməli lɪv z nɪər ðə ˈmaʊntɪnz. ɪn ðə fɔːl ðə ˈmaʊntɪnz lʊk ˈbjuːtɪfl/", vi: "Gia đình Josh sống ở khu vực gần núi. Vào mùa thu, cảnh sắc nơi núi non trông tuyệt đẹp." },
       { start: 12.0, en: "'Look, Dad! Those mountains are purple!' says Josh.", ipa: "/lʊk dæd! ðoʊz ˈmaʊntɪnz ɑːr ˈpɜːrpl! sɛz dʒɒʃ/", vi: "'Bố ơi nhìn kìa! Những ngọn núi đằng kia có màu tím đấy!' Josh chỉ tay và trầm trồ." },
@@ -79,12 +79,12 @@ STORIES_DATA["10 October"] = [
   },
   {
     day: 7,
-    title: "Purple Mountains - Part 2",
+    title: "Purple Mountains - 2",
     image: "10 October/images/day_07.webp",
-    audio: "10 October/audio/A1007 Purple Mountains 2.mp3",
+    audio: "10 October/audio/A1007 Purple Mountains - 2.mp3",
     sentences: [
       { start: 4.8, en: "'Get in the car,' says Josh's dad. 'Let's go to the mountains.'", ipa: "/ɡɛt ɪn ðə kɑːr sɛd dʒɒʃɪz dæd. lɛts ɡoʊ tuː ðə ˈmaʊntɪnz/", vi: "'Lên xe nào con,' bố Josh nói. 'Bố con mình lái xe đến tận chân núi nhé.'" },
-      { start: 11.5, en: "They drive to the mountains. As they get closer, they see that the mountains are not purple anymore.", ipa: "/ðeɪ draɪv tuː ðə ˈmaʊntɪnz. æz ðeɪ ɡɛt ˈklʊsər ðeɪ siː ðæt ðə ˈmaʊntɪnz ɑːr nɒt ˈpɜːrpl ˈɛniˌmɔːr/", vi: "Họ lái xe hướng về phía ngọn núi. Khi đến gần hơn, họ nhận ra những ngọn núi không hề mang màu tím nữa." },
+      { start: 11.5, en: "They drive to the mountains. As they get closer, they see that the mountains are not purple anymore.", ipa: "/ðeɪ draɪv tuː ðə ˈmaʊntɪnz. ænd ðeɪ ɡɛt ˈklʊsər ðeɪ siː ðæt ðə ˈmaʊntɪnz ɑːr nɒt ˈpɜːrpl ˈɛniˌmɔːr/", vi: "Họ lái xe hướng về phía ngọn núi. Khi đến gần hơn, họ nhận ra những ngọn núi không hề mang màu tím nữa." },
       { start: 20.5, en: "'Oh, I see,' says Josh. 'But why?'", ipa: "/oʊ aɪ siː sɛd dʒɒʃ. bʌt waɪ/", vi: "'Ồ, con hiểu rồi,' Josh gật gù. 'Nhưng tại sao lại vậy hả bố?'" },
       { start: 26.0, en: "'From far away, the light scatters, making the mountains look purple,' says his dad.", ipa: "/frɒm fɑːr əˈweɪ ðə laɪt ˈskætərz ˈmeɪkɪŋ ðə ˈmaʊntɪnz lʊk ˈpɜːrpl sɛd hɪz dæd/", vi: "'Do đứng từ xa, ánh sáng bị khúc xạ và tán sắc, khiến ta nhìn thấy ngọn núi có màu tím,' bố giải thích." },
       { start: 35.0, en: "'Cool,' says Josh. 'Let's drive home and make them purple again!'", ipa: "/kuːl sɛd dʒɒʃ. lɛts draɪv hoʊm ænd meɪk ðɛm ˈpɜːrpl əˈɡɛn/", vi: "'Hay quá nhỉ,' Josh hào hứng nói. 'Thế mình lái xe về nhà rồi làm cho chúng tím lại lần nữa đi bố!'" }
@@ -130,7 +130,7 @@ STORIES_DATA["10 October"] = [
     day: 11,
     title: "Orange-Fish",
     image: "10 October/images/day_11.webp",
-    audio: "10 October/audio/A1011 Orange Fish.mp3",
+    audio: "10 October/audio/A1011 Orange-Fish.mp3",
     sentences: [
       { start: 4.8, en: "Melissa bought a fish. 'You're my favourite orange-fish,' she said.", ipa: "/məˈlɪsə bɔːt ə fɪʃ. jʊər maɪ ˈfeɪvərɪt ˈɔːrɪndʒ fɪʃ ʃiː sɛd/", vi: "Melissa mua một con cá cảnh về nuôi. 'Cậu là chú cá màu cam cưng nhất của tớ,' cô bé trìu mến nói." },
       { start: 12.0, en: "'He is a goldfish,' said her brother Jimmy.", ipa: "/hiː ɪz ə ˈɡoʊldˌfɪʃ sɛd hɜːr ˈbrʌðər ˈdʒɪmi/", vi: "'Đó là cá vàng mà,' người anh trai Jimmy lên tiếng đính chính." },
@@ -167,7 +167,7 @@ STORIES_DATA["10 October"] = [
     day: 14,
     title: "Going Too Fast - Part 1",
     image: "10 October/images/day_14.webp",
-    audio: "10 October/audio/A1014 Going too Fast 1.mp3",
+    audio: "10 October/audio/A1014 Going too Fast - 1.mp3",
     sentences: [
       { start: 4.8, en: "On a cold, snowy winter day, Charlie and his father wanted to have some fun.", ipa: "/ɒn ə koʊld ˈsnoʊi ˈwɪntər deɪ ˈtʃɑːrli ænd hɪz ˈfɑːðər ˈwɒntɪd tuː hæv sʌm fʌn/", vi: "Vào một ngày mùa đông lạnh giá có tuyết rơi trắng xóa, Charlie và bố muốn tìm chút trò vui giải trí." },
       { start: 13.0, en: "They took their snowboard to the hill and set it down at the top.", ipa: "/ðeɪ tʊk ðɛər ˈsnoʊˌbɔːrd tuː ðə hɪl ænd sɛt ɪt daʊn æt ðə tɒp/", vi: "Hai bố con mang theo ván trượt tuyết lên ngọn đồi và đặt nó ngay ở đỉnh dốc." },
@@ -180,7 +180,7 @@ STORIES_DATA["10 October"] = [
     day: 15,
     title: "Going Too Fast - Part 2",
     image: "10 October/images/day_15.webp",
-    audio: "10 October/audio/A1015 Going too Fast 2.mp3",
+    audio: "10 October/audio/A1015 Going too Fast - 2.mp3",
     sentences: [
       { start: 4.8, en: "When Charlie's father found the board was going too fast, he tried to slow it down, but it was too late.", ipa: "/wɛn ˈtʃɑːrliz ˈfɑːðər faʊnd ðə bɔːrd wɒz ˈɡoʊɪŋ tuː fɑːst hiː traɪd tuː sloʊ ɪt daʊn bʌt ɪt wɒz tuː leɪt/", vi: "Khi bố của Charlie nhận ra tấm ván đang trượt quá nhanh, ông cố gắng hãm phanh để giảm tốc, nhưng đã quá muộn." },
       { start: 14.0, en: "In a few seconds, they flew off the board and hit the tree at the bottom of the hill.", ipa: "/ɪn ə fjuː ˈsɛkəndz ðeɪ fluː ɒf ðə bɔːrd ænd hɪt ðə triː æt ðə ˈbɒtəm əv ðə hɪl/", vi: "Chỉ trong tích tắc, hai bố con văng khỏi ván trượt và đâm thẳng vào gốc cây ở chân đồi." },
@@ -217,7 +217,7 @@ STORIES_DATA["10 October"] = [
     day: 18,
     title: "Coco the Bird - Part 1",
     image: "10 October/images/day_18.webp",
-    audio: "10 October/audio/A1018 Coco the Bird 1.mp3",
+    audio: "10 October/audio/A1018 Coco the Bird - 1.mp3",
     sentences: [
       { start: 4.8, en: "Coco the bird lived in a pet store, waiting for someone to buy him.", ipa: "/ˈkoʊkoʊ ðə bɜːrd lɪvd ɪn ə pɛt stɔːr ˈweɪtɪŋ fɔːr ˈsʌmwʌn tuː baɪ hɪm/", vi: "Chú chim Coco sống trong một cửa hàng thú cưng, ngày ngày ngóng chờ có ai đó đến mua mình về nuôi." },
       { start: 12.0, en: "'Someday, I'll sail the seas on a pirate's ship,' he said.", ipa: "/ˈsʌmˌdeɪ aɪl seɪl ðə siːz ɒn ə ˈpaɪrɪts ʃɪp hiː sɛd/", vi: "'Có một ngày nào đó, ta sẽ giương buồm ra khơi trên con tàu hải tặc,' chú chim mơ mộng nói." },
@@ -231,7 +231,7 @@ STORIES_DATA["10 October"] = [
     day: 19,
     title: "Coco the Bird - Part 2",
     image: "10 October/images/day_19.webp",
-    audio: "10 October/audio/A1019 Coco the Bird 2.mp3",
+    audio: "10 October/audio/A1019 Coco the Bird - 2.mp3",
     sentences: [
       { start: 4.8, en: "Coco stared at the lady's pool, wishing he could sail the high seas. 'I guess the pirate's life is not for me.'", ipa: "/ˈkoʊkoʊ stɛrd æt ðə ˈleɪdiz puːl ˈwɪʃɪŋ hiː kʊd seɪl ðə haɪ siːz. aɪ ɡɛs ðə ˈpaɪrɪts laɪf ɪz nɒt fɔːr miː/", vi: "Coco ngẩn ngơ nhìn chằm chằm vào hồ bơi của người phụ nữ, thầm ước ao được vẫy vùng ngoài đại dương bao la. 'Xem ra cuộc đời hải tặc không dành cho mình rồi.'" },
       { start: 16.0, en: "Ding Dong. 'Welcome, Peter,' said his Grandma. 'Meet Coco, my new pet bird.'", ipa: "/dɪŋ dɒŋ. ˈwɛlkəm ˈpiːtər sɛd hɪz ˈɡrænmɑː. miːt ˈkoʊkoʊ maɪ nuː pɛt bɜːrd/", vi: "Đinh đoảng. 'Chào cháu Peter,' người bà mở cửa đón cháu. 'Lại đây gặp Coco, chú chim cảnh mới của bà đi con.'" },
@@ -259,7 +259,7 @@ STORIES_DATA["10 October"] = [
       { start: 4.8, en: "Jimmy and his mother are at a restaurant. They have just ordered their food.", ipa: "/ˈdʒɪmi ænd hɪz ˈmʌðər ɑːr æt ə ˈrɛstərɒnt. ðeɪ hæv dʒʌst ˈɔːrdərd ðɛər fuːd/", vi: "Jimmy và mẹ đang ngồi ở nhà hàng. Họ vừa mới gọi món ăn xong." },
       { start: 12.0, en: "Jimmy begins to cry. 'I am hungry! So hungry!' he cries. 'Where is my food?'", ipa: "/ˈdʒɪmi bɪˈɡɪnz tuː kraɪ. aɪ æm ˈhʌŋɡri! soʊ ˈhʌŋɡri! hiː kraɪz. wɛr ɪz maɪ fuːd/", vi: "Jimmy bắt đầu mè nheo mếu máo: 'Con đói lắm rồi! Đói bụng quá đi mất!' cậu bé khóc thét. 'Đồ ăn của con đâu rồi?'" },
       { start: 21.5, en: "His mom looks at him and says, 'We only ordered our food one minute ago. It takes time to prepare and cook the food.'", ipa: "/hɪz mɒm lʊks æt hɪm ænd sɛz wiː ˈoʊnli ˈɔːrdərd ðɛər fuːd wʌn ˈmɪnɪt əˈɡoʊ. ɪt teɪks taɪm tuː prɪˈpɛər ænd kʊk ðə fuːd/", vi: "Mẹ nhìn cậu bé dịu dàng nhắc nhở: 'Mình vừa mới gọi món cách đây có một phút thôi con ạ. Cần phải có thời gian để nhà bếp chuẩn bị và nấu nướng chứ.'" },
-      { start: 33.5, en: "Then his mom says, 'Learn to wait. Good things come to those who wait.'", ipa: "/ðɛn hɪz mɒm sɛd lɜːrn tuː weɪt. ɡʊd θɪŋz kʌm tuː ðoʊz huː weɪt/", vi: "Rồi mẹ mỉm cười dạy bảo: 'Con hãy học cách kiên nhẫn đợi chờ nhé. Những điều tốt đẹp luôn xứng đáng chờ đợi.'" }
+      { start: 33.5, en: "Then his mom says, 'Learn to wait. Good things come to those who wait.'", ipa: "/ðɛn hɪz mʌðər sɛd lɜːrn tuː weɪt. ɡʊd θɪŋz kʌm tuː ðoʊz huː weɪt/", vi: "Rồi mẹ mỉm cười dạy bảo: 'Con hãy học cách kiên nhẫn đợi chờ nhé. Những điều tốt đẹp luôn xứng đáng chờ đợi.'" }
     ]
   },
   {
@@ -277,7 +277,7 @@ STORIES_DATA["10 October"] = [
     day: 23,
     title: "A Family of Birds - Part 1",
     image: "10 October/images/day_23.webp",
-    audio: "10 October/audio/A1023 A Family of Birds 1.mp3",
+    audio: "10 October/audio/A1023 A Family of Birds - 1.mp3",
     sentences: [
       { start: 4.8, en: "There once was a family of birds who lived in a nest far above the canyon.", ipa: "/ðɛər wʌns wɒz ə ˈfæməli əv bɜːrdz huː lɪvd ɪn ə nɛst fɑːr əˈbʌv ðə ˈkænjən/", vi: "Ngày xửa ngày xưa, có một gia đình chim làm tổ trên vách đá cheo leo phía trên hẻm núi sâu." },
       { start: 12.0, en: "Mother and Father Bird loved their baby birds. They fed them, kept them warm, and taught them their bird song.", ipa: "/ˈmʌðər ænd ˈfɑːðər bɜːrd lʌvd ðɛər ˈbeɪbi bɜːrdz. ðeɪ fɛd ðɛm kiːpt ðɛm wɔːrm ænd tɔːt ðɛm ðɛər bɜːrd sɔːŋ/", vi: "Chim bố và chim mẹ hết mực yêu thương bầy con nhỏ. Họ kiếm mồi cho chúng ăn, sưởi ấm cho chúng và dạy chúng những khúc ca loài chim." },
@@ -290,7 +290,7 @@ STORIES_DATA["10 October"] = [
     day: 24,
     title: "A Family of Birds - Part 2",
     image: "10 October/images/day_24.webp",
-    audio: "10 October/audio/A1024 A Family of Birds 2.mp3",
+    audio: "10 October/audio/A1024 A Family of Birds - 2.mp3",
     sentences: [
       { start: 4.8, en: "When Mother Bird returned, she didn't bring enough food.", ipa: "/wɛn ˈmʌðər bɜːrd rɪˈtɜːrnd ʃiː ˈdɪdnt brɪŋ ɪˈnʌf fuːd/", vi: "Khi chim mẹ quay trở về, mồi mang theo lại không đủ chia cho cả đàn." },
       { start: 10.5, en: "'We're still hungry,' said the baby birds.", ipa: "/wɪər stɪl ˈhʌŋɡri sɛd ðə ˈbeɪbi bɜːrdz/", vi: "'Bọn con vẫn còn đói lắm ạ,' các chú chim non kêu đói." },
@@ -343,7 +343,7 @@ STORIES_DATA["10 October"] = [
     audio: "10 October/audio/A1028 Changing Leaves.mp3",
     sentences: [
       { start: 4.8, en: "In the fall, green leaves change their colour.", ipa: "/ɪn ðə fɔːl ɡriːn liːvz tʃeɪndʒ ðɛər ˈkʌlər/", vi: "Vào mùa thu, những chiếc lá màu xanh bắt đầu chuyển đổi màu sắc." },
-      { start: 10.5, en: "The green in the leaves turns sunlight into food for the tree.", ipa: "/ðə ɡriːn ɪn ðə liːvz tɜːrnz ˈsʌnˌlaɪt ˈɪntuː fuːd fɔːr ðə triː/", vi: "Chất diệp lục xanh trong lá có nhiệm vụ chuyển hóa ánh sáng mặt trời thành thức ăn nuôi dưỡng cây." },
+      { start: 10.5, en: "The green in the leaves turns sunlight into food for the tree.", ipa: "/ðə ɡriːn ɪn ðə liːvz tɜːrnz ˈsʌnˌlaɪt ˈɪntuː fuːd fɔːr ðə triː/", vi: "Ch chất diệp lục xanh trong lá có nhiệm vụ chuyển hóa ánh sáng mặt trời thành thức ăn nuôi dưỡng cây." },
       { start: 18.5, en: "As the days get shorter and cooler, the leaves stop making food and the green fades away.", ipa: "/æz ðə deɪz ɡɛt ˈʃɔːrtər ænd ˈkuːlər ðə liːvz stɒp ˈmeɪkɪŋ fuːd ænd ðə ɡriːn feɪdz əˈweɪ/", vi: "Khi ngày ngắn dần lại và thời tiết se lạnh hơn, lá cây ngưng quá trình tổng hợp thức ăn và sắc xanh cũng phai mờ dần." },
       { start: 29.5, en: "The leaves turn yellow, orange, red, purple, or brown.", ipa: "/ðə liːvz tɜːrn ˈjɛloʊ ˈɒrɪndʒ rɛd ˈpɜːrpl ɔːr braʊn/", vi: "Lá cây chuyển sang đủ sắc màu rực rỡ như vàng, cam, đỏ, tím hoặc nâu." },
       { start: 38.0, en: "Look at the pretty colours. But hurry! Soon the wind will blow the leaves away.", ipa: "/lʊk æt ðə ˈprɪti ˈkʌlərz. bʌt ˈhɜːri! suːn ðə wɪnd wɪl bloʊ ðə liːvz əˈweɪ/", vi: "Ngắm nhìn những chiếc lá thật đẹp mắt làm sao. Nhưng hãy nhanh chân lên nhé! Chẳng mấy chốc những cơn gió mùa thu thổi qua sẽ cuốn bay chúng đi mất." }
@@ -380,7 +380,7 @@ STORIES_DATA["10 October"] = [
     image: "10 October/images/day_31.webp",
     audio: "10 October/audio/A1031 The Nile.mp3",
     sentences: [
-      { start: 4.8, en: "Do you know the longest river in Africa? It's called the Nile. The Nile is also the longest river in the world. It is 4,184 miles long.", ipa: "/duː juː noʊ ðə ˈlɒŋɡɪst ˈrɪvər ɪn ˈæfrɪkə? ɪts kɔːld ðə naɪl. ðə naɪl ɪz ˈɔːlsoʊ ðə ˈlɒŋɡɪst ˈrɪvər ɪn ðə wɜːrld. ɪt ɪz fɔːr ˈθaʊznd wʌn ˈhʌndrəd ˈeɪti-fɔːr maɪlz lɒŋ/", vi: "Bạn có biết con sông nào dài nhất ở Châu Phi không? Đó chính là sông Nile. Sông Nile đồng thời cũng là con sông dài nhất trên toàn thế giới với chiều dài lên tới 4.184 dặm." },
+      { start: 4.8, en: "Do you know the longest river in Africa? It's called the Nile. The Nile is also the longest river in the world. It is 4,184 miles long.", ipa: "/duː juː noʊ ðə ˈlɒŋɡɪst ˈrɪvər ɪn ˈæfrɪkə? its kɔːld ðə naɪl. ðə naɪl ɪz ˈɔːlsoʊ ðə ˈlɒŋɡɪst ˈrɪvər ɪn ðə wɜːrld. ɪt ɪz fɔːr ˈθaʊznd wʌn ˈhʌndrəd ˈeɪti-fɔːr maɪlz lɒŋ/", vi: "Bạn có biết con sông nào dài nhất ở Châu Phi không? Đó chính là sông Nile. Sông Nile đồng thời cũng là con sông dài nhất trên toàn thế giới với chiều dài lên tới 4.184 dặm." },
       { start: 19.5, en: "Crocodiles live in the Nile. They enjoy lying in the sun with other crocodiles.", ipa: "/ˈkrɒkədaɪlz lɪv ɪn ðə naɪl. ðeɪ ɪnˈdʒɔɪ ˈlaɪɪŋ ɪn ðə sʌn wɪð ˈʌðər ˈkrɒkədaɪlz/", vi: "Loài cá sấu sinh sống rất nhiều ở sông Nile. Chúng cực kỳ thích nằm phơi mình sưởi nắng cùng đồng loại." },
       { start: 28.5, en: "Do you think a crocodile could swim from one end of the Nile to the other? It would take a very long time.", ipa: "/duː juː θɪŋk ə ˈkrɒkədaɪl kʊd swɪm frɒm wʌn ɛnd əv ðə naɪl tuː ði ˈʌðər? ɪt wʊd teɪk ə ˈvɛri lɒŋ taɪm/", vi: "Bạn có nghĩ một chú cá sấu có thể bơi từ đầu này đến đầu kia của sông Nile không? Chắc chắn sẽ mất một khoảng thời gian cực kỳ dài đấy." }
     ]
